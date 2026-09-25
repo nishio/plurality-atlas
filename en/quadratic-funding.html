@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is Quadratic Funding?</title><meta name="description" content="A rule for how a matching fund tops up people&#x27;s donations — one that weighs the number of people who gave more heavily than the amount they gave. A project backed by many small donors receives far more matching money than one backed by a single big donor."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/quadratic-funding.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/quadratic-funding.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/quadratic-funding.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/quadratic-funding.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/quadratic-funding.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is Quadratic Funding?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/quadratic-funding.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="A rule for how a matching fund tops up people&#x27;s donations — one that weighs the number of people who gave more heavily than the amount they gave. A project backed by many small donors receives far more matching money than one backed by a single big donor."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../quadratic-funding.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/quadratic-funding.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is Quadratic Funding?</h1><div class='lead'>A rule for how a matching fund tops up people&#x27;s donations — one that weighs the number of people who gave more heavily than the amount they gave. A project backed by many small donors receives far more matching money than one backed by a single big donor.</div><p>Some things are useful to everyone, yet nobody wants to pay for them: parks, libraries, free software that anyone can use. If someone else pays, you get to use them anyway. Quadratic Funding (QF) is a rule for matching donations, designed to help money flow to these things that serve everyone.</p>
+<h2>In short</h2>
+<p>When a matching fund adds money on top of people's donations, QF is a rule that <strong>weighs the number of people who donated more heavily than the amount donated</strong> [1][2].</p>
+<p>Even if two projects raise the same total, the one backed by many small donations gets much more matching money than the one backed by one large donation. "Quadratic" means "squared", because the calculation uses squares.</p>
+<h2>For example</h2>
+<p><strong>Gitcoin Grants (2019 onward).</strong> This is a donation platform, built around the cryptocurrency Ethereum, that supports things like open-source software anyone can use. According to a review by Vitalik Buterin, the founder of Ethereum, in the third round in 2019, 477 people donated a total of $163,279 to 80 projects, and a $100,000 fund matched those donations using QF [3]. In the ninth round in 2021, more than 12,000 people donated $1.38 million to 812 projects, with a $500,000 matching fund [4].</p>
+<p>The book <em>⿻ Plurality</em> says that platforms like Gitcoin have channeled "more than a hundred million dollars in funding" in total. The book's own Gitcoin page, as of February 2, 2024, "had received $332.84 in funding from 87 contributors" [5].</p>
+<p><strong>Taiwan.</strong> According to the book, Taiwan's Presidential Hackathon grew into events for sharing ideas, and went on to award real funding to projects such as agricultural and food safety inspections "using an extension of Quadratic Voting to Funding" [6]. The Chinese edition of the book names the specific program: 公益創新．徵案100 [7].</p>
+<p><strong>Japan.</strong> The Chinese-language Wikipedia notes that in 2024 DigDAO, supported by Japan's Digital Agency, began QF experiments in Japan [8].</p>
+<h2>How it works</h2>
+<h3>A small worked example</h3>
+<p>Here is an illustrative example.</p>
+<ul>
+<li>Project A: <strong>one person donates $100</strong>.</li>
+<li>Project B: <strong>100 people donate $1 each</strong>.</li>
+</ul>
+<p>Both raise $100. Under ordinary matching, which adds money in proportion to the amount raised, both would get the same match.</p>
+<p>Under QF, the amount a project receives is <strong>the sum of the square roots of each person's donation, squared</strong> [1].</p>
+<ul>
+<li>Project A: √100 = 10. Squared, 10 × 10 = <strong>$100</strong>. That's just the donation itself — a match of $0.</li>
+<li>Project B: √1 = 1, for 100 people, gives 1 × 100 = 100. Squared, 100 × 100 = <strong>$10,000</strong>. The difference from the $100 donated, <strong>$9,900</strong>, comes from the matching fund.</li>
+</ul>
+<p>In Buterin's introductory article, if 10 people each give $1, the result is (1 + 1 + … + 1)² = 10² = $100, and the fund pays the $90 difference. If the fund isn't big enough, every project's match is scaled down by the same proportion [1].</p>
+<p>As a formula, a project receives (√donation₁ + √donation₂ + …)². As long as two or more people donated, this is always larger than the sum of the donations [1][9].</p>
+<h3>Why does this work?</h3>
+<p>Things that serve everyone benefit people other than the donor. But people usually decide how much to give by thinking only about their own benefit. So, from the point of view of society as a whole, donations end up too small [1].</p>
+<p>Buterin explains that QF's matching makes up for the benefit that one person's donation brings to others. If you calculate this for every pair of donors and add it all up, he says, you get exactly the QF formula [1].</p>
+<p>Buterin also writes that QF can be seen as a special case of <a href="quadratic-voting.html">Quadratic Voting</a>, in which the donors vote in favor and the matching fund votes against [1].</p>
+<h3>Where it came from</h3>
+<p>The original paper is "A Flexible Design for Funding Public Goods", published in 2018 by Buterin, Zoë Hitzig and E. Glen Weyl. According to its abstract, it extends the idea of QV to funding; under certain conditions it can produce the optimal amount of public goods, and it could be used for campaign finance, open-source software, news media and city public projects [9].</p>
+<h3>The book's framing, and connection-aware QF</h3>
+<p>In chapter 5-7, the book says QF was derived "under similar assumptions of atomized behavior" — that is, assuming people act in isolation — and that "recently designs have stretched beyond traditional individualistic designs to account for ⿻ group interests and affiliations" [10].</p>
+<p>A 2023 essay by Weyl and colleagues argued that the proof of QF's optimality relies on the assumption that people are isolated and act only for their own benefit, so it is not optimal among ordinary humans who coordinate even a little. It says that projects supported by diverse groups should receive more than those supported by groups of similar people — which is exactly the goal of Plurality [11]. According to a 2025 report, a version incorporating this idea, Connection-Oriented QF (CO-QF), was used in 89% of Gitcoin's grant programs and distributed more than $4 million [12].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>Fake identities and collusion.</strong> The original paper itself says that QF's biggest weaknesses are collusion and fraud. If one person pretends to be dozens of people and donates small amounts under each name, they can capture a large match. The first line of defense, it says, is solid identity verification [13]. In fact, in Gitcoin's ninth round, a cluster of accounts apparently controlled by a small number of people was found, and Gitcoin covered the roughly $33,000 affected by the fraud [4]. → <a href="proof-of-personhood.html">Proof of personhood</a></li>
+<li><strong>Donations with strings attached.</strong> QF assumes people donate because they want the project to happen. If donors receive something in return, the matching becomes too large. Gitcoin banned such rewards, but Buterin writes that this put it in the position of making judgments centrally [14]. In the ninth round, subtle vote buying — hinting that something would be handed out later — also became a problem [4].</li>
+<li><strong>But collusion tends not to last.</strong> The original paper calculates that in a scheme where many people donate and then split the proceeds, each individual gains by quietly dropping out and not donating, so such collusion gradually falls apart [13].</li>
+<li><strong>What should be in scope?</strong> In the fourth round, money from a fund meant for Ethereum ended up flowing to accounts promoting a different cryptocurrency. Drawing on long-standing wisdom about managing shared resources, Buterin proposed drawing boundaries around what QF covers [14].</li>
+<li><strong>Is leaning toward popularity a flaw?</strong> In the third round, Buterin welcomed the fact that QF tends to pick widely popular projects, seeing it as a good correction to evaluations by technical experts. On the other hand, he was disappointed that Gitcoin's own operating costs attracted almost no funding [3].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>QF is the first example in chapter 5-7 of the book, "<a href="social-markets.html">Social Markets</a>", and its central mechanism. The book holds that markets under-produce the things people create together and the things that serve everyone, and offers QF as one answer to that limit [10].</p>
+<p>The book also says that its own work "was collectively prioritized and rewards determined using a 'crowd-funding' approach" described in that chapter [15]. In his review, Buterin notes that "Plural Credits", a non-monetary version of QF, were used to record contributions to the book [16]. This connects to the <a href="plural-management-protocol.html">⿻ Management Protocol</a>.</p>
+<p>The idea of favoring things supported by diverse people is shared with the design of voting described in <a href="plural-voting.html">⿻ Voting</a>.</p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Plurality</em>, chapter 5-7 "Social Markets" (English, book) — https://www.plurality.net/v/chapters/5-7/eng/</li>
+<li>Vitalik Buterin, "Quadratic Payments: A Primer" (English, article with diagrams) — https://vitalik.eth.limo/general/2019/12/07/quadratic.html</li>
+<li>Buterin, Hitzig and Weyl, "A Flexible Design for Funding Public Goods" (English, paper) — https://arxiv.org/abs/1809.06421</li>
+<li>Vitalik Buterin, review of Gitcoin Round 3 (English, article) — https://vitalik.eth.limo/general/2019/10/24/gitcoin.html</li>
+<li>Miller, Weyl and Erichsen, "Designing Pluralistic Mechanisms for Quadratic Funding" (English, article) — https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</li>
+<li>Ken Suzuki, commentary on the Japanese edition of <em>Plurality</em> (in Japanese, commentary) — https://note.com/digitaldemocracy/n/nb8b59a6b775d</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Vitalik Buterin, "Quadratic Payments: A Primer" (2019) — https://vitalik.eth.limo/general/2019/12/07/quadratic.html</li>
+<li>Cybozu-shiki, conversation between Tang, Weyl and Seki (editor's note, in Japanese) — https://cybozushiki.cybozu.co.jp/articles/m006211.html</li>
+<li>Vitalik Buterin, "Review of Gitcoin Quadratic Funding Round 3" (2019) — https://vitalik.eth.limo/general/2019/10/24/gitcoin.html</li>
+<li>Vitalik Buterin, "Gitcoin Grants Round 9: The Next Phase of Growth" (2021) — https://vitalik.eth.limo/general/2021/04/02/round9.html</li>
+<li><em>Plurality</em>, 5-7 "Social Markets", opening — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 2-2 "The Life of a Digital Democracy" — https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+<li><em>Plurality</em>, Chinese edition, 2-2 "數位民主的日常" — https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>"平方投票法" (Quadratic voting), Chinese-language Wikipedia, section "平方募資法" (Quadratic funding) — https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95 ［CC BY-SA 4.0］</li>
+<li>Buterin, Hitzig and Weyl, "A Flexible Design for Funding Public Goods", abstract (2018) — https://arxiv.org/abs/1809.06421</li>
+<li><em>Plurality</em>, 5-7 "Social Markets", "Quadratic and ⿻ funding" — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li>Miller, Weyl and Erichsen, "Designing Pluralistic Mechanisms for Quadratic Funding" (2023) — https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</li>
+<li>Miller, Weyl and Kanich, "Fair Decisions through Plurality: Results from a Crowdfunding Platform" (2025) — https://arxiv.org/abs/2509.18343</li>
+<li>Buterin, Hitzig and Weyl, "A Flexible Design for Funding Public Goods", 5.2 Collusion and fraud — https://arxiv.org/abs/1809.06421</li>
+<li>Vitalik Buterin, "Review of Gitcoin Quadratic Funding Round 4" (2020) — https://vitalik.eth.limo/general/2020/01/28/round4.html</li>
+<li><em>Plurality</em>, 5-0 "Collaborative Technology and Democracy", opening — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell" (2024-08-21) — https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+</ol><div class='related'>Related: <a href='quadratic-voting.html'>What is Quadratic Voting?</a> ・ <a href='social-markets.html'>What are Social Markets?</a> ・ <a href='plural-voting.html'>What is ⿻ Voting (plural voting)?</a> ・ <a href='proof-of-personhood.html'>What is proof of personhood?</a> ・ <a href='plural-management-protocol.html'>What is the Plural Management Protocol (PMP)?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

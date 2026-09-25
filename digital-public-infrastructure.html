@@ -1,0 +1,100 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>デジタル公共インフラってなに？</title><meta name="description" content="道路や水道を公共のお金でつくるように、ネットの身元確認・支払い・データのやりとりといった基本の部品も、特定の企業のものではない公共のしくみとしてつくろう、という考え方です。本『Plurality』は、誰もが改ざんされていない情報にアクセスできることも権利として求めます。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/digital-public-infrastructure.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/digital-public-infrastructure.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/digital-public-infrastructure.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/digital-public-infrastructure.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/digital-public-infrastructure.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="デジタル公共インフラってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/digital-public-infrastructure.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="道路や水道を公共のお金でつくるように、ネットの身元確認・支払い・データのやりとりといった基本の部品も、特定の企業のものではない公共のしくみとしてつくろう、という考え方です。本『Plurality』は、誰もが改ざんされていない情報にアクセスできることも権利として求めます。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/digital-public-infrastructure.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/digital-public-infrastructure.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>デジタル公共インフラってなに？</h1><div class='lead'>道路や水道を公共のお金でつくるように、ネットの身元確認・支払い・データのやりとりといった基本の部品も、特定の企業のものではない公共のしくみとしてつくろう、という考え方です。本『Plurality』は、誰もが改ざんされていない情報にアクセスできることも権利として求めます。</div><p>道路や水道、図書館は、みんなの税金でつくられ、誰でも使えます。でもネットの世界では、ログインも支払いも、多くを民間の大企業のしくみに頼っています。「デジタル公共インフラ（Digital Public Infrastructure、略して DPI）」は、こうしたネットの土台も公共のものとしてつくろう、という考え方です。「インフラ」は、社会を下から支える基盤のことです。</p>
+<h2>ひとことで言うと</h2>
+<p>ネット上の<strong>身元確認・支払い・データのやりとりといった「基本の部品」を、特定の企業のものではない公共のしくみとしてつくろう</strong>、という考え方です[1]。</p>
+<p>本『⿻ Plurality』はさらに、誰もがそこに「改ざんされていない情報」を得られる形でアクセスできることを、権利として求めます。本はこれを「完全性のあるアクセス」と呼びます[2]。</p>
+<h2>たとえば</h2>
+<p><strong>インドの India Stack。</strong> インドがこの 10 年ほどで開発した India Stack を、本はデジタル公共インフラのもっとも目立つ例として挙げます[3]。その一部の、指紋などの体の情報を使う ID「Aadhaar（アーダール）」には、人口の 99% を超える人が登録しています。毎月の配給を受ける 8 億人超の社会サービスの鍵になりました。Aadhaar の型に触発されたオープンソース（設計図が公開され、誰でも使い改良できる）の ID の基盤 MOSIP は、フィリピン、スリランカ、ウガンダ、モロッコ、エチオピアなどで採用されています[4]。</p>
+<p>本は、政府が採用する標準や調達を通じて、デジタルの世界全体の方向を決められたことが、India Stack が民間にとっても中心になった理由の核心だ、と言います[5]。</p>
+<p><strong>ウクライナの Diia とエストニアの mRiik。</strong> どちらも、政府のサービスや最新の情報に安全にアクセスできる公共のアプリです。本は、Diia が長年の汚職を打ち破りうることを示したと書きます。エストニアは Diia に刺激されて mRiik を始め、ウクライナはコードと設計の手法を共有しました[6]。</p>
+<p><strong>台湾の IPFS と公共のコード。</strong> 台湾は、サーバーに大量のアクセスを浴びせる攻撃（DDoS 攻撃）のおもな標的の一つです。政府は、ファイルを多くのコンピュータに分けて保存する IPFS をウェブサイトに採用し、攻撃への強さを高めました[7]。当時デジタル発展部長だったオードリー・タンは 2023 年の講演で、台湾のデジタル発展部のサイトが英国政府のサイトに似て見えるのは、「公共のコード」を取り入れているからだと説明しました。デザインだけでなく、安全を確かめた入力の画面や認証まで、民主主義の国どうしで共有しているのです[8]。</p>
+<h2>くわしく</h2>
+<h3>本の言う DPI</h3>
+<p>本の 7-0 章は、次のようなやり方が広がっていると書きます。公共の使命としてインフラをつくり、民間は参加しても支配はしない。市民社会と協力して、あちこちで新しい工夫が生まれるようにする。これがしばしば「デジタル公共インフラ」と呼ばれる、と本は言います[1]。</p>
+<p>例として、India Stack、EU のデジタル ID とデータ基盤 Gaia-X、ブラジルの即時決済 Pix、シンガポールの即時決済 FAST が挙がります。本は、自分たちがおもに主張しているのは、このやり方を広げて、世界の ⿻ 社会を育てる中心の手法にすることだ、と書きます[1]。2023 年には G20 のデジタル担当の大臣たちが、DPI を国際協力の重点に位置づけました[9]。</p>
+<h3>どれくらいの規模か</h3>
+<p>本は 10 年後の姿として、次の目標を描きます。政府と慈善団体が、GDP（国の経済の規模）の約 1% を、デジタルの公共の研究開発・約束事・インフラに使う。それは世界で年に 1 兆ドル近く、いまの世界の IT 投資のおよそ半分にあたる。公共の投資を少なくとも 100 倍（2 桁）に増やす、ということです[10]。</p>
+<p>担い手は一つの国ではない、と本は書きます。各国のデジタル省庁と、誰でも参加できるオープンソースの共同体が、国境を越えてつながるネットワークです。本は例として、台湾の 2016 年のデジタル大臣と 2022 年のデジタル発展部、ウクライナのデジタル転換省、そして 2021 年に台湾との議論に刺激されて発足した日本のデジタル庁を挙げます[11]。</p>
+<h3>「完全性のあるアクセス」</h3>
+<p>4-5 章は、前の章までに描いたデジタルの暮らしの権利は、すべての人がその世界に安全に、正しくアクセスできなければ意味がない、と言います[2]。</p>
+<p>求めるのは、ただのアクセスではありません。一部の人が正しい情報を受け取り、ほかの人が改ざんされた情報を受け取るなら、後者はまったくアクセスできないより悪い、と本は書きます[2]。そして、1948 年の世界人権宣言から、AI による大規模な操作に向き合う 2023 年の宣言までの流れを受けて、誰もが、場の決まりが守られた情報に平等にアクセスできるべきだ、とします[2]。→ <a href="contextual-integrity.html">コンテキストの完全性</a></p>
+<h3>格差と二つの方針</h3>
+<p>本によれば、コロナ禍の前、世界の都市の家庭の 76% が家でインターネットを使えたのに対して、農村では 39% でした。都市は農村のほぼ 2 倍です。国際電気通信連合（ITU）によれば、2020 年の 1 年だけで 4 億 6,600 万人が初めてインターネットを使いました[12]。</p>
+<p>台湾、エストニア、北欧の国々は、デジタルへのアクセスを基本的な権利とする考えを切り開きました。でも本は、それは DPI に要る長い投資の「頭金」にすぎない、と言います。そして政策をつくる人に、二つの方針を求めます[13]。</p>
+<ol>
+<li>国どうしが力を合わせないと解けない問題を乗り越える、国をまたいでつながるインフラ。</li>
+<li>本物そっくりの偽の映像や声（ディープフェイク）に対処して、情報の意味が守られるようにすること。</li>
+</ol>
+<p>本は、森の木々が地下の菌のネットワークで警告や養分を分け合う、という森林学者スザンヌ・シマード（Suzanne Simard）の研究を引きます。デジタルのインフラも、開かれた標準・オープンソース・オープンデータの重なり合う網として、一緒に脅威に立ち向かうべきだ、というのです[14]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>DPI の ID は中央集権になりやすい（本自身の批判）。</strong> 4-1 章は、ID の分野でもっとも影響の大きい開発は、途上国で DPI の旗印のもとに進んできた、と書きます。けれどもその多くは、体の情報にもとづく、一つにまとまった中央集権の形をとっている、と本は批判します[4]。Aadhaar については、運営する側が市民の活動を横断して見られるようになるという心配（イスラム教徒の少数派をめぐる活動家の心配）や、インドの最高裁判所が民間での利用を制限したことに触れています[4][15]。つまり本は、DPI を推しながらも、その ID の部品は多元的な ID であるべきだと主張しています。→ <a href="identity-and-personhood.html">ID と人物性</a></li>
+<li><strong>よくある誤解：「DPI＝国が全部つくる」。</strong> 本の DPI は、民間が参加しても支配はせず、市民社会やオープンソースと協力するものです。国がただ一つの中心になることは退けています[1][11]。</li>
+<li><strong>法の器の壁。</strong> 本は、オープンソースの非営利団体が国際的に活動するための法の器が乏しいと指摘します。例として、本の制作も支えた Open Collective Foundation が解散の途中にあることを挙げ、国境を越える民主的な非営利組織を支える法のしくみが要る、と書きます[16]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>第 4 部（4-0 章「権利、オペレーティングシステム、⿻的自由」で始まる部。→ <a href="rights-os.html">権利 OS</a>）の最後の 4-5 章にあたります。本の章の要約は、これらの権利が本当の人権であるには、情報の完全性をともなう、誰にでも開かれたアクセスが要る、とまとめています[17]。</p>
+<p>最後の政策の 7-0 章で、DPI は本の政策の提案の中心になります。3-3 章の「<a href="lost-dao.html">失われた道</a>」で描いた米国の研究機関のやり方と、<a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a> の経験を、いまの世界に合わせて組み直したものとして描かれます[1][11]。</p>
+<p>個々の部品は、<a href="identity-and-personhood.html">ID と人物性</a>（ID）、<a href="commerce-and-trust.html">商取引と信頼</a>（即時決済）、<a href="property-and-contract.html">財産と契約</a>（IPFS・データの共有）の各章で論じられています。</p>
+<p>タンは 2024 年に、公共のデジタル基盤の考えは日本にも台湾にも前からあったが、おもに自治体の単位で実現されてきた、と語りました。国際的な DPI が欠かせないと認められたのは、ワクチンの証明書のように、全員が必要とするインフラが現れたパンデミックの後だ、とも述べています[18]。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』4-5「アクセス」（日本語・本）— https://www.plurality.net/v/chapters/4-5/jpn/</li>
+<li>本『Plurality』7-0「Policy」（英語・本）— https://www.plurality.net/v/chapters/7-0/eng/</li>
+<li>Audrey Tang「Speech at LSE IDEAS」（英語・講演の記録、2023）— https://archive.tw/2023-12-01-speech-at-lse-ideas</li>
+<li>Audrey Tang「Conversation with Hal Seki and Japanese delegates」（英語・対談の記録、2024）— https://github.com/audreyt/transcript/blob/main/2024-03-22-Conversation-with-Hal-Seki-and-Japanese-delegates.md</li>
+<li>本『Plurality』4-1「Identity and Personhood」の「Public and decentralized digital identity」の節（英語・本）— https://www.plurality.net/v/chapters/4-1/eng/</li>
+<li>UNDP の DPI の解説（英語・解説）— https://www.undp.org/digital/digital-public-infrastructure</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>『Plurality』7-0「Lessons from the past」の節の末尾 — https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+<li>『Plurality』4-5「Access」冒頭の導入 — https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>『Plurality』4-0「⿻ freedom」の節 — https://www.plurality.net/v/chapters/4-0/eng/ ［CC0］</li>
+<li>『Plurality』4-1「Public and decentralized digital identity」の節 — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>『Plurality』7-0「⿻ regulation」の節の冒頭 — https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+<li>『Plurality』4-5「Infrastructures for information integrity」の節の後半 — https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>同上（IPFS の段落）— https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>Audrey Tang「Speech at LSE IDEAS」（2023-12-01）— https://archive.tw/2023-12-01-speech-at-lse-ideas ［CC0］</li>
+<li>『Plurality』7-0「A new ⿻ order」の節（G20 の段落）— https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+<li>『Plurality』7-0 冒頭の未来像 — https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+<li>『Plurality』7-0「A new ⿻ order」の節（デジタル省庁の段落）— https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+<li>『Plurality』4-5「Bridging the digital divide」の節 第 2 段落 — https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>同上 第 1・3〜5 段落 — https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>『Plurality』4-5「Infrastructures for information integrity」の節の冒頭 — https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>『Plurality』4-1「Public and decentralized digital identity」の節 第 6 段落 — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>『Plurality』7-0「⿻ regulation」の節 第 2 段落 — https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+<li>『Plurality』各章の要約（Chapter 4-5）— https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>Audrey Tang「Conversation with Hal Seki and Japanese delegates」（2024-03-22）— https://github.com/audreyt/transcript/blob/main/2024-03-22-Conversation-with-Hal-Seki-and-Japanese-delegates.md ［CC0］</li>
+</ol><div class='related'>関連: <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='commerce-and-trust.html'>商取引と信頼ってなに？</a> ・ <a href='property-and-contract.html'>財産と契約（⿻ 財産）ってなに？</a> ・ <a href='contextual-integrity.html'>コンテキストの完全性ってなに？</a> ・ <a href='lost-dao.html'>失われた道（The Lost Dao）ってなに？</a> ・ <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a> ・ <a href='rights-os.html'>権利 OS ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

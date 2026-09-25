@@ -1,0 +1,107 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是広聴AI（kouchou-ai）？</title><meta name="description" content="把成千上萬則自由填答用表格檔讀進去，AI 就會把相似的意見整理成「意見地圖」並附上摘要的日本免費軟體。由デジタル民主主義2030（DD2030）以美國的 Talk to the City 為基礎打造。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/kouchou-ai.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/kouchou-ai.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/kouchou-ai.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/kouchou-ai.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/kouchou-ai.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是広聴AI（kouchou-ai）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/kouchou-ai.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="把成千上萬則自由填答用表格檔讀進去，AI 就會把相似的意見整理成「意見地圖」並附上摘要的日本免費軟體。由デジタル民主主義2030（DD2030）以美國的 Talk to the City 為基礎打造。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../kouchou-ai.html">日本語</a> <a class="lang" hreflang="en" href="../en/kouchou-ai.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是広聴AI（kouchou-ai）？</h1><div class='lead'>把成千上萬則自由填答用表格檔讀進去，AI 就會把相似的意見整理成「意見地圖」並附上摘要的日本免費軟體。由デジタル民主主義2030（DD2030）以美國的 Talk to the City 為基礎打造。</div><p>市公所做問卷時，「請自由填寫」的欄位有時會收到上千則回答。要由公務員一則一則讀、再分類，得花上好幾週。広聴AI 就是用 AI 整理這些「讀不完的聲音」的工具。</p>
+<h2>一句話說明</h2>
+<p>広聴AI（kouchou-ai；「広聴」是日文「廣泛傾聽」之意）是<strong>把大量自由填答整理成「意見地圖」的軟體</strong>。把問卷回答或社群媒體貼文用 CSV（表格形式的檔案）讀進去，AI 就會把相似的意見排在附近、用顏色區分，並加上摘要[1][2]。</p>
+<p>任何人都能免費使用，程式碼也公開（開源軟體，簡稱 OSS）。打造它的是公民社群 <a href="dd2030.html">デジタル民主主義2030（DD2030）</a>。他們以美國的<a href="talk-to-the-city.html">我城對談（Talk to the City）</a>為基礎，重新打造成適合日本地方政府和政治人物實務的工具[1][2]。</p>
+<p>這種「傾聽大量聲音」的技術，稱為<a href="broad-listening.html">廣泛傾聽</a>。</p>
+<h2>舉例來說</h2>
+<p><strong>香川縣宇多津町（2025-04-30 公布）。</strong> 町在制定綜合計畫時做了町民問卷，用広聴AI 整理了 396 則自由填答。町方報告說，過去要花很長時間的彙整，AI 大約 10 分鐘就完成了[3]。</p>
+<p><strong>東京都澀谷區（2025-07-02 公布）。</strong> 分析了區民意識調查的 6,037 則自由填答，產出整體摘要、依話題的分類與圖表，以及依世代、依地區的傾向[4]。</p>
+<p><strong>廣島縣（2025 年 8～9 月）。</strong> 分析了向縣民徵集的 2,953 則意見。職員表示，約 3,000 則自由填答不到 30 分鐘就分類完成；據說若由人工處理，可能要花約 500 小時[5]。</p>
+<p><strong>未來團隊（2025 年參議院選舉）。</strong> 日本政黨<a href="team-mirai.html">未來團隊</a>（チームみらい，Team Mirai）用広聴AI 的圖來瀏覽市民寄來的政策修改提案。他們加上了從圖上的點一鍵跳到原始提案的功能，這個功能後來被納入 DD2030 的主版本[6][7]。</p>
+<p>地方政府的例子整理在<a href="municipal-broad-listening.html">地方政府的廣泛傾聽</a>一文。</p>
+<h2>運作方式</h2>
+<h3>誕生的經過</h3>
+<p>它的原型，是美國非營利組織 AI Objectives Institute 在 2023 年打造的 Talk to the City（TTTC）[2]。</p>
+<p>安野貴博的團隊在 2024 年的東京都知事選舉、電視台的選舉報導，以及東京都的意見徵集中使用了 TTTC。過程中清楚浮現一個課題：需要一套連非工程師都能「上傳檔案就能用」的機制[2]。</p>
+<p>於是，他們從 TTTC 的散布圖版本分支出來開始開發，並在 2025-03-16 以 OSS 公開[1][2]。</p>
+<h3>和 TTTC 有什麼不同</h3>
+<p>根據《廣泛傾聽》（ブロードリスニング，DD2030 社群著），主要的差別如下[6]：</p>
+<ul>
+<li><strong>可以在瀏覽器上使用。</strong> 原版要在黑色畫面上打指令執行，需要準備程式環境。広聴AI 只要先架好一次伺服器，就能在瀏覽器上傳檔案、分析，並只要傳送網址就能讓人看結果。</li>
+<li><strong>大小群組可以同時看。</strong> 用「大群組裡有小群組」的巢狀形式整理意見。</li>
+<li><strong>只取出關係緊密的部分。</strong> 可以排除混入了關係薄弱意見的群組。</li>
+<li><strong>優先考慮看起來好懂。</strong> 原來的方式有時會讓同一群組的點在圖上散得很遠。広聴AI 改成「附近的點就是同一群組」的方式。該書寫道，這是把視覺上的整齊擺在精密度之前[6]。</li>
+</ul>
+<h3>處理流程</h3>
+<p>大致依以下順序進行[8]：</p>
+<ol>
+<li>大型語言模型（LLM，處理文字的 AI）把一則貼文拆成各個論點</li>
+<li>把論點轉成一串數字（向量）</li>
+<li>把它投影到二維的圖上</li>
+<li>把相近的點歸成群組，再往上綁成更大的群組</li>
+<li>LLM 替群組命名，並寫出整體摘要</li>
+</ol>
+<p>根據《廣泛傾聽》的試算，用 gpt-4o-mini（OpenAI 的低價 AI 模型）處理 1 萬則的費用約 480 日圓，其中九成以上花在第一步「拆成論點」[8]。</p>
+<h3>版本的演進與開發</h3>
+<p>2025-04-29 推出 v2.0.0[9]。2025-12-28 的 v4.0.0 增加了可用的 AI 種類，並讓限定公開的報告不會被搜尋引擎收錄[10]。</p>
+<p>根據《廣泛傾聽》，從開始開發約一年間，合併了 807 件變更。全部 2,756 筆紀錄中，有 210 筆（約 7.6%）是由寫程式的 AI（Devin）完成的[6]。</p>
+<p>開發體制也有過起伏。2025 年 5 月安野離開 DD2030、創立未來團隊之後，許多開發者跟著轉移過去。變更的審查沒有回音，有時要隔 2.5 個月才被合併。該書記錄，是少數人持續舉行定期會議，才讓開發沒有中斷[6]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>開發者自己的提醒。</strong> DD2030 的官方頁面要求不要過度依賴分析結果。大意是：網路上的意見容易有偏差，並不預設把結果直接變成政策；要由使用者充分確認之後再做決定[2]。關於偏差與誤讀的一般提醒，請看<a href="broad-listening.html">廣泛傾聽</a>一文。</li>
+<li><strong>贊成和反對被放進同一群組。</strong> 對同一個話題的贊成與反對意見，在 AI 看來容易是「相似的文章」，有時會被歸成一群。《廣泛傾聽》把這列為尚未解決的課題，並介紹了幾種對策[8]。</li>
+<li><strong>不容易在地方政府推廣。</strong> DD2030 曾向地方政府推介，但因為動機薄弱、首長與第一線的溫差、人事調動、工程師不足等原因，試用後很難轉為正式運用。據說許多地方政府在分析之前，更大的課題是「收集不到足夠的意見」[6]。</li>
+<li><strong>責任不明確的批評。</strong> 一位市民在 note 上的文章主張，像広聴AI 或<a href="idobata.html">いどばた</a>（Idobata）這種 OSS 式的公民參與，在品質、問責與維護的保證上並不明確[11]。</li>
+<li><strong>不一定是未來團隊的工具。</strong> 《廣泛傾聽》的主要作者中山心太在 2026 年 2 月於 X 上寫道，未來團隊已經不再使用 TTTC 或広聴AI 了[12]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》沒有提到広聴AI 的名字。不過英文版 5-4〈擴增審議〉（Augmented Deliberation）把它的原型 Talk to the City，以及安野在都知事選中的用法，列為廣泛傾聽的例子[13]（目前的繁體中文版 5-4 章沒有這段）。可以說，広聴AI 就是把 TTTC 在日本做成了「任何人都能用的元件」。參見<a href="augmented-deliberation.html">擴增審議</a>。</p>
+<p>依《廣泛傾聽》的分類，它是「作為工具的廣泛傾聽」的代表，和<a href="idobata.html">いどばた</a>或 <a href="polis.html">Polis</a> 這類討論的場所角色不同[14]。開發者 <a href="dd2030.html">DD2030</a> 把它當作中立地提供給政黨與地方政府的公共財來打造[6]。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>DD2030「広聴AI」介紹頁（日文，網頁）— https://dd2030.org/kouchou-ai/</li>
+<li>《廣泛傾聽》第 10 章〈DD2030による広聴AIの開発活動〉（日文，書，免費公開）— https://broadlisteningbook.com/</li>
+<li>kouchou-ai 的儲存庫與說明文件（日文，軟體）— https://github.com/digitaldemocracy2030/kouchou-ai</li>
+<li>說明文件網站（日文，軟體解說）— https://digitaldemocracy2030.github.io/kouchou-ai/</li>
+<li>《廣泛傾聽》第 13 章〈広聴AIの技術スタック解説〉（日文，書，偏技術）— https://broadlisteningbook.com/</li>
+<li><em>Plurality</em> 5-4 "Augmented Deliberation"（英文，書，TTTC 與安野的例子）— https://www.plurality.net/v/chapters/5-4/eng/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>kouchou-ai README — https://github.com/digitaldemocracy2030/kouchou-ai</li>
+<li>DD2030「広聴AI」介紹頁 — https://dd2030.org/kouchou-ai/</li>
+<li>宇多津町「ブロードリスニングの試行」（日文）— https://www.town.utazu.lg.jp/page/4114.html</li>
+<li>澀谷區新聞稿（2025-07-02，日文）— https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</li>
+<li>《ブロードリスニング》第 8 章第 2 節〈広島県の事例〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 10 章〈DD2030による広聴AIの開発活動〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 6 章第 1 節〈チームみらい〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 13 章〈広聴AIの技術スタック解説〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>DD2030 公告「広聴AI v2.0.0」（日文）— https://dd2030.org/</li>
+<li>DD2030 公告「広聴AI v4.0.0」（日文）— https://dd2030.org/</li>
+<li>「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note，日文）— https://note.com/ippanjin_2025/n/n299555fb4908</li>
+<li>中山心太的 X 貼文（2026-02-07）— https://x.com/tokoroten/status/2020004238718570604</li>
+<li>《Plurality》英文版 5-4 "Augmented Deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+</ol><div class='related'>相關: <a href='broad-listening.html'>什麼是廣泛傾聽（Broad Listening）？</a> ・ <a href='talk-to-the-city.html'>什麼是我城對談（Talk to the City）？</a> ・ <a href='dd2030.html'>什麼是デジタル民主主義2030（DD2030）？</a> ・ <a href='municipal-broad-listening.html'>什麼是地方政府的廣泛傾聽？</a> ・ <a href='team-mirai.html'>什麼是未來團隊（チームみらい，Team Mirai）？</a> ・ <a href='idobata.html'>什麼是いどばた（Idobata）？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

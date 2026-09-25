@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是 Cofacts（真的假的）？</title><meta name="description" content="臺灣的民眾把在 LINE 等處收到的可疑訊息轉傳給聊天機器人，就會收到志工查證後寫下的回應；這是一套人人都能參與的事實查核機制。它從公民技術社群 g0v 誕生，收集到的資料任何人都能使用。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/cofacts.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/cofacts.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/cofacts.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/cofacts.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/cofacts.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是 Cofacts（真的假的）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/cofacts.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="臺灣的民眾把在 LINE 等處收到的可疑訊息轉傳給聊天機器人，就會收到志工查證後寫下的回應；這是一套人人都能參與的事實查核機制。它從公民技術社群 g0v 誕生，收集到的資料任何人都能使用。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../cofacts.html">日本語</a> <a class="lang" hreflang="en" href="../en/cofacts.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是 Cofacts（真的假的）？</h1><div class='lead'>臺灣的民眾把在 LINE 等處收到的可疑訊息轉傳給聊天機器人，就會收到志工查證後寫下的回應；這是一套人人都能參與的事實查核機制。它從公民技術社群 g0v 誕生，收集到的資料任何人都能使用。</div><p>家人的群組裡，是不是曾經傳來「喝這個就能治病」「某某很危險」之類的訊息？想知道是真是假，自己查又很費工夫。Cofacts 是臺灣的一套機制：只要把這類訊息轉傳給聊天機器人，就會收到公民查證後寫下的回應。</p>
+<h2>一句話說明</h2>
+<p>Cofacts 是誕生於臺灣的事實查核機制：把可疑的說法轉傳給聊天機器人（自動對話的程式），就會收到志工公民查證後寫下的回應。中文名稱是「真的假的」[1][2][3]。</p>
+<p>任何人都能撰寫回應，收集到的資料也任何人都能自由使用[1][2][3]。</p>
+<h2>舉例來說</h2>
+<p><strong>外界看不見的對話中的謠言。</strong> 在臺灣廣泛使用的 LINE 這類通訊軟體，對話內容外界看不見，因此調查和因應假訊息都很困難。Cofacts 的核心成員 Johnson Liang 寫道，使用者傳給機器人的訊息本身，就成了了解封閉社群媒體裡發生什麼事的珍貴紀錄[2]。2018 年 3 月，這些資料經過去識別化處理後公開[2]。</p>
+<p><strong>同婚公投之前（2018 年）。</strong> Johnson Liang 寫道，Cofacts 的分析功能已經可以用圖表呈現含有「同性戀」的訊息流傳了多少[2]。在海外媒體報導臺灣如何在同婚公投前對抗反 LGBT 假新聞時，Cofacts 也接受了採訪[2]。</p>
+<p><strong>其他機器人的「樞紐」。</strong> Cofacts 的資料庫以任何人都能無限制使用的形式（CC0）公開。因此，由別人製作的熱門機器人「美玉姨」也使用 Cofacts 的資料[3]。唐鳳（Audrey Tang）把 Cofacts 稱為連接許多機器人的「樞紐」（hub）[4]。</p>
+<p>唐鳳說，會用手機但不擅長電腦的年長父母，只要加入這些機器人，也能成為請求查證、把結果轉傳給家人的參與者[4]。唐鳳也說，泰國也有同樣的機制[5]。</p>
+<h2>運作方式</h2>
+<h3>轉傳過去，回應就回來</h3>
+<p>《多元宇宙》寫道，在 Cofacts 這個專案中，「參與的公民快速回應社群媒體上的熱門內容，以及從私人管道轉發到公開留言區的訊息，並提供解答」[1]。</p>
+<p>根據 Johnson Liang 2019 年的回顧，使用者超過 7 萬人，撰寫回應的編輯卻沒有增加[2]。因此在 2018 年 7 月加入了一項功能：傳送訊息時，請使用者寫下覺得哪裡可疑[2]。</p>
+<p>目的有三個：篩掉鬧著玩的貼文；讓編輯能挑選該查證的訊息；讓傳送者自己懷疑資訊，踏出媒體識讀（解讀資訊的能力）的第一步[2]。8 月還加上了把有幫助的回應分享給朋友的按鈕[2]。</p>
+<h3>誰在做</h3>
+<p>Cofacts 是從公民技術社群 <a href="g0v.html">g0v</a>（零時政府）衍生出來的專案[1]。李比鄰（Billion Lee）被介紹為共同創辦人[6]。</p>
+<p>Johnson Liang 記述，2018 年每週三晚上舉行實體會議，共開了 50 次；每兩個月舉辦一次編輯小聚，大家一起寫回應 100 分鐘[2]。</p>
+<p>根據 Johnson Liang 2019 年的文章，Cofacts 在還沒完成的 2017 年初意外受到注目，湧進來的是使用者而不是編輯協作者[3]。英文名稱 Cofacts 在 2017 年 4 月確定[3]。它接受了 g0v 公民科技的獎助金，但文章寫道，出資的一方不干預營運[3][2]。</p>
+<h3>不是「公正第三方」</h3>
+<p>Johnson Liang 承認，既然任何人都能參與，就無法保證每一則回應都正確；但任何人隨時都能補上另一則回應[3]。回應有「含有個人意見」的分類，一則訊息的所有回應會並列顯示。如果不喜歡回應者的組成，也可以用公開的資料和程式碼架設自己的機器人[3]。</p>
+<p>Johnson Liang 寫道，Cofacts 不限制編輯的身分，是一種嘗試用言論自由對抗假訊息的做法；不論成功或失敗，都能成為有同樣煩惱的國家的參考[2]。</p>
+<h3>導入 AI</h3>
+<p>唐鳳在 2023 年說：「像『Cofacts』他們現在也都用語言模型技術，也就是不是靠人一則一則去澄清而已，他們已經訓練一個語言模型，然後第一時間看到這一些訊息攻擊的時候，加入它的脈絡或者是給一些批判思考想法的這些事都已經是 AI 在做了」[7] 2024 年，唐鳳說明，對於人還沒看過、剛開始流行的謠言，它會從過去的例子中連結相關的提醒，立即回應[8]。</p>
+<p>在 2025 年的一次德文訪談中，唐鳳把 Cofacts 形容為像是事實查核界的維基百科[9]。唐鳳說，它不是由政府營運，也有專家支持，並被用在學校的媒體識讀課上[9]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>是不是政府的工具？</strong> 2019 年，一篇專欄把 Cofacts 描寫成像是取締言論的機關，並暗示是唐鳳或當時政府在背後指使。Johnson Liang 逐一反駁：美玉姨機器人是別人做的；專案從來沒有停過；和唐鳳只是作為同樣的 g0v 參與者見過面而已[3]。唐鳳在 2024 年也說，Cofacts 不在政府那一邊，而是在公民社會這一邊，靠捐款等資金運作[8]。</li>
+<li><strong>沒有被政府採用。</strong> The Daily Beast 的報導（2023 年）批評，Cofacts 並沒有被政府採用為打擊假訊息的主要工具[10]。報導說，立委們偏好對散播假訊息的民眾罰款這類強硬手段[10]。</li>
+<li><strong>志工的負擔。</strong> 使用者增加、編輯卻沒有增加，這是 Cofacts 自己列出的 2018 年課題[2]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》2-2 章〈數位民主的日常〉的「資訊透明」一節，把 Cofacts 介紹為臺灣迅速回應假訊息之「超能力」的核心：「在眾多努力中，最為重要的或許就是從 g0v 衍生出的專案『Cofacts』。」[1] 書引用研究寫道：「與量能有限的專業事實查核機構相比，這些系統通常能夠以同等的準確性、更快的速度，且更具吸引力的方式來回應謠言。」[1]</p>
+<p>同一節也列出了其他 LINE 機器人，以及「以幽默對抗謠言」這種臺灣對抗假訊息的想法[1]。臺灣的全貌見〈<a href="taiwan-digital-democracy.html">臺灣的數位民主</a>〉。</p>
+<p>在由公民補寫說明這一點上，Cofacts 和 X 的<a href="community-notes.html">社群備註</a>是相近的機制。唐鳳在 2023 年的訪談中，把 Polis、Cofacts 和社群備註並列為這樣的技術：「它給大家看到的就是最大的聲量，不是吵得最兇的，而是能夠把意見最不同的人橋接在一起」[7]。這個想法詳見〈<a href="bridging.html">橋接</a>〉。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》2-2〈數位民主的日常〉「資訊透明」一節（中文，書）— https://www.plurality.net/v/chapters/2-2/zh-tw/</li>
+<li>Cofacts 真的假的 官方網站（中文，服務）— https://cofacts.g0v.tw/</li>
+<li>Johnson Liang〈2019 第一天，來看看兩歲的 Cofacts〉（中文，文章）— https://medium.com/cofacts/2019-%E7%AC%AC%E4%B8%80%E5%A4%A9-%E4%BE%86%E7%9C%8B%E7%9C%8B%E5%85%A9%E6%AD%B2%E7%9A%84-cofacts-d2330f01727b</li>
+<li>〈美國之音專訪唐鳳部長逐字稿〉（2023-09-23，中文，逐字稿）— https://sayit.archive.tw/2023-09-23-%E7%BE%8E%E5%9C%8B%E4%B9%8B%E9%9F%B3%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF</li>
+<li>Audrey Tang, "Interview with Microsoft Research, Part II"（英文，訪談）— https://github.com/audreyt/transcript/blob/main/2024-01-01-Interview-with-Microsoft-Research%2C-Part-II.md</li>
+<li>Andy Zhao &amp; Mor Naaman 的比較研究（英文，論文）— https://doi.org/10.54501/jots.v2i1.118</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>《多元宇宙》2-2〈數位民主的日常〉「資訊透明」— https://www.plurality.net/v/chapters/2-2/zh-tw/ ［CC0］</li>
+<li>Johnson Liang〈2019 第一天，來看看兩歲的 Cofacts〉（2019-01-01）— https://medium.com/cofacts/2019-%E7%AC%AC%E4%B8%80%E5%A4%A9-%E4%BE%86%E7%9C%8B%E7%9C%8B%E5%85%A9%E6%AD%B2%E7%9A%84-cofacts-d2330f01727b</li>
+<li>Johnson Liang〈摘掉「公正第三方」的高帽子 — Cofacts 對陰謀論的回應〉（2019-01-11）— https://medium.com/cofacts/%E6%91%98%E6%8E%89-%E5%85%AC%E6%AD%A3%E7%AC%AC%E4%B8%89%E6%96%B9-%E7%9A%84%E9%AB%98%E5%B8%BD%E5%AD%90-cofacts-%E5%B0%8D%E9%99%B0%E8%AC%80%E8%AB%96%E7%9A%84%E5%9B%9E%E6%87%89-bd948d128d6c</li>
+<li>Audrey Tang, "Interview with Microsoft Research, Part II"（2024-01-01）— https://github.com/audreyt/transcript/blob/main/2024-01-01-Interview-with-Microsoft-Research%2C-Part-II.md ［CC0］</li>
+<li>Audrey Tang, "Conversation with AI Objectives Institute"（2024-05-06）— https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md ［CC0］</li>
+<li>〈國防在線急 S2E7〉（李比鄰出演，影片）— https://www.youtube.com/watch?v=mCHU0RsVbL8</li>
+<li>〈美國之音專訪唐鳳部長逐字稿〉（2023-09-23）— https://sayit.archive.tw/2023-09-23-%E7%BE%8E%E5%9C%8B%E4%B9%8B%E9%9F%B3%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF ［CC0］</li>
+<li>Audrey Tang, "Interview with Your Undivided Attention podcast"（2024-01-24）— https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md ［CC0］</li>
+<li>D+C, "Taiwan hat die gesellschaftliche Polarisierung abgeschwächt …"（唐鳳訪談，2025，德文）— https://www.dandc.eu/de/article/taiwan-hat-die-gesellschaftliche-polarisierung-abgeschwaecht-und-ist-heute-besser-gegen</li>
+<li>The Daily Beast, "Taiwan tried to digitize democracy with vTaiwan. It was a huge flop"（2023）— https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</li>
+</ol><div class='related'>相關: <a href='g0v.html'>什麼是 g0v（零時政府）？</a> ・ <a href='taiwan-digital-democracy.html'>什麼是臺灣的數位民主？</a> ・ <a href='community-notes.html'>什麼是社群備註（Community Notes）？</a> ・ <a href='bridging.html'>什麼是橋接（bridging）？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

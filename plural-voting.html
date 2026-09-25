@@ -1,0 +1,103 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>⿻投票（プルラル投票）ってなに？</title><meta name="description" content="「一人一票を数えて、多い方が勝つ」というやり方の弱点を直す投票の設計をまとめた呼び名です。どれだけ強く望んでいるか、人どうしがどうつながっているかまで、票に映そうとします。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/plural-voting.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/plural-voting.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/plural-voting.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/plural-voting.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/plural-voting.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="⿻投票（プルラル投票）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/plural-voting.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="「一人一票を数えて、多い方が勝つ」というやり方の弱点を直す投票の設計をまとめた呼び名です。どれだけ強く望んでいるか、人どうしがどうつながっているかまで、票に映そうとします。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/plural-voting.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/plural-voting.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>⿻投票（プルラル投票）ってなに？</h1><div class='lead'>「一人一票を数えて、多い方が勝つ」というやり方の弱点を直す投票の設計をまとめた呼び名です。どれだけ強く望んでいるか、人どうしがどうつながっているかまで、票に映そうとします。</div><p>クラスで行き先を多数決で決めたとき、「どちらでもいい」人の一票と、「どうしてもここに行きたい」人の一票が同じ重さで数えられて、もやもやしたことはないでしょうか。⿻投票（プルラル投票）は、こうした「一人一票の多数決」では拾えないものを、票に映すための工夫をまとめた言葉です。</p>
+<h2>ひとことで言うと</h2>
+<p>⿻投票（Plural Voting）は、本『⿻ Plurality』が第 5-6 章で使う呼び名です。「一人一票を数えて多い方が勝つ」やり方の弱点を直し、<strong>どれだけ強く望むか</strong>と、<strong>人々がどうつながっているか</strong>を票に映そうとする投票の設計をまとめて指します[1][2]。</p>
+<p>代表的なものに、<a href="quadratic-voting.html">クアドラティック投票</a> と <a href="liquid-democracy.html">液体民主主義</a> があります。</p>
+<h2>たとえば</h2>
+<p><strong>台湾の総統杯ハッカソン（2019 年〜）。</strong> 台湾では、市民が社会の課題を解くアイデアを競う「総統杯ハッカソン」の優勝案選びで、市民の投票にクアドラティック投票（QV）を使いました（審査員の採点と合わせて優勝が決まります）。市民には 99 点の持ち点が配られました（計画の段階では 100 点）[3][4]。オードリー・タン（唐鳳、台湾の元デジタル担当大臣）は 2023 年の対談で、台湾は QV などを実施していて、最近「複数投票制」と名前を変えたと語っています[4]。</p>
+<p><strong>本そのものの運営。</strong> 本『Plurality』は、将来の改訂を「⿻投票」の章にある投票のやり方と予測市場で承認する、と書いています[5]。参加者は投票と同時に「この決定でどうなるか」を予測し、当たれば報酬を得ます[6]。</p>
+<p><strong>EU とアメリカのコロラド州。</strong> 本によれば、国の人口の大きさに応じて「平方根」で票を重みづける方法（ペンローズの平方根投票）が、EU の運営の一部でおおよそ使われています。また QV は、コロラド州議会で予算の優先順位をつけるのによく使われているそうです[7]。</p>
+<h2>しくみ</h2>
+<h3>一人一票の何が問題か</h3>
+<p>本は、いちばんよく使われる「単純多数制」（いちばん票の多い人が勝つ方式）の問題を三つ挙げます[8]。</p>
+<ol>
+<li><strong>「ましな方」選び。</strong> 有力な 2 人のどちらかを選ばされ、本当に推したい人に入れにくくなります。</li>
+<li><strong>違いを無視する平等。</strong> たとえば、代表している人口の違いなど、正当な利害の違いが考えに入りません。</li>
+<li><strong>多数派の専制。</strong> 多数派がどちらを向いているかしか分からず、一人ひとりにとってどれほど大事か、どれほど詳しいかが映りません。</li>
+</ol>
+<p>本は、ほかの改良案（順位をつける投票、複数に丸をつける承認投票など）にも、それぞれ限界があるとしています[8]。</p>
+<h3>平方根の考え方（小さな例）</h3>
+<p>本の中心にある考えは「平方根」です[7]。</p>
+<p>互いに関係のない人たちの票は、ばらばらの方向を向くので、平均すると打ち消し合います。そのため、合計の影響は票の数そのものではなく、<strong>票の数の平方根</strong>でしか大きくなりません。一方、1 人がまとめて持つ票は、全部が同じ方向を向くので、そのまま効きます。</p>
+<p>本の例では、<strong>互いに無関係な 1 万票は、まとまった 100 票と同じ重さ</strong>しかありません。1 万の平方根は 100（100 × 100 = 10,000）だからです[7]。</p>
+<p>ここから、次のことが言えます。利害が 2 倍の人に 2 倍の票を与えると、2 倍を超える力を与えすぎてしまいます。利害に見合った力にするには、重みを<strong>利害の平方根</strong>で増やせばよい、と本は考えます[7]。この考えを投票の仕組みにしたのが <a href="quadratic-voting.html">クアドラティック投票</a> です。</p>
+<h3>つながりを数に入れる</h3>
+<p>ただし本は、平方根のきれいな規則がいちばん良いのは、投票する人たちが「中では一枚岩で、外とはまったく無関係」という特別な場合だけだ、とも書きます[7]。現実の人は、いろいろな集団に重なって属しています。そこで本は、つながりを考えに入れた未来の投票をいくつか挙げます[6]。</p>
+<ul>
+<li><strong>つながりに応じた割引。</strong> 同じ集団の中で同じように入れた票は、少し割り引いて数えます。</li>
+<li><strong>適応的な代表。</strong> 選挙区を地理だけでなく、都市と農村、教育などの今ある分断に沿って区切ります。</li>
+<li><strong>予測投票。</strong> 投票と「どうなるか」の予測を同時に行います。</li>
+<li><strong>クアドラティック液体民主主義。</strong> 票を人に預ける仕組みで、力が一人に集まりすぎるのを平方根で抑えます。</li>
+<li><strong>支援付きの投票。</strong> デジタルの助手が本人の考えを学び、本人の確認のもとで代わりに投票します。</li>
+</ul>
+<p>本は、こうした仕組みの多くが、人のつながりを記録する ID のしくみに大きく頼ることも強調しています[7][6]。</p>
+<h3>「似た者どうし」の票を見分ける案</h3>
+<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、本の書評の中で、誰と誰の意見が似ているかを投票そのものから測る案を紹介しました[9]。1 人に 1 票ではなく、「2 人組」ごとに分けられる票を配ります。ブテリンの例はこうです。ほぼすべての争点で意見がそろう 3 人が、ある争点に賛成しました。ほかの争点では意見の合わない 2 人は、その争点にそろって反対しました。単純に数えれば 3 対 2 で賛成が勝ちます。ところが 2 人組ごとの票で数えると、反対の方が上回ります。似た者どうしの 3 人の賛成は、重なりの分だけ割り引かれるからです。</p>
+<p>経済学者グレン・ワイル（E. Glen Weyl）らの 2023 年の文章も、似た集団より多様な集団に支えられたものを重く見る設計は、示し合わせ（共謀）に強く、それこそ Plurality の目標だと書いています[10]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>投票は問いを立てられない。</strong> 本自身が、投票はどれほど工夫しても、ほかの場ですでに立てられた問いに答えるだけだと認めています。話し合いや共同の作業があって、初めて集団の決定は意味を持つ、と本は書きます[11]。</li>
+<li><strong>妥協が多様性を消さないか。</strong> 本は、つながりで票を割り引く仕組みは、今ある分断に沿った支持を弱め、分断を横切る新しい組み合わせを生むので、多様性はある程度保てると応じています[11]。</li>
+<li><strong>国境を越えにくい。</strong> 投票には信頼できる ID が要るので、世界規模の投票がすぐに正統と認められることはない、と本は見ています[11]。</li>
+<li><strong>「無関係かどうか」を誰が判断するのか。</strong> ブテリンは、組織的な集団が無関係な人々のふりをするのは昔からある手口だと指摘します。SNS の投稿から関係を測ろうとすれば、人々は無関係に見えるよう振る舞い、ボットまで使うだろう、と言います。理想的な仕組みはまだ研究の途中だ、というのがブテリンの見方です[9]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本の第 5 部は、違う人どうしが協働する七つの型を、「深さ」と「広さ」の順に並べています[12]。⿻投票はその 6 番目です。本は、投票は伝わる情報がずっと薄い代わりに、より多くの人を包み込め、市場より正統と見なされやすい、と位置づけます[1][11]。</p>
+<p>前の段階には <a href="augmented-deliberation.html">拡張熟議</a>（技術で支える話し合い）があり、次は「いちばん薄い協働」である <a href="social-markets.html">社会市場</a> へつながります。お金の配分に平方根の考えを使ったものが <a href="quadratic-funding.html">クアドラティック・ファンディング</a>、票を預ける仕組みが <a href="liquid-democracy.html">液体民主主義</a>、本の運営に投票と予測を使う仕組みが <a href="plural-management-protocol.html">Plural Management Protocol</a> です。</p>
+<p>日本の文脈では、ワイルは 2024 年の来日の場で、18 歳になった若者や来日したばかりの人が年月とともに多くの投票権を得る仕組みや、異なる集団を考えに入れる QV のような仕組みがあれば、高齢者と若者は争わずに協力できるはずだと述べました[13]。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』5-6「⿻投票」（日本語・本）— https://www.plurality.net/v/chapters/5-6/jpn/</li>
+<li>本の各章の要約（英語・本の紹介）— https://github.com/pluralitybook/plurality</li>
+<li>本『Plurality』5-6「⿻ Voting」（英語・本、脚注が充実）— https://www.plurality.net/v/chapters/5-6/eng/</li>
+<li>総統杯ハッカソンの投票方式をめぐる討論（2019 年、中国語の逐語録）— https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96</li>
+<li>Vitalik Buterin の Plurality 書評（英語・長い書評）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>Miller・Weyl・Erichsen「Designing Pluralistic Mechanisms for Quadratic Funding」（英語・記事）— https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>『Plurality』5-6「⿻ Voting」冒頭 — https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>『Plurality』各章の要約（Chapter 5-6）— https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>総統杯ハッカソン票選方式討論（2019-02-18）— https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96 ［CC0］</li>
+<li>DISTANCE.media 唐鳳の対談の和訳（2024-04-09）— https://distance.media/article/20240409000196/</li>
+<li>『Plurality』5-0「Collaborative Technology and Democracy」冒頭 — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>『Plurality』5-6「Frontiers of voting」— https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>『Plurality』5-6「⿻ Voting tomorrow」— https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>『Plurality』5-6「Voting today」— https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」Voting 節（2024-08-21）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>Miller・Weyl・Erichsen「Designing Pluralistic Mechanisms for Quadratic Funding」（2023）— https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</li>
+<li>『Plurality』5-6「Limits of ⿻ voting」— https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>『Plurality』5-0「The depth-breadth spectrum」— https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>WIRED.jp「デジタル・デモクラシーは多元的テクノロジーによって実現する」（2024）— https://wired.jp/article/glen-weyl-talk-2024/</li>
+</ol><div class='related'>関連: <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='liquid-democracy.html'>液体民主主義ってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='plural-management-protocol.html'>Plural Management Protocol（PMP）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

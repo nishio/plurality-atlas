@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is contextual integrity?</title><meta name="description" content="The idea that privacy is not about hiding information, but about information being handled according to the norms of the setting in which it was shared. The book *Plurality* uses it as a yardstick for designing online identity, payments and data sharing."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/contextual-integrity.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/contextual-integrity.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/contextual-integrity.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is contextual integrity?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/contextual-integrity.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="The idea that privacy is not about hiding information, but about information being handled according to the norms of the setting in which it was shared. The book *Plurality* uses it as a yardstick for designing online identity, payments and data sharing."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../contextual-integrity.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/contextual-integrity.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is contextual integrity?</h1><div class='lead'>The idea that privacy is not about hiding information, but about information being handled according to the norms of the setting in which it was shared. The book *Plurality* uses it as a yardstick for designing online identity, payments and data sharing.</div><p>You would not want a health worry you told your doctor to reach your employer. But if your doctor never heard about it, you could not be treated. So what matters is not whether something is hidden, but whether it stays within the setting where it was said. This way of seeing things is called "contextual integrity". A "context" is the setting in which information is exchanged.</p>
+<h2>In short</h2>
+<p>Contextual integrity is the idea that privacy is <strong>not about hiding information, but about information being handled according to the norms of the setting in which it was shared</strong> [1].</p>
+<p>What you say at a hospital should stay within medical care, and what you tell a friend should stay between friends. Carrying it outside is a violation. Conversely, it is also harmful when information fails to reach the people it should reach [1]. The book <em>⿻ Plurality</em> uses this idea as a yardstick for designing online identity, payments and data sharing.</p>
+<h2>For example</h2>
+<p><strong>A first kiss.</strong> The book points out that almost everything important about us is known by others, and is usually just as much about them. It writes that "erasing the memory of our first kiss from the mind of the partner to that kiss would be just as much a violation of privacy as would one of us sharing that information inappropriately" [1].</p>
+<p>So what we are after, the book writes, "is not well-described by the term 'privacy'". It is "about information remaining in the social setting for which it was intended", which the privacy scholar Helen Nissenbaum calls "contextual integrity" [1].</p>
+<p><strong>Genetic information.</strong> Genes are shared within families. So when one person discloses their genetic data, it reveals things about their family and even distant relatives. The book says that "something like a 1% statistical sample of a population allows the identification of any individual from their genetic profile", and holds that genetic privacy is a profoundly social matter [2][3].</p>
+<p><strong>The flow of money.</strong> Every financial transaction involves at least two parties. Within a community, money flows are to some extent visible to those around. So the goal in finance, the book says, "is not privacy as much as it is contextual integrity: ensuring that this information stays within the affected community unless it is having important and widely recognized spillover effects on other communities" [4]. → <a href="commerce-and-trust.html">Commerce and Trust</a></p>
+<h2>In more detail</h2>
+<h3>Not a choice between public and secret</h3>
+<p>In the book's argument, information that fails to reach and be understood by the people it is meant for does as much harm as information that spreads too far. In other words, contextual integrity "requires a certain kind of publicity" [1].</p>
+<p>And because such information is social from the start, the core issue is not individual choice or protection. It is protecting groups of people against violations of their collective norms about information. From here the book concludes that "the central problems are about another fundamental right: the freedom of association" (the freedom of people to gather and form groups) [1].</p>
+<h3>Data mostly belongs to groups</h3>
+<p>Chapter 4-2 writes that most cryptography and regulation treat privacy as a matter for individuals, yet most of what we usually mean by privacy relates to groups [5]:</p>
+<ul>
+<li>Genetic and medical data concern your family.</li>
+<li>Communication and financial data concern the other party to the exchange.</li>
+<li>Location data concern the people who were there with you.</li>
+</ul>
+<p>According to the book, almost the only truly individual data are identifying numbers issued by bureaucracies, and even these describe a relationship with the issuing body. So, the book says, one person disclosing data on their own almost always threatens someone else's privacy [5].</p>
+<h3>Not only snooping from outside</h3>
+<p>Much cryptography and law concentrates on stopping outsiders from spying, the book points out, but is weak against insiders who leak [6].</p>
+<p>So the book lists technologies that restrain over-sharing from the inside: for example, messages that disappear after a time, and a cryptographic technique called "designated verifier proofs", which prove authenticity to the single recipient but to no one else [6]. The idea built up from the group's side is <a href="plural-publics.html">⿻ publics</a>. As a condition for it, the book names participants being able to easily establish and protect the context in which they are communicating ("contextual confidence") [7].</p>
+<h3>A yardstick for design</h3>
+<p>In the book, this idea serves as a yardstick again and again in the chapters of Part 4:</p>
+<ul>
+<li><strong>Identity.</strong> When information arising from ordinary relationships with others is used to verify identity, the book writes, "a great deal of care is required to ensure any use of it for identity verification does not violate these norms of 'contextual integrity'" [8]. → <a href="identity-and-personhood.html">Identity and Personhood</a></li>
+<li><strong>Payments.</strong> Alongside the principle above of keeping information within the community, the book argues for ⿻ "checks and balances", in which the communities involved take part in external oversight rather than having it imposed one-sidedly from outside [4].</li>
+<li><strong>Data sharing.</strong> The book shows that having each individual manage the rights to their own data does not work, because of genetic information leaking across relatives and a lack of bargaining power. It proposes organizations that collectively represent the people the data are about [3]. → <a href="property-and-contract.html">Property and Contract</a>, <a href="data-dignity.html">data dignity</a></li>
+<li><strong>Access.</strong> Chapter 4-5 writes that policymakers should invest "in digital public infrastructure to protect contextual integrity for online exchange" [9]. → <a href="digital-public-infrastructure.html">digital public infrastructure</a></li>
+</ul>
+<h2>What is debated</h2>
+<ul>
+<li><strong>A common misunderstanding: stronger privacy means hiding more.</strong> In the book's view, hiding too much (so that information fails to reach those it should) is also harmful. The goal is not to maximize secrecy [1].</li>
+<li><strong>Who gets it wrong?</strong> On finance, the book says that it is "the community's responsibility to either ensure their culture is not supporting such externally harmful activity or to defend their right to support it if the external claim is unjust" [4]. What happens when a community makes this judgment badly, however, stays abstract in the book.</li>
+<li><strong>A tension with whistleblowing.</strong> Chapter 6-3 acknowledges that tools for protecting contexts can clash with journalists' sources, who leak information against an organization's norms [10].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>The idea comes from Nissenbaum's 2004 paper "Privacy as Contextual Integrity", which the book cites in a note to chapter 4-1 [1].</p>
+<p>In the book, it appears at the end of chapter 4-1, "<a href="identity-and-personhood.html">Identity and Personhood</a>", and becomes the starting point of chapter 4-2, "<a href="plural-publics.html">Association and ⿻ Publics</a>". It is then used in chapter 4-3, "<a href="commerce-and-trust.html">Commerce and Trust</a>", chapter 4-4, "<a href="property-and-contract.html">Property and Contract</a>", and chapter 4-5, "Access" (see <a href="digital-public-infrastructure.html">digital public infrastructure</a>). It can be called a thread running through all of Part 4 of the book, "Freedom", whose opening chapter sets out the <a href="rights-os.html">rights operating system</a>.</p>
+<p>The same reading continues in the authors' later work. The paper "Community by Design" by Weyl, Tang and others, following Nissenbaum, sums up privacy as being less an individual right than a matter of context-specific duties of confidentiality toward communities, and names as a primary goal letting a diversity of intersecting communities each achieve a related "contextual confidence" while enabling people to navigate the resulting complexity [11].</p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Plurality</em>, chapter 4-1 "Identity and Personhood", section "Identity and association" (English, book) — https://www.plurality.net/v/chapters/4-1/eng/</li>
+<li><em>Plurality</em>, chapter 4-2 "Association and ⿻ Publics" (English, book) — https://www.plurality.net/v/chapters/4-2/eng/</li>
+<li><em>Plurality</em>, chapter 4-3 "Commerce and Trust", section "Digital money and privacy" (English, book) — https://www.plurality.net/v/chapters/4-3/eng/</li>
+<li>Weyl, Tang and others, "Community by Design" (English, paper) — https://arxiv.org/abs/2502.10834</li>
+<li>Jain, Hitzig and Mishkin, "Contextual Confidence and Generative AI" (English, paper) — https://arxiv.org/abs/2311.01193</li>
+<li><em>Plurality</em>, chapter 4-1, Japanese edition (in Japanese, book) — https://www.plurality.net/v/chapters/4-1/jpn/</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li><em>Plurality</em>, 4-1, section "Identity and association" (note: Nissenbaum) — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-2, section "Protecting context" (the item on genetic data) — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-4 "Property and Contract", section "⿻ property" — https://www.plurality.net/v/chapters/4-4/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-3, section "Digital money and privacy" — https://www.plurality.net/v/chapters/4-3/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-2, section "Protecting context", middle part — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li>Same, second half — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-2, section "⿻ publics" — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-1, section "Identity as an intersection" — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-5 "Access" — https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 6-3 "Media" — https://www.plurality.net/v/chapters/6-3/eng/ ［CC0］</li>
+<li>Weyl, Tang and others, "Community by Design" — https://arxiv.org/abs/2502.10834</li>
+</ol><div class='related'>Related: <a href='plural-publics.html'>What are ⿻ publics?</a> ・ <a href='identity-and-personhood.html'>What is Identity and Personhood (⿻ identity)?</a> ・ <a href='commerce-and-trust.html'>What is Commerce and Trust (⿻ money)?</a> ・ <a href='property-and-contract.html'>What is Property and Contract (⿻ property)?</a> ・ <a href='data-dignity.html'>What is data dignity?</a> ・ <a href='digital-public-infrastructure.html'>What is digital public infrastructure (DPI)?</a> ・ <a href='rights-os.html'>What is the rights operating system?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

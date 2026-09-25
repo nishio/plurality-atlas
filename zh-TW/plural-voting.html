@@ -1,0 +1,104 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是⿻投票（plural voting）？</title><meta name="description" content="用來修補「一人一票、多者勝」這種做法弱點的各種投票設計的總稱。它試著把「多想要」以及「人與人之間怎麼相連」都反映到選票上。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/plural-voting.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/plural-voting.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/plural-voting.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/plural-voting.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/plural-voting.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是⿻投票（plural voting）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/plural-voting.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="用來修補「一人一票、多者勝」這種做法弱點的各種投票設計的總稱。它試著把「多想要」以及「人與人之間怎麼相連」都反映到選票上。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../plural-voting.html">日本語</a> <a class="lang" hreflang="en" href="../en/plural-voting.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是⿻投票（plural voting）？</h1><div class='lead'>用來修補「一人一票、多者勝」這種做法弱點的各種投票設計的總稱。它試著把「多想要」以及「人與人之間怎麼相連」都反映到選票上。</div><p>班上用多數決決定去哪裡校外教學時，「去哪都可以」的人的一票，和「非去這裡不可」的人的一票被算成一樣重，你是否曾覺得不太對勁？⿻投票（Plural Voting）就是把這種「一人一票多數決」撿不起來的東西反映到選票上的各種方法的總稱。</p>
+<h2>一句話說明</h2>
+<p>⿻投票是《多元宇宙》5-6 章使用的名稱。它總括了修補「一人一票、多者勝」這種做法的弱點，並試著把<strong>多想要</strong>與<strong>人們之間怎麼相連</strong>反映到選票上的投票設計[1][2]。書的簡介說：「『⿻投票』 允許選民有更多的表達方式，在更多的社會脈絡下做出選擇，從而使集體決策更豐富地反映多樣性。」[2]</p>
+<p>代表性的例子有<a href="quadratic-voting.html">平方投票</a>和<a href="liquid-democracy.html">流動式民主</a>。</p>
+<h2>舉例來說</h2>
+<p><strong>臺灣的總統盃黑客松（2019 年起）。</strong> 臺灣讓市民比賽用點子解決社會課題的「總統盃黑客松」，在評選優勝提案時，民眾投票採用平方投票（QV）（評審的評分也一併計入）。市民各拿到 99 點（規劃階段是 100 點）[3][4]。唐鳳（Audrey Tang，臺灣前數位發展部部長）在 2023 年的對談中說，臺灣實施了 QV 等方式，最近改了名稱（日文譯本譯作「複数投票制」）[4]。</p>
+<p><strong>這本書本身的營運。</strong> 書的 5-0 章寫道，社群「通過使用我們在下方的《5-6 ⿻投票》一章中描述的先進投票程序，和預測市場的混合方式，集體批准對文本的更改」[5]。參與者在投票的同時預測「這個決定會帶來什麼結果」，預測正確就獲得獎勵[6]。</p>
+<p><strong>歐盟與美國科羅拉多州。</strong> 根據書的說法，依國家人口大小以「平方根」加權的方法（彭羅斯的「平方根投票」規則），大約用於歐盟各成員國的若干治理要素中；平方投票則在科羅拉多州議會確定預算支出優先次序時被多次使用[7]。</p>
+<h2>運作方式</h2>
+<h3>一人一票有什麼問題</h3>
+<p>書舉出最常見的「少數服從多數」規則的三個問題[8]：</p>
+<ol>
+<li><strong>「兩害相權取其輕」。</strong> 人們被迫在兩個主要選項中挑一個，很難投給真正想支持的人。</li>
+<li><strong>忽視差異的平等。</strong> 不同參與者對一個問題可能有不同程度的正當利益（例如代表的人口不同），但「一人一票」不考慮這些。</li>
+<li><strong>「多數暴力」。</strong> 只能看出多數人選擇的方向，看不出不同問題對人們有多重要、人們對問題的理解有多深。</li>
+</ol>
+<p>書也說，其他改良方案（排序選擇、可以勾選多個選項的同意投票等）各有局限[8]。</p>
+<h3>平方根的想法（小例子）</h3>
+<p>書的核心想法是「平方根」[7]。</p>
+<p>彼此無關的人所投的票，方向各自不同，平均起來會互相抵消。因此總影響力不是隨票數本身增長，而只隨<strong>票數的平方根</strong>增長。另一方面，一個人手中的票全都朝同一個方向，所以會原封不動地發揮作用。</p>
+<p>書寫道：「10,000 張互不相關的選票，與 100 張彼此相關選票的權重，是一樣大的。」[7] 因為 1 萬的平方根是 100（100 × 100 = 10,000）。</p>
+<p>由此可以說：給利益加倍的人兩倍的票，就會給這個人超過兩倍的力量。書認為，要讓力量與利益相稱，權重應該隨<strong>利益的平方根</strong>增長[7]。把這個想法做成投票機制的，就是<a href="quadratic-voting.html">平方投票</a>。</p>
+<h3>把關係算進去</h3>
+<p>不過書也寫道，平方根這種簡潔的規則，「只有當投票人內部完全統一、外部完全不相關或未協調時」才是最佳的[7]。現實中的人同時屬於許多重疊的群體。所以書列出幾種把關係考慮進去的未來投票[6]：</p>
+<ul>
+<li><strong>相關性折扣</strong>——同一群體內投得一樣的票，打一點折扣再計算。</li>
+<li><strong>適應式代表制</strong>——選區不只依地理，也依城市與鄉村、種族、教育等當前的社會分歧來劃分。</li>
+<li><strong>預測式投票</strong>——同時投票和預測結果。</li>
+<li><strong>平方流動式民主</strong>——在把票委託給別人的機制中，用平方根來避免權力過度集中。</li>
+<li><strong>輔助式即時投票</strong>——數位助理學會本人的想法，在本人審查下代為投票。</li>
+</ul>
+<p>書也強調，這類機制很多都高度依賴能記錄人際關係的身分系統[7][6]。</p>
+<h3>分辨「同類人」選票的提案</h3>
+<p>以太坊創始人維塔利克·布特林（Vitalik Buterin）在這本書的書評中，介紹了一個從投票本身測量誰和誰意見相似的方案[9]。不是每人一票，而是按「兩人一組」分配選票。布特林的例子是這樣的：在幾乎所有議題上意見一致的 3 個人，贊成某個議題；在其他議題上意見不合的 2 個人，一起反對這個議題。單純計票是 3 比 2，贊成勝出。可是按兩人一組的選票來算，反對反而較多，因為同類的 3 個人的贊成票，會按重疊的部分打折扣。</p>
+<p>經濟學者衛谷倫（E. Glen Weyl）等人 2023 年的文章也寫道，比起由相似群體支持的東西，更看重由多樣群體支持的東西的設計，更能抵抗串通，而這正是 Plurality 的目標[10]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>投票無法提出問題。</strong> 書本身承認，即使是最豐富的投票形式，「也僅是在表達和決定對其他社會進程已經提出的決策的偏好」[11]。書寫道：「只有在我們勾勒出的創意協作、審議、想像和行政制度的背景下，集體決策才有意義。」[11]</li>
+<li><strong>妥協會不會消滅多樣性？</strong> 書的回應是：透過「相關性折扣」降低既有關連群體的支持度，可以避免強化現有衝突，並創造出跨越現有界限的新分歧，所以多樣性可以在某種程度上保留[11]。</li>
+<li><strong>難以跨越國界。</strong> 書認為，投票需要可靠的身分系統，所以投票系統「不可能在短期內真正達到全球的正當性」[11]。</li>
+<li><strong>誰來判斷「是否無關」？</strong> 布特林指出，有組織的群體假裝成互不相關的人，是自古就有的手法。如果想從社群網站的貼文測量關係，人們就會表現得像互不相關，甚至動用機器人。布特林認為，理想的機制還在研究中[9]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>書的第五部分，把不同的人彼此協作的七種形式，依「深度」與「廣度」排列[12]。⿻投票是第六種。書的定位是：投票所允許的交流遠比其他技術薄弱，但它通常是更廣泛包容的過程，它的裁決通常被認為比市場的結果更有正當性[1][11]。</p>
+<p>前一階段是<a href="augmented-deliberation.html">擴增審議</a>（用技術支持的討論），下一步則接到「最薄弱的」合作基礎<a href="social-markets.html">社會市場</a>。把平方根的想法用在資金分配上的是<a href="quadratic-funding.html">平方募資</a>，把票委託給別人的機制是<a href="liquid-democracy.html">流動式民主</a>，在本書營運中使用投票與預測的機制是<a href="plural-management-protocol.html">多元管理協定</a>（Plural Management Protocol）。</p>
+<p>在日本的脈絡中，衛谷倫在 2024 年訪日時說，如果有讓剛滿 18 歲的年輕人或剛來日本的人隨著年月獲得更多投票權的機制，或像 QV 這樣把不同群體考慮進去的機制，老年人和年輕人應該就能不必相爭而彼此合作[13]。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》5-6〈⿻投票〉（中文，書）— https://www.plurality.net/v/chapters/5-6/zh-tw/</li>
+<li>〈2019-02-18 總統盃黑客松票選方式討論〉（中文，逐字稿）— https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96</li>
+<li>《多元宇宙》簡介（中文，各章摘要）— https://github.com/pluralitybook/plurality</li>
+<li><em>Plurality</em> 5-6 "⿻ Voting"（英文，書，註腳較完整）— https://www.plurality.net/v/chapters/5-6/eng/</li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（英文，長篇書評）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>Miller、Weyl、Erichsen, "Designing Pluralistic Mechanisms for Quadratic Funding"（英文，文章）— https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</li>
+<li>『Plurality』5-6「⿻投票」（日文，書）— https://www.plurality.net/v/chapters/5-6/jpn/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>《多元宇宙》5-6〈⿻投票〉開頭 — https://www.plurality.net/v/chapters/5-6/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》簡介，各章摘要（5-6）— https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>〈2019-02-18 總統盃黑客松票選方式討論〉— https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96 ［CC0］</li>
+<li>DISTANCE.media 唐鳳對談的日文譯本（2024-04-09，日文）— https://distance.media/article/20240409000196/</li>
+<li>《多元宇宙》5-0〈協作技術與民主〉開頭 — https://www.plurality.net/v/chapters/5-0/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》5-6「未來的投票」— https://www.plurality.net/v/chapters/5-6/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》5-6「明日的投票」— https://www.plurality.net/v/chapters/5-6/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》5-6「今日的投票」— https://www.plurality.net/v/chapters/5-6/zh-tw/ ［CC0］</li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"，Voting 一節（2024-08-21）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>Miller、Weyl、Erichsen, "Designing Pluralistic Mechanisms for Quadratic Funding"（2023）— https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</li>
+<li>《多元宇宙》5-6「投票的局限」— https://www.plurality.net/v/chapters/5-6/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》5-0「深度-廣度光譜」— https://www.plurality.net/v/chapters/5-0/zh-tw/ ［CC0］</li>
+<li>WIRED.jp「デジタル・デモクラシーは多元的テクノロジーによって実現する」（2024，日文）— https://wired.jp/article/glen-weyl-talk-2024/</li>
+</ol><div class='related'>相關: <a href='quadratic-voting.html'>什麼是平方投票？</a> ・ <a href='liquid-democracy.html'>什麼是流動式民主（liquid democracy）？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='identity-and-personhood.html'>什麼是「身分與人格權」（多元身分）？</a> ・ <a href='plural-management-protocol.html'>什麼是多元管理協定（Plural Management Protocol，PMP）？</a> ・ <a href='augmented-deliberation.html'>什麼是擴增審議？</a> ・ <a href='social-markets.html'>什麼是社會市場？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

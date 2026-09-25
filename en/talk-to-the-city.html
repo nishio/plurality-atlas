@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is Talk to the City (TTTC)?</title><meta name="description" content="A free, openly published tool that has AI read large numbers of free-form comments, group them by similar points, and turn them into a map of dots with summaries. Built by the US-based AI Objectives Institute, it has been used in discussions in Taiwan and at the start of broad listening in Japan."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/talk-to-the-city.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/talk-to-the-city.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/talk-to-the-city.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/talk-to-the-city.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/talk-to-the-city.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is Talk to the City (TTTC)?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/talk-to-the-city.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="A free, openly published tool that has AI read large numbers of free-form comments, group them by similar points, and turn them into a map of dots with summaries. Built by the US-based AI Objectives Institute, it has been used in discussions in Taiwan and at the start of broad listening in Japan."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../talk-to-the-city.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/talk-to-the-city.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is Talk to the City (TTTC)?</h1><div class='lead'>A free, openly published tool that has AI read large numbers of free-form comments, group them by similar points, and turn them into a map of dots with summaries. Built by the US-based AI Objectives Institute, it has been used in discussions in Taiwan and at the start of broad listening in Japan.</div><p>Ask the public for its views and you may get thousands, even tens of thousands, of written replies. But reading all of them, and grasping which topics come up and how often, is hard work for people. Talk to the City is a tool that uses AI to give an overview of these "too many to read" opinions.</p>
+<h2>In short</h2>
+<p>Talk to the City (TTTC for short) is <strong>software that has AI read hundreds to tens of thousands of free-form comments and shows, as a map of dots with summaries, which points are being raised and how often</strong> [1][2].</p>
+<p>It was built by the AI Objectives Institute (AOI), a US nonprofit. It is free, and its program code is public (open source) [1]. Technology of this kind, for listening to many voices, is called <a href="broad-listening.html">broad listening</a>.</p>
+<h2>For example</h2>
+<p><strong>Taiwan's Alignment Assemblies (2023).</strong> Taiwan's Ministry of Digital Affairs (moda) gathered citizens' views on generative AI. It first collected opinions online with <a href="polis.html">Polis</a>, then made the results visible with TTTC and used them as material for face-to-face discussions in Taipei and Tainan [3][4]. Audrey Tang noted that in this report, English and Chinese comments appear side by side in the same groups [5]. → <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
+<p><strong>The Tokyo governor's election (2024).</strong> The campaign of the candidate Takahiro Anno analyzed with TTTC the voices gathered through the hashtag "#TOKYOAI" on X and an anonymous suggestion box, producing more than 30 reports during the campaign. From the 951 opinions extracted from posts to the suggestion box came calls to remove the income cap on child-rearing support, which were reflected in version 2.0 of the manifesto (the list of campaign promises) [6]. → <a href="anno-2024-tokyo-campaign.html">Takahiro Anno's 2024 Tokyo campaign</a></p>
+<p><strong>A question in parliament (2025-03-07).</strong> Takae Ito, a member of the House of Councillors for the Democratic Party for the People, turned voices of the "employment ice age" generation (people who entered the job market in a long hiring slump), gathered by phone, Google Forms and social media, into a "map of issues" with TTTC. She used it as supporting material when questioning the Prime Minister in the Budget Committee. The book <em>Broad Listening</em> (written by the DD2030 community) describes this as the first time in Japan's parliament that broad listening results were used as the basis for a question [7].</p>
+<h2>How it works</h2>
+<h3>Three steps</h3>
+<p>The book <em>Broad Listening</em> explains TTTC's processing in three steps [6]:</p>
+<ol>
+<li><strong>Extract.</strong> Generative AI pulls the "opinions" out of each post.</li>
+<li><strong>Group.</strong> Each text is converted into a list of numbers (a vector), and similar opinions are gathered together (clustering).</li>
+<li><strong>Label.</strong> Generative AI gives each group a heading and a summary. Finally, the spread of opinions is drawn as a two-dimensional scatter plot.</li>
+</ol>
+<h3>The newest part is the "extract" step</h3>
+<p>Hirokazu Nishio writes that the first step, extraction, is what sets this apart from earlier kinds of analysis [8].</p>
+<p>You can tell the AI what to extract in ordinary language rather than in program code. Posts that are not useful yield nothing, so the step works as a natural filter. And even when one text mixes several points, they can be separated and handled one by one [8].</p>
+<h3>Two versions</h3>
+<p>According to the book <em>Broad Listening</em>, TTTC comes in two versions: "TTTC Scatter", which shows opinions in a scatter plot, and "TTTC Turbo", which has AI classify them directly and shows them as a list. Both have been used in Taiwan and elsewhere [9].</p>
+<h3>Why it drew attention</h3>
+<p>Tang has looked back on how, around 2014, even the civic community <a href="g0v.html">g0v</a> could not interview each participant in a discussion and pull their views together while keeping the fine nuances. In the English translation of the book <em>Broad Listening</em>, Tang is quoted as saying: "But now, with the help of Talk to the City, that cost has fallen to nearly zero" [10].</p>
+<p>Tang has also said that because the tools are open, community organizers who already have recorded interviews and the like can "use their open source methodology to turn your Vimeo or YouTube playlist into this kind of collective intelligence, completely free of charge" [11].</p>
+<h3>How it differs from Polis</h3>
+<p>Both look like scatter plots of dots. But the dots stand for different things [3]:</p>
+<ul>
+<li>In <strong>Polis</strong>, each dot is <strong>one person</strong>. People who think alike sit close together.</li>
+<li>In <strong>TTTC</strong>, each dot is <strong>one opinion</strong>. Opinions on similar topics sit close together.</li>
+</ul>
+<p>The book <em>Broad Listening</em> treats the two as complementary. Polis uses votes to show opinion groups and the statements supported across groups. TTTC organizes what people actually said in free-form text [12].</p>
+<h3>How it spread in Japan</h3>
+<p>Its use in Japan began in May 2024. On May 23, Haruyuki Seki of Code for Japan introduced TTTC at a meeting with Anno and Nishio. On May 30, Nishio tried it on about 20,000 public comments about AI [6].</p>
+<p>After that, it was used in a TV network's coverage of the 2024 general election and in Tokyo's "Shin Tokyo 2050" call for public input [2][13]. → <a href="tokyo-2050-broad-listening.html">Broad listening for Tokyo's 2050 strategy</a></p>
+<p>But TTTC Scatter needed specialist setup to run and was hard to use. So "<a href="kouchou-ai.html">Kouchou AI</a>", a reworked branch (fork) of it, was released on 2025-03-16. The <a href="dd2030.html">Digital Democracy 2030 (DD2030)</a> community continues to develop it [9].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>A map of topics, not a map of opinions.</strong> Nishio points out that TTTC groups comments by topic, not by for-or-against. For example, an opinion that something should be banned and the opposite opinion that it should not be interfered with can land in the same group. There is no built-in way to tell support from opposition [14].</li>
+<li><strong>Errors creep in.</strong> In the general-election project with a TV network, the results sometimes contained things that were not true, both because of "hallucinations" (the AI writing things that are not in the original posts) and because of errors in the original posts themselves. Reporters checked the headings and summaries by hand, which took considerable time and money [13].</li>
+<li><strong>Barriers for users.</strong> From her actual experience, Ito reported five barriers: organizational decision-making, securing engineers, tuning the instructions given to the AI, money, and the digital divide [7].</li>
+<li><strong>Images don't convey it.</strong> The book <em>Broad Listening</em> cautions that TTTC is a tool meant to be explored interactively in a browser, and that most of the information is lost as soon as it is turned into a static image [6].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>In chapter 5-4, "<a href="augmented-deliberation.html">Augmented Deliberation</a>", the book <em>Plurality</em> names "how systems like Polis and <a href="community-notes.html">Community Notes</a> could be extended with modern graph theory and GFMs" (generative foundation models, the technology behind today's AI chatbots) as "one of the most obvious directions", and gives Talk to the City as an example [2]. The book says TTTC "illustrates how GFMs can be used to replace a list of statements characterizing a group's views with an interactive agent one can talk to and get a sense of the perspective" [2].</p>
+<p>The same chapter also mentions TTTC visualizations in the 2024 governor's election, a TV network's general election special, and Tokyo's call for public input on its plan toward 2050 [2].</p>
+<p>Chapter 6-5, "Learning", writes that Taiwan has used augmented deliberation technologies "such as 'Talk to the City'" to mitigate the effects of AI [15]. → <a href="taiwan-digital-democracy.html">Taiwan's digital democracy</a></p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Broad Listening</em>, 11-1 "The Evolution of Deliberative Democracy in Taiwan" and 4-1 "Takahiro Anno's Initiatives in the 2024 Tokyo Governor Election" (Japanese and English, book, free to read) — https://broadlisteningbook.com/</li>
+<li><em>Plurality</em>, chapter 5-4 "Augmented Deliberation" (English, book) — https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li>AOI, "Talk to the City" (English, the developer's introduction) — https://ai.objectives.institute/talk-to-the-city</li>
+<li>Conversation between Tang, AOI and vTaiwan (English, transcript) — https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md</li>
+<li>moda, "AI 未來民主化審議式工作坊" (in Chinese, government report) — https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</li>
+<li>Hirokazu Nishio, "Polisは意見のクラスタリング、TTTCはトピックのクラスタリング" (Polis clusters opinions, TTTC clusters topics) (in Japanese, notes) — https://scrapbox.io/nishio/Polisは意見のクラスタリング、TTTCはトピックのクラスタリング</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li><em>Broad Listening</em>, Appendix "Glossary" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Plurality</em>, 5-4 "Augmented Deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li><em>Broad Listening</em>, 11-1 "The Evolution of Deliberative Democracy in Taiwan" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>moda, "AI 未來民主化審議式工作坊" (in Chinese) — https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</li>
+<li>Hirokazu Nishio, "台湾とTalk to the City" (Taiwan and Talk to the City) (quoting the record of a TIME interview, https://moda.gov.tw/en/press/background-information/6477; in Japanese) — https://scrapbox.io/nishio/台湾とTalk_to_the_City</li>
+<li><em>Broad Listening</em>, chapter 4, section 1 "Takahiro Anno's Initiatives in the 2024 Tokyo Governor Election" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, chapter 4, section 2 "The Democratic Party for the People Uses an Issue-Space Visualization in Questioning the Government in the Japanese Parliament" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Hirokazu Nishio, "Talk to the Cityの抽出ステップについて" (On Talk to the City's extraction step) (in Japanese) — https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて</li>
+<li><em>Broad Listening</em>, 10-0 "Development Work on 広聴AI (Kouchou AI, Broad Listening AI) by DD2030" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, 11-5 "Turning Connective Action into Power" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Interview with Audrey Tang (Your Undivided Attention, 2024-01-24) — https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md ［CC0］</li>
+<li><em>Broad Listening</em>, 11-2 "The Birth of Polis" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, 4-3 "Nippon TV Election Special: Using Broad Listening in Television News Coverage" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Hirokazu Nishio, "Polisは意見のクラスタリング、TTTCはトピックのクラスタリング" (in Japanese) — https://scrapbox.io/nishio/Polisは意見のクラスタリング、TTTCはトピックのクラスタリング</li>
+<li><em>Plurality</em>, 6-5 "Learning" — https://www.plurality.net/v/chapters/6-5/eng/ ［CC0］</li>
+</ol><div class='related'>Related: <a href='kouchou-ai.html'>What is Kouchou AI?</a> ・ <a href='broad-listening.html'>What is Broad Listening?</a> ・ <a href='polis.html'>What is Polis?</a> ・ <a href='alignment-assemblies.html'>What are Alignment Assemblies?</a> ・ <a href='augmented-deliberation.html'>What is Augmented Deliberation?</a> ・ <a href='anno-2024-tokyo-campaign.html'>What was Takahiro Anno&#x27;s 2024 Tokyo campaign?</a> ・ <a href='tokyo-2050-broad-listening.html'>What is the broad listening for Tokyo&#x27;s &quot;Shin Tokyo 2050&quot;?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

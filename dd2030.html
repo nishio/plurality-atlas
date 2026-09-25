@@ -1,0 +1,102 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>デジタル民主主義2030（DD2030）ってなに？</title><meta name="description" content="市民の声が政治や行政に届くための道具を、誰でも無料で使えるオープンソースで作る日本の有志コミュニティです。2025 年 1 月に安野貴博と鈴木健が始め、広聴AI・いどばた・Polimoney を開発しています。特定の党派に肩入れしない中立を掲げています。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/dd2030.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/dd2030.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/dd2030.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/dd2030.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/dd2030.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="デジタル民主主義2030（DD2030）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/dd2030.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="市民の声が政治や行政に届くための道具を、誰でも無料で使えるオープンソースで作る日本の有志コミュニティです。2025 年 1 月に安野貴博と鈴木健が始め、広聴AI・いどばた・Polimoney を開発しています。特定の党派に肩入れしない中立を掲げています。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/dd2030.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/dd2030.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>デジタル民主主義2030（DD2030）ってなに？</h1><div class='lead'>市民の声が政治や行政に届くための道具を、誰でも無料で使えるオープンソースで作る日本の有志コミュニティです。2025 年 1 月に安野貴博と鈴木健が始め、広聴AI・いどばた・Polimoney を開発しています。特定の党派に肩入れしない中立を掲げています。</div><p>市役所のアンケートに意見を書いても、それがどう読まれ、どう生かされたのかは、なかなか見えません。何千件もの自由記述を、職員が一つずつ読むのも大変です。デジタル民主主義2030（DD2030）は、こうした「声を届ける・声を聞く」ための道具を、みんなで作って配ろうとしている集まりです。</p>
+<h2>ひとことで言うと</h2>
+<p>DD2030 は、2030 年までに、一人ひとりの声が政治や行政に届くのが当たり前の社会にする、という目標を掲げる、日本の有志のコミュニティです[1][2]。そのための道具を、オープンソース（プログラムの設計図を公開し、誰でも使い直せる形）で無料で作っています。</p>
+<p>特定の政党に肩入れしない「政治的中立」を掲げ、自治体にも、与党・野党の政党にも、同じ条件で道具を提供します[1]。</p>
+<h2>たとえば</h2>
+<p><strong>広聴AI。</strong> 自治体のアンケートの自由記述を AI で整理する道具です。香川県宇多津町、岩手県、渋谷区、広島県などが試しました[3][4]。くわしくは <a href="kouchou-ai.html">広聴AI</a> の記事で扱います。</p>
+<p><strong>いどばた。</strong> 一人ずつ AI とチャットして意見を集め、論点や政策の改善案にまとめる道具です。熟議（じっくり話し合うこと）を助けます。<a href="team-mirai.html">チームみらい</a> のマニフェストづくりや、サイボウズの社内で使われました[5]。くわしくは <a href="idobata.html">いどばた</a> の記事へ。</p>
+<p><strong>政党の参加。</strong> ニュースサイト Japan In-depth によると、立ち上げの直後、国民民主党の榛葉賀津也幹事長が会見を見て強く心を動かされたと語り、同党の伊藤孝恵参議院議員を参加させました[6]。</p>
+<p><strong>本づくり。</strong> 『政治・自治体・企業に広がるブロードリスニング』（インプレス、2026 年 9 月予定）は、DD2030 の活動の一環として有志が書いた本です。日本語と英語の web 版もあります[7][2]。</p>
+<h2>くわしく</h2>
+<h3>立ち上げ</h3>
+<p>DD2030 は、2025 年 1 月 16 日に安野貴博が記者会見で発表しました[2][8]。ブロードリスニングの本は、AI エンジニアの安野と、スマートニュース取締役会長で東京大学特任研究員の鈴木健が共同で立ち上げた「非営利のオープンソースプロジェクト」だと紹介しています[7]。</p>
+<p>母体は、2024 年の都知事選で安野を支えたボランティア「チーム安野」です。都知事選、日本テレビの衆院選特番、東京都の長期戦略で積み重ねた<a href="broad-listening.html">ブロードリスニング</a>（大勢の声を広く聞き取ること）の経験を、一度きりで終わらせないために作られました。同書は、いろいろな立場の人が「中立的に利用できる形」で社会に届けることが目的だったと書いています[7]。</p>
+<p>会見で安野は、2025 年を「デジタル民主主義元年」と呼びました[2]。</p>
+<h3>取り組みの中身</h3>
+<p>立ち上げのときに発表されたのは、次の三つのプロジェクトです[2][9]。</p>
+<ol>
+<li><strong>ブロードリスニングを先へ進める</strong> — <a href="talk-to-the-city.html">Talk to the City</a> という道具の改良です。これがのちの広聴AI（2025 年 3 月 16 日公開）になりました[7]。</li>
+<li><strong>民意を政策に反映する</strong> — 台湾の JOIN や <a href="vtaiwan.html">vTaiwan</a> を参考にした、大規模なオンラインの話し合いの場です。これがのちのいどばたです。</li>
+<li><strong>政治資金の透明化</strong> — Polimoney（ポリマネー）です。スウェーデンでは閣僚に公用のクレジットカードを渡し、その明細を公開しています。これを参考に、政治資金の流れをグラフなどで見せます[10]。</li>
+</ol>
+<p>この記事の資料を集めた時点（2026 年 9 月）の公式サイトは、これに二つを加えて五つを掲げています。ブロードリスニングの考え方を広く伝えること（本の執筆）と、「Project Coreloop」です。Coreloop は、声を聞くだけで終わらせず、合意づくり・政策・予算の実行・改善の実感までつなげることを目指しています[1]。</p>
+<h3>中立と運営</h3>
+<p>公式ページは「政治的中立」を二つの意味で説明しています。特定の政党や候補者に加担しない「党派中立」と、誰に対しても同じ条件と手続きで関わる「手続き中立」です。そのうえで、政治に関わらない（無政治）という意味ではない、とことわっています。運営資金は、広く一般からの寄付でまかなうことを目指しています[11]。</p>
+<p>同じ時点のボードメンバー（運営役）は、鈴木健、関治之（Code for Japan）、中室牧子（慶應義塾大学）です。安野は政治的中立を保つために 2025 年 5 月に辞任し、大柴行人は 2026 年 1 月に辞任しました[11]。ブロードリスニング本によれば安野の退任は 5 月 7 日で、翌 5 月 8 日にチームみらいを結党しています[7]。</p>
+<h3>安野が抜けたあと</h3>
+<p>母体がチーム安野だったので、エンジニアやデザイナーの多くがチームみらいへ移りました。広聴AI の主な開発者の一人も立候補しました[7]。</p>
+<p>ブロードリスニング本は、この 2025 年 5 月を「減速と加速が同時に起こった」転機と呼んでいます。少ないメンバーが定例の開発会を続けて、開発を途切れさせないようにしました。また、チームみらいが自分用に複製して作った機能が、元の広聴AI に戻されました[7]。</p>
+<h3>台湾に学ぶ</h3>
+<p>鈴木健は、日本語版『PLURALITY』の解説で、台湾の実践を「奇跡的な成功事例」としてそのまま持ち込むのではなく、実態を理解する必要があると書いています[12]。そこで安野と DD2030 のチームは、2025 年 1 月下旬に 3 日間台湾を訪ね、13 人に話を聞きました。</p>
+<p>鈴木によれば、分かったのは、デジタル民主主義は「オフラインでの膨大な努力なしには実現しない」ということでした。市民の活動と、政府の強い関わりの「両輪」が要る、とも述べています[12]。</p>
+<h3>集まる場</h3>
+<p>DD2030 は 2026 年 8 月 2 日に「デジタル民主主義サミット2026」を開き、オードリー・タンが参加しました。登壇予定者には、安野（チームみらい）、伊藤孝恵（国民民主党）、川崎ひでと（自民党、デジタル大臣政務官）、宮坂学（東京都副知事）、関治之らが並んでいます[13]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>チームみらいの組織ではないのか。</strong> DD2030 は党派中立を掲げ、安野はボードを退いています。ブロードリスニングの本は、いどばたはチームみらいの持ち物ではなく、誰でも使える「公共の財産」だと強調します[5][11]。ただし、母体と人の多くが重なっていたことは、同書自身が記録しています[7]。</li>
+<li><strong>オープンソースの市民参加は、誰が責任を持つのか。</strong> ある市民の note 記事は、広聴AI やいどばたのような仕組みは、品質の管理、説明の責任、サービスを保ち続けることの保証があいまいで、市民参加が本当に役立つかが確かめられていないと批判しています[14]。</li>
+<li><strong>自治体に広がりにくい。</strong> DD2030 自身が、試しに使ったあと本格的な運用に移りにくかったと記録しています。理由として、使う動機の不足、首長と現場の温度差、人事異動、エンジニア不足を挙げています[7]。</li>
+<li><strong>「聞いて終わり」への反省。</strong> 先に触れた Project Coreloop は、聞くだけの民主主義を越える必要を、プロジェクト自身が掲げたものです[1]。ブロードリスニングそのものへの批判は <a href="broad-listening.html">ブロードリスニング</a> の記事を見てください。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』は DD2030 に触れていません。ただ、日本語版の解説を書いた鈴木健が共同創設者で、解説の中で DD2030 を、日本にデジタル民主主義を根付かせるきっかけと位置づけています[12]。鈴木自身の本『なめらかな社会とその敵』は、『Plurality』の 3-3 章で先行する思想として紹介されています[12][15]。くわしくは <a href="nameraka-society.html">なめらかな社会</a> の記事へ。</p>
+<p>取り組みの中身は、本の言う <a href="augmented-deliberation.html">拡張熟議</a>（技術で話し合いを深めること）にあたります。広聴AI やいどばたは、台湾の <a href="vtaiwan.html">vTaiwan</a> や JOIN の日本版づくりとも読めます。本の 7-0 章が語る「デジタル公共財」を作る側の組織と見ることもできますが、本が DD2030 を名指ししているわけではありません。関連して <a href="digital-public-infrastructure.html">デジタル公共インフラ</a> の記事もあります。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>DD2030 公式サイト（日本語・団体のサイト）— https://dd2030.org/ と「デジタル民主主義2030とは」https://dd2030.org/about</li>
+<li>「デジタル民主主義2030 の全体像」（日本語・記事）— https://note.com/annotakahiro24/n/na0e296bc30b8</li>
+<li>立ち上げ会見の全文（2025-01-16、日本語・記事）— https://note.com/annotakahiro24/n/nfd4a855cd1a8</li>
+<li>鈴木健「Plurality 日本語版解説」（日本語・解説）— https://note.com/digitaldemocracy/n/nb8b59a6b775d</li>
+<li>ブロードリスニング本 第 10 章「DD2030 による広聴AIの開発活動」（日本語・本）— https://broadlisteningbook.com/</li>
+<li>「現場取材からみえた台湾デジタル民主主義の理想と課題、そして日本発『デジタル民主主義2030』への指針」（日本語・記事）— https://note.com/digitaldemocracy/n/naaa818d919c7</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>DD2030 公式サイト トップ — https://dd2030.org/</li>
+<li>安野貴博「デジタル民主主義2030 立ち上げ会見 全文」（2025-01-16）— https://note.com/annotakahiro24/n/nfd4a855cd1a8</li>
+<li>ブロードリスニング本 10.1「株式会社ブーツ」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 8「地方自治体での活用」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 6.1「2025年参院選 チームみらいの取り組み」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Japan In-depth「安野氏のAIプロジェクトに参画」（2025-01-22）— https://japan-indepth.jp/?p=86169</li>
+<li>ブロードリスニング本 10「DD2030 による広聴AIの開発活動」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 4.2「国民民主の国会質問」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>安野貴博「デジタル民主主義2030 の全体像」— https://note.com/annotakahiro24/n/na0e296bc30b8</li>
+<li>DD2030「Polimoney」— https://dd2030.org/polimoney</li>
+<li>DD2030「デジタル民主主義2030とは」— https://dd2030.org/about</li>
+<li>鈴木健「Plurality 日本語版解説」— https://note.com/digitaldemocracy/n/nb8b59a6b775d</li>
+<li>DD2030「デジタル民主主義サミット2026」告知 — https://dd2030.org/</li>
+<li>市民の note 記事（2025-10、無料部分）— https://note.com/ippanjin_2025/n/n299555fb4908</li>
+<li>『Plurality』3-3「The Lost Dao」— https://www.plurality.net/v/chapters/3-3/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='idobata.html'>いどばたってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='team-mirai.html'>チームみらいってなに？</a> ・ <a href='nameraka-society.html'>なめらかな社会ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='municipal-broad-listening.html'>自治体のブロードリスニングってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

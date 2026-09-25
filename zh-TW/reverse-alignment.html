@@ -1,0 +1,100 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是反向對齊（reverse alignment）？</title><meta name="description" content="讓 AI 配合人類的「對齊」的另一面：讓社會的制度、規則、人們的技能配合 AI 時代重新打造。這是衛谷倫等人在 2026 年提出的議題。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/reverse-alignment.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/reverse-alignment.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/reverse-alignment.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/reverse-alignment.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/reverse-alignment.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是反向對齊（reverse alignment）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/reverse-alignment.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="讓 AI 配合人類的「對齊」的另一面：讓社會的制度、規則、人們的技能配合 AI 時代重新打造。這是衛谷倫等人在 2026 年提出的議題。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../reverse-alignment.html">日本語</a> <a class="lang" hreflang="en" href="../en/reverse-alignment.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是反向對齊（reverse alignment）？</h1><div class='lead'>讓 AI 配合人類的「對齊」的另一面：讓社會的制度、規則、人們的技能配合 AI 時代重新打造。這是衛谷倫等人在 2026 年提出的議題。</div><p>談到 AI 安全時，通常問的是「怎麼讓 AI 符合人類的價值」。這方面的研究稱為「對齊」（alignment）。然而，再守規矩的 AI，進入一個還沒準備好接住它的社會，也可能令人失望，甚至造成傷害。反向對齊（reverse alignment）就是把目光放在「社會這一側的準備」上的想法。</p>
+<h2>一句話說明</h2>
+<p>反向對齊是<strong>重新打造社會的制度、規則、人們的技能與治理機制，讓社會能安全駕馭 AI，並廣泛分享它的好處</strong>[1][2]。這是經濟學者衛谷倫（E. Glen Weyl）等人在 2026 年提出的議題。</p>
+<p>衛谷倫的簡報把兩者成對呈現：對齊是讓 AI 這一側符合人類的價值，反向對齊則是讓制度這一側做好接住它的準備[3]。</p>
+<p>另外，也有論文用同一個詞指完全不同的意思，後面的「爭議與批評」會說明。</p>
+<h2>舉例來說</h2>
+<p><strong>Noema 雜誌的文章（2026 年 7 月 21 日）。</strong> 衛谷倫、James Evans、Chris White 與一個跨領域、跨地區、跨政治立場的 23 人聯盟一起發表了〈未來十年，人類繁榮需要什麼〉（What Humanity Needs To Flourish In The Next Decade）[1]。文章開頭提到一件事：美國政府命令 AI 公司 Anthropic 停止向外國籍人士提供最高階的模型，該公司在幾小時內就對所有客戶停止了提供。文章指出，AI 能力的成長，已經超過了治理、接住、理解它的制度[1]。</p>
+<p><strong>歷史的先例。</strong> 同一篇文章列出技術的好處因制度這一側的巧思而擴散的例子：19 世紀工業化之後出現的大眾民主制度（反壟斷法、獨立的監管機關、工會等）、戰後的國際金融架構、網際網路的前身 ARPANET、印度的數位基礎建設 India Stack，以及臺灣的數位民主[1]。衛谷倫的簡報把這總結為發電機的教訓：技術要等上幾十年，等制度追上來[3]。</p>
+<p><strong>公開講座「Platform Originals」（2026 年 8 月 29 日）。</strong> 唐鳳（Audrey Tang）提到，英國的工廠要花一兩代人的時間，才把童工的限制寫進制度[4][5]。唐鳳說：「我們不希望像當年英國工廠那樣子，就是你要等一兩代人，整個童年都受到這個問題影響之後，才說：『喔，那 Meta 要賠幾千億元。』」[5]</p>
+<h2>運作方式</h2>
+<h3>放著不管會出現的三種失敗</h3>
+<p>Noema 的文章列出，社會這一側不做準備時會出現的三種失敗[1][2]（以下名稱依反向對齊中文網站的譯法）：</p>
+<ol>
+<li><strong>有產能，卻無繁榮</strong>——工作重組的速度，快過人們重新學習、轉換跑道的速度，於是創造出的利益到不了多數人手上。</li>
+<li><strong>有執行，卻無驗證</strong>——生成文字、影像、程式碼的成本幾乎歸零。於是稀缺的，變成人類確認產出是否真實、查出處、為它負責的能力。</li>
+<li><strong>有能力，卻無約束</strong>——同樣的工具，也壓低了國家或大型組織監視人們的成本。如果提出異議、保護自由的機制沒有一起成長，權力就會集中於一處。</li>
+</ol>
+<p>文章主張，這些都不是無法避免的命運，而是放任制度不管的結果[1]。</p>
+<h3>資金的偏向</h3>
+<p>文章也把問題指向：比起投入讓 AI 更聰明的資金，流向讓 AI 融入社會的制度、教育、組織與公民基礎的資金，只有一小部分[1]。</p>
+<h3>12 項挑戰</h3>
+<p>聯盟的網站把要處理的領域分成 12 項[2]：</p>
+<ul>
+<li>身分（不透露是誰，也能證明自己是獨一無二的真人）</li>
+<li>隱私、內容溯源、資料價值（用來訓練 AI 的人類紀錄應得的報酬）</li>
+<li>智慧體協作、集體意義建構（sensemaking）、民主、法律與自由</li>
+<li>職場、研究、教育、勞動轉型</li>
+</ul>
+<p>其中許多與《多元宇宙》處理的<a href="proof-of-personhood.html">人格證明</a>、<a href="data-dignity.html">資料尊嚴</a>、<a href="bridging.html">橋接</a>、<a href="broad-listening.html">廣泛傾聽</a>重疊。</p>
+<h3>「依其工具之形而立的制度」這個假說</h3>
+<p>聯盟有一個獨到的假說：社會吸納新技術時，勝出的制度會長得像那個時代的核心技術[2]。</p>
+<p>例如在工業化時代，標準化的會計與裝配線，產生了層級式的公司和中央銀行。在網際網路時代，分層的通訊協定，產生了像標準化組織那樣分層、協調的組織。而神經網路（當今 AI 的基礎）的性質，是不把差異平均掉而找出共同結構，並能把貢獻追溯到結果。聯盟預料，能接住 AI 的制度，會是在社會規模上模仿這種運作的制度[2]。</p>
+<h3>誰在推動</h3>
+<p>聯盟網站的成員中，衛谷倫和唐鳳都列名其中[2]。網站也有日文版和中文版[6][7]。RadicalxChange 在 2026 年 9 月表示，將投入 12 項挑戰中的民主領域[8]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>注意同名的另一個概念。</strong> David Jacob Harrison 在 2026 年 4 月的論文中討論了 "reverse alignment problem"。它指的是，不是讓機器配合人類，而是<strong>人類的價值和目標反而被簡化、被變得像機器一樣</strong>的現象[9]。這和衛谷倫等人「刻意重新打造社會制度」的提案方向相反[9]。本文用的是衛谷倫等人的意思。</li>
+<li><strong>有效利他主義（EA）一方的反應。</strong> Tom Vargas 在論壇上把要點整理為：如果制度是錯的，即使加上與人類充分對齊的先進 AI，結果大概還是會很糟[10]。Vargas 認為這很有說服力，並寫道，因為處理的是社會的基礎，執行起來非常困難，但如果成功，改變會大得多[10]。留言區也有人大意是說，把個別模型調好，不代表使用它們的整個系統就會調好[10]。</li>
+<li><strong>「誰去對齊誰？」</strong> 講座中有人問，反向對齊是不是在決定誰要去配合誰。唐鳳回答，過去對工業化、電氣化、網際網路的制度因應，講的都是：「如果你不滿意，要去找誰申訴？你要怎麼樣知情？要怎麼樣退出，或換成另外一套制度？」[5] 唐鳳也說，在 AI 這個題目上，希望它比較像網際網路，「你在小規模裡面覺得怎麼樣更好，就可以試一個怎麼樣更好的方法」[5]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>反向對齊這個詞，沒有出現在《Plurality》（英文版）中。這是書出版之後，衛谷倫與聯盟在 2026 年的主張，需要注意不要和書本身的主張混在一起。</p>
+<p>另一方面，內容和書緊密相連。Noema 的文章在結尾提出的處方，是這樣的合作：為分裂的社群架橋，把信任放在多樣的人際網絡而不是中央權威上，不壓制意見分歧而找到共同的立足點[1]。這正是書的核心——<a href="collaboration-across-difference.html">跨越社會差異的協作</a>——的想法。舉臺灣為例這一點，也和書的第 2 部（<a href="taiwan-digital-democracy.html">臺灣的數位民主</a>）是同樣的素材。</p>
+<p>唐鳳參與的<a href="six-pack-of-care.html">關懷六力</a>與<a href="civic-ai.html">仁工智慧</a>，位置也很接近。兩者都認為只把 AI 內部調好是不夠的。關懷六力是設計 AI 運作現場之程序的框架，反向對齊則是呼籲投資整個社會之制度的議題[2][11]。與 AI 未來論爭的關係，請見〈<a href="ai-futures-debate.html">AI 未來的論爭</a>〉。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>反向對齊（中文網站）— https://reversealignment.tw/</li>
+<li>唐鳳等〈Platform Originals：對齊的另一面〉（2026-08-29，中文，逐字稿）— https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2</li>
+<li>Weyl, Evans, White, "What Humanity Needs To Flourish In The Next Decade"（Noema，2026，英文，文章）— https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</li>
+<li>Reverse Alignment 聯盟網站（英文）— https://reversealignment.ai/</li>
+<li>Weyl, "Humanity's Sociotechnical Grand Challenges"（2026，英文，簡報）— https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf</li>
+<li>Tom Vargas, "Reverse alignment"（EA Forum，2026，英文）— https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment</li>
+<li>Reverse Alignment 日文網站（日文）— https://reversealignment.jp/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>Weyl, Evans, White, "What Humanity Needs To Flourish In The Next Decade"（Noema，2026-07-21）— https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</li>
+<li>Reverse Alignment 聯盟網站 — https://reversealignment.ai/</li>
+<li>Weyl, "Humanity's Sociotechnical Grand Challenges"（簡報，2026-06-23）— https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf</li>
+<li>"Platform Originals: The Other Side of Alignment"（2026-08-29，英譯逐字稿）— https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md ［CC0］</li>
+<li>唐鳳等〈Platform Originals：對齊的另一面〉（2026-08-29，逐字稿）— https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2 ［CC0］</li>
+<li>Reverse Alignment 日文網站 — https://reversealignment.jp/</li>
+<li>反向對齊（中文網站）— https://reversealignment.tw/</li>
+<li>Jess Scully, "On Reverse Alignment"（RadicalxChange，2026-09-10）— https://www.radicalxchange.org/updates/blog/on-reverse-alignment/</li>
+<li>David Jacob Harrison, "The reverse alignment problem"（AI &amp; Society，2026-04-25，摘要）— https://link.springer.com/article/10.1007/s00146-026-03043-4</li>
+<li>Tom Vargas, "Reverse alignment"（EA Forum，2026-07-22）— https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment</li>
+<li>Civic AI — https://civic.ai/ ［CC0］</li>
+</ol><div class='related'>相關: <a href='six-pack-of-care.html'>什麼是關懷六力（6-Pack of Care）？</a> ・ <a href='civic-ai.html'>什麼是仁工智慧（Civic AI）？</a> ・ <a href='ai-futures-debate.html'>什麼是關於 AI 未來的論爭（AI 2027 等）？</a> ・ <a href='proof-of-personhood.html'>什麼是人格證明（proof of personhood）？</a> ・ <a href='data-dignity.html'>什麼是資料尊嚴（data dignity）？</a> ・ <a href='bridging.html'>什麼是橋接（bridging）？</a> ・ <a href='broad-listening.html'>什麼是廣泛傾聽（Broad Listening）？</a> ・ <a href='taiwan-digital-democracy.html'>什麼是臺灣的數位民主？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

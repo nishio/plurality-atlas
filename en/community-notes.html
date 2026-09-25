@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What are Community Notes?</title><meta name="description" content="A system on X (formerly Twitter) that lets users attach explanatory notes to posts that might mislead. It does not work by majority vote: a note is shown only when people who usually disagree in their ratings both rate it &quot;helpful&quot;."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/community-notes.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/community-notes.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/community-notes.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/community-notes.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/community-notes.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What are Community Notes?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/community-notes.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="A system on X (formerly Twitter) that lets users attach explanatory notes to posts that might mislead. It does not work by majority vote: a note is shown only when people who usually disagree in their ratings both rate it &quot;helpful&quot;."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../community-notes.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/community-notes.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What are Community Notes?</h1><div class='lead'>A system on X (formerly Twitter) that lets users attach explanatory notes to posts that might mislead. It does not work by majority vote: a note is shown only when people who usually disagree in their ratings both rate it &quot;helpful&quot;.</div><p>When you see a false or misleading post on social media, who should correct it? If the company removes it, people cry "censorship". If experts judge it, people call them "biased". If users decide by majority vote, the bigger camp might just keep attaching warnings to the other side's posts. Community Notes answers this puzzle with a simple rule: show only what people on different sides agree on.</p>
+<h2>In short</h2>
+<p>Community Notes is a system on X (formerly Twitter) in which users themselves attach an explanatory "note" beneath posts that might be misleading [1][2].</p>
+<p>Notes are not shown by majority vote. <strong>Only notes that people who usually disagree in their ratings both rate as "helpful"</strong> get shown [1][2].</p>
+<h2>For example</h2>
+<p><strong>Are whales mammals?</strong> Figure 5-4-A in chapter 5-4 of the book <em>Plurality</em> shows a post in which "one user claimed, with questionable reasoning, that whales are not mammals" [3]. Beneath it is a box saying "readers added context", with referenced information on why whales are indeed mammals [3].</p>
+<p><strong>The invasion of Ukraine and COVID-19 (2022).</strong> According to the Japanese-language Wikipedia, the system's predecessor, "Birdwatch", started as a trial in the US in January 2021 with 1,000 contributors [4]. It spread with Russia's invasion of Ukraine in March 2022 and with COVID-19 misinformation in October of the same year, and in November 2022 it was renamed Community Notes and expanded beyond the US [4].</p>
+<p>It officially launched in Japan in July 2023 [5]. A study that analyzed posts carrying 26,683 Japanese-language notes reports that "anti-vaccine" posts and "money giveaway" spam stood out in particular [5].</p>
+<p><strong>Spreading to other companies (2025).</strong> In January 2025, Meta announced that in the US it would stop using outside fact-checkers and move to a Community Notes approach [6]. It began testing on Facebook, Instagram and Threads on March 18, and said it would initially base its rating system on the algorithm X has published [6]. In April 2025, TikTok also announced a test of "Footnotes", in which a note is more likely to be shown when many people who have disagreed in the past rate the same note as helpful [7].</p>
+<h2>How it works</h2>
+<h3>What participants do</h3>
+<p>X users who meet certain conditions sign up as contributors [8]. According to a 2023 explanation by Vitalik Buterin, the founder of Ethereum, the conditions are: using the service for at least six months, no recent rule violations, and a verified phone number [8].</p>
+<p>At first, contributors can only rate other people's notes. After building a track record of ratings, they can write notes themselves [8]. Contributors who see a note answer the question "Is this note helpful?" with "yes", "somewhat" or "no" [9].</p>
+<p>Ordinary users see only the notes that have met the criteria and been judged "helpful" [3][9]. The official guide explains that it is people, not X, who decide which notes are shown; that the algorithm can be checked by anyone; and that all notes and ratings are published every day [2].</p>
+<h3>How "different sides" are measured</h3>
+<p>A contributor's position is not measured by where they live, their gender, or the party they say they support. Nor is it measured by who they follow [10]. It is measured <strong>only by how they have rated notes in the past</strong> [10].</p>
+<p>People who rate the same notes in similar ways are treated as having similar positions; people who rate them differently are treated as having different positions [10]. If people whose ratings usually split all agree that a note is helpful, that is a good sign the note is helpful to people from different perspectives [10].</p>
+<h3>The calculation behind it</h3>
+<p>According to the official guide, ratings (yes = 1, somewhat = 0.5, no = 0) are explained by a calculation of roughly this form [9]:</p>
+<blockquote>
+<p>predicted rating = overall generosity + the rater's generosity + the note's own quality + (the rater's position × the note's position)</p>
+</blockquote>
+<p>The final multiplied term soaks up the part that comes from "liked by people on the same side, disliked by people on the other side" [9]. What remains — "the note's own quality" — is how much it is liked by everyone regardless of position. That becomes the note's score [9].</p>
+<p>The score is designed so that it cannot grow large unless people with different positions rate the note [9]. A note becomes "helpful" if it has 5 or more ratings, a score of 0.40 or higher, and only a small lean toward one position (below 0.50) [9].</p>
+<p>Buterin explains that in English-language data, the "position" axis corresponds closely to the left–right political divide [8]. But, he says, the idea of left and right is not written anywhere into the calculation; it emerges naturally from the data [8].</p>
+<h3>Why it was designed this way</h3>
+<p>The 2022 paper on Birdwatch called this selection method "bridging-based ranking" [11]. According to the paper, it performed better than choosing by overall average, and people who saw a displayed note were less likely to reshare the post [11].</p>
+<p>Buterin sums up the core idea as filtering out notes that are cheered by one camp and disliked by the other, and selecting notes that are recognized across camps [8].</p>
+<h3>AI writing notes (2025 onward)</h3>
+<p>X has opened an interface for AI to write notes (the AI Note Writer API) [12]. AI can propose notes but <strong>cannot rate them</strong>. Which notes are shown is decided by human ratings, and those ratings are also fed back to help the AI learn [12].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>Too slow, too few.</strong> One study finds no evidence that the rollout clearly reduced engagement with misinformation (reposts and likes) [13]. Notes may not arrive in time, while a post is first spreading. Another study reports that when a note is attached, reposts fall by nearly half and the chance that the post is deleted rises by 80%, but that the overall effect depends on how quickly notes appear [14]. A 2023 news report found that of about 122,000 notes, only about 8.5% were visible to the public [15].</li>
+<li><strong>The most divisive topics get the fewest notes.</strong> A study using data from 13 countries argues that precisely because the algorithm captures each country's main axis of conflict well, it <strong>by design</strong> under-corrects the most polarizing content [16]. This was notable, it says, in notes on elections in the US, UK, France and Germany [16].</li>
+<li><strong>Organized manipulation.</strong> A study that includes people from X showed that coordinated ratings, fewer than 10 votes, could push up to 10.7% of low-quality notes over the threshold [17]. It says X has introduced countermeasures [17].</li>
+<li><strong>A counterargument: caution is a virtue.</strong> Buterin mentions the criticism that because agreement from both camps is required, getting a note shown is nearly impossible [8]. He responds that it is better to let ten pieces of misinformation through than to unfairly condemn one [8]. He also argues that even if only a small fraction of misinformation gets a note, the notes have educational value, reminding people that other perspectives exist [8].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p><em>Plurality</em> introduces Community Notes at the start of chapter 5-4, "Augmented Deliberation" [3]. The chapter begins with a worry: social media feeds built to maximize engagement create "echo chambers", where only like-minded views echo off each other [3]. The book asks "how these systems might be redesigned with the opposite intention of 'bridging' the crowd", and calls Community Notes "the largest-scale attempt at this" [3]. It describes the design as "prioritizing contents based on the principle of collaboration across diversity, consistent with ⿻, to which hundreds of millions of people are currently exposed each week" [3].</p>
+<p>Later in the same chapter, the book sketches the future [3]: "While the system currently lines up all opinions across the platform on a single spectrum, one can imagine mapping out a range of communities within the platform and harnessing its bridging-based approach not just to prioritize notes, but to prioritize content for attention in the first place."</p>
+<p>Audrey Tang has also cited the system in a magazine column, as an example of showing notes that both of two divided groups accept [18].</p>
+<p>Related articles:
+- <a href="bridging.html">Bridging</a> — the idea of "bridging" at the core of this system
+- <a href="polis.html">Polis</a> — a tool that applies the same idea to discussion
+- <a href="augmented-deliberation.html">Augmented Deliberation</a> — the chapter of the book that discusses this system
+- <a href="prosocial-media.html">Prosocial media</a> — a vision of extending bridging to social media as a whole
+- <a href="collaboration-across-difference.html">Collaboration across social difference</a> — the heart of Plurality's definition</p>
+<h2>Further reading</h2>
+<ol>
+<li>Community Notes Guide, "Introduction" (English, official explanation) — https://communitynotes.x.com/guide/en/about/introduction</li>
+<li><em>Plurality</em>, chapter 5-4 "Augmented Deliberation" (English, book) — https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li>Community Notes Guide, "Note ranking algorithm" (English, how the calculation works) — https://communitynotes.x.com/guide/en/under-the-hood/ranking-notes</li>
+<li>Vitalik Buterin, "What do I think about Community Notes?" (2023, English, blog) — https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</li>
+<li>Wojcik and others, the "Birdwatch" paper (2022, English, paper) — https://arxiv.org/abs/2210.15723</li>
+<li>コミュニティノート (Community Notes), Japanese-language Wikipedia (in Japanese, encyclopedia) — https://ja.wikipedia.org/wiki/コミュニティノート</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Community Notes Guide, "Introduction" (Japanese version) — https://communitynotes.x.com/guide/ja/about/introduction ［Apache-2.0］</li>
+<li>Community Notes Guide, "Introduction" — https://communitynotes.x.com/guide/en/about/introduction ［Apache-2.0］</li>
+<li><em>Plurality</em>, 5-4 "Augmented Deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>コミュニティノート (Community Notes), Japanese-language Wikipedia — https://ja.wikipedia.org/wiki/コミュニティノート ［CC BY-SA 4.0］</li>
+<li>Yasumoto and others, "Use of Twitter Community Notes in Japan" (JSAI 2024, in Japanese) — https://doi.org/10.11517/pjsai.JSAI2024.0_2I4OS1b03</li>
+<li>Meta, "Testing Begins for Community Notes on Facebook, Instagram and Threads" (2025) — https://about.fb.com/news/2025/03/testing-begins-community-notes-facebook-instagram-threads/</li>
+<li>TikTok, "Testing a new feature to enhance content on TikTok" (2025-04-16, announcement of Footnotes) — https://newsroom.tiktok.com/footnotes?lang=en</li>
+<li>Vitalik Buterin, "What do I think about Community Notes?" (2023-08-16) — https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</li>
+<li>Community Notes Guide, "Note ranking algorithm" — https://communitynotes.x.com/guide/en/under-the-hood/ranking-notes ［Apache-2.0］</li>
+<li>Community Notes Guide, "Diversity of perspectives" — https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives ［Apache-2.0］</li>
+<li>Wojcik and others, "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation" (2022) — https://arxiv.org/abs/2210.15723 ［CC BY 4.0］</li>
+<li>Community Notes Guide, "AI Note Writer API" — https://communitynotes.x.com/guide/en/api/overview ［Apache-2.0］</li>
+<li>Chuai and others, "Did the Roll-Out of Community Notes Reduce Engagement With Misinformation on X/Twitter?" (2023) — https://arxiv.org/abs/2307.07960</li>
+<li>Renault and others, "Collaboratively adding context to social media posts reduces the sharing of false news" (2024) — https://arxiv.org/abs/2404.02803 ［CC BY 4.0］</li>
+<li>Poynter, "Why Community Notes mostly fails to combat misinformation" (2023-06-30) — https://www.poynter.org/fact-checking/2023/why-twitters-community-notes-feature-mostly-fails-to-combat-misinformation/</li>
+<li>Bouchaud and Ramaciotti, "Community Notes undermoderate polarizing content by design creating risks in electoral processes" (2025) — https://arxiv.org/abs/2506.15168 ［CC BY-NC-ND 4.0］</li>
+<li>Selvam and others, "Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking" (2026) — https://arxiv.org/abs/2607.01824 ［CC BY 4.0］</li>
+<li>Audrey Tang, "讓演算法變得善良" (Making algorithms kind; Business Weekly column, 2024-07-11, in Chinese) — https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF ［CC0］</li>
+</ol><div class='related'>Related: <a href='bridging.html'>What is Bridging?</a> ・ <a href='polis.html'>What is Polis?</a> ・ <a href='augmented-deliberation.html'>What is Augmented Deliberation?</a> ・ <a href='prosocial-media.html'>What is prosocial media?</a> ・ <a href='collaboration-across-difference.html'>What is collaboration across social difference?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

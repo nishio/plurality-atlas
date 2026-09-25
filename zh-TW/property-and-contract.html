@@ -1,0 +1,102 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是「財產與合約」（多元資產）？</title><meta name="description" content="把房子租出去時，房客只拿到「使用」的權利，「處置」和「收租」的權利留在房東手上。所有權就像這樣可以拆開、分別持有。《多元宇宙》提議把這個想法推廣到運算能力、資料等數位資產上。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/property-and-contract.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/property-and-contract.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/property-and-contract.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/property-and-contract.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/property-and-contract.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是「財產與合約」（多元資產）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/property-and-contract.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="把房子租出去時，房客只拿到「使用」的權利，「處置」和「收租」的權利留在房東手上。所有權就像這樣可以拆開、分別持有。《多元宇宙》提議把這個想法推廣到運算能力、資料等數位資產上。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../property-and-contract.html">日本語</a> <a class="lang" hreflang="en" href="../en/property-and-contract.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是「財產與合約」（多元資產）？</h1><div class='lead'>把房子租出去時，房客只拿到「使用」的權利，「處置」和「收租」的權利留在房東手上。所有權就像這樣可以拆開、分別持有。《多元宇宙》提議把這個想法推廣到運算能力、資料等數位資產上。</div><p>你的電腦和手機，一天裡大部分時間都在閒著。另一方面，資料和運算能力卻集中在極少數大企業的資料中心。《多元宇宙》的〈財產與合約〉一章問道：這些數位資產，能不能由許多人和群體分享、共同使用與管理？</p>
+<h2>一句話說明</h2>
+<p>租房子時，房客只拿到「使用」的權利，「處置」和「收租」的權利留在房東手上。<strong>所有權就像這樣，可以拆成幾份分別持有</strong>[1]。</p>
+<p>書提議把這個想法推廣到電腦的運算能力、資料這類數位資產上：不是交給少數巨型企業，而是讓許多人和群體透過開放的協定共同使用、管理[2]。</p>
+<h2>舉例來說</h2>
+<p><strong>分散式儲存的 IPFS。</strong> 書寫道，在儲存領域，最接近資產共享的開放標準框架是「星際檔案系統（IPFS）」。IPFS 讓世界各地的電腦以分片、加密、分散的方式互相提供儲存空間，由胡安·貝內特（Juan Benet）和協定實驗室（Protocol Labs）首創。書介紹，臺灣的數位部等政府機構，在面臨強大對手時也用它確保資料的持久儲存[3]。4-5 章寫道，臺灣是阻斷服務攻擊（DDoS）的主要熱點之一，臺灣政府採用 IPFS 框架作為網站架構，更能抵抗突如其來的阻斷攻擊[4]。→ <a href="digital-public-infrastructure.html">數位公共建設</a></p>
+<p><strong>電磁頻譜與域名。</strong> 廣播頻率的執照，長久以來被當成類似私有財產的權利。但 WiFi 這類可以共用頻譜的應用出現了；頻譜用途從廣播電台轉向 5G 時，傳統執照持有者又往往成為阻礙重組的因素。於是美國聯邦通訊委員會等機構改變制度，可以在拍賣中重新安置這些阻礙者[5]。</p>
+<p>關於域名（像 example.com 這樣的網址），書這樣分析：今天大多數人是透過搜尋、而不是直接輸入來訪問網站的。因此，「當今網際網路名稱空間的實際產權制度，是朝向瀏覽者（而非網域擁有者）利益的集體導引，以及網域擁有者即時競價的結合。兩者都與傳統的產權制度大相徑庭」[5]。</p>
+<p><strong>臺灣土地的自行估價。</strong> 有一種做法是讓持有者自行評估財產的價值，並以自評的價格出售作為懲罰。書說，這在臺灣的土地方面也已使用多年（繁體中文版稱之為「平均地權制度」）[6]。詳見<a href="harberger-tax.html">哈柏格稅</a>一文。</p>
+<h2>深入了解</h2>
+<h3>大規模合作建立在資產的集中之上</h3>
+<p>書的 4-4 章寫道，多元社會中的多數大規模合作，「都是通過將資產集中到『法人』實體裡進行的，包括合夥關係、非營利組織、宗教和社會組織，當然還有公司」。支撐它的，是管理資產共用的合約[2]。</p>
+<p>在美國國防部研究機構 ARPA 主導電腦研究的利克萊德（J. C. R. Licklider）所構思的「星際電腦網路」的核心目標之一，也是運算、儲存、資料的共享（→ <a href="lost-dao.html">我們遺忘的道</a>）。書說，雲端與生成式基礎模型的訓練資料實現了其中一部分，卻被少數國家的一小部分營利實體所控制。「網際網路可以實現廣泛的橫向資產共享 -- 這個夢想尚未實現。」[2]</p>
+<h3>雲端是「回到大型主機」</h3>
+<p>根據書的說法，個人裝置使用的半導體數量，是雲端基礎建設和資料中心的好幾倍，而這些設備大部分時間都很少使用。資料更是「被困在組織或司法管轄區的孤島中」[3]。</p>
+<p>前兩大雲端服務商佔據了近三分之二的市場。雲端運算的大部分收益，來自資料中心的物理成本節約，而不是來自有意義的跨租戶資源共享。書說，雲端運算「在很大程度上，它可說是回到了在利克支持的分時專案啟動前，早已存在的集中化『大型主機』模式」[3]。</p>
+<h3>所有權可以拆開，但資料很難</h3>
+<p>書說，法律學者通常把財產分成三個屬性[1]：</p>
+<ul>
+<li><strong>使用權</strong>（usus）</li>
+<li><strong>處置權</strong>（abusus）</li>
+<li><strong>收益權</strong>（fructus）</li>
+</ul>
+<p>標準的租賃合約把使用權轉讓給房客，處置權和收益權保留給房東。公司把資產的使用權授予雇員，處置權授予高階經理人，收益權則保留給股東[1]。</p>
+<p>可是就資料而言，「賦予資料使用權最簡單的方式，也同時賦予了將資料轉讓予他人的處置權」，還可能威脅到分享者的收益權。書寫道，許多人在網路上公布的資料現在都已被納入基礎模型，而這些人往往沒有意識到分享的全部影響[1]。</p>
+<p>而且資料「本身具有結社性、社會性和交織性」，所以把資料的利益當作個人權利，「幾乎是毫無指望的」；隱私法規、加密技術這類「快速解決方案」也難以符合需求[1]。→ <a href="contextual-integrity.html">脈絡完整性</a></p>
+<p>合約也有局限。書說，在合約中不太可能列舉日後可能出現的各種衝突，大多數合約主要受慣例期待、法律先例與法規的演變所影響。自主執行的「智慧合約」也無法取代建立穩定社會理解的過程[7]。</p>
+<h3>多元資產的四個層次</h3>
+<p>書提出多元資產包含的四個層次[8]：</p>
+<ol>
+<li><strong>標準。</strong> 共享運算資源時的效能與安全保證。就像「https」的導入，讓網路托管服務符合安全標準、被人信賴。</li>
+<li><strong>共同運算的技術。</strong> 安全多方計算、同態加密等，不向彼此透露輸入就能共同運算的技術。</li>
+<li><strong>輸出端的技術。</strong> 差分隱私、數位浮水印、追溯資料在模型輸出中所起作用的「影響函數」。</li>
+<li><strong>組織與社會。</strong> 集體代表資料主體的組織，例如資料信託、資料合作社、「個資仲介組織」（MIDs）；也包括防止成員單方面披露資訊的規範或法律（「類似於禁止資方單方面破壞工會罷工」）。</li>
+</ol>
+<p>組織的部分在<a href="data-dignity.html">資料尊嚴</a>一文中詳細介紹。</p>
+<h3>走向部分共同所有權</h3>
+<p>書在 5-7 章〈<a href="social-markets.html">社會市場</a>〉介紹「部分共同所有權」：讓持有者自行估價、依此課稅，並以該價格出售作為懲罰[6]。</p>
+<p>書還描繪把它與投票制度結合的可能：「將一系列財富的大部分價值，給予多元交織的公眾『分潤權』，同時也將重要的『使用權』和『處置權』賦予這些社群」。這就是「多元財產制度」的樣貌[9]。以太坊的發明者<a href="vitalik-buterin.html">維塔利克·布特林</a>（Vitalik Buterin）在書評中整理道，作者們前一本書《<a href="radical-markets.html">激進市場</a>》的哈柏格稅想法，在這裡被擴展成讓多個人或群體同時各持有資產一部分的機制[10]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>書自己的保留。</strong> 書明白寫道，頻譜和域名的現行制度「並非盡善盡美、更不是都具備社會正當性」，它們「在很大程度上，是由技術專家和經濟學家團隊在遠離公眾觀點下設計的」。英文版的註腳還寫道，作者們自己也批評過這些制度。不過書也說，它們以創造性的方式回應現實的挑戰，可以成為重新思考都市空間再開發、商標等現實財產制度的線索[5]。</li>
+<li><strong>常見的誤解：「這是要廢除私有財產」。</strong> 書的提案是把所有權拆開、分別持有。書說，未來的「資產」形式將與管理土地私有權、股份公司等標準組織不同，同時目標是讓它們「像『產權』一樣深入人心，成為法律實踐密不可分的成分」[8]。關於私有財產處理方式的批評，請見<a href="harberger-tax.html">哈柏格稅</a>一文。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>這是第 4 部（以 4-0 章〈權利、作業系統與數位自由〉開頭的一部。→ <a href="rights-os.html">權利、作業系統與數位自由</a>）的第四章。書的簡介這樣總結：「為了開展大規模的協力行動，結社必須能夠運用開放協定，來共同管理共用的數位資產，例如資料、運算和儲存。」[11]</p>
+<p>前一章〈<a href="commerce-and-trust.html">商業與信任</a>〉預告了，信任與信用是共同使用運算與資料的前提[12]；這一章處理資產的那一側。資料社會性的討論，承接<a href="contextual-integrity.html">脈絡完整性</a>與<a href="plural-publics.html">多元公眾</a>。搜尋引擎依「網路中心性」排序的想法，也連到<a href="plural-voting.html">⿻投票</a>。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》4-4〈財產與合約〉（中文，書）— https://www.plurality.net/v/chapters/4-4/zh-tw/</li>
+<li>《多元宇宙》5-7〈社會市場〉（中文，書）— https://www.plurality.net/v/chapters/5-7/zh-tw/</li>
+<li>《Plurality》英文版 4-4 "Property and Contract"（英文，書）— https://www.plurality.net/v/chapters/4-4/eng/</li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell" 的 "Plural Money and Property" 一節（英文，書評）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>《Plurality》日文版 4-4「財産と契約」（日文，書）— https://www.plurality.net/v/chapters/4-4/jpn/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>《多元宇宙》4-4〈財產與合約〉「阻礙共享的因素」一節前半 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-4 章首故事之後的導言 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-4「資產共享的現況」一節 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-5〈存取權〉— https://www.plurality.net/v/chapters/4-5/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-4「多元不動產」一節 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ；作者們批評過這些制度的註腳見英文版 — https://www.plurality.net/v/chapters/4-4/eng/ ［CC0］</li>
+<li>《多元宇宙》5-7〈社會市場〉「部分共同所有權」一項 — https://www.plurality.net/v/chapters/5-7/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-4「阻礙共享的因素」一節後半 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-4「多元資產」一節 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》5-7〈社會市場〉「多元資產」一項 — https://www.plurality.net/v/chapters/5-7/zh-tw/ ［CC0］</li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>《多元宇宙》簡介，各章摘要（4-4）— https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>《多元宇宙》4-3「多元社會裡的商務」一節 — https://www.plurality.net/v/chapters/4-3/zh-tw/ ［CC0］</li>
+</ol><div class='related'>相關: <a href='harberger-tax.html'>什麼是哈柏格稅（Harberger tax）？</a> ・ <a href='data-dignity.html'>什麼是資料尊嚴（data dignity）？</a> ・ <a href='social-markets.html'>什麼是社會市場？</a> ・ <a href='commerce-and-trust.html'>什麼是「商業與信任」（多元通貨）？</a> ・ <a href='contextual-integrity.html'>什麼是脈絡完整性（contextual integrity）？</a> ・ <a href='lost-dao.html'>什麼是「我們遺忘的道」（The Lost Dao）？</a> ・ <a href='rights-os.html'>什麼是權利 OS（權利、作業系統與數位自由）？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

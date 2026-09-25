@@ -1,0 +1,111 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Plural Management Protocol（PMP）ってなに？</title><meta name="description" content="大勢でひとつの本やソフトウェアを作るとき、「次に何をやるか」と「出てきた寄稿を採用するか」を、リーダー一人ではなく参加者みんなで決めるための運営ルールです。本『Plurality』そのものが、このルールで作られました。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/plural-management-protocol.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/plural-management-protocol.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/plural-management-protocol.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/plural-management-protocol.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/plural-management-protocol.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="Plural Management Protocol（PMP）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/plural-management-protocol.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="大勢でひとつの本やソフトウェアを作るとき、「次に何をやるか」と「出てきた寄稿を採用するか」を、リーダー一人ではなく参加者みんなで決めるための運営ルールです。本『Plurality』そのものが、このルールで作られました。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/plural-management-protocol.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/plural-management-protocol.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>Plural Management Protocol（PMP）ってなに？</h1><div class='lead'>大勢でひとつの本やソフトウェアを作るとき、「次に何をやるか」と「出てきた寄稿を採用するか」を、リーダー一人ではなく参加者みんなで決めるための運営ルールです。本『Plurality』そのものが、このルールで作られました。</div><p>大勢でひとつのものを作るとき、誰かが「次はこれをやろう」「この案は採用、これは不採用」と決めなければなりません。リーダー一人が決めると、その人が忙しくなって作業が止まります。全員が対等だと、なかなか方向が定まりません。Plural Management Protocol（プルラル・マネジメント・プロトコル、略して PMP）は、この悩みに答えようとする運営のルールです。</p>
+<h2>ひとことで言うと</h2>
+<p>PMP は、大勢でひとつの作品（本やソフトウェア）を作るときに、<strong>「次に何をやるべきか」と「出てきた寄稿を採用するか」を、上司やリーダー一人ではなく参加者みんなで決める</strong>ための運営ルールです[1]。</p>
+<p>貢献した人は、お金ではない点数（<strong>クレジット</strong>）をもらいます。そのクレジットを使って、作業の優先順位づけと、採用するかどうかの投票に参加します[1]。本『⿻ Plurality』そのものが、このルールで作られました[2]。</p>
+<h2>たとえば</h2>
+<p><strong>『Plurality』の本づくり（2024 年）。</strong> 本の 5-7 章は、「この本を作るのに使った Plural Management Protocol」として、プログラム共有サイト GitHub 上の説明文にリンクしています。本によれば、このしくみで、多様な参加者の貢献の種類と量を記録し、作業の優先順位と、どの作業を取り込むかを決めました[3]。その説明文は、このしくみのための道具「Gov4Git」を作ったペタル・マイムンコフ（Petar Maymounkov）が 2024 年 2 月 26 日に書いたものです。本の目標を「本が語る原理に従って本を作ること」としています[1]。</p>
+<p><strong>みんなで管理する段階へ（2024 年 5 月）。</strong> 共著者の経済学者グレン・ワイル（E. Glen Weyl）は 2024 年 5 月ごろ、Gov4Git による完全なコミュニティ管理の段階に入ったので、寄稿を見て投票してほしい、と参加者に呼びかけました。遅れて届いた推薦文をどう加えればよいかと西尾泰和が尋ねると、ワイルは、クレジットが要らなければそのまま寄稿を出せばよい、クレジットがほしければまず課題を立て、ワイルがそれを支持した後に、その課題を解く寄稿を出せばよい、という趣旨の答えをしました[4]。</p>
+<p><strong>本の外への広がり。</strong> 地球科学のソフトウェアのプロジェクトが、貢献のガイドで「運営は Plural Management のモデルに基づく」と書いているなど、ほかにもいくつかの使用例が GitHub 上で見つかっています[5]。</p>
+<h2>しくみ</h2>
+<h3>なぜ要るのか</h3>
+<p>2024 年 2 月の説明文は、目標を四つ挙げています[1]。</p>
+<ol>
+<li>貢献を、あいまいで分かりにくいやり方ではなく、はっきりと数で、民主的に認めること。そして作業に優先順位をつけること。</li>
+<li>クレジットが、値上がりを狙った売り買いの対象にならないようにすること。</li>
+<li>プロジェクトの方向をみんなで決められるようにし、最終的には運営をコミュニティに引き渡すこと。</li>
+<li>悪意のある攻撃に備え、みんなで決める範囲は少しずつ広げること。</li>
+</ol>
+<p>西尾泰和は 2024 年 3 月の講演で、上下関係のある組織では決める人のところで仕事が詰まり、上下の無い組織では一つの方向に進みにくい、と説明しました。とくに誰でも参加できるソフトウェア開発では、プロジェクトが大きくなると貢献の評価と優先順位づけが難しくなる。それを解くのが PMP だ、というのが西尾の整理です[6]。</p>
+<h3>五つの手順</h3>
+<p>説明文によれば、PMP は次の五つの手順でできています[1]。</p>
+<ol>
+<li><strong>優先順位づけ。</strong> 「やるべき課題」の優先度を、<a href="quadratic-funding.html">クアドラティック・ファンディング</a> の一種で決めます。多くの人が少しずつ支持する課題ほど、大きく後押しされます。</li>
+<li><strong>補助。</strong> 後押しのためのクレジットは、スポンサーが出します。説明文は、おそらくワイルやオードリー・タンのような、いちばん多くクレジットを持つ人になるだろう、と書いています。</li>
+<li><strong>報奨金。</strong> 課題を解く寄稿が採用された人は、その課題の優先度に応じたクレジットを受け取ります。</li>
+<li><strong>採否の投票。</strong> 寄稿を採用するかどうかに、賛成・反対の票を入れます。決められた期間（当時は 1 週間）の終わりに、差し引きで賛成が多ければ採用です。v 票入れるのにかかるクレジットは「k × v²」（k は寄稿ごとに決まる数）で、<a href="quadratic-voting.html">クアドラティック投票</a> の形になっています。</li>
+<li><strong>予測。</strong> 投票は「みんながどう決めるか」の予測も兼ねています。上の費用に加えて票の数と同じだけのクレジットを払い、結果が自分の票の向きと合っていれば、その 2 倍を受け取ります。</li>
+</ol>
+<h3>小さな計算例</h3>
+<p>説明文の式に、この記事で数を当てはめた作例です。k = 1 として、ある人がある寄稿に賛成 3 票を入れるとします[1]。</p>
+<ul>
+<li>投票の費用は 1 × 3² = 1 × 9 = <strong>9 クレジット</strong>です。</li>
+<li>予測のために、さらに票の数と同じ <strong>3 クレジット</strong>を払います。</li>
+<li>寄稿が採用されれば（票の向きと結果が合えば）、3 の 2 倍の <strong>6 クレジット</strong>を受け取ります。予測の部分だけ見ると、6 − 3 = <strong>3 クレジット</strong>の得です。</li>
+</ul>
+<p>説明文によれば、この予測のしくみのおかげで、クレジットは少ないけれど時間のある人が、クレジットは多いけれど時間の無い人に代わって寄稿を選ぶ手伝いをし、クレジットを得られます[1]。</p>
+<p>Gov4Git の仕様書は、同じしくみを道具の言葉で書いています。寄稿の説明に「この課題を解いた」と書いて主張でき、採用されると、その課題に積まれたクレジットがまとめて作者への報奨金になります[7]。</p>
+<h3>もとになった論文</h3>
+<p>しくみの全体は、ワイルやマイムンコフらが 2024 年 1 月に出した論文「Plural Management」にあります。要旨によれば、上下関係のある組織の権威の一部を、つながりの中に権威が生まれるしくみで置き換えるモデルです。参加者は、組織の優先順位を当てたり実現したりすることで影響力を得て、それを使って優先順位を決め、貢献を確かめます[8]。</p>
+<h3>実際の運用</h3>
+<p>最初から投票で動いていたわけではありません。西尾は 2024 年 3 月の講演で、当時は一人のリーダーが引っ張る時期で、ワイルが貢献を判断してクレジットを発行しており、採否の投票はまだ体験していない、と報告しました[6]。英語版の紙の本については、ワイルが 2024 年 3 月に編集の締め切りを示し、それ以降の変更は紙の本には入らないが、PMP で承認された変更はオンライン版に取り込む、と書きました[9]。</p>
+<p>本のプロジェクトの集計画面（2025 年 10 月 24 日時点）では、これまでに課題と寄稿が合わせて 116 件開かれ、課題への投票が 135 回、寄稿への投票が 41 回、新しい参加者が 74 人でした。直近 30 日の活動はゼロでした[10]。</p>
+<p>その後、Gov4Git のチームは、ソフトウェア開発向けに作り直したしくみ「Waimea」を公開しました。クレジットを会社の従業員の持ち株に似たものとみなし、メンバーの間で渡すことも認めます[11]。「売り買いの対象にしない」という最初の方針とは、力点が違っています。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>一人一票でも、お金で一票でもない。</strong> 西尾は講演で、PMP は人数で発言力が決まるやり方でも、お金で発言力を買うやり方でもなく、プロジェクトに役立つ貢献をした人ほど大きな発言力を持つ「実力主義」だ、と整理しました[6]。</li>
+<li><strong>投票するとクレジットが減る。</strong> 2024 年 3 月に最初のクレジットを受け取った西尾は、投票で使うと減る点数なので、貢献し続けて点が余っている人しか「一級市民」でいられないのでは、と冗談まじりに書いています[12]。</li>
+<li><strong>設計と実際のずれ。</strong> 日本語の翻訳者たちの記録で西尾は、設計の上では寄稿の採否をみんなで決めるが、英語版の出版まではワイルが一人で判断していた、と書いています[13]。Waimea の文書も、管理者は投票の結果にかかわらず寄稿を採否でき、クレジットを発行したり消したりもできると明記しています（その操作はいつも公開の記録に残ります）[11]。</li>
+<li><strong>参加の難しさと停滞。</strong> 参加の手順が難しいことに加え、上で見たとおり 2025 年 10 月の時点では直近 30 日の活動がありませんでした[10]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本は 5-7 章「<a href="social-markets.html">社会市場</a>」で、市場の限界を越える例の一つとして「⿻ マネジメント」を挙げます。本によれば、PMP を使えば、「信頼できる人による評価」や「評価に応じて権限が移っていくこと」といった上下関係の組織の良いところを、直接の上司と部下の関係なしに実現できます[3]。</p>
+<p>5-0 章は、本の作り方を説明する中で、作業の優先順位と報酬は 5-7 章のクラウドファンディングのやり方で決め、これからの変更は 5-6 章「<a href="plural-voting.html">⿻投票</a>」の投票と予測市場で承認する、と書いています。そしてこのやり方を「⿻ Management Protocol」と呼んでいます[2]。</p>
+<p>つまり PMP は、本の各章で紹介されるしくみを組み合わせたものです。優先順位には <a href="quadratic-funding.html">クアドラティック・ファンディング</a>、採否には <a href="quadratic-voting.html">クアドラティック投票</a>、承認には予測を使います。ワイルも 2023 年 12 月のビデオで、PMP は報奨金、QV、QF、予測市場など本のアイデアを使い、貢献でクレジットを得て、それでプロジェクトの行き先を導くしくみだと説明しています[14]。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』5-7「社会市場」の「⿻マネジメント」（日本語・本）— https://www.plurality.net/v/chapters/5-7/jpn/</li>
+<li>西尾泰和「⿻PluralityとPlural Management Protocol」（日本語・講演資料）— https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol</li>
+<li>本の運営文書（英語・文書）— https://github.com/pluralitybook/plurality/tree/main/docs</li>
+<li>「Gov4Git and the Plural Management Protocol overview」（英語・説明文）— https://github.com/pluralitybook/plurality/issues/333</li>
+<li>PMP 仕様 v0.0.1（英語・仕様書）— https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md</li>
+<li>論文「Plural Management」（英語・論文）— https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>「Gov4Git and the Plural Management Protocol overview」（2024-02-26）— https://github.com/pluralitybook/plurality/issues/333 ［CC0］</li>
+<li>『Plurality』5-0「Collaborative Technology and Democracy」— https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>『Plurality』5-7「Social Markets」の「⿻ management」— https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li>日本語翻訳コミュニティの記録「完全コミュニティ管理フェーズ」（2024-05-10）— https://scrapbox.io/plurality-japanese/</li>
+<li>Gov4Git の使用例の検索 — https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues ［MIT］</li>
+<li>西尾泰和「⿻PluralityとPlural Management Protocol」（2024-03-30）— https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol</li>
+<li>Gov4Git「MECHANISM.md」（PMP 仕様 v0.0.1）— https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md ［MIT / Apache-2.0］</li>
+<li>South・Erichsen・Jain・Maymounkov・Moore・Weyl「Plural Management」要旨（2024-01-09）— https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</li>
+<li>日本語翻訳コミュニティの記録（2024-03-02 の締め切りの告知）— https://scrapbox.io/plurality-japanese/</li>
+<li>本のリポジトリの Gov4Git ダッシュボード（2025-10-24 時点）— https://github.com/pluralitybook/plurality/issues/1094 ［CC0］</li>
+<li>Gov4Git「WAIMEA.md」— https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md ［MIT / Apache-2.0］</li>
+<li>日本語翻訳コミュニティの記録（2024-03-01）— https://scrapbox.io/plurality-japanese/</li>
+<li>日本語翻訳コミュニティの記録（2024-04-10）— https://scrapbox.io/plurality-japanese/</li>
+<li>Glen Weyl の Plurality Seoul 向けビデオ（2023-12-02）— https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</li>
+</ol><div class='related'>関連: <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

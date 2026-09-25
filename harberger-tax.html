@@ -1,0 +1,90 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>ハーバーガー税ってなに？</title><meta name="description" content="持ち主が「この値段なら手放してもいい」という額を自分で申告し、その額に比例した税を払う制度案です。誰かがその値段で買うと言えば売らなければなりません。正直な値付けと、眠っている資産が使いたい人に渡ることを同時に狙います。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/harberger-tax.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/harberger-tax.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/harberger-tax.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/harberger-tax.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/harberger-tax.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="ハーバーガー税ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/harberger-tax.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="持ち主が「この値段なら手放してもいい」という額を自分で申告し、その額に比例した税を払う制度案です。誰かがその値段で買うと言えば売らなければなりません。正直な値付けと、眠っている資産が使いたい人に渡ることを同時に狙います。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/harberger-tax.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/harberger-tax.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>ハーバーガー税ってなに？</h1><div class='lead'>持ち主が「この値段なら手放してもいい」という額を自分で申告し、その額に比例した税を払う制度案です。誰かがその値段で買うと言えば売らなければなりません。正直な値付けと、眠っている資産が使いたい人に渡ることを同時に狙います。</div><p>駅前の一等地に、何年も空き地のままの土地があるとします。使いたい人はいるのに、持ち主は売りません。一方で、鉄道を通そうとすると、最後の一人が売り渋って計画が止まることもあります。ハーバーガー税は、こうした「持っているだけで使われない」問題に、税のしくみで答えようとする制度案です。</p>
+<h2>ひとことで言うと</h2>
+<p>家や土地の持ち主が、<strong>「この値段なら手放してもいい」という額を自分で申告し、その額に比例した税を払う</strong>しくみです。ただし、誰かがその値段で買うと言えば、売らなければなりません[1][2]。</p>
+<p>安く申告すれば税は安いけれど、買われやすくなります。高く申告すれば手放さずにすむけれど、税が高くなります。この板挟みによって、正直な値付けと、使われていない資産が使いたい人の手に渡ることを、同時に狙います[2]。本『⿻ Plurality』は、この考えを提案した一人として経済学者アーノルド・ハーバーガー（Arnold Harberger）の名を挙げています[1]。本『Radical Markets（ラディカル・マーケット）』では COST（共同所有自己申告税）と呼ばれました[2][3]。</p>
+<h2>たとえば</h2>
+<p><strong>作例（説明のための架空の数字）。</strong> 税率を年 5% とします。家を 1,000 万円と申告すれば、税は 1,000 万 × 0.05 = 年 50 万円です。税を減らしたくて 800 万円と申告すると、税は 800 万 × 0.05 = 年 40 万円に下がります。でも、誰かが「800 万円で買います」と言えば、売らなければなりません。10 万円の節税のために、大事な家を安く手放す危険を負うことになります。</p>
+<p><strong>孫文と台湾の土地。</strong> 本『⿻ Plurality』によれば、中華民国を建てた孫文（Sun Yat-Sen）や経済学者ハーバーガーらが、土地の税をうまく運用するために、持ち主に価値を自己申告させ、その額で売る義務を負わせることを提案しました。この方式は台湾では土地について長年使われてきた、と本は書きます[1]。台湾の中国語版は、ここに「平均地權制度」という言葉を補っています[4]。</p>
+<p><strong>ブロックチェーン上の美術品。</strong> このしくみは、ブロックチェーン（改ざんしにくい共有の記録）のようなデジタルの登録簿では特に実施しやすいので、近年は NFT（デジタルの一点物）の美術作品で広がっている、と本は書きます[1]。2024 年 1 月のオードリー・タンとグレン・ワイルの質疑の記録には、小さな例はあるが大規模な実装はまだ無く、台湾は導入にもっとも近い国の一つだ、という応答があります。ただし、この記録は話し手の表示が無い機械翻訳なので、どちらの発言かは確かめられません[5]。</p>
+<p><strong>ENS での検討と見送り。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）によると、イーサリアム上の名前のしくみ（ENS）で、ほぼ同じ提案が検討されました。けれども、正当な持ち主がお金に乏しい一方で、詐欺をする人が欲しがる危ない名前（財布のサービスの名前など）がある、という理由で退けられました[6]。</p>
+<h2>しくみ</h2>
+<h3>二つの「効率」の綱引き</h3>
+<p>ブテリンの 2018 年の解説によると、毎年すべての財産を取り上げて、いちばん高く買う人に売り直せば、どの物も一番うまく使える人の手に渡ります。でも、半年後に取り上げられるなら、誰も家を建てません。使う人に渡る効率と、投資する意欲の効率が、ぶつかるのです[2]。</p>
+<p>19 世紀の思想家ヘンリー・ジョージは、土地の値段だけに税をかけ、建物などの改良には税をかけない方法でこれを避けようとしました。でも、ポズナーとワイルは、それは実務では難しいと見て、自己申告の財産税を提案した、とブテリンは書きます[2]。</p>
+<h3>なぜ正直に申告するのか</h3>
+<p>ブテリンの説明はこうです。税率が「1 年のうちにその財産が売れる確率」と同じなら、申告額を少し上げたときに増える税と、少し高く買ってもらえる見込みが、ちょうど釣り合います。だから、本当の値打ちからずらして申告する理由がなくなります[2]。</p>
+<p>また、税率をそれより下げると、投資する意欲は高まり、使う人に渡る効率の損はそれより小さい、という性質もブテリンは紹介しています[2]。</p>
+<p>ワイル自身は 2018 年のインタビューで、目的は、妥当な値段でいつでも売れる状態をつくることだ、と説明しています。鉄道や開発のために土地を集めるときに最後の一人が売り渋る問題や、国が強制的に土地を取り上げる必要を減らせる、というのです[7]。</p>
+<h3>Radical Markets から Plurality へ</h3>
+<p>この案は、エリック・ポズナー（Eric Posner）とワイルの本『<a href="radical-markets.html">Radical Markets</a>』（2018 年）の中心の提案の一つでした[2][3]。</p>
+<p>ワイルは 2020 年のエッセイで、この本を振り返って反省しています。財産の価値は共同体の努力から生まれると言いながら、共同体のしくみや公共のものをほとんど組み込まず、個人に税をかけて、世界規模の大きな組織が個人に配り直す姿を思い描いていた、というのです。実際の富は会社や国などの集団が持っているので、多くの集団が入れ子になって一部ずつ共同で持ち、税収は価値の源である公共のもののために使うべきだ、とワイルは書きます[3]。</p>
+<p>本『Plurality』の 5-7 章は、これを「部分的共通所有」として紹介します。税のために正直な値付けをさせると同時に、十分に使われていない資産や独り占めされた資産を、広い公衆に回す効果がある、と本は書きます[1]。</p>
+<p>さらに本は、集めたお金の使い道も描きます。正しく設計された共同所有の税で集めたお金は、<a href="supermodularity.html">スーパーモジュラリティ</a>（一緒にやるほど価値が増える性質）を持つ投資に要るお金を賄える、という「ヘンリー・ジョージの定理」です。本は、学校を良くすると周りの土地の値段が上がる、という例を挙げます。そして、税収をそうした活動に回す「循環型の投資」や、<a href="quadratic-funding.html">クアドラティック・ファンディング</a> の仲間のやり方で境界を越えて配る構想を続けます[8]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>考える手間（ブテリン、2018 年）。</strong> 人は不動産の値付けの専門家ではありません。自宅の申告額を考えるのに時間と労力がかかり、うっかり低く申告して家を失えば、強い不満が出ます。小さな持ち物にまで広げれば、数えきれない値付けを抱えることになる、とブテリンは心配しています[9]。</li>
+<li><strong>引っ越したくない人は？（2018 年のインタビュー）。</strong> 聞き手のラス・ロバーツ（Russ Roberts）は、引っ越したくなければ高く申告するしかないのでは、と問いました。ワイルは、ここでの価値とは査定の値段ではなく、そこに住み続けることが自分にとってどれだけ大事かであり、税収を配当として戻せば、ふつうの家庭には得になる、と答えました。ロバーツは、配当が本当に払われるのかも疑っています[10]。</li>
+<li><strong>富の集中を招くのでは（フランス語の書評、2019 年）。</strong> Le Grand Continent の書評は、いくつかの点を批判します。不景気のときにお金のある人が、安く申告された資産を買い集められる。資産をまとめて申告すればお金持ちが守られる。大きな会社がライバルを買い取れる。家族の家のような気持ちの上の価値を無視している[11]。</li>
+<li><strong>本自身の留保。</strong> 本も、部分的共通所有は「興味深い出発点」にすぎないと書きます。共同体の利益や、資産の使われ方の安定を守る道具と組み合わせる必要がある、というのです[8]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本では、5-7 章「<a href="social-markets.html">社会市場</a>」の「明日の社会市場」の最初の項目に出てきます[1]。これは 3-2 章のヘンリー・ジョージの考え（土地の値段は共同体がつくったものなので、個人のものではない）と、2-1 章の孫文の「民生主義」を受けています[12][13]。</p>
+<p>4-4 章「<a href="property-and-contract.html">財産と契約</a>」では、電波の免許について「貸すことと持つことを混ぜる設計」として 5-7 章に送られます[14]。本は、部分的共通所有を投票のしくみと組み合わせた「⿻ 財産」へと話を進めます[8]。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>Vitalik Buterin「On Radical Markets」の Harberger taxes の節（英語・記事、2018）— https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>本『Plurality』5-7「社会市場」（日本語・本）— https://www.plurality.net/v/chapters/5-7/jpn/</li>
+<li>Glen Weyl on EconTalk（英語・インタビュー、2018）— https://www.econtalk.org/glen-weyl-on-radical-markets/</li>
+<li>E. Glen Weyl「Why I Am Not a Market Radical」（英語・記事、2020）— https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</li>
+<li>本『Plurality』3-2「Henry George and the networked value」（英語・本）— https://www.plurality.net/v/chapters/3-2/eng/</li>
+<li>Le Grand Continent の『Radical Markets』書評（フランス語・書評、2019）— https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>『Plurality』5-7「Social markets tomorrow」の Partial common ownership の項 — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li>Vitalik Buterin「On Radical Markets」（2018）の Harberger taxes の節 — https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>E. Glen Weyl「Why I Am Not a Market Radical」（2020）— https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</li>
+<li>『Plurality』繁体中文版 5-7「社會市場」— https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>2024-01-08 Audrey and Glen Weyl Q&amp;A（日本語の機械翻訳の記録・抜粋）— https://scrapbox.io/plurality-japanese/2024-01-08%20Audrey%20and%20Glen%20Weyl%20Q%26A</li>
+<li>Vitalik Buterin「On Radical Markets」（ENS の段落）— https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>Glen Weyl on EconTalk（2018-05-21）— https://www.econtalk.org/glen-weyl-on-radical-markets/</li>
+<li>『Plurality』5-7「Frontiers of social markets」の節 — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li>Vitalik Buterin「On Radical Markets」（考える手間についての段落）— https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>Glen Weyl on EconTalk（2018-05-21、21:37 ごろ）— https://www.econtalk.org/glen-weyl-on-radical-markets/</li>
+<li>Le Grand Continent「Radical Markets : abolir la propriété pour libérer le capitalisme」（2019）— https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/</li>
+<li>『Plurality』3-2「Henry George and the networked value」の節 — https://www.plurality.net/v/chapters/3-2/eng/ ［CC0］</li>
+<li>『Plurality』2-1「A View from Yushan」— https://www.plurality.net/v/chapters/2-1/eng/ ［CC0］</li>
+<li>『Plurality』4-4「⿻ real property」の節 — https://www.plurality.net/v/chapters/4-4/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='property-and-contract.html'>財産と契約（⿻ 財産）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='radical-markets.html'>Radical Markets（ラディカル・マーケット）ってなに？</a> ・ <a href='supermodularity.html'>スーパーモジュラリティってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

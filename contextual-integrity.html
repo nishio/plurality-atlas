@@ -1,0 +1,97 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>コンテキストの完全性ってなに？</title><meta name="description" content="プライバシーとは「情報を隠すこと」ではなく、「情報が、共有された場の決まりに沿って扱われること」だ、という考え方です。本『Plurality』は、これをネットの ID・決済・データ共有を設計する基準にしています。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/contextual-integrity.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/contextual-integrity.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="コンテキストの完全性ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="プライバシーとは「情報を隠すこと」ではなく、「情報が、共有された場の決まりに沿って扱われること」だ、という考え方です。本『Plurality』は、これをネットの ID・決済・データ共有を設計する基準にしています。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/contextual-integrity.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/contextual-integrity.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>コンテキストの完全性ってなに？</h1><div class='lead'>プライバシーとは「情報を隠すこと」ではなく、「情報が、共有された場の決まりに沿って扱われること」だ、という考え方です。本『Plurality』は、これをネットの ID・決済・データ共有を設計する基準にしています。</div><p>お医者さんに話した体の悩みが、勤め先に伝わったら嫌ですよね。でも、お医者さんに伝わらなければ治療ができません。つまり大事なのは「隠すかどうか」ではなく、「その話が、話した場の中にとどまるかどうか」です。この見方を「コンテキストの完全性」と呼びます。「コンテキスト」は文脈、つまり情報がやりとりされる場のことです。</p>
+<h2>ひとことで言うと</h2>
+<p>プライバシーとは<strong>情報を隠すことではなく、情報が、それが共有された場の決まりに沿って扱われること</strong>だ、という考え方です[1]。</p>
+<p>病院で話したことは医療の場に、友だちに話したことは友だちの間にとどまるべきです。外に持ち出されると侵害になります。逆に、伝わるべき相手に伝わらないのも害になります[1]。本『⿻ Plurality』は、この考え方をネットの ID・決済・データ共有を設計する基準にしています。</p>
+<h2>たとえば</h2>
+<p><strong>初めてのキス。</strong> 本は、私たちについての大事なことは、ほとんど誰か他の人にも知られていて、たいていはその人についての情報でもある、と指摘します。初めてのキスの記憶を相手の頭から消してしまうことは、どちらかがそれを言いふらすのと同じくらい、プライバシーの侵害だと本は言います[1]。</p>
+<p>だから求められているのは、「プライバシー」という言葉ではうまく言えないものだ、と本は書きます。それは「情報が、意図された社会的な場にとどまること」です。これを研究者ヘレン・ニッセンバウム（Helen Nissenbaum）が「コンテキストの完全性」と名づけました[1]。</p>
+<p><strong>遺伝の情報。</strong> 遺伝子は家族で共有されています。だから、一人が自分の遺伝の情報を明かすと、家族や遠い親戚のことまでわかってしまいます。本は、人口の約 1% の遺伝の情報の標本があれば、誰でも遺伝の特徴から特定できる、と述べます。そして、遺伝のプライバシーは、もともと社会的なものだとします[2][3]。</p>
+<p><strong>お金の流れ。</strong> お金のやりとりには、必ず二人以上がかかわります。共同体の中では、お金の流れはある程度まわりに見えています。だから金融で目指すべきは完全な秘密ではない、と本は言います。目指すべきは、ほかの共同体に大きな影響を及ぼさない限り、情報をその共同体の中にとどめることです[4]。→ <a href="commerce-and-trust.html">商取引と信頼</a></p>
+<h2>くわしく</h2>
+<h3>「公開か秘密か」ではない</h3>
+<p>本の議論では、情報が伝わるべき相手に伝わらず、理解されないことも、広まりすぎることと同じくらいの害です。つまり、コンテキストの完全性には、ある種の「開かれていること」も要ります[1]。</p>
+<p>また、こうした情報はもともと社会的なので、問題の中心は個人の選択や保護ではありません。人々の集団を、情報についてのその集団の決まりが破られないように守ることです。本はここから、中心にある問題は、別の基本的な権利である<strong>結社の自由</strong>（人が自由に集まり、団体をつくる自由）だ、と結論します[1]。</p>
+<h3>データはほとんど「集団のもの」</h3>
+<p>4-2 章は、暗号の技術や法律の多くがプライバシーを個人の問題として扱っている、と書きます。けれども、私たちがふだんプライバシーと呼ぶものの多くは、集団にかかわります[5]。</p>
+<ul>
+<li>遺伝や医療の情報は、家族にかかわります。</li>
+<li>通信やお金の情報は、やりとりの相手にかかわります。</li>
+<li>位置の情報は、その場に居合わせた人にかかわります。</li>
+</ul>
+<p>本によれば、本当に個人だけのものは、役所が識別のために発行した番号くらいです。それさえ、発行した機関との関係を表しています。だから、一人が勝手に情報を明かすと、ほとんどいつも誰か他の人のプライバシーを脅かすことになる、と本は言います[5]。</p>
+<h3>外からの覗き見だけではない</h3>
+<p>多くの暗号や法律は、外からの盗み見を防ぐことに集中しています。でも、中の人が漏らすことには弱い、と本は指摘します[6]。</p>
+<p>そこで本は、内側から広まりすぎるのを抑える技術を挙げます。たとえば、時間がたつと消えるメッセージです。また、受け取った一人にだけ「本物だ」と示せて、ほかの人には証明できない「指定検証者証明」という暗号の技術も挙げます[6]。これを集団の側から組み立てた考えが <a href="plural-publics.html">⿻公衆</a> です。その条件として、参加する人が「いまどんな場でやりとりしているか」を簡単に確かめ、守れること（「文脈的信頼」）が挙げられています[7]。</p>
+<h3>設計の基準として</h3>
+<p>本では、この考え方が第 4 部の各章で何度も基準になります。</p>
+<ul>
+<li><strong>ID。</strong> 人とのふだんの関係から生まれた情報を本人確認に使うときには、その場の決まりを破らないよう細心の注意が要る、と本は書きます[8]。→ <a href="identity-and-personhood.html">ID と人物性</a></li>
+<li><strong>決済。</strong> 上の「共同体にとどめる」原則に加えて、外からの監視を一方的に課すのではなく、関係する共同体が一部かかわる「⿻ 的な抑え合い」を説きます[4]。</li>
+<li><strong>データの共有。</strong> 一人ひとりが自分のデータの権利を管理するやり方は、遺伝の情報がもれ伝わることや、交渉の力が足りないことのせいで成り立たない、と本は示します。そして、データの持ち主を集団で代表する組織を提案します[3]。→ <a href="property-and-contract.html">財産と契約</a>・<a href="data-dignity.html">データの尊厳</a></li>
+<li><strong>アクセス。</strong> 4-5 章は、政策をつくる人は、ネットでのやりとりの場を守る公共の基盤に投資すべきだ、と書きます[9]。→ <a href="digital-public-infrastructure.html">デジタル公共インフラ</a></li>
+</ul>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>よくある誤解：「プライバシーを強く＝もっと隠す」。</strong> 本の立場では、隠しすぎ（伝わるべき相手に伝わらない）も害になります。目標は秘密を最大にすることではありません[1]。</li>
+<li><strong>判断を誤るのは誰か。</strong> 金融について本は、外に害を及ぼす活動を支えない文化を保つか、外からの不当な言い分に対して活動する権利を守るかは「共同体の責任」だとします[4]。ただ、共同体がこの判断を誤ったときにどうするかは、本の中では抽象的なままです。</li>
+<li><strong>内部告発との緊張。</strong> 6-3 章は、場を守る道具が、組織の決まりに反して情報を漏らす報道の情報源とぶつかりうることを認めています[10]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>この考え方は、ニッセンバウムの 2004 年の論文「Privacy as Contextual Integrity」に由来します。本は 4-1 章の注でこれを挙げています[1]。</p>
+<p>本の中では、4-1 章「<a href="identity-and-personhood.html">ID と人物性</a>」の終わりで登場し、4-2 章「<a href="plural-publics.html">⿻公衆</a>」の出発点になります。そして 4-3 章「<a href="commerce-and-trust.html">商取引と信頼</a>」、4-4 章「<a href="property-and-contract.html">財産と契約</a>」、4-5 章「<a href="digital-public-infrastructure.html">デジタル公共インフラ</a>」で使われます。第 4 部「<a href="rights-os.html">権利 OS</a>」全体を貫く糸だと言えます。</p>
+<p>著者たちの後の仕事でも同じ読み方が続きます。ワイルやタンらの論文「Community by Design」は、ニッセンバウムにならって、プライバシーは個人の権利というより、共同体に対する場ごとの守秘の務めにかかわるものだとまとめています。そして、交差する多様な共同体がそれぞれ、この考えに近い「文脈的信頼（contextual confidence）」を得られるようにしつつ、人がその複雑さを行き来できるようにすることを、主な目標の一つにしています[11]。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』4-1「ID と人物性」（日本語・本）— https://www.plurality.net/v/chapters/4-1/jpn/</li>
+<li>本『Plurality』4-1「Identity and Personhood」の「Identity and association」の節（英語・本）— https://www.plurality.net/v/chapters/4-1/eng/</li>
+<li>本『Plurality』4-2「Association and ⿻ Publics」（英語・本）— https://www.plurality.net/v/chapters/4-2/eng/</li>
+<li>本『Plurality』4-3「Commerce and Trust」の「Digital money and privacy」の節（英語・本）— https://www.plurality.net/v/chapters/4-3/eng/</li>
+<li>Weyl, Tang ほか「Community by Design」（英語・論文）— https://arxiv.org/abs/2502.10834</li>
+<li>Jain, Hitzig, Mishkin「Contextual Confidence and Generative AI」（英語・論文）— https://arxiv.org/abs/2311.01193</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>『Plurality』4-1「Identity and association」の節（注 Nissenbaum）— https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>『Plurality』4-2「Protecting context」の節（Genetic data の項）— https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li>『Plurality』4-4「Property and Contract」の「⿻ property」の節 — https://www.plurality.net/v/chapters/4-4/eng/ ［CC0］</li>
+<li>『Plurality』4-3「Digital money and privacy」の節 — https://www.plurality.net/v/chapters/4-3/eng/ ［CC0］</li>
+<li>『Plurality』4-2「Protecting context」の節の中ほど — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li>同上 後半 — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li>『Plurality』4-2「⿻ publics」の節 — https://www.plurality.net/v/chapters/4-2/eng/ ［CC0］</li>
+<li>『Plurality』4-1「Identity as an intersection」の節 — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>『Plurality』4-5「Access」— https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+<li>『Plurality』6-3「Media」— https://www.plurality.net/v/chapters/6-3/eng/ ［CC0］</li>
+<li>Weyl, Tang ほか「Community by Design」— https://arxiv.org/abs/2502.10834</li>
+</ol><div class='related'>関連: <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='commerce-and-trust.html'>商取引と信頼ってなに？</a> ・ <a href='property-and-contract.html'>財産と契約（⿻ 財産）ってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='digital-public-infrastructure.html'>デジタル公共インフラってなに？</a> ・ <a href='rights-os.html'>権利 OS ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

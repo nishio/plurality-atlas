@@ -1,0 +1,92 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>d/acc（防御的な加速）ってなに？</title><meta name="description" content="技術は速く進めるけれど、攻撃より防御を、権力の集中より分散を助ける技術を選んで先に進めよう、という考え方です。イーサリアムの共同創設者ヴィタリック・ブテリンが 2023 年に名づけました。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/d-acc.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/d-acc.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/d-acc.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/d-acc.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/d-acc.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="d/acc（防御的な加速）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/d-acc.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="技術は速く進めるけれど、攻撃より防御を、権力の集中より分散を助ける技術を選んで先に進めよう、という考え方です。イーサリアムの共同創設者ヴィタリック・ブテリンが 2023 年に名づけました。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/d-acc.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/d-acc.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>d/acc（防御的な加速）ってなに？</h1><div class='lead'>技術は速く進めるけれど、攻撃より防御を、権力の集中より分散を助ける技術を選んで先に進めよう、という考え方です。イーサリアムの共同創設者ヴィタリック・ブテリンが 2023 年に名づけました。</div><p>新しい技術、特に AI について、「どんどん進めるべきだ」という人と、「危ないから止めるべきだ」という人がいます。d/acc（ディー・アック）は、その間にある第三の答えです。進めるかどうかではなく、<strong>何を先に進めるか</strong>を選ぼう、という考え方です。</p>
+<h2>ひとことで言うと</h2>
+<p>d/acc は、技術はどんどん進めるべきだとしたうえで、<strong>身を守る側を強くする技術</strong>と、<strong>力を一か所に集めずに分け持たせる技術</strong>を選んで先に進めよう、という考え方です。イーサリアム（暗号通貨とその基盤の仕組み）の共同創設者ヴィタリック・ブテリン（Vitalik Buterin）が、2023 年 11 月に名づけました[1][2]。</p>
+<p>「acc」は acceleration（加速）の略です。「d」には四つの意味が込められています。defense（防御）、decentralization（分散）、democracy（民主主義）、differential（差をつける）です。ブテリンは、まず防御から考え、そこから他の意味につながる、と説明しています[1]。</p>
+<h2>たとえば</h2>
+<p><strong>「技術楽観主義宣言」への応答（2023 年）。</strong> 投資家のマーク・アンドリーセン（Marc Andreessen）は 2023 年 10 月 16 日、「技術楽観主義者宣言」を出しました。加速主義（技術の進歩をとにかく速めるべきだという立場）を掲げ、AI の歩みを遅らせることは人の命を奪うことだ、慎重さを求める考え方は敵だ、という趣旨を書いています[3]。</p>
+<p>ブテリンは翌月のブログで、技術の恩恵は大いに認めつつ、別の道を示しました。軍事技術への熱狂には複雑な思いがある。少数の人に強い力を渡して「うまく使ってほしい」と願うやり方には乗らない。その代わりの考え方を d/acc と呼んだのです[1]。</p>
+<p><strong>2042 年のパンデミックの想像図（2025 年）。</strong> ブテリンは 1 年後の続編で、d/acc がうまくいった世界を描いています。それまでの流行の兆しは、下水の監視や公開された SNS の分析で早く見つかり、封じ込められてきました。手のひら大の空気の検査器は、ソフトの更新で新しいウイルスを検出します。ワクチンを作るための公開の手順も数週間で出てきます。</p>
+<p>多くの人は、広く普及した空気のろ過と換気に守られています。検査器が鳴ったらマスクをし、陽性なら家にいる。この基本を 6 割の人が守っただけで、流行は 2 か月後に消えます。中央からの命令や大規模な監視ではなく、<strong>分散した防御</strong>で乗り切る姿として描かれています[2]。</p>
+<p><strong>台湾のオードリー・タンの説明。</strong> 当時台湾のデジタル発展部長だったオードリー・タン（Audrey Tang、唐鳳）は、2024 年 3 月のポッドキャストで、同部の長期的な取り組みを「Vitalik が言う d/acc、つまり防衛性加速技術」だと紹介しました[4]。2025 年 3 月の日経 BP のインタビューでは、攻撃の能力が分散した以上、防御の技術も分散させなければならない、と述べています[5]。</p>
+<h2>しくみ</h2>
+<h3>なぜ「防御」が民主主義につながるのか</h3>
+<p>ブテリンの論理はこうです。守るのがやさしい世界では、分散的で民主的な政治の仕組みがよく育ちます。守るのが難しい世界では、みんながみんなと争うことになり、最後は一番強い者の支配に落ち着きやすい。例として、山に守られたスイスを挙げています[1][2]。</p>
+<p>だから、インターネットが安全になるほど、ハッカーを追うためにプライバシーを侵す必要は減ります。偽の情報をみんなで見分ける道具（<a href="community-notes.html">コミュニティノート</a> など）が育つほど、検閲をめぐる争いも減る、とブテリンは論じます[1]。</p>
+<h3>四つの領域</h3>
+<p>2023 年の記事は、防御の技術を「原子の世界」（物の世界）と「ビットの世界」（情報の世界）に分けます。物の世界は、生物・医療の防御と、丈夫なインフラ。情報の世界は、サイバー防御（攻撃者が誰かに合意しやすい）と、情報の防御（誰が攻撃者かに合意しにくい）です[1]。</p>
+<p>意見の違う人の間で合意点を見つける <a href="polis.html">Polis</a> のような道具は、厳密には「防御」というより「民主主義の加速」だ、ともブテリンは認めています[1]。</p>
+<h3>由来</h3>
+<p>危ない技術より安全を高める技術を先に進める、という発想には元があります。ブテリン自身が、効果的利他主義（できるだけ多くの善をなす方法を考える運動）の文献にある「差別的技術開発」に根がある、と書いています[1]。</p>
+<h3>2025 年の広がり</h3>
+<p>続編では、生き延びるための技術（防御）と、よりよく栄えるための技術が、どの領域でも深くつながっていると論じました[2]。公共財（みんなが使えるが、お金を集めにくいもの）の資金集め、たとえば <a href="quadratic-funding.html">クアドラティック・ファンディング</a> も、d/acc に欠かせないとしています。力の集中を減らすという目標は、多くのふつうのビジネスと相性が悪いからです[2]。</p>
+<h3>AI の規制について</h3>
+<p>ブテリンは、AI が早く来るなら「良いものを加速する」だけでは足りない、という AI 安全の側の批判を、最も説得力があったと認めています。そのうえで二つの策を挙げます。一つは、損害を起こした者（特に AI の使い手）に責任を負わせるルール。もう一つは、責任のルールより強い手段が要ると確信したなら選ぶ、という条件つきの案で、危機のときに世界の計算資源を 1〜2 年ほど大きく減らせる、大規模なハードウェアの「一時停止ボタン」です[2]。</p>
+<p>2025 年 7 月には、先頭の一つの AI だけが神のような力を得るという未来予測を批判しました。一つの AI に覇権を握らせてレースに勝たせることが唯一の道だ、という考えこそ安全を下げうる、という趣旨です[6]。この議論は <a href="ai-futures-debate.html">AI の未来をめぐる論争</a> の記事でも扱います。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>分散すれば安全、とは限らない。</strong> タン自身が 2026 年 9 月のポッドキャスト（主催サイトの文字起こしによる）で、主流の d/acc の語り方に異を唱えました。分散することが自動的に良いわけではなく、責任を負わない者の群れは、一つの独占と同じくらい危険になりうる、という趣旨です。能力を分散するなら、追跡や修復の仕組みも分散すべきだと述べました[7]。</li>
+<li><strong>小さな島を守っても意味がない、という反論。</strong> 討論番組 Doom Debates の司会リロン・シャピラ（Liron Shapira）は、<a href="superintelligence.html">超知能</a> どうしの覇権争いや核戦争が起きれば、島が自分を守れるという理想は通用しない、とブテリンにもタンにも言った、と述べています[8]。</li>
+<li><strong>小さな者が皆を殺せる、という心配。</strong> 攻撃の能力が安く、見えにくくなれば、d/acc と唱えるだけでは足りない。タンはこの心配を本物だと認めたうえで、中央だけの防御は一点を破られると脆いので、何層もの防御が要ると答えました[7]。ブテリンも、防御か攻撃かの分類は端のほうでどうしても曖昧になる、と認めています[1]。</li>
+<li><strong>名前の誤解。</strong> d/acc を、ただ速く進めたい加速主義（e/acc）の一派と取り違えやすいのですが、ブテリンは、何を進めるかを選び、意図して進める点が違いだとしています。分散だけを言って防御を気にしない立場とも距離を置いています[1][2]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』には、d/acc という語は出てきません。d/acc は、本とほぼ同じ時期に本の外で育った、隣の考え方です。</p>
+<p><strong>ブテリンの見方。</strong> ブテリンは 2023 年の記事で、d/acc は <a href="plurality.html">Plurality</a> が大事にする民主的な協調の技術を、無理なく含められる枠組みだと書きました[1]。2025 年 12 月の文章では、権力の集中を防ぐ策の一つとして、グレン・ワイルとタンの Plurality の考え（違いをまたぐ協働）を挙げ、d/acc はそれを補う策だと位置づけています[9]。</p>
+<p><strong>タンの見方。</strong> タンは、AI の倫理についての宣言 <a href="six-pack-of-care.html">6-Pack of Care</a>（2025 年）で、偽情報対策などを「情報の領域での民主的・分散的な防御の加速（d/acc）」と呼びました[10]。2026 年 1 月の Doom Debates では、分散の加速も防御の加速もけっこうだが、6-Pack は「民主主義の加速」に焦点を当てる、それも d/acc の認められた D の一つだ、と答えています[8]。</p>
+<p><strong>第三者の比較。</strong> ヒルマ・チャーチ＝チューリング（Hilma Church-Turing）とスティーブン・リード（Stephen Reid）は 2026 年 1 月、両者はよく補い合うと論じました。d/acc は作るものの中身に強く、Plurality は作り方、つまり何を防御の技術とみなすかを多様な人々がどう決めていくか、という部分を補う、という見立てです[11]。</p>
+<p>d/acc は、ただ加速する立場と、安全のために力を集める立場の両方に対する第三の道として立てられています[2]。本が描く <a href="three-paths.html">三つの道</a> と並べて読むと、違いが見えやすくなります。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>Audrey Tang「How regular citizens fixed an AI deepfake crisis」（英語・ポッドキャスト、2026-09-16）— https://www.existentialhope.com/podcasts/audrey-tang</li>
+<li>Vitalik Buterin「My techno-optimism」（英語・記事、2023-11-27、提唱）— https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</li>
+<li>Vitalik Buterin「d/acc: one year later」（英語・記事、2025-01-05）— https://vitalik.eth.limo/general/2025/01/05/dacc2.html</li>
+<li>Marc Andreessen「The Techno-Optimist Manifesto」（英語・記事、d/acc が応じた相手）— https://a16z.com/the-techno-optimist-manifesto/</li>
+<li>6-Pack of Care: A Manifesto（英語・宣言）— https://civic.ai/manifesto/</li>
+<li>西尾泰和「d/acc」（日本語・メモ）— https://scrapbox.io/nishio/d/acc</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>Vitalik Buterin「My techno-optimism」（2023-11-27）— https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</li>
+<li>Vitalik Buterin「d/acc: one year later」（2025-01-05）— https://vitalik.eth.limo/general/2025/01/05/dacc2.html</li>
+<li>Marc Andreessen「The Techno-Optimist Manifesto」（2023-10-16）— https://a16z.com/the-techno-optimist-manifesto/</li>
+<li>「寶博朋友說」Podcast 專訪唐鳳部長（2024-03-21）— https://archive.tw/2024-03-21-%E3%80%8C%E5%AF%B6%E5%8D%9A%E6%9C%8B%E5%8F%8B%E8%AA%AA%E3%80%8Dpodcast-%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF ［CC0］</li>
+<li>日経 BP インタビュー（2025-03-03）— https://archive.tw/2025-03-03-nikkei-bp-interview ［CC0］</li>
+<li>Vitalik Buterin「My response to AI 2027」（2025-07-10）— https://vitalik.eth.limo/general/2025/07/10/2027.html</li>
+<li>Existential Hope Podcast「How regular citizens fixed an AI deepfake crisis」（2026-09-16、主催サイトの文字起こし。自動生成の場合がある）— https://www.existentialhope.com/podcasts/audrey-tang</li>
+<li>Doom Debates（Audrey Tang 出演、2026-01-20）— https://civic.ai/doom-debate/ ［CC0］</li>
+<li>Vitalik Buterin「Balance of power」（2025-12-30）— https://vitalik.eth.limo/general/2025/12/30/balance_of_power.html</li>
+<li>6-Pack of Care: A Manifesto（2025-09-01）— https://civic.ai/manifesto/ ［CC0］</li>
+<li>Hilma Church-Turing &amp; Stephen Reid「Plurality ⿻」（Technological Metamodernism 第 6 章、2026-01-04）— https://technologicalmetamodernism.substack.com/p/plurality</li>
+</ol><div class='related'>関連: <a href='vitalik-buterin.html'>ヴィタリック・ブテリン（Vitalik Buterin）ってどんな人？</a> ・ <a href='ai-futures-debate.html'>AI の未来をめぐる論争（AI 2027 など）ってなに？</a> ・ <a href='superintelligence.html'>超知能（スーパーインテリジェンス）ってなに？</a> ・ <a href='six-pack-of-care.html'>6-Pack of Care（ケアの6パック）ってなに？</a> ・ <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a> ・ <a href='three-paths.html'>「三つの道」ってなに？</a> ・ <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

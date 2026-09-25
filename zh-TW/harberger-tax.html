@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是哈柏格稅（Harberger tax）？</title><meta name="description" content="由持有者自己申報「這個價格就願意出讓」的金額，並按這個金額比例繳稅的制度構想。只要有人說要用這個價格買，就必須賣。它想同時做到誠實定價，以及讓閒置的資產流到想用的人手上。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/harberger-tax.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/harberger-tax.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/harberger-tax.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/harberger-tax.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/harberger-tax.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是哈柏格稅（Harberger tax）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/harberger-tax.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="由持有者自己申報「這個價格就願意出讓」的金額，並按這個金額比例繳稅的制度構想。只要有人說要用這個價格買，就必須賣。它想同時做到誠實定價，以及讓閒置的資產流到想用的人手上。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../harberger-tax.html">日本語</a> <a class="lang" hreflang="en" href="../en/harberger-tax.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是哈柏格稅（Harberger tax）？</h1><div class='lead'>由持有者自己申報「這個價格就願意出讓」的金額，並按這個金額比例繳稅的制度構想。只要有人說要用這個價格買，就必須賣。它想同時做到誠實定價，以及讓閒置的資產流到想用的人手上。</div><p>假設車站前的黃金地段，有一塊空地好幾年都沒用。有人想用，地主卻不賣。另一方面，要蓋鐵路時，也可能因為最後一個人不肯賣而讓整個計畫卡住。哈柏格稅（亦譯哈伯格稅）就是想用稅的機制，回答這種「光持有而不使用」問題的制度構想。</p>
+<h2>一句話說明</h2>
+<p>房屋或土地的持有者，<strong>自己申報「這個價格就願意出讓」的金額，並按這個金額比例繳稅</strong>。但只要有人說要用這個價格買，就必須賣[1][2]。</p>
+<p>申報得低，稅就低，但容易被買走；申報得高，就不必出讓，但稅變高。靠這個兩難，同時追求誠實定價，以及讓沒被使用的資產流到想用的人手上[2]。《多元宇宙》把經濟學家阿諾德·哈柏格（Arnold Harberger）列為提出這個想法的人之一[1]。在《激進市場》（Radical Markets）一書中，它被稱為 COST（Common Ownership Self-Assessed Tax）[2][3]。《多元宇宙》把它稱為「部分共同所有權」[1]。</p>
+<h2>舉例來說</h2>
+<p><strong>範例（為了說明而設的虛構數字）。</strong> 假設稅率是每年 5%。房子申報 1,000 萬元，稅就是 1,000 萬 × 0.05 = 每年 50 萬元。想少繳稅而申報 800 萬元，稅就降到 800 萬 × 0.05 = 每年 40 萬元。可是只要有人說「我用 800 萬元買」，就必須賣。為了省 10 萬元的稅，得冒著把重要的房子便宜賣掉的風險。</p>
+<p><strong>孫中山與臺灣的土地。</strong> 根據《多元宇宙》，為了克服土地稅管理上的難題，「包括中華民國創始人孫中山、經濟學家阿諾德·哈柏格（Arnold Harberger）在內的多位歷史思想家都曾提議過，讓持有者自行評估其財產的價值，且以自行評估的價值出售作為懲罰」[1]。書接著寫道：「平均地權制度，在臺灣的土地方面也已使用多年。」[1]（「平均地權制度」一詞是繁體中文版補上的，英文版只說這種做法在臺灣的土地上用了很久[4]。）</p>
+<p><strong>區塊鏈上的藝術品。</strong> 書寫道，這種方法在區塊鏈（難以竄改的共享紀錄）這類數位資產登記中特別容易實施，所以近年在 NFT（數位的獨一無二品）藝術品方面越來越受歡迎[1]。2024 年 1 月唐鳳（Audrey Tang）與衛谷倫（E. Glen Weyl）問答的紀錄中，有一段回答說：有小規模的例子，但還沒有大規模的實作，臺灣是最接近導入的國家之一。不過這份紀錄是沒有標示發言者的日文機器翻譯，無法確認是誰說的[5]。</p>
+<p><strong>ENS 的討論與擱置。</strong> 根據以太坊創始人維塔利克·布特林（Vitalik Buterin），以太坊上的名稱系統（ENS）曾討論過幾乎相同的提案。但因為有一類危險的名稱（例如錢包服務的名字），正當持有者手頭不寬裕，詐騙者卻很想要，這個提案被否決了[6]。</p>
+<h2>運作方式</h2>
+<h3>兩種「效率」的拉鋸</h3>
+<p>根據布特林 2018 年的解說，如果每年把所有財產收回，再賣給出價最高的人，每樣東西都會落到最會用它的人手上。可是如果半年後就會被收回，就沒有人要蓋房子了。「讓使用者拿到」的效率，和「願意投資」的效率互相衝突[2]。</p>
+<p>19 世紀的思想家亨利·喬治（Henry George）想用只對土地價值課稅、不對建物等改良課稅的方法避開這個問題。但布特林寫道，艾瑞克·波斯納（Eric Posner）與衛谷倫認為這在實務上很難，所以提出了自行申報的財產稅[2]。</p>
+<h3>為什麼會誠實申報</h3>
+<p>布特林的說明是這樣的：如果稅率等於一年內這項財產被賣掉的機率，那麼申報額稍微提高時多繳的稅，就和稍微高價賣出的期望值剛好相抵。因此，沒有理由申報偏離真正價值的金額[2]。</p>
+<p>布特林也介紹了另一個性質：把稅率調得比這個低，投資意願會提高，而「讓使用者拿到」的效率損失比這個小[2]。</p>
+<p>衛谷倫本人在 2018 年的訪談中說明，目的是創造一種隨時能以合理價格賣出的狀態。這樣可以減少為了鐵路或開發集中土地時，最後一個人不肯賣的問題，也減少國家強制徵收土地的需要[7]。</p>
+<h3>從《激進市場》到《多元宇宙》</h3>
+<p>這個構想是波斯納與衛谷倫的書《<a href="radical-markets.html">激進市場</a>》（2018 年）的核心提案之一[2][3]。</p>
+<p>衛谷倫在 2020 年的文章中回顧並反省這本書：書中一邊說財產的價值來自共同體的努力，卻幾乎沒有納入共同體的機制與公共的東西，而是設想對個人課稅，再由全球規模的大型組織重新分配給個人。衛谷倫寫道，實際的財富由公司、國家等集體持有，所以應該由許多層層巢狀的集體各自共同持有一部分，稅收則應用在作為價值來源的公共事物上[3]。</p>
+<p>《多元宇宙》的 5-7 章把它當作「部分共同所有權」介紹。書寫道，這樣做「還能促使人們如實估價，以利徵稅，並迫使利用率不高或被壟斷的資產，朝向更廣泛的公眾流轉」[1]。</p>
+<p>書也描繪了籌來的錢要怎麼用。這就是「亨利·喬治定理」：通過正確設計的共同所有權稅收，籌集到的稅款可以為<a href="supermodularity.html">超模</a>（越一起做價值越高的性質）投資所需的所有補貼提供資金。書舉的例子是：建設更好的地方公立學校，往往會提高土地價值[8]。書接著提出把稅收投入這類活動的「循環投資」，以及用<a href="quadratic-funding.html">平方募資</a>一類的方式跨越邊界分配的構想[8]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>思考的成本（布特林，2018 年）。</strong> 人不是不動產定價的專家。要想出自家房子的申報額得花時間和力氣，一不小心申報太低而失去房子，會引起強烈不滿。布特林擔心，如果擴大到小東西，就得承擔數不清的定價[9]。</li>
+<li><strong>不想搬家的人怎麼辦？（2018 年的訪談）</strong> 主持人 Russ Roberts 問：如果不想搬家，不就只能申報得很高嗎？衛谷倫回答，這裡的價值不是估價的價格，而是繼續住在那裡對自己有多重要；而且如果把稅收當作紅利發還，對一般家庭是划算的。Roberts 也懷疑紅利是否真的會發放[10]。</li>
+<li><strong>會不會導致財富集中？（法文書評，2019 年）</strong> Le Grand Continent 的書評批評了幾點：景氣不好時，有錢人可以收購被低報的資產；把資產合併申報可以保護有錢人；大公司可以買下競爭對手；忽視了家族房屋這類情感上的價值[11]。</li>
+<li><strong>書本身的保留。</strong> 書也寫道，部分共有財產計劃只是「有趣的開端」，需要與能承認、保護土地等資產使用方式和穩定性方面共同利益的工具互相配合[8]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>在書中，它出現在 5-7 章〈<a href="social-markets.html">社會市場</a>〉「明日的市場」一節的第一項[1]。這承接了 3-2 章亨利·喬治的想法（土地的價值是一種集體產品，不能簡單地劃分給個人），以及 2-1 章孫中山的「民生主義」[12][13]。</p>
+<p>4-4 章〈<a href="property-and-contract.html">財產與合約</a>〉談到電磁頻譜時，提到「混合租賃和擁有權要素」的更激進設計，並把話題交給「市場」一章[14]。書進一步把部分共同所有權與投票制度結合，發展到「多元資產」[8]。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》5-7〈社會市場〉（中文，書）— https://www.plurality.net/v/chapters/5-7/zh-tw/</li>
+<li>《多元宇宙》3-2〈相連的社會〉「亨利·喬治與網絡價值」（中文，書）— https://www.plurality.net/v/chapters/3-2/zh-tw/</li>
+<li>Vitalik Buterin, "On Radical Markets"，Harberger taxes 一節（2018，英文，文章）— https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>Glen Weyl on EconTalk（2018，英文，訪談）— https://www.econtalk.org/glen-weyl-on-radical-markets/</li>
+<li>E. Glen Weyl, "Why I Am Not a Market Radical"（2020，英文，文章）— https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</li>
+<li>Le Grand Continent 的《激進市場》書評（2019，法文，書評）— https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/</li>
+<li>『Plurality』5-7「社会市場」（日文，書）— https://www.plurality.net/v/chapters/5-7/jpn/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>《多元宇宙》5-7「明日的市場」，部分共同所有權一項 — https://www.plurality.net/v/chapters/5-7/zh-tw/ ［CC0］</li>
+<li>Vitalik Buterin, "On Radical Markets"（2018），Harberger taxes 一節 — https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>E. Glen Weyl, "Why I Am Not a Market Radical"（2020）— https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</li>
+<li>《Plurality》英文版 5-7 "Social markets tomorrow" — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li>2024-01-08 Audrey and Glen Weyl Q&amp;A（日文機器翻譯的紀錄，摘錄）— https://scrapbox.io/plurality-japanese/2024-01-08%20Audrey%20and%20Glen%20Weyl%20Q%26A</li>
+<li>Vitalik Buterin, "On Radical Markets"（ENS 的段落）— https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>Glen Weyl on EconTalk（2018-05-21）— https://www.econtalk.org/glen-weyl-on-radical-markets/</li>
+<li>《多元宇宙》5-7「社會市場的前沿」— https://www.plurality.net/v/chapters/5-7/zh-tw/ ［CC0］</li>
+<li>Vitalik Buterin, "On Radical Markets"（關於思考成本的段落）— https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</li>
+<li>Glen Weyl on EconTalk（2018-05-21，約 21:37 處）— https://www.econtalk.org/glen-weyl-on-radical-markets/</li>
+<li>Le Grand Continent, "Radical Markets : abolir la propriété pour libérer le capitalisme"（2019）— https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/</li>
+<li>《多元宇宙》3-2「亨利·喬治與網絡價值」— https://www.plurality.net/v/chapters/3-2/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》2-1〈玉山視野〉— https://www.plurality.net/v/chapters/2-1/zh-tw/ ［CC0］</li>
+<li>《多元宇宙》4-4〈財產與合約〉，電磁頻譜的段落 — https://www.plurality.net/v/chapters/4-4/zh-tw/ ［CC0］</li>
+</ol><div class='related'>相關: <a href='property-and-contract.html'>什麼是「財產與合約」（多元資產）？</a> ・ <a href='social-markets.html'>什麼是社會市場？</a> ・ <a href='radical-markets.html'>什麼是《激進市場》（Radical Markets）？</a> ・ <a href='supermodularity.html'>什麼是超模（supermodularity）？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

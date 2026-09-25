@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is d/acc (defensive acceleration)?</title><meta name="description" content="The idea that technology should move fast, but that we should choose to push ahead first with technologies that help defense rather than attack, and that spread power out rather than concentrate it. Vitalik Buterin, a co-founder of Ethereum, gave it its name in 2023."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/d-acc.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/d-acc.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/d-acc.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/d-acc.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/d-acc.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is d/acc (defensive acceleration)?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/d-acc.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="The idea that technology should move fast, but that we should choose to push ahead first with technologies that help defense rather than attack, and that spread power out rather than concentrate it. Vitalik Buterin, a co-founder of Ethereum, gave it its name in 2023."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../d-acc.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/d-acc.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is d/acc (defensive acceleration)?</h1><div class='lead'>The idea that technology should move fast, but that we should choose to push ahead first with technologies that help defense rather than attack, and that spread power out rather than concentrate it. Vitalik Buterin, a co-founder of Ethereum, gave it its name in 2023.</div><p>On new technology, and AI in particular, some people want to go full speed ahead, and others want to stop because it is dangerous. d/acc is a third answer between the two. Instead of asking whether to go ahead, it asks us to choose <strong>what to push ahead first</strong>.</p>
+<h2>In short</h2>
+<p>d/acc is the idea that technology should indeed advance quickly, but that we should choose to push ahead with <strong>technologies that strengthen the side that protects itself</strong>, and <strong>technologies that spread power out instead of gathering it in one place</strong>. Vitalik Buterin, a co-founder of Ethereum (a cryptocurrency and the system underneath it), gave it this name in November 2023 [1][2].</p>
+<p>"acc" is short for acceleration. The "d" carries four meanings: defense, decentralization, democracy and differential. Buterin explains that he starts from defense, and that the other meanings follow from it [1].</p>
+<h2>For example</h2>
+<p><strong>A response to the "Techno-Optimist Manifesto" (2023).</strong> On October 16, 2023, the investor Marc Andreessen published "The Techno-Optimist Manifesto". It champions accelerationism (the position that technological progress should simply be sped up as much as possible), and argues, in essence, that slowing down AI costs lives and that the mindset calling for caution is the enemy [3].</p>
+<p>In a blog post the following month, Buterin fully acknowledged the benefits of technology but set out a different path. He felt ambivalent about enthusiasm for military technology, and would not go along with the approach of handing great power to a few people and hoping they use it well. He called his alternative d/acc [1].</p>
+<p><strong>Imagining a pandemic in 2042 (2025).</strong> In a follow-up a year later, Buterin describes a world in which d/acc succeeded. Earlier potential outbreaks had been spotted early through wastewater monitoring and analysis of public social media, and stopped. Palm-sized air testers detect the new virus after a software update. Open recipes for making vaccines appear within weeks.</p>
+<p>Most people are protected by widely installed air filtration and ventilation. Put on a mask when the tester goes off, stay home if you test positive: with just 60% of people following these basics, the outbreak dies out after two months. It is pictured as getting through a crisis with <strong>decentralized defense</strong>, rather than central orders or mass surveillance [2].</p>
+<p><strong>Audrey Tang's description in Taiwan.</strong> In a March 2024 podcast, Audrey Tang (唐鳳), then Taiwan's Minister of Digital Affairs, described the ministry's long-term work in terms of the word Vitalik uses, d/acc, which she glossed in Chinese as 防衛性加速技術 (defensive acceleration technology) [4]. In a March 2025 interview with Nikkei BP she said: "Defensive technologies must be distributed because attack capabilities have become distributed" [5].</p>
+<h2>How it works</h2>
+<h3>Why does "defense" lead to democracy?</h3>
+<p>Buterin's reasoning goes like this. In a world where defense is easy, decentralized and democratic political systems thrive. In a world where defense is hard, everyone ends up fighting everyone, and things tend to settle into rule by the strongest. He gives Switzerland, protected by its mountains, as an example [1][2].</p>
+<p>So, Buterin argues, the safer the internet becomes, the less need there is to invade privacy to catch hackers. And the more tools grow for people to tell false information apart together (such as <a href="community-notes.html">Community Notes</a>), the less fighting there is over censorship [1].</p>
+<h3>Four areas</h3>
+<p>The 2023 post divides defensive technology into the world of atoms (the physical world) and the world of bits (the world of information). In the physical world: biological and medical defense, and resilient infrastructure. In the world of information: cyber defense (where it is easy to agree who the attacker is) and info defense (where it is hard to agree who the attacker is) [1].</p>
+<p>Buterin also acknowledges that tools such as <a href="polis.html">Polis</a>, which find points of agreement among people who disagree, are strictly speaking less "defense" than "democracy acceleration" [1].</p>
+<h3>Where it came from</h3>
+<p>The idea of advancing technologies that improve safety ahead of dangerous ones has a source. Buterin himself writes that it has roots in "differential technology development" in the literature of effective altruism (a movement that thinks about how to do the most good possible) [1].</p>
+<h3>Broadening in 2025</h3>
+<p>In the follow-up, Buterin argued that technologies for survival (defense) and technologies for thriving are deeply connected in every area [2]. He also considers funding public goods (things everyone can use but that are hard to raise money for), such as <a href="quadratic-funding.html">Quadratic Funding</a>, essential to d/acc, because the goal of reducing concentrations of power fits poorly with many ordinary businesses [2].</p>
+<h3>On regulating AI</h3>
+<p>Buterin acknowledges as the most persuasive criticism, from the AI safety side, that if AI arrives soon, simply accelerating the good things is not enough. He then proposes two measures. One is liability rules that hold those who cause harm (especially users of AI) responsible. The other, which he says he would choose if convinced that something stronger than liability rules is needed, is a large-scale hardware "pause button" that could sharply reduce the world's computing capacity for a year or two in a crisis [2].</p>
+<p>In July 2025, he criticized a forecast in which only the single leading AI gains godlike power. His point, in essence, was that the belief that the only way is to let one AI take control and win the race could itself reduce safety [6]. This debate is also covered in the article on the <a href="ai-futures-debate.html">AI futures debate</a>.</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>Decentralized does not automatically mean safe.</strong> In a September 2026 podcast (according to the host site's transcript), Tang herself took issue with the mainstream way of talking about d/acc. Her point, in essence, was that decentralization is not automatically good, and that a swarm of unaccountable actors can be as dangerous as a single monopoly. If capabilities are decentralized, she said, the mechanisms for tracing and repair should be decentralized too [7].</li>
+<li><strong>The objection that defending a small island is pointless.</strong> Liron Shapira, host of the debate show Doom Debates, put the same objection to both Buterin and Tang on the show: if a struggle for dominance among <a href="superintelligence.html">superintelligences</a> or a nuclear war broke out, the ideal of an island that can defend itself would not hold [8].</li>
+<li><strong>The worry that a small actor could kill everyone.</strong> If attack capabilities become cheap and hard to see, simply invoking d/acc is not enough. Tang accepted this worry as real, and answered that because defense concentrated only at the center is fragile once a single point is breached, many layers of defense are needed [7]. Buterin also admits that the line between defense and offense inevitably blurs at the edges [1].</li>
+<li><strong>A misunderstanding about the name.</strong> d/acc is easily confused with a branch of e/acc, the accelerationism that simply wants to go fast. Buterin says the difference is that d/acc chooses what to advance and advances it deliberately. He also distances it from positions that talk only of decentralization and do not care about defense [1][2].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>The term d/acc does not appear in the book <em>Plurality</em>. d/acc is a neighboring idea that grew up outside the book at about the same time.</p>
+<p><strong>Buterin's view.</strong> In his 2023 post, Buterin wrote that d/acc is a framework that can naturally include the technologies of democratic coordination that <a href="plurality.html">Plurality</a> values [1]. In a December 2025 piece, he named Glen Weyl and Tang's idea of Plurality (collaboration across difference) as one of the ways to prevent concentrations of power, and placed d/acc as a complement to it [9].</p>
+<p><strong>Tang's view.</strong> In the <a href="six-pack-of-care.html">6-Pack of Care</a> (2025), a manifesto on the ethics of AI, Tang writes: "The examples so far showed democratic, decentralised defence acceleration (d/acc) in the info domain" [10]. On Doom Debates in January 2026, she answered: "So accelerating decentralization and accelerating defense, that's all well and good, but I think 6-Pack focuses on accelerating democracy, which is also one of the accepted Ds in the d/acc" [8].</p>
+<p><strong>A third-party comparison.</strong> In January 2026, Hilma Church-Turing and Stephen Reid argued that the two complement each other well. In their assessment, d/acc is strong on the content of what gets built, and Plurality supplies how it gets built: how diverse people decide together what counts as a defensive technology [11].</p>
+<p>d/acc is set up as a third path, against both pure acceleration and concentrating power for the sake of safety [2]. Reading it alongside the <a href="three-paths.html">three paths</a> described in the book makes the differences easier to see.</p>
+<h2>Further reading</h2>
+<ol>
+<li>Vitalik Buterin, "My techno-optimism" (English, article, 2023-11-27; where the idea was proposed) — https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</li>
+<li>Vitalik Buterin, "d/acc: one year later" (English, article, 2025-01-05) — https://vitalik.eth.limo/general/2025/01/05/dacc2.html</li>
+<li>Audrey Tang, "How regular citizens fixed an AI deepfake crisis" (English, podcast, 2026-09-16) — https://www.existentialhope.com/podcasts/audrey-tang</li>
+<li>Marc Andreessen, "The Techno-Optimist Manifesto" (English, article; the piece d/acc responded to) — https://a16z.com/the-techno-optimist-manifesto/</li>
+<li>6-Pack of Care: A Manifesto (English, manifesto) — https://civic.ai/manifesto/</li>
+<li>Hirokazu Nishio, "d/acc" (in Japanese, notes) — https://scrapbox.io/nishio/d/acc</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Vitalik Buterin, "My techno-optimism" (2023-11-27) — https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</li>
+<li>Vitalik Buterin, "d/acc: one year later" (2025-01-05) — https://vitalik.eth.limo/general/2025/01/05/dacc2.html</li>
+<li>Marc Andreessen, "The Techno-Optimist Manifesto" (2023-10-16) — https://a16z.com/the-techno-optimist-manifesto/</li>
+<li>「寶博朋友說」Podcast 專訪唐鳳部長 (interview with Minister Audrey Tang, 2024-03-21, in Chinese) — https://archive.tw/2024-03-21-%E3%80%8C%E5%AF%B6%E5%8D%9A%E6%9C%8B%E5%8F%8B%E8%AA%AA%E3%80%8Dpodcast-%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF ［CC0］</li>
+<li>Nikkei BP Interview (2025-03-03) — https://archive.tw/2025-03-03-nikkei-bp-interview ［CC0］</li>
+<li>Vitalik Buterin, "My response to AI 2027" (2025-07-10) — https://vitalik.eth.limo/general/2025/07/10/2027.html</li>
+<li>Existential Hope Podcast, "How regular citizens fixed an AI deepfake crisis" (2026-09-16; transcript on the host's site, possibly automatically generated) — https://www.existentialhope.com/podcasts/audrey-tang</li>
+<li>Doom Debates (with Audrey Tang, 2026-01-20) — https://civic.ai/doom-debate/ ［CC0］</li>
+<li>Vitalik Buterin, "Balance of power" (2025-12-30) — https://vitalik.eth.limo/general/2025/12/30/balance_of_power.html</li>
+<li>6-Pack of Care: A Manifesto (2025-09-01) — https://civic.ai/manifesto/ ［CC0］</li>
+<li>Hilma Church-Turing and Stephen Reid, "Plurality ⿻" (Technological Metamodernism, chapter 6, 2026-01-04) — https://technologicalmetamodernism.substack.com/p/plurality</li>
+</ol><div class='related'>Related: <a href='vitalik-buterin.html'>Who is Vitalik Buterin?</a> ・ <a href='ai-futures-debate.html'>What is the AI futures debate (AI 2027 and others)?</a> ・ <a href='superintelligence.html'>What is superintelligence?</a> ・ <a href='six-pack-of-care.html'>What is the 6-Pack of Care?</a> ・ <a href='civic-ai.html'>What is Civic AI?</a> ・ <a href='three-paths.html'>What are the &quot;three paths&quot;?</a> ・ <a href='community-notes.html'>What are Community Notes?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

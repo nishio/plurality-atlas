@@ -1,0 +1,99 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>デジタル民主主義ってなに？</title><meta name="description" content="インターネットや AI などのデジタル技術を使って、市民が政治や公共の決定にもっと広く深く加われるようにする考え方と実践です。本『⿻ Plurality』は台湾を世界の先頭の例とし、AI 中心の技術官僚主義や暗号中心の自由至上主義に代わる道として掲げます。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/digital-democracy.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/digital-democracy.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/digital-democracy.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/digital-democracy.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/digital-democracy.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="デジタル民主主義ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/digital-democracy.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="インターネットや AI などのデジタル技術を使って、市民が政治や公共の決定にもっと広く深く加われるようにする考え方と実践です。本『⿻ Plurality』は台湾を世界の先頭の例とし、AI 中心の技術官僚主義や暗号中心の自由至上主義に代わる道として掲げます。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/digital-democracy.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/digital-democracy.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>デジタル民主主義ってなに？</h1><div class='lead'>インターネットや AI などのデジタル技術を使って、市民が政治や公共の決定にもっと広く深く加われるようにする考え方と実践です。本『⿻ Plurality』は台湾を世界の先頭の例とし、AI 中心の技術官僚主義や暗号中心の自由至上主義に代わる道として掲げます。</div><p>選挙で一票を入れる以外に、ふつうの人が政治に関わる手段はあまり多くありません。一方で、インターネットは人々の声をかつてないほど集めやすくしました。それなのに、ネットはむしろ分断をあおる場になっているとも言われます。「デジタル技術を、民主主義を壊す側ではなく、支える側に回せないか」。この問いへの答えの一つが、デジタル民主主義です。</p>
+<h2>ひとことで言うと</h2>
+<p>デジタル民主主義とは、<strong>インターネットや AI などのデジタル技術を使って、市民が政治や公共の決定にもっと広く、もっと深く加われるようにする考え方と実践</strong>です。</p>
+<p>本『⿻ Plurality』は、技術が民主主義を壊しつつある時代に、「技術と民主主義はおたがいの最大の味方になれる」と論じます[1]。そして、その先頭を走る例として台湾を挙げています[2]。</p>
+<h2>たとえば</h2>
+<p><strong>台湾の g0v（2012 年〜）。</strong> 2012 年、高嘉良（Chia-liang Kao）らが市民ハッカー（技術を公共のために使うプログラマー）の集まり「g0v（零時政府、ガブゼロ）」を始めました[3]。g0v は、政府のサイト（gov.tw）のデータを取り出して、見やすく使いやすい別の版を g0v.tw に作りました[3]。</p>
+<p>この「フォーク（枝分かれ）」版のほうが人気になることが多く、張善政（Simon Chang）らの閣僚が、そのデザインを政府のサービスに取り入れ始めました[3]。ソフトウェアの言葉でいう「マージ（取り込み）」です。本は g0v を、台湾のデジタル民主主義を市民の側から支える土台の象徴としています[3]。</p>
+<p><strong>エストニア（1990 年代後半〜）。</strong> 本は、エストニアを「世界でいちばんデジタル化した民主政府」としてよく挙げられる国として紹介します[4]。ほとんどどの国よりも早く、1990 年代後半からデジタル民主主義を切り開いた国だ、というのが本の説明です[4]。</p>
+<p><strong>日本の「デジタル民主主義2030」（2025 年〜）。</strong> 鈴木健は本の日本語版の解説で、2025 年に安野貴博と「デジタル民主主義2030」というオープンソースのプロジェクトを始めた、と書いています[5]。生成 AI を使った大規模な話し合いを試している、ということです[5]。</p>
+<h2>くわしく</h2>
+<h3>名前の出どころ ― ゲームの三つの政体</h3>
+<p>本の 2-0 章は、この言葉をゲームから借りています[6]。文明の歴史をたどるゲーム『シヴィライゼーション VI』の拡張版には、情報時代の政体として「Synthetic Technocracy（合成技術官僚制）」「Corporate Libertarianism（企業自由至上主義）」「Digital Democracy（デジタル民主主義）」の三つが出てきます[6]。</p>
+<p>本は、この三つを、20 世紀の共産主義・ファシズム・民主主義の争いのような、いまの技術思想の大きな論争を描くものとして使っています[6]。そのうえで章の終わりに、大規模なデジタル民主主義は「私たちがまだ想像し始めたばかりの夢」であり、実現には前例のない技術が要る、と書いています[1]。</p>
+<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、この三つ目の道を「Digital democracy / Plurality」と呼んで紹介しています[7]。ブテリンの整理では、インターネットで多くの人の意見をきめ細かく集める民主的なしくみを作り、市民がより良い決定をできるようにするもの、です[7]。</p>
+<h3>なぜ台湾なのか</h3>
+<p>本の 2-1 章は、台湾には深い分断がある一方、その下に共通の土台があると言います[2]。多元的で、複雑で、自由で、世界に開かれた民主主義を大事にする、という「重なり合う合意」です。そのうえで、あいまいさを乗り越えるデジタルの道具が身近にあったことが、台湾をこの 10 年で「デジタル民主主義の世界の先頭の例」にした、と本は書きます[2]。</p>
+<p>2-2 章「デジタル民主主義の日常」は、台湾の六つの事例でこれを示します[8]。g0v、ひまわり運動、vTaiwan と Join、総統杯ハッカソンとクアドラティック投票、パンデミック（感染症の大流行）への対応、そして Cofacts です。くわしくは <a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a> の記事をどうぞ。</p>
+<h3>政府だけのものではない</h3>
+<p>オードリー・タン（Audrey Tang）は 2022 年の講義で、「デジタル民主主義は公共部門だけのものではない。社会部門でもできる」と述べています[9]。本も、第 5 部で言う「民主主義」は国の政治の制度より広い、と断っています[10]。</p>
+<h3>Plurality との関係</h3>
+<p>本の紹介文は、著者たちを「台湾の国際的に評価されるデジタル民主主義の設計者たち」と呼びます[11]。そして、その成功の背後にある哲学を ⿻ Plurality と名づけています[11]。</p>
+<p>タンは 2024 年の対談で、「デジタル民主主義」と呼ぶと電子投票機を思い浮かべられてしまう、という趣旨を語っています[12]。職場などにも使える考えなのに、そう受け取られない。だから、あえて新しい言葉 Plurality を作ったというのです[12]。つまり Plurality は、「デジタル民主主義」と呼ぶと電子投票のように狭く受け取られがちな考えを、色のついていない新しい言葉で呼び直したものだ、というのがタンの説明です[12]。</p>
+<h3>長い前史</h3>
+<p>鈴木健は、デジタル民主主義の運動の起こりを 1999 年の「Web 2.0」という考えにさかのぼらせています[5]。そのあとに続くものとして、伊藤穰一の「創発民主制」（2003 年）、ティム・オライリーの「Gov 2.0」（2009 年ごろ）、Code for America（2009 年）、関治之の Code for Japan（2013 年）、オバマ政権のオープンガバメントなどを挙げます[5]。</p>
+<p>本の 3-3 章も、行政や市民のために技術を使う運動（GovTech・シビックテック）を紹介しています[13]。Code for America のジェニファー・パルカ（Jennifer Pahlka）、The GovLab のベス・シモーヌ・ノヴェック（Beth Simone Noveck）、Code for Japan などです。本はこれらを、初期のインターネットにあった公共の精神を取り戻す動きと見ています[13]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>「電子投票のこと」ではありません。</strong> 上のタンの発言のとおり、本の関心は投票機ではありません[12]。話し合い、合意づくり、お金の配り方など、協働全般にあります[10]。</li>
+<li><strong>vTaiwan は失速した、という報道。</strong> The Daily Beast の記事（2023 年）は、vTaiwan の勢いは何年も前に失われた、と伝えます[14]。共同創設者で元立法委員のジェイソン・スー（Jason Hsu）の話として、2018 年以降は大きな決定に使われていないこと、政府に提言を採り入れる義務がないことなどを挙げています[14]。本の 2-2 章自身も、コロナ禍のあとの参加の落ち込み、ボランティアの負担、政府が応える義務のなさを認めています[8]。</li>
+<li><strong>カリスマ頼みではないか。</strong> 鈴木健は日本語版の解説で、台湾の関係者への取材から、実践には膨大なオフラインの努力と、政府内の大臣級の強い関わりが必要だったと学んだ、と書いています[5]。タンの退任後、台湾のデジタル民主主義は「踊り場」にさしかかっている、とも述べます[5]。同じ取材の報告も、vTaiwan は当時の大臣の強い後押しで政策に反映されたが、その後は政治の後ろ盾が弱まった、と伝えています[15]。鈴木は、しくみとして根づかせることと、使う人にとって本当に役立つ形にすること（プロダクト・マーケット・フィット）を課題に挙げています[5]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>デジタル民主主義は、本の第 2 部の主題です。2-0 章が技術と民主主義の溝と、その先の夢を語ります[1]。2-1 章と 2-2 章が台湾の歴史と実践を描きます[2][8]。3-3 章はエストニアなど他国の先行例とシビックテックを扱います[4][13]。4-5 章は、アクセスの権利を「デジタル民主主義と社会的な包摂を実現する礎」と呼んでいます[16]。</p>
+<p>関連する記事:
+- <a href="plurality.html">⿻ Plurality</a> — デジタル民主主義を含む、より広い考え方
+- <a href="three-paths.html">三つの道</a> — ゲームの三つの政体に由来する対比
+- <a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a>・<a href="g0v.html">g0v</a>・<a href="vtaiwan.html">vTaiwan</a> — 台湾の実践
+- <a href="collaborative-technology.html">協働テクノロジー</a> — しくみの側
+- <a href="dd2030.html">デジタル民主主義2030</a>・<a href="broad-listening.html">ブロードリスニング</a> — 日本の動き</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』2-2「デジタル民主主義の日常」（日本語・本）— https://www.plurality.net/v/chapters/2-2/jpn/</li>
+<li>鈴木健「Plurality 日本語版解説」（日本語・解説。日本での前史と課題）— https://note.com/digitaldemocracy/n/nb8b59a6b775d</li>
+<li>本の英語版 2-0「Information Technology and Democracy: A Widening Gulf」（英語・本）— https://www.plurality.net/v/chapters/2-0/eng/</li>
+<li>Audrey Tang, Lecture at IESE-Shizenkan MBA course（2022、英語・講義の記録）— https://archive.tw/2022-03-22-lecture-at-iese-shizenkan-mba-course</li>
+<li>デジタル民主主義研究ユニット「現場取材からみえた台湾デジタル民主主義の理想と課題」（日本語・取材記事）— https://note.com/digitaldemocracy/n/naaa818d919c7</li>
+<li>Nick Aspinwall「Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop」（The Daily Beast、英語・報道）— https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」節「Reclaiming our future」— https://www.plurality.net/v/chapters/2-0/eng/ ［CC0］</li>
+<li>『Plurality』2-1「A View from Yushan」— https://www.plurality.net/v/chapters/2-1/eng/ ［CC0］</li>
+<li>『Plurality』2-2「The Life of a Digital Democracy」g0v の節 — https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+<li>『Plurality』3-3「The Lost Dao」章末 — https://www.plurality.net/v/chapters/3-3/eng/ ［CC0］</li>
+<li>鈴木健「Plurality 日本語版解説」— https://note.com/digitaldemocracy/n/nb8b59a6b775d</li>
+<li>『Plurality』2-0、Civilization VI の段落 — https://www.plurality.net/v/chapters/2-0/eng/ ［CC0］</li>
+<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— https://vitalik.eth.limo/general/2024/08/21/plurality.html</li>
+<li>『Plurality』2-2「The Life of a Digital Democracy」— https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+<li>Audrey Tang, Lecture at IESE-Shizenkan MBA course（2022-03-22）— https://archive.tw/2022-03-22-lecture-at-iese-shizenkan-mba-course ［CC0］</li>
+<li>『Plurality』5-0「Collaborative Technology and Democracy」— https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>『Plurality』本の紹介文 — https://github.com/pluralitybook/plurality ［CC0］</li>
+<li>西尾泰和「Pluralityは無色の新語として作られた」（2024-07-26 の対談の書き起こし）— https://scrapbox.io/nishio/Pluralityは無色の新語として作られた</li>
+<li>『Plurality』3-3「The Lost Dao」小節「Nodes of light」— https://www.plurality.net/v/chapters/3-3/eng/ ［CC0］</li>
+<li>Nick Aspinwall「Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop」（The Daily Beast、2023-11-01）— https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</li>
+<li>デジタル民主主義研究ユニット「現場取材からみえた台湾デジタル民主主義の理想と課題、そして日本発『デジタル民主主義2030』への指針」（2025-02-19）— https://note.com/digitaldemocracy/n/naaa818d919c7</li>
+<li>『Plurality』4-5「Access」— https://www.plurality.net/v/chapters/4-5/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='plurality.html'>⿻ Plurality（プルラリティ）ってなに？</a> ・ <a href='three-paths.html'>「三つの道」ってなに？</a> ・ <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a> ・ <a href='g0v.html'>g0v（零時政府）ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='collaborative-technology.html'>協働テクノロジーってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

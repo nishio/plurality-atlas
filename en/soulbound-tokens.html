@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What are Soulbound Tokens (SBTs)?</title><meta name="description" content="Digital certificates that cannot be sold or handed to others. They tie things like education, memberships, attendance and promises to repay to an account called a &quot;Soul&quot;. In 2022, Buterin, Weyl and Ohlhaver proposed them as part of a &quot;Decentralized Society&quot; (DeSoc) that would rebuild money-centered Web3 on human relationships."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/soulbound-tokens.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/soulbound-tokens.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/soulbound-tokens.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What are Soulbound Tokens (SBTs)?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/soulbound-tokens.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="Digital certificates that cannot be sold or handed to others. They tie things like education, memberships, attendance and promises to repay to an account called a &quot;Soul&quot;. In 2022, Buterin, Weyl and Ohlhaver proposed them as part of a &quot;Decentralized Society&quot; (DeSoc) that would rebuild money-centered Web3 on human relationships."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../soulbound-tokens.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/soulbound-tokens.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What are Soulbound Tokens (SBTs)?</h1><div class='lead'>Digital certificates that cannot be sold or handed to others. They tie things like education, memberships, attendance and promises to repay to an account called a &quot;Soul&quot;. In 2022, Buterin, Weyl and Ohlhaver proposed them as part of a &quot;Decentralized Society&quot; (DeSoc) that would rebuild money-centered Web3 on human relationships.</div><p>A diploma or a membership card is proof that a person actually studied something or belongs somewhere. If it could be sold to someone else for money, it would lose its meaning. Yet many digital certificates online can easily be bought and sold. Soulbound Tokens (SBTs) are the idea of making digital certificates that cannot be sold or transferred.</p>
+<h2>In short</h2>
+<p>A Soulbound Token (SBT) is a digital certificate, recorded on a blockchain (a public ledger that anyone can check), that cannot be sold or transferred. Like a diploma, a membership card or proof of attending an event, it is meant to show not something you can buy with money but what a person has actually done, or where they belong [1][2].</p>
+<p>In 2022, Vitalik Buterin, E. Glen Weyl and Puja Ohlhaver put forward a vision of using SBTs to represent the web of trust between people. The idea was to rebuild the world of crypto-assets (Web3), which had come to center on financial transactions, on top of social relationships. The three named this "DeSoc" (Decentralized Society) [2].</p>
+<h2>For example</h2>
+<p><strong>From "soulbound" items in a game.</strong> The name comes from "soulbound" items in the online game World of Warcraft. Once picked up, they cannot be given or sold to another player, so if you want the best gear, you have to defeat the dragon yourself, together with friends. In a January 2022 blog post, Buterin asked whether, if NFTs (certificates of one-of-a-kind items online) could likewise be made non-transferable, they could show not just an owner's wealth but who that person is [1].</p>
+<p><strong>Proof of attending an event.</strong> Buterin writes that POAPs, NFTs given to people who attend an event, lose their meaning as proof that the holder attended if they can be bought from others. In fact, POAPs that Adidas gave fans for free were quickly resold at high prices once they came with a right to buy products first [1].</p>
+<p><strong>Contribution certificates from Taiwan's Ministry of Digital Affairs.</strong> In a 2023 conversation, Audrey Tang talked about a program that sends young people out to local areas as digital transformation ambassadors. Besides a year of pay, she said, they receive "soulbound NFTs that show their contributions, their impact certificates". "But if there's a digital signature from the digital ministry, that's easily verified," she added [3].</p>
+<p><strong>Contributors to the book <em>Plurality</em>.</strong> In a December 2023 video, Weyl explained that the amount people contributed to the book is recorded through soulbound tokens and <a href="plural-credits.html">⿻ credits</a>, and that those who contribute enough have their names on the cover [4].</p>
+<h2>How it works</h2>
+<h3>Why non-transferability matters</h3>
+<p>Buterin writes that bad things happen when governance rights (the right to make decisions) are easily transferable [1].</p>
+<p>If you want to spread power widely but rights can be transferred, wealthy people buy them up. If you want to give rights to capable people but they can be transferred, people who are merely eager, not capable, buy them all. So Buterin asks: what if governance rights were made non-transferable [1]?</p>
+<h3>Souls and SBTs</h3>
+<p>The basic building block in the DeSoc paper is an account holding tokens that are public and non-transferable (though they can be revoked by whoever issued them). The account is called a "Soul", and the tokens it holds are SBTs [2].</p>
+<p>A Soul can hold education, work history, records of works and so on as SBTs. In the simplest form, these can be self-declared, like a CV. But their real power, the paper says, comes when the other party to the relationship, such as a university, a company or an event organizer (each a Soul of its own), issues or attests to them [2].</p>
+<p>A Soul need not be tied to a legal name. Nor does the system try to guarantee one Soul per person [2].</p>
+<h3>Steps toward DeSoc</h3>
+<p>The paper lists things SBTs could achieve step by step [2]:</p>
+<ul>
+<li><strong>Provenance of works</strong>: showing that a work really came from its creator, a defense against realistic fake images and videos (deepfakes).</li>
+<li><strong>Reputation-based lending</strong>: lending and borrowing without collateral, based on trust.</li>
+<li><strong>Community recovery</strong>: when someone loses their keys, recovering them with the consent of one person from each of at least a set number of the communities they belong to (workplace, club, university, church and so on).</li>
+<li><strong>Collusion-resistant voting and funding</strong>: detecting votes from people in the same circle and discounting them.</li>
+</ul>
+<p>The paper calls DeSoc a society in which individuals and communities nurture one another while building together a network useful to all [2].</p>
+<h3>Background, and privacy</h3>
+<p>In 2019, Weyl and his co-authors wrote a series on "decentralized social identity" on the <a href="radicalxchange.html">RadicalxChange</a> blog. They argued, in substance, that today's identity relies on keys no one can remember and on logins from a few giant companies, and badly fails to capture the richness of who each of us is [5].</p>
+<p>The paper starts from "public" SBTs, which are easier to handle, but says it cares deeply about privacy. In its later parts, it discusses techniques such as keeping the content off the ledger and recording only a pointer [2]. Buterin, too, gave the example that if vaccination records became public certificates, everyone could see them, and argued that privacy must be built into the design from the start [1].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>Dangers the paper itself names.</strong> The DeSoc paper acknowledges that the same SBTs that can support cooperation between different people can also be abused: automatically excluding disliked groups, choosing targets for attack, restricting migration, and predatory lending to vulnerable people [2]. It also discusses possible abuses such as gathering SBTs through bribes to fake social relationships, and deliberately not holding SBTs to increase one's influence [2].</li>
+<li><strong>Should it be on a blockchain at all?</strong> Right after the paper came out, a debate arose over whether it makes sense to use blockchains for identity. Buterin laid out the arguments side by side: the rebuttal that signed credentials should be used off the ledger, Ohlhaver's response to it, and pessimism about the idea of managing one's own identity [6]. A 2022 paper by Shrey Jain and others with Weyl argued that the various approaches to Web3 identity complement one another, and that their differences are more a matter of degree than of essence [7].</li>
+<li><strong>It is not a "one per person" system.</strong> SBTs are not identity verification or proof of being a real human in themselves. The paper says a Soul need not be tied to a legal name, and one Soul per person need not be guaranteed [2]. Proving that someone is human is covered in the article on <a href="proof-of-personhood.html">proof of personhood</a>.</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>Chapter 4-1 of the book <em>Plurality</em>, "Identity and Personhood", sets two approaches side by side as the extremes of the debate on decentralized identity [8]. Advocates of "verifiable credentials" (VCs) prioritize "privacy and the ability of users to control which of the claims about them are presented at any time". Advocates of SBTs "emphasize the importance of credentials that are public commitments to e.g. repay a loan or not produce further replicas of a work of art". The book writes that in both it sees "the unattractive trade-off" between establishing identity and protecting it [8].</p>
+<p>The same chapter calls a system in which "distinct parts of an individual's network who are unlikely to cooperate against her interest would together be able to recover her credentials" "community recovery", citing the DeSoc paper [8]. This is covered in more detail in the article on <a href="identity-and-personhood.html">Identity and Personhood</a>.</p>
+<p>Chapter 4-3, "<a href="commerce-and-trust.html">Commerce and Trust</a>", cites the DeSoc paper in a footnote pointing out that the difficulty of secure identity has held back experiments with community currencies [9]. The same paper is also cited in footnotes on mechanisms that take account of participants' social relationships, in chapter 5-6 on <a href="plural-voting.html">⿻ Voting</a> and in the funding mechanisms of chapter 5-7 (such as <a href="quadratic-funding.html">Quadratic Funding</a>) [10][11].</p>
+<h2>Further reading</h2>
+<ol>
+<li>Vitalik Buterin, "Soulbound" (English, article; a short introduction) — https://vitalik.eth.limo/general/2022/01/26/soulbound.html</li>
+<li>Ohlhaver, Weyl and Buterin, "Decentralized Society: Finding Web3's Soul" (English, paper) — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</li>
+<li><em>Plurality</em>, chapter 4-1 "Identity and Personhood" (English, book) — https://www.plurality.net/v/chapters/4-1/eng/</li>
+<li>Weyl and others, "Motivating The Case for Decentralized Social Identity" (English, article) — https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</li>
+<li>Jain, Erichsen and Weyl, "A Plural Decentralized Identity Frontier" (English, paper) — https://arxiv.org/abs/2208.11443</li>
+<li>Nikkei xTECH, "SBT誕生の経緯と課題" (How SBTs came about, and their challenges) (in Japanese, article) — https://xtech.nikkei.com/atcl/nxt/column/18/02132/030900011/</li>
+<li><em>Plurality</em>, chapter 4-1, Japanese edition (in Japanese, book) — https://www.plurality.net/v/chapters/4-1/jpn/</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Vitalik Buterin, "Soulbound" (2022-01-26) — https://vitalik.eth.limo/general/2022/01/26/soulbound.html</li>
+<li>Puja Ohlhaver, E. Glen Weyl and Vitalik Buterin, "Decentralized Society: Finding Web3's Soul" (2022-05) — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</li>
+<li>Audrey Tang, Conversation with Joichi Ito and Daum Kim (2023-02-24) — https://github.com/audreyt/transcript/blob/main/2023-02-24-Conversation-with-Joichi-Ito-and-Daum-Kim.md ［CC0］</li>
+<li>Glen Weyl on Plurality Seoul (2023-12-02, video message) — https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</li>
+<li>Glen Weyl, Lucas Geiger and Kaliya Young, "Motivating The Case for Decentralized Social Identity" (2019-06-06) — https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</li>
+<li>Vitalik Buterin, "Where to use a blockchain in non-financial applications?" (2022-06-12) — https://vitalik.eth.limo/general/2022/06/12/nonfin.html</li>
+<li>Shrey Jain, Leon Erichsen and Glen Weyl, "A Plural Decentralized Identity Frontier" (2022) — https://arxiv.org/abs/2208.11443</li>
+<li><em>Plurality</em>, 4-1 "Identity and Personhood" — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-3 "Commerce and Trust" — https://www.plurality.net/v/chapters/4-3/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-6 "⿻ Voting" — https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-7 "Social Markets" — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+</ol><div class='related'>Related: <a href='identity-and-personhood.html'>What is Identity and Personhood (⿻ identity)?</a> ・ <a href='proof-of-personhood.html'>What is proof of personhood?</a> ・ <a href='commerce-and-trust.html'>What is Commerce and Trust (⿻ money)?</a> ・ <a href='plural-voting.html'>What is ⿻ Voting (plural voting)?</a> ・ <a href='quadratic-funding.html'>What is Quadratic Funding?</a> ・ <a href='plural-credits.html'>What are ⿻ credits (Plural credits)?</a> ・ <a href='radicalxchange.html'>What is RadicalxChange?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

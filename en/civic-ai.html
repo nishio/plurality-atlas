@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is Civic AI?</title><meta name="description" content="AI that is properly answerable to the people it affects. Instead of one giant AI governing everyone, Audrey Tang and colleagues propose building many small AIs that local communities, schools and organizations can own, inspect, correct and even switch off by themselves."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/civic-ai.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/civic-ai.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/civic-ai.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/civic-ai.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/civic-ai.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is Civic AI?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/civic-ai.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="AI that is properly answerable to the people it affects. Instead of one giant AI governing everyone, Audrey Tang and colleagues propose building many small AIs that local communities, schools and organizations can own, inspect, correct and even switch off by themselves."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../civic-ai.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/civic-ai.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is Civic AI?</h1><div class='lead'>AI that is properly answerable to the people it affects. Instead of one giant AI governing everyone, Audrey Tang and colleagues propose building many small AIs that local communities, schools and organizations can own, inspect, correct and even switch off by themselves.</div><p>Most of the AI we use today is built by large companies and runs according to their policies. If such an AI were used in a town meeting, a school or a care home, whom would you complain to when something went wrong? Civic AI answers that question with the idea that AI should be accountable to the people of the communities and organizations that use it.</p>
+<h2>In short</h2>
+<p>In the words of its proponents, "Civic AI is artificial intelligence that answers to the people it affects" [1]. "Instead of one powerful system built to govern everyone, the idea is to build many small ones that a community can own, inspect, correct, and switch off" [1].</p>
+<p>Audrey Tang, Taiwan's former Minister of Digital Affairs, and colleagues have been advocating it since 2025. In Taiwanese Mandarin (the Chinese used in Taiwan) it is rendered 仁工智慧. The word replaces 人 ("human") in 人工智慧 ("artificial intelligence") with 仁, the Confucian virtue of benevolence or humaneness [2][3].</p>
+<h2>For example</h2>
+<p><strong>Taiwan's response to scam ads (2024).</strong> 447 people, gathered through randomly sent text messages, deliberated online in groups of 10. AI transcribed what was said in real time, helped run the discussion and summarized the proposals that came up. In Tang's manifesto's words, "This approach employs Civic AI" [4]. In a Mandarin-language interview, she also said that they used 仁工智慧 to listen to people's voices [2].</p>
+<p><strong>Engaged California (California, USA).</strong> This is a deliberation platform built together with the state government. After the Los Angeles wildfires, it used AI to organize opinions and produce recovery plans. It then gathered more than 2,600 ideas for making government more efficient from more than 1,400 state employees. According to civic.ai, the governor signed a bill in September 2026, making it an official state program from 2027 [4][5].</p>
+<p><strong>Tang's own small AI.</strong> Tang and Tenzin Yangtso tend a Civic AI called "jdd-kami". According to Tang, it runs offline on small machines that they own, can inspect and can shut down [6]. When Tang prepares a talk, jdd-kami's role is to review the structure from the standpoint of "voice/care" [7].</p>
+<h2>In more detail</h2>
+<h3>What makes it "civic"?</h3>
+<p>Most AI is built to maximize how long individuals use it, or company revenue. The civic.ai glossary defines Civic AI in contrast: "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict", which "is governed by the communities it serves" [8].</p>
+<p>What its design cares about most is "relational health": whether relationships are healthy — between people, between people and AI providers, between people and AI, and between AI systems [8]. The six design principles for this are the <a href="six-pack-of-care.html">6-Pack of Care</a>, and the unit of AI actually deployed is the <a href="kami.html">Kami</a> [1].</p>
+<h3>A different role from frontier AI safety research</h3>
+<p>civic.ai states plainly: "Civic AI complements frontier alignment. It does not replace it" [1]. (Frontier alignment is research into making the largest, most advanced AI systems fit human values.) Nor does it try to solve the control problem from inside giant models [1].</p>
+<p>What it deals with are the "rooms" where AI is already at work — care homes, classrooms, discussion spaces, parliaments — and its aim is to keep accountability there [1]. The FAQ explains this as the difference between a first question, making powerful AI fit the values of humanity as a whole, and a second question: in this room, to whom is this AI answerable? [9]</p>
+<h3>"Stronger self-government" rather than "smarter chatbots"</h3>
+<p>civic.ai writes: "The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations" [1].</p>
+<p>It goes on: "The superintelligence does not need to come. It is already here. It is us" [1]. But with a qualification: "not because a mini-public equals machine superintelligence, but because, under the right institutional conditions, people with tools produce accountable collective intelligence that no central optimiser can legitimately replace" [1].</p>
+<h3>Judgment stays with people</h3>
+<p>The manifesto says: "Civic AI does not replace representative democracy but widens listening, records reasons and makes obligations answerable, while judgment remains with the people and their institutions" [4].</p>
+<p>According to a report on the talk, in a May 2026 lecture in Oxford Tang gave as the test of any AI system worth building whether it increases a community's capacity to care for itself. The report adds that what Tang offered was a trust that the people who inherit these systems can be the ones to repair them [10].</p>
+<h3>Where the name comes from</h3>
+<p>The name "Civic AI" appears as the name of research that Tang and Caroline Green presented in 2025 in a program of the University of Oxford's Institute for Ethics in AI. Its goal was to combine Joan Tronto's ethics of care with Tang's Plurality vision, and to build "civic care" into the design and governance of AI [11].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>The criticism that it does not solve the core of AI safety.</strong> This criticism, and the reply that making one AI faithful and keeping a society of AIs from fighting are separate problems, are covered in detail in the article on the <a href="six-pack-of-care.html">6-Pack of Care</a>. civic.ai also warns itself that limiting its scope to the local is a design choice: "local scope is a design choice, not proof of community control" [1].</li>
+<li><strong>The limits of the cases.</strong> civic.ai lists seven cases, including Taiwan's assemblies, <a href="team-mirai.html">Team Mirai</a> in Japan and Engaged California, but writes: "They are not seven identical proofs" [1]. It admits that many "come from unusually prepared soil: civic hackers, responsive public institutions, strong associational life" [1].</li>
+<li><strong>A common misunderstanding: Civic AI does not mean AI used by government offices.</strong> The heart of the definition is whom it answers to. The users it has in mind include "neighbourhoods, schools, unions, faith groups, cities, and diasporas" (communities of people living abroad) [1].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>The phrase Civic AI does not appear in the text of the book <em>⿻ Plurality</em> (2024). On AI, the book's chapter 2-0 critically describes "Artificial Intelligence and technocracy" as one of three visions of the future [12]. Chapter 2-2 gives Taiwan's <a href="alignment-assemblies.html">Alignment Assemblies</a> as an example of citizen participation in the regulation and steering of AI [13].</p>
+<p>Civic AI can be seen as Tang's extension, from 2025 onward, of these concerns of the book into a framework for building and governing AI. In other words, <strong>it is a claim made by Tang (and Green), not by the book</strong> [1]. The agenda of the book's co-author Glen Weyl in the same period is <a href="reverse-alignment.html">reverse alignment</a>, and Tang is also listed in that coalition [14].</p>
+<p>The tools it uses overlap with Part 5 of the book: for example <a href="broad-listening.html">broad listening</a> (ways of listening to many voices), <a href="bridging.html">bridging</a> (mechanisms that look for common ground between people with different positions), <a href="polis.html">Polis</a> and <a href="community-notes.html">Community Notes</a> [4]. Vitalik Buterin, the founder of Ethereum, has also contributed to civic.ai. He argues for AI "being a bicycle for the mind instead of being a car that you're supposed to just go to sleep inside", and for resisting uniformity in AI [15].</p>
+<h2>Further reading</h2>
+<ol>
+<li>Civic AI — the 6-Pack of Care home page (English, explainer) — https://civic.ai/</li>
+<li>"Democracy Needs Civic AI" (English, article, 2026-03-25) — https://civic.ai/democracy-needs-civic-ai/</li>
+<li>Glossary (English, explainer) — https://civic.ai/glossary/</li>
+<li>"6-Pack of Care: A Manifesto" (English, text of a talk) — https://civic.ai/manifesto/</li>
+<li>FAQ (English, questions and answers) — https://civic.ai/faq/</li>
+<li>"Civic AI and the Muscles of Care" (English, report on a talk) — https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Civic AI — 6-Pack of Care (home page) — https://civic.ai/ ［CC0］</li>
+<li>Audrey Tang, Open Commons interview (2026-07-16, in Chinese) — https://github.com/audreyt/transcript ［CC0］</li>
+<li>Doom Debates, Chinese transcript (2026-01-20, in Chinese) — https://sayit.archive.tw/2026-01-20-%E6%9C%AB%E6%97%A5%E8%BE%AF%E8%AB%96 ［CC0］</li>
+<li>"6-Pack of Care: A Manifesto" — https://civic.ai/manifesto/ ［CC0］</li>
+<li>civic.ai FAQ, Q7 — https://civic.ai/faq/#faq-7 ［CC0］</li>
+<li>"Democracy Needs Civic AI" — https://civic.ai/democracy-needs-civic-ai/ ［CC0］</li>
+<li>uncommon-ground (Tang's procedure for preparing talks; excerpt) — https://github.com/audreyt/uncommon-ground ［CC0］</li>
+<li>civic.ai Glossary — https://civic.ai/glossary/ ［CC0］</li>
+<li>civic.ai FAQ, Q17 — https://civic.ai/faq/#faq-17 ［CC0］</li>
+<li>Sarah Cao, "Civic AI and the Muscles of Care" (STAIR, 2026-06-27) — https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</li>
+<li>University of Oxford Institute for Ethics in AI, Accelerator Fellowship Programme announcement — https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health</li>
+<li><em>Plurality</em>, 2-0 "Information Technology and Democracy: A Widening Gulf" — https://www.plurality.net/v/chapters/2-0/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 2-2 "The Life of a Digital Democracy" — https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+<li>Reverse Alignment coalition website — https://reversealignment.ai/</li>
+<li>Vitalik Buterin, "AI With Us, Not Without Us" (2026-03-25) — https://civic.ai/ai-with-us/ ［CC0］</li>
+</ol><div class='related'>Related: <a href='six-pack-of-care.html'>What is the 6-Pack of Care?</a> ・ <a href='kami.html'>What is a Kami?</a> ・ <a href='reverse-alignment.html'>What is Reverse Alignment?</a> ・ <a href='alignment-assemblies.html'>What are Alignment Assemblies?</a> ・ <a href='broad-listening.html'>What is Broad Listening?</a> ・ <a href='bridging.html'>What is Bridging?</a> ・ <a href='plurality.html'>What is ⿻ Plurality?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

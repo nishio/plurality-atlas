@@ -1,0 +1,104 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Polis（ポリス）ってなに？</title><meta name="description" content="参加者が短い意見を書き、ほかの人の意見に「賛成・反対・パス」を押すだけのオンラインの対話ツールです。票の傾向から意見のグループを地図のように描き、グループをまたいで支持される意見を浮かび上がらせます。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/polis.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/polis.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/polis.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/polis.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/polis.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="Polis（ポリス）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/polis.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="参加者が短い意見を書き、ほかの人の意見に「賛成・反対・パス」を押すだけのオンラインの対話ツールです。票の傾向から意見のグループを地図のように描き、グループをまたいで支持される意見を浮かび上がらせます。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/polis.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/polis.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>Polis（ポリス）ってなに？</h1><div class='lead'>参加者が短い意見を書き、ほかの人の意見に「賛成・反対・パス」を押すだけのオンラインの対話ツールです。票の傾向から意見のグループを地図のように描き、グループをまたいで支持される意見を浮かび上がらせます。</div><p>ネットの掲示板で意見を募ると、声の大きい人が目立ち、言い合いになりがちです。返信が返信を呼び、最後は誰の意見がどれだけあるのかも分からなくなります。Polis（ポリス）は、その逆をねらって作られた道具です。言い合いをさせず、人々の考えがどう分かれ、どこで重なっているかを見えるようにします。</p>
+<h2>ひとことで言うと</h2>
+<p>Polis（pol.is）は、大勢が一つの問いについて短い意見を書き、ほかの人の意見に「賛成・反対・パス」を押していくウェブのツールです[1][2]。</p>
+<p>押された票のパターンから、「似た考えの人のまとまり」を地図のように示します[1]。そして、どのまとまりからも賛成される意見を目立たせます[1][2]。</p>
+<h2>たとえば</h2>
+<p><strong>台湾・Uber の規制（2015 年）。</strong> 台湾の市民の話し合いの場 vTaiwan は、配車サービス Uber を認めるかどうかをめぐって、Polis で対話を開きました[3]。約 2,000 人が参加し、約 100 人が約 200 件の意見を書きました[3]。</p>
+<p>参加者は「Uber 賛成」と「反対（タクシー側）」の 2 グループにはっきり分かれました[3]。それでも、「政府は Uber の挑戦に向き合いつつ、タクシーの評価と監督を改善し、タクシーでも Uber と同じ質のサービスを受けられるようにすべきだ」といった意見には、タクシー運転手を含むほぼ全員が賛成しました[3]。</p>
+<p><strong>AI の「みんなで作る憲法」（2023 年）。</strong> 非営利団体 Collective Intelligence Project（CIP）と AI 企業の Anthropic は、米国の人口構成に合わせて選んだ約 1,000 人に、「AI チャットボットはどう振る舞うべきか」を Polis で問いました[4]。1,002 人が 1,127 件の文を書き、38,252 票を投じました[4]。グループをまたいで支持された文を「憲法」（AI の行動の原則）にまとめ、言語モデルの学習に使いました[4]。</p>
+<p><strong>日本の衆院選 2024「世論地図」。</strong> 選挙情報サイト JAPAN CHOICE は 2024 年 11 月 18 日に、Polis を部品として使った「世論地図」を公開しました[5]。約 2 週間で 4,403 人が投票しました[5]。各党のマニフェストから抜いた意見への各党の立場を、市民の意見の地図の上に政党のアイコンとして重ねたものです[5]。開発に関わった西尾泰和は、これを「日本最大規模の Polis の応用事例」と書いています[5]。</p>
+<h2>しくみ</h2>
+<h3>参加者がすること</h3>
+<p>主催者は、問い（たとえば「生成 AI についてどう思う？」）と、最初の手本になる意見をいくつか置きます[1][3]。</p>
+<p>参加者は、画面に 1 件ずつ出てくるほかの人の短い意見（英語で 140 文字未満）に、「賛成」「反対」「パス」を押します[1][3]。言いたいことがまだ出ていなければ、自分で新しい意見を書き足せます。書かれた意見は、ほかの参加者に順に配られます[1][3]。</p>
+<p>ほかの人の意見に<strong>返信する機能は、わざとありません</strong>。日本語版ウィキペディアは、これが荒らしや個人攻撃を抑えるための設計だと説明しています[6]。</p>
+<p>結果の画面では、意見の近い人どうしが近くに並ぶ図と、そのまとまり（意見グループ）が見られます[3]。各グループを特徴づける意見と、全体で賛成が多い意見も表示されます[3]。</p>
+<h3>裏側の計算</h3>
+<p>Polis の基本の論文（Small ほか、2021 年）によると、手順はおおよそ次のとおりです[3]。</p>
+<ol>
+<li>参加者と意見の表を作ります。賛成は +1、反対は −1、パスは 0 です。</li>
+<li>「主成分分析」という方法で、この大きな表を 2 次元の「意見の地図」に縮めます。</li>
+<li>「k-means」という方法で、参加者を 2〜5 個の意見グループにまとめます。</li>
+<li>それぞれのグループが、ほかのグループより賛成しやすい意見を、そのグループの<strong>代表的な意見</strong>として選びます。</li>
+<li>各グループの人がその意見に賛成する確率（グループ内の賛成票の割合から見積もった値）を<strong>掛け合わせた</strong>値で、「どのグループも賛成している意見」を順位づけます。論文はこれを「グループを考慮した合意」の指標と呼びます。</li>
+</ol>
+<p>5 番目がポイントです。説明のための作例で考えてみましょう（数字は架空です。実際の計算では、票が少ないときに極端な値にならないよう少し補正します）。グループ A の 90%、グループ B の 80% が賛成する意見は、0.9 × 0.8 = 0.72 になります。グループ A の 100% が賛成しても、B では 10% しか賛成しない意見は、1.0 × 0.1 = 0.1 です。掛け算なので、どこか一つのグループにでも嫌われると、値は小さくなります。論文は、これが「多数派の専制から守り、少数派の異論を尊重する」助けになると書いています[3]。</p>
+<p>公式の説明によると、計算は賛否の表だけを使い、文章の中身は読みません[7]。そのため Polis は、どの言語でも使えます[7]。</p>
+<h3>生まれと広がり</h3>
+<p>英語版ウィキペディアによると、Polis は、米国の抗議運動「オキュパイ・ウォールストリート」と中東の「アラブの春」のあとに、コリン・メギル（Colin Megill）、クリストファー・スモール（Christopher Small）、マイケル・ビョーケグレン（Michael Bjorkegren）が作り、2012 年に公開しました[8]。ソフトウェアはオープンソースで、いまは非営利団体 The Computational Democracy Project が運営しています[8]。</p>
+<p>公式の事例集は、vTaiwan（20 万人超）、オーストリアの気候についての市民会議（2022 年、5,000 人超）、ウルグアイの国民投票（2020〜21 年）、国連開発計画（UNDP）による若者との対話（3 万人超）などを挙げています[9]。</p>
+<h3>AI との組み合わせ</h3>
+<p>Polis は票の地図を作りますが、自由に書かれた文章の中身は読みません[7]。そこで、Polis の結果を大規模言語モデル（LLM）で読み解く道具が現れました。台湾の 2023 年の話し合いでは、Polis で集めた意見を「Talk to the City」という道具で見えるようにしました[10]。『ブロードリスニング』という本は、Polis の地図の点は「1 人の人」を、Talk to the City の点は「1 つの意見」を表す、という違いを強調しています[10]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>向かない場面があります。</strong> 開発者自身は、Polis を従来の調査の代わりにも、それと併せても使えるとしつつ、限界も挙げています[3]。参加者や意見が少ない（数十未満）とうまく働かない。二択の問いや、答えを誘導する問いには向かない。案の順位づけは苦手。早く来た人の意見ほど多く見られ、あとから来た人ほど多く投票できる、という時間の順番による偏りもあります[3]。</li>
+<li><strong>運営に手間がかかります。</strong> CIP は、意味のない文や差別的な文、テーマから外れた文を、方針に沿って言い換えたり消したりする必要があった、と報告しています[11]。「みんなで作る憲法」の取り組みでは、30 票以上投じるまで意見を書けないように改造して、重複や意味のない投稿を減らしました[4]。英語版ウィキペディアも、2023 年の時点で Polis には「まだかなりの人手と分析が必要だった」と書いています[8]。</li>
+<li><strong>参加者は社会の縮図ではありません。</strong> 台湾の 2023 年の話し合いは、参加者の多くが自分から来た人や招かれた専門家で、社会全体を代表していない、と公式の報告に明記されました[10]。そこで 2024 年は、くじで選んだ市民の会議に進みました[10]。</li>
+<li><strong>vTaiwan の停滞。</strong> 本『Plurality』自身が、コロナ禍で対面の集まりが止まり参加が減ったこと、ボランティアの負担、政府に応える義務がないことを課題に挙げています[2]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』は 2-2 章で、Polis を vTaiwan を支えた道具として紹介しています[2]。本は、Polis は X（旧 Twitter）のような短文の投稿サービスに似ているが、反応を最大にする投稿を見せるのではなく、いまある意見のまとまりを示し、それらに橋を架ける意見を目立たせる、と説明します[2][12]。合意づくりと、どこで意見が分かれているかをよく知ることの、両方を助けるというのです[2]。</p>
+<p>5-4 章「拡張熟議」は、Polis を、分断をまたいで支持される意見を探す「橋渡しのしくみ」の典型例としています[13]。そして Polis と Community Notes を並べ、グラフ理論や生成 AI の基盤モデルでどう広げられるかを、いちばん明らかな方向の一つに挙げています[13]。</p>
+<p>関連する記事:
+- <a href="vtaiwan.html">vTaiwan</a> — Polis が使われた台湾の話し合いの場
+- <a href="bridging.html">bridging</a> — 分断をまたぐ支持を重んじる考え方
+- <a href="community-notes.html">Community Notes</a> — 同じ考えを SNS の注記に使ったしくみ
+- <a href="augmented-deliberation.html">拡張熟議</a> — 本の中で Polis が語られる章
+- <a href="talk-to-the-city.html">Talk to the City</a>・<a href="alignment-assemblies.html">Alignment Assemblies</a> — AI と組み合わせた展開</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』2-2「デジタル民主主義の日常」（日本語・本。vTaiwan と Polis）— https://www.plurality.net/v/chapters/2-2/jpn/</li>
+<li>Pol.is（日本語版ウィキペディア）— https://ja.wikipedia.org/wiki/Pol.is</li>
+<li>「What is Polis?」（英語・公式の説明）— https://compdemocracy.org/polis/</li>
+<li>Small ほか「Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces」（2021、英語・論文）— https://doi.org/10.6035/recerca.5516</li>
+<li>『ブロードリスニング』4.4「Polis で世論の地図を作る」（日本語・本）— https://github.com/digitaldemocracy2030/broad-listening-book</li>
+<li>「Collective Constitutional AI: Aligning a Language Model with Public Input」（英語・論文）— https://arxiv.org/abs/2406.07814</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>「What is Polis?」（The Computational Democracy Project）— https://compdemocracy.org/polis/</li>
+<li>『Plurality』2-2「The Life of a Digital Democracy」— https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+<li>Small ほか「Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces」（2021）— https://doi.org/10.6035/recerca.5516 ［CC BY-SA 4.0］</li>
+<li>Huang・Siddarth ほか「Collective Constitutional AI: Aligning a Language Model with Public Input」（2024）— https://arxiv.org/abs/2406.07814 ［CC BY 4.0］</li>
+<li>『ブロードリスニング』4.4「Polis で世論の地図を作る」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Pol.is（日本語版ウィキペディア）— https://ja.wikipedia.org/wiki/Pol.is ［CC BY-SA 4.0］</li>
+<li>「Algorithms」（The Computational Democracy Project）— https://compdemocracy.org/algorithms/</li>
+<li>Pol.is（英語版ウィキペディア）— https://en.wikipedia.org/wiki/Pol.is ［CC BY-SA 4.0］</li>
+<li>「Case studies」（The Computational Democracy Project）— https://compdemocracy.org/Case-studies/</li>
+<li>『ブロードリスニング』11-1「台湾」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>CIP「Alignment Assemblies: Nine Months In」（2023-11-16）— https://www.cip.org/blog/alignment-assemblies-nine-months-in</li>
+<li>『Plurality』日本語版 2-2「デジタル民主主義の日常」— https://www.plurality.net/v/chapters/2-2/jpn/ ［CC0］</li>
+<li>『Plurality』5-4「Augmented Deliberation」— https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='bridging.html'>ブリッジング（橋渡し）ってなに？</a> ・ <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='alignment-assemblies.html'>Alignment Assemblies（アライメント集会）ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

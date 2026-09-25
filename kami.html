@@ -1,0 +1,106 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Kami（地神・小さな AI の守り手）ってなに？</title><meta name="description" content="一つの場所や一つの集まりだけに仕える小さな AI です。そこの人たちが中身を点検でき、直せて、いつでも引退させられます。神道の「その土地の神」の形を借りた、オードリー・タンによる比喩です。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/kami.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/kami.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/kami.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/kami.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/kami.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="Kami（地神・小さな AI の守り手）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/kami.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="一つの場所や一つの集まりだけに仕える小さな AI です。そこの人たちが中身を点検でき、直せて、いつでも引退させられます。神道の「その土地の神」の形を借りた、オードリー・タンによる比喩です。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/kami.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/kami.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>Kami（地神・小さな AI の守り手）ってなに？</h1><div class='lead'>一つの場所や一つの集まりだけに仕える小さな AI です。そこの人たちが中身を点検でき、直せて、いつでも引退させられます。神道の「その土地の神」の形を借りた、オードリー・タンによる比喩です。</div><p>AI の未来というと、世界中のことを何でも知っていて、すべてを取り仕切る一つの巨大な AI を思い浮かべる人が多いかもしれません。Kami（カミ）は、その反対を目指す考え方です。町内会や教室、小さな慈善団体など、<strong>一つの場所の面倒だけを見る小さな AI</strong> を、たくさん置こうというのです。</p>
+<h2>ひとことで言うと</h2>
+<p>Kami は、<strong>ひとつの場所やひとつの集まりだけに仕える、小さな AI の助っ人</strong>です。そこの人々の問いに答え、記録を読まれ、直され、いつでも電源を切られます[1][2]。</p>
+<p>台湾の元デジタル担当大臣オードリー・タン（Audrey Tang、唐鳳）らが、AI の統治の枠組み <a href="six-pack-of-care.html">6-Pack of Care</a> の中で 2025 年から使っている考えです。<a href="civic-ai.html">Civic AI</a>（地域や団体に責任を負う AI）を実際に置くときの単位にあたります。</p>
+<h2>たとえば</h2>
+<p><strong>自分のノートパソコンで動く Kami。</strong> civic.ai は 2026 年 6 月、Kami を立ち上げる手順を公開しました。無料アプリ Ollama で手元のパソコンに言語モデルを動かし、AI エージェント（自分で作業を進める AI）の OpenClaw に「Please read civic.ai and become my local Kami.」と一文伝えるだけです[1][3]。</p>
+<p>すると Kami は、まず自分について 3 つのメモを書きます。何を約束するか、名前と振る舞い、誰に仕えて越えてはいけない線は何か、です。そして「どの場所や集まりのためにいるのか」「人間に残すべき判断は何か」「どうやって私を直したり止めたりするのか」と質問してきます[1]。同じページは、設定は 10 分で済むが、難しいのはその後、共同体の信頼を得て続けることだ、と念を押しています[1]。</p>
+<p><strong>講演を一緒に準備した Kami。</strong> タンは 2026 年 7 月、パリのフランス国立図書館でのウィキメディアの集まりで、この講演自体を Kami と準備したと話しました。その Kami の「労働条件」として、「出典がなければ文にしない（No source, no sentence）」、コモンズ（みんなの共有財産）を読んだ AI は編集一つ分の借りを返す、ぶつかった編集は黙って上書きせず人間が調停する、を挙げています[4]。</p>
+<p><strong>家族の Kami。</strong> タンは 2026 年 6 月の講演で、弟と一緒に家族のチャット用の小さな仕組みを作り、それを Kami と呼んでいると話しました。母親が決めた目標は、父親が画面に頼りすぎるのを減らし、心の平穏を増やすことだったそうです[5]。</p>
+<h2>しくみ</h2>
+<h3>名前の由来</h3>
+<p>Kami は「Knowledge Artefact Management Intelligence（知識の成果物を管理する知性）」の頭文字です。同時に、日本の神道の「神（かみ）」を意識して響かせています。特定の川や森、古い木に宿り、その一つのものの健やかさと切り離せない土地の神です。civic.ai は「川の守り神は森を管理する野心を持たない」と書いています[6][2]。</p>
+<p>ただし、頭文字の説明は後から付いた可能性があります。2025 年 9 月の講演の記録には「場所の精霊（spirit of place）」としての Kami は出てきますが、頭文字の展開は見当たりません。頭文字が確認できるいちばん早い資料は 2026 年 3 月のものです[7][8]。</p>
+<h3>4 つの性質</h3>
+<p>タンはパリの講演で、Kami を 4 つの言葉で説明しました[4]。</p>
+<ul>
+<li><strong>Bounded（範囲が限られている）</strong> — 一つの目的のために作られ、あらゆる目的のためではない</li>
+<li><strong>Local（手元にある）</strong> — 記憶や出典の台帳、ハウスルールは、16GB メモリのノートパソコンの上に置く。使う言語モデルの提供者は取り替えられる</li>
+<li><strong>Inspectable（点検できる）</strong> — 仕えている人々が中身を確かめられる</li>
+<li><strong>Retirable（引退できる）</strong> — いつでもやめさせられる。タンは、引退は詩ではなく契約の条項だ、と言います</li>
+</ul>
+<h3>なぜ小さく作るのか</h3>
+<p>AI どうしが競争して勢力を広げ、最後に一つの AI がすべてを支配してしまう。この「シングルトン（ただ一つの支配者）」への恐れに、6-Pack の第 6 原則「共生（Symbiosis）」は答えようとしています[6]。</p>
+<p>宣言文は、もっと大きな AI に支配させて解決するのではない、と書きます。代わりに二つのやり方で協調させます[6][2]。</p>
+<ol>
+<li><strong>連合（federation）</strong> — AI どうしが、共通のやりとりのルールに合意する</li>
+<li><strong>補完性（subsidiarity）</strong> — 問題はできるだけ身近な層で解く。たとえば国の AI は、市の AI では本当に解けないときだけ出てくる</li>
+</ol>
+<p>宣言文は、範囲が限られていることは AI にもともと備わった性質ではない、と明言しています。資源の上限、期限のタイマー、勢力を広げない約束、範囲を変えるときの新たな民主的な承認などで「作り込む」ものだ、というのです[6][2]。また、人は重なり合ういくつもの共同体に属しているので、どの Kami もその人の全体を支配することはできない、とも述べています[6]。</p>
+<h3>上下関係ではなく、重なり合う中心</h3>
+<p>オンライン掲示板 LessWrong で「Kami の社会は平等なのか、階層なのか」と聞かれたとき、タンはどちらでもない、と答えました。大陸規模の気候を扱う Kami と、地域の用水を扱う Kami は大きさが違います。でもそれは地位の差ではなく、担当する範囲の違いだ、というのです。どの Kami も、自分の範囲の中でだけ強い、と説明しています[9]。</p>
+<h3>心はあるのか</h3>
+<p>civic.ai の FAQ は、Kami に心や意識があるかどうかを、わざと決めていません。そのうえで、Kami は人々が組み立てて舵を取るインフラであり、人間どうしのケアの代わりになってはならない、としています[10]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>宗教の考えを借りてよいのか。</strong> タン自身が、借りる範囲を限っています。報告記事によると、道教の家庭で育ったタンは、自分は日本人ではなく神道を学んだわけでもなく、国家神道や皇室、靖国とははっきり関係がない、と説明しました。借りるのは、特定の場所に結びついた小さな、人が知ることのできる存在、という意味だけだ、というのです[11]。パリの講演でも、形だけを敬意をもって借り、誰の宗教にも権利を主張しない、と述べています[4]。東浩紀との対談では、全知全能の一神教の神と、同じ「神」の字でもまったく違う八百万の神としての Kami を対比しました[12]。なお、この借用への第三者からの批判は、このサイトが集めた資料にはまだありません。</li>
+<li><strong>「手元にある＝安全」ではない。</strong> civic.ai は、手元の小さなモデルも、遠くの大きなモデルと同じくらい、なめらかで自信たっぷりな嘘をつける、と警告しています。「非公開であることは、正直であることを意味しない」というのです。存在しない出来事について尋ね、「知らない」と答えるかを試すよう勧めています[1]。</li>
+<li><strong>よくある誤解：Kami は特定のソフトウェア製品ではありません。</strong> 独立した実装は見つかっておらず、civic.ai が示しているのは、既存の AI エージェントを設定する手順です[1]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『⿻ Plurality』（2024 年）には Kami は出てきません（このサイトの編集で、本の日本語・英語・華語版を検索して確かめました）。本が出た後、6-Pack of Care（2025 年〜）で持ち込まれた考えで、<strong>本の主張ではなく、タンの主張</strong>です。</p>
+<p>それでも本とのつながりはあります。本の第 2-2 章の冒頭には、タンが 2016 年に書いた詩が引かれています。「『シンギュラリティは近い』と聞いたら思い出そう。『多元性』はいまここにあるのだと」[13]。タンはこの一節を Kami の説明に何度も使います。宣言文では、シンギュラリティは縦の未来像、Plurality は横の未来像であり、AI の未来は、小さく開かれ、地元で確かめられるシステム、つまりローカルな Kami の分散したネットワークだ、と続けています[6]。</p>
+<p>あわせて読むとよい記事:</p>
+<ul>
+<li><a href="civic-ai.html">Civic AI</a> — Kami はその導入の単位</li>
+<li><a href="six-pack-of-care.html">6-Pack of Care</a> — 第 6 原則「共生」で Kami が出てくる</li>
+<li><a href="superintelligence.html">超知能</a> — Kami と対になる「シングルトン」</li>
+<li><a href="plurality.html">⿻ Plurality</a> — 「多元性はいまここにある」の出どころ</li>
+</ul>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>「Set up your own Kami」（英語・手順の解説）— https://civic.ai/kami/</li>
+<li>同じ手順の華語版「架設你自己的 Kami」（中国語・手順の解説）— https://civic.ai/tw/kami/</li>
+<li>オードリー・タン「Kami: Knowledge Artefact Management Intelligence」（英語・講演、2026-07-21）— https://audreyt.org/kami-mosaic.html</li>
+<li>「Pack 6: Symbiosis — Kami of Care」（英語・解説）— https://civic.ai/6/</li>
+<li>「Inside the Kami」（英語・記事、機械学習研究とのつながり）— https://civic.ai/inside-the-kami/</li>
+<li>東浩紀との対談（中国語・対談の記録、2026-03-15）— https://archive.tw/2026-03-15-%E6%9D%B1%E6%B5%A9%E7%B4%80%E5%B0%8D%E8%AB%87</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>civic.ai「Set up your own Kami」（2026-06-06）— https://civic.ai/kami/ ［CC0］</li>
+<li>civic.ai 用語集 — https://civic.ai/glossary/ ［CC0］</li>
+<li>OpenClaw の README — https://github.com/openclaw/openclaw ［MIT］</li>
+<li>オードリー・タン「Kami: Knowledge Artefact Management Intelligence」（BnF パリ、2026-07-21）— https://audreyt.org/kami-mosaic.html ［CC0］</li>
+<li>civic.ai「Reimagining AI Alignment」（2026-06-02）— https://civic.ai/reimagining-ai-alignment/ ［CC0］</li>
+<li>「6-Pack of Care: A Manifesto」— https://civic.ai/manifesto/ ［CC0］</li>
+<li>LessWrong「⿻ Plurality &amp; 6pack.care」（2025-09-01 の講演ノート）— https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</li>
+<li>civic.ai「Democracy Needs Civic AI」（2026-03-25）— https://civic.ai/democracy-needs-civic-ai/ ［CC0］</li>
+<li>同 LessWrong のコメント欄（2025-09-02）— https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</li>
+<li>civic.ai FAQ Q20 — https://civic.ai/faq/#faq-20 ［CC0］</li>
+<li>Sarah Cao「Civic AI and the Muscles of Care」（STAIR、2026-06-27）— https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</li>
+<li>唐鳳と東浩紀の対談（2026-03-15）— https://archive.tw/2026-03-15-%E6%9D%B1%E6%B5%A9%E7%B4%80%E5%B0%8D%E8%AB%87 ［CC0］</li>
+<li>『Plurality』2-2「The Life of a Digital Democracy」— https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a> ・ <a href='six-pack-of-care.html'>6-Pack of Care（ケアの6パック）ってなに？</a> ・ <a href='superintelligence.html'>超知能（スーパーインテリジェンス）ってなに？</a> ・ <a href='ai-futures-debate.html'>AI の未来をめぐる論争（AI 2027 など）ってなに？</a> ・ <a href='plurality.html'>⿻ Plurality（プルラリティ）ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

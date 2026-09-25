@@ -1,0 +1,94 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>ソウルバウンド・トークン（SBT）ってなに？</title><meta name="description" content="他人に売ったり渡したりできないデジタルの証明書です。学歴・所属・出席・貸し借りの約束などを、本人の「魂（Soul）」と呼ぶ口座に結びつけます。2022 年にブテリン・ワイル・オールハーバーが、お金中心の Web3 を人間関係の上に組み直す「DeSoc（分散型社会）」として提案しました。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/soulbound-tokens.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/soulbound-tokens.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="ソウルバウンド・トークン（SBT）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="他人に売ったり渡したりできないデジタルの証明書です。学歴・所属・出席・貸し借りの約束などを、本人の「魂（Soul）」と呼ぶ口座に結びつけます。2022 年にブテリン・ワイル・オールハーバーが、お金中心の Web3 を人間関係の上に組み直す「DeSoc（分散型社会）」として提案しました。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/soulbound-tokens.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/soulbound-tokens.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>ソウルバウンド・トークン（SBT）ってなに？</h1><div class='lead'>他人に売ったり渡したりできないデジタルの証明書です。学歴・所属・出席・貸し借りの約束などを、本人の「魂（Soul）」と呼ぶ口座に結びつけます。2022 年にブテリン・ワイル・オールハーバーが、お金中心の Web3 を人間関係の上に組み直す「DeSoc（分散型社会）」として提案しました。</div><p>卒業証書や会員証は、その人が実際に学んだことや、どこかに属していることの証しです。お金で他人に売れてしまったら、意味がなくなります。ところがネット上のデジタルの証明書の多くは、簡単に売り買いできてしまいます。ソウルバウンド・トークン（SBT）は、「売れない・譲れない」デジタルの証明書を作ろう、という考え方です。</p>
+<h2>ひとことで言うと</h2>
+<p>ソウルバウンド・トークン（Soulbound Token、SBT）は、ブロックチェーン（誰でも確かめられる公開の記録台帳）に載せる、売れない・譲れないデジタルの証明書です。卒業証書や会員証、イベントの参加証のように、「お金で買えるもの」ではなく「その人が実際にしたこと・属していること」を示すために使います[1][2]。</p>
+<p>2022 年、ヴィタリック・ブテリン（Vitalik Buterin）、グレン・ワイル（E. Glen Weyl）、プジャ・オールハーバー（Puja Ohlhaver）は、SBT で人と人との信頼の網を表す構想を出しました。お金のやり取りが中心になっていた暗号資産の世界（Web3）を、社会の関係の上に組み直そうというのです。三人はこれを「DeSoc（分散型社会）」と名づけました[2]。</p>
+<h2>たとえば</h2>
+<p><strong>ゲームの「ソウルバウンド」から。</strong> 名前は、オンラインゲーム World of Warcraft の「ソウルバウンド」のアイテムから来ています。一度拾うと他のプレイヤーに譲ることも売ることもできないので、最強の装備が欲しければ、自分で仲間と竜を倒すしかありません。ブテリンは 2022 年 1 月のブログで、NFT（ネット上の一点物の証明）もこのように譲れないものにできたら、持ち主の富だけでなく「その人が何者か」を示せるのではないか、と問いました[1]。</p>
+<p><strong>イベントの参加証。</strong> イベントに出た人に配る NFT「POAP」は、他人から買えてしまうと「本人が参加した」という意味を失う、とブテリンは書きます。実際、Adidas がファンに無料で配った POAP は、優先的に商品を買える権利がつくと、すぐに高値で転売されました[1]。</p>
+<p><strong>台湾デジタル発展部の貢献証明。</strong> オードリー・タン（Audrey Tang）は 2023 年の対談で、若者を「デジタル転換大使」として地域に送り出す事業の話をしました。給与に加えて、貢献や影響を示す「ソウルバウンド NFT」を渡しているというのです。デジタル発展部の電子署名があるのですぐに確かめられる、とも語っています[3]。</p>
+<p><strong>本『Plurality』の貢献者。</strong> ワイルは 2023 年 12 月のビデオで、本に貢献した人はソウルバウンドトークンや <a href="plural-credits.html">⿻ クレジット</a> で貢献の量を記録され、十分に貢献した人は表紙に名前が載る、と説明しました[4]。</p>
+<h2>しくみ</h2>
+<h3>なぜ「譲れない」が大事か</h3>
+<p>ブテリンは、統治の権利（ものごとを決める権利）が簡単に譲れると、悪いことが起きると書いています[1]。</p>
+<p>権力を広く分けたいのに、権利を譲れると、お金持ちが買い集めてしまいます。有能な人に権利を渡したいのに、譲れると、熱心なだけで能力のない人が買い占めてしまいます。そこで、統治の権利を譲れないものにしたらどうか、とブテリンは問いかけます[1]。</p>
+<h3>Soul と SBT</h3>
+<p>DeSoc の論文の基本の部品は、公開され、譲れない（ただし発行した側は取り消せる）トークンを持つ口座です。この口座を「Soul（魂）」、そこにあるトークンを SBT と呼びます[2]。</p>
+<p>Soul には、学歴・職歴・作品の記録などを SBT として持たせます。一番かんたんな形では、履歴書のような自己申告でもかまいません。けれども本当に力を発揮するのは、関係の相手、たとえば大学や会社やイベントの主催者（それぞれ別の Soul）が発行・証明するときだ、と論文は言います[2]。</p>
+<p>Soul は本名に結びつける必要がありません。「1 人に 1 つの Soul」を仕組みの側で保証しようともしません[2]。</p>
+<h3>DeSoc への階段</h3>
+<p>論文は、SBT で少しずつ実現できることを並べています[2]。</p>
+<ul>
+<li><strong>作品の来歴</strong> — その作品が本当に作者から出たものだと示す。本物そっくりの偽の画像や動画（ディープフェイク）への対策になります。</li>
+<li><strong>評判による貸し借り</strong> — 担保なしで、信頼にもとづいてお金を貸し借りする。</li>
+<li><strong>コミュニティリカバリ</strong> — 鍵を失くしたとき、その人が属する共同体（勤め先・クラブ・大学・教会など）のうち、定められた数以上の共同体からそれぞれ一人ずつの同意を得て回復する。</li>
+<li><strong>共謀に強い投票や資金配分</strong> — 同じ仲間どうしの票を見つけて割り引く。</li>
+</ul>
+<p>論文は、個人と共同体が互いに育て合いながら、みんなの役に立つネットワークを共に作る社会を DeSoc と呼んでいます[2]。</p>
+<h3>前史とプライバシー</h3>
+<p>ワイルは 2019 年、ルーカス・ガイガー（Lucas Geiger）、カリヤ・ヤング（Kaliya Young）と共に、<a href="radicalxchange.html">RadicalxChange</a> のブログで「分散型ソーシャル ID」の連載を書いています。今の ID は、覚えられない鍵や、少数の巨大企業のログインに頼っていて、私たち一人ひとりの豊かな姿をひどく損なっている、という趣旨を論じました[5]。</p>
+<p>論文は、まず扱いやすい「公開」の SBT から出発しますが、プライバシーにも深い関心を持つとしています。後半では、本体は台帳の外に置いて目印だけ載せる、といった工夫を論じています[2]。ブテリンも、ワクチンの接種記録が公開の証明になったら皆に見えてしまう、という例を挙げ、プライバシーをはじめから設計に入れる必要を説きました[1]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>論文自身が挙げる危険。</strong> DeSoc の論文は、違う人どうしの協力に使える同じ SBT が、悪用もされうると認めています。嫌われた集団を自動で締め出すこと、攻撃の標的を決めること、移住を制限すること、弱い立場の人から搾り取る貸し付けなどです[2]。賄賂で SBT を集めて偽の人間関係を作る、影響力を増やすためにわざと SBT を持たない、といった不正の可能性も論じています[2]。</li>
+<li><strong>そもそもブロックチェーンに載せるべきか。</strong> 論文の公開直後、ID にブロックチェーンを使う意味があるのか、という議論が起きました。ブテリンは、台帳の外で署名つきの証明を使うべきだという反論や、それへのオールハーバーの応答、自分で ID を管理する考え方への悲観論などを並べて紹介しています[6]。シュレイ・ジェイン（Shrey Jain）らとワイルの 2022 年の論文は、Web3 の ID のさまざまな試みは補い合うもので、違いは本質というより程度の差だ、と論じました[7]。</li>
+<li><strong>「1 人 1 個」の仕組みではありません。</strong> SBT は、本人確認や「本物の人間であること」の証明そのものではありません。論文は、Soul を本名に結びつける必要も、1 人 1 Soul を保証する必要もない、としています[2]。人間であることの証明は <a href="proof-of-personhood.html">人間であることの証明</a> の記事で扱います。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』の 4-1 章「ID と人物性」は、分散型 ID の議論の両端として二つを並べます[8]。プライバシーと、どの情報を見せるかを選べることを大事にする「検証可能な資格情報（VC）」。そして、借金を返す・作品を複製しないといった公開の約束を ID に結びつける SBT です。本は、どちらにも、ID を作ることと守ることの間の悪いトレードオフが見える、と書いています[8]。</p>
+<p>同じ章は、ネットワークの中で互いに組みそうにない複数の人が協力して鍵を回復する仕組みを「コミュニティリカバリ」と呼び、DeSoc の論文を引いています[8]。くわしくは <a href="identity-and-personhood.html">ID と人物性</a> の記事で扱います。</p>
+<p>4-3 章「<a href="commerce-and-trust.html">商取引と信頼</a>」は、安全な ID が難しいことが地域通貨の実験を妨げてきた、と指摘する脚注で DeSoc の論文を挙げています[9]。5-6 章の <a href="plural-voting.html">⿻ 投票</a> と 5-7 章の資金配分（<a href="quadratic-funding.html">クアドラティック・ファンディング</a> など）でも、参加者の人間関係を考える仕組みの脚注で同じ論文が引かれています[10][11]。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>『Plurality』4-1「ID と人物性」（日本語・本）— https://www.plurality.net/v/chapters/4-1/jpn/</li>
+<li>Vitalik Buterin「Soulbound」（英語・記事、短い入門）— https://vitalik.eth.limo/general/2022/01/26/soulbound.html</li>
+<li>日経クロステック「SBT誕生の経緯と課題」（日本語・記事）— https://xtech.nikkei.com/atcl/nxt/column/18/02132/030900011/</li>
+<li>Ohlhaver・Weyl・Buterin「Decentralized Society: Finding Web3's Soul」（英語・論文）— https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</li>
+<li>Weyl ほか「Motivating The Case for Decentralized Social Identity」（英語・記事）— https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</li>
+<li>Jain・Erichsen・Weyl「A Plural Decentralized Identity Frontier」（英語・論文）— https://arxiv.org/abs/2208.11443</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>Vitalik Buterin「Soulbound」（2022-01-26）— https://vitalik.eth.limo/general/2022/01/26/soulbound.html</li>
+<li>Puja Ohlhaver, E. Glen Weyl, Vitalik Buterin「Decentralized Society: Finding Web3's Soul」（2022-05）— https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</li>
+<li>Audrey Tang, Conversation with Joichi Ito and Daum Kim（2023-02-24）— https://github.com/audreyt/transcript/blob/main/2023-02-24-Conversation-with-Joichi-Ito-and-Daum-Kim.md ［CC0］</li>
+<li>Glen Weyl on Plurality Seoul（2023-12-02、ビデオメッセージ）— https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</li>
+<li>Glen Weyl, Lucas Geiger, Kaliya Young「Motivating The Case for Decentralized Social Identity」（2019-06-06）— https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</li>
+<li>Vitalik Buterin「Where to use a blockchain in non-financial applications?」（2022-06-12）— https://vitalik.eth.limo/general/2022/06/12/nonfin.html</li>
+<li>Shrey Jain, Leon Erichsen, Glen Weyl「A Plural Decentralized Identity Frontier」（2022）— https://arxiv.org/abs/2208.11443</li>
+<li>『Plurality』4-1「Identity and Personhood」— https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>『Plurality』4-3「Commerce and Trust」— https://www.plurality.net/v/chapters/4-3/eng/ ［CC0］</li>
+<li>『Plurality』5-6「⿻ Voting」— https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>『Plurality』5-7「Social Markets」— https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='commerce-and-trust.html'>商取引と信頼ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='plural-credits.html'>⿻ クレジット（プルラルクレジット）ってなに？</a> ・ <a href='radicalxchange.html'>RadicalxChange（RxC）とは？どんな団体？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

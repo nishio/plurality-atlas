@@ -1,0 +1,103 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>生成基盤モデル（GFM）ってなに？</title><meta name="description" content="ChatGPT や Claude のように、大量の文章や画像の例から学び、文章・画像・声を生み出す大きなプログラムのことです。本『Plurality』は、これをなるべく「AI」とは呼ばず、人々が違いをまたいで協働するのを助ける道具として扱います。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/generative-foundation-models.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/generative-foundation-models.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="生成基盤モデル（GFM）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="ChatGPT や Claude のように、大量の文章や画像の例から学び、文章・画像・声を生み出す大きなプログラムのことです。本『Plurality』は、これをなるべく「AI」とは呼ばず、人々が違いをまたいで協働するのを助ける道具として扱います。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/generative-foundation-models.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/generative-foundation-models.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>生成基盤モデル（GFM）ってなに？</h1><div class='lead'>ChatGPT や Claude のように、大量の文章や画像の例から学び、文章・画像・声を生み出す大きなプログラムのことです。本『Plurality』は、これをなるべく「AI」とは呼ばず、人々が違いをまたいで協働するのを助ける道具として扱います。</div><p>質問を打ち込むと、すらすらと答えを書いてくれるプログラム。いまや多くの人が使っています。ふつうは「AI（人工知能）」と呼ばれますが、本『⿻ Plurality』はこれを「生成基盤モデル（Generative Foundation Models、略して GFM）」と呼びます。呼び方を変えるのには、はっきりした理由があります。</p>
+<h2>ひとことで言うと</h2>
+<p>生成基盤モデルは、<strong>ChatGPT や Claude のように、大量の文章・画像などの例から学び、文章や画像や声を生み出す大きなコンピューターのプログラム</strong>のことです[1]。「生成」は新しく生み出すこと、「基盤」は、さまざまな用途の土台になることを表します。</p>
+<p>本はこれを、たいてい「AI」とは呼びません。機械がひとりで考える存在としてではなく、<strong>人々が違いをまたいで協働するのを助ける道具</strong>として扱います[1]。</p>
+<h2>たとえば</h2>
+<p><strong>Anthropic の「みんなでつくる憲法」（2023〜24 年）。</strong> 本によれば、AI の会社 Anthropic は、非営利団体の Collective Intelligence Project と組んで、モデルのふるまいを導く「憲法」（守るべき原則）を、意見を集めるツール <a href="polis.html">Polis</a> で集めました[2]。この試みの論文によれば、米国の大人の構成（年齢・性別・収入・地域）に合わせて選んだ 1,002 人が 1,127 件の文を書き、38,252 票を投じました[3]。→ <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
+<p><strong>Talk to the City と東京都知事選（2024 年）。</strong> <a href="talk-to-the-city.html">Talk to the City</a> は GFM を使って、たくさんの意見の一覧を「話しかけられる相手」に置き換える道具です。本によれば、安野貴博の陣営は、寄せられた意見をこれで見える形にしました。また、YouTube 上の AI の分身「AIあんの」は、16 日間で約 7,400 件の質問に答えました[4]。1 日あたりにすると約 460 件です。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の 2024 年都知事選</a></p>
+<p><strong>ほかの人の声で歌う。</strong> 本は、音楽家ホリー・ハーンドン（Holly Herndon）とマット・ドライハースト（Mat Dryhurst）らが GFM を使い、歴史上の人物やその場にいない人の声で歌い、ほかの人が自分たちの声で歌えるようにしたことを紹介します。この本の音声版も、多くの参加者の声を混ぜた「共通の声」で読まれました[5]。→ <a href="creative-collaboration.html">クリエイティブな協働</a></p>
+<h2>くわしく</h2>
+<h3>なぜ「AI」と呼ばないのか</h3>
+<p>本は 5-5 章で、「AI」という言葉は、特定の道具の集まりというより、「こうなってほしい」という願望を指している、と書きます[1]。</p>
+<p>1970〜80 年代の昔ながらの AI は、専門家から聞き出した規則を木の枝のように並べて、処理を自動にしようとしました。でも行き詰まりました。今の GFM は、例から確率的に学ぶ点で決定的に違う、と本は言います[1]。</p>
+<p>また本は、「AI」という呼び方には、人がどういう条件で作ったのかを覆い隠す「機械がひとりで動いているという神秘」が含まれるので、たいてい避ける、と書いています[6]。</p>
+<h3>「AI は考え方の一つだ」</h3>
+<p>この姿勢の下地には、ジャロン・ラニアー（Jaron Lanier）とグレン・ワイルの 2020 年の論説「AI is an Ideology, Not a Technology（AI は技術ではなくイデオロギーだ）」があります[7]。</p>
+<p>二人によれば、「AI」は技術の中身を指す言葉ではありません。「知的に見える作業かどうか」という、人の感じ方で技術を分ける言葉です。二人は、猫と犬を見分けるプログラムを例にします。これを「機械が見ることを覚えた」と語る代わりに、「たくさんの人が例を出し合って、猫と犬の違いを初めてきっちり定義した」と語ることもできる、というのです[7]。</p>
+<p>どんな知性も完全にひとりで立ってはいない。ほかの人がつくった社会の文脈に頼っている。二人はこの見方を「多元主義の立場からの異論」と呼びます[7]。ラニアーは 2023 年の『New Yorker』の記事の題を「There Is No A.I.（AI は存在しない）」としました[8]。</p>
+<h3>しくみのあらまし</h3>
+<p>本の説明では、GFM には数十億から数兆の「つなぎ目（ノード）」があり、互いに入力し合って、次に来る単語や画像を予想します。こうして、人のような柔軟な分け方・応え方・考え方を、すばやく広く、おおむね同じ結果が出る形でまねられるようになりました[1]。</p>
+<p>本は、GFM の力は「AI」であることより、網の目のように確率的なしくみにある、と書きます。同じしくみは、人と人のつながりの網にもありうる、というのです[9]。</p>
+<h3>本の中で GFM が担う役</h3>
+<p>本の第 5 部の各章で、GFM は協働を広げる部品として登場します。</p>
+<ul>
+<li><strong>5-1 章</strong>：思い浮かべる速さで考えを目に見える形にし、感情や行動にすぐ応える仮想の環境をつくる[10]。→ <a href="post-symbolic-communication.html">ポスト表象コミュニケーション</a></li>
+<li><strong>5-3 章</strong>：言葉だけでなく文化の型まで訳す。人が思いつかない方向に考えを導く。人のようにふるまう AI たちの仮想の SNS で、投稿の並べ方の影響を試す[5]。</li>
+<li><strong>5-4 章</strong>：たくさんの自由な声をまとめて合意できる点を探す（<a href="broad-listening.html">ブロードリスニング</a>）。話し合いの参加者一人ひとりに、根拠にもとづく提案をその場で出す[4][11]。→ <a href="augmented-deliberation.html">拡張熟議</a></li>
+<li><strong>5-5 章</strong>：行政の部品になって、多様で型にはまらない入力を受け取り、利用者に専門の書式を埋める負担をかけずに応じる[1]。→ <a href="adaptive-administration.html">適応型管理行政</a></li>
+</ul>
+<h3>権利とのぶつかり合い</h3>
+<p>一方で第 4 部では、GFM は脅威としても登場します。GFM は中身を簡単にまねたり書き換えたりでき、公開された情報から巧みに推し量れるので、なりすましなど ID の問題を悪化させる、と本は書きます[12]。→ <a href="identity-and-personhood.html">ID と人物性</a></p>
+<p>また、ネットで共有された幅広い情報が GFM の土台になっていますが、その学習データの中身はまだ明かされていません。データを作った人の同意どころか、本人が知らないまま取り込まれた、と本は書きます[13]。→ <a href="data-dignity.html">データの尊厳</a>・<a href="property-and-contract.html">財産と契約</a></p>
+<h3>誰がつくったのか</h3>
+<p>本の 2-0 章は、コンピューターの基礎的な進歩の多くは、第二次大戦と冷戦のころの民主主義の国の政府から生まれた、と指摘します。それなのに、今日の基盤モデルの飛躍には、政府がほとんどかかわっていません。本によれば、OpenAI の創業者たちは、はじめ政府のお金を求めて断られ、民間の利益を目指すお金に向かいました[14]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>見えにくさ・偏り・悪用。</strong> 本は、GFM ほど落とし穴が論じられている技術は無いかもしれない、と書きます。中身が見えにくいこと、ひとりで動いているような神秘、もとのデータや作り手の偏りを受け継ぐこと、悪用のおそれを挙げます。行政に使えば、官僚制の見えにくさをかえって深めかねない、とも言います[6]。</li>
+<li><strong>監査と検閲。</strong> より有能な GFM を人間が本当に点検できるのか、という限界があります。また、指示に言われるまま従って、特定の見方を消してしまうおそれもあります。本は、⿻ 的なモデルは、多様でもっともな答えを返し、特定の集団の事情に合わせて調整されていなければならない、とします[15]。</li>
+<li><strong>創造性が均一になる。</strong> 協働を助けるはずのしくみが、突飛な発想を、合意と予想どおりのものにならしてしまう危険です。本は別の危険として、企業のプラットフォームが創作物を横取りしたりお金に換えたりして作り手の意欲を減らせば、GFM の学習データという「金の卵」を産む、創造性と多様性という「ガチョウ」を殺す、とも警告します[16]。</li>
+<li><strong>「AI」を避けるのは言葉遊び？</strong> ラニアーとワイルは、呼び方は、設計と責任のありかを左右すると論じます。「AI」という考え方は、人の責任から目をそらさせる、と二人は書きます。さらに二人は、「AI」は、少数の技術の専門家が設計した技術が人を助けるのではなく人に取って代わるべきだ、という政治と社会の考え方だとし、それは<a href="three-paths.html">テクノクラシー</a>や中央計画の考え方と響き合う、と批判します[7]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本は GFM を、ひとりの主役としてではなく、第 5 部の 7 つの協働のかたちに横断して効く道具として置きます[1][4]。→ <a href="collaborative-technology.html">協働テクノロジー</a></p>
+<p>では、GFM を誰がどう方向づけるのか。本は、話し合いと投票の方法が、GFM の運営、GFM が生む経済的な価値の分け方、みんなの意思に沿った方向づけについて、正しい力の配分を決めうる、と書きます[6]。この問いは、本の後にオードリー・タンらが展開する議論につながります。→ <a href="civic-ai.html">Civic AI</a>・<a href="six-pack-of-care.html">6-Pack of Care</a>・<a href="kami.html">Kami</a>・<a href="reverse-alignment.html">reverse alignment</a></p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>本『Plurality』5-5「適応型管理行政」の「明日の適応型管理行政」の節（日本語・本）— https://www.plurality.net/v/chapters/5-5/jpn/</li>
+<li>Jaron Lanier &amp; E. Glen Weyl「AI is An Ideology, Not A Technology」（英語・論説、WIRED 2020）— https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</li>
+<li>本『Plurality』5-4「Augmented Deliberation」（英語・本）— https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li>Collective Constitutional AI の論文（英語・論文）— https://arxiv.org/abs/2406.07814</li>
+<li>Jaron Lanier「There Is No A.I.」（英語・記事、New Yorker 2023）— https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</li>
+<li>本『Plurality』4-4「Property and Contract」（英語・本）— https://www.plurality.net/v/chapters/4-4/eng/</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>『Plurality』5-5「Adaptive administration tomorrow」の節 第 1〜3 段落 — https://www.plurality.net/v/chapters/5-5/eng/ ［CC0］</li>
+<li>『Plurality』5-4「Conversation tomorrow」の節 — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>Huang ほか「Collective Constitutional AI: Aligning a Language Model with Public Input」（2024）— https://arxiv.org/abs/2406.07814 ［CC BY 4.0］</li>
+<li>『Plurality』5-4「Frontiers of augmented deliberation」の節 — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>『Plurality』5-3「Creative collaboration tomorrow」の節 — https://www.plurality.net/v/chapters/5-3/eng/ ［CC0］</li>
+<li>『Plurality』5-5「Limits of adaptive administration」の節 — https://www.plurality.net/v/chapters/5-5/eng/ ［CC0］</li>
+<li>Jaron Lanier &amp; E. Glen Weyl「AI is An Ideology, Not A Technology」（WIRED、2020）— https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</li>
+<li>Jaron Lanier「There Is No A.I.」（New Yorker、2023）— https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</li>
+<li>『Plurality』5-5「Adaptive administration tomorrow」の節の末尾 — https://www.plurality.net/v/chapters/5-5/eng/ ［CC0］</li>
+<li>『Plurality』5-1「Post-symbolic communication tomorrow」の節 — https://www.plurality.net/v/chapters/5-1/eng/ ［CC0］</li>
+<li>『Plurality』5-4「Frontiers of augmented deliberation」の節（GFM が参加者に即時の提案を出す実験の段落）— https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>『Plurality』4-1「Identity and Personhood」— https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>『Plurality』4-4「Property and Contract」— https://www.plurality.net/v/chapters/4-4/eng/ ［CC0］</li>
+<li>『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」— https://www.plurality.net/v/chapters/2-0/eng/ ［CC0］</li>
+<li>『Plurality』5-4「Limits of augmented deliberation」の節 — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>『Plurality』5-3「Limits of creative collaboration」の節 — https://www.plurality.net/v/chapters/5-3/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='adaptive-administration.html'>適応型管理行政ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='creative-collaboration.html'>クリエイティブな協働ってなに？</a> ・ <a href='post-symbolic-communication.html'>ポスト表象コミュニケーションってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a> ・ <a href='alignment-assemblies.html'>Alignment Assemblies（アライメント集会）ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is Gov4Git (GitRules)?</title><meta name="description" content="An open-source tool that, when many people build code or documents together, records and runs who the members are, how much say each has, and which contributions are accepted. It was used to make the book *Plurality*, and was renamed GitRules in 2024."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/gov4git.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/gov4git.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/gov4git.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/gov4git.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/gov4git.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is Gov4Git (GitRules)?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/gov4git.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="An open-source tool that, when many people build code or documents together, records and runs who the members are, how much say each has, and which contributions are accepted. It was used to make the book *Plurality*, and was renamed GitRules in 2024."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../gov4git.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/gov4git.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is Gov4Git (GitRules)?</h1><div class='lead'>An open-source tool that, when many people build code or documents together, records and runs who the members are, how much say each has, and which contributions are accepted. It was used to make the book *Plurality*, and was renamed GitRules in 2024.</div><p>When a few people write a document, they can settle things by talking. But once there are hundreds or thousands of participants, it becomes hard to decide by feel whose proposal to take up first, or how to recognize whose contribution. Gov4Git is a tool that tried to provide, as software, a way of deciding things when many people make something together.</p>
+<h2>In short</h2>
+<p>Gov4Git is an open-source tool (software published so that anyone can use and improve it) that, on top of git (a system for recording and sharing the history of changes to files; GitHub is the best-known service built on it), records and carries out the following [1][2]:</p>
+<ul>
+<li>who the members of a community are</li>
+<li>who holds how many "credits" (points used for having a say and voting)</li>
+<li>which issues to prioritize and which contributions to accept</li>
+</ul>
+<p>It resembles a blockchain (a system in which many people share a record of transactions to prevent tampering) in that all participants keep copies of the record. But it is described as different in that it relies not on money rewards to motivate people, but on the open-source motive of keeping a copy because you want to take part [2]. In 2024 it was renamed GitRules [3].</p>
+<h2>For example</h2>
+<p><strong>Making the book <em>Plurality</em> (2024).</strong> The book was written by many contributors. Gov4Git is the base that runs its operating rules, the <a href="plural-management-protocol.html">PMP</a>. On March 2, 2024, the author E. Glen Weyl, an economist, announced that the public version of Gov4Git was up and running, and that he would give credits to those who registered (in Japanese) [4]. People who wanted to join did so through a flow in which a request to join the community was created automatically as a GitHub issue, and an administrator approved it (in Japanese) [5].</p>
+<p>Chapter 5-0 of the book writes that the records of prioritization, approval and recognition of contributions were kept on a distributed ledger through an open-source protocol, GitRules, "grounded on open-source participation rather than financial incentives" [6].</p>
+<p><strong>Trials by participants in Japan (March 2024).</strong> In the Japanese translation community (plurality-japanese), there is a record of a participant setting up a test space (a sandbox) and trying out the administrator role. It notes that a GitHub "organization" account is required, that setting permissions was a stumbling block, and that it took several hours for voting results to be reflected. The participant commented that it was still hard to use for small decisions, but saw potential in being able to launch something like game money within a few hours (in Japanese) [7].</p>
+<h2>How it works</h2>
+<h3>Beginnings</h3>
+<p>On September 15, 2022, Protocol Labs announced that it had become a technical partner of the book project and would build "Governance for Git". The idea was to treat governance (how a group decides) as a procedure shared by the people contributing to a git repository, and to embed its history in the git history in a form that cannot be tampered with [8].</p>
+<p>According to the white paper (the document explaining the design), the book project was expected to have hundreds to thousands of contributors. That exceeds "Dunbar's number", said to be the limit on how many face-to-face relationships people can keep up, so a system that was not ad hoc was needed [9].</p>
+<h3>Why it is needed</h3>
+<p>A March 2023 article from Microsoft Research (by Weyl and others) points out that the open-source world lacks easy, secure governance tools. As a result, it argues, many communities never form or never grow large. It also mentions the worry that the spread of generative AI will increase the number of malicious participants posing as collaborators [10].</p>
+<p>The first prototype centered on two things: setting the priority of contributions with <a href="quadratic-voting.html">Quadratic Voting</a> (a voting method in which pouring many votes into one option becomes increasingly expensive), and a "currency" valid only within the community, such as the credits used for voting [10]. It also aimed to let communities that had outgrown the single leader who founded them carry on by themselves [10].</p>
+<h3>How it differs from a blockchain</h3>
+<p>According to the white paper, a Gov4Git record serves one community only. When claims conflict, that community's governance rules decide. So there is no need, as on public blockchains, to pick a winner through a race of costly, energy-hungry computation. The white paper says it can run on a small computer (a Raspberry Pi) or on GitHub's free automation environment [9].</p>
+<p>The white paper also gives as a reason that public blockchains, because their locations are known, can be targeted and blocked by authoritarian states [9]. In a 2023 podcast, the developer Petar Maymounkov said, in substance, that public blockchains are built to serve many applications globally at high speed, while governance within one community, as a human deliberative process, needs few of those features, so they chose a different design [11].</p>
+<h3>Use and spread</h3>
+<p>According to the README (the introductory document), the only infrastructure it always needs is a place to host git, and people who are not engineers can use it through a desktop app [1]. The system is not specific to the PMP; the book project's explanation says it is a base on which almost any decision method can be built, and the PMP is what the book used on top of it [2].</p>
+<p>The development team itself uses Gov4Git to manage its development plans [12]. The arts and culture platform Cube Commons and the earth-science software EarthSciML have also adopted it [13].</p>
+<h3>A change of name</h3>
+<p>In March 2024, Gov4Git announced its renaming to GitRules. According to the Japanese community's records, by April 10 every "Gov4Git" in the book's text had been replaced with "GitRules". Hirokazu Nishio noted that since it does not even say "formerly Gov4Git", some people might lose track of the connection (in Japanese) [3][5].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>A high threshold for joining.</strong> A Japanese note on installation writes that the threshold is high for people unused to git who just want to try it. It also records the question of whether, since the system gives more say the more you contribute, joining means much to people who do not particularly want a say (in Japanese) [14].</li>
+<li><strong>Cases where people cannot join.</strong> In March 2025, a user reported being unable to join through the app because their personal GitHub ID did not match the organization's name. Weyl apologized and replied, in substance, that he did not know how to solve it and the developers might have ideas [15].</li>
+<li><strong>Is it a blockchain or not?</strong> The introductory text likens it to a blockchain, and the white paper calls it a "governance blockchain". But it is different from public blockchains, and uses neither money incentives nor computational races [2][9]. Care is needed not to assume, from the name alone, that they are the same thing.</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>Chapter 5-0 of the book, "Collaborative Technology and Democracy", mentions GitRules while explaining how the book itself was made [6]. The book project's documentation explains that every member's git keeps a copy of the credit ledger, and discrepancies are resolved through governance procedures [16].</p>
+<p>Gov4Git is the base that runs the book's operating rules, the <a href="plural-management-protocol.html">PMP</a>, and the ledger that records the <a href="plural-credits.html">⿻ credits</a> distributed under them. In a December 2023 video message, Weyl said, in substance, that what sets it apart from a blockchain is that it is not built on financial incentives: participants voluntarily maintain the database as part of taking part in the project [17]. The attempt to write a book with many people is also an example of <a href="creative-collaboration.html">Creative Collaborations</a>.</p>
+<h2>Further reading</h2>
+<ol>
+<li>The book project's documentation, "Gov4Git" (English, document) — https://github.com/pluralitybook/plurality/tree/main/docs</li>
+<li>Microsoft Research, "Gov4git: A Decentralized Platform for Community Governance" (English, article) — https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</li>
+<li>The Gov4Git README (English, document) — https://github.com/gov4git/gov4git</li>
+<li>The Governance for git white paper (English, document) — https://github.com/gov4git/doc</li>
+<li>MSR podcast, "Collaborators: Gov4git" (English, audio) — https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</li>
+<li>plurality-japanese (in Japanese, notes and trial records) — https://scrapbox.io/plurality-japanese/</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Gov4Git README — https://github.com/gov4git/gov4git ［MIT / Apache-2.0］</li>
+<li>pluralitybook issue #333 (overview of Gov4Git and the PMP, 2024-02-26) — https://github.com/pluralitybook/plurality/issues/333 ［CC0］</li>
+<li>plurality-japanese, "Gov4GitはGitRulesになりました" (Gov4Git has become GitRules) (2024-04-10, in Japanese) — https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F</li>
+<li>plurality-japanese, "Gov4Gitパブリックプレビュー開始" (Gov4Git public preview begins) (2024-03-02, in Japanese) — https://scrapbox.io/plurality-japanese/Gov4Git%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E9%96%8B%E5%A7%8B</li>
+<li>plurality-japanese, "Gov4git" (in Japanese) — https://scrapbox.io/plurality-japanese/Gov4git</li>
+<li><em>Plurality</em>, 5-0 "Collaborative Technology and Democracy" — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>plurality-japanese, "gov4gitの管理者として遊んでみる" (Playing with gov4git as an administrator) (2024-03-06, in Japanese) — https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E7%AE%A1%E7%90%86%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B</li>
+<li>Protocol Labs, "Protocol Labs partners with the Plurality Book Project" (2022-09-15) — https://pl.xyz/blog/protocol-labs-and-plurality-book/</li>
+<li>Governance for git white paper — https://github.com/gov4git/doc/blob/main/whitepaper/whitepaper.md</li>
+<li>Microsoft Research, "Gov4git: A Decentralized Platform for Community Governance" (2023-03-19) — https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</li>
+<li>MSR podcast, "Collaborators: Gov4git" (2023-05-03) — https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</li>
+<li>gov4git/roadmap — https://github.com/gov4git/roadmap</li>
+<li>Search for adoptions on GitHub — https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues ［MIT］</li>
+<li>plurality-japanese, "gov4gitのインストール方法" (How to install gov4git) (in Japanese) — https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95</li>
+<li>pluralitybook issue #1071 (2025-03-14) — https://github.com/pluralitybook/plurality/issues/1071 ［CC0］</li>
+<li>pluralitybook project documentation, "Gov4Git" — https://github.com/pluralitybook/plurality/tree/main/docs ［CC0］</li>
+<li>Glen Weyl on Plurality Seoul (2023-12-02, video message) — https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</li>
+</ol><div class='related'>Related: <a href='plural-management-protocol.html'>What is the Plural Management Protocol (PMP)?</a> ・ <a href='plural-credits.html'>What are ⿻ credits (Plural credits)?</a> ・ <a href='quadratic-voting.html'>What is Quadratic Voting?</a> ・ <a href='quadratic-funding.html'>What is Quadratic Funding?</a> ・ <a href='creative-collaboration.html'>What are Creative Collaborations?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

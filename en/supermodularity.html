@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is supermodularity?</title><meta name="description" content="The property that &quot;the whole is greater than the sum of the parts&quot;. When people or things come together and work jointly, they create more value than the total they would produce working separately. The book Plurality uses this word to describe the power of collaboration."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/supermodularity.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/supermodularity.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/supermodularity.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/supermodularity.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/supermodularity.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is supermodularity?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/supermodularity.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="The property that &quot;the whole is greater than the sum of the parts&quot;. When people or things come together and work jointly, they create more value than the total they would produce working separately. The book Plurality uses this word to describe the power of collaboration."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../supermodularity.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/supermodularity.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is supermodularity?</h1><div class='lead'>The property that &quot;the whole is greater than the sum of the parts&quot;. When people or things come together and work jointly, they create more value than the total they would produce working separately. The book Plurality uses this word to describe the power of collaboration.</div><p>If only one person in the world had a telephone, it would be useless. The more people use telephones, the more each one is worth. In mathematics, this property, where the more we come together and work together the more we gain, is called supermodularity. The book <em>⿻ Plurality</em> uses the word to define what collaboration is.</p>
+<h2>In short</h2>
+<p>Supermodularity is <strong>the property that "the whole is greater than the sum of the parts"</strong>. When people or things come together and work jointly, they create more value than the total of what they would produce working separately [1]. Chapter 3-2 of the book adds that it is "sometimes called 'increasing returns'" [2], an economics term for gaining more and more as you put more in.</p>
+<h2>For example</h2>
+<p><strong>A worked example (made-up numbers for illustration).</strong> Say A working alone produces a value of 3, and B working alone also produces 3. Separately, that totals 3 + 3 = 6. If the two produce a value of 10 when they work together, then since 10 is greater than 6, this collaboration is supermodular. If, on the other hand, working together produces only 5, the whole is less than the sum of the parts: it is "submodular" (diminishing returns).</p>
+<p><strong>Railway networks.</strong> Chapter 3-2 of the book gives a railroad network as an example of technology in which the whole is greater than the sum of its parts. Such technologies create market power and effects on people outside the deal. The example comes in the discussion of the philosopher John Dewey, where the book explains why such technologies are hard for both markets and existing democratic institutions to handle [2].</p>
+<p><strong>Open-source software.</strong> Chapter 4-3 treats open-source software, which anyone can use and improve, as an example of supermodular production. "Collaboration among multiple individuals often creates greater value than individual actions alone. It is a supermodular production. And the resulting products are replicated and provide utility to many people." In such situations, the book writes, "money is a poor or even hopeless way to keep track of value" [3].</p>
+<p><strong>Network effects at tech companies.</strong> Chapter 6-0 describes how start-ups that receive investment grow their user base rapidly and gain a dominant position in the market. What is at work is the benefit of supermodularity, such as network effects (the more users, the more valuable) and what can be learned from users' data [4].</p>
+<h2>In more detail</h2>
+<h3>As a definition of collaboration</h3>
+<p>Chapter 5-0 writes that describing collaboration as "the working of several entities (people or groups) together towards a common goal" misses something crucial: "the power that working together has to create something greater than the sum of what the parts could have created separately" [1].</p>
+<p>According to the book, "Mathematically, this idea is known as 'supermodularity' and captures the classic idea attributed to Aristotle that 'the whole is greater than the sum of the parts'". An early quantitative application, the book writes, is the idea of "comparative advantage", set out by the economist David Ricardo in 1817 [1].</p>
+<h3>Why markets struggle with it</h3>
+<p>According to chapter 5-7, one of the conditions for markets to make a profit and run efficiently is "decreasing returns", that is, "the whole is less than the sum of its parts". Supermodularity is the opposite. When there are increasing returns, "paying everyone their marginal product yields a loss" [5].</p>
+<p>In the worked example, A's joining adds 10 − 3 = 7, and B's joining also adds 7. Paying each of them 7 comes to 14, more than the 10 that was produced. That is the book's explanation checked with numbers.</p>
+<p>Public goods (things everyone can use, such as roads and parks) are an extreme case. Economists have long argued that markets severely under-supply public goods. But the book writes that "even less extreme cases of increasing returns/supermodularity are severely under-provided by capitalism" [5].</p>
+<h3>The paper behind the term</h3>
+<p>The reference the book attaches to the word is a paper by Divya Siddarth, Matthew Prewitt and Glen Weyl (Collective Intelligence Project, 2024) [1][6].</p>
+<p>The paper calls things that are cheaper to provide to many people together than to each person separately "supermodular goods". This is broader than public goods in the usual sense, and it gives logistics networks, public health, digital infrastructure and scientific research as examples. The paper argues that AI is strengthening this tendency as never before [6].</p>
+<p>According to the paper, such areas are prone to monopoly and underinvestment, and leaving them to the state alone or to the private sector alone does not work. The paper therefore proposes mechanisms that combine democratic decision-making, markets and community governance. Its examples include <a href="quadratic-funding.html">Quadratic Funding</a>, community currencies and deliberation using tools such as <a href="polis.html">Polis</a> [6].</p>
+<h3>Depth and breadth</h3>
+<p>Chapter 5-0 roughly defines the "depth" of collaboration in terms of "the degree of supermodularity for a fixed set of participants: how much greater is what they create than the sum of what they can create separately". Relationships of love or other deep connection "are among the deepest", the book writes, while anonymous market transactions are shallow [7].</p>
+<p>Part 5 of the book then declares that it will describe "how technology can empower supermodularity across social difference or, more colloquially, 'collaboration across diversity'" [1].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>More is not simply better.</strong> The book itself points out a danger: "Bridging differences for collaboration often erodes them, harnessing their potential but also reducing that potential in the future." Its example is "the way that globalization has both brought gains from trade, such as diversifying cuisine, while at the same time arguably homogenizing culture". So, the book writes, ⿻ must be concerned "not just harnessing collaboration across diversity but also <em>regenerating</em> diversity" [8].</li>
+<li><strong>Universal participation is not always a gain.</strong> Chapter 6-2 describes health insurance as something that "exhibits supermodularity in group size", but adds a limit: it is "not requiring or even benefiting from universal participation" [9].</li>
+<li><strong>A reader's question.</strong> In reading notes on the book, Jeffrey Fossett found the explanation linking supermodularity to comparative advantage interesting. Fossett then asks how collaboration across diversity can be advanced without flattening that diversity, and whether it can really be done [10].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>The word appears throughout the book. In chapter 3-2, in the section on Dewey's "<a href="emergent-publics.html">emergent publics</a>", it comes up as a reason why markets cannot handle the new connections that technology creates [2].</p>
+<p>In chapter 5-0, it is the word that defines the whole of Part 5. "Supermodularity across social difference" means the same as "<a href="collaboration-across-difference.html">collaboration across social difference</a>", and the tools that support it are <a href="collaborative-technology.html">collaborative technology</a> [1].</p>
+<p>In chapter 5-7, "<a href="social-markets.html">Social Markets</a>", the book shows that capitalism cannot fully support supermodular collaboration. It then sets out remedies such as the "Henry George Theorem", which says that correctly designed common ownership taxes can fund the investments this requires [11]. → <a href="harberger-tax.html">Harberger tax</a></p>
+<p>It also appears in chapter 4-3, "<a href="commerce-and-trust.html">Commerce and Trust</a>", chapter 6-2 (health) and chapter 7-0 (policy) [3][9][12]. Chapter 7-0 says: "The value created by supermodular shared goods eventually must accrue somewhere with submodular returns, which can and should be recycled back to support those values' sources" [12].</p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Plurality</em>, chapter 5-0 "Collaborative Technology and Democracy", opening (English, book) — https://www.plurality.net/v/chapters/5-0/eng/</li>
+<li><em>Plurality</em>, chapter 3-2 "Connected Society", section on Dewey (English, book) — https://www.plurality.net/v/chapters/3-2/eng/</li>
+<li><em>Plurality</em>, chapter 5-7 "Social Markets" (English, book) — https://www.plurality.net/v/chapters/5-7/eng/</li>
+<li>Siddarth, Prewitt and Weyl, "Beyond Public and Private: Collective Provision Under Conditions of Supermodularity" (English, paper, 2024) — https://www.cip.org/supermodular</li>
+<li>GreenPill #78, "SuperModularity with Divya Siddarth" (English, podcast) — https://128c3f4a-6136-477c-8898-83d022a2d198.libsyn.com/77-supermodularity-with-divya-siddarth</li>
+<li><em>Plurality</em>, chapter 5-0 "協働テクノロジーと民主主義" (in Japanese, book) — https://www.plurality.net/v/chapters/5-0/jpn/</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li><em>Plurality</em>, 5-0 "Collaborative Technology and Democracy", opening and footnotes — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 3-2 "Connected Society", section "John Dewey's emergent publics" — https://www.plurality.net/v/chapters/3-2/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-3 "Commerce and Trust" — https://www.plurality.net/v/chapters/4-3/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 6-0 "From ⿻ to Reality" — https://www.plurality.net/v/chapters/6-0/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-7 "Social Markets", around Figure 5-7-C — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li>Siddarth, Prewitt and Weyl, "Beyond Public and Private: Collective Provision Under Conditions of Supermodularity" (CIP, 2024) — https://www.cip.org/supermodular</li>
+<li><em>Plurality</em>, 5-0, section "The depth-breadth spectrum" — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-0, section "Collaboration across diversity: promise and challenges" — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 6-2 "Health" — https://www.plurality.net/v/chapters/6-2/eng/ ［CC0］</li>
+<li>Jeffrey Fossett, "Notes on the Plurality Book" — https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html</li>
+<li><em>Plurality</em>, 5-7 "Social Markets" (paragraph on the Henry George Theorem) — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 7-0 "Policy" — https://www.plurality.net/v/chapters/7-0/eng/ ［CC0］</li>
+</ol><div class='related'>Related: <a href='collaboration-across-difference.html'>What is collaboration across social difference?</a> ・ <a href='social-markets.html'>What are Social Markets?</a> ・ <a href='quadratic-funding.html'>What is Quadratic Funding?</a> ・ <a href='emergent-publics.html'>What are emergent publics?</a> ・ <a href='commerce-and-trust.html'>What is Commerce and Trust (⿻ money)?</a> ・ <a href='collaborative-technology.html'>What is collaborative technology?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

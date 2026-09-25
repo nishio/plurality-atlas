@@ -1,0 +1,110 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是廣泛傾聽（Broad Listening）？</title><meta name="description" content="用 AI 閱讀成千上萬人的自由意見，把相似的意見歸在一起、畫成一張「論點地圖」，讓一個人也能聽見許多人聲音的技術與實踐。它正好是電視、廣播這類「廣播」（broadcast）的反方向。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/broad-listening.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/broad-listening.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/broad-listening.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是廣泛傾聽（Broad Listening）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/broad-listening.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="用 AI 閱讀成千上萬人的自由意見，把相似的意見歸在一起、畫成一張「論點地圖」，讓一個人也能聽見許多人聲音的技術與實踐。它正好是電視、廣播這類「廣播」（broadcast）的反方向。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../broad-listening.html">日本語</a> <a class="lang" hreflang="en" href="../en/broad-listening.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是廣泛傾聽（Broad Listening）？</h1><div class='lead'>用 AI 閱讀成千上萬人的自由意見，把相似的意見歸在一起、畫成一張「論點地圖」，讓一個人也能聽見許多人聲音的技術與實踐。它正好是電視、廣播這類「廣播」（broadcast）的反方向。</div><p>透過電視或廣播，一個人的聲音可以傳給幾百萬人。那反過來，一個人要怎樣才能好好聽見幾百萬人的聲音？送到政府機關或政治人物手上的意見，往往不是多到讀不完，就是少到有偏差。廣泛傾聽（broad listening）就是為了回答「如何聽見許多人的聲音」而誕生的想法。</p>
+<h2>一句話說明</h2>
+<p>廣泛傾聽，是<strong>讓一個人能聽見許多人聲音的技術</strong>。如果說廣播（broadcast）是「一對多」，這就是「多對一」。</p>
+<p>具體來說，就是由 AI 閱讀成千上萬則自由書寫的意見，把相似的意見歸在一起，把整體畫成一張「論點地圖」[1]。</p>
+<p>下面的例子多半來自日本，並會隨文簡單說明日本的背景。</p>
+<h2>舉例來說</h2>
+<p><strong>2024 年東京都知事選舉。</strong> 參選人安野貴博（日本的 AI 工程師）的團隊，透過 X（前 Twitter）的主題標籤「#TOKYOAI」和匿名意見箱等管道收集意見，再用「我城對談」（Talk to the City，TTTC）這個工具畫成散布圖，在選舉期間做了 30 份以上的報告。從匿名意見箱的投稿中抽出的 951 則意見裡，浮現出多則希望取消育兒補助所得限制的聲音；這個意見被反映在政見（manifesto）從 1.0 版到 2.0 版的更新中[2]。詳見〈<a href="anno-2024-tokyo-campaign.html">安野貴博的 2024 年都知事選舉</a>〉。</p>
+<p><strong>東京都的長期戰略。</strong> 東京都自 2024-11-22 起徵集「你心目中 2050 年代的東京」。收到的 27,915 則意見經 AI 分析，被用來作為重新檢視「2050 東京戰略」政策分類的材料[3][4][5]。→〈<a href="tokyo-2050-broad-listening.html">東京都「2050 東京戰略」的廣泛傾聽</a>〉</p>
+<p><strong>日本國會。</strong> 2025-03-07，日本國民民主黨的參議員伊藤孝惠在參議院預算委員會上，以 TTTC 做出的「論點地圖」為資料質詢首相。日文書《廣泛傾聽》（ブロードリスニング，後述）認為，這是國會中第一次以廣泛傾聽的結果作為質詢政府之依據的例子[6][7]。</p>
+<h2>運作方式</h2>
+<h3>為什麼需要</h3>
+<p>和 10 個人各談一小時，可以深入了解，卻不知道這 10 個人能不能代表整體。問 100 萬人「是或否」，可以知道整體趨勢，卻不知道「為什麼」「是怎樣的」。</p>
+<p>只要人力與時間有限，往往就只能在「深入聽」和「廣泛聽」之間二選一。廣泛傾聽想要兩者兼顧[1]。</p>
+<p>《多元宇宙》第 5-4 章〈擴增審議〉也寫道：「雖然廣播（允許許多人聽到同一個聲明）已經大大改進，但廣泛傾聽（讓某人深思熟慮地消化一系列觀點）仍然極其困難和耗時」[8]。</p>
+<h3>怎麼運作</h3>
+<p>TTTC，以及以它為基礎、為日文打造的<a href="kouchou-ai.html">広聴AI</a>（kouchou-ai，「広聴」是日文「廣泛傾聽」之意），大致分三個步驟[2]：</p>
+<ol>
+<li>由生成式 AI 從貼文中抽出「意見」</li>
+<li>把文字轉成一串數字（向量），把相似的意見歸成一群（分群）</li>
+<li>由生成式 AI 為每一群加上標題與摘要</li>
+</ol>
+<p>結果是一張散布圖，每個點代表一則意見。可以沿著群組一路讀到原始貼文[2]。</p>
+<p>這件事能以實際可負擔的成本做到，是最近的事。因為把文字意義轉成數字的技術（2019 年）、把高維資料壓成二維圖的技術（2018 年），以及能摘要大量文字的大型語言模型（LLM，例如 2022 年公開的 ChatGPT）都到齊了[1]。根據《廣泛傾聽》的試算，用広聴AI 分析 1 萬則自由書寫意見的費用約為 500 日圓[9]。</p>
+<h3>三種意思</h3>
+<p>這個詞依脈絡有不同意思。《廣泛傾聽》（DD2030 社群著；DD2030 是以開源方式打造公民參與工具的日本非營利社群）把它分成三種[1]：</p>
+<ol>
+<li><strong>作為工具</strong>——把大量意見用 AI 整理成看得見的形式的「元件」，例如 TTTC、広聴AI、Google Jigsaw 的 Sensemaker 等。</li>
+<li><strong>作為擴增審議（用技術深化討論）的一部分</strong>——收集意見、討論、決定政策的流程持續循環，它是其中一環。臺灣的 <a href="vtaiwan.html">vTaiwan</a> 與 <a href="polis.html">Polis</a> 是代表例子。</li>
+<li><strong>由政治人物或行政機關直接使用</strong>——不經過討論的場合，由政治人物或政府機關用工具收集聲音、用於政策。在日本，以安野的都知事選舉為契機，這種形式先普及開來。</li>
+</ol>
+<h3>和問卷、公眾意見徵集有什麼不同</h3>
+<p>廣泛傾聽能處理大量的自由書寫意見，因此可以找到設計調查的人沒想到的論點。《廣泛傾聽》把這形容為把「決定什麼是議題」的權力開放給大家[9]。</p>
+<p>另一方面，對於日本的「パブリックコメント」（公眾意見徵集，行政機關提出草案後徵求意見的程序，簡稱「パブコメ」），《廣泛傾聽》把它定位為對「幾乎已經完成的草案做最後檢查」的場合。書中說，廣泛傾聽負責在那之前「找出課題」的階段，兩者是互補的[10]。</p>
+<h2>爭議與批評</h2>
+<p>《廣泛傾聽》一書自己就清楚寫出了限制與誤解。</p>
+<ul>
+<li><strong>偏向聲音大的人。</strong> 會寫自由意見的，是意見強烈的人；不表達意見的多數人不會出現。書中引用 Pew Research Center（2019）的調查：關於政治的推文有 73% 是由 6% 的使用者發出的。書也指出，越習慣寫文章的人，聲音越容易被聽見[9]。</li>
+<li><strong>把數量誤讀成「民意」。</strong> 散布圖的縱軸和橫軸沒有意義。群組的大小是「貼文數」，不是「持這種意見的人的比例」。書中說，因為贊成的聲音是反對的三倍就認為它受支持，是典型的誤讀；不應只靠廣泛傾聽來判斷政策或選舉[9]。書建議的是兩階段做法：用廣泛傾聽建立假設，再用隨機抽樣的調查來驗證[9]。</li>
+<li><strong>工具不會自己收集意見。</strong> 能收到多少意見，取決於宣傳與話題性。書中明白寫道，安野團隊和東京都能收集到大量意見，並不是工具的功勞。在廣島縣的例子裡，透過主題標籤收到的意見只有 2 則[9][11]。→〈<a href="municipal-broad-listening.html">地方政府的廣泛傾聽</a>〉</li>
+<li><strong>「由 AI 決定政策」的誤解。</strong> 書中說，這是在任何政治體制下都能用的工具，讀結果、做決定的是人（選出來的政治人物與議會）[10]。</li>
+<li><strong>東京都公眾意見徵集中出現的疑慮。</strong> 對 2050 東京戰略草案提交的意見中，有人認為收集到的是習慣發表意見的人的聲音，不應作為政策依據；也有人認為應審慎檢驗徵集方式，或質疑是否整理公開就結束了。東京都回應說，這是為了作為擬定戰略的參考而進行的[12]。</li>
+<li><strong>高估「改變了政策」的故事。</strong> 《廣泛傾聽》第 5 章（中山心太執筆）檢驗了東京都「觀光成為獨立戰略」的說法，指出觀光政策的擴充在徵集意見之前、2024-01 的修訂中就已經在推動，並結論說「廣泛傾聽改變了政策」的故事至少有一部分是高估的[3]。</li>
+<li><strong>「那張散布圖」不等於廣泛傾聽。</strong> 散布圖的印象太強烈，常被誤以為圖本身就是廣泛傾聽。書中提醒，也有像 Polis 這樣放不進散布圖的工具[1][2]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>在《多元宇宙》裡，它出現在 5-4 章〈<a href="augmented-deliberation.html">擴增審議</a>〉，與「廣播」對比，作為「廣泛傾聽」的問題提出[8]。英文版寫道，LLM 等<a href="generative-foundation-models.html">生成式基礎模型</a>正開始為解決這個問題開路，並舉安野團隊的做法（在 GitHub 公開的政見、用 TTTC 視覺化、24 小時回答問題的 AI 分身）為例[8]。（目前的繁體中文版 5-4 章沒有這段安野的案例。）</p>
+<p>關於詞的來源，英文版在註腳中寫道，就作者所知，這個概念最早由 Andrew Trask 提出[8]。2024 年 7 月，《Plurality》作者衛谷倫也在 X 上說了同樣的事[13]。</p>
+<p>《廣泛傾聽》提到，這個詞在《Plurality》擴增審議一章裡只出現了 3 次；並寫道，自己這本書暗地裡的目標，是用實際案例做出一個好入口的「兌水版 Plurality」[1]。</p>
+<p>相鄰的文章：
+- <a href="talk-to-the-city.html">我城對談</a>與<a href="kouchou-ai.html">広聴AI</a>——從自由意見畫出地圖的工具
+- <a href="polis.html">Polis</a>——從贊成／反對的投票畫出意見地圖的工具
+- <a href="idobata.html">いどばた</a>（Idobata，日本的工具）——由 AI 逐一訪談的討論平台
+- <a href="bridging.html">橋接</a>——跨越群體獲得支持的意見</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》5-4〈擴增審議〉（中文，書）— https://www.plurality.net/v/chapters/5-4/zh-tw/</li>
+<li>《Plurality》英文版 5-4 "Augmented Deliberation"（英文，書，含安野的案例）— https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li>《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文，書，免費公開）— https://broadlisteningbook.com/</li>
+<li>《ブロードリスニング》原稿儲存庫（日文，書，第 2、3 章談偏差與公眾意見徵集的關係）— https://github.com/digitaldemocracy2030/broad-listening-book</li>
+<li>東京都「2050 東京戰略（草案）」公眾意見徵集結果（日文，行政文件）— https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</li>
+<li>西尾泰和〈ブロードリスニング〉（日文，筆記）— https://scrapbox.io/nishio/ブロードリスニング</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 4 章第 1 節〈安野貴博の取り組み〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 5 章〈東京都、シン東京2050、ブロードリスニングによる政策転換〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>東京都新聞稿（2024-11-22）「シン東京 2050」意見徵集（日文）— https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203</li>
+<li>東京都政策企畫局〈ブロードリスニングの考え方〉（2025-01-31，日文）— https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3</li>
+<li>《ブロードリスニング》第 4 章〈日本国内におけるブロードリスニングの広がり〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 4 章第 2 節〈国民民主の国会質問〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《多元宇宙》5-4〈擴增審議〉— https://www.plurality.net/v/chapters/5-4/zh-tw/ ；安野的案例與 Trask 的註腳見英文版 https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>《ブロードリスニング》第 2 章〈ブロードリスニングとアンケートの違い〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 3 章〈デジタル民主主義とブロードリスニング、新しい民意の届け方〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》第 8 章第 2 節〈広島県の事例〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>東京都「2050 東京戰略（草案）」公眾意見徵集結果（節錄，日文）— https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</li>
+<li>西尾泰和〈ブロードリスニングの命名〉（含衛谷倫的 X 貼文 https://x.com/glenweyl/status/1817955522035032270 ，日文）— https://scrapbox.io/nishio/ブロードリスニングの命名</li>
+</ol><div class='related'>相關: <a href='talk-to-the-city.html'>什麼是我城對談（Talk to the City）？</a> ・ <a href='kouchou-ai.html'>什麼是広聴AI（kouchou-ai）？</a> ・ <a href='augmented-deliberation.html'>什麼是擴增審議？</a> ・ <a href='polis.html'>什麼是 Polis？</a> ・ <a href='idobata.html'>什麼是いどばた（Idobata）？</a> ・ <a href='anno-2024-tokyo-campaign.html'>什麼是安野貴博的 2024 年都知事選舉？</a> ・ <a href='tokyo-2050-broad-listening.html'>什麼是東京都「シン東京2050」的廣泛傾聽？</a> ・ <a href='municipal-broad-listening.html'>什麼是地方政府的廣泛傾聽？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

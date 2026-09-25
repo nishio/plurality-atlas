@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is Polis?</title><meta name="description" content="An online discussion tool where participants write short statements and simply click &quot;agree&quot;, &quot;disagree&quot; or &quot;pass&quot; on other people&#x27;s. From the voting patterns it draws a map of opinion groups, and brings to the surface the statements that win support across those groups."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/polis.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/polis.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/polis.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/polis.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/polis.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is Polis?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/polis.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="An online discussion tool where participants write short statements and simply click &quot;agree&quot;, &quot;disagree&quot; or &quot;pass&quot; on other people&#x27;s. From the voting patterns it draws a map of opinion groups, and brings to the surface the statements that win support across those groups."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../polis.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/polis.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is Polis?</h1><div class='lead'>An online discussion tool where participants write short statements and simply click &quot;agree&quot;, &quot;disagree&quot; or &quot;pass&quot; on other people&#x27;s. From the voting patterns it draws a map of opinion groups, and brings to the surface the statements that win support across those groups.</div><p>Ask for opinions on an online message board and the loudest voices tend to dominate, turning the thread into a shouting match. Replies breed more replies, and in the end nobody can tell which views are held by how many people. Polis was built to do the opposite. Instead of letting people argue, it shows how their views divide and where they overlap.</p>
+<h2>In short</h2>
+<p>Polis (pol.is) is a web tool in which many people write short statements on a single question, and click "agree", "disagree" or "pass" on each other's statements [1][2].</p>
+<p>From the pattern of votes, it shows clusters of people who think alike as a kind of map [1]. It then highlights the statements that are agreed on by every cluster [1][2].</p>
+<h2>For example</h2>
+<p><strong>Regulating Uber in Taiwan (2015).</strong> vTaiwan, a platform for public discussion in Taiwan, opened a Polis conversation on whether to allow the ride-hailing service Uber [3]. "Close to 2000 people participated and 100 people submitted nearly 200 comments" [3].</p>
+<p>Participants split clearly into two groups: pro-Uber and anti-Uber (pro-taxi) [3]. Even so, one statement won the agreement of nearly everyone, including taxi drivers: "I feel like the government should be able to face the challenges posed by Uber while improving Taxi's evaluation and supervision, so that taxi drivers and passengers are able to enjoy the same quality of service as Uber" [3].</p>
+<p><strong>A constitution for AI, written by the public (2023).</strong> The nonprofit Collective Intelligence Project (CIP) and the AI company Anthropic used Polis to ask about 1,000 people, selected to match the makeup of the US population, how an AI chatbot should behave [4]. 1,002 people wrote 1,127 statements and cast 38,252 votes [4]. The statements supported across groups were compiled into a "constitution" (a set of principles for the AI's behavior) and used to train a language model [4]. The project is called Collective Constitutional AI.</p>
+<p><strong>An "opinion map" for Japan's 2024 general election.</strong> On November 18, 2024, the Japanese election information site JAPAN CHOICE published an "opinion map" built with Polis as one of its components [5]. In about two weeks, 4,403 people voted [5]. It placed icons for each political party on the map of citizens' opinions, showing each party's position on statements taken from the party manifestos [5]. Hirokazu Nishio, who was involved in building it, described it as the largest application of Polis in Japan [5].</p>
+<h2>How it works</h2>
+<h3>What participants do</h3>
+<p>The organizer posts a question (for example, "What do you think about generative AI?") and a few starter statements as examples [1][3].</p>
+<p>Participants are shown other people's short statements one at a time (under 140 characters in English) and click "agree", "disagree" or "pass" [1][3]. If what they want to say hasn't come up yet, they can write a new statement. New statements are handed out in turn to other participants [1][3].</p>
+<p>There is <strong>deliberately no way to reply</strong> to someone else's statement. The Japanese-language Wikipedia explains that this design is meant to curb trolling and personal attacks [6].</p>
+<p>On the results screen, you can see a chart in which people with similar views sit close together, along with those clusters (opinion groups) [3]. It also shows the statements that characterize each group, and the statements that most people agree with overall [3].</p>
+<h3>The calculation behind it</h3>
+<p>According to the foundational paper on Polis (Small and others, 2021), the steps are roughly as follows [3].</p>
+<ol>
+<li>Build a table of participants and statements: agree is +1, disagree is −1, pass is 0.</li>
+<li>Use a method called "principal component analysis" to compress this big table into a two-dimensional "opinion map".</li>
+<li>Use a method called "k-means" to sort participants into 2 to 5 opinion groups.</li>
+<li>For each group, pick the statements it is more likely to agree with than other groups do, as that group's <strong>representative statements</strong>.</li>
+<li>Rank the statements that every group agrees with by <strong>multiplying together</strong> the probability that members of each group agree with a statement (estimated from the share of agree votes within the group). The paper calls this a "group-aware consensus" metric.</li>
+</ol>
+<p>Step 5 is the key. Here is an illustrative example (the numbers are made up; the real calculation adds a small correction so that values don't become extreme when there are few votes). A statement agreed to by 90% of group A and 80% of group B scores 0.9 × 0.8 = 0.72. A statement agreed to by 100% of group A but only 10% of group B scores 1.0 × 0.1 = 0.1. Because the values are multiplied, being disliked by even one group pulls the score down. The paper says this helps "protect from tyranny of the majority and respect minority dissent" [3].</p>
+<p>According to the official explanation, the calculation uses only the table of votes and does not read the content of the statements [7]. That is why Polis can be used in any language [7].</p>
+<h3>Origins and spread</h3>
+<p>According to the English-language Wikipedia, Polis was created by Colin Megill, Christopher Small and Michael Bjorkegren after the Occupy Wall Street and Arab Spring movements, and released in 2012 [8]. The software is open source and is now run by a nonprofit, The Computational Democracy Project [8].</p>
+<p>The official collection of case studies lists vTaiwan (over 200,000 people), Austria's citizens' assembly on climate (2022, over 5,000 people), a national referendum in Uruguay (2020–21), and conversations with young people run by the United Nations Development Programme (UNDP, over 30,000 people), among others [9].</p>
+<h3>Combining it with AI</h3>
+<p>Polis builds a map of votes, but does not read the content of freely written text [7]. So tools appeared that use large language models (LLMs) to interpret Polis results. In a 2023 discussion in Taiwan, opinions gathered with Polis were visualized with a tool called "Talk to the City" [10]. The Japanese book <em>Broad Listening</em> stresses a difference: each dot on a Polis map represents one person, while each dot in Talk to the City represents one opinion [10].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>It has clear limits.</strong> The developers say Polis can be used in place of, or alongside, traditional surveys, but they also list its limits [3]. It doesn't work well with small numbers of participants or statements ("a lower bound of dozens of people and tens of comments"). It is unsuited to yes/no questions or leading questions. It is weak at ranking options. And there is a bias from timing: statements from early arrivals get seen more, while late arrivals get to vote on more statements [3].</li>
+<li><strong>It takes work to run.</strong> CIP reports that it had to rephrase or remove statements that were meaningless, discriminatory or off-topic, following a set policy [11]. In the Collective Constitutional AI project, the tool was modified so that people could not write statements until they had cast at least 30 votes, to reduce duplicate and meaningless posts [4]. The English-language Wikipedia also notes that, as of 2023, Polis "still required significant human labor and analysis" [8].</li>
+<li><strong>Participants are not a cross-section of society.</strong> The official report on Taiwan's 2023 discussion stated clearly that most participants were self-selected volunteers or invited experts and did not represent society as a whole [10]. So in 2024 the process moved on to a meeting of citizens chosen by lottery [10].</li>
+<li><strong>vTaiwan's decline.</strong> The book <em>Plurality</em> itself lists the problems: COVID-19 halted face-to-face meetings and participation dropped, the volunteer workload was heavy, and the government had no obligation to respond [2].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>In chapter 2-2, <em>Plurality</em> introduces Polis as the tool behind vTaiwan [2]. The book explains that "Polis functions similarly to conventional microblogging services like X (formerly Twitter)", except that "instead of displaying content that maximizes engagement, Polis shows the clusters of opinion that exist and highlights statements that bridge them" [2]. "This approach facilitates both consensus formation and a better understanding of the lines of division" [2].</p>
+<p>Chapter 5-4, "Augmented Deliberation", treats Polis as a prime example of "bridging systems" — systems that look for opinions supported across divides [12]. Pairing Polis with Community Notes, it names "how systems like Polis and Community Notes could be extended with modern graph theory and GFMs" (generative foundation models, the technology behind today's AI chatbots) as "one of the most obvious directions" [12].</p>
+<p>Related articles:
+- <a href="vtaiwan.html">vTaiwan</a> — the Taiwanese discussion platform where Polis was used
+- <a href="bridging.html">Bridging</a> — the idea of valuing support that crosses divides
+- <a href="community-notes.html">Community Notes</a> — the same idea applied to notes on social media
+- <a href="augmented-deliberation.html">Augmented Deliberation</a> — the chapter of the book that discusses Polis
+- <a href="talk-to-the-city.html">Talk to the City</a> and <a href="alignment-assemblies.html">Alignment Assemblies</a> — developments that combine it with AI</p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Plurality</em>, chapter 2-2 "The Life of a Digital Democracy" (English, book; on vTaiwan and Polis) — https://www.plurality.net/v/chapters/2-2/eng/</li>
+<li>"What is Polis?" (English, official explanation) — https://compdemocracy.org/polis/</li>
+<li>Small and others, "Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces" (2021, English, paper) — https://doi.org/10.6035/recerca.5516</li>
+<li>"Collective Constitutional AI: Aligning a Language Model with Public Input" (English, paper) — https://arxiv.org/abs/2406.07814</li>
+<li><em>Broad Listening</em>, section 4.4 "Making a map of public opinion with Polis" (in Japanese, book) — https://github.com/digitaldemocracy2030/broad-listening-book</li>
+<li>Pol.is, Japanese-language Wikipedia (in Japanese, encyclopedia) — https://ja.wikipedia.org/wiki/Pol.is</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>"What is Polis?" (The Computational Democracy Project) — https://compdemocracy.org/polis/</li>
+<li><em>Plurality</em>, 2-2 "The Life of a Digital Democracy" — https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+<li>Small and others, "Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces" (2021) — https://doi.org/10.6035/recerca.5516 ［CC BY-SA 4.0］</li>
+<li>Huang, Siddarth and others, "Collective Constitutional AI: Aligning a Language Model with Public Input" (2024) — https://arxiv.org/abs/2406.07814 ［CC BY 4.0］</li>
+<li><em>Broad Listening</em>, 4.4 "Making a map of public opinion with Polis" (in Japanese) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Pol.is, Japanese-language Wikipedia — https://ja.wikipedia.org/wiki/Pol.is ［CC BY-SA 4.0］</li>
+<li>"Algorithms" (The Computational Democracy Project) — https://compdemocracy.org/algorithms/</li>
+<li>Pol.is, English-language Wikipedia — https://en.wikipedia.org/wiki/Pol.is ［CC BY-SA 4.0］</li>
+<li>"Case studies" (The Computational Democracy Project) — https://compdemocracy.org/Case-studies/</li>
+<li><em>Broad Listening</em>, 11-1 "Taiwan" (in Japanese) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>CIP, "Alignment Assemblies: Nine Months In" (2023-11-16) — https://www.cip.org/blog/alignment-assemblies-nine-months-in</li>
+<li><em>Plurality</em>, 5-4 "Augmented Deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+</ol><div class='related'>Related: <a href='vtaiwan.html'>What is vTaiwan?</a> ・ <a href='bridging.html'>What is Bridging?</a> ・ <a href='community-notes.html'>What are Community Notes?</a> ・ <a href='augmented-deliberation.html'>What is Augmented Deliberation?</a> ・ <a href='talk-to-the-city.html'>What is Talk to the City (TTTC)?</a> ・ <a href='alignment-assemblies.html'>What are Alignment Assemblies?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

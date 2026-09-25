@@ -1,0 +1,98 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是 Gov4Git（GitRules）？</title><meta name="description" content="很多人一起寫程式碼或文件時，用來記錄並執行「誰是成員、誰有多少發言權、要採用哪些稿件」的開源工具。它被用在《多元宇宙》的寫作中，2024 年改名為 GitRules。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/gov4git.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/gov4git.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/gov4git.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/gov4git.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/gov4git.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是 Gov4Git（GitRules）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/gov4git.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="很多人一起寫程式碼或文件時，用來記錄並執行「誰是成員、誰有多少發言權、要採用哪些稿件」的開源工具。它被用在《多元宇宙》的寫作中，2024 年改名為 GitRules。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../gov4git.html">日本語</a> <a class="lang" hreflang="en" href="../en/gov4git.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是 Gov4Git（GitRules）？</h1><div class='lead'>很多人一起寫程式碼或文件時，用來記錄並執行「誰是成員、誰有多少發言權、要採用哪些稿件」的開源工具。它被用在《多元宇宙》的寫作中，2024 年改名為 GitRules。</div><p>幾個人一起寫文件，商量一下就能決定。可是參與者一旦有幾百、幾千人，「先處理誰的提案」「怎麼認可誰的貢獻」，就很難靠現場氣氛決定。Gov4Git 就是一個試圖把這種「很多人一起做東西時的決定方式」，做成軟體機制的工具。</p>
+<h2>一句話說明</h2>
+<p>Gov4Git 是在 git（記錄、共享檔案變更歷史的機制，GitHub 是代表性的服務）之上，記錄並執行以下事項的開源工具（以任何人都能使用、改良的形式公開的軟體）[1][2]：</p>
+<ul>
+<li>誰是社群的成員</li>
+<li>誰持有多少「積分」（可用於發言和投票的點數）</li>
+<li>要優先處理哪些議題、採用哪些稿件</li>
+</ul>
+<p>由參與者大家各自保存紀錄副本這一點，和區塊鏈（由許多人共享交易紀錄以防竄改的機制）相似。但說明中指出，不同之處在於它不是用金錢報酬驅動人，而是依靠因為想參與、所以保存紀錄這種開源的動機[2]。2024 年改名為 GitRules[3]。</p>
+<h2>舉例來說</h2>
+<p><strong>《多元宇宙》的寫作（2024 年）。</strong> 這本書是由許多貢獻者寫成的，支撐其營運規則<a href="plural-management-protocol.html">多元管理協定</a>（PMP）運作的就是 Gov4Git。作者、經濟學者衛谷倫（E. Glen Weyl）在 2024 年 3 月 2 日宣布，Gov4Git 的公開版已經啟動，登記的人就能得到積分[4]。想參加的人，會在 GitHub 上自動產生「我想加入這個社群」的請求（issue），經管理者核准後加入[5]。</p>
+<p>英文版 5-0 章寫道，優先排序、核准與貢獻認定的紀錄，都透過「以開源參與而非金錢誘因為基礎」的協定 GitRules，記錄在分散式帳本上[6]（目前的繁體中文版 5-0 章沒有這一句）。</p>
+<p><strong>日本參與者的試用（2024 年 3 月）。</strong> 日文翻譯社群（plurality-japanese）裡，有參與者自己建立試驗用的環境（沙盒），試著當管理者的紀錄：需要 GitHub 的「組織」帳號、在權限設定上卡關、投票結果要幾個小時才會反映。這位參與者留下的感想是：用在小小的決定上還不太方便，但幾個小時就能建立類似遊戲貨幣的東西，讓人覺得有可能性[7]。</p>
+<h2>運作方式</h2>
+<h3>開端</h3>
+<p>2022 年 9 月 15 日，Protocol Labs 宣布成為本書專案的技術夥伴，要打造「Governance for Git」。構想是把治理（集體的決定方式）看作 git 貢獻者共享的程序，並把它的歷史以無法竄改的形式嵌入 git 的歷史中[8]。</p>
+<p>依白皮書（說明設計的文件），本書專案預期貢獻者會有數百到數千人。這超過了一般認為人能維持面對面關係的上限「鄧巴數」，所以需要不是臨時湊合的機制[9]。</p>
+<h3>為什麼需要</h3>
+<p>2023 年 3 月微軟研究院的文章（衛谷倫等人）指出，開源世界缺乏方便又安全的治理機制，因此許多社群沒有誕生，也長不大。文章也提到，隨著生成式 AI 普及，偽裝成合作者的惡意參與者可能增加[10]。</p>
+<p>最初試作的核心有兩個：用<a href="quadratic-voting.html">平方投票</a>（越把很多票集中在一處就越貴的投票法）決定稿件的優先順序；以及像投票用積分這樣只在社群內通用的「貨幣」[10]。文章也寫道，要讓那些創始的單一領導者已經負荷不了的社群，能夠自己延續下去[10]。</p>
+<h3>和區塊鏈的不同</h3>
+<p>依白皮書，Gov4Git 的紀錄是單一社群專用的。要求互相衝突時，由該社群的治理規則裁決。所以不需要像公開區塊鏈那樣，用耗電的計算競賽決定勝者；在小型電腦（Raspberry Pi）或 GitHub 的免費自動執行環境上也能運作[9]。</p>
+<p>白皮書也舉出另一個理由：公開區塊鏈的位置為人所知，可能被威權國家鎖定封鎖[9]。開發者 Petar Maymounkov 在 2023 年的 Podcast 中表示，大意是：公開區塊鏈是為了在全球高速處理許多應用而設計的，而單一社群內由人來討論決定的治理，用不到其中大部分功能，所以選擇了不同的設計[11]。</p>
+<h3>用法與擴散</h3>
+<p>依說明書（README），平常必要的基礎設施只有 git 的存放處，不是技術人員的人也能從桌面應用程式使用[1]。本書專案的說明寫道，這套機制不是 PMP 專用，而是幾乎可以承載任何決定方式的底座；本書在上面用的是 PMP[2]。</p>
+<p>開發團隊自己也用 Gov4Git 管理開發計畫[12]。藝術文化平台 Cube Commons、地球科學軟體 EarthSciML 也採用了它[13]。</p>
+<h3>改了名字</h3>
+<p>Gov4Git 在 2024 年 3 月宣布改名為 GitRules。依日文社群的紀錄，到 4 月 10 日，書的正文中的「Gov4Git」已全部換成「GitRules」。西尾泰和寫道，連「舊 Gov4Git」都沒寫，可能會有人不知道兩者的關係[3][5]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>參與門檻高。</strong> 日文的安裝步驟筆記寫道，對不熟悉 git 的人來說，要輕鬆試用門檻很高。筆記也記下一個疑問：這是貢獻越多、發言權越大的機制，對不是特別想發言的人來說，參與的意義是不是很薄弱？[14]</li>
+<li><strong>無法參與的例子。</strong> 2025 年 3 月，一位使用者報告，因為 GitHub 的個人帳號與組織名稱對不上，無法從應用程式參與。衛谷倫道歉後，回覆的大意是：自己不知道解決辦法，開發者也許有想法[15]。</li>
+<li><strong>是區塊鏈，還是不是？</strong> 介紹文寫的是「類似區塊鏈」，白皮書稱之為「治理的區塊鏈」。不過它和公開區塊鏈不同，不使用金錢誘因，也不使用計算競賽[2][9]。要注意別只看名稱就以為是同一種東西。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>英文版 5-0 章〈協作技術與民主〉在說明本書本身的做法時提到 GitRules[6]。本書的營運文件說明，積分帳本由全體成員的 git 各自保存副本，不一致時以治理程序解決[16]。</p>
+<p>Gov4Git 是執行本書營運規則<a href="plural-management-protocol.html">多元管理協定</a>的底座，也是記錄在其中發放的 <a href="plural-credits.html">⿻ 積分</a>的帳本。衛谷倫在 2023 年 12 月的影片訊息中表示，大意是：參與者把自己維護資料庫當作參與的一部分，這一點是和區塊鏈的不同[17]。很多人一起寫書的嘗試，本身也是<a href="creative-collaboration.html">創意協作</a>的實例。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>本書的營運文件 "Gov4Git"（英文，文件）— https://github.com/pluralitybook/plurality/tree/main/docs</li>
+<li>微軟研究院 "Gov4git: A Decentralized Platform for Community Governance"（英文，文章）— https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</li>
+<li>Gov4Git 的 README（英文，文件）— https://github.com/gov4git/gov4git</li>
+<li>Governance for git 白皮書（英文，文件）— https://github.com/gov4git/doc</li>
+<li>微軟研究院 Podcast "Collaborators: Gov4git"（英文，音訊）— https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</li>
+<li>plurality-japanese（日文，筆記與試用紀錄）— https://scrapbox.io/plurality-japanese/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>Gov4Git README — https://github.com/gov4git/gov4git ［MIT / Apache-2.0］</li>
+<li>pluralitybook issue #333（Gov4Git 與 PMP 概要，2024-02-26）— https://github.com/pluralitybook/plurality/issues/333 ［CC0］</li>
+<li>plurality-japanese「Gov4GitはGitRulesになりました」（2024-04-10，日文）— https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F</li>
+<li>plurality-japanese「Gov4Gitパブリックプレビュー開始」（2024-03-02，日文）— https://scrapbox.io/plurality-japanese/Gov4Git%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E9%96%8B%E5%A7%8B</li>
+<li>plurality-japanese「Gov4git」（日文）— https://scrapbox.io/plurality-japanese/Gov4git</li>
+<li>《Plurality》英文版 5-0 "Collaborative Technology and Democracy" — https://www.plurality.net/v/chapters/5-0/eng/ ［CC0］</li>
+<li>plurality-japanese「gov4gitの管理者として遊んでみる」（2024-03-06，日文）— https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E7%AE%A1%E7%90%86%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B</li>
+<li>Protocol Labs, "Protocol Labs partners with the Plurality Book Project"（2022-09-15）— https://pl.xyz/blog/protocol-labs-and-plurality-book/</li>
+<li>Governance for git 白皮書 — https://github.com/gov4git/doc/blob/main/whitepaper/whitepaper.md</li>
+<li>微軟研究院 "Gov4git: A Decentralized Platform for Community Governance"（2023-03-19）— https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</li>
+<li>微軟研究院 Podcast "Collaborators: Gov4git"（2023-05-03）— https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</li>
+<li>gov4git/roadmap — https://github.com/gov4git/roadmap</li>
+<li>GitHub 上採用例的搜尋 — https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues ［MIT］</li>
+<li>plurality-japanese「gov4gitのインストール方法」（日文）— https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95</li>
+<li>pluralitybook issue #1071（2025-03-14）— https://github.com/pluralitybook/plurality/issues/1071 ［CC0］</li>
+<li>pluralitybook 營運文件 "Gov4Git" — https://github.com/pluralitybook/plurality/tree/main/docs ［CC0］</li>
+<li>Glen Weyl on Plurality Seoul（2023-12-02，影片訊息）— https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</li>
+</ol><div class='related'>相關: <a href='plural-management-protocol.html'>什麼是多元管理協定（Plural Management Protocol，PMP）？</a> ・ <a href='plural-credits.html'>什麼是⿻ 積分（plural credits）？</a> ・ <a href='quadratic-voting.html'>什麼是平方投票？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='creative-collaboration.html'>什麼是創意協作（creative collaboration）？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

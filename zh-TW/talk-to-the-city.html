@@ -1,0 +1,105 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是我城對談（Talk to the City）？</title><meta name="description" content="讓 AI 讀取大量自由書寫的意見，依相近的論點歸類，做成點狀地圖與摘要的免費開源工具。由美國的 AI Objectives Institute 打造，用在臺灣的討論，也用在日本廣泛傾聽的起步階段。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/talk-to-the-city.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/talk-to-the-city.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/talk-to-the-city.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/talk-to-the-city.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/talk-to-the-city.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是我城對談（Talk to the City）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/talk-to-the-city.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="讓 AI 讀取大量自由書寫的意見，依相近的論點歸類，做成點狀地圖與摘要的免費開源工具。由美國的 AI Objectives Institute 打造，用在臺灣的討論，也用在日本廣泛傾聽的起步階段。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../talk-to-the-city.html">日本語</a> <a class="lang" hreflang="en" href="../en/talk-to-the-city.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是我城對談（Talk to the City）？</h1><div class='lead'>讓 AI 讀取大量自由書寫的意見，依相近的論點歸類，做成點狀地圖與摘要的免費開源工具。由美國的 AI Objectives Institute 打造，用在臺灣的討論，也用在日本廣泛傾聽的起步階段。</div><p>一旦呼籲「歡迎提供意見」，有時會收到成千上萬則文字。但要由人讀完全部，掌握哪些話題被談了多少，非常困難。我城對談（Talk to the City）就是用 AI 的力量，讓這些「讀不完的意見」能夠一眼看盡的工具。</p>
+<h2>一句話說明</h2>
+<p>我城對談（Talk to the City，簡稱 TTTC）是一套軟體：<strong>讓 AI 讀取數百到數萬則自由書寫的意見，把「有哪些論點、各被談了多少」做成點狀地圖與摘要呈現出來</strong>[1][2]。</p>
+<p>打造它的是美國的非營利組織 AI Objectives Institute（AOI）。它免費，程式碼也公開（開源）[1]。這類「聽取許多人聲音」的技術，稱為<a href="broad-listening.html">廣泛傾聽</a>。</p>
+<h2>舉例來說</h2>
+<p><strong>臺灣的「對齊大會」（Alignment Assemblies，2023 年）。</strong> 臺灣的數位發展部（moda）針對生成式 AI 收集公民意見。先用 <a href="polis.html">Polis</a> 收集線上意見，再用 TTTC 把結果視覺化，作為在臺北與臺南舉行的實體討論的材料[3][4]。唐鳳介紹說，在這份報告裡，英文和中文的意見會排在同一個群聚中[5]。→〈<a href="alignment-assemblies.html">對齊大會</a>〉</p>
+<p><strong>東京都知事選舉（2024 年）。</strong> 參選人安野貴博的團隊，用 TTTC 分析 X 上的主題標籤「#TOKYOAI」與匿名意見箱收集到的聲音，在選舉期間做出了 30 份以上的報告[6]。從意見箱投稿中抽出的 951 則意見裡，浮現出希望取消育兒支援所得限制的聲音，並反映在政見的 2.0 版中[6]。→〈<a href="anno-2024-tokyo-campaign.html">安野貴博的 2024 年都知事選舉</a>〉</p>
+<p><strong>國會質詢（2025-03-07）。</strong> 日本國民民主黨的參議員伊藤孝惠，把透過電話、Google 表單與社群媒體收集到的「就業冰河期世代」的聲音，用 TTTC 做成「論點地圖」，作為在參議院預算委員會質詢首相的資料[7]。《廣泛傾聽》（ブロードリスニング，DD2030 社群著）認為，這是日本國會首次以廣泛傾聽的結果作為質詢依據的例子[7]。</p>
+<h2>運作方式</h2>
+<h3>三個步驟</h3>
+<p>《廣泛傾聽》把 TTTC 的處理分成三個步驟來說明[6]：</p>
+<ol>
+<li><strong>抽取。</strong> 由生成式 AI 從每一則貼文中取出「意見」。</li>
+<li><strong>歸類。</strong> 把文字轉成一串數字（向量），把相似的意見聚在一起（分群）。</li>
+<li><strong>命名。</strong> 由生成式 AI 替每一群加上標題與摘要。最後把意見的分布畫成二維散布圖。</li>
+</ol>
+<h3>最新的是「抽取」這一步</h3>
+<p>西尾泰和寫道，第一步的「抽取」，正是它和過去的分析不同的地方[8]。</p>
+<p>要抽取什麼，可以不用寫程式，而是用一般的話請 AI 做。沒有用的貼文什麼都不會抽出，自然就起了篩選的作用。一段文字裡混著好幾個論點，也能拆開來處理[8]。</p>
+<h3>兩個版本</h3>
+<p>根據《廣泛傾聽》，TTTC 有兩個版本：用散布圖呈現的「TTTC Scatter」，以及讓 AI 直接分類、以清單呈現的「TTTC Turbo」。兩者都在臺灣等地使用過[9]。</p>
+<h3>為什麼受到注目</h3>
+<p>唐鳳回顧，2014 年前後，只靠公民團體 <a href="g0v.html">g0v</a> 的力量，要逐一訪談討論的每位參與者、在保留細緻差異的情況下整理意見，是不可能的[10]。唐鳳的看法是，有了我城對談的幫助，這個成本幾乎變成了零[10]。</p>
+<p>唐鳳也說，因為工具是公開的，如果社區的人手上已經有訪談錄影等資料，就能用 TTTC 的方法免費把它變成「集體智慧」[11]。</p>
+<h3>和 Polis 有什麼不同</h3>
+<p>兩者看起來都是點狀散布圖，但點代表的東西不同[3]：</p>
+<ul>
+<li><strong>Polis</strong> 的一個點是「一個人」，想法相近的人排在附近。</li>
+<li><strong>TTTC</strong> 的一個點是「一則意見」，話題相近的意見排在附近。</li>
+</ul>
+<p>《廣泛傾聽》認為兩者互補：Polis 從投票呈現意見群體，以及跨群體都受支持的意見；TTTC 則從自由書寫的文字，整理人們實際說了什麼[12]。</p>
+<h3>在日本的擴散</h3>
+<p>在日本開始使用是 2024 年 5 月。5-23，Code for Japan 的關治之在與安野和西尾的會議上介紹了 TTTC；5-30，西尾用約 2 萬則關於 AI 的公眾意見（public comment）做了試驗[6]。</p>
+<p>之後，它也被用在電視台 2024 年眾議院選舉的報導，以及東京都「シン東京2050」的意見徵集[2][13]。→〈<a href="tokyo-2050-broad-listening.html">東京都「2050 東京戰略」的廣泛傾聽</a>〉</p>
+<p>不過，TTTC Scatter 要執行需要專業的準備，並不好用。因此，分叉並重新打造它的「<a href="kouchou-ai.html">広聴AI</a>」在 2025-03-16 公開，目前由 <a href="dd2030.html">デジタル民主主義2030（DD2030）</a> 社群持續開發[9]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>不是「意見地圖」，而是「話題地圖」。</strong> 西尾指出，TTTC 是依話題而不是依贊成反對來歸類[14]。例如，主張禁止某件事的意見，和主張不要阻止它的相反意見，可能落在同一群。它沒有分辨贊成或反對的機制[14]。</li>
+<li><strong>會混入錯誤。</strong> 在和電視台合作的眾議院選舉專案中，由於 AI 寫出原貼文沒有的內容（「幻覺」），以及原貼文本身的錯誤，結果中有時會出現與事實不符的內容。標題與摘要都由記者人工確認，花了相當多的時間和費用[13]。</li>
+<li><strong>使用者這一側的門檻。</strong> 伊藤議員報告，實際使用後遇到了五道牆：組織的決策、找到工程師、調整給 AI 的指示、經費，以及數位落差[7]。</li>
+<li><strong>做成圖片就傳達不了。</strong> 《廣泛傾聽》提醒，TTTC 是要在瀏覽器上一邊操作一邊看的工具，一旦做成圖片，大部分資訊就會流失[6]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》在 5-4 章〈<a href="augmented-deliberation.html">擴增審議</a>〉中，把如何用語言模型擴展 Pol.is 和 <a href="community-notes.html">社群備註</a> 當作「最明顯的發展方向之一」，並舉我城對談為例[2]。書寫道，這個專案「說明了如何用語言模型，來取代描述群體觀點的陳述列表，讓人們可以通過與互動代理對話來瞭解他們的觀點」[2]。</p>
+<p>英文版的同一章，也提到 2024 年都知事選舉中用 TTTC 的視覺化、電視台的眾議院選舉特別節目，以及東京都邁向 2050 年之計畫的意見徵集[2]。（繁體中文版的 5-4 章沒有這些段落。）</p>
+<p>6-5 章〈學習〉寫道：「臺灣已運用『我城對談』等擴增審議技術，基於開源的概念來緩解 AI 引發的衝擊」[15] →〈<a href="taiwan-digital-democracy.html">臺灣的數位民主</a>〉</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》5-4〈擴增審議〉（中文，書）— https://www.plurality.net/v/chapters/5-4/zh-tw/</li>
+<li>數位發展部〈AI 未來民主化審議式工作坊〉（中文，官方頁面）— https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</li>
+<li>《Plurality》英文版 5-4 "Augmented Deliberation"（英文，書，含日本的例子）— https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li>Audrey Tang, "Interview with Your Undivided Attention podcast"（2024-01-24，英文，逐字稿）— https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md</li>
+<li>《ブロードリスニング》（DD2030 社群，日文，書）— https://github.com/digitaldemocracy2030/broad-listening-book</li>
+<li>西尾泰和〈Talk to the Cityの抽出ステップについて〉（日文）— https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>《ブロードリスニング》附錄〈用語集〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《多元宇宙》5-4〈擴增審議〉— https://www.plurality.net/v/chapters/5-4/zh-tw/ ；日本的例子見英文版 — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>《ブロードリスニング》11.1〈台湾〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>數位發展部〈AI 未來民主化審議式工作坊〉— https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</li>
+<li>西尾泰和〈台湾とTalk to the City〉（引用 TIME 採訪紀錄 https://moda.gov.tw/en/press/background-information/6477 ，日文）— https://scrapbox.io/nishio/台湾とTalk_to_the_City</li>
+<li>《ブロードリスニング》4.1〈安野貴博の取り組み〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》4.2〈国民民主の国会質問〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>西尾泰和〈Talk to the Cityの抽出ステップについて〉（日文）— https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて</li>
+<li>《ブロードリスニング》10.0〈DD2030による広聴AIの開発活動〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》11.5〈Connective Actionを力に変える〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Audrey Tang, "Interview with Your Undivided Attention podcast"（2024-01-24）— https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md ［CC0］</li>
+<li>《ブロードリスニング》11.2〈Polisの誕生〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>《ブロードリスニング》4.3〈日テレ選挙特番〉（日文）— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>西尾泰和〈Polisは意見のクラスタリング、TTTCはトピックのクラスタリング〉（日文）— https://scrapbox.io/nishio/Polisは意見のクラスタリング、TTTCはトピックのクラスタリング</li>
+<li>《多元宇宙》6-5〈學習〉— https://www.plurality.net/v/chapters/6-5/zh-tw/ ［CC0］</li>
+</ol><div class='related'>相關: <a href='kouchou-ai.html'>什麼是広聴AI（kouchou-ai）？</a> ・ <a href='broad-listening.html'>什麼是廣泛傾聽（Broad Listening）？</a> ・ <a href='polis.html'>什麼是 Polis？</a> ・ <a href='alignment-assemblies.html'>什麼是對齊大會（Alignment Assemblies）？</a> ・ <a href='augmented-deliberation.html'>什麼是擴增審議？</a> ・ <a href='anno-2024-tokyo-campaign.html'>什麼是安野貴博的 2024 年都知事選舉？</a> ・ <a href='tokyo-2050-broad-listening.html'>什麼是東京都「シン東京2050」的廣泛傾聽？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

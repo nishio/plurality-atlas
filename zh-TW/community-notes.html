@@ -1,0 +1,111 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是社群備註（Community Notes）？</title><meta name="description" content="讓 X（前 Twitter）使用者替可能誤導人的貼文加上補充說明（備註）的機制。它不靠多數決：只有平常評分意見分歧的人一致評為「有幫助」的備註，才會顯示出來。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/community-notes.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/community-notes.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/community-notes.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/community-notes.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/community-notes.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是社群備註（Community Notes）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/community-notes.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="讓 X（前 Twitter）使用者替可能誤導人的貼文加上補充說明（備註）的機制。它不靠多數決：只有平常評分意見分歧的人一致評為「有幫助」的備註，才會顯示出來。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../community-notes.html">日本語</a> <a class="lang" hreflang="en" href="../en/community-notes.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是社群備註（Community Notes）？</h1><div class='lead'>讓 X（前 Twitter）使用者替可能誤導人的貼文加上補充說明（備註）的機制。它不靠多數決：只有平常評分意見分歧的人一致評為「有幫助」的備註，才會顯示出來。</div><p>在社群媒體上看到不實或誤導的貼文時，該由誰來更正？公司刪文，會被說是「審查」；由專家判定，會被說是「偏頗」。交給使用者多數決，人多的陣營可能只會替對方的貼文加上警語。社群備註（Community Notes）對這個難題的回答是：「只顯示立場不同的人都一致認可的內容」。</p>
+<h2>一句話說明</h2>
+<p>這是在 X（前 Twitter）上，由使用者自己在可能誤導人的貼文下方加上「補充說明（備註）」的機制[1][2]。</p>
+<p>備註不是靠多數決顯示的。<strong>只有平常評分意見分歧的人，一致評為「有幫助」的備註</strong>，才會顯示出來[1][2]。</p>
+<h2>舉例來說</h2>
+<p><strong>鯨魚是不是哺乳類？</strong> 《Plurality》英文版 5-4 章的圖 5-4-A，是一則用可疑的理由主張「鯨魚不是哺乳類」的貼文畫面[3]。貼文下方加了一個「讀者補充了背景資訊」的框，附上出處，說明鯨魚為什麼是哺乳類[3]。</p>
+<p><strong>俄烏戰爭與新冠疫情（2022 年）。</strong> 根據日文維基百科，前身「Birdwatch」在 2021 年 1 月於美國由 1,000 名貢獻者開始試行[4]。2022 年 3 月俄羅斯入侵烏克蘭、同年 10 月的新冠錯誤資訊讓它擴散開來，2022 年 11 月改名為 Community Notes，並擴展到美國以外[4]。</p>
+<p>日本在 2023 年 7 月正式開始[5]。一項分析附有 26,683 則日文備註之貼文的研究報告，「反疫苗」類和「撒錢」類的垃圾訊息特別顯眼[5]。</p>
+<p><strong>擴展到其他公司（2025 年）。</strong> Meta 在 2025 年 1 月宣布，在美國停止外部的事實查核，改採社群備註的方式[6]。3 月 18 日起在 Facebook、Instagram、Threads 開始測試，一開始以 X 公開的演算法作為評分機制的基礎[6]。TikTok 也在 2025 年 4 月宣布試行「Footnotes」：過去評分意見分歧的許多人都認為同一則說明有幫助時，它就更容易顯示[7]。</p>
+<h2>運作方式</h2>
+<h3>參與者要做的事</h3>
+<p>符合條件的 X 使用者，可以登記成為貢獻者[8]。根據以太坊創辦人維塔利克·布特林（Vitalik Buterin）2023 年的說明，條件是使用超過 6 個月、最近沒有違規，以及驗證過電話號碼[8]。</p>
+<p>一開始只能替別人的備註評分。累積評分的紀錄之後，才能自己寫備註[8]。貢獻者看到備註時，要回答這則備註是否有幫助（英文介面的問題是 "Is this note helpful?"），選擇「是」「有點」「否」[9]。</p>
+<p>一般使用者看到的，只有達到標準、被判定為「有幫助」的備註[3][9]。官方說明，決定顯示哪些備註的不是 X，而是大家；演算法任何人都能檢查，所有備註和評分每天公開[2]。</p>
+<h3>怎麼衡量「立場不同」</h3>
+<p>貢獻者的立場，不是用居住地、性別或自己申報的支持政黨來衡量，也不是用追蹤關係[10]。<strong>只看過去對哪些備註怎麼評分</strong>[10]。</p>
+<p>對同樣的備註給出相似評分的人，被視為立場相近；評分不同的人，被視為立場不同[10]。如果平常評分分歧的人們，一致說同一則備註有幫助，那就是一個好的指標，表示它對不同立場的人都有幫助[10]。</p>
+<h3>背後的計算</h3>
+<p>根據官方指南，系統用下面這樣的式子來解釋評分（是 = 1、有點 = 0.5、否 = 0）[9]：</p>
+<blockquote>
+<p>預測的評分 = 整體的寬鬆程度 ＋ 評分者的寬鬆程度 ＋ 備註本身的好壞 ＋（評分者的立場 × 備註的立場）</p>
+</blockquote>
+<p>最後那個乘積，吸收掉「同一邊的人喜歡、另一邊的人討厭」的部分[9]。剩下的「備註本身的好壞」，就是不論立場、誰都喜歡的程度，這就是備註的分數[9]。</p>
+<p>這個分數被設計成，如果沒有得到不同立場的人評分，就不會變大[9]。有 5 則以上的評分、分數在 0.40 以上，而且備註立場的偏向夠小（未滿 0.50）的備註，才會成為「有幫助」[9]。</p>
+<p>布特林說明，在英語圈的資料中，「立場」這條軸幾乎和左右政治的對立一致[8]。但計算中沒有任何地方寫進左右的概念，它是從資料中自然浮現的[8]。</p>
+<h3>為什麼這樣設計</h3>
+<p>Birdwatch 的論文（2022 年）把這種挑選方式稱為「橋接式排序」（bridging-based ranking）[12]。根據論文，它的表現比用整體平均挑選更好，而看到顯示出來之備註的人，比較不會再轉發那則貼文[12]。</p>
+<p>布特林總結，核心想法是：排除受一方陣營喝彩、被另一方厭惡的備註，挑出跨陣營都認可的備註[8]。</p>
+<h3>由 AI 寫備註（2025 年起）</h3>
+<p>X 公開了讓 AI 寫備註的介面（AI Note Writer API）[13]。AI 可以提出備註，但<strong>不能評分</strong>。要顯示哪些備註，由人類的評分決定，而這些評分也會回饋給 AI 學習[13]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>太慢、太少。</strong> 一項研究認為，沒有證據顯示導入後，對錯誤資訊的反應（轉發或按讚）明顯減少[14]；備註可能沒趕上擴散的初期。另一項研究報告，加上備註後轉發幾乎減半，貼文被刪除的機率上升 80%，但整體效果取決於顯示的速度[15]。2023 年的報導指出，約 12 萬 2,000 則備註中，一般使用者看得到的約只有 8.5%[16]。</li>
+<li><strong>越是分裂的話題越不會加上備註。</strong> 一項使用 13 國資料的研究指出，正因為演算法能準確抓住各國主要的對立軸，<strong>在設計上</strong>，越是極化的內容就越容易更正不足[17]。在美、英、法、德的選舉相關備註中，這一點特別明顯[17]。</li>
+<li><strong>有組織的操弄。</strong> 一項包括 X 相關人員在內的研究顯示，不到 10 票的一致評分，就能把最多 10.7% 的低品質備註推過標準[18]。文中寫道，X 已經加入對策[18]。</li>
+<li><strong>謹慎仍是美德的反論。</strong> 布特林介紹了一種批評：因為需要兩個陣營的共識，所以幾乎不可能[8]。布特林的看法是，放過十則錯誤資訊，好過不公平地審判一則[8]。布特林也認為，即使備註只加在一小部分錯誤資訊上，也有提醒人「還有其他看法」的教育價值[8]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》在 5-4 章〈擴增審議〉的開頭介紹社群備註[11]。話題從一種擔憂開始：社交媒體「鞏固了現有的社會分化，形成『迴聲室效應』」[11]。書寫道，要以相反的意圖來設計這些系統，「在這方面最大規模的嘗試是 X（Twitter）社交媒體平臺上的『社群備註』（Community Notes，前身為 Birdwatch）系統」[11]。書說，這種方法「與多元宇宙理念契合，每週也已經接觸到數億人」[11]。</p>
+<p>同一章的後半，書也描繪了未來的樣子[11]：「雖然該系統目前將整個平台上的所有意見，都排列在一道光譜上，但我們可以想像在平台上繪製出一系列的社群，並利用基於橋接的方法，不僅對備註進行優先排序，而且對首先需要關注的內容進行優先排序。」[11]</p>
+<p>唐鳳（Audrey Tang）也在專欄中，舉這個機制為例：「能讓分裂的兩群人都認同的備註，就會作為平衡報導呈現出來，而非由點閱率掛帥。」[19]</p>
+<p>相關文章：
+- <a href="bridging.html">橋接</a>——這個機制背後的「橋接」想法
+- <a href="polis.html">Polis</a>——把同樣的想法用於討論的工具
+- <a href="augmented-deliberation.html">擴增審議</a>——書中談這個機制的章節
+- <a href="prosocial-media.html">對社會有益的媒體</a>——把橋接擴展到整個社群媒體的構想
+- <a href="collaboration-across-difference.html">跨越社會差異的協作</a>——Plurality 定義的核心</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》5-4〈擴增審議〉（中文，書）— https://www.plurality.net/v/chapters/5-4/zh-tw/</li>
+<li>唐鳳〈讓演算法變得善良〉（商業周刊專欄，2024，中文）— https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF</li>
+<li>Community Notes Guide "Introduction"（英文，官方說明）— https://communitynotes.x.com/guide/en/about/introduction</li>
+<li>Community Notes Guide "Note ranking algorithm"（英文，演算法說明）— https://communitynotes.x.com/guide/en/under-the-hood/ranking-notes</li>
+<li>Vitalik Buterin, "What do I think about Community Notes?"（2023，英文，部落格）— https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</li>
+<li>Wojcik 等人, "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation"（2022，英文，論文）— https://arxiv.org/abs/2210.15723</li>
+<li>社群備註官方指南「概要」（日文）— https://communitynotes.x.com/guide/ja/about/introduction</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>コミュニティノート公式ガイド「概要」（日文）— https://communitynotes.x.com/guide/ja/about/introduction ［Apache-2.0］</li>
+<li>Community Notes Guide "Introduction" — https://communitynotes.x.com/guide/en/about/introduction ［Apache-2.0］</li>
+<li>《Plurality》英文版 5-4 "Augmented Deliberation"，圖 5-4-A — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>コミュニティノート（日文維基百科）— https://ja.wikipedia.org/wiki/コミュニティノート ［CC BY-SA 4.0］</li>
+<li>安本等人〈日本における Twitter コミュニティノートの利用状況〉（JSAI 2024，日文）— https://doi.org/10.11517/pjsai.JSAI2024.0_2I4OS1b03</li>
+<li>Meta, "Testing Begins for Community Notes on Facebook, Instagram and Threads"（2025）— https://about.fb.com/news/2025/03/testing-begins-community-notes-facebook-instagram-threads/</li>
+<li>TikTok, "Testing a new feature to enhance content on TikTok"（2025-04-16，Footnotes 的發表）— https://newsroom.tiktok.com/footnotes?lang=en</li>
+<li>Vitalik Buterin, "What do I think about Community Notes?"（2023-08-16）— https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</li>
+<li>Community Notes Guide "Note ranking algorithm" — https://communitynotes.x.com/guide/en/under-the-hood/ranking-notes ［Apache-2.0］</li>
+<li>Community Notes Guide "Diversity of perspectives" — https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives ［Apache-2.0］</li>
+<li>《多元宇宙》5-4〈擴增審議〉— https://www.plurality.net/v/chapters/5-4/zh-tw/ ［CC0］</li>
+<li>Wojcik 等人, "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation"（2022）— https://arxiv.org/abs/2210.15723 ［CC BY 4.0］</li>
+<li>Community Notes Guide "AI Note Writer API" — https://communitynotes.x.com/guide/en/api/overview ［Apache-2.0］</li>
+<li>Chuai 等人, "Did the Roll-Out of Community Notes Reduce Engagement With Misinformation on X/Twitter?"（2023）— https://arxiv.org/abs/2307.07960</li>
+<li>Renault 等人, "Collaboratively adding context to social media posts reduces the sharing of false news"（2024）— https://arxiv.org/abs/2404.02803 ［CC BY 4.0］</li>
+<li>Poynter, "Why Community Notes mostly fails to combat misinformation"（2023-06-30）— https://www.poynter.org/fact-checking/2023/why-twitters-community-notes-feature-mostly-fails-to-combat-misinformation/</li>
+<li>Bouchaud &amp; Ramaciotti, "Community Notes undermoderate polarizing content by design creating risks in electoral processes"（2025）— https://arxiv.org/abs/2506.15168 ［CC BY-NC-ND 4.0］</li>
+<li>Selvam 等人, "Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking"（2026）— https://arxiv.org/abs/2607.01824 ［CC BY 4.0］</li>
+<li>唐鳳〈讓演算法變得善良〉（商業周刊專欄，2024-07-11）— https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF ［CC0］</li>
+</ol><div class='related'>相關: <a href='bridging.html'>什麼是橋接（bridging）？</a> ・ <a href='polis.html'>什麼是 Polis？</a> ・ <a href='augmented-deliberation.html'>什麼是擴增審議？</a> ・ <a href='prosocial-media.html'>什麼是利社會媒體（prosocial media）？</a> ・ <a href='collaboration-across-difference.html'>什麼是「跨越社會差異的協作」？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

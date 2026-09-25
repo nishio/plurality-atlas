@@ -1,0 +1,110 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Community Notes（コミュニティノート）ってなに？</title><meta name="description" content="X（旧 Twitter）の利用者が、誤解を招きそうな投稿に補足説明（ノート）を付けるしくみです。多数決ではなく、ふだん評価が食い違う人どうしがそろって「役に立つ」と評価したノートだけが表示されます。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/community-notes.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/community-notes.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/community-notes.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/community-notes.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/community-notes.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="Community Notes（コミュニティノート）ってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/community-notes.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="X（旧 Twitter）の利用者が、誤解を招きそうな投稿に補足説明（ノート）を付けるしくみです。多数決ではなく、ふだん評価が食い違う人どうしがそろって「役に立つ」と評価したノートだけが表示されます。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/community-notes.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/community-notes.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>Community Notes（コミュニティノート）ってなに？</h1><div class='lead'>X（旧 Twitter）の利用者が、誤解を招きそうな投稿に補足説明（ノート）を付けるしくみです。多数決ではなく、ふだん評価が食い違う人どうしがそろって「役に立つ」と評価したノートだけが表示されます。</div><p>SNS でうそや誤解を招く投稿を見かけたとき、誰がそれを正せばよいのでしょう。会社が消すと「検閲だ」と言われ、専門家が判定すると「偏っている」と言われます。利用者の多数決にすると、多いほうの陣営が相手の投稿にばかり注意書きを付けるかもしれません。Community Notes（コミュニティノート）は、この難問に「立場の違う人どうしが共に認めたものだけを出す」という答えを出したしくみです。</p>
+<h2>ひとことで言うと</h2>
+<p>X（旧 Twitter）で、誤解を招きそうな投稿の下に、利用者自身が「補足説明（ノート）」を付けるしくみです[1][2]。</p>
+<p>ノートは多数決では表示されません。<strong>ふだん評価が食い違う人どうしが、そろって「役に立つ」と評価したノートだけ</strong>が表示されます[1][2]。</p>
+<h2>たとえば</h2>
+<p><strong>クジラは哺乳類か。</strong> 本『Plurality』の 5-4 章の図 5-4-A は、「クジラは哺乳類ではない」とあやしい理屈で主張する投稿の画面です[3]。その下に「読者が背景情報を追加しました」という枠が付き、クジラが哺乳類である理由が出典つきで示されています[3]。</p>
+<p><strong>ウクライナ侵攻とコロナ（2022 年）。</strong> 日本語版ウィキペディアによると、前身の「Birdwatch」は 2021 年 1 月に、米国で 1,000 人の協力者で試しに始まりました[4]。2022 年 3 月のロシアのウクライナ侵攻や、同じ年の 10 月の新型コロナの誤情報で広まり、2022 年 11 月に Community Notes と名前を変えて米国の外にも広がりました[4]。</p>
+<p>日本では 2023 年 7 月に正式に始まりました[5]。日本語のノート 26,683 件が付いた投稿を分析した研究は、「反ワクチン」系と「お金配り」のスパム系が特に目立った、と報告しています[5]。</p>
+<p><strong>ほかの会社への広がり（2025 年）。</strong> Meta は 2025 年 1 月、米国で外部のファクトチェック（事実確認）をやめて Community Notes 方式に移ると発表しました[6]。3 月 18 日から Facebook・Instagram・Threads で試験を始め、はじめは X が公開している計算方法を評価のしくみの土台にする、としています[6]。TikTok も 2025 年 4 月に、過去に評価が分かれた多くの人が同じノートを役に立つと評価すると表示されやすくなる「Footnotes」を試すと発表しました[7]。</p>
+<h2>しくみ</h2>
+<h3>参加者がすること</h3>
+<p>条件を満たした X の利用者が、協力者として登録します[8]。イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）の 2023 年の説明によると、条件は 6 か月以上の利用、最近の規約違反がないこと、電話番号の確認です[8]。</p>
+<p>最初はほかの人のノートを評価するだけです。評価の実績を積むと、自分でノートを書けるようになります[8]。ノートを見た協力者は、「このノートは役に立ちますか？」に「はい」「いくらか」「いいえ」で答えます[9]。</p>
+<p>一般の利用者に見えるのは、基準を満たして「役に立つ」と判定されたノートだけです[3][9]。公式は、表示するノートを決めるのは X ではなく人々で、計算方法は誰でも確かめられ、すべての投稿と評価は毎日公開される、と説明しています[2]。</p>
+<h3>「立場が違う」をどう測るか</h3>
+<p>協力者の立場は、住んでいる場所や性別、支持政党の申告では測りません。フォローの関係でも測りません[10]。<strong>過去にどのノートをどう評価したか</strong>だけで測ります[10]。</p>
+<p>同じノートを似たように評価する人は、立場が近い。違うように評価する人は、立場が違う。そうみなします[10]。ふだん評価が割れる人たちが、そろって同じノートを役に立つと言うなら、それは違う立場の人にとって役に立つノートだ、というよい目印になる、という考え方です[10]。</p>
+<h3>裏側の計算</h3>
+<p>公式のガイドによると、評価（はい = 1、いくらか = 0.5、いいえ = 0）を、次のような式で説明する計算をします[9]。</p>
+<blockquote>
+<p>予測される評価 = 全体の甘さ ＋ 評価者の甘さ ＋ ノートそのものの良さ ＋（評価者の立場 × ノートの立場）</p>
+</blockquote>
+<p>最後の掛け算の部分は、「同じ側の人には好かれるが、反対側の人には嫌われる」分を吸い取ります[9]。残った「ノートそのものの良さ」が、立場に関係なく誰からも好かれる度合いです。これがノートの点数になります[9]。</p>
+<p>この点数は、立場の違う人から評価されないと大きくならないように作られています[9]。評価が 5 件以上あり、点数が 0.40 以上で、しかもノートの立場の偏りが小さい（0.50 未満）ものが「役に立つ」になります[9]。</p>
+<p>ブテリンは、英語圏のデータでは「立場」の軸がほぼ左右の政治の対立に一致すると説明しています[8]。ただし、左右という考えは計算のどこにも書き込まれておらず、データから自然に現れる、というのです[8]。</p>
+<h3>なぜこう作ったか</h3>
+<p>Birdwatch の論文（2022 年）は、この選び方を「ブリッジング型ランキング（橋渡し型の順位づけ）」と呼びました[11]。論文によると、全体の平均で選ぶより成績がよく、表示されたノートを見た人は、その投稿を再び広めにくくなりました[11]。</p>
+<p>ブテリンは、一方の陣営に喝采され他方に嫌われるノートを外し、陣営をまたいで認められるノートを選ぶことが核心のアイデアだ、とまとめています[8]。</p>
+<h3>AI がノートを書く（2025 年〜）</h3>
+<p>X は、AI がノートを書くための窓口（AI Note Writer API）を公開しました[12]。AI はノートを提案できますが、<strong>評価はできません</strong>。どのノートを表示するかは人間の評価で決まり、その評価は AI の学習にも返されます[12]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>遅すぎる、少なすぎる。</strong> ある研究は、導入によって誤情報への反応（リポストや「いいね」）がはっきり減ったという証拠はない、としています[13]。広まり始めにノートが間に合っていない可能性があるというのです。別の研究は、ノートが付くとリポストはほぼ半分に減り、投稿が消される確率は 80% 上がるが、全体への効果は表示の速さしだいだ、と報告しています[14]。2023 年の報道では、約 12 万 2,000 件のノートのうち、一般に見えるのは約 8.5% でした[15]。</li>
+<li><strong>分断の激しい話題ほど付かない。</strong> 13 か国のデータを使った研究は、計算が各国の主な対立の軸をうまくとらえるからこそ、<strong>しくみの上で</strong>、分断の激しい内容ほど訂正が足りなくなる、と指摘しています[16]。米・英・仏・独の選挙に関するノートで、それが目立ったということです[16]。</li>
+<li><strong>組織的な操作。</strong> X の関係者を含む研究は、10 票に満たないそろった評価で、質の低いノートの最大 10.7% を基準の上に押し上げられることを示しました[17]。X は対策を入れた、と書かれています[17]。</li>
+<li><strong>それでも慎重さは美徳だ、という反論。</strong> ブテリンは、両陣営の合意が必要なので「ほとんど無理だ」という批判を紹介しています[8]。そのうえで、一件を不当に裁くより十件の誤情報を見逃すほうがよい、という考えを示します[8]。ノートが付くのが誤情報のごく一部でも、「ほかの見方もある」と思い出させる教育的な価値がある、とも論じています[8]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』は 5-4 章「拡張熟議」の冒頭で Community Notes を紹介しています[3]。反応を最大にするように作られた SNS のフィード（投稿の流れ）は、似た意見だけが響き合う「エコーチェンバー」を作る、という心配から話が始まります[3]。本は Community Notes を、その逆に、人々に「橋を架ける」ことをねらって作り直した最大規模の試みとして描いています[3]。多様性をまたぐ協働という Plurality の原則にかなう設計で、毎週何億人もがこれに触れている、としています[3][18]。</p>
+<p>同じ章の後半で本は、将来の姿も描きます[3]。いまは全体の意見を一本の軸に並べているけれど、将来は中のいろいろなコミュニティを地図にできる。橋渡しの考えを、ノートだけでなく、そもそも何を目立たせるかにも使える。本はそう展望しています[3]。</p>
+<p>オードリー・タン（Audrey Tang）もコラムで、分かれた両方のグループが認める注記を示す例として、このしくみを挙げています[19]。</p>
+<p>関連する記事:
+- <a href="bridging.html">bridging</a> — このしくみの土台にある「橋渡し」の考え方
+- <a href="polis.html">Polis</a> — 同じ考えを話し合いに使うツール
+- <a href="augmented-deliberation.html">拡張熟議</a> — 本の中でこのしくみが語られる章
+- <a href="prosocial-media.html">向社会的メディア</a> — 橋渡しを SNS 全体に広げる構想
+- <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a> — Plurality の定義の中心</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>コミュニティノート公式ガイド「概要」（日本語・公式の説明）— https://communitynotes.x.com/guide/ja/about/introduction</li>
+<li>コミュニティノート（日本語版ウィキペディア）— https://ja.wikipedia.org/wiki/コミュニティノート</li>
+<li>本『Plurality』5-4「拡張熟議」（日本語・本）— https://www.plurality.net/v/chapters/5-4/jpn/</li>
+<li>公式ガイド「Note ranking algorithm」（英語・計算のしくみ）— https://communitynotes.x.com/guide/en/under-the-hood/ranking-notes</li>
+<li>Vitalik Buterin「What do I think about Community Notes?」（2023、英語・ブログ）— https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</li>
+<li>Wojcik ほか「Birdwatch」論文（2022、英語・論文）— https://arxiv.org/abs/2210.15723</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>コミュニティノート公式ガイド「概要」（日本語）— https://communitynotes.x.com/guide/ja/about/introduction ［Apache-2.0］</li>
+<li>Community Notes Guide「Introduction」— https://communitynotes.x.com/guide/en/about/introduction ［Apache-2.0］</li>
+<li>『Plurality』5-4「Augmented Deliberation」— https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>コミュニティノート（日本語版ウィキペディア）— https://ja.wikipedia.org/wiki/コミュニティノート ［CC BY-SA 4.0］</li>
+<li>安本ほか「日本における Twitter コミュニティノートの利用状況」（JSAI 2024）— https://doi.org/10.11517/pjsai.JSAI2024.0_2I4OS1b03</li>
+<li>Meta「Testing Begins for Community Notes on Facebook, Instagram and Threads」（2025）— https://about.fb.com/news/2025/03/testing-begins-community-notes-facebook-instagram-threads/</li>
+<li>TikTok「Testing a new feature to enhance content on TikTok」（2025-04-16、Footnotes の発表）— https://newsroom.tiktok.com/footnotes?lang=en</li>
+<li>Vitalik Buterin「What do I think about Community Notes?」（2023-08-16）— https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</li>
+<li>Community Notes Guide「Note ranking algorithm」— https://communitynotes.x.com/guide/en/under-the-hood/ranking-notes ［Apache-2.0］</li>
+<li>Community Notes Guide「Diversity of perspectives」— https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives ［Apache-2.0］</li>
+<li>Wojcik ほか「Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation」（2022）— https://arxiv.org/abs/2210.15723 ［CC BY 4.0］</li>
+<li>Community Notes Guide「AI Note Writer API」— https://communitynotes.x.com/guide/en/api/overview ［Apache-2.0］</li>
+<li>Chuai ほか「Did the Roll-Out of Community Notes Reduce Engagement With Misinformation on X/Twitter?」（2023）— https://arxiv.org/abs/2307.07960</li>
+<li>Renault ほか「Collaboratively adding context to social media posts reduces the sharing of false news」（2024）— https://arxiv.org/abs/2404.02803 ［CC BY 4.0］</li>
+<li>Poynter「Why Community Notes mostly fails to combat misinformation」（2023-06-30）— https://www.poynter.org/fact-checking/2023/why-twitters-community-notes-feature-mostly-fails-to-combat-misinformation/</li>
+<li>Bouchaud &amp; Ramaciotti「Community Notes undermoderate polarizing content by design creating risks in electoral processes」（2025）— https://arxiv.org/abs/2506.15168 ［CC BY-NC-ND 4.0］</li>
+<li>Selvam ほか「Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking」（2026）— https://arxiv.org/abs/2607.01824 ［CC BY 4.0］</li>
+<li>『Plurality』日本語版 5-4「拡張熟議」— https://www.plurality.net/v/chapters/5-4/jpn/ ［CC0］</li>
+<li>唐鳳「讓演算法變得善良」（商業周刊のコラム、2024-07-11）— https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF ［CC0］</li>
+</ol><div class='related'>関連: <a href='bridging.html'>ブリッジング（橋渡し）ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='prosocial-media.html'>向社会的メディアってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

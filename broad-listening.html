@@ -1,0 +1,109 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>ブロードリスニングってなに？</title><meta name="description" content="何千・何万人の自由な声を AI で読み、似た意見をまとめて「論点の地図」にし、一人でも大勢の声を聴けるようにする技術と実践です。テレビやラジオの「放送（ブロードキャスト）」の逆にあたります。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/broad-listening.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/broad-listening.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="ブロードリスニングってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/broad-listening.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="何千・何万人の自由な声を AI で読み、似た意見をまとめて「論点の地図」にし、一人でも大勢の声を聴けるようにする技術と実践です。テレビやラジオの「放送（ブロードキャスト）」の逆にあたります。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/broad-listening.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/broad-listening.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>ブロードリスニングってなに？</h1><div class='lead'>何千・何万人の自由な声を AI で読み、似た意見をまとめて「論点の地図」にし、一人でも大勢の声を聴けるようにする技術と実践です。テレビやラジオの「放送（ブロードキャスト）」の逆にあたります。</div><p>テレビやラジオを使えば、一人の声を何百万人に届けられます。では逆に、何百万人の声を一人がきちんと聴くにはどうすればよいでしょう。役所や政治家に届く意見は、多すぎて読みきれないか、少なすぎて偏るかのどちらかになりがちでした。ブロードリスニングは、この「大勢の声を聴く」問題への答えとして生まれた考え方です。</p>
+<h2>ひとことで言うと</h2>
+<p>ブロードリスニング（broad listening）は、<strong>大勢の声を一人が聴けるようにする技術</strong>です。放送（broadcast）が「一人から大勢へ」なら、こちらは「大勢から一人へ」です。</p>
+<p>具体的には、AI が何千・何万件もの自由な書き込みを読み、似た意見をまとめ、全体を一枚の「論点の地図」にします[1]。</p>
+<h2>たとえば</h2>
+<p><strong>2024 年の東京都知事選。</strong> 候補者の安野貴博（あんの・たかひろ）の陣営は、X（旧 Twitter）のハッシュタグ「#TOKYOAI」や匿名の意見箱などで声を集めました。その声を Talk to the City（TTTC）という道具で散布図にし、選挙期間中に 30 件以上のレポートを作りました。匿名意見箱への投稿から抽出した 951 件の意見からは、子育て支援の所得制限をなくしてほしいという声が複数の投稿から浮かび上がりました。この声はマニフェスト（公約）の ver1.0 から ver2.0 への更新に反映されました[2]。くわしくは <a href="anno-2024-tokyo-campaign.html">安野貴博の 2024 年都知事選</a> の記事で扱います。</p>
+<p><strong>東京都の長期戦略。</strong> 東京都は 2024-11-22 から「あなたが思う 2050 年代の東京」を募集しました。寄せられた 27,915 件を AI で分析し、「2050 東京戦略」の政策の分け方を見直す材料にしました[3][4][5]。→ <a href="tokyo-2050-broad-listening.html">東京都「2050東京戦略」のブロードリスニング</a></p>
+<p><strong>国会。</strong> 2025-03-07、国民民主党の伊藤孝恵議員が参議院の予算委員会で、TTTC で作った「論点地図」を資料にして首相に質問しました。ブロードリスニング本（後述）は、これを国会で初めてブロードリスニングの結果が政府への質問の根拠に使われた例としています[6][7]。</p>
+<h2>しくみ</h2>
+<h3>なぜ必要なのか</h3>
+<p>10 人と 1 時間ずつ話せば、深く分かります。けれども、その 10 人が全体を代表しているかは分かりません。100 万人に「はい／いいえ」で聞けば、全体の傾向は分かります。けれども、「なぜ」「どんな」は分かりません。</p>
+<p>人手と時間が限られている限り、「深く聴く」か「広く聴く」かの二択になりがちでした。ブロードリスニングは、この二つを同時にねらいます[1]。</p>
+<p>本『Plurality』の 5-4「拡張熟議」も、放送の技術は大きく進んだのに、一人がさまざまな視点を思慮深く受け止める「ブロードリスニング」は今も非常に高くつき、時間がかかると述べています[8]。</p>
+<h3>どう動くのか</h3>
+<p>TTTC や、それをもとに作られた日本語向けの <a href="kouchou-ai.html">広聴AI</a> は、おおまかに 3 段階で動きます[2]。</p>
+<ol>
+<li>生成 AI が、投稿から「意見」を抜き出す</li>
+<li>文章を数字の並び（ベクトル）に変え、似た意見どうしをまとめる（クラスタリング）</li>
+<li>生成 AI が、それぞれのまとまりに見出しと要約を付ける</li>
+</ol>
+<p>結果は、点一つが意見一つを表す散布図になります。まとまりをたどって、元の投稿まで読み進められます[2]。</p>
+<p>これが現実的な費用でできるようになったのは最近です。文章の意味を数字にする技術（2019 年）、たくさんの次元を 2 次元の図に落とす技術（2018 年）、大量の文章を要約できる大規模言語モデル（LLM、2022 年の ChatGPT 公開など）がそろったからです[1]。ブロードリスニング本の試算では、広聴AI で 1 万件の自由記述を分析する費用は約 500 円です[9]。</p>
+<h3>三つの意味</h3>
+<p>この語は文脈で意味が変わります。ブロードリスニング本（DD2030 コミュニティ著）は、次の三つに分けています[1]。</p>
+<ol>
+<li><strong>道具として</strong> — 大量の意見を AI でまとめて見える形にする「部品」。TTTC、広聴AI、Google Jigsaw の Sensemaker などです。</li>
+<li><strong>拡張熟議（話し合いを技術で深めること）の一部として</strong> — 意見を集め、話し合い、政策を決める、という流れが回り続けるしくみの一部。台湾の <a href="vtaiwan.html">vTaiwan</a> と <a href="polis.html">Polis</a> が代表例です。</li>
+<li><strong>政治家や行政が直接使うもの</strong> — 話し合いの場を経ずに、政治家や役所が道具を使って声を集め、政策に生かす形。日本では安野の都知事選をきっかけに、この形が先に広がりました。</li>
+</ol>
+<h3>アンケートやパブコメとどう違うのか</h3>
+<p>ブロードリスニングは自由記述をたくさん扱えます。そのため、調査を作った側が思いつかなかった論点が見つかります。ブロードリスニング本はこれを、何を議題にするかを決める力を人々に開くことだ、と表現しています[9]。</p>
+<p>一方で、パブリックコメント（行政が案を示して意見を募る手続き。略してパブコメ）について、ブロードリスニング本は「ほぼ出来上がった案の最終チェック」の場だと位置づけます。ブロードリスニングはその前の「課題を見つける」段階を受け持ち、両者は補い合うものだ、と同書は述べています[10]。</p>
+<h2>どこが議論になっているか</h2>
+<p>ブロードリスニング本自身が、限界や誤解をはっきり書いています。</p>
+<ul>
+<li><strong>声の大きい人に偏る。</strong> 自由記述に書き込むのは、強い意見を持つ人です。意見を表に出さない多数派は現れません。同書は、政治についてのツイートの 73% を全ユーザーの 6% が投稿しているという Pew Research Center（2019）の調査を引きます。文章を書き慣れた人ほど声が届きやすい、という格差も指摘しています[9]。</li>
+<li><strong>件数を「世論」と読み違える。</strong> 散布図の縦軸・横軸には意味がありません。まとまりの大きさは「投稿の件数」で、「その意見を持つ人の割合」ではありません。同書は、賛成の声が反対の 3 倍集まったから支持されている、と読むのは典型的な誤りだとし、ブロードリスニングだけで政策や選挙の判断をしてはいけないと書きます[9]。同書が勧めるのは、ブロードリスニングで仮説を作り、無作為に選んだ人への調査で確かめる二段構えです[9]。</li>
+<li><strong>道具が意見を集めるわけではない。</strong> 意見が多く集まるかは、広報や話題性で決まります。同書は、安野陣営や東京都で多く集まったのは道具の力ではないとはっきり書いています。広島県の例では、ハッシュタグ経由の意見は 2 件でした[9][11]。→ <a href="municipal-broad-listening.html">自治体のブロードリスニング</a></li>
+<li><strong>「AI が政策を決める」という誤解。</strong> 同書は、どんな政治のしくみでも使える道具であり、結果を読んで決めるのは人間（選ばれた政治家や議会）だとしています[10]。</li>
+<li><strong>東京都のパブコメで出た懸念。</strong> 2050 東京戦略の案に寄せられたパブコメには、集まったのは意見を言い慣れた人の声であり政策の裏づけに使うべきではない、募集のやり方を慎重に検証すべきだ、まとめて公開して終わりなのか、といった意見がありました。都は、戦略づくりの参考にするために行ったと答えています[12]。</li>
+<li><strong>「政策を変えた」話の過大評価。</strong> ブロードリスニング本の第 5 章（中山心太）は、東京都で「観光が独立した戦略になった」と語られる件を検証しました。観光施策の拡充は、募集の前の 2024-01 の改訂ですでに進んでいたとし、「ブロードリスニングが政策を変えた」という物語は少なくとも一部は過大評価だと結論しています[3]。</li>
+<li><strong>「あの散布図」だけがブロードリスニングではない。</strong> 散布図の印象が強く、図そのものがブロードリスニングだと受け取られがちでした。同書は、Polis のように散布図に収まらない道具もあると注意しています[1][2]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』では、5-4「<a href="augmented-deliberation.html">拡張熟議</a>」の中で、放送と対比して「ブロードリスニングの問題」として出てきます。本は、LLM などの<a href="generative-foundation-models.html">生成基盤モデル</a>がこの問題に取り組む道を開きつつあるとし、安野陣営の取り組み（GitHub で公開したマニフェスト、TTTC での可視化、24 時間質問に答える AI アバター）を例に挙げています[8]。</p>
+<p>言葉の由来について、『Plurality』は脚注で、この考え方を最初に言ったのは知る限りアンドリュー・トラスク（Andrew Trask）だと書いています[8]。2024 年 7 月には『Plurality』の著者グレン・ワイルも X で同じことを伝えています[13]。</p>
+<p>ブロードリスニング本は、『Plurality』の拡張熟議の章でこの語が 3 回しか出てこないことに触れ、実例で分かるように薄めた「Plurality の水割り」を作るのが自分たちの本の裏のねらいだ、と書いています[1]。</p>
+<p>隣の記事:
+- <a href="talk-to-the-city.html">Talk to the City</a> と <a href="kouchou-ai.html">広聴AI</a> — 自由記述から地図を作る道具
+- <a href="polis.html">Polis</a> — 賛否の投票から意見の地図を作る道具
+- <a href="idobata.html">いどばた</a> — AI が一人ずつ聞き取る話し合いの場
+- <a href="bridging.html">bridging</a> — グループをまたいで支持される意見</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>ブロードリスニング本 第 1 章「ブロードリスニングとは何か？」（日本語・本・無料公開）— https://broadlisteningbook.com/</li>
+<li>西尾泰和「ブロードリスニング」（日本語・メモ）— https://scrapbox.io/nishio/ブロードリスニング</li>
+<li>本『Plurality』5-4「拡張熟議」（日本語・本）— https://www.plurality.net/v/chapters/5-4/jpn/</li>
+<li>ブロードリスニング本の原稿リポジトリ（日本語・本。第 2・3 章で偏りやパブコメとの関係を扱う）— https://github.com/digitaldemocracy2030/broad-listening-book</li>
+<li>東京都「2050 東京戦略（案）」パブリックコメントの結果（日本語・行政文書）— https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</li>
+<li>本『Plurality』5-4「Augmented Deliberation」（英語・本）— https://www.plurality.net/v/chapters/5-4/eng/</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>ブロードリスニング本 第 1 章「ブロードリスニングとは何か？」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 第 4 章 1 節「安野貴博の取り組み」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 第 5 章「東京都、シン東京2050、ブロードリスニングによる政策転換」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>東京都 報道発表（2024-11-22）「シン東京 2050」意見募集 — https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203</li>
+<li>東京都 政策企画局「ブロードリスニングの考え方」（2025-01-31）— https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3</li>
+<li>ブロードリスニング本 第 4 章「日本国内におけるブロードリスニングの広がり」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 第 4 章 2 節「国民民主の国会質問」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>『Plurality』5-4「Augmented Deliberation」— https://www.plurality.net/v/chapters/5-4/eng/ （日本語版 https://www.plurality.net/v/chapters/5-4/jpn/ ） ［CC0］</li>
+<li>ブロードリスニング本 第 2 章「ブロードリスニングとアンケートの違い」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 第 3 章「デジタル民主主義とブロードリスニング、新しい民意の届け方」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>ブロードリスニング本 第 8 章 2 節「広島県の事例」— https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>東京都「2050 東京戦略（案）」パブリックコメント結果（抜粋）— https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</li>
+<li>西尾泰和「ブロードリスニングの命名」（Glen Weyl の X 投稿 https://x.com/glenweyl/status/1817955522035032270 を含む）— https://scrapbox.io/nishio/ブロードリスニングの命名</li>
+</ol><div class='related'>関連: <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='idobata.html'>いどばたってなに？</a> ・ <a href='anno-2024-tokyo-campaign.html'>安野貴博の 2024 年都知事選ってなに？</a> ・ <a href='tokyo-2050-broad-listening.html'>東京都「シン東京2050」のブロードリスニングってなに？</a> ・ <a href='municipal-broad-listening.html'>自治体のブロードリスニングってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

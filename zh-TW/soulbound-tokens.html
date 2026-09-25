@@ -1,0 +1,94 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是靈魂綁定憑證（SBT）？</title><meta name="description" content="不能賣給別人、也不能轉讓的數位證明。它把學歷、所屬、出席、借貸承諾等，綁在本人稱為「靈魂（Soul）」的帳戶上。2022 年，維塔利克·布特林、衛谷倫、Puja Ohlhaver 把它提出為「DeSoc（去中心化社會）」，要把以金錢為中心的 Web3 重新建立在人際關係之上。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/soulbound-tokens.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/soulbound-tokens.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/soulbound-tokens.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/soulbound-tokens.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是靈魂綁定憑證（SBT）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/soulbound-tokens.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="不能賣給別人、也不能轉讓的數位證明。它把學歷、所屬、出席、借貸承諾等，綁在本人稱為「靈魂（Soul）」的帳戶上。2022 年，維塔利克·布特林、衛谷倫、Puja Ohlhaver 把它提出為「DeSoc（去中心化社會）」，要把以金錢為中心的 Web3 重新建立在人際關係之上。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../soulbound-tokens.html">日本語</a> <a class="lang" hreflang="en" href="../en/soulbound-tokens.html">English</a></nav></header>
+<main lang="zh-TW"><h1>什麼是靈魂綁定憑證（SBT）？</h1><div class='lead'>不能賣給別人、也不能轉讓的數位證明。它把學歷、所屬、出席、借貸承諾等，綁在本人稱為「靈魂（Soul）」的帳戶上。2022 年，維塔利克·布特林、衛谷倫、Puja Ohlhaver 把它提出為「DeSoc（去中心化社會）」，要把以金錢為中心的 Web3 重新建立在人際關係之上。</div><p>畢業證書和會員證，證明一個人真的學過什麼、屬於某個地方。如果可以用錢賣給別人，就失去意義了。可是網路上的數位證明，很多都能輕易買賣。靈魂綁定憑證（SBT）的想法，就是做出「不能賣、不能轉讓」的數位證明。</p>
+<h2>一句話說明</h2>
+<p>靈魂綁定憑證（Soulbound Token，SBT），是放在區塊鏈（任何人都能查驗的公開紀錄帳本）上、不能賣也不能轉讓的數位證明。就像畢業證書、會員證、活動參加證明一樣，它不是用來表示「用錢買得到的東西」，而是表示「這個人實際做過什麼、屬於哪裡」[1][2]。</p>
+<p>2022 年，<a href="vitalik-buterin.html">維塔利克·布特林</a>（Vitalik Buterin）、衛谷倫（E. Glen Weyl）、Puja Ohlhaver 提出構想：用 SBT 表現人與人之間的信任網絡，把以金錢往來為中心的加密貨幣世界（Web3）重新建立在社會關係之上。三人把它命名為「DeSoc」（Decentralized Society，去中心化社會）[2]。</p>
+<h2>舉例來說</h2>
+<p><strong>來自遊戲的「靈魂綁定」。</strong> 這個名稱來自線上遊戲《魔獸世界》（World of Warcraft）的「靈魂綁定」道具：一旦撿起，就不能轉讓或賣給其他玩家，想要最強的裝備，就只能自己和夥伴一起去打倒巨龍。布特林在 2022 年 1 月的部落格中問道：如果 NFT（網路上獨一無二的證明）也能這樣不可轉讓，是不是就不只能顯示持有者的財富，還能顯示「這個人是誰」？[1]</p>
+<p><strong>活動的參加證明。</strong> 布特林寫道，發給活動參加者的 NFT「POAP」，如果能從別人手上買到，就失去了「本人參加過」的意義。事實上，Adidas 免費發給粉絲的 POAP，在附上優先購買商品的權利後，馬上就被高價轉賣[1]。</p>
+<p><strong>臺灣數位發展部的貢獻證明。</strong> 唐鳳（Audrey Tang）在 2023 年的對談中談到，把年輕人派到各地擔任「數位轉型大使」的計畫：除了薪水，還發給表示貢獻與影響的「靈魂綁定 NFT」；因為有數位發展部的電子簽章，可以馬上驗證[3]。</p>
+<p><strong>《多元宇宙》的貢獻者。</strong> 衛谷倫在 2023 年 12 月的影片中說明，為本書做出貢獻的人，會以靈魂綁定憑證和 <a href="plural-credits.html">⿻ 積分</a>記錄貢獻的量；貢獻足夠多的人，名字會登上封面[4]。</p>
+<h2>運作方式</h2>
+<h3>為什麼「不能轉讓」很重要</h3>
+<p>布特林寫道，治理的權利（決定事情的權利）如果能輕易轉讓，就會發生不好的事[1]。</p>
+<p>想把權力廣泛分散，權利卻能轉讓的話，有錢人就會把它買齊。想把權利交給有能力的人，權利卻能轉讓的話，只是熱心而沒有能力的人也可能把它買光。所以布特林問道：把治理的權利做成不可轉讓，會怎麼樣？[1]</p>
+<h3>靈魂與 SBT</h3>
+<p>DeSoc 論文的基本元件，是持有公開、不可轉讓（但發行方可以撤銷）憑證的帳戶。這個帳戶稱為「Soul」（靈魂），其中的憑證稱為 SBT[2]。</p>
+<p>Soul 裡可以放學歷、工作經歷、作品紀錄等 SBT。最簡單的形式，像履歷一樣自己申報也可以。但論文說，真正發揮力量的時候，是由關係的另一方——例如大學、公司、活動主辦者（各自是另一個 Soul）——發行或證明的時候[2]。</p>
+<p>Soul 不需要和本名綁在一起，也不打算由機制保證「一人一個 Soul」[2]。</p>
+<h3>走向 DeSoc 的階梯</h3>
+<p>論文列出可以用 SBT 逐步實現的事[2]：</p>
+<ul>
+<li><strong>作品的來歷</strong> — 證明作品真的出自作者之手，可以對抗以假亂真的圖像和影片（深偽）。</li>
+<li><strong>以聲譽為基礎的借貸</strong> — 不需擔保，以信任為基礎借貸。</li>
+<li><strong>社群復原</strong> — 遺失金鑰時，從這個人所屬的社群（工作單位、俱樂部、大學、教會等）中，取得規定數目以上的社群各一人的同意來復原。</li>
+<li><strong>抗共謀的投票與資金分配</strong> — 找出同一夥人的票，並加以折扣。</li>
+</ul>
+<p>論文把個人與社群彼此培育、共同打造對大家都有用的網絡的社會，稱為 DeSoc[2]。</p>
+<h3>前史與隱私</h3>
+<p>衛谷倫在 2019 年與 Lucas Geiger、Kaliya Young 一起，於 <a href="radicalxchange.html">RadicalxChange</a> 的部落格上連載「去中心化社會身分」。大意是：現在的身分依賴難記的金鑰或少數巨型企業的登入，嚴重損害了我們每個人豐富的樣貌[5]。</p>
+<p>論文從容易處理的「公開」SBT 出發，但也表示深切關注隱私；後半討論了把本體放在帳本之外、只放標記之類的做法[2]。布特林也舉例說，疫苗接種紀錄如果變成公開的證明，就會被所有人看到，主張一開始就要把隱私放進設計裡[1]。</p>
+<h2>爭議與批評</h2>
+<ul>
+<li><strong>論文自己舉出的危險。</strong> DeSoc 論文承認，同樣可以用於不同的人彼此合作的 SBT，也可能被濫用：自動排除被討厭的群體、決定攻擊目標、限制移民、剝削弱勢者的借貸等[2]。論文也討論了作弊的可能：用賄賂收集 SBT 來偽造人際關係，或為了增加影響力而故意不持有 SBT[2]。</li>
+<li><strong>到底該不該放在區塊鏈上？</strong> 論文發表後不久，出現了身分使用區塊鏈是否有意義的討論。布特林整理介紹了幾種看法：應該在帳本外使用有簽章的證明的反駁、Ohlhaver 對此的回應、對自我管理身分的悲觀論等[6]。Shrey Jain 等人與衛谷倫 2022 年的論文則認為，Web3 身分的各種嘗試是互補的，差異與其說是本質，不如說是程度[7]。</li>
+<li><strong>不是「一人一個」的機制。</strong> SBT 本身不是身分驗證，也不是「真的是人類」的證明。論文說，Soul 不需要和本名綁在一起，也不需要保證一人一個 Soul[2]。真人的證明，請見<a href="proof-of-personhood.html">人格證明</a>一文。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》的 4-1 章〈身分與人格權〉，把去中心化身分討論的兩個極端並列[8]：一端是「可驗憑證」（VC）的倡議者，「首先考慮隱私以及用戶可以控制在任何時候顯示關於他們的聲明的能耐」；另一端是「靈魂綁定憑證」（SBT）的倡議者強調的公開憑證的重要性，也就是「對於準時償還貸款，或承諾不再複製藝術品等行為的公開紀錄」。書寫道，在兩者身上都能看到識別與保護身分之間的權衡[8]。</p>
+<p>同一章把讓個人網絡中不太可能聯手對付此人的一組人共同復原憑證的機制，稱為「社群復原」[8]；英文版在這裡的註腳引用了 DeSoc 論文。詳見<a href="identity-and-personhood.html">身分與人格權</a>一文。</p>
+<p>英文版 4-3 章〈<a href="commerce-and-trust.html">商業與信任</a>〉在指出安全身分的困難妨礙了社群貨幣實驗的註腳中，也舉出 DeSoc 論文[9]。5-6 章的<a href="plural-voting.html">⿻投票</a>與 5-7 章的資金分配（<a href="quadratic-funding.html">平方募資</a>等）中，考量參與者人際關係的機制的註腳，也引用了同一篇論文[10][11]（目前的繁體中文版沒有這些註腳）。</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>《多元宇宙》4-1〈身分與人格權〉（中文，書）— https://www.plurality.net/v/chapters/4-1/zh-tw/</li>
+<li>Vitalik Buterin, "Soulbound"（英文，文章，簡短入門）— https://vitalik.eth.limo/general/2022/01/26/soulbound.html</li>
+<li>Ohlhaver、Weyl、Buterin, "Decentralized Society: Finding Web3's Soul"（英文，論文）— https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</li>
+<li>Weyl 等, "Motivating The Case for Decentralized Social Identity"（英文，文章）— https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</li>
+<li>Jain、Erichsen、Weyl, "A Plural Decentralized Identity Frontier"（英文，論文）— https://arxiv.org/abs/2208.11443</li>
+<li>日経クロステック「SBT誕生の経緯と課題」（日文，文章）— https://xtech.nikkei.com/atcl/nxt/column/18/02132/030900011/</li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li>Vitalik Buterin, "Soulbound"（2022-01-26）— https://vitalik.eth.limo/general/2022/01/26/soulbound.html</li>
+<li>Puja Ohlhaver、E. Glen Weyl、Vitalik Buterin, "Decentralized Society: Finding Web3's Soul"（2022-05）— https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</li>
+<li>Audrey Tang, "Conversation with Joichi Ito and Daum Kim"（2023-02-24）— https://github.com/audreyt/transcript/blob/main/2023-02-24-Conversation-with-Joichi-Ito-and-Daum-Kim.md ［CC0］</li>
+<li>Glen Weyl on Plurality Seoul（2023-12-02，影片訊息）— https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</li>
+<li>Glen Weyl、Lucas Geiger、Kaliya Young, "Motivating The Case for Decentralized Social Identity"（2019-06-06）— https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</li>
+<li>Vitalik Buterin, "Where to use a blockchain in non-financial applications?"（2022-06-12）— https://vitalik.eth.limo/general/2022/06/12/nonfin.html</li>
+<li>Shrey Jain、Leon Erichsen、Glen Weyl, "A Plural Decentralized Identity Frontier"（2022）— https://arxiv.org/abs/2208.11443</li>
+<li>《多元宇宙》4-1〈身分與人格權〉— https://www.plurality.net/v/chapters/4-1/zh-tw/ ；DeSoc 論文的註腳見英文版 — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li>《Plurality》英文版 4-3 "Commerce and Trust" — https://www.plurality.net/v/chapters/4-3/eng/ ［CC0］</li>
+<li>《Plurality》英文版 5-6 "⿻ Voting" — https://www.plurality.net/v/chapters/5-6/eng/ ［CC0］</li>
+<li>《Plurality》英文版 5-7 "Social Markets" — https://www.plurality.net/v/chapters/5-7/eng/ ［CC0］</li>
+</ol><div class='related'>相關: <a href='identity-and-personhood.html'>什麼是「身分與人格權」（多元身分）？</a> ・ <a href='proof-of-personhood.html'>什麼是人格證明（proof of personhood）？</a> ・ <a href='commerce-and-trust.html'>什麼是「商業與信任」（多元通貨）？</a> ・ <a href='plural-voting.html'>什麼是⿻投票（plural voting）？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='plural-credits.html'>什麼是⿻ 積分（plural credits）？</a> ・ <a href='radicalxchange.html'>什麼是 RadicalxChange（RxC）？</a></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>

@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is Broad Listening?</title><meta name="description" content="Technology and practice that uses AI to read thousands or tens of thousands of free-form comments, group similar opinions, and turn them into a &quot;map of issues&quot;, so that one person can listen to many. It is the reverse of broadcasting on TV or radio."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/broad-listening.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/broad-listening.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/broad-listening.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/broad-listening.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is Broad Listening?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/broad-listening.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="Technology and practice that uses AI to read thousands or tens of thousands of free-form comments, group similar opinions, and turn them into a &quot;map of issues&quot;, so that one person can listen to many. It is the reverse of broadcasting on TV or radio."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../broad-listening.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/broad-listening.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What is Broad Listening?</h1><div class='lead'>Technology and practice that uses AI to read thousands or tens of thousands of free-form comments, group similar opinions, and turn them into a &quot;map of issues&quot;, so that one person can listen to many. It is the reverse of broadcasting on TV or radio.</div><p>With TV or radio, one voice can reach millions of people. But what about the reverse — how can one person properly listen to millions? The opinions that reach governments and politicians have tended to be either too many to read or too few to be representative. Broad listening is an idea that emerged as an answer to this problem of "listening to many".</p>
+<h2>In short</h2>
+<p>Broad listening is <strong>technology that lets one person listen to many people</strong>. If broadcasting is "one to many", this is "many to one".</p>
+<p>In concrete terms, AI reads thousands or tens of thousands of free-form comments, groups similar opinions, and turns the whole into a single "map of issues" [1].</p>
+<p>Most of the examples below come from Japan, where the practice spread quickly after a 2024 election campaign.</p>
+<h2>For example</h2>
+<p><strong>The 2024 Tokyo governor's election.</strong> The campaign of Takahiro Anno, a candidate for Governor of Tokyo, gathered voices through the hashtag "#TOKYOAI" on X (formerly Twitter), an anonymous suggestion box and other channels. It turned them into scatter plots with a tool called Talk to the City (TTTC), producing more than 30 reports during the campaign. Among the 951 opinions extracted from posts to the anonymous suggestion box, several posts called for removing the income cap on child-rearing support. That request was reflected when the manifesto (the campaign's list of promises) was updated from version 1.0 to 2.0 [2]. The article on <a href="anno-2024-tokyo-campaign.html">Takahiro Anno's 2024 Tokyo campaign</a> covers this in more detail.</p>
+<p><strong>Tokyo's long-term strategy.</strong> From November 22, 2024, the Tokyo Metropolitan Government invited submissions on "the Tokyo of the 2050s as you imagine it". It analyzed the 27,915 submissions with AI and used the results in reviewing how the policies of its "2050 Tokyo Strategy" were grouped [3][4][5]. → <a href="tokyo-2050-broad-listening.html">Broad listening for Tokyo's 2050 strategy</a></p>
+<p><strong>Japan's parliament.</strong> On March 7, 2025, Takae Ito, a member of the House of Councillors for the Democratic Party for the People, questioned the Prime Minister in the Budget Committee using a "map of issues" made with TTTC as supporting material. The book <em>Broad Listening</em> (see below) describes this as the first time in Japan's parliament that broad listening results were used as the basis for a question to the government [6][7].</p>
+<h2>How it works</h2>
+<h3>Why it is needed</h3>
+<p>Talk with 10 people for an hour each and you understand them deeply. But you don't know whether those 10 represent everyone. Ask a million people "yes or no" and you learn the overall trend. But you don't learn "why" or "what kind".</p>
+<p>As long as people and time are limited, the choice has tended to be either "listen deeply" or "listen widely". Broad listening aims to do both at once [1].</p>
+<p>Chapter 5-4 of the book <em>Plurality</em>, "Augmented Deliberation", makes the same point: "while methods of <em>broadcast</em> (allowing many to hear a single statement) have dramatically improved, <em>broad listening</em> (allowing one person to thoughtfully digest a range of perspectives) remains extremely costly and time consuming" [8].</p>
+<h3>How it runs</h3>
+<p>TTTC, and <a href="kouchou-ai.html">Kouchou AI</a> (a Japanese-language tool built on it), work in roughly three steps [2].</p>
+<ol>
+<li>Generative AI extracts "opinions" from the posts.</li>
+<li>Each text is converted into a list of numbers (a vector), and similar opinions are grouped together (clustering).</li>
+<li>Generative AI gives each group a heading and a summary.</li>
+</ol>
+<p>The result is a scatter plot in which each dot is one opinion. You can follow a group all the way down to the original posts [2].</p>
+<p>Doing this at a realistic cost has only recently become possible. It needed three things to come together: technology that turns the meaning of text into numbers (2019), technology that squeezes many dimensions into a two-dimensional chart (2018), and large language models (LLMs) that can summarize large amounts of text (for example, the public release of ChatGPT in 2022) [1]. The book <em>Broad Listening</em> estimates that analyzing 10,000 free-form comments with Kouchou AI costs about 500 yen [9].</p>
+<h3>Three meanings</h3>
+<p>The word means different things in different contexts. The book <em>Broad Listening</em>, written by the DD2030 (Digital Democracy 2030) community in Japan, separates three [1]:</p>
+<ol>
+<li><strong>As a tool</strong> — a "component" that uses AI to summarize large numbers of opinions and make them visible. Examples are TTTC, Kouchou AI and Google Jigsaw's Sensemaker.</li>
+<li><strong>As part of augmented deliberation (using technology to deepen discussion)</strong> — part of an ongoing cycle of gathering opinions, discussing them and deciding policy. Taiwan's <a href="vtaiwan.html">vTaiwan</a> and <a href="polis.html">Polis</a> are leading examples.</li>
+<li><strong>As something politicians and governments use directly</strong> — politicians or officials use the tools to gather voices and apply them to policy, without a discussion forum in between. In Japan, this form spread first, triggered by Anno's run for governor.</li>
+</ol>
+<h3>How it differs from surveys and public comment</h3>
+<p>Broad listening can handle large numbers of free-form comments. That makes it possible to find issues the people who designed a survey never thought of. The book <em>Broad Listening</em> describes this as opening up to the public the power to decide what gets on the agenda [9].</p>
+<p>Meanwhile, the book positions public comment (a procedure in which a government presents a draft and invites opinions on it) as "a final check on regulations that are already largely complete". Broad listening handles the earlier stage of "discovering and defining the problem", and the book says the two complement each other [10].</p>
+<h2>What is debated</h2>
+<p>The book <em>Broad Listening</em> itself is frank about the limits and common misunderstandings.</p>
+<ul>
+<li><strong>It is skewed toward the loudest voices.</strong> The people who write free-form comments are those with strong opinions. The silent majority doesn't show up. The book cites a Pew Research Center survey (2019) finding that 6% of all users post 73% of tweets about politics. It also points to a gap in which people who are used to writing are more likely to be heard [9].</li>
+<li><strong>Mistaking counts for "public opinion".</strong> The axes of the scatter plot have no meaning. The size of a group is the "number of submitted opinions", not the "share of people in society who hold that opinion". The book says it is a classic mistake to conclude that something is supported because supporting comments outnumbered opposing ones three to one, and warns that broad listening alone should not be used to make policy or electoral decisions [9]. What it recommends is a two-step approach: form hypotheses with broad listening, then test them with a survey of randomly selected people [9].</li>
+<li><strong>The tool does not gather the opinions.</strong> Whether many opinions come in depends on publicity and public interest. The book states plainly that the large numbers gathered by Anno's campaign and by Tokyo were not due to the tool itself. In one case in Hiroshima Prefecture, only 2 opinions came in through the hashtag [9][11]. → <a href="municipal-broad-listening.html">Broad listening in local governments</a></li>
+<li><strong>The misunderstanding that "AI decides policy".</strong> The book says it is a tool that can be used under any political system, and that it is humans (elected politicians and legislatures) who read the results and decide [10].</li>
+<li><strong>Concerns raised in Tokyo's public comment.</strong> Public comments on the draft 2050 Tokyo Strategy included views that the voices gathered came from people used to expressing opinions and should not be used to justify policy, that the way submissions were solicited should be carefully examined, and questions about whether the city would simply publish a summary and stop there. The city replied that it had done this as a reference for drafting the strategy [12].</li>
+<li><strong>Overstating stories of "changing policy".</strong> Chapter 5 of the book <em>Broad Listening</em> (by Shinta Nakayama) examined the often-told story that in Tokyo tourism became an independent strategy. It found that the expansion of tourism policy was already under way in a revision made in January 2024, before submissions were invited, and concluded that the story that "broad listening changed policy" is at least partly overstated [3].</li>
+<li><strong>Broad listening isn't just "that scatter plot".</strong> The scatter plot made such a strong impression that people tended to take the chart itself to be broad listening. The book cautions that some tools, such as Polis, don't fit into a scatter plot of that kind [1][2].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>In <em>Plurality</em>, broad listening appears in chapter 5-4, "<a href="augmented-deliberation.html">Augmented Deliberation</a>", as "the 'broad listening' problem", in contrast to broadcasting. The book says that <a href="generative-foundation-models.html">generative foundation models</a> such as LLMs are beginning to open a way to tackle this problem, and cites the Anno campaign's efforts as an example: a manifesto published on GitHub, visualization with TTTC, and an AI avatar that answered questions around the clock [8].</p>
+<p>On the origin of the term, <em>Plurality</em> says in a footnote: "To our knowledge, this concept of 'broad listening' originates with Andrew Trask" [8]. In July 2024, Glen Weyl, one of the book's authors, said the same on X [13].</p>
+<p>The book <em>Broad Listening</em> notes that the term appears only three times in <em>Plurality</em>'s chapter on augmented deliberation, and says that a hidden aim of its own book is to make a "watered-down Plurality" — diluted enough to be understood through real examples [1].</p>
+<p>Neighboring articles:
+- <a href="talk-to-the-city.html">Talk to the City</a> and <a href="kouchou-ai.html">Kouchou AI</a> — tools that make maps from free-form comments
+- <a href="polis.html">Polis</a> — a tool that makes opinion maps from agree/disagree votes
+- <a href="idobata.html">Idobata</a> — a discussion space where AI interviews people one by one
+- <a href="bridging.html">Bridging</a> — opinions that win support across groups</p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Plurality</em>, chapter 5-4 "Augmented Deliberation" (English, book) — https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li><em>Broad Listening</em>, chapter 1 "What is broad listening?" (Japanese and English, book, free to read) — https://broadlisteningbook.com/</li>
+<li>Manuscript repository of the book <em>Broad Listening</em> (in Japanese, book; chapters 2 and 3 cover bias and the relationship to public comment) — https://github.com/digitaldemocracy2030/broad-listening-book</li>
+<li>Hirokazu Nishio, "ブロードリスニング" (Broad listening) (in Japanese, notes) — https://scrapbox.io/nishio/ブロードリスニング</li>
+<li>Tokyo Metropolitan Government, results of public comment on the draft "2050 Tokyo Strategy" (in Japanese, government document) — https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li><em>Broad Listening</em>, chapter 1 "What Is Broad Listening?" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, chapter 4, section 1 "Takahiro Anno's Initiatives in the 2024 Tokyo Governor Election" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, chapter 5 "Shin Tokyo 2050—Did Broad Listening Change a City of 14 Million? (2024-2025)" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Tokyo Metropolitan Government press release (2024-11-22), call for opinions on "Shin Tokyo 2050" (in Japanese) — https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203</li>
+<li>Tokyo Metropolitan Government, Policy Planning Bureau, "Approach to broad listening" (2025-01-31, in Japanese) — https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3</li>
+<li><em>Broad Listening</em>, chapter 4 "The Spread of Broad Listening in Japan" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, chapter 4, section 2 "The Democratic Party for the People Uses an Issue-Space Visualization in Questioning the Government in the Japanese Parliament" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Plurality</em>, 5-4 "Augmented Deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li><em>Broad Listening</em>, chapter 2 "The Difference Between Broad Listening and Surveys, and the Shift from Quantitative to Qualitative Analysis" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, chapter 3 "Digital Democracy, Broad Listening, and New Ways of Delivering Public Voice" (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li><em>Broad Listening</em>, chapter 8, section 2, on Hiroshima Prefecture (in Japanese; English translation in the same repository) — https://github.com/digitaldemocracy2030/broad-listening-book ［CC BY-NC 4.0］</li>
+<li>Tokyo Metropolitan Government, results of public comment on the draft "2050 Tokyo Strategy" (excerpt, in Japanese) — https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</li>
+<li>Hirokazu Nishio, "The naming of broad listening" (includes Glen Weyl's X post https://x.com/glenweyl/status/1817955522035032270; in Japanese) — https://scrapbox.io/nishio/ブロードリスニングの命名</li>
+</ol><div class='related'>Related: <a href='talk-to-the-city.html'>What is Talk to the City (TTTC)?</a> ・ <a href='kouchou-ai.html'>What is Kouchou AI?</a> ・ <a href='augmented-deliberation.html'>What is Augmented Deliberation?</a> ・ <a href='polis.html'>What is Polis?</a> ・ <a href='idobata.html'>What is Idobata?</a> ・ <a href='anno-2024-tokyo-campaign.html'>What was Takahiro Anno&#x27;s 2024 Tokyo campaign?</a> ・ <a href='tokyo-2050-broad-listening.html'>What is the broad listening for Tokyo&#x27;s &quot;Shin Tokyo 2050&quot;?</a> ・ <a href='municipal-broad-listening.html'>What is broad listening in local governments?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>

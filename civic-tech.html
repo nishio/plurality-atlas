@@ -1,0 +1,89 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>シビックテックってなに？</title><meta name="description" content="市民が自分たちの手でテクノロジーを使い、行政と組んで地域や社会の問題を解いたり、政治に参加しやすくしたりする活動です。米国の Code for America、台湾の g0v、日本の Code for Japan が代表例です。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/civic-tech.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/civic-tech.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/civic-tech.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/civic-tech.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/civic-tech.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Plurality の地図"><meta property="og:title" content="シビックテックってなに？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/civic-tech.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="市民が自分たちの手でテクノロジーを使い、行政と組んで地域や社会の問題を解いたり、政治に参加しやすくしたりする活動です。米国の Code for America、台湾の g0v、日本の Code for Japan が代表例です。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/civic-tech.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/civic-tech.html">繁體中文</a></nav></header>
+<main lang="ja"><h1>シビックテックってなに？</h1><div class='lead'>市民が自分たちの手でテクノロジーを使い、行政と組んで地域や社会の問題を解いたり、政治に参加しやすくしたりする活動です。米国の Code for America、台湾の g0v、日本の Code for Japan が代表例です。</div><p>災害のとき、どこで何が足りないのかを地図で知りたい。役所の手続きをもっとわかりやすくしたい。そうした困りごとを、役所に任せるだけでなく、市民が自分たちの技術で解いてしまおう、という動きがあります。それがシビックテックです。</p>
+<h2>ひとことで言うと</h2>
+<p>シビックテック（Civic Tech）は、「市民（シビック）」と「テクノロジー」を合わせた言葉です。ふつうの市民が技術を使って、自分たちのまちや社会の困りごとを解いたり、行政への参加をしやすくしたりする活動を指します[1]。</p>
+<p>関わるのはエンジニアだけではありません。行政の職員、デザイナー、地域の人など、さまざまな人が参加します[1]。</p>
+<h2>たとえば</h2>
+<p><strong>sinsai.info と Code for Japan（日本、2011 年〜）。</strong> 本『Plurality』によれば、日本のシビックテックを率いる関治之（せき・はるゆき、Hal Seki）は、2011 年の東日本大震災のあと、被災の情報を集めて地図に載せるサイト sinsai.info の立ち上げを主導しました。のちに Code for Japan を作っています[2]。</p>
+<p>関自身は、もとは社会の課題に関心のないエンジニアだったと振り返ります。sinsai.info に関わる中で、技術は本当に人を幸せにするのか、と考えるようになりました。そして、オープンソース（誰でも使え、改良できる形で公開すること）の運営のやり方こそ自治体に必要だ、と思うようになったといいます[3]。Code for Japan は、東京都の新型コロナウイルス感染症対策サイトもオープンソースで作りました[1]。</p>
+<p><strong>g0v とマスク地図（台湾、2012 年〜）。</strong> 中国語版ウィキペディアによれば、台湾のシビックテックを代表するのが <a href="g0v.html">g0v</a>（ガヴゼロ）です。政府の予算を見える化する取り組みや、2020 年のコロナ禍で、薬局ごとのマスクの在庫を調べられるようにした「マスク地図」が知られています[4]。</p>
+<p>関の報告では、2020 年 2 月 8 日の時点で、g0v のサイトには地図アプリが 28、LINE のアプリが 14 などが並んでいました。土台になったのは、政府が健康保険証の IC チップを通じてつかんだ販売データを、30 秒ごとに公開したことでした[5]。</p>
+<p><strong>Code for America（米国、2009 年〜）。</strong> 鈴木健は『PLURALITY』日本語版の解説で、2009 年に米国で Code for America ができ、その影響で 2013 年に日本で Code for Japan、2014 年にドイツで Code for Germany が生まれた、と整理しています[6]。</p>
+<h2>しくみ</h2>
+<h3>シビックテックとガブテック</h3>
+<p>関の FAQ（2021 年）は、シビックテックを、市民自身が技術で課題を解く活動、公共の場への市民の参加を進める活動、民主主義そのものを技術で良くする活動だとしています[1]。</p>
+<p>これと区別されるのが「ガブテック（GovTech）」です。行政が技術を使って自分の仕事を良くすることを指します。両者は重なる部分も多く、Code for Japan は行政職員向けの研修など、ガブテックの事業もしています[1]。中国語版ウィキペディアも、シビックテックの受け手は市民、ガブテックの受け手は政府だが、どちらも市民と政府のやり取りを強めることを目指す、と書いています[4]。</p>
+<p>関は 2025 年のスライドで、シビックテックの「テック」は手段にすぎないとまとめています。本当の目的は、みんなが参加するより良い民主主義を実現することだ、というのです。デジタルの技術で参加の手間が大きく下がったから、新しいやり方ができるようになっただけだ、としています[7]。</p>
+<h3>国をまたぐつながり</h3>
+<p>g0v の公式 FAQ は、似た海外の団体として、英国の mySociety、米国の Code for America や Sunlight Foundation を挙げています[8]。g0v の高嘉良（clkao）は 2017 年のインタビューで、各国のシビックテック団体のネットワーク「Code for All」に台湾も入っていると語りました。g0v はゆるやかな集まりで投票できないため、別の財団が窓口を務めたそうです[9]。</p>
+<h3>日本のかたち</h3>
+<p>関によれば、地域ごとの「Code for ○○」という集まりが日本には 70 以上あります。これほど多いのは米国と日本くらいだ、と書いています（2021 年の FAQ では 90 以上とされていました）[10][1]。</p>
+<p>10 年前には、日本人には市民としての感覚が薄く、役所任せの意識が強いから無理だ、と言われたが、日本なりの形で根づいた、と関は振り返ります。そして、シビックテックは技術やビジネスの形ではなく、上からの命令では生まれない、下からの「文化」だと論じています[11]。参加者のうちエンジニアは 3 割ほどです[1]。</p>
+<h3>新しい波 — デジタル民主主義</h3>
+<p>関は、新しい流れも報告しています。市民の団体 <a href="dd2030.html">DD2030</a> から生まれた <a href="kouchou-ai.html">広聴AI</a>、スペインのバルセロナで生まれた市民参加の道具 Decidim、<a href="broad-listening.html">ブロードリスニング</a>（大勢の声を広く聴き取って整理すること）などが登場しました。これまでのシビックテックの層とは違う、話し合いや対話に関心を持つ人たちが集まり始めた、というのです[10]。こうした市民参加の道具は、会社の事業にもなり始めています[10]。</p>
+<h2>どこが議論になっているか</h2>
+<ul>
+<li><strong>「市民が勝手に解決してくれる」は幻想。</strong> 関は、自治体の担当者から何度も聞いたこの期待を、13 年の経験から「幻想」だと言い切ります。Code for America が立ち上がれたのは財団からの大きな資金があったからで、Code for Japan が続いたのも、自治体向けの事業の利益を仲間の活動に回せたからだ、というのです。道具の試作はボランティアでできても、それを企業並みに運用し続けることはできない、とも書いています[10]。</li>
+<li><strong>行政が主導すると起きること。</strong> 関のスライドは、行政が主導すると予算はつきやすい一方で、手段が目的になってしまう、市民が受け身になる、予算が切れたり担当者が異動したりすると止まる、といったことが起きやすい、としています。市民を行政の課題を解くための道具と見てはいけない、とも書いています[7]。</li>
+<li><strong>「エンジニアの活動」ではない。</strong> 日本では「エンジニアじゃないから」と参加やリーダー役を遠慮する人が多い、と関は言います。海外の団体ではリーダーが技術者でないことも多く、まちのあるべき姿を考えることから入るべきだ、としています[10]。</li>
+<li><strong>成果をどう測るか。</strong> 新しいサービスが生まれることへの期待が大きすぎて、仕事の進め方の改善や信頼づくりを評価する方法が無い、と関は指摘しています[10]。</li>
+</ul>
+<h2>Plurality の中での位置</h2>
+<p>本『Plurality』の 3-3 章「<a href="lost-dao.html">失われた道</a>」は、「GovTech」と「Civic Tech」の運動を、「おそらく私たち自身の ⿻ への道に最も近い」ものだと書いています[2]。初期のインターネットにあった、公共のために多くの立場の人が関わる精神を、政府と市民社会のデジタルな参加を強めることで取り戻そうとする運動だ、という位置づけです。オープンソースの作り方で行政サービスを良くし、さまざまな形で市民を招き入れる、と説明しています[2]。</p>
+<p>同じ章は先導者として、Code for America の創設者ジェニファー・パルカ（Jennifer Pahlka）、ベス・シモーヌ・ノベック（Beth Simone Noveck）、そして関治之を挙げています[2]。ただし、こうした例は大事な影響を持ったものの、g0v が台湾で持ったような国全体に見える影響は持ちにくかった、とも書いています[2]。</p>
+<p>2-2 章は g0v を、台湾のデジタル民主主義を支える市民社会の土台の象徴として描き、その創設者たちを「市民ハッカー」と呼んでいます[12]。台湾の歩みは <a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a> と <a href="vtaiwan.html">vTaiwan</a> の記事で扱います。</p>
+<h2>もっと知りたい人へ</h2>
+<ol>
+<li>関治之「シビックテックに関するFAQ:2021年版」（日本語・記事）— https://note.com/hal_sk/n/na288b92863f5</li>
+<li>『Plurality』3-3「失われた道」（日本語・本）— https://www.plurality.net/v/chapters/3-3/jpn/</li>
+<li>公民科技（中国語版 Wikipedia・事典）— https://zh.wikipedia.org/zh-tw/%E5%85%AC%E6%B0%91%E7%A7%91%E6%8A%80</li>
+<li>関治之「シビックテックとは文化である」（日本語・記事）— https://note.com/hal_sk/n/nab06fa3794f8</li>
+<li>関治之「日本におけるシビックテックの歩みと課題」（日本語・スライド）— https://speakerdeck.com/hal_sk/ri-ben-niokerusibitukutetukunobu-mitoke-ti</li>
+<li>関治之「シビックテックは次のステージへ進めるか」（日本語・記事）— https://note.com/hal_sk/n/ne58a76fa25a8</li>
+</ol>
+<h2>出典</h2>
+<ol>
+<li>関治之「シビックテックに関するFAQ:2021年版」（2021-12-25）— https://note.com/hal_sk/n/na288b92863f5</li>
+<li>『Plurality』3-3「The Lost Dao」— https://www.plurality.net/v/chapters/3-3/eng/ ［CC0］</li>
+<li>関治之 アジャイル・ガバナンスとシビックテックについての note 記事（2021-07-10）— https://note.com/hal_sk/n/n4d4e7003b1b9</li>
+<li>中国語版 Wikipedia「公民科技」— https://zh.wikipedia.org/zh-tw/%E5%85%AC%E6%B0%91%E7%A7%91%E6%8A%80 ［CC BY-SA 4.0］</li>
+<li>関治之 台湾のマスク地図についての記事（2020-02-08）— https://note.com/hal_sk/n/nd5d71fa9ff5d</li>
+<li>鈴木健『PLURALITY』日本語版 解説 — https://note.com/digitaldemocracy/n/nb8b59a6b775d</li>
+<li>関治之「日本におけるシビックテックの歩みと課題」（2025-09-26）— https://speakerdeck.com/hal_sk/ri-ben-niokerusibitukutetukunobu-mitoke-ti</li>
+<li>g0v 公式 FAQ — https://g0v.tw/faq.html</li>
+<li>高嘉良 天下雜誌インタビュー全文（2017-11-08）— https://medium.com/@clkao/cw-interview-73848141ac5</li>
+<li>関治之「シビックテックは次のステージへ進めるか」（2025-10-10）— https://note.com/hal_sk/n/ne58a76fa25a8</li>
+<li>関治之「シビックテックとは文化である」（2023-12-08）— https://note.com/hal_sk/n/nab06fa3794f8</li>
+<li>『Plurality』2-2「The Life of a Digital Democracy」— https://www.plurality.net/v/chapters/2-2/eng/ ［CC0］</li>
+</ol><div class='related'>関連: <a href='g0v.html'>g0v（零時政府）ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a> ・ <a href='digital-democracy.html'>デジタル民主主義ってなに？</a> ・ <a href='lost-dao.html'>失われた道（The Lost Dao）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>

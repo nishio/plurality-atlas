@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What are generative foundation models (GFMs)?</title><meta name="description" content="Large programs, like ChatGPT and Claude, that learn from huge numbers of examples of text and images and produce text, images and voices. The book *Plurality* mostly avoids calling them &quot;AI&quot;, and treats them as tools that help people collaborate across their differences."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/generative-foundation-models.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/generative-foundation-models.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/generative-foundation-models.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What are generative foundation models (GFMs)?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/generative-foundation-models.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="Large programs, like ChatGPT and Claude, that learn from huge numbers of examples of text and images and produce text, images and voices. The book *Plurality* mostly avoids calling them &quot;AI&quot;, and treats them as tools that help people collaborate across their differences."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../generative-foundation-models.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/generative-foundation-models.html">繁體中文</a></nav></header>
+<main lang="en"><h1>What are generative foundation models (GFMs)?</h1><div class='lead'>Large programs, like ChatGPT and Claude, that learn from huge numbers of examples of text and images and produce text, images and voices. The book *Plurality* mostly avoids calling them &quot;AI&quot;, and treats them as tools that help people collaborate across their differences.</div><p>Type in a question, and a program writes a fluent answer. Many people now use programs like this. They are usually called "AI" (artificial intelligence), but the book <em>⿻ Plurality</em> calls them "generative foundation models" (GFMs). There is a clear reason for the change of name.</p>
+<h2>In short</h2>
+<p>Generative foundation models are <strong>large computer programs, like ChatGPT and Claude, that learn from huge numbers of examples of text, images and so on, and produce text, images and voices</strong> [1]. "Generative" means creating something new, and "foundation" means serving as a base for many different uses.</p>
+<p>The book mostly avoids calling them "AI". It treats them not as machines that think on their own, but as <strong>tools that help people collaborate across their differences</strong> [1].</p>
+<h2>For example</h2>
+<p><strong>Anthropic's publicly sourced constitution (2023–24).</strong> According to the book, the AI company Anthropic worked with the nonprofit Collective Intelligence Project to source the "constitution" that steers its model's behavior (the principles it should follow) using <a href="polis.html">Polis</a>, a tool for gathering opinions [2]. According to the paper on this experiment, 1,002 people, selected to match the makeup of US adults by age, gender, income and region, wrote 1,127 statements and cast 38,252 votes [3]. → <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
+<p><strong>Talk to the City and the Tokyo governor's race (2024).</strong> <a href="talk-to-the-city.html">Talk to the City</a> is a tool that uses GFMs to turn a large list of opinions into something you can talk to. According to the book, the campaign of Takahiro Anno used it to visualize the opinions it received. And "AI-Anno", an AI avatar of the candidate on YouTube, answered approximately 7,400 questions in 16 days [4]. That comes to about 460 a day. → <a href="anno-2024-tokyo-campaign.html">Takahiro Anno's 2024 Tokyo gubernatorial campaign</a></p>
+<p><strong>Singing in someone else's voice.</strong> The book describes how the musicians Holly Herndon, Mat Dryhurst and their collaborators "have harnessed GFMs to allow them to sing in the voices of historical figures or others not present and to allow others to sing in their voices." The audio version of this book, too, was read in a "common voice" blended from the voices of many participants [5]. → <a href="creative-collaboration.html">Creative Collaborations</a></p>
+<h2>In more detail</h2>
+<h3>Why not call it "AI"?</h3>
+<p>In chapter 5-5, the book writes that "the term AI refers more to an aspiration than to a particular set of tools" [1].</p>
+<p>The AI that dominated the 1970s and 1980s, sometimes called "good old-fashioned AI", tried to automate processing by encoding rules drawn from experts in nested, tree-like sets. It ran into major obstacles. Today's GFMs differ decisively, the book says, in that they learn from examples, in a probabilistic way [1].</p>
+<p>The book also writes that it mostly avoids the common "AI" terminology, because it implies a "mystique of autonomy" that "helps obscure the conditions of their creation" [6].</p>
+<h3>AI as an ideology</h3>
+<p>Behind this stance lies a 2020 opinion piece by Jaron Lanier and Glen Weyl, "AI is An Ideology, Not A Technology" [7].</p>
+<p>According to the two, "AI" is not a word for what a technology contains. It sorts technologies by human impressions: whether a task looks intelligent. Their example is a program that tells cats from dogs. Instead of saying that a machine has learned to see, they suggest, one could say that many people contributed examples and so, for the first time, precisely defined the difference between cats and dogs [7].</p>
+<p>No intelligence stands entirely on its own; each relies on a social context built by other people. The two call this view a pluralist objection [7]. In 2023, Lanier titled an article in <em>The New Yorker</em> "There Is No A.I." [8].</p>
+<h3>How they work, in outline</h3>
+<p>In the book's explanation, GFMs have "billions or even trillions of 'nodes'" that feed input to one another and together predict the next word or image. In this way they have become able to reproduce the kind of flexible classification, response and reasoning that people show, quickly, widely and in a broadly consistent way [1].</p>
+<p>The book writes that "the power of GFMs stems less from being 'AI' than from their networked and probabilistic structure". The same kind of structure can exist in networks of human relationships, it says [9].</p>
+<h3>The roles GFMs play in the book</h3>
+<p>In the chapters of Part 5 of the book, GFMs appear as components that widen collaboration:</p>
+<ul>
+<li><strong>Chapter 5-1</strong>: turning ideas into visible form as fast as they can be imagined, and creating virtual environments that respond immediately to emotions and actions [10]. → <a href="post-symbolic-communication.html">Post-Symbolic Communication</a></li>
+<li><strong>Chapter 5-3</strong>: translating not only words but cultural patterns; steering thought in directions people would not think of; and testing the effects of how posts are ranked on simulated social networks of AI agents that behave like people [5].</li>
+<li><strong>Chapter 5-4</strong>: summarizing many free-form voices to find points of agreement (<a href="broad-listening.html">broad listening</a>); and offering each participant in a discussion evidence-based suggestions on the spot [4][11]. → <a href="augmented-deliberation.html">Augmented Deliberation</a></li>
+<li><strong>Chapter 5-5</strong>: serving as components of administration that take a diverse, unstructured range of inputs and respond without making users fill out specialized forms [1]. → <a href="adaptive-administration.html">Adaptive Administration</a></li>
+</ul>
+<h3>Clashes with rights</h3>
+<p>In Part 4, on the other hand, GFMs also appear as a threat. Because GFMs make it easy to copy and alter content, and can make clever inferences from public information, they worsen identity problems such as impersonation, the book writes [12]. → <a href="identity-and-personhood.html">Identity and Personhood</a></p>
+<p>And while a broad range of information shared online is the basis of GFMs, what their training data contains has yet to be disclosed. It was taken in not only without the consent of the people who created it, but without their knowledge, the book writes [13]. → <a href="data-dignity.html">data dignity</a>, <a href="property-and-contract.html">Property and Contract</a></p>
+<h3>Who built them?</h3>
+<p>Chapter 2-0 of the book points out that many of the most fundamental advances in computing arose from democratic governments during the Second World War and the Cold War. Yet "today governments have played virtually no role in the breakthroughs in 'foundation models'". According to the book, the founders of OpenAI initially sought government funding and turned to private, profit-driven sources only after being turned down [14].</p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>Opacity, bias and misuse.</strong> The book writes: "There may be no technology today whose pitfalls and dangers are more discussed than GFMs and for good reason." It lists their opacity, the mystique of autonomy, their potential to inherit the biases of their source data and creators, and their potential for misuse. Used in administration, it says, they could even deepen the opacity of bureaucracy [6].</li>
+<li><strong>Auditing and censorship.</strong> There is a limit to whether people can really check ever more capable GFMs. There is also a risk that, simply following instructions, they erase particular viewpoints. The book holds that ⿻ models must return a range of diverse, plausible answers, and be tuned to the circumstances of particular groups [15].</li>
+<li><strong>Creativity becoming uniform.</strong> There is a risk that systems meant to help collaboration instead smooth unconventional ideas over "in favor of consensus and algorithmic predictability". As a separate danger, the book warns that when corporate platforms co-opt or monetize creative work, then by reducing the incentive for creativity such traps "risk killing the goose of creativity and diversity that lays the golden eggs of training GFMs in the first place" [16].</li>
+<li><strong>Is avoiding "AI" just wordplay?</strong> Lanier and Weyl argue that what we call things shapes design and where responsibility lies. The "AI" way of thinking, they write, distracts from human responsibility. They go further and criticize "AI" as a political and social ideology holding that technology designed by a small group of technical experts should replace people rather than help them, an ideology that echoes <a href="three-paths.html">technocracy</a> and central planning [7].</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>The book places GFMs not as a lone protagonist but as a tool that works across the seven forms of collaboration in Part 5 [1][4]. → <a href="collaborative-technology.html">collaborative technology</a></p>
+<p>Then who steers GFMs, and how? The book writes that methods of deliberation and voting could determine the right distribution of power over how GFMs are run, how the economic value they create is shared, and how they are steered in line with the common will [6]. This question leads on to arguments developed after the book by Audrey Tang and others. → <a href="civic-ai.html">Civic AI</a>, <a href="six-pack-of-care.html">6-Pack of Care</a>, <a href="kami.html">Kami</a>, <a href="reverse-alignment.html">Reverse Alignment</a></p>
+<h2>Further reading</h2>
+<ol>
+<li>Jaron Lanier and E. Glen Weyl, "AI is An Ideology, Not A Technology" (English, opinion piece, WIRED 2020) — https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</li>
+<li><em>Plurality</em>, chapter 5-5 "Adaptive Administration", section "Adaptive administration tomorrow" (English, book) — https://www.plurality.net/v/chapters/5-5/eng/</li>
+<li><em>Plurality</em>, chapter 5-4 "Augmented Deliberation" (English, book) — https://www.plurality.net/v/chapters/5-4/eng/</li>
+<li>The Collective Constitutional AI paper (English, paper) — https://arxiv.org/abs/2406.07814</li>
+<li>Jaron Lanier, "There Is No A.I." (English, article, The New Yorker 2023) — https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</li>
+<li><em>Plurality</em>, chapter 4-4 "Property and Contract" (English, book) — https://www.plurality.net/v/chapters/4-4/eng/</li>
+<li><em>Plurality</em>, chapter 5-5, Japanese edition (in Japanese, book) — https://www.plurality.net/v/chapters/5-5/jpn/</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li><em>Plurality</em>, 5-5, section "Adaptive administration tomorrow", paragraphs 1–3 — https://www.plurality.net/v/chapters/5-5/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-4, section "Conversation tomorrow" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li>Huang and others, "Collective Constitutional AI: Aligning a Language Model with Public Input" (2024) — https://arxiv.org/abs/2406.07814 ［CC BY 4.0］</li>
+<li><em>Plurality</em>, 5-4, section "Frontiers of augmented deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-3, section "Creative collaboration tomorrow" — https://www.plurality.net/v/chapters/5-3/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-5, section "Limits of adaptive administration" — https://www.plurality.net/v/chapters/5-5/eng/ ［CC0］</li>
+<li>Jaron Lanier and E. Glen Weyl, "AI is An Ideology, Not A Technology" (WIRED, 2020) — https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</li>
+<li>Jaron Lanier, "There Is No A.I." (The New Yorker, 2023) — https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</li>
+<li><em>Plurality</em>, 5-5, end of the section "Adaptive administration tomorrow" — https://www.plurality.net/v/chapters/5-5/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-1, section "Post-symbolic communication tomorrow" — https://www.plurality.net/v/chapters/5-1/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-4, section "Frontiers of augmented deliberation" (the paragraph on the experiment in which a GFM gave participants real-time suggestions) — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-1 "Identity and Personhood" — https://www.plurality.net/v/chapters/4-1/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 4-4 "Property and Contract" — https://www.plurality.net/v/chapters/4-4/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 2-0 "Information Technology and Democracy: A Widening Gulf" — https://www.plurality.net/v/chapters/2-0/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-4, section "Limits of augmented deliberation" — https://www.plurality.net/v/chapters/5-4/eng/ ［CC0］</li>
+<li><em>Plurality</em>, 5-3, section "Limits of creative collaboration" — https://www.plurality.net/v/chapters/5-3/eng/ ［CC0］</li>
+</ol><div class='related'>Related: <a href='adaptive-administration.html'>What is Adaptive Administration?</a> ・ <a href='augmented-deliberation.html'>What is Augmented Deliberation?</a> ・ <a href='creative-collaboration.html'>What are Creative Collaborations?</a> ・ <a href='post-symbolic-communication.html'>What is Post-Symbolic Communication?</a> ・ <a href='data-dignity.html'>What is data dignity?</a> ・ <a href='civic-ai.html'>What is Civic AI?</a> ・ <a href='alignment-assemblies.html'>What are Alignment Assemblies?</a></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.</footer></main></body></html>
