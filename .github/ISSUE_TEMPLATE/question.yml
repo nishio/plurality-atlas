@@ -1,0 +1,27 @@
+name: "質問・記事のリクエスト / Question or article request / 提問・文章需求"
+description: "「〜ってなに？」を知りたい、この記事のここがわからない / Ask \"What is…?\" or about something unclear / 想知道「什麼是…？」或文章中不懂的地方"
+title: "[質問] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        この issue は公開されます。個人情報は書かないでください。
+        This issue is public — please do not include personal information.
+        此 issue 為公開內容，請勿填寫個人資料。
+  - type: textarea
+    id: question
+    attributes:
+      label: "知りたいこと / Your question / 你想知道的事"
+      placeholder: "例: 〜ってなに？ / e.g. What is ...? / 例：什麼是…？"
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: "関係する記事の URL（任意） / Related article URL (optional) / 相關文章網址（選填）"
+  - type: dropdown
+    id: lang
+    attributes:
+      label: "答えてほしい言語 / Preferred language / 希望的語言"
+      options: ["日本語", "English", "繁體中文"]

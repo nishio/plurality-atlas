@@ -4,9 +4,9 @@
 
 - サイト: https://nishio.github.io/plurality-atlas/
 - この repo はビルド済みの静的サイトです。記事は各資料を照合して作っています（元の資料と作業の記録は非公開の repo にあります）。
-- 誤りに気づいたら issue で知らせてください。
+- **間違いの指摘・質問**: 各記事の末尾のリンクから、または [issue](https://github.com/nishio/plurality-atlas/issues/new/choose) で。送られた内容は公開されます。返事は AI が資料と照合して書き、判断の要るものは管理者が見ます。
 
-A map of the book *Plurality* and the ideas, mechanisms, practices, people and debates around it, in Japanese, English and Traditional Chinese. Please report errors via issues.
+A map of the book *Plurality* and the ideas, mechanisms, practices, people and debates around it, in Japanese, English and Traditional Chinese. Error reports and questions are welcome via the links at the end of each article or [issues](https://github.com/nishio/plurality-atlas/issues/new/choose).
 
 ## License
 

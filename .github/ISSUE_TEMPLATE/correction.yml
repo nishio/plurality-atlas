@@ -1,0 +1,36 @@
+name: "間違いの指摘 / Report an error / 回報錯誤"
+description: "記事の事実の誤り・出典の誤り・訳の誤りを知らせる / Report a factual, source or translation error / 回報事實、出處或翻譯的錯誤"
+title: "[指摘] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ありがとうございます。この issue は公開されます。個人情報は書かないでください。
+        Thank you. This issue is public — please do not include personal information.
+        感謝回報。此 issue 為公開內容，請勿填寫個人資料。
+  - type: input
+    id: page
+    attributes:
+      label: "記事の URL / Article URL / 文章網址"
+      placeholder: "https://nishio.github.io/plurality-atlas/..."
+    validations:
+      required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: "どの文か / Which sentence / 哪一句"
+      description: "該当する文をそのまま貼ってください / Paste the sentence / 請貼上該句"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "何が違うか / What is wrong / 哪裡有誤"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "根拠となる資料（任意） / Supporting source (optional) / 依據的資料（選填）"
+      description: "URL や本の章など / URL, book chapter, etc. / 網址、書的章節等"

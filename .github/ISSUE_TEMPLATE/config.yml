@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "GitHub のアカウントが無い方 / No GitHub account / 沒有 GitHub 帳號"
+    url: "https://nishio.github.io/plurality-atlas/"
+    about: "各記事の末尾のフォームのリンクからも送れます / You can also use the form linked at the end of each article / 也可使用各篇文末的表單連結"
