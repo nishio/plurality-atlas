@@ -41,21 +41,27 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/anno-takahiro.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/anno-takahiro.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/anno-takahiro.html">简体中文</a></nav></header>
 <main lang="ja"><h1>安野貴博ってどんな人？</h1><div class='lead'>AI エンジニア・起業家・SF 作家です。2024 年の東京都知事選で、AI とブロードリスニングを使って有権者の声を聞く選挙をしました。翌年に政党「チームみらい」をつくって党首になり、参議院議員を務めています。本『Plurality』にも事例として出てきます。</div><p>日本で Plurality という言葉が広く知られるきっかけの一つが、2024 年の東京都知事選でした。その選挙で AI を使って有権者の声を集めた候補者が、この人です。本『Plurality』も、この選挙を例として取り上げています。</p>
 <h2>ひとことで言うと</h2>
-<p>安野貴博（あんの たかひろ、Takahiro Anno）は、日本の AI エンジニア・起業家・SF 作家です。2024 年の東京都知事選に立候補し、選挙の期間を、候補者が一方的に話す時間から、技術を使って有権者の声を聞く時間に変えようとしました[1]。その後、政党「<a href="team-mirai.html">チームみらい</a>」をつくって党首になり、2025 年から参議院議員を務めています[2]。</p>
-<p>出馬会見で安野は、自分の仕事を「ソフトウェア／AI エンジニア」「AI スタートアップの経営者」「主に SF を書く作家」の 3 つと説明しました[1]。2015 年度には IPA の <a href="mitou.html">未踏</a> 事業に採択され、スーパークリエータに認定されています[3][4]。</p>
+<p>安野貴博（あんの たかひろ、Takahiro Anno）は、日本の AI エンジニア・起業家・SF 作家です。2024 年の東京都知事選に立候補し、選挙の期間を、候補者が一方的に話す時間から、技術を使って有権者の声を聞く時間に変えようとしました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。その後、政党「<a href="team-mirai.html">チームみらい</a>」をつくって党首になり、2025 年から参議院議員を務めています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>出馬会見で安野は、自分の仕事を「ソフトウェア／AI エンジニア」「AI スタートアップの経営者」「主に SF を書く作家」の 3 つと説明しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。2015 年度には IPA の <a href="mitou.html">未踏</a> 事業に採択され、スーパークリエータに認定されています<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>Plurality とのかかわり</h2>
-<p><strong>本の中の事例です。</strong> 本の 5-4 章「<a href="augmented-deliberation.html">拡張熟議</a>」は、都知事選での安野の取り組みを、「ブロードリスニング」の対話的な形として紹介しています。マニフェスト（政策の約束）をネットで公開し、X や Google フォーム、AI の電話応対、GitHub で意見を集め、<a href="talk-to-the-city.html">Talk to the City</a> で意見の分布を見える化し、24 時間質問に答える AI アバター「AIあんの」を YouTube で動かした、というものです[5]。5-4 章の脚注（英語版・日本語版とも）は、得票は 15 万票（2.3%）で 5 位、30 代の候補としては過去 22 回の都知事選でいちばん多かったと補っています[5][6]。</p>
-<p>本の 3-3 章は、<a href="suzuki-ken.html">鈴木健</a> の「なめらかな社会」の構想が影響を与え続けている日本の技術者の一人として、安野の名を挙げています[7]。</p>
-<p><strong>オードリー・タンとのかかわり。</strong> 出馬会見で安野は、立候補にあたって <a href="audrey-tang.html">オードリー・タン</a> に相談したと話しました。タンは、ブロードリスニングとマイナンバーの仕組み、オープンソースの精神を組み合わせるやり方を気に入っている、と言ったそうです[1]。その後も、2024 年のイベントや Code for Japan Summit でタンと同じ場に立っています[8][9]。</p>
-<p><strong>Plurality という言葉。</strong> AERA のインタビューで安野は、大事にしている言葉の一つに「プルラリティ」と「シンギュラリティ」の対を挙げました。シンギュラリティが技術の進む速さを決めるものだとすれば、プルラリティは社会が技術とどう向き合うかを考える話だ、という説明です[10]。2025 年には「16分でわかる PLURALITY」という解説動画も出しています[11]。</p>
+<p><strong>本の中の事例です。</strong> 本の 5-4 章「<a href="augmented-deliberation.html">拡張熟議</a>」は、都知事選での安野の取り組みを、「ブロードリスニング」の対話的な形として紹介しています。マニフェスト（政策の約束）をネットで公開し、X や Google フォーム、AI の電話応対、GitHub で意見を集め、<a href="talk-to-the-city.html">Talk to the City</a> で意見の分布を見える化し、24 時間質問に答える AI アバター「AIあんの」を YouTube で動かした、というものです<a class="cite" href="#src-5" data-src="src-5">[5]</a>。5-4 章の脚注（英語版・日本語版とも）は、得票は 15 万票（2.3%）で 5 位、30 代の候補としては過去 22 回の都知事選でいちばん多かったと補っています<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>本の 3-3 章は、<a href="suzuki-ken.html">鈴木健</a> の「なめらかな社会」の構想が影響を与え続けている日本の技術者の一人として、安野の名を挙げています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>オードリー・タンとのかかわり。</strong> 出馬会見で安野は、立候補にあたって <a href="audrey-tang.html">オードリー・タン</a> に相談したと話しました。タンは、ブロードリスニングとマイナンバーの仕組み、オープンソースの精神を組み合わせるやり方を気に入っている、と言ったそうです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。その後も、2024 年のイベントや Code for Japan Summit でタンと同じ場に立っています<a class="cite" href="#src-8" data-src="src-8">[8]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p><strong>Plurality という言葉。</strong> AERA のインタビューで安野は、大事にしている言葉の一つに「プルラリティ」と「シンギュラリティ」の対を挙げました。シンギュラリティが技術の進む速さを決めるものだとすれば、プルラリティは社会が技術とどう向き合うかを考える話だ、という説明です<a class="cite" href="#src-10" data-src="src-10">[10]</a>。2025 年には「16分でわかる PLURALITY」という解説動画も出しています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>主な考え</h2>
-<p><strong>ブロードリスニング。</strong> 選挙の期間を、候補者の意見を放送（ブロードキャスト）する時間から、人々の意見を聞く期間に変える。出馬会見でこう述べました[1]。→ <a href="broad-listening.html">ブロードリスニング</a></p>
-<p><strong>みんなで直せるマニフェスト。</strong> 2024 年 6 月、GitHub で誰でも政策の改善や変更を提案できる「参加型マニフェスト」を始めました[12]。取り入れた提案の数は、資料によって数え方が違います。陣営の振り返りは「変更提案 104 本のうち 72 本を統合」と書き[13]、安野自身の振り返りと本の 5-4 章の脚注（英語版・日本語版とも）は「変更提案 104 件のうち 85 件を反映」としています[14][5][6]。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の都知事選</a></p>
-<p><strong>デジタル民主主義2030。</strong> 2025 年 1 月の会見で立ち上げを発表しました。ブロードリスニングを進めること、大規模な話し合いの場で民意を政策に反映すること、政治資金を透明にすることを、誰でも無料で使えるオープンソースの仕組みとして掲げています[15]。同年 3 月には <a href="kouchou-ai.html">広聴AI</a> が公開されました[16]。→ <a href="dd2030.html">デジタル民主主義2030</a></p>
-<p><strong>チームみらい。</strong> 2025 年 5 月に結党しました[17]。同年 7 月の参院選で 1 議席（安野）を得て政党の要件を満たし[2]、2026 年 2 月の衆院選では 11 人が当選しています[18]。AI と対話して政策の変更を提案できる「<a href="idobata.html">いどばた</a>」で、マニフェストを練っています[19]。</p>
+<p><strong>ブロードリスニング。</strong> 選挙の期間を、候補者の意見を放送（ブロードキャスト）する時間から、人々の意見を聞く期間に変える。出馬会見でこう述べました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。→ <a href="broad-listening.html">ブロードリスニング</a></p>
+<p><strong>みんなで直せるマニフェスト。</strong> 2024 年 6 月、GitHub で誰でも政策の改善や変更を提案できる「参加型マニフェスト」を始めました<a class="cite" href="#src-12" data-src="src-12">[12]</a>。取り入れた提案の数は、資料によって数え方が違います。陣営の振り返りは「変更提案 104 本のうち 72 本を統合」と書き<a class="cite" href="#src-13" data-src="src-13">[13]</a>、安野自身の振り返りと本の 5-4 章の脚注（英語版・日本語版とも）は「変更提案 104 件のうち 85 件を反映」としています<a class="cite" href="#src-14" data-src="src-14">[14]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の都知事選</a></p>
+<p><strong>デジタル民主主義2030。</strong> 2025 年 1 月の会見で立ち上げを発表しました。ブロードリスニングを進めること、大規模な話し合いの場で民意を政策に反映すること、政治資金を透明にすることを、誰でも無料で使えるオープンソースの仕組みとして掲げています<a class="cite" href="#src-15" data-src="src-15">[15]</a>。同年 3 月には <a href="kouchou-ai.html">広聴AI</a> が公開されました<a class="cite" href="#src-16" data-src="src-16">[16]</a>。→ <a href="dd2030.html">デジタル民主主義2030</a></p>
+<p><strong>チームみらい。</strong> 2025 年 5 月に結党しました<a class="cite" href="#src-17" data-src="src-17">[17]</a>。同年 7 月の参院選で 1 議席（安野）を得て政党の要件を満たし<a class="cite" href="#src-2" data-src="src-2">[2]</a>、2026 年 2 月の衆院選では 11 人が当選しています<a class="cite" href="#src-18" data-src="src-18">[18]</a>。AI と対話して政策の変更を提案できる「<a href="idobata.html">いどばた</a>」で、マニフェストを練っています<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』5-4「拡張熟議」（日本語・本）— <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a></li>
@@ -67,23 +73,53 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>安野貴博 東京都知事選 出馬表明会見の全文（2024-06-06 会見）— <a href="https://note.com/takahiroanno/n/nead5c2e2454b" target="_blank" rel="noopener">https://note.com/takahiroanno/n/nead5c2e2454b</a></li>
-<li>英語版ウィキペディア「Takahiro Anno」— <a href="https://en.wikipedia.org/wiki/Takahiro_Anno" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Takahiro_Anno</a> ［CC BY-SA 4.0］</li>
-<li>IPA 2015 年度未踏 IT 人材発掘・育成事業 採択結果 — <a href="https://www.ipa.go.jp/jinzai/mitou/it/2015/koubokekka.html" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/it/2015/koubokekka.html</a></li>
-<li>IPA 2015 年度 スーパークリエータ認定資料 — <a href="https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000ie9y-att/000053039.pdf" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000ie9y-att/000053039.pdf</a></li>
-<li>『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』日本語版 5-4「拡張熟議」脚注 — <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a> ［CC0］</li>
-<li>『Plurality』3-3「The Lost Dao」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>Funding the Commons Tokyo 2024「Broad listening in practice」（2024-07-25）— <a href="https://www.youtube.com/watch?v=k6bZ2qayBQA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=k6bZ2qayBQA</a></li>
-<li>Code for Japan Summit 2024 基調講演 — <a href="https://www.youtube.com/watch?v=eia0HjcqCN0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=eia0HjcqCN0</a></li>
-<li>AERA「安野貴博の三つの言葉」（2024-08-30）— <a href="https://dot.asahi.com/articles/-/232236" target="_blank" rel="noopener">https://dot.asahi.com/articles/-/232236</a></li>
-<li>「16分でわかる PLURALITY」（2025-05-11）— <a href="https://www.youtube.com/watch?v=EZlf6yT25cE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EZlf6yT25cE</a></li>
-<li>参加型マニフェストの告知（2024-06-20）— <a href="https://note.com/takahiroanno/n/n38a34f107867" target="_blank" rel="noopener">https://note.com/takahiroanno/n/n38a34f107867</a></li>
-<li>都知事選 GitHub 政策リポジトリの振り返り（2024-07-18）— <a href="https://note.com/annotakahiro24/n/nef45fab195ea" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/nef45fab195ea</a></li>
-<li>安野貴博 15 万票の振り返り — <a href="https://note.com/takahiroanno/n/n3fce136f9003" target="_blank" rel="noopener">https://note.com/takahiroanno/n/n3fce136f9003</a></li>
-<li>デジタル民主主義2030 立ち上げ会見 — <a href="https://note.com/annotakahiro24/n/nfd4a855cd1a8" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/nfd4a855cd1a8</a></li>
-<li>デジタル民主主義2030「広聴AI」— <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
-<li>チームみらい 結党会見 — <a href="https://note.com/takahiroanno/n/nebe958c4651c" target="_blank" rel="noopener">https://note.com/takahiroanno/n/nebe958c4651c</a></li>
-<li>チームみらい 2026 年衆院選の結果報告 — <a href="https://note.com/team_mirai_jp/n/n4a15f23f129d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/n4a15f23f129d</a></li>
-<li>チームみらい マニフェストの変遷のまとめ — <a href="https://note.com/annotakahiro24/n/n31abc00c76f3" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/n31abc00c76f3</a></li>
-</ol><div class='related'>関連: <a href='team-mirai.html'>チームみらいってなに？</a> ・ <a href='anno-2024-tokyo-campaign.html'>安野貴博の 2024 年都知事選ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='audrey-tang.html'>オードリー・タン（唐鳳）ってどんな人？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fanno-takahiro.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%AE%89%E9%87%8E%E8%B2%B4%E5%8D%9A%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fanno-takahiro.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">安野貴博 東京都知事選 出馬表明会見の全文（2024-06-06 会見）— <a href="https://note.com/takahiroanno/n/nead5c2e2454b" target="_blank" rel="noopener">https://note.com/takahiroanno/n/nead5c2e2454b</a></li>
+<li id="src-2">英語版ウィキペディア「Takahiro Anno」— <a href="https://en.wikipedia.org/wiki/Takahiro_Anno" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Takahiro_Anno</a> ［CC BY-SA 4.0］</li>
+<li id="src-3">IPA 2015 年度未踏 IT 人材発掘・育成事業 採択結果 — <a href="https://www.ipa.go.jp/jinzai/mitou/it/2015/koubokekka.html" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/it/2015/koubokekka.html</a></li>
+<li id="src-4">IPA 2015 年度 スーパークリエータ認定資料 — <a href="https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000ie9y-att/000053039.pdf" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000ie9y-att/000053039.pdf</a></li>
+<li id="src-5">『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-6">『Plurality』日本語版 5-4「拡張熟議」脚注 — <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a> ［CC0］</li>
+<li id="src-7">『Plurality』3-3「The Lost Dao」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-8">Funding the Commons Tokyo 2024「Broad listening in practice」（2024-07-25）— <a href="https://www.youtube.com/watch?v=k6bZ2qayBQA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=k6bZ2qayBQA</a></li>
+<li id="src-9">Code for Japan Summit 2024 基調講演 — <a href="https://www.youtube.com/watch?v=eia0HjcqCN0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=eia0HjcqCN0</a></li>
+<li id="src-10">AERA「安野貴博の三つの言葉」（2024-08-30）— <a href="https://dot.asahi.com/articles/-/232236" target="_blank" rel="noopener">https://dot.asahi.com/articles/-/232236</a></li>
+<li id="src-11">「16分でわかる PLURALITY」（2025-05-11）— <a href="https://www.youtube.com/watch?v=EZlf6yT25cE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EZlf6yT25cE</a></li>
+<li id="src-12">参加型マニフェストの告知（2024-06-20）— <a href="https://note.com/takahiroanno/n/n38a34f107867" target="_blank" rel="noopener">https://note.com/takahiroanno/n/n38a34f107867</a></li>
+<li id="src-13">都知事選 GitHub 政策リポジトリの振り返り（2024-07-18）— <a href="https://note.com/annotakahiro24/n/nef45fab195ea" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/nef45fab195ea</a></li>
+<li id="src-14">安野貴博 15 万票の振り返り — <a href="https://note.com/takahiroanno/n/n3fce136f9003" target="_blank" rel="noopener">https://note.com/takahiroanno/n/n3fce136f9003</a></li>
+<li id="src-15">デジタル民主主義2030 立ち上げ会見 — <a href="https://note.com/annotakahiro24/n/nfd4a855cd1a8" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/nfd4a855cd1a8</a></li>
+<li id="src-16">デジタル民主主義2030「広聴AI」— <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
+<li id="src-17">チームみらい 結党会見 — <a href="https://note.com/takahiroanno/n/nebe958c4651c" target="_blank" rel="noopener">https://note.com/takahiroanno/n/nebe958c4651c</a></li>
+<li id="src-18">チームみらい 2026 年衆院選の結果報告 — <a href="https://note.com/team_mirai_jp/n/n4a15f23f129d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/n4a15f23f129d</a></li>
+<li id="src-19">チームみらい マニフェストの変遷のまとめ — <a href="https://note.com/annotakahiro24/n/n31abc00c76f3" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/n31abc00c76f3</a></li>
+</ol><div class='related'>関連: <a href='team-mirai.html'>チームみらいってなに？</a> ・ <a href='anno-2024-tokyo-campaign.html'>安野貴博の 2024 年都知事選ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='audrey-tang.html'>オードリー・タン（唐鳳）ってどんな人？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fanno-takahiro.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%AE%89%E9%87%8E%E8%B2%B4%E5%8D%9A%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fanno-takahiro.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,41 +41,47 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../supermodularity.html">日本語</a> <a class="lang" hreflang="en" href="../en/supermodularity.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/supermodularity.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是超模（supermodularity）？</h1><div class='lead'>「整体大于各部分之和」的性质。人或东西聚在一起工作，会产生比分开工作时的总和更大的价值。《多元宇宙》用这个词来表达协作的力量。</div><p>如果全世界只有一个人有电话，那支电话就没有用。用的人越多，每一支电话的价值就越高。像这样「越聚在一起、越一起做就越划算」的性质，用数学的说法叫做超模（supermodularity）。《多元宇宙》用这个词来定义「协作是什么」。</p>
 <h2>一句话说明</h2>
-<p>超模就是<strong>「整体大于各部分之和」的性质</strong>。人或东西聚在一起工作，会产生比分开工作时的总和更大的价值[1]。书的 3-2 章补充说，它「有时称为『报酬递增』」[2]。「报酬递增」是经济学用语，意思是投入越多，得到的东西增加得越多。</p>
+<p>超模就是<strong>「整体大于各部分之和」的性质</strong>。人或东西聚在一起工作，会产生比分开工作时的总和更大的价值<a class="cite" href="#src-1" data-src="src-1">[1]</a>。书的 3-2 章补充说，它「有时称为『报酬递增』」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。「报酬递增」是经济学用语，意思是投入越多，得到的东西增加得越多。</p>
 <h2>举例来说</h2>
 <p><strong>范例（为了说明而设的虚构数字）。</strong> 假设 A 一个人做出来的价值是 3，B 一个人做出来的价值也是 3。分开做，合计 3 + 3 = 6。如果两人一起做能产生 10 的价值，因为 10 大于 6，这个协作就是超模的。反过来，如果一起做只得到 5，就是整体小于部分之和的「次模」（报酬递减）。</p>
-<p><strong>铁路网。</strong> 书的 3-2 章写道，「整体（例如铁路网）的价值高于其部分的总和」[2]。这段出现在哲学家约翰·杜威（John Dewey）的论述中：这些技术创造了市场力量、全面的外部性，所以市场和现有的民主制度都难以处理[2]。</p>
-<p><strong>开源软件。</strong> 4-3 章以任何人都能使用、改良的开源软件，作为超模生产的例子。许多人的协作产生比每个人单独行动更大的价值，做出来的东西又能被复制、让许多人受益。书写道，在消费至少部分是社会性、生产可能是超模的情况下，「货币就是一种糟糕的、甚至无望的价值记录方式」[3]。</p>
-<p><strong>科技公司的网络效应。</strong> 6-0 章描写获得投资的新创公司迅速扩大用户人数，「接着利用这种超模性（supermodularity）的好处（例如，网络效应、从用户数据中学习等）来达到市场主导地位」[4]。</p>
+<p><strong>铁路网。</strong> 书的 3-2 章写道，「整体（例如铁路网）的价值高于其部分的总和」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。这段出现在哲学家约翰·杜威（John Dewey）的论述中：这些技术创造了市场力量、全面的外部性，所以市场和现有的民主制度都难以处理<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>开源软件。</strong> 4-3 章以任何人都能使用、改良的开源软件，作为超模生产的例子。许多人的协作产生比每个人单独行动更大的价值，做出来的东西又能被复制、让许多人受益。书写道，在消费至少部分是社会性、生产可能是超模的情况下，「货币就是一种糟糕的、甚至无望的价值记录方式」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>科技公司的网络效应。</strong> 6-0 章描写获得投资的新创公司迅速扩大用户人数，「接着利用这种超模性（supermodularity）的好处（例如，网络效应、从用户数据中学习等）来达到市场主导地位」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>深入了解</h2>
 <h3>作为协作的定义</h3>
-<p>5-0 章写道，把协作说成「许多实体（人或团体）为实现共同目标而携手合作」，会漏掉关键的一点：「共同努力所产生的力量，要大于各部分合作所产生的结果的总和」[1]。</p>
-<p>书说：「数学上，这个概念称为『超模』（supermodularity），汇括了亚里斯多德的经典思想，即『整体大于各部分之和』。」[1] 英文版 5-0 章还写道，把超模用在数量上的早期例子，是经济学家大卫·李嘉图（David Ricardo）在 1817 年提出的「比较优势」[5]。</p>
+<p>5-0 章写道，把协作说成「许多实体（人或团体）为实现共同目标而携手合作」，会漏掉关键的一点：「共同努力所产生的力量，要大于各部分合作所产生的结果的总和」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>书说：「数学上，这个概念称为『超模』（supermodularity），汇括了亚里斯多德的经典思想，即『整体大于各部分之和』。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> 英文版 5-0 章还写道，把超模用在数量上的早期例子，是经济学家大卫·李嘉图（David Ricardo）在 1817 年提出的「比较优势」<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h3>为什么市场处理不好</h3>
-<p>根据 5-7 章，市场要有利可图、有效率地运作，其中一项条件是「报酬递减」，也就是「整体小于部分之和」。书写道，这项条件「与我们用来定义协作的超模特性正好相反」；报酬递增时，向每个人支付其边际产量（这个人加入后增加的部分），就会产生亏损[6]。</p>
+<p>根据 5-7 章，市场要有利可图、有效率地运作，其中一项条件是「报酬递减」，也就是「整体小于部分之和」。书写道，这项条件「与我们用来定义协作的超模特性正好相反」；报酬递增时，向每个人支付其边际产量（这个人加入后增加的部分），就会产生亏损<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p>用上面的范例来说，A 加入后增加的是 10 − 3 = 7，B 加入后增加的也是 7。各付两人 7，就是 14，超过了产生的 10。把书的说明用数字确认，就是这个意思。</p>
-<p>公共财（像道路、公园这种大家都能用的东西）是它的极端情况。经济学家长期以来一直认为，市场对公共财供应严重不足。但书写道，「即使是较不极端的报酬递增、超模的情况，也被资本主义严重低估」[6]。</p>
+<p>公共财（像道路、公园这种大家都能用的东西）是它的极端情况。经济学家长期以来一直认为，市场对公共财供应严重不足。但书写道，「即使是较不极端的报酬递增、超模的情况，也被资本主义严重低估」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>背后的论文</h3>
-<p>英文版 5-0 章为这个词附上的参考文献，是 Divya Siddarth、Matthew Prewitt 与卫谷伦（Glen Weyl）的论文（Collective Intelligence Project，2024 年）[5][7]。（目前的繁体中文版 5-0 章没有这个注脚。）</p>
-<p>论文把整批提供给许多人，比一个一个提供更便宜的东西称为「超模财」（supermodular goods）。这是比所谓公共财更宽的概念，例子有物流网、公共卫生、数位基础建设、科学研究。论文认为，AI 正以前所未有的程度强化这种倾向[7]。</p>
-<p>根据论文，这类领域容易陷入垄断或投资不足，只交给国家、或只交给民间都不行。所以论文提出把民主的决策方式、市场与社群营运组合起来的机制，例子包括<a href="quadratic-funding.html">平方募资</a>、社群货币，以及使用 <a href="polis.html">Polis</a> 等工具的讨论[7]。</p>
+<p>英文版 5-0 章为这个词附上的参考文献，是 Divya Siddarth、Matthew Prewitt 与卫谷伦（Glen Weyl）的论文（Collective Intelligence Project，2024 年）<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。（目前的繁体中文版 5-0 章没有这个注脚。）</p>
+<p>论文把整批提供给许多人，比一个一个提供更便宜的东西称为「超模财」（supermodular goods）。这是比所谓公共财更宽的概念，例子有物流网、公共卫生、数位基础建设、科学研究。论文认为，AI 正以前所未有的程度强化这种倾向<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>根据论文，这类领域容易陷入垄断或投资不足，只交给国家、或只交给民间都不行。所以论文提出把民主的决策方式、市场与社群营运组合起来的机制，例子包括<a href="quadratic-funding.html">平方募资</a>、社群货币，以及使用 <a href="polis.html">Polis</a> 等工具的讨论<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>深度与广度</h3>
-<p>5-0 章把协作的「深度」粗略定义为一组参与者的超模程度：一起创造的成果，比起分别创造的超出多少。书写道，爱情或其他深层连结的关系是最深的，市场上陌生人之间的交易则是浅的[8]。</p>
-<p>书的第五部分并宣告，要描述的是「技术如何跨越社会差异、赋能超模，或者更口语的诠释：『跨越多样性的协作』」[1]。</p>
+<p>5-0 章把协作的「深度」粗略定义为一组参与者的超模程度：一起创造的成果，比起分别创造的超出多少。书写道，爱情或其他深层连结的关系是最深的，市场上陌生人之间的交易则是浅的<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>书的第五部分并宣告，要描述的是「技术如何跨越社会差异、赋能超模，或者更口语的诠释：『跨越多样性的协作』」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>不是「越多越好」。</strong> 书本身指出了危险：不同的人一起协作，差异本身可能被磨平，减少未来协作的潜力。书举的例子是，全球化「既带来了贸易收益，如饮食的多样化，同时也可能使文化同质化」。所以书说，⿻ 不只要运用多样性，也需要「多样增生」[9]。</li>
-<li><strong>全员参与不一定划算。</strong> 英文版 6-2 章说，健康保险在群体规模上具有超模性，但不需要全员参与，全员参与也不一定有好处[10]。繁体中文版 6-2 章的说法是：「多元产品与网络产品相似，但其规模取决于用户／生产者网络规模：大不一定好。」[11]</li>
-<li><strong>读者的提问。</strong> Jeffrey Fossett 在读书笔记中，觉得把超模和比较优势连起来的说明很有意思。同时也提出疑问：要怎么推进跨越多样性的协作，而不把多样性压平？这真的做得到吗？[12]</li>
+<li><strong>不是「越多越好」。</strong> 书本身指出了危险：不同的人一起协作，差异本身可能被磨平，减少未来协作的潜力。书举的例子是，全球化「既带来了贸易收益，如饮食的多样化，同时也可能使文化同质化」。所以书说，⿻ 不只要运用多样性，也需要「多样增生」<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>全员参与不一定划算。</strong> 英文版 6-2 章说，健康保险在群体规模上具有超模性，但不需要全员参与，全员参与也不一定有好处<a class="cite" href="#src-10" data-src="src-10">[10]</a>。繁体中文版 6-2 章的说法是：「多元产品与网络产品相似，但其规模取决于用户／生产者网络规模：大不一定好。」<a class="cite" href="#src-11" data-src="src-11">[11]</a></li>
+<li><strong>读者的提问。</strong> Jeffrey Fossett 在读书笔记中，觉得把超模和比较优势连起来的说明很有意思。同时也提出疑问：要怎么推进跨越多样性的协作，而不把多样性压平？这真的做得到吗？<a class="cite" href="#src-12" data-src="src-12">[12]</a></li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>这个词在书中到处出现。在 3-2 章中，它出现在杜威「<a href="emergent-publics.html">新兴公众</a>」的段落，作为市场无法处理技术所创造之新连结的理由[2]。</p>
-<p>在 5-0 章中，它是定义整个第五部分的词。「跨越社会差异的超模」和「<a href="collaboration-across-difference.html">跨越社会差异的协作</a>」同义，支持它的工具就是<a href="collaborative-technology.html">协作技术</a>[1]。</p>
-<p>5-7 章〈<a href="social-markets.html">社会市场</a>〉说明资本主义无法充分支持超模的协作，并提出「亨利·乔治定理」等处方：通过正确设计的共同所有权税收，筹集到的税款可以为超模投资所需的所有补贴提供资金[13]。→ <a href="harberger-tax.html">哈柏格税</a></p>
-<p>此外也出现在 4-3 章〈<a href="commerce-and-trust.html">商业与信任</a>〉、6-2 章〈健康〉、7-0 章〈政策〉[3][10][14]。7-0 章写道：「超模态共用商品所创造的价值最终必须累积到具有次模态回报的地方，这些回报可以而且应该被回圈利用，以支持这些价值来源。」[14]</p>
+<p>这个词在书中到处出现。在 3-2 章中，它出现在杜威「<a href="emergent-publics.html">新兴公众</a>」的段落，作为市场无法处理技术所创造之新连结的理由<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>在 5-0 章中，它是定义整个第五部分的词。「跨越社会差异的超模」和「<a href="collaboration-across-difference.html">跨越社会差异的协作</a>」同义，支持它的工具就是<a href="collaborative-technology.html">协作技术</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>5-7 章〈<a href="social-markets.html">社会市场</a>〉说明资本主义无法充分支持超模的协作，并提出「亨利·乔治定理」等处方：通过正确设计的共同所有权税收，筹集到的税款可以为超模投资所需的所有补贴提供资金<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→ <a href="harberger-tax.html">哈柏格税</a></p>
+<p>此外也出现在 4-3 章〈<a href="commerce-and-trust.html">商业与信任</a>〉、6-2 章〈健康〉、7-0 章〈政策〉<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-14" data-src="src-14">[14]</a>。7-0 章写道：「超模态共用商品所创造的价值最终必须累积到具有次模态回报的地方，这些回报可以而且应该被回圈利用，以支持这些价值来源。」<a class="cite" href="#src-14" data-src="src-14">[14]</a></p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》5-0〈协作技术与民主〉开头（中文，书）— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
@@ -87,18 +93,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《多元宇宙》5-0〈协作技术与民主〉开头 — <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
-<li>《多元宇宙》3-2〈相连的社会〉杜威「新兴公众」的段落 — <a href="https://www.plurality.net/v/chapters/3-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/zh-tw/</a></li>
-<li>《多元宇宙》4-3〈商业与信任〉— <a href="https://www.plurality.net/v/chapters/4-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/zh-tw/</a></li>
-<li>《多元宇宙》6-0〈从⿻到現实社会〉— <a href="https://www.plurality.net/v/chapters/6-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/zh-tw/</a></li>
-<li>《Plurality》英文版 5-0 开头与注脚（Ricardo、Siddarth 等）— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
-<li>《多元宇宙》5-7「今日的资本」与报酬递增的图 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
-<li>Siddarth、Prewitt、Weyl, "Beyond Public and Private: Collective Provision Under Conditions of Supermodularity"（CIP，2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
-<li>《多元宇宙》5-0「深度-广度光谱」— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
-<li>《多元宇宙》5-0「跨越多样性的协作：许诺与挑战」— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
-<li>《Plurality》英文版 6-2 "Health" — <a href="https://www.plurality.net/v/chapters/6-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-2/eng/</a></li>
-<li>《多元宇宙》6-2〈健康〉— <a href="https://www.plurality.net/v/chapters/6-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-2/zh-tw/</a></li>
-<li>Jeffrey Fossett, "Notes on the Plurality Book" — <a href="https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html" target="_blank" rel="noopener">https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html</a></li>
-<li>《多元宇宙》5-7「社会市场的前沿」（亨利·乔治定理）— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
-<li>《多元宇宙》7-0〈政策〉— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
-</ol><div class='related'>相关: <a href='collaboration-across-difference.html'>什么是「跨越社会差异的协作」？</a> ・ <a href='social-markets.html'>什么是社会市场？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='emergent-publics.html'>什么是新兴公众（emergent publics）？</a> ・ <a href='commerce-and-trust.html'>什么是「商业与信任」（多元通货）？</a> ・ <a href='collaborative-technology.html'>什么是协作技术？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsupermodularity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%B6%85%E6%A8%A1%EF%BC%88supermodularity%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsupermodularity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《多元宇宙》5-0〈协作技术与民主〉开头 — <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
+<li id="src-2">《多元宇宙》3-2〈相连的社会〉杜威「新兴公众」的段落 — <a href="https://www.plurality.net/v/chapters/3-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/zh-tw/</a></li>
+<li id="src-3">《多元宇宙》4-3〈商业与信任〉— <a href="https://www.plurality.net/v/chapters/4-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/zh-tw/</a></li>
+<li id="src-4">《多元宇宙》6-0〈从⿻到現实社会〉— <a href="https://www.plurality.net/v/chapters/6-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/zh-tw/</a></li>
+<li id="src-5">《Plurality》英文版 5-0 开头与注脚（Ricardo、Siddarth 等）— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
+<li id="src-6">《多元宇宙》5-7「今日的资本」与报酬递增的图 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+<li id="src-7">Siddarth、Prewitt、Weyl, "Beyond Public and Private: Collective Provision Under Conditions of Supermodularity"（CIP，2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
+<li id="src-8">《多元宇宙》5-0「深度-广度光谱」— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
+<li id="src-9">《多元宇宙》5-0「跨越多样性的协作：许诺与挑战」— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
+<li id="src-10">《Plurality》英文版 6-2 "Health" — <a href="https://www.plurality.net/v/chapters/6-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-2/eng/</a></li>
+<li id="src-11">《多元宇宙》6-2〈健康〉— <a href="https://www.plurality.net/v/chapters/6-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-2/zh-tw/</a></li>
+<li id="src-12">Jeffrey Fossett, "Notes on the Plurality Book" — <a href="https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html" target="_blank" rel="noopener">https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html</a></li>
+<li id="src-13">《多元宇宙》5-7「社会市场的前沿」（亨利·乔治定理）— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+<li id="src-14">《多元宇宙》7-0〈政策〉— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='collaboration-across-difference.html'>什么是「跨越社会差异的协作」？</a> ・ <a href='social-markets.html'>什么是社会市场？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='emergent-publics.html'>什么是新兴公众（emergent publics）？</a> ・ <a href='commerce-and-trust.html'>什么是「商业与信任」（多元通货）？</a> ・ <a href='collaborative-technology.html'>什么是协作技术？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsupermodularity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%B6%85%E6%A8%A1%EF%BC%88supermodularity%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsupermodularity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

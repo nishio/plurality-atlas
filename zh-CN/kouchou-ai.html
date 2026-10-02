@@ -41,33 +41,39 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../kouchou-ai.html">日本語</a> <a class="lang" hreflang="en" href="../en/kouchou-ai.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/kouchou-ai.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是広聴AI（kouchou-ai）？</h1><div class='lead'>把成千上万则自由填答用表格档读进去，AI 就会把相似的意见整理成「意见地图」并附上摘要的日本免费软件。由デジタル民主主义2030（DD2030）以美国的 Talk to the City 为基础打造。</div><p>市公所做问卷时，「请自由填写」的栏位有时会收到上千则回答。要由公务员一则一则读、再分类，得花上好几周。広聴AI 就是用 AI 整理这些「读不完的声音」的工具。</p>
 <h2>一句话说明</h2>
-<p>広聴AI（kouchou-ai；「広聴」是日文「广泛倾听」之意）是<strong>把大量自由填答整理成「意见地图」的软件</strong>。把问卷回答或社交媒体贴文用 CSV（表格形式的档案）读进去，AI 就会把相似的意见排在附近、用颜色区分，并加上摘要[1][2]。</p>
-<p>任何人都能免费使用，程式码也公开（开源软件，简称 OSS）。打造它的是公民社群 <a href="dd2030.html">デジタル民主主义2030（DD2030）</a>。他们以美国的<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>为基础，重新打造成适合日本地方政府和政治人物实务的工具[1][2]。</p>
+<p>広聴AI（kouchou-ai；「広聴」是日文「广泛倾听」之意）是<strong>把大量自由填答整理成「意见地图」的软件</strong>。把问卷回答或社交媒体贴文用 CSV（表格形式的档案）读进去，AI 就会把相似的意见排在附近、用颜色区分，并加上摘要<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>任何人都能免费使用，程式码也公开（开源软件，简称 OSS）。打造它的是公民社群 <a href="dd2030.html">デジタル民主主义2030（DD2030）</a>。他们以美国的<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>为基础，重新打造成适合日本地方政府和政治人物实务的工具<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>这种「倾听大量声音」的技术，称为<a href="broad-listening.html">广泛倾听</a>。</p>
 <h2>举例来说</h2>
-<p><strong>香川县宇多津町（2025-04-30 公布）。</strong> 町在制定综合计划时做了町民问卷，用広聴AI 整理了 396 则自由填答。町方报告说，过去要花很长时间的汇整，AI 大约 10 分钟就完成了[3]。</p>
-<p><strong>东京都涩谷区（2025-07-02 公布）。</strong> 分析了区民意识调查的 6,037 则自由填答，产出整体摘要、依话题的分类与图表，以及依世代、依地区的倾向[4]。</p>
-<p><strong>广岛县（2025 年 8～9 月）。</strong> 分析了向县民征集的 2,953 则意见。职员表示，约 3,000 则自由填答不到 30 分钟就分类完成；据说若由人工处理，可能要花约 500 小时[5]。</p>
-<p><strong>未来团队（2025 年参议院选举）。</strong> 日本政党<a href="team-mirai.html">未来团队</a>（チームみらい，Team Mirai）用広聴AI 的图来浏览市民寄来的政策修改提案。他们加上了从图上的点一键跳到原始提案的功能，这个功能后来被纳入 DD2030 的主版本[6][7]。</p>
+<p><strong>香川县宇多津町（2025-04-30 公布）。</strong> 町在制定综合计划时做了町民问卷，用広聴AI 整理了 396 则自由填答。町方报告说，过去要花很长时间的汇整，AI 大约 10 分钟就完成了<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>东京都涩谷区（2025-07-02 公布）。</strong> 分析了区民意识调查的 6,037 则自由填答，产出整体摘要、依话题的分类与图表，以及依世代、依地区的倾向<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>广岛县（2025 年 8～9 月）。</strong> 分析了向县民征集的 2,953 则意见。职员表示，约 3,000 则自由填答不到 30 分钟就分类完成；据说若由人工处理，可能要花约 500 小时<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>未来团队（2025 年参议院选举）。</strong> 日本政党<a href="team-mirai.html">未来团队</a>（チームみらい，Team Mirai）用広聴AI 的图来浏览市民寄来的政策修改提案。他们加上了从图上的点一键跳到原始提案的功能，这个功能后来被纳入 DD2030 的主版本<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p>地方政府的例子整理在<a href="municipal-broad-listening.html">地方政府的广泛倾听</a>一文。</p>
 <h2>运作方式</h2>
 <h3>诞生的经过</h3>
-<p>它的原型，是美国非营利组织 AI Objectives Institute 在 2023 年打造的 Talk to the City（TTTC）[2]。</p>
-<p>安野贵博的团队在 2024 年的东京都知事选举、电视台的选举报导，以及东京都的意见征集中使用了 TTTC。过程中清楚浮现一个课题：需要一套连非工程师都能「上传档案就能用」的机制[2]。</p>
-<p>于是，他们从 TTTC 的散布图版本分支出来开始开发，并在 2025-03-16 以 OSS 公开[1][2]。</p>
+<p>它的原型，是美国非营利组织 AI Objectives Institute 在 2023 年打造的 Talk to the City（TTTC）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>安野贵博的团队在 2024 年的东京都知事选举、电视台的选举报导，以及东京都的意见征集中使用了 TTTC。过程中清楚浮现一个课题：需要一套连非工程师都能「上传档案就能用」的机制<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>于是，他们从 TTTC 的散布图版本分支出来开始开发，并在 2025-03-16 以 OSS 公开<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>和 TTTC 有什么不同</h3>
-<p>根据《广泛倾听》（ブロードリスニング，DD2030 社群着），主要的差别如下[6]：</p>
+<p>根据《广泛倾听》（ブロードリスニング，DD2030 社群着），主要的差别如下<a class="cite" href="#src-6" data-src="src-6">[6]</a>：</p>
 <ul>
 <li><strong>可以在浏览器上使用。</strong> 原版要在黑色画面上打指令执行，需要准备程式环境。広聴AI 只要先架好一次伺服器，就能在浏览器上传档案、分析，并只要传送网址就能让人看结果。</li>
 <li><strong>大小群组可以同时看。</strong> 用「大群组里有小群组」的巢状形式整理意见。</li>
 <li><strong>只取出关系紧密的部分。</strong> 可以排除混入了关系薄弱意见的群组。</li>
-<li><strong>优先考虑看起来好懂。</strong> 原来的方式有时会让同一群组的点在图上散得很远。広聴AI 改成「附近的点就是同一群组」的方式。该书写道，这是把视觉上的整齐摆在精密度之前[6]。</li>
+<li><strong>优先考虑看起来好懂。</strong> 原来的方式有时会让同一群组的点在图上散得很远。広聴AI 改成「附近的点就是同一群组」的方式。该书写道，这是把视觉上的整齐摆在精密度之前<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 </ul>
 <h3>处理流程</h3>
-<p>大致依以下顺序进行[8]：</p>
+<p>大致依以下顺序进行<a class="cite" href="#src-8" data-src="src-8">[8]</a>：</p>
 <ol>
 <li>大型语言模型（LLM，处理文字的 AI）把一则贴文拆成各个论点</li>
 <li>把论点转成一串数字（向量）</li>
@@ -75,22 +81,22 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li>把相近的点归成群组，再往上绑成更大的群组</li>
 <li>LLM 替群组命名，并写出整体摘要</li>
 </ol>
-<p>根据《广泛倾听》的试算，用 gpt-4o-mini（OpenAI 的低价 AI 模型）处理 1 万则的费用约 480 日圆，其中九成以上花在第一步「拆成论点」[8]。</p>
+<p>根据《广泛倾听》的试算，用 gpt-4o-mini（OpenAI 的低价 AI 模型）处理 1 万则的费用约 480 日圆，其中九成以上花在第一步「拆成论点」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>版本的演进与开发</h3>
-<p>2025-04-29 推出 v2.0.0[9]。2025-12-28 的 v4.0.0 增加了可用的 AI 种类，并让限定公开的报告不会被搜寻引擎收录[10]。</p>
-<p>根据《广泛倾听》，从开始开发约一年间，合并了 807 件变更。全部 2,756 笔纪录中，有 210 笔（约 7.6%）是由写程式的 AI（Devin）完成的[6]。</p>
-<p>开发体制也有过起伏。2025 年 5 月安野离开 DD2030、创立未来团队之后，许多开发者跟着转移过去。变更的审查没有回音，有时要隔 2.5 个月才被合并。该书记录，是少数人持续举行定期会议，才让开发没有中断[6]。</p>
+<p>2025-04-29 推出 v2.0.0<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2025-12-28 的 v4.0.0 增加了可用的 AI 种类，并让限定公开的报告不会被搜寻引擎收录<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>根据《广泛倾听》，从开始开发约一年间，合并了 807 件变更。全部 2,756 笔纪录中，有 210 笔（约 7.6%）是由写程式的 AI（Devin）完成的<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>开发体制也有过起伏。2025 年 5 月安野离开 DD2030、创立未来团队之后，许多开发者跟着转移过去。变更的审查没有回音，有时要隔 2.5 个月才被合并。该书记录，是少数人持续举行定期会议，才让开发没有中断<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>开发者自己的提醒。</strong> DD2030 的官方页面要求不要过度依赖分析结果。大意是：网络上的意见容易有偏差，并不预设把结果直接变成政策；要由用户充分确认之后再做决定[2]。关于偏差与误读的一般提醒，请看<a href="broad-listening.html">广泛倾听</a>一文。</li>
-<li><strong>赞成和反对被放进同一群组。</strong> 对同一个话题的赞成与反对意见，在 AI 看来容易是「相似的文章」，有时会被归成一群。《广泛倾听》把这列为尚未解决的课题，并介绍了几种对策[8]。</li>
-<li><strong>不容易在地方政府推广。</strong> DD2030 曾向地方政府推介，但因为动机薄弱、首长与第一线的温差、人事调动、工程师不足等原因，试用后很难转为正式运用。据说许多地方政府在分析之前，更大的课题是「收集不到足够的意见」[6]。</li>
-<li><strong>责任不明确的批评。</strong> 一位市民在 note 上的文章主张，像広聴AI 或<a href="idobata.html">いどばた</a>（Idobata）这种 OSS 式的公民参与，在品质、问责与维护的保证上并不明确[11]。</li>
-<li><strong>不一定是未来团队的工具。</strong> 《广泛倾听》的主要作者中山心太在 2026 年 2 月于 X 上写道，未来团队已经不再使用 TTTC 或広聴AI 了[12]。</li>
+<li><strong>开发者自己的提醒。</strong> DD2030 的官方页面要求不要过度依赖分析结果。大意是：网络上的意见容易有偏差，并不预设把结果直接变成政策；要由用户充分确认之后再做决定<a class="cite" href="#src-2" data-src="src-2">[2]</a>。关于偏差与误读的一般提醒，请看<a href="broad-listening.html">广泛倾听</a>一文。</li>
+<li><strong>赞成和反对被放进同一群组。</strong> 对同一个话题的赞成与反对意见，在 AI 看来容易是「相似的文章」，有时会被归成一群。《广泛倾听》把这列为尚未解决的课题，并介绍了几种对策<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
+<li><strong>不容易在地方政府推广。</strong> DD2030 曾向地方政府推介，但因为动机薄弱、首长与第一线的温差、人事调动、工程师不足等原因，试用后很难转为正式运用。据说许多地方政府在分析之前，更大的课题是「收集不到足够的意见」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>责任不明确的批评。</strong> 一位市民在 note 上的文章主张，像広聴AI 或<a href="idobata.html">いどばた</a>（Idobata）这种 OSS 式的公民参与，在品质、问责与维护的保证上并不明确<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>不一定是未来团队的工具。</strong> 《广泛倾听》的主要作者中山心太在 2026 年 2 月于 X 上写道，未来团队已经不再使用 TTTC 或広聴AI 了<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>《多元宇宙》没有提到広聴AI 的名字。不过英文版 5-4〈扩增审议〉（Augmented Deliberation）把它的原型 Talk to the City，以及安野在都知事选中的用法，列为广泛倾听的例子[13]（目前的繁体中文版 5-4 章没有这段）。可以说，広聴AI 就是把 TTTC 在日本做成了「任何人都能用的元件」。参见<a href="augmented-deliberation.html">扩增审议</a>。</p>
-<p>依《广泛倾听》的分类，它是「作为工具的广泛倾听」的代表，和<a href="idobata.html">いどばた</a>或 <a href="polis.html">Polis</a> 这类讨论的场所角色不同[14]。开发者 <a href="dd2030.html">DD2030</a> 把它当作中立地提供给政党与地方政府的公共财来打造[6]。</p>
+<p>《多元宇宙》没有提到広聴AI 的名字。不过英文版 5-4〈扩增审议〉（Augmented Deliberation）把它的原型 Talk to the City，以及安野在都知事选中的用法，列为广泛倾听的例子<a class="cite" href="#src-13" data-src="src-13">[13]</a>（目前的繁体中文版 5-4 章没有这段）。可以说，広聴AI 就是把 TTTC 在日本做成了「任何人都能用的元件」。参见<a href="augmented-deliberation.html">扩增审议</a>。</p>
+<p>依《广泛倾听》的分类，它是「作为工具的广泛倾听」的代表，和<a href="idobata.html">いどばた</a>或 <a href="polis.html">Polis</a> 这类讨论的场所角色不同<a class="cite" href="#src-14" data-src="src-14">[14]</a>。开发者 <a href="dd2030.html">DD2030</a> 把它当作中立地提供给政党与地方政府的公共财来打造<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>DD2030「広聴AI」介绍页（日文，网页）— <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
@@ -102,18 +108,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>kouchou-ai README — <a href="https://github.com/digitaldemocracy2030/kouchou-ai" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/kouchou-ai</a></li>
-<li>DD2030「広聴AI」介绍页 — <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
-<li>宇多津町「ブロードリスニングの试行」（日文）— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
-<li>涩谷区新闻稿（2025-07-02，日文）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
-<li>《ブロードリスニング》第 8 章第 2 节〈広岛県の事例〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 10 章〈DD2030による広聴AIの开発活动〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 6 章第 1 节〈チームみらい〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 13 章〈広聴AIの技术スタック解说〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>DD2030 公告「広聴AI v2.0.0」（日文）— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
-<li>DD2030 公告「広聴AI v4.0.0」（日文）— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
-<li>「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note，日文）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
-<li>中山心太的 X 贴文（2026-02-07）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
-<li>《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
-<li>《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-</ol><div class='related'>相关: <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='municipal-broad-listening.html'>什么是地方政府的广泛倾听？</a> ・ <a href='team-mirai.html'>什么是未来团队（チームみらい，Team Mirai）？</a> ・ <a href='idobata.html'>什么是いどばた（Idobata）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fkouchou-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%BA%83%E8%81%B4AI%EF%BC%88kouchou-ai%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fkouchou-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">kouchou-ai README — <a href="https://github.com/digitaldemocracy2030/kouchou-ai" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/kouchou-ai</a></li>
+<li id="src-2">DD2030「広聴AI」介绍页 — <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
+<li id="src-3">宇多津町「ブロードリスニングの试行」（日文）— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
+<li id="src-4">涩谷区新闻稿（2025-07-02，日文）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
+<li id="src-5">《ブロードリスニング》第 8 章第 2 节〈広岛県の事例〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-6">《ブロードリスニング》第 10 章〈DD2030による広聴AIの开発活动〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-7">《ブロードリスニング》第 6 章第 1 节〈チームみらい〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-8">《ブロードリスニング》第 13 章〈広聴AIの技术スタック解说〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-9">DD2030 公告「広聴AI v2.0.0」（日文）— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
+<li id="src-10">DD2030 公告「広聴AI v4.0.0」（日文）— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
+<li id="src-11">「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note，日文）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
+<li id="src-12">中山心太的 X 贴文（2026-02-07）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
+<li id="src-13">《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li id="src-14">《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+</ol><div class='related'>相关: <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='municipal-broad-listening.html'>什么是地方政府的广泛倾听？</a> ・ <a href='team-mirai.html'>什么是未来团队（チームみらい，Team Mirai）？</a> ・ <a href='idobata.html'>什么是いどばた（Idobata）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fkouchou-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%BA%83%E8%81%B4AI%EF%BC%88kouchou-ai%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fkouchou-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

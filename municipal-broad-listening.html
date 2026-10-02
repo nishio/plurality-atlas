@@ -41,40 +41,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/municipal-broad-listening.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/municipal-broad-listening.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/municipal-broad-listening.html">简体中文</a></nav></header>
 <main lang="ja"><h1>自治体のブロードリスニングってなに？</h1><div class='lead'>町や県が、アンケートの自由記述など住民の声を「広聴AI」などの道具で自動的にまとめ、住民が全体として何を言っているかを見える化する試みです。2025 年に香川県宇多津町・岩手県・東京都渋谷区・広島県などで行われました。</div><p>市役所や県庁は、住民アンケートで「ご自由にお書きください」という欄をよく設けます。けれども何千件もの自由記述を職員が一つひとつ読んで分けるのは、大変な手間です。そのため、せっかく集めた声が十分に生かされないこともあります。自治体のブロードリスニングは、この手間を AI の道具で減らし、住民の声の全体像をつかもうとする取り組みです。</p>
 <h2>ひとことで言うと</h2>
-<p>町や県が集めたアンケートの自由記述などを AI の道具に読ませ、似た意見ごとにまとめた「地図」と要約を作る試みです。「住民が全体として何を言っているか」を短い時間でつかむのが狙いです。道具には主に、市民の団体 <a href="dd2030.html">DD2030</a> が作った無料の <a href="kouchou-ai.html">広聴AI</a> が使われています[1][2]。</p>
-<p><a href="broad-listening.html">ブロードリスニング</a> とは、大勢の声を広く聴き取り、全体像をつかむことです。2025 年から、<a href="tokyo-2050-broad-listening.html">東京都の大規模な実施</a> に続いて、小さな町から県まで広がり始めました[1][3][4]。</p>
+<p>町や県が集めたアンケートの自由記述などを AI の道具に読ませ、似た意見ごとにまとめた「地図」と要約を作る試みです。「住民が全体として何を言っているか」を短い時間でつかむのが狙いです。道具には主に、市民の団体 <a href="dd2030.html">DD2030</a> が作った無料の <a href="kouchou-ai.html">広聴AI</a> が使われています<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><a href="broad-listening.html">ブロードリスニング</a> とは、大勢の声を広く聴き取り、全体像をつかむことです。2025 年から、<a href="tokyo-2050-broad-listening.html">東京都の大規模な実施</a> に続いて、小さな町から県まで広がり始めました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>香川県宇多津町（2025 年 4 月 30 日公表）。</strong> 町の長期計画をつくるときの町民アンケートの自由記述 396 件を、広聴AI で整理しました。町は、これまで長い時間がかかっていたとりまとめを AI が 10 分ほどで処理した、と報告しています。町長は、AI の分類が感情や思い込みに左右されずデータにもとづいて行われる点も魅力だ、という趣旨のコメントを出しました[1]。</p>
-<p><strong>東京都渋谷区（2025 年 7 月 2 日公表）。</strong> 区民の意識調査の自由記述 6,037 件を分析し、全体の要約、話題ごとの分類と散らばりの図、世代別・地域別の傾向を出しました[5][6]。まとまりの名前には、路上での喫煙や飲酒の取り締まりを求める声などが並びました。30 代の 615 件だけを取り出して、子育てや教育の論点を見るといった使い方も試しています[6]。</p>
-<p><strong>広島県（2025 年 8〜9 月）。</strong> 県民の意見募集「デジタル化で描く未来の広島は？」に集まった 2,953 件を広聴AI で分析し、募集の期間中に中間結果を公表しました。職員は「3,000件の自由記述を30分に満たない時間で分類でき」たと述べています。人の手なら約 500 時間かかった可能性がある、とされています[7]。</p>
+<p><strong>香川県宇多津町（2025 年 4 月 30 日公表）。</strong> 町の長期計画をつくるときの町民アンケートの自由記述 396 件を、広聴AI で整理しました。町は、これまで長い時間がかかっていたとりまとめを AI が 10 分ほどで処理した、と報告しています。町長は、AI の分類が感情や思い込みに左右されずデータにもとづいて行われる点も魅力だ、という趣旨のコメントを出しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>東京都渋谷区（2025 年 7 月 2 日公表）。</strong> 区民の意識調査の自由記述 6,037 件を分析し、全体の要約、話題ごとの分類と散らばりの図、世代別・地域別の傾向を出しました<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。まとまりの名前には、路上での喫煙や飲酒の取り締まりを求める声などが並びました。30 代の 615 件だけを取り出して、子育てや教育の論点を見るといった使い方も試しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>広島県（2025 年 8〜9 月）。</strong> 県民の意見募集「デジタル化で描く未来の広島は？」に集まった 2,953 件を広聴AI で分析し、募集の期間中に中間結果を公表しました。職員は「3,000件の自由記述を30分に満たない時間で分類でき」たと述べています。人の手なら約 500 時間かかった可能性がある、とされています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>しくみ</h2>
 <h3>何をしているのか</h3>
-<p>宇多津町・岩手県・渋谷区の 3 件はどれも、すでに集めてあったアンケートや話し合いの自由記述を<strong>後から</strong>分析したものです。東京都のように、新しく意見を募ったわけではありません[1][3][5]。岩手県は、「幸福について考えるワークショップ」の感想や、小学生から高校生に聞いた意見で試しました[3][8]。</p>
-<p>3 件とも道具は広聴AI です。広聴AI は 2025 年 3 月 16 日に、誰でも使えるオープンソースとして公開されました[2]。導入には、デジタル化の相談にのる会社の株式会社ブーツが協力しました[1][3][5]。</p>
+<p>宇多津町・岩手県・渋谷区の 3 件はどれも、すでに集めてあったアンケートや話し合いの自由記述を<strong>後から</strong>分析したものです。東京都のように、新しく意見を募ったわけではありません<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。岩手県は、「幸福について考えるワークショップ」の感想や、小学生から高校生に聞いた意見で試しました<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>3 件とも道具は広聴AI です。広聴AI は 2025 年 3 月 16 日に、誰でも使えるオープンソースとして公開されました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。導入には、デジタル化の相談にのる会社の株式会社ブーツが協力しました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h3>自治体が挙げる効果</h3>
-<p>3 つの自治体は、ほぼ同じ効果を挙げています。一つは、手作業だったとりまとめが短時間でできること。もう一つは、全体像が見えて、住民の声や課題をつかみやすくなることです[3][1][9]。</p>
-<p>岩手県は、これまで意見を並べて書くだけだった自由記述欄を、見出し付きで見える形にして公開できる、とも書いています[3]。渋谷区は、集計の手間のためにあまりできていなかった分析を、もっと頻繁にできるようになる、という趣旨を述べています[9]。</p>
+<p>3 つの自治体は、ほぼ同じ効果を挙げています。一つは、手作業だったとりまとめが短時間でできること。もう一つは、全体像が見えて、住民の声や課題をつかみやすくなることです<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>岩手県は、これまで意見を並べて書くだけだった自由記述欄を、見出し付きで見える形にして公開できる、とも書いています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。渋谷区は、集計の手間のためにあまりできていなかった分析を、もっと頻繁にできるようになる、という趣旨を述べています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>広島県 — AI への指示文を職員が育てる</h3>
-<p>広聴AI を軸にブロードリスニングを解説した本（以下「ブロードリスニング本」）は、広島県が得た一番の収穫を、AI への指示文（プロンプト）を職員が自分で調整した経験だとしています[7]。</p>
-<p>一つ目の問題は、短い投稿に AI がもっともらしい意味を足してしまうことでした。職員が指示文を工夫すると、「分からない」のような投稿を意見から外せました[7]。</p>
-<p>二つ目は、まとまりの名前です。「デジタル技術の活用」のような技術の言葉ではなく、「交通」「教育」のような行政の言葉に寄せるようにしました。すると、20 個の名前のうち「デジタル」を含むものが 16 個から 6 個に減り、県庁の中で議論しやすくなりました[7]。結果は知事が出る会議で共有され、各部署に対応の状況が問い合わされました[7]。</p>
+<p>広聴AI を軸にブロードリスニングを解説した本（以下「ブロードリスニング本」）は、広島県が得た一番の収穫を、AI への指示文（プロンプト）を職員が自分で調整した経験だとしています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>一つ目の問題は、短い投稿に AI がもっともらしい意味を足してしまうことでした。職員が指示文を工夫すると、「分からない」のような投稿を意見から外せました<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>二つ目は、まとまりの名前です。「デジタル技術の活用」のような技術の言葉ではなく、「交通」「教育」のような行政の言葉に寄せるようにしました。すると、20 個の名前のうち「デジタル」を含むものが 16 個から 6 個に減り、県庁の中で議論しやすくなりました<a class="cite" href="#src-7" data-src="src-7">[7]</a>。結果は知事が出る会議で共有され、各部署に対応の状況が問い合わされました<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>広聴AI 以外の形 — 話し合いを助ける AI</h3>
-<p>群馬県太田市は、くじで選んだ市民約 20 人が話し合う「自分ごと化会議」に、合同会社 多元現実の「倍速会議」という道具を 2025 年度に入れました。参加者がスマートフォンで AI の質問に答えると、合意点・違う点・迷っている点をまとめたレポートがすぐに出て、会議の出発点になります[10]。ブロードリスニング本はこれを、自由記述をまとめる道具とは別の、会議の質を上げる例として紹介しています[11]。こうした試みは <a href="augmented-deliberation.html">拡張熟議</a>（技術で話し合いを深めること）の一つの形です。</p>
+<p>群馬県太田市は、くじで選んだ市民約 20 人が話し合う「自分ごと化会議」に、合同会社 多元現実の「倍速会議」という道具を 2025 年度に入れました。参加者がスマートフォンで AI の質問に答えると、合意点・違う点・迷っている点をまとめたレポートがすぐに出て、会議の出発点になります<a class="cite" href="#src-10" data-src="src-10">[10]</a>。ブロードリスニング本はこれを、自由記述をまとめる道具とは別の、会議の質を上げる例として紹介しています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。こうした試みは <a href="augmented-deliberation.html">拡張熟議</a>（技術で話し合いを深めること）の一つの形です。</p>
 <h3>広がり</h3>
-<p>ブロードリスニング本の付録は、京都府舞鶴市、奈良市、京都府与謝野町、大阪府東大阪市などの例も挙げています[4]。東京都も 2025 年 2 月の AI 戦略会議で、ブロードリスニングを自治体の意見募集で広く使える方法を論点に挙げ、都議会で区市町村にノウハウを共有すると答えました[12][13]。2026 年 1 月には、広島県・東京都・GovTech東京が AI の活用で連携協定を結んだ、とブロードリスニング本は書いています[7]。</p>
+<p>ブロードリスニング本の付録は、京都府舞鶴市、奈良市、京都府与謝野町、大阪府東大阪市などの例も挙げています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。東京都も 2025 年 2 月の AI 戦略会議で、ブロードリスニングを自治体の意見募集で広く使える方法を論点に挙げ、都議会で区市町村にノウハウを共有すると答えました<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。2026 年 1 月には、広島県・東京都・GovTech東京が AI の活用で連携協定を結んだ、とブロードリスニング本は書いています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>そもそも意見が集まらない。</strong> DD2030 は自治体に自ら声をかけましたが、試しに使っても本格的な運用に移りにくかった、とブロードリスニング本は書いています。理由は、取り組む動機が弱いこと、首長と現場の温度差、人事異動、技術者の確保の難しさです。多くの自治体では「分析以前に意見を十分に集めること自体に課題があった」とも書いています[2]。</li>
-<li><strong>誰に届いたかで結果が変わる。</strong> 広島県では、いつものアンケートと同じやり方で知らせたため、答えた人が県とつながりのある団体など行政に近い層に偏りました。SNS のハッシュタグ経由の意見は 2 件だけでした。ブロードリスニング本は、ブロードリスニングは「意見を集める」道具ではなく「集まった意見を構造化する」道具だ、と書いています[7]。</li>
-<li><strong>AI の分類は本当に客観的か。</strong> 宇多津町長は AI の分類を客観的だと評価しました[1]。一方、広島県の例では、指示文を変えると取り出される意見の数もまとまりの名前も変わりました。使う側の意図が結果に入りうる、ということです[7]。県の年次報告書は、住民の声を恣意的に選んだり変えたりしてはならないとして、使った指示文や AI の公開を提言しています[7]。導入を手伝ったブーツ社の代表も、大きな傾向をつかむには有効だが、少数でも大事な意見を拾うことなどでは「必ずしも万能ではない」と書いています[14]。</li>
-<li><strong>選挙での利用とは別。</strong> 東京都議選の候補者が広聴AI を使った例もありますが、それは選挙運動での利用で、自治体の取り組みではありません[15]。</li>
+<li><strong>そもそも意見が集まらない。</strong> DD2030 は自治体に自ら声をかけましたが、試しに使っても本格的な運用に移りにくかった、とブロードリスニング本は書いています。理由は、取り組む動機が弱いこと、首長と現場の温度差、人事異動、技術者の確保の難しさです。多くの自治体では「分析以前に意見を十分に集めること自体に課題があった」とも書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
+<li><strong>誰に届いたかで結果が変わる。</strong> 広島県では、いつものアンケートと同じやり方で知らせたため、答えた人が県とつながりのある団体など行政に近い層に偏りました。SNS のハッシュタグ経由の意見は 2 件だけでした。ブロードリスニング本は、ブロードリスニングは「意見を集める」道具ではなく「集まった意見を構造化する」道具だ、と書いています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</li>
+<li><strong>AI の分類は本当に客観的か。</strong> 宇多津町長は AI の分類を客観的だと評価しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。一方、広島県の例では、指示文を変えると取り出される意見の数もまとまりの名前も変わりました。使う側の意図が結果に入りうる、ということです<a class="cite" href="#src-7" data-src="src-7">[7]</a>。県の年次報告書は、住民の声を恣意的に選んだり変えたりしてはならないとして、使った指示文や AI の公開を提言しています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。導入を手伝ったブーツ社の代表も、大きな傾向をつかむには有効だが、少数でも大事な意見を拾うことなどでは「必ずしも万能ではない」と書いています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>選挙での利用とは別。</strong> 東京都議選の候補者が広聴AI を使った例もありますが、それは選挙運動での利用で、自治体の取り組みではありません<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
 <p>本『Plurality』は、市町村や県の例を扱っていません。日本の行政では、東京都の長期計画が 5-4 章の脚注に出てくるだけです（<a href="tokyo-2050-broad-listening.html">東京都の長期計画のブロードリスニング</a> を参照）。</p>
-<p>自治体の取り組みは、本の 5-4 章「拡張熟議」がいうブロードリスニングを、行政が日々の「広聴」（住民の声を聴く仕事）の道具として使った形だと見ることができます。ブロードリスニング本も、政治家や行政が主導するブロードリスニングが広がった例として、自治体の計画づくりでの利用を挙げています[16]。</p>
+<p>自治体の取り組みは、本の 5-4 章「拡張熟議」がいうブロードリスニングを、行政が日々の「広聴」（住民の声を聴く仕事）の道具として使った形だと見ることができます。ブロードリスニング本も、政治家や行政が主導するブロードリスニングが広がった例として、自治体の計画づくりでの利用を挙げています<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
 <p>道具の系譜は、<a href="talk-to-the-city.html">Talk to the City</a> から <a href="kouchou-ai.html">広聴AI</a> へと続いています。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -86,20 +92,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>宇多津町「『ブロードリスニング』の先進的なトライアルを実施しました」（2025-04-30）— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
-<li>ブロードリスニング本 10「DD2030 による広聴AIの開発活動」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>岩手県「『ブロードリスニング』の検証結果」— <a href="https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html" target="_blank" rel="noopener">https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html</a></li>
-<li>ブロードリスニング本 付録「公開事例一覧」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>渋谷区 報道発表（2025-07-02）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
-<li>渋谷区 区民意識調査 AI 分析の詳細資料 — <a href="https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf" target="_blank" rel="noopener">https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf</a></li>
-<li>ブロードリスニング本 8.2「広島県の事例」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>岩手県 検証の詳細資料 — <a href="https://www.pref.iwate.jp/" target="_blank" rel="noopener">https://www.pref.iwate.jp/</a><em>res/projects/default_project/_page</em>/001/086/730/genkou.pdf</li>
-<li>渋谷区 区民意識調査の AI 分析の結果 — <a href="https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html</a></li>
-<li>ブロードリスニング本 8.1「群馬県太田市の自分ごと化会議」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 8「地方自治体での活用」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>東京都 第 2 回 AI 戦略会議 資料（2025-02-06）— <a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo" target="_blank" rel="noopener">https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo</a></li>
-<li>東京都議会 総務委員会（2025-03-17）— <a href="https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html" target="_blank" rel="noopener">https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html</a></li>
-<li>ブロードリスニング本 10.1「株式会社ブーツ」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 7「地方選挙での活用」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 1「ブロードリスニングとは何か？」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-</ol><div class='related'>関連: <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='tokyo-2050-broad-listening.html'>東京都「シン東京2050」のブロードリスニングってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fmunicipal-broad-listening.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E8%87%AA%E6%B2%BB%E4%BD%93%E3%81%AE%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fmunicipal-broad-listening.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">宇多津町「『ブロードリスニング』の先進的なトライアルを実施しました」（2025-04-30）— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
+<li id="src-2">ブロードリスニング本 10「DD2030 による広聴AIの開発活動」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-3">岩手県「『ブロードリスニング』の検証結果」— <a href="https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html" target="_blank" rel="noopener">https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html</a></li>
+<li id="src-4">ブロードリスニング本 付録「公開事例一覧」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-5">渋谷区 報道発表（2025-07-02）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
+<li id="src-6">渋谷区 区民意識調査 AI 分析の詳細資料 — <a href="https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf" target="_blank" rel="noopener">https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf</a></li>
+<li id="src-7">ブロードリスニング本 8.2「広島県の事例」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-8">岩手県 検証の詳細資料 — <a href="https://www.pref.iwate.jp/" target="_blank" rel="noopener">https://www.pref.iwate.jp/</a><em>res/projects/default_project/_page</em>/001/086/730/genkou.pdf</li>
+<li id="src-9">渋谷区 区民意識調査の AI 分析の結果 — <a href="https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html</a></li>
+<li id="src-10">ブロードリスニング本 8.1「群馬県太田市の自分ごと化会議」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-11">ブロードリスニング本 8「地方自治体での活用」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-12">東京都 第 2 回 AI 戦略会議 資料（2025-02-06）— <a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo" target="_blank" rel="noopener">https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo</a></li>
+<li id="src-13">東京都議会 総務委員会（2025-03-17）— <a href="https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html" target="_blank" rel="noopener">https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html</a></li>
+<li id="src-14">ブロードリスニング本 10.1「株式会社ブーツ」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-15">ブロードリスニング本 7「地方選挙での活用」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-16">ブロードリスニング本 1「ブロードリスニングとは何か？」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+</ol><div class='related'>関連: <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='tokyo-2050-broad-listening.html'>東京都「シン東京2050」のブロードリスニングってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fmunicipal-broad-listening.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E8%87%AA%E6%B2%BB%E4%BD%93%E3%81%AE%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fmunicipal-broad-listening.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

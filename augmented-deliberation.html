@@ -41,49 +41,55 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/augmented-deliberation.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/augmented-deliberation.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/augmented-deliberation.html">简体中文</a></nav></header>
 <main lang="ja"><h1>拡張熟議ってなに？</h1><div class='lead'>大勢の人が一緒に話し合い、考える力を、デジタル技術で広げることです。一人の声を大勢に届ける技術は大きく進んだのに、一人が大勢の多様な声を聴くことはまだとても難しい、という問題に答えようとします。</div><p>テレビやインターネットのおかげで、一人の話を何百万人もの人に届けるのは簡単になりました。けれども逆に、何百万人もの声を一人が聴き、その中身を理解するのは、今でもとても大変です。拡張熟議（Augmented Deliberation）は、この「大勢で、じっくり話し合う」ことを、技術の力で可能にしようとする取り組みです。「熟議」とは、意見を出し合い、理由を聞き合いながら、よく考えて話し合うことを指します。</p>
 <h2>ひとことで言うと</h2>
 <p>拡張熟議は、<strong>大勢の人が一緒に話し合い、考える力を、デジタル技術で広げること</strong>です。</p>
-<p>本『⿻ Plurality』は、こう問題を立てます。一人の話を大勢が聞く「ブロードキャスト（放送）」の技術は大きく進んだ。でも、一人が大勢の多様な声を聴く「ブロードリスニング」は、まだとても高くつく[1][2]。</p>
+<p>本『⿻ Plurality』は、こう問題を立てます。一人の話を大勢が聞く「ブロードキャスト（放送）」の技術は大きく進んだ。でも、一人が大勢の多様な声を聴く「ブロードリスニング」は、まだとても高くつく<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>X（旧 Twitter）の Community Notes（コミュニティノート）。</strong> 誤解を招きそうな投稿に、参加者が背景を補う「ノート」を書き、互いに評価します。ふだんは意見が合わない人たちの両方から「役に立つ」と評価されたノートだけが表示されます。本は、毎週数億人が触れるこの仕組みを、拡張熟議の例として 5-4 章の最初に置いています[3]。</p>
-<p><strong>台湾の vTaiwan と Polis。</strong> Polis（ポリス）という道具では、参加者はほかの人の意見に返信せず、「賛成」「反対」を押すだけです。その押し方の傾向から、意見のグループと、グループをまたいで賛成される意見が浮かび上がります。台湾では、配車サービスの規制などの話し合いで使われました[4]。</p>
-<p><strong>2024 年の東京都知事選。</strong> 候補者の安野貴博は、公約を公開して、X や入力フォーム、AI の電話、GitHub（プログラムを共同で編集するサイト）で意見を集めました。集めた声は「Talk to the City」という道具で見える形にし、GitHub で政策を書き直しました。本は、ほとんど無名だった候補が 15 万票を超える票を得たと書いています。その後、2050 年に向けた東京の長期計画の意見募集でも Talk to the City が使われ、12 月 13 日の時点で 1 万件を超える意見が集まったそうです[5]。</p>
+<p><strong>X（旧 Twitter）の Community Notes（コミュニティノート）。</strong> 誤解を招きそうな投稿に、参加者が背景を補う「ノート」を書き、互いに評価します。ふだんは意見が合わない人たちの両方から「役に立つ」と評価されたノートだけが表示されます。本は、毎週数億人が触れるこの仕組みを、拡張熟議の例として 5-4 章の最初に置いています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>台湾の vTaiwan と Polis。</strong> Polis（ポリス）という道具では、参加者はほかの人の意見に返信せず、「賛成」「反対」を押すだけです。その押し方の傾向から、意見のグループと、グループをまたいで賛成される意見が浮かび上がります。台湾では、配車サービスの規制などの話し合いで使われました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>2024 年の東京都知事選。</strong> 候補者の安野貴博は、公約を公開して、X や入力フォーム、AI の電話、GitHub（プログラムを共同で編集するサイト）で意見を集めました。集めた声は「Talk to the City」という道具で見える形にし、GitHub で政策を書き直しました。本は、ほとんど無名だった候補が 15 万票を超える票を得たと書いています。その後、2050 年に向けた東京の長期計画の意見募集でも Talk to the City が使われ、12 月 13 日の時点で 1 万件を超える意見が集まったそうです<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>しくみ</h2>
 <h3>深さと広さは両立しにくい</h3>
-<p>顔を合わせた会話は豊かですが、届く範囲は狭いものです。書いた文章は遠くまで届きますが、やりとりは乏しくなります。本はこれを、多様さと情報の太さのトレードオフ（あちらを立てればこちらが立たない関係）と呼びます[1]。</p>
-<p>ブロードリスニングについての日本語の本は、100 万人の街を例に説明します。10 人と 1 時間ずつじっくり話せば深い話が聞けますが、街全体の声とは言えません。全員に「公園は必要ですか？ はい／いいえ」と聞けば全体の声は分かりますが、理由が分かりません[6]。</p>
-<p>政治学者エレーヌ・ランデモア（Hélène Landemore）も、質の高い話し合いと大勢の参加を両立できないことは、民主主義の理論のまだ解けていない問題だとしています。話し合いの質は数百〜数千人を超えると落ちると述べ、AI がその溝をどこまで埋められるかを問うています[7]。</p>
+<p>顔を合わせた会話は豊かですが、届く範囲は狭いものです。書いた文章は遠くまで届きますが、やりとりは乏しくなります。本はこれを、多様さと情報の太さのトレードオフ（あちらを立てればこちらが立たない関係）と呼びます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>ブロードリスニングについての日本語の本は、100 万人の街を例に説明します。10 人と 1 時間ずつじっくり話せば深い話が聞けますが、街全体の声とは言えません。全員に「公園は必要ですか？ はい／いいえ」と聞けば全体の声は分かりますが、理由が分かりません<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>政治学者エレーヌ・ランデモア（Hélène Landemore）も、質の高い話し合いと大勢の参加を両立できないことは、民主主義の理論のまだ解けていない問題だとしています。話し合いの質は数百〜数千人を超えると落ちると述べ、AI がその溝をどこまで埋められるかを問うています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>今ある話し合いの道具</h3>
-<p>本は、小さなグループの対話を記録してまとめ、広く配るやり方などを紹介します。そして、集まった人の対話を実りあるものにする進行役の技術（ファシリテーション）は、それ自体が一つの学問だと書きます[8]。</p>
-<p>一方で SNS は、参加できる人を広げましたが、話の背景が抜け落ちる、誤った情報が広がる、お金や人手のある人が場を支配する、似た意見の人だけで固まる、といった問題も生みました[8]。</p>
+<p>本は、小さなグループの対話を記録してまとめ、広く配るやり方などを紹介します。そして、集まった人の対話を実りあるものにする進行役の技術（ファシリテーション）は、それ自体が一つの学問だと書きます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>一方で SNS は、参加できる人を広げましたが、話の背景が抜け落ちる、誤った情報が広がる、お金や人手のある人が場を支配する、似た意見の人だけで固まる、といった問題も生みました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>これからの会話 ― 三つの方向</h3>
-<p>本は、これからの話し合いの道具を三つの方向にまとめます[4]。</p>
+<p>本は、これからの話し合いの道具を三つの方向にまとめます<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <ol>
 <li><strong>大勢の反応を集めて、橋渡しする仕組み。</strong> Polis のような道具です。AI の会社 Anthropic は、研究団体と組んで Polis で市民から集めた「憲法」で AI の振る舞いを方向づけました。OpenAI も、AI に市民の声を入れる試みに助成しました。</li>
 <li><strong>顔を合わせた会話を中心にして、そこで分かったことをつなぐ仕組み。</strong></li>
 <li><strong>今ある議論や記事を整理する仕組み。</strong></li>
 </ol>
 <h3>AI で大勢の声を聴く</h3>
-<p>AI Objectives Institute が作った Talk to the City は、あるグループの意見の一覧を、「話しかけられる相手」に置き換えます。本は、近いうちにさらに進んで、参加者が短い文と賛否だけでなく自由に語れるようになり、AI がそれをまとめ、言葉の意味を理解して大まかな合意点を探せるようになるだろう、と書きます[9]。</p>
-<p>本によれば、大規模な実験で、AI が話し合いの参加者一人ひとりに、議論の質を高めるための根拠のある提案をその場で示したところ、オンラインの政治の話し合いの質がはっきり上がりました[5]。ランデモアらの 2024 年の論文も、AI が無礼な発言を止めて言い換えを促したり、意見を要約したり、共通点を見つけたりできるという期待を整理しています[10]。</p>
+<p>AI Objectives Institute が作った Talk to the City は、あるグループの意見の一覧を、「話しかけられる相手」に置き換えます。本は、近いうちにさらに進んで、参加者が短い文と賛否だけでなく自由に語れるようになり、AI がそれをまとめ、言葉の意味を理解して大まかな合意点を探せるようになるだろう、と書きます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>本によれば、大規模な実験で、AI が話し合いの参加者一人ひとりに、議論の質を高めるための根拠のある提案をその場で示したところ、オンラインの政治の話し合いの質がはっきり上がりました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。ランデモアらの 2024 年の論文も、AI が無礼な発言を止めて言い換えを促したり、意見を要約したり、共通点を見つけたりできるという期待を整理しています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>合意だけでなく「新しい対立」も</h3>
-<p>本は、橋渡しの仕組みは合意づくりだけに使うものではない、とも書きます。生まれや属性に縛られない意見のグループを見つけ、今ある分断を強めない新しい対立の軸をつくることにも使える、というのです。さらに、できるだけ多様な委員を選ぶ、川や森や未来の世代の代弁者をつくる、といった「代表」の新しい形も挙げています[11]。</p>
+<p>本は、橋渡しの仕組みは合意づくりだけに使うものではない、とも書きます。生まれや属性に縛られない意見のグループを見つけ、今ある分断を強めない新しい対立の軸をつくることにも使える、というのです。さらに、できるだけ多様な委員を選ぶ、川や森や未来の世代の代弁者をつくる、といった「代表」の新しい形も挙げています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>実践の感覚</h3>
-<p>オードリー・タン（唐鳳、台湾の元デジタル担当大臣）は 2025 年の対談で、人は解決策の細かい中身には関心が無くても、自分の気持ちについては専門家だ、という趣旨のことを話しています。台湾で、AI で作った偽の映像（ディープフェイク）を使う詐欺広告への対策を話し合ったときは、10 人ずつ 45 のオンラインの部屋で案を出し合い（台湾政府の公式ページでは 447 人・44 グループ）、最終案に 85% が賛成しました。残りの 15% にも「納得まではしなくても受け入れられるか」を尋ね、ほとんどが受け入れられると答えました。タンは、この確認の方が 85% の賛成より大事だと述べています[12]。</p>
+<p>オードリー・タン（唐鳳、台湾の元デジタル担当大臣）は 2025 年の対談で、人は解決策の細かい中身には関心が無くても、自分の気持ちについては専門家だ、という趣旨のことを話しています。台湾で、AI で作った偽の映像（ディープフェイク）を使う詐欺広告への対策を話し合ったときは、10 人ずつ 45 のオンラインの部屋で案を出し合い（台湾政府の公式ページでは 447 人・44 グループ）、最終案に 85% が賛成しました。残りの 15% にも「納得まではしなくても受け入れられるか」を尋ね、ほとんどが受け入れられると答えました。タンは、この確認の方が 85% の賛成より大事だと述べています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>中身が見えにくい。</strong> 本は、AI を使って話し合いを速める方法には、意見から結論への変換を説明しにくいという限界があると書きます。そのため、投票や市場ほど、みんなが理解し、正統だと認めるのは難しい、としています[13]。</li>
-<li><strong>AI を人が点検できるか。</strong> 本は、より賢い AI を人が本当に点検できるのか、AI が指示に従って特定の見方を消してしまわないか、という問題を挙げます。そして、多様で妥当な答えを返し、それぞれの集団に合わせて調整された AI であるべきだとしています[13]。</li>
-<li><strong>「みんなの意志」の理想化。</strong> 話し合いは、分断を越えて「本当のみんなの意志」にたどり着く手段だと理想化されがちです。本は、多様さや、実りのある対立を保つことにも同じだけ気を配るべきだ、と書きます[13]。</li>
-<li><strong>AI による話し合いの危うさ。</strong> ランデモアらの論文は、AI の政治的な偏り、自動の説得、決めつけを誇張した出力が対立を強める危険も挙げています[10]。</li>
+<li><strong>中身が見えにくい。</strong> 本は、AI を使って話し合いを速める方法には、意見から結論への変換を説明しにくいという限界があると書きます。そのため、投票や市場ほど、みんなが理解し、正統だと認めるのは難しい、としています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>AI を人が点検できるか。</strong> 本は、より賢い AI を人が本当に点検できるのか、AI が指示に従って特定の見方を消してしまわないか、という問題を挙げます。そして、多様で妥当な答えを返し、それぞれの集団に合わせて調整された AI であるべきだとしています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>「みんなの意志」の理想化。</strong> 話し合いは、分断を越えて「本当のみんなの意志」にたどり着く手段だと理想化されがちです。本は、多様さや、実りのある対立を保つことにも同じだけ気を配るべきだ、と書きます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>AI による話し合いの危うさ。</strong> ランデモアらの論文は、AI の政治的な偏り、自動の説得、決めつけを誇張した出力が対立を強める危険も挙げています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本の第 5 部は、違う人どうしが協働する七つの型を並べていて、拡張熟議はその 4 番目です[2]。もっと親密な協働の型の後、<a href="plural-voting.html">⿻投票</a> や <a href="social-markets.html">社会市場</a> の前に置かれています。</p>
-<p>本は、言葉は五感の体験に比べれば「ちり」のようなもので、話し合いはより豊かな協働の代わりにはならない、と書きます。また話し合いには時間がかかるので、次の章以降の行政・投票・市場のしくみも要る、とつなげています[13]。</p>
-<p>本そのものの制作でも、意見の分かれる点をこの章の道具で解いた、と本は書いています[14]。本の運営のしくみについては <a href="plural-management-protocol.html">Plural Management Protocol</a> の記事もどうぞ。</p>
-<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は書評で、自分の経験から、組織の運営がうまくいくかは、正式な決め方で 2 割、その前の話し合いのしかたで 8 割が決まる、と書きました。ワイルとタンが大規模な会話の技術に多くのページを割いているのは、この文脈で理解できる、というのがブテリンの見方です[15]。</p>
+<p>本の第 5 部は、違う人どうしが協働する七つの型を並べていて、拡張熟議はその 4 番目です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。もっと親密な協働の型の後、<a href="plural-voting.html">⿻投票</a> や <a href="social-markets.html">社会市場</a> の前に置かれています。</p>
+<p>本は、言葉は五感の体験に比べれば「ちり」のようなもので、話し合いはより豊かな協働の代わりにはならない、と書きます。また話し合いには時間がかかるので、次の章以降の行政・投票・市場のしくみも要る、とつなげています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>本そのものの制作でも、意見の分かれる点をこの章の道具で解いた、と本は書いています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。本の運営のしくみについては <a href="plural-management-protocol.html">Plural Management Protocol</a> の記事もどうぞ。</p>
+<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は書評で、自分の経験から、組織の運営がうまくいくかは、正式な決め方で 2 割、その前の話し合いのしかたで 8 割が決まる、と書きました。ワイルとタンが大規模な会話の技術に多くのページを割いているのは、この文脈で理解できる、というのがブテリンの見方です<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』5-4「拡張熟議」（日本語・本）— <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a></li>
@@ -95,19 +101,49 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』5-4「Conversation today」前半 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』各章の要約（Chapter 5-4）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』5-4 冒頭 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』5-4「Conversation tomorrow」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』5-4「Frontiers of augmented deliberation」安野貴博の段落とその後 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>ブロードリスニング本 第 1 章「ブロードリスニングとは何か？」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>Hélène Landemore「Can AI Bring Deliberation to the Masses?」（Stanford HAI、2022）— <a href="https://hai.stanford.edu/events/helene-landemore-can-ai-bring-deliberation-masses" target="_blank" rel="noopener">https://hai.stanford.edu/events/helene-landemore-can-ai-bring-deliberation-masses</a></li>
-<li>『Plurality』5-4「Conversation today」後半 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』5-4「Frontiers of augmented deliberation」冒頭 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>Summerfield ほか「How will advanced AI systems impact democracy?」（2024）— <a href="https://arxiv.org/abs/2409.06729" target="_blank" rel="noopener">https://arxiv.org/abs/2409.06729</a> ［CC BY 4.0］</li>
-<li>『Plurality』5-4「Frontiers of augmented deliberation」後半 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>「Using AI to Support Public Deliberation: A Conversation with Audrey Tang」（Reboot Democracy、2025-12-19、主催サイトの自動の文字起こし）— <a href="https://rebootdemocracy.ai/blog/deliberating-with-the-public" target="_blank" rel="noopener">https://rebootdemocracy.ai/blog/deliberating-with-the-public</a></li>
-<li>『Plurality』5-4「Limits of augmented deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』5-0「Collaborative Technology and Democracy」冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-</ol><div class='related'>関連: <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='plural-management-protocol.html'>Plural Management Protocol（PMP）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faugmented-deliberation.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E6%8B%A1%E5%BC%B5%E7%86%9F%E8%AD%B0%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faugmented-deliberation.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』5-4「Conversation today」前半 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-2">『Plurality』各章の要約（Chapter 5-4）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-3">『Plurality』5-4 冒頭 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』5-4「Conversation tomorrow」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』5-4「Frontiers of augmented deliberation」安野貴博の段落とその後 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-6">ブロードリスニング本 第 1 章「ブロードリスニングとは何か？」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-7">Hélène Landemore「Can AI Bring Deliberation to the Masses?」（Stanford HAI、2022）— <a href="https://hai.stanford.edu/events/helene-landemore-can-ai-bring-deliberation-masses" target="_blank" rel="noopener">https://hai.stanford.edu/events/helene-landemore-can-ai-bring-deliberation-masses</a></li>
+<li id="src-8">『Plurality』5-4「Conversation today」後半 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』5-4「Frontiers of augmented deliberation」冒頭 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-10">Summerfield ほか「How will advanced AI systems impact democracy?」（2024）— <a href="https://arxiv.org/abs/2409.06729" target="_blank" rel="noopener">https://arxiv.org/abs/2409.06729</a> ［CC BY 4.0］</li>
+<li id="src-11">『Plurality』5-4「Frontiers of augmented deliberation」後半 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-12">「Using AI to Support Public Deliberation: A Conversation with Audrey Tang」（Reboot Democracy、2025-12-19、主催サイトの自動の文字起こし）— <a href="https://rebootdemocracy.ai/blog/deliberating-with-the-public" target="_blank" rel="noopener">https://rebootdemocracy.ai/blog/deliberating-with-the-public</a></li>
+<li id="src-13">『Plurality』5-4「Limits of augmented deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-14">『Plurality』5-0「Collaborative Technology and Democracy」冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-15">Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+</ol><div class='related'>関連: <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='plural-management-protocol.html'>Plural Management Protocol（PMP）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faugmented-deliberation.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E6%8B%A1%E5%BC%B5%E7%86%9F%E8%AD%B0%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faugmented-deliberation.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,31 +41,37 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/adaptive-administration.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/adaptive-administration.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/adaptive-administration.html">简体中文</a></nav></header>
 <main lang="ja"><h1>適応型管理行政ってなに？</h1><div class='lead'>役所や大企業の「決まった書式と規則で処理する」しくみを、文章を生み出す AI などの技術で、利用者一人ひとりの言葉や事情に合わせて動けるようにする、という本『Plurality』の構想です。公平さのための規則は保ったまま、多様な人が制度をそのまま使えるようにします。</div><p>役所の窓口で、書類の書き方がわからずに困ったことはありませんか。決まった欄に、決まった言葉で書かないと、手続きが進みません。日本語が得意でない人や、事情が型に当てはまらない人には、なおさら大変です。適応型管理行政（Adaptive Administration）は、この「書式の壁」を技術で低くしようという、本『⿻ Plurality』の構想です。</p>
 <h2>ひとことで言うと</h2>
-<p>役所や大企業の、<strong>決まった書式と規則で処理するしくみを、利用者一人ひとりの言葉や事情に合わせて動けるようにする</strong>、という構想です[1][2]。</p>
-<p>そのための道具として、本は、文章などを生み出す AI（本の用語では「<a href="generative-foundation-models.html">生成基盤モデル</a>」、略して GFM）を挙げます。公平さのための規則は保ったまま、多様な人が制度をそのまま使えるようにすることを目指します[1]。「適応型」は、相手や状況に合わせて形を変える、という意味です。</p>
+<p>役所や大企業の、<strong>決まった書式と規則で処理するしくみを、利用者一人ひとりの言葉や事情に合わせて動けるようにする</strong>、という構想です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>そのための道具として、本は、文章などを生み出す AI（本の用語では「<a href="generative-foundation-models.html">生成基盤モデル</a>」、略して GFM）を挙げます。公平さのための規則は保ったまま、多様な人が制度をそのまま使えるようにすることを目指します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。「適応型」は、相手や状況に合わせて形を変える、という意味です。</p>
 <h2>たとえば</h2>
-<p><strong>インドの農家と音声の AI。</strong> マイクロソフトの CEO サティア・ナデラ（Satya Nadella）は、スイスのダボスで開かれた世界経済フォーラムで、こんな実演を見せました。インドの農村の農家が、地域の言葉で携帯電話に話しかけます。すると大規模言語モデル（文章を理解し生み出す AI）が声を理解し、書式のある国の言葉に訳し、何を書けばよいか案内して、声で返します[3]。</p>
-<p>本は、これが長年の協働の上に成り立っていると書きます。そして、少数の言語を話し、都市から遠くに住む人も公共のサービスを使えるようにして、インドの文化の多様性を保つ可能性がある、と言います。その後、農家の給付の申請を支える政府のチャットボットや、メッセージアプリでの多言語の案内が始まりました[3]。</p>
-<p><strong>給付の案内をするチャットボット。</strong> 本は、先に始まった例として、フィンランドの社会保険の機関、ドイツの年金の機関、米国の給付を案内する団体のチャットボットを挙げています[4]。</p>
-<p><strong>この本の翻訳。</strong> 5-0 章は、この本が、5-5 章で扱うような、言葉や文化をまたぐ翻訳の道具に助けられて、コミュニティの手で翻訳・校正されたと書いています[5]。日本語訳のコミュニティを率いた西尾泰和は、安野貴博が、和訳のコミュニティに置かれていた機械翻訳を読んで「<a href="broad-listening.html">ブロードリスニング</a>」の考えを知った、と記しています[6]。→ <a href="plurality-in-japan.html">日本での Plurality の広がり</a></p>
+<p><strong>インドの農家と音声の AI。</strong> マイクロソフトの CEO サティア・ナデラ（Satya Nadella）は、スイスのダボスで開かれた世界経済フォーラムで、こんな実演を見せました。インドの農村の農家が、地域の言葉で携帯電話に話しかけます。すると大規模言語モデル（文章を理解し生み出す AI）が声を理解し、書式のある国の言葉に訳し、何を書けばよいか案内して、声で返します<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>本は、これが長年の協働の上に成り立っていると書きます。そして、少数の言語を話し、都市から遠くに住む人も公共のサービスを使えるようにして、インドの文化の多様性を保つ可能性がある、と言います。その後、農家の給付の申請を支える政府のチャットボットや、メッセージアプリでの多言語の案内が始まりました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>給付の案内をするチャットボット。</strong> 本は、先に始まった例として、フィンランドの社会保険の機関、ドイツの年金の機関、米国の給付を案内する団体のチャットボットを挙げています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>この本の翻訳。</strong> 5-0 章は、この本が、5-5 章で扱うような、言葉や文化をまたぐ翻訳の道具に助けられて、コミュニティの手で翻訳・校正されたと書いています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。日本語訳のコミュニティを率いた西尾泰和は、安野貴博が、和訳のコミュニティに置かれていた機械翻訳を読んで「<a href="broad-listening.html">ブロードリスニング</a>」の考えを知った、と記しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="plurality-in-japan.html">日本での Plurality の広がり</a></p>
 <h2>くわしく</h2>
 <h3>管理行政とは何か</h3>
-<p>本は、管理行政や官僚制を、ふだんの言葉よりずっと形が決まった、厳しい伝え合いと規則にもとづく処理だとします。目指すのは、正しさ・公平さ・手続きの公正です。法律・財産・ID・採用・入学など、国や企業の中心にあるしくみです[1]。</p>
-<p>身分証、履歴書、土地の権利書、税の申告書、病院の問診票。本によれば、こうした「薄い書式」が、人生の分かれ道を決めています[7]。</p>
+<p>本は、管理行政や官僚制を、ふだんの言葉よりずっと形が決まった、厳しい伝え合いと規則にもとづく処理だとします。目指すのは、正しさ・公平さ・手続きの公正です。法律・財産・ID・採用・入学など、国や企業の中心にあるしくみです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>身分証、履歴書、土地の権利書、税の申告書、病院の問診票。本によれば、こうした「薄い書式」が、人生の分かれ道を決めています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>二つの逆向きの不満</h3>
-<p>本は、官僚制への不満には、逆向きの二つがあると書きます[8]。</p>
+<p>本は、官僚制への不満には、逆向きの二つがあると書きます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p><strong>① かたすぎる。</strong> 速度制限は、たいていその場の状況に対して高すぎるか低すぎます。世界中の人が、自分の人生を履歴書の型に押し込んでいます。1990 年代の終わりには、オランダの航空会社が、書類の無い生きたリス数百匹を空港で処分する、という出来事までありました。</p>
 <p><strong>② 複雑すぎる。</strong> カフカの小説『城』のように、わけがわからず、お役所仕事と気まぐれな判断に満ちています。</p>
-<p>本は、複雑さのおもな理由は、多様な事例に対応しなければならないことだ、とまとめます。官僚制が幅広い多様性をまたごうとするほど、複雑になりすぎて、信頼を失うのです[8]。</p>
+<p>本は、複雑さのおもな理由は、多様な事例に対応しなければならないことだ、とまとめます。官僚制が幅広い多様性をまたごうとするほど、複雑になりすぎて、信頼を失うのです<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>昔の AI と今の AI の違い</h3>
-<p>1970〜80 年代の「昔ながらの AI」は、専門家から聞き出した規則を入れ子にして、官僚の処理を自動にしようとしました。「熱はあるか？ あれば目は赤いか？……」とたどる決め方です。でも、これは行き詰まりました[9]。</p>
-<p>今の AI（とくに GFM）は、たくさんの例から確率的に学び、人のような柔軟な分け方・応え方・考え方をまねられます。本は、これによって、利用者に専門の書式を押しつけずに、さまざまな形の入力を受け取りながら、ある程度の再現性を保てる可能性が開ける、と見ます[9]。</p>
-<p>ただし本は、GFM の力は「AI」であることより、網の目のように確率的なしくみにある、とも書きます。同じしくみは、人と人のつながり（もっと柔軟な官僚制）にもありうる、というのです[10]。</p>
+<p>1970〜80 年代の「昔ながらの AI」は、専門家から聞き出した規則を入れ子にして、官僚の処理を自動にしようとしました。「熱はあるか？ あれば目は赤いか？……」とたどる決め方です。でも、これは行き詰まりました<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>今の AI（とくに GFM）は、たくさんの例から確率的に学び、人のような柔軟な分け方・応え方・考え方をまねられます。本は、これによって、利用者に専門の書式を押しつけずに、さまざまな形の入力を受け取りながら、ある程度の再現性を保てる可能性が開ける、と見ます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>ただし本は、GFM の力は「AI」であることより、網の目のように確率的なしくみにある、とも書きます。同じしくみは、人と人のつながり（もっと柔軟な官僚制）にもありうる、というのです<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>すでにある試み</h3>
-<p>本は、給付の案内のほかに、次のような試みを挙げます[4][10]。</p>
+<p>本は、給付の案内のほかに、次のような試みを挙げます<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <ul>
 <li>法律の相談を助けるサービス。</li>
 <li>有名校の出身者ばかりを採る採用を変える試み。ただし、過去の多様な採用の例が少ないと、あてにならなくなります。</li>
@@ -74,18 +80,18 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ul>
 <h3>フロンティア</h3>
 <p>本は、二つの先の姿を描きます。</p>
-<p><strong>次世代のバッジ。</strong> ダニエル・アレン（Danielle Allen）らの構想です。授業と成績を、具体的な技能の小さなバッジから、それを積み上げて雇い主に通じる大きなバッジへ、と少しずつ置き換えます。本は、AI が、複雑な経歴を読む雇い主や、多様な学び方をたどる学生を助けうる、と書きます[11]。</p>
-<p><strong>慣習の翻訳。</strong> AI が安く言葉を訳せるように、文化の決まりも訳せれば、近代化や植民地化で上書きされてきた多様な伝統（家族の争いの解決、贈り物の義務、土地の使い方など）を、今の法の制度とつなげられるかもしれない、と本は書きます[12]。</p>
+<p><strong>次世代のバッジ。</strong> ダニエル・アレン（Danielle Allen）らの構想です。授業と成績を、具体的な技能の小さなバッジから、それを積み上げて雇い主に通じる大きなバッジへ、と少しずつ置き換えます。本は、AI が、複雑な経歴を読む雇い主や、多様な学び方をたどる学生を助けうる、と書きます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p><strong>慣習の翻訳。</strong> AI が安く言葉を訳せるように、文化の決まりも訳せれば、近代化や植民地化で上書きされてきた多様な伝統（家族の争いの解決、贈り物の義務、土地の使い方など）を、今の法の制度とつなげられるかもしれない、と本は書きます<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>かえって見えにくくなるおそれ。</strong> 本自身が危険を挙げます。GFM の中身が見えにくいこと。「AI」という言葉が、機械が自分で動いているような神秘を感じさせること（だから本はこの言葉をなるべく避けます）。もとのデータや作り手の偏りを受け継ぐこと。悪用のおそれ。行政に使えば、やりとりは楽になっても、官僚制の見えにくさをかえって深め、気まぐれな判断や偏見の問題はあまり減らないかもしれない、と本は書きます[13]。</li>
-<li><strong>誰の条件で多様性を取り込むか。</strong> どんな力関係のもとで多様性が AI に取り込まれるかによって、それが機会を開くか、同じ型を押しつけるかが決まります。本は、かつて異文化を記録した研究者の多くが、橋渡し役ではなく植民地支配の道具になったことを戒めに挙げています[13]。</li>
-<li><strong>法のすき間をつく悪用。</strong> 法の制度どうしをつなげると、力のある人々に悪用されて、法の意図と形のすき間をつく「規制の抜け穴探し」になりうる、と本は注意します[13]。</li>
+<li><strong>かえって見えにくくなるおそれ。</strong> 本自身が危険を挙げます。GFM の中身が見えにくいこと。「AI」という言葉が、機械が自分で動いているような神秘を感じさせること（だから本はこの言葉をなるべく避けます）。もとのデータや作り手の偏りを受け継ぐこと。悪用のおそれ。行政に使えば、やりとりは楽になっても、官僚制の見えにくさをかえって深め、気まぐれな判断や偏見の問題はあまり減らないかもしれない、と本は書きます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>誰の条件で多様性を取り込むか。</strong> どんな力関係のもとで多様性が AI に取り込まれるかによって、それが機会を開くか、同じ型を押しつけるかが決まります。本は、かつて異文化を記録した研究者の多くが、橋渡し役ではなく植民地支配の道具になったことを戒めに挙げています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>法のすき間をつく悪用。</strong> 法の制度どうしをつなげると、力のある人々に悪用されて、法の意図と形のすき間をつく「規制の抜け穴探し」になりうる、と本は注意します<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本の第 5 部は、協働のかたちを 7 つ並べます。適応型管理行政はその 5 番目です。話し合い（<a href="augmented-deliberation.html">拡張熟議</a>）よりは形が決まっていて広く届き、投票（<a href="plural-voting.html">⿻投票</a>）よりは長い伝え合いができる位置にあります[1][2]。</p>
-<p>第 4 部の ID・財産・アクセスの制度を、実際に人が使うときの窓口にあたるとも言えます。4-1 章も、多元的な ID の複雑さを扱う方法の一つとして、利用者の関係と文脈に合わせた GFM に 5-5 章で戻る、と予告しています[14]。→ <a href="identity-and-personhood.html">ID と人物性</a>・<a href="digital-public-infrastructure.html">デジタル公共インフラ</a></p>
-<p>本は、弱点をほかの章で補うとも書きます。<a href="immersive-shared-reality.html">没入型共有現実</a> や <a href="post-symbolic-communication.html">ポスト表象コミュニケーション</a> が、判断を任せられる人どうしの信頼を築く。話し合いと投票の方法が、AI の運営や方向づけについて、正しい力の配分を決める、というのです[13]。→ <a href="civic-ai.html">Civic AI</a></p>
+<p>本の第 5 部は、協働のかたちを 7 つ並べます。適応型管理行政はその 5 番目です。話し合い（<a href="augmented-deliberation.html">拡張熟議</a>）よりは形が決まっていて広く届き、投票（<a href="plural-voting.html">⿻投票</a>）よりは長い伝え合いができる位置にあります<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>第 4 部の ID・財産・アクセスの制度を、実際に人が使うときの窓口にあたるとも言えます。4-1 章も、多元的な ID の複雑さを扱う方法の一つとして、利用者の関係と文脈に合わせた GFM に 5-5 章で戻る、と予告しています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。→ <a href="identity-and-personhood.html">ID と人物性</a>・<a href="digital-public-infrastructure.html">デジタル公共インフラ</a></p>
+<p>本は、弱点をほかの章で補うとも書きます。<a href="immersive-shared-reality.html">没入型共有現実</a> や <a href="post-symbolic-communication.html">ポスト表象コミュニケーション</a> が、判断を任せられる人どうしの信頼を築く。話し合いと投票の方法が、AI の運営や方向づけについて、正しい力の配分を決める、というのです<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→ <a href="civic-ai.html">Civic AI</a></p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』5-5「適応型管理行政」（日本語・本）— <a href="https://www.plurality.net/v/chapters/5-5/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/jpn/</a></li>
@@ -95,18 +101,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』5-5 冒頭の区切りの後の 2 段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』各章の要約（Chapter 5-5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』5-5 冒頭 3 段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』5-5「Adaptive administration tomorrow」の節の箇条書き — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』5-0 冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>西尾泰和「Plurality in Japan（サイボウズラボ）」（Cosense）— <a href="https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29" target="_blank" rel="noopener">https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29</a></li>
-<li>『Plurality』5-5「Administration today」の節の冒頭 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>同上 かたさと複雑さの段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』5-5「Adaptive administration tomorrow」の節 第 1〜3 段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>同上 末尾の段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』5-5「Frontiers of adaptive administration」の節 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>同上 慣習の翻訳の段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』5-5「Limits of adaptive administration」の節 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Identity and Personhood」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='generative-foundation-models.html'>生成基盤モデル（GFM）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='digital-public-infrastructure.html'>デジタル公共インフラってなに？</a> ・ <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fadaptive-administration.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E9%81%A9%E5%BF%9C%E5%9E%8B%E7%AE%A1%E7%90%86%E8%A1%8C%E6%94%BF%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fadaptive-administration.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』5-5 冒頭の区切りの後の 2 段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-2">『Plurality』各章の要約（Chapter 5-5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-3">『Plurality』5-5 冒頭 3 段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』5-5「Adaptive administration tomorrow」の節の箇条書き — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』5-0 冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-6">西尾泰和「Plurality in Japan（サイボウズラボ）」（Cosense）— <a href="https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29" target="_blank" rel="noopener">https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29</a></li>
+<li id="src-7">『Plurality』5-5「Administration today」の節の冒頭 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-8">同上 かたさと複雑さの段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』5-5「Adaptive administration tomorrow」の節 第 1〜3 段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-10">同上 末尾の段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-11">『Plurality』5-5「Frontiers of adaptive administration」の節 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-12">同上 慣習の翻訳の段落 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-13">『Plurality』5-5「Limits of adaptive administration」の節 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-14">『Plurality』4-1「Identity and Personhood」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='generative-foundation-models.html'>生成基盤モデル（GFM）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='digital-public-infrastructure.html'>デジタル公共インフラってなに？</a> ・ <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fadaptive-administration.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E9%81%A9%E5%BF%9C%E5%9E%8B%E7%AE%A1%E7%90%86%E8%A1%8C%E6%94%BF%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fadaptive-administration.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

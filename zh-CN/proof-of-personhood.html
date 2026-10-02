@@ -41,51 +41,57 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../proof-of-personhood.html">日本語</a> <a class="lang" hreflang="en" href="../en/proof-of-personhood.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/proof-of-personhood.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是人格证明（proof of personhood）？</h1><div class='lead'>在网络上证明「这个帐号属于一个真实的人，而且这个人只有一个帐号」的机制。不公开姓名或住址，只证明「是人类」与「和其他任何人都不是同一个人」。</div><p>网络上的人气投票，如果有一个人开了 1,000 个假帐号来投票，会怎么样？结果很容易就被扭曲了。当 AI 能表现得和人一模一样，这个问题会更严重。人格证明（proof of personhood）就是用来表明「这个帐号后面，是一个真实的人」的机制。</p>
 <h2>一句话说明</h2>
 <p>人格证明是在网络上表明「<strong>这个帐号属于一个真实的人，而且这个人只有一个帐号</strong>」的机制。</p>
 <p>它不公开姓名或住址，只证明「是人类」和「和其他任何人都不是同一个人」。目的是让投票或发钱，不会被能大量制造假帐号的人把持。</p>
 <h2>举例来说</h2>
-<p><strong>World（原 Worldcoin）。</strong> 由 OpenAI 联合创始人山姆·阿特曼（Sam Altman）等人在 2019 年推出。用名为「the Orb」的专用机器扫描眼睛的虹膜，再用密码学把扫描结果「杂凑」成无法还原的形式；之后的扫描都可以拿来比对，防止同一个人重复登录[1]。2023 年版的白皮书说，AI 越强，就越难分辨人和机器人，所以这套机制会成为网络投票和大规模发放不可或缺的数位世界基本零件[2]。以太坊创始人维塔利克·布特林（Vitalik Buterin）在 2025 年提到，World 身分的用户已超过 1,000 万人[3]。</p>
-<p><strong>来到东京的 Orb。</strong> Orb 的世界巡回，从 2023 年 4 月的东京开始。同一时期，东京的开发者活动中，也办了以 AI 时代的全球人格证明为主题的活动。西尾泰和的笔记引用了当时的公告[4]。</p>
-<p><strong>靠熟人担保的方式。</strong> 此外还有：上传脸部视频、请既有用户担保；用视讯通话互相确认；用所有人在固定时间一起解的谜题；由既有用户宣告「我信任这个人」等方式。其中一部分方式曾被组合起来，用来判定在<a href="quadratic-voting.html">平方投票</a>中哪些帐号算有效[5]。</p>
+<p><strong>World（原 Worldcoin）。</strong> 由 OpenAI 联合创始人山姆·阿特曼（Sam Altman）等人在 2019 年推出。用名为「the Orb」的专用机器扫描眼睛的虹膜，再用密码学把扫描结果「杂凑」成无法还原的形式；之后的扫描都可以拿来比对，防止同一个人重复登录<a class="cite" href="#src-1" data-src="src-1">[1]</a>。2023 年版的白皮书说，AI 越强，就越难分辨人和机器人，所以这套机制会成为网络投票和大规模发放不可或缺的数位世界基本零件<a class="cite" href="#src-2" data-src="src-2">[2]</a>。以太坊创始人维塔利克·布特林（Vitalik Buterin）在 2025 年提到，World 身分的用户已超过 1,000 万人<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>来到东京的 Orb。</strong> Orb 的世界巡回，从 2023 年 4 月的东京开始。同一时期，东京的开发者活动中，也办了以 AI 时代的全球人格证明为主题的活动。西尾泰和的笔记引用了当时的公告<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>靠熟人担保的方式。</strong> 此外还有：上传脸部视频、请既有用户担保；用视讯通话互相确认；用所有人在固定时间一起解的谜题；由既有用户宣告「我信任这个人」等方式。其中一部分方式曾被组合起来，用来判定在<a href="quadratic-voting.html">平方投票</a>中哪些帐号算有效<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>运作方式</h2>
 <h3>要证明什么</h3>
-<p>布特林在 2023 年的文章中，给了最简单的定义[6]：建立一份「名册」，保证每一把金钥（类似帐号的密码）都由不同的人类管理。</p>
+<p>布特林在 2023 年的文章中，给了最简单的定义<a class="cite" href="#src-6" data-src="src-6">[6]</a>：建立一份「名册」，保证每一把金钥（类似帐号的密码）都由不同的人类管理。</p>
 <ul>
 <li>人类可以在名册上登录 <strong>1 个</strong>。</li>
 <li>不能登录 <strong>2 个</strong>。</li>
 <li>机器人 <strong>1 个也不能</strong>登录。</li>
 </ul>
-<p>布特林说明，这是现实世界身分证件的一种受限形式，理想上不会透露「是哪一个人」[7]。</p>
+<p>布特林说明，这是现实世界身分证件的一种受限形式，理想上不会透露「是哪一个人」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>为什么需要</h3>
-<p>布特林说，没有它，网络上的集体决策机制（包括像社群网站贴文的投票这种小事），很容易被非常有钱的人或敌对的政府把持[6]。</p>
-<p>研究者 Divya Siddarth 等人 2020 年的论文也指出，加密货币世界的许多决策方式，是用持有的钱或机器的多寡来决定参与资格，因此变成有钱人支配的形式（金权政治）。要用在社会和政治上，就需要确认「一个人」的方法[8]。</p>
+<p>布特林说，没有它，网络上的集体决策机制（包括像社群网站贴文的投票这种小事），很容易被非常有钱的人或敌对的政府把持<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>研究者 Divya Siddarth 等人 2020 年的论文也指出，加密货币世界的许多决策方式，是用持有的钱或机器的多寡来决定参与资格，因此变成有钱人支配的形式（金权政治）。要用在社会和政治上，就需要确认「一个人」的方法<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>两个系统</h3>
-<p>大致分成两种做法[9]：</p>
+<p>大致分成两种做法<a class="cite" href="#src-9" data-src="src-9">[9]</a>：</p>
 <ol>
 <li><strong>用身体的资讯来确认。</strong> 例如 World 的虹膜。</li>
 <li><strong>用人际关系来确认。</strong> 例如「已经确认过的 4 个人说这个人是人类」。</li>
 </ol>
-<p>布特林承认，人际关系的方式有好处：不需要专用机器、不收集身体资讯、能用分数而不是非黑即白的方式表示是不是人类。另一方面，布特林也举出弱点：一开始不认识任何人就进不去（有时整个地区都被遗漏）、人际关系会外泄、人脉越广的人能做出越多身分等。布特林的结论是，没有理想的方式；并建议从身体资讯开始、再用人际关系补强的组合[9][10]。</p>
+<p>布特林承认，人际关系的方式有好处：不需要专用机器、不收集身体资讯、能用分数而不是非黑即白的方式表示是不是人类。另一方面，布特林也举出弱点：一开始不认识任何人就进不去（有时整个地区都被遗漏）、人际关系会外泄、人脉越广的人能做出越多身分等。布特林的结论是，没有理想的方式；并建议从身体资讯开始、再用人际关系补强的组合<a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>「一人一个」要多严格</h3>
-<p>World 2026 年的白皮书主张，「一人刚好一个」的严格程度不可或缺[11]。因为可能有少数人多次通过登录，再把资格租给机器人。白皮书算给我们看：如果美国人口的 1% 各自把 10 个资格中的 9 个卖掉，一个攻击者就能冒充 3,100 万名美国人。白皮书并下结论说，人际关系可以被 AI 模仿，所以在全球规模上能满足条件的，只有身体资讯的方式[12]。</p>
+<p>World 2026 年的白皮书主张，「一人刚好一个」的严格程度不可或缺<a class="cite" href="#src-11" data-src="src-11">[11]</a>。因为可能有少数人多次通过登录，再把资格租给机器人。白皮书算给我们看：如果美国人口的 1% 各自把 10 个资格中的 9 个卖掉，一个攻击者就能冒充 3,100 万名美国人。白皮书并下结论说，人际关系可以被 AI 模仿，所以在全球规模上能满足条件的，只有身体资讯的方式<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h3>另一方的想法</h3>
-<p>布特林在 2025 年提出不同的想法[3][13]。即使用「只证明符合条件、不显示内容」的密码技术把身分包起来，大部分危险仍然存在：失去隐私、被强迫「出示身分」、被误判等。布特林说，这些危险来自想要坚守「一人一个」这件事本身。</p>
-<p>但另一方面，用钱来防止假帐号（每个身分付同样的价钱），又太有利于有钱人。布特林写道，理论上的理想是：<strong>N 个身分要付 N² 的费用</strong>。（范例：照这个式子，1 个身分的费用是 1 时，3 个是 9，10 个是 100。数字是本文设的例子。）也就是拥有越多，就急遽变得越贵。布特林认为，最接近这一点的现实答案，是不由单一发行者支配的「多元身分」[13]。</p>
+<p>布特林在 2025 年提出不同的想法<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。即使用「只证明符合条件、不显示内容」的密码技术把身分包起来，大部分危险仍然存在：失去隐私、被强迫「出示身分」、被误判等。布特林说，这些危险来自想要坚守「一人一个」这件事本身。</p>
+<p>但另一方面，用钱来防止假帐号（每个身分付同样的价钱），又太有利于有钱人。布特林写道，理论上的理想是：<strong>N 个身分要付 N² 的费用</strong>。（范例：照这个式子，1 个身分的费用是 1 时，3 个是 9，10 个是 100。数字是本文设的例子。）也就是拥有越多，就急遽变得越贵。布特林认为，最接近这一点的现实答案，是不由单一发行者支配的「多元身分」<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>World 对上《多元宇宙》与布特林。</strong> World 主张「严格的一人一个」和身体资讯的方式是唯一的答案[11][12]。《多元宇宙》和布特林则认为，依赖单一方式或单一发行者本身就危险[1][3]。不过布特林在 2023 年也承认，World 在保护隐私上，比公开脸部的方式或公开人际关系的方式好得多；并要求把问题分成「World 特有的」「身体资讯方式共通的」「这整类机制共通的」来思考[14]。</li>
-<li><strong>可以雇人顶替。</strong> 布特林等人 2022 年的论文指出，在大多数人还没登录的时候，攻击者可以雇用还没登录的人来顶替。所以即使有这种机制，假帐号攻击也只是变得稍微贵一点[15]。</li>
-<li><strong>伦理面的批评。</strong> 美国的《MIT Technology Review》在 2022 年报导，Worldcoin 早期测试在招募用户时，有欺骗与剥削的情形[16]。布特林也提到这篇报导[7]。</li>
-<li><strong>常见的误解。</strong> 「人格证明＝生物识别认证」并不正确。身体资讯只是其中一个系统，还有靠人际关系的方式，以及两者的组合[5][10]。</li>
+<li><strong>World 对上《多元宇宙》与布特林。</strong> World 主张「严格的一人一个」和身体资讯的方式是唯一的答案<a class="cite" href="#src-11" data-src="src-11">[11]</a><a class="cite" href="#src-12" data-src="src-12">[12]</a>。《多元宇宙》和布特林则认为，依赖单一方式或单一发行者本身就危险<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。不过布特林在 2023 年也承认，World 在保护隐私上，比公开脸部的方式或公开人际关系的方式好得多；并要求把问题分成「World 特有的」「身体资讯方式共通的」「这整类机制共通的」来思考<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>可以雇人顶替。</strong> 布特林等人 2022 年的论文指出，在大多数人还没登录的时候，攻击者可以雇用还没登录的人来顶替。所以即使有这种机制，假帐号攻击也只是变得稍微贵一点<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
+<li><strong>伦理面的批评。</strong> 美国的《MIT Technology Review》在 2022 年报导，Worldcoin 早期测试在招募用户时，有欺骗与剥削的情形<a class="cite" href="#src-16" data-src="src-16">[16]</a>。布特林也提到这篇报导<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</li>
+<li><strong>常见的误解。</strong> 「人格证明＝生物识别认证」并不正确。身体资讯只是其中一个系统，还有靠人际关系的方式，以及两者的组合<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>《多元宇宙》在 4-1 章写道：「如果系统只能确认特定用户，而不能确定其他任何相关资讯，那它就只能提供普遍性的服务，在法律和实质上都和地球上所有人一样。」[17]</p>
-<p>在此基础上，书批评 Worldcoin：帐户容易被窃取或出售；人们想要的大多数服务，都不只需要证明自己是独一无二的人（例如是某国公民、某家企业的员工）；如果未来 AI 结合先进的列印技术骗过这些系统，就可能出现极端的「单点故障」[1]。书的总结是，生物识别系统「其功能过於单一」，无法支撑多元宇宙所需的身分[1]。</p>
-<p>书的答案，是从许多社会关系的重叠中组成身分的<a href="identity-and-personhood.html">身分与人格权（多元身分）</a>。人格证明是其中「是一个独一无二的人」这一项性质。布特林等人 2022 年的论文也写道，要以重叠的基础为目标，从只是一个独一无二的人，进一步走到彼此有所区别的各个人[15]。</p>
-<p>另一方面，防止假帐号也是<a href="quadratic-voting.html">平方投票</a>、<a href="quadratic-funding.html">平方募资</a>、<a href="plural-voting.html">⿻投票</a>的前提。书写道：「如果没有合理安全的身分基础，任何投票系统都可被提供最多虚假凭证的人所捕获，而沦为金权政治。」[17]</p>
+<p>《多元宇宙》在 4-1 章写道：「如果系统只能确认特定用户，而不能确定其他任何相关资讯，那它就只能提供普遍性的服务，在法律和实质上都和地球上所有人一样。」<a class="cite" href="#src-17" data-src="src-17">[17]</a></p>
+<p>在此基础上，书批评 Worldcoin：帐户容易被窃取或出售；人们想要的大多数服务，都不只需要证明自己是独一无二的人（例如是某国公民、某家企业的员工）；如果未来 AI 结合先进的列印技术骗过这些系统，就可能出现极端的「单点故障」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。书的总结是，生物识别系统「其功能过於单一」，无法支撑多元宇宙所需的身分<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>书的答案，是从许多社会关系的重叠中组成身分的<a href="identity-and-personhood.html">身分与人格权（多元身分）</a>。人格证明是其中「是一个独一无二的人」这一项性质。布特林等人 2022 年的论文也写道，要以重叠的基础为目标，从只是一个独一无二的人，进一步走到彼此有所区别的各个人<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
+<p>另一方面，防止假帐号也是<a href="quadratic-voting.html">平方投票</a>、<a href="quadratic-funding.html">平方募资</a>、<a href="plural-voting.html">⿻投票</a>的前提。书写道：「如果没有合理安全的身分基础，任何投票系统都可被提供最多虚假凭证的人所捕获，而沦为金权政治。」<a class="cite" href="#src-17" data-src="src-17">[17]</a></p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》4-1〈身分与人格权〉（中文，书）— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
@@ -98,21 +104,51 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《多元宇宙》4-1「公共和分散式身分」— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
-<li>Worldcoin 白皮书（2023 年版）— <a href="https://whitepaper.worldcoin.org/" target="_blank" rel="noopener">https://whitepaper.worldcoin.org/</a></li>
-<li>Vitalik Buterin, "Does digital ID have risks even if it's ZK-wrapped?"（2025）— <a href="https://vitalik.eth.limo/general/2025/06/28/zkid.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/06/28/zkid.html</a></li>
-<li>西尾泰和 "Worldcoin Orb and Tokyo"（Cosense）— <a href="https://scrapbox.io/nishio/Worldcoin_Orb_and_Tokyo" target="_blank" rel="noopener">https://scrapbox.io/nishio/Worldcoin_Orb_and_Tokyo</a></li>
-<li>Vitalik Buterin, "What do I think about biometric proof of personhood?"，早期的尝试（2023）— <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
-<li>同上，"What is proof of personhood and why is it important?" — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
-<li>同上，开头 — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
-<li>Siddarth、Ivliev、Siri、Berman, "Who Watches the Watchmen?"（2020）— <a href="https://arxiv.org/abs/2008.05300" target="_blank" rel="noopener">https://arxiv.org/abs/2008.05300</a></li>
-<li>Vitalik Buterin, "What do I think about biometric proof of personhood?"，生物识别方式与社交图谱方式的比较 — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
-<li>同上，"So... what do I think?" — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
-<li>World 白皮书 "Achieving Proof of Human"，Importance of Uniqueness（2026）— <a href="https://whitepaper.world.org/achieving-proof-of-human" target="_blank" rel="noopener">https://whitepaper.world.org/achieving-proof-of-human</a></li>
-<li>同上，Web of Trust・Biometrics — <a href="https://whitepaper.world.org/achieving-proof-of-human" target="_blank" rel="noopener">https://whitepaper.world.org/achieving-proof-of-human</a></li>
-<li>Vitalik Buterin, "Does digital ID have risks even if it's ZK-wrapped?"，N 个身分与 N² 的费用 — <a href="https://vitalik.eth.limo/general/2025/06/28/zkid.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/06/28/zkid.html</a></li>
-<li>Vitalik Buterin, "What do I think about biometric proof of personhood?"，Worldcoin 设计的问题 — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
-<li>Ohlhaver、Weyl、Buterin, "Decentralized Society: Finding Web3's Soul"，8.3 节（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
-<li>MIT Technology Review 关于 Worldcoin 的报导（2022-04-06）— <a href="https://www.technologyreview.com/2022/04/06/1048981/worldcoin-cryptocurrency-biometrics-web3/" target="_blank" rel="noopener">https://www.technologyreview.com/2022/04/06/1048981/worldcoin-cryptocurrency-biometrics-web3/</a></li>
-<li>《多元宇宙》4-1〈身分与人格权〉开头 — <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
-</ol><div class='related'>相关: <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fproof-of-personhood.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%BA%E6%A0%BC%E8%AF%81%E6%98%8E%EF%BC%88proof%20of%20personhood%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fproof-of-personhood.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《多元宇宙》4-1「公共和分散式身分」— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
+<li id="src-2">Worldcoin 白皮书（2023 年版）— <a href="https://whitepaper.worldcoin.org/" target="_blank" rel="noopener">https://whitepaper.worldcoin.org/</a></li>
+<li id="src-3">Vitalik Buterin, "Does digital ID have risks even if it's ZK-wrapped?"（2025）— <a href="https://vitalik.eth.limo/general/2025/06/28/zkid.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/06/28/zkid.html</a></li>
+<li id="src-4">西尾泰和 "Worldcoin Orb and Tokyo"（Cosense）— <a href="https://scrapbox.io/nishio/Worldcoin_Orb_and_Tokyo" target="_blank" rel="noopener">https://scrapbox.io/nishio/Worldcoin_Orb_and_Tokyo</a></li>
+<li id="src-5">Vitalik Buterin, "What do I think about biometric proof of personhood?"，早期的尝试（2023）— <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
+<li id="src-6">同上，"What is proof of personhood and why is it important?" — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
+<li id="src-7">同上，开头 — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
+<li id="src-8">Siddarth、Ivliev、Siri、Berman, "Who Watches the Watchmen?"（2020）— <a href="https://arxiv.org/abs/2008.05300" target="_blank" rel="noopener">https://arxiv.org/abs/2008.05300</a></li>
+<li id="src-9">Vitalik Buterin, "What do I think about biometric proof of personhood?"，生物识别方式与社交图谱方式的比较 — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
+<li id="src-10">同上，"So... what do I think?" — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
+<li id="src-11">World 白皮书 "Achieving Proof of Human"，Importance of Uniqueness（2026）— <a href="https://whitepaper.world.org/achieving-proof-of-human" target="_blank" rel="noopener">https://whitepaper.world.org/achieving-proof-of-human</a></li>
+<li id="src-12">同上，Web of Trust・Biometrics — <a href="https://whitepaper.world.org/achieving-proof-of-human" target="_blank" rel="noopener">https://whitepaper.world.org/achieving-proof-of-human</a></li>
+<li id="src-13">Vitalik Buterin, "Does digital ID have risks even if it's ZK-wrapped?"，N 个身分与 N² 的费用 — <a href="https://vitalik.eth.limo/general/2025/06/28/zkid.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/06/28/zkid.html</a></li>
+<li id="src-14">Vitalik Buterin, "What do I think about biometric proof of personhood?"，Worldcoin 设计的问题 — <a href="https://vitalik.eth.limo/general/2023/07/24/biometric.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/07/24/biometric.html</a></li>
+<li id="src-15">Ohlhaver、Weyl、Buterin, "Decentralized Society: Finding Web3's Soul"，8.3 节（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
+<li id="src-16">MIT Technology Review 关于 Worldcoin 的报导（2022-04-06）— <a href="https://www.technologyreview.com/2022/04/06/1048981/worldcoin-cryptocurrency-biometrics-web3/" target="_blank" rel="noopener">https://www.technologyreview.com/2022/04/06/1048981/worldcoin-cryptocurrency-biometrics-web3/</a></li>
+<li id="src-17">《多元宇宙》4-1〈身分与人格权〉开头 — <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fproof-of-personhood.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%BA%E6%A0%BC%E8%AF%81%E6%98%8E%EF%BC%88proof%20of%20personhood%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fproof-of-personhood.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,53 +41,59 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/talk-to-the-city.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/talk-to-the-city.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/talk-to-the-city.html">简体中文</a></nav></header>
 <main lang="ja"><h1>Talk to the City（TTTC）ってなに？</h1><div class='lead'>大量の自由な意見を AI に読ませ、似た論点ごとにまとめて点の地図と要約にする、無料で公開された道具です。米国の AI Objectives Institute が作り、台湾の話し合いでも、日本のブロードリスニングの始まりでも使われました。</div><p>「ご意見をお寄せください」と呼びかけると、何千、何万という文章が届くことがあります。けれども、人がそのすべてを読み、どんな話題がどれだけ語られているかをつかむのは大変です。Talk to the City（トーク・トゥ・ザ・シティ）は、この「読みきれない意見」を AI の力で見渡せるようにする道具です。</p>
 <h2>ひとことで言うと</h2>
-<p>Talk to the City（略して TTTC）は、<strong>何百〜何万件もの自由な意見を AI に読ませ、「どんな論点が、どれくらい語られているか」を点の地図と要約にして見せるソフト</strong>です[1][2]。</p>
-<p>作ったのは、米国の非営利団体 AI Objectives Institute（AOI）です。無料で、プログラムの中身も公開されています（オープンソース）[1]。こうした「大勢の声を聴く」技術を <a href="broad-listening.html">ブロードリスニング</a> と呼びます。</p>
+<p>Talk to the City（略して TTTC）は、<strong>何百〜何万件もの自由な意見を AI に読ませ、「どんな論点が、どれくらい語られているか」を点の地図と要約にして見せるソフト</strong>です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>作ったのは、米国の非営利団体 AI Objectives Institute（AOI）です。無料で、プログラムの中身も公開されています（オープンソース）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。こうした「大勢の声を聴く」技術を <a href="broad-listening.html">ブロードリスニング</a> と呼びます。</p>
 <h2>たとえば</h2>
-<p><strong>台湾の「對齊大會（Alignment Assemblies）」（2023 年）。</strong> 台湾のデジタル発展部（moda）は、生成 AI について市民の意見を集めました。まず <a href="polis.html">Polis</a> でオンラインの意見を集め、その結果を TTTC で見える形にして、台北と台南での対面の話し合いの材料にしました[3][4]。オードリー・タン（唐鳳）は、この報告では英語と中国語の意見が同じまとまりに並ぶ、と紹介しています[5]。→ <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
-<p><strong>東京都知事選（2024 年）。</strong> 候補者の安野貴博の陣営は、X のハッシュタグ「#TOKYOAI」や匿名の意見箱に集まった声を TTTC で分析し、選挙期間中に 30 件以上のレポートを作りました。意見箱への投稿から抽出した 951 件の意見からは、子育て支援の所得制限をなくしてほしいという声が浮かび、マニフェスト（公約）の ver2.0 に反映されました[6]。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の 2024 年都知事選</a></p>
-<p><strong>国会の質問（2025-03-07）。</strong> 国民民主党の伊藤孝恵議員は、電話や Google フォーム、SNS で集めた就職氷河期世代の声を TTTC で「論点地図」にしました。そして参議院の予算委員会で、首相への質問の資料に使いました。ブロードリスニング本（DD2030 コミュニティ著）は、日本の国会でブロードリスニングの結果が質問の根拠に使われた初めての例だとしています[7]。</p>
+<p><strong>台湾の「對齊大會（Alignment Assemblies）」（2023 年）。</strong> 台湾のデジタル発展部（moda）は、生成 AI について市民の意見を集めました。まず <a href="polis.html">Polis</a> でオンラインの意見を集め、その結果を TTTC で見える形にして、台北と台南での対面の話し合いの材料にしました<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。オードリー・タン（唐鳳）は、この報告では英語と中国語の意見が同じまとまりに並ぶ、と紹介しています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
+<p><strong>東京都知事選（2024 年）。</strong> 候補者の安野貴博の陣営は、X のハッシュタグ「#TOKYOAI」や匿名の意見箱に集まった声を TTTC で分析し、選挙期間中に 30 件以上のレポートを作りました。意見箱への投稿から抽出した 951 件の意見からは、子育て支援の所得制限をなくしてほしいという声が浮かび、マニフェスト（公約）の ver2.0 に反映されました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の 2024 年都知事選</a></p>
+<p><strong>国会の質問（2025-03-07）。</strong> 国民民主党の伊藤孝恵議員は、電話や Google フォーム、SNS で集めた就職氷河期世代の声を TTTC で「論点地図」にしました。そして参議院の予算委員会で、首相への質問の資料に使いました。ブロードリスニング本（DD2030 コミュニティ著）は、日本の国会でブロードリスニングの結果が質問の根拠に使われた初めての例だとしています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>しくみ</h2>
 <h3>3 つの段階</h3>
-<p>ブロードリスニング本は、TTTC の処理を 3 段階で説明しています[6]。</p>
+<p>ブロードリスニング本は、TTTC の処理を 3 段階で説明しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <ol>
 <li><strong>抜き出す。</strong> 生成 AI が、一つひとつの投稿から「意見」を取り出します。</li>
 <li><strong>まとめる。</strong> 文章を数字の並び（ベクトル）に変え、似た意見どうしを集めます（クラスタリング）。</li>
 <li><strong>名前を付ける。</strong> 生成 AI が、それぞれのまとまりに見出しと要約を付けます。最後に、意見の散らばりを 2 次元の散布図にします。</li>
 </ol>
 <h3>いちばん新しいのは「抜き出す」段階</h3>
-<p>西尾泰和は、最初の「抜き出す」段階こそ、これまでの分析と違う点だと書いています[8]。</p>
-<p>何を抜き出してほしいかを、プログラムではなく普通の言葉で AI に頼めます。役に立たない投稿からは何も抜き出さないので、自然とふるいになります。一つの文章にいくつもの論点が混ざっていても、ばらして扱えます[8]。</p>
+<p>西尾泰和は、最初の「抜き出す」段階こそ、これまでの分析と違う点だと書いています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>何を抜き出してほしいかを、プログラムではなく普通の言葉で AI に頼めます。役に立たない投稿からは何も抜き出さないので、自然とふるいになります。一つの文章にいくつもの論点が混ざっていても、ばらして扱えます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>二つの版</h3>
-<p>ブロードリスニング本によれば、TTTC には二つの版があります。散布図で見せる「TTTC Scatter」と、AI に直接分類させて一覧で見せる「TTTC Turbo」です。どちらも台湾などで使われました[9]。</p>
+<p>ブロードリスニング本によれば、TTTC には二つの版があります。散布図で見せる「TTTC Scatter」と、AI に直接分類させて一覧で見せる「TTTC Turbo」です。どちらも台湾などで使われました<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>なぜ注目されたのか</h3>
-<p>タンは、2014 年ごろは市民団体 <a href="g0v.html">g0v</a> の力だけでは、話し合いの参加者一人ひとりに聞き取り、細かなニュアンスを保ったまま意見をまとめるのは無理だった、と振り返っています。Talk to the City の助けで、そのコストはほぼゼロになった、というのがタンの見方です[10]。</p>
-<p>タンはまた、道具が公開されているので、地域の人が聞き取りの録画などを持っていれば、TTTC の方法で無料で「集合知」に変えられる、とも語っています[11]。</p>
+<p>タンは、2014 年ごろは市民団体 <a href="g0v.html">g0v</a> の力だけでは、話し合いの参加者一人ひとりに聞き取り、細かなニュアンスを保ったまま意見をまとめるのは無理だった、と振り返っています。Talk to the City の助けで、そのコストはほぼゼロになった、というのがタンの見方です<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>タンはまた、道具が公開されているので、地域の人が聞き取りの録画などを持っていれば、TTTC の方法で無料で「集合知」に変えられる、とも語っています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>Polis とどう違うのか</h3>
-<p>見た目はどちらも点の散布図です。けれども、点が表すものが違います[3]。</p>
+<p>見た目はどちらも点の散布図です。けれども、点が表すものが違います<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <ul>
 <li><strong>Polis</strong> の点は「1 人の人」です。考えの近い人どうしが近くに並びます。</li>
 <li><strong>TTTC</strong> の点は「1 件の意見」です。話題の近い意見どうしが近くに並びます。</li>
 </ul>
-<p>ブロードリスニング本は、二つは補い合うものだとしています。Polis は投票から意見のグループと、グループをまたいで支持される意見を示します。TTTC は、自由な文章から人々が実際に何を語ったかを整理します[12]。</p>
+<p>ブロードリスニング本は、二つは補い合うものだとしています。Polis は投票から意見のグループと、グループをまたいで支持される意見を示します。TTTC は、自由な文章から人々が実際に何を語ったかを整理します<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h3>日本での広がり</h3>
-<p>日本での使い始めは 2024 年 5 月です。5-23 に Code for Japan の関治之が、安野と西尾との打ち合わせで TTTC を紹介しました。5-30 には西尾が、AI についてのパブリックコメント約 2 万件で試しました[6]。</p>
-<p>その後、テレビ局の 2024 年衆院選の報道や、東京都「シン東京2050」の意見募集にも使われました[2][13]。→ <a href="tokyo-2050-broad-listening.html">東京都「2050東京戦略」のブロードリスニング</a></p>
-<p>ただ、TTTC Scatter は動かすのに専門的な準備が必要で、使いにくいものでした。そこで、これを枝分かれさせて作り直した「<a href="kouchou-ai.html">広聴AI</a>」が 2025-03-16 に公開されました。いまは <a href="dd2030.html">デジタル民主主義2030（DD2030）</a> のコミュニティが開発を続けています[9]。</p>
+<p>日本での使い始めは 2024 年 5 月です。5-23 に Code for Japan の関治之が、安野と西尾との打ち合わせで TTTC を紹介しました。5-30 には西尾が、AI についてのパブリックコメント約 2 万件で試しました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>その後、テレビ局の 2024 年衆院選の報道や、東京都「シン東京2050」の意見募集にも使われました<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。→ <a href="tokyo-2050-broad-listening.html">東京都「2050東京戦略」のブロードリスニング</a></p>
+<p>ただ、TTTC Scatter は動かすのに専門的な準備が必要で、使いにくいものでした。そこで、これを枝分かれさせて作り直した「<a href="kouchou-ai.html">広聴AI</a>」が 2025-03-16 に公開されました。いまは <a href="dd2030.html">デジタル民主主義2030（DD2030）</a> のコミュニティが開発を続けています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「意見の地図」ではなく「話題の地図」。</strong> 西尾は、TTTC は賛否ではなく話題でまとめると指摘しています。たとえば、ある物事を禁止せよという意見と、それを妨げるなという正反対の意見が、同じまとまりに入りうるのです。賛成か反対かを見分けるしくみは入っていません[14]。</li>
-<li><strong>間違いが混ざる。</strong> テレビ局との衆院選の取り組みでは、AI が元の投稿に無いことを書いてしまう「幻覚」と、元の投稿自体の誤り、の両方で、結果に事実と違う内容が入ることがありました。見出しと要約を記者が人手で確かめ、かなりの時間と費用がかかったといいます[13]。</li>
-<li><strong>使う側の壁。</strong> 伊藤議員は、実際に使ってみて、組織の意思決定、エンジニアの確保、AI への指示の調整、お金、デジタル格差、という 5 つの壁があったと報告しています[7]。</li>
-<li><strong>画像では伝わらない。</strong> ブロードリスニング本は、TTTC はブラウザで操作しながら見る道具で、画像にした時点で情報の大半が失われる、と注意しています[6]。</li>
+<li><strong>「意見の地図」ではなく「話題の地図」。</strong> 西尾は、TTTC は賛否ではなく話題でまとめると指摘しています。たとえば、ある物事を禁止せよという意見と、それを妨げるなという正反対の意見が、同じまとまりに入りうるのです。賛成か反対かを見分けるしくみは入っていません<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>間違いが混ざる。</strong> テレビ局との衆院選の取り組みでは、AI が元の投稿に無いことを書いてしまう「幻覚」と、元の投稿自体の誤り、の両方で、結果に事実と違う内容が入ることがありました。見出しと要約を記者が人手で確かめ、かなりの時間と費用がかかったといいます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>使う側の壁。</strong> 伊藤議員は、実際に使ってみて、組織の意思決定、エンジニアの確保、AI への指示の調整、お金、デジタル格差、という 5 つの壁があったと報告しています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</li>
+<li><strong>画像では伝わらない。</strong> ブロードリスニング本は、TTTC はブラウザで操作しながら見る道具で、画像にした時点で情報の大半が失われる、と注意しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本『Plurality』は 5-4「<a href="augmented-deliberation.html">拡張熟議</a>」で、Polis や <a href="community-notes.html">Community Notes</a> を AI でどう広げるかを「最も明らかな方向性の一つ」とし、その例に Talk to the City を挙げます。本によれば、TTTC は、集団の考えを表す主張の一覧を、話しかけて相手の見方をつかめる対話型の AI に置き換えるものです[2]。</p>
-<p>同じ章は、2024 年の都知事選での TTTC による可視化や、テレビ局の衆院選特番、東京都の 2050 年に向けた計画の意見募集にも触れています[2]。</p>
-<p>6-5「学習」では、台湾が Talk to the City のような拡張熟議の技術を使って、AI の影響を和らげてきたと書いています[15]。→ <a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a></p>
+<p>本『Plurality』は 5-4「<a href="augmented-deliberation.html">拡張熟議</a>」で、Polis や <a href="community-notes.html">Community Notes</a> を AI でどう広げるかを「最も明らかな方向性の一つ」とし、その例に Talk to the City を挙げます。本によれば、TTTC は、集団の考えを表す主張の一覧を、話しかけて相手の見方をつかめる対話型の AI に置き換えるものです<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>同じ章は、2024 年の都知事選での TTTC による可視化や、テレビ局の衆院選特番、東京都の 2050 年に向けた計画の意見募集にも触れています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>6-5「学習」では、台湾が Talk to the City のような拡張熟議の技術を使って、AI の影響を和らげてきたと書いています<a class="cite" href="#src-15" data-src="src-15">[15]</a>。→ <a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a></p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>ブロードリスニング本 11.1「台湾」・4.1「安野貴博の取り組み」（日本語・本・無料公開）— <a href="https://broadlisteningbook.com/" target="_blank" rel="noopener">https://broadlisteningbook.com/</a></li>
@@ -99,19 +105,49 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>ブロードリスニング本 付録「用語集」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> （日本語版 <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a> ） ［CC0］</li>
-<li>ブロードリスニング本 11.1「台湾」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>moda「AI 未來民主化審議式工作坊」— <a href="https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459" target="_blank" rel="noopener">https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</a></li>
-<li>西尾泰和「台湾とTalk to the City」（TIME のインタビュー記録 <a href="https://moda.gov.tw/en/press/background-information/6477" target="_blank" rel="noopener">https://moda.gov.tw/en/press/background-information/6477</a> の引用）— <a href="https://scrapbox.io/nishio/台湾とTalk_to_the_City" target="_blank" rel="noopener">https://scrapbox.io/nishio/台湾とTalk_to_the_City</a></li>
-<li>ブロードリスニング本 4.1「安野貴博の取り組み」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 4.2「国民民主の国会質問」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>西尾泰和「Talk to the Cityの抽出ステップについて」— <a href="https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて" target="_blank" rel="noopener">https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて</a></li>
-<li>ブロードリスニング本 10.0「DD2030による広聴AIの開発活動」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 11.5「Connective Actionを力に変える」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>タンのインタビュー（Your Undivided Attention、2024-01-24）— <a href="https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md</a> ［CC0］</li>
-<li>ブロードリスニング本 11.2「Polisの誕生」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 4.3「日テレ選挙特番」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>西尾泰和「Polisは意見のクラスタリング、TTTCはトピックのクラスタリング」— <a href="https://scrapbox.io/nishio/Polisは意見のクラスタリング" target="_blank" rel="noopener">https://scrapbox.io/nishio/Polisは意見のクラスタリング</a>、TTTCはトピックのクラスタリング</li>
-<li>『Plurality』6-5「Learning」— <a href="https://www.plurality.net/v/chapters/6-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-5/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='alignment-assemblies.html'>Alignment Assemblies（アライメント集会）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='anno-2024-tokyo-campaign.html'>安野貴博の 2024 年都知事選ってなに？</a> ・ <a href='tokyo-2050-broad-listening.html'>東京都「シン東京2050」のブロードリスニングってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftalk-to-the-city.html&title=%5B%E6%8C%87%E6%91%98%5D%20Talk%20to%20the%20City%EF%BC%88TTTC%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftalk-to-the-city.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">ブロードリスニング本 付録「用語集」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-2">『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> （日本語版 <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a> ） ［CC0］</li>
+<li id="src-3">ブロードリスニング本 11.1「台湾」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-4">moda「AI 未來民主化審議式工作坊」— <a href="https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459" target="_blank" rel="noopener">https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</a></li>
+<li id="src-5">西尾泰和「台湾とTalk to the City」（TIME のインタビュー記録 <a href="https://moda.gov.tw/en/press/background-information/6477" target="_blank" rel="noopener">https://moda.gov.tw/en/press/background-information/6477</a> の引用）— <a href="https://scrapbox.io/nishio/台湾とTalk_to_the_City" target="_blank" rel="noopener">https://scrapbox.io/nishio/台湾とTalk_to_the_City</a></li>
+<li id="src-6">ブロードリスニング本 4.1「安野貴博の取り組み」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-7">ブロードリスニング本 4.2「国民民主の国会質問」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-8">西尾泰和「Talk to the Cityの抽出ステップについて」— <a href="https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて" target="_blank" rel="noopener">https://scrapbox.io/nishio/Talk_to_the_Cityの抽出ステップについて</a></li>
+<li id="src-9">ブロードリスニング本 10.0「DD2030による広聴AIの開発活動」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-10">ブロードリスニング本 11.5「Connective Actionを力に変える」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-11">タンのインタビュー（Your Undivided Attention、2024-01-24）— <a href="https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md</a> ［CC0］</li>
+<li id="src-12">ブロードリスニング本 11.2「Polisの誕生」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-13">ブロードリスニング本 4.3「日テレ選挙特番」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-14">西尾泰和「Polisは意見のクラスタリング、TTTCはトピックのクラスタリング」— <a href="https://scrapbox.io/nishio/Polisは意見のクラスタリング" target="_blank" rel="noopener">https://scrapbox.io/nishio/Polisは意見のクラスタリング</a>、TTTCはトピックのクラスタリング</li>
+<li id="src-15">『Plurality』6-5「Learning」— <a href="https://www.plurality.net/v/chapters/6-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-5/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='kouchou-ai.html'>広聴AI（kouchou-ai）ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='alignment-assemblies.html'>Alignment Assemblies（アライメント集会）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='anno-2024-tokyo-campaign.html'>安野貴博の 2024 年都知事選ってなに？</a> ・ <a href='tokyo-2050-broad-listening.html'>東京都「シン東京2050」のブロードリスニングってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftalk-to-the-city.html&title=%5B%E6%8C%87%E6%91%98%5D%20Talk%20to%20the%20City%EF%BC%88TTTC%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftalk-to-the-city.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,42 +41,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/taiwan-digital-democracy.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/taiwan-digital-democracy.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/taiwan-digital-democracy.html">简体中文</a></nav></header>
 <main lang="ja"><h1>台湾のデジタル民主主義ってなに？</h1><div class='lead'>2014 年のひまわり運動のあと、台湾では市民のプログラマー集団 g0v と政府が手を組み、政策の話し合い、データの公開、デマ対策、コロナ対応をデジタルの道具で進めてきました。本『Plurality』はこれを、世界でいちばん進んだデジタル民主主義の実例として描きます。</div><p>2020 年のはじめ、世界がまだ新型コロナをほとんど知らなかったころ、台湾ではもうマスクが足りなくなり始めていました。そのとき、マスクがどこでどれだけ手に入るかを示す地図アプリを作ったのは、政府ではなく市民のプログラマーたちでした。こうした「市民と政府がデジタルの道具で一緒に動く」やり方を、台湾は 10 年かけて育ててきました。</p>
 <h2>ひとことで言うと</h2>
-<p>台湾では、2014 年の学生運動をきっかけに、市民のプログラマーたちと政府が協力してきました[1]。政府の情報を開く。法律づくりに市民の声を入れる。デマやコロナにみんなで対処する。こうしたしくみを、デジタルの道具で作ってきたのです。</p>
-<p>本『Plurality』は台湾を、技術と民主主義が敵ではなく、深く絡み合った味方になっている、世界でいちばん進んだ場所として描いています[1][2]。</p>
+<p>台湾では、2014 年の学生運動をきっかけに、市民のプログラマーたちと政府が協力してきました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。政府の情報を開く。法律づくりに市民の声を入れる。デマやコロナにみんなで対処する。こうしたしくみを、デジタルの道具で作ってきたのです。</p>
+<p>本『Plurality』は台湾を、技術と民主主義が敵ではなく、深く絡み合った味方になっている、世界でいちばん進んだ場所として描いています<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>ひまわり学生運動（2014 年）。</strong> 2014 年 3 月 18 日、中国との「海峡両岸サービス貿易協定」の中身と進め方に不満を持つ学生たちが、立法院（台湾の国会）を占拠しました[3]。3 月 30 日には、本によれば 1980 年代以来最大の 50 万人のデモが起きました[4]。4 月 6 日に王金平立法院長が審査の手続きについての要求を受け入れ、占拠はまもなく解かれました[4]。</p>
-<p>このとき、市民ハッカーの集まり g0v の数百人が、現場の中継や記録、情報の伝達を担いました[4]。閣僚の蔡玉玲（Jaclyn Tsai）は、のちに本の著者の一人となるオードリー・タン（Audrey Tang）を、若者の目線を教わる「逆メンター」に招き、自らも g0v の集まりに通って支えるようになりました[4]。</p>
-<p><strong>マスク地図（2020 年）。</strong> 台湾では以前に SARS という感染症を経験していたため、2020 年 1 月下旬にはもうマスクが足りなくなり始めました[5]。吳展瑋（Howard Wu）らの市民ハッカーが、政府の公開データを使って、マスクの在庫を地図にするアプリを作りました[5]。この公開データは、g0v の運動が後押ししてきたものです。本によれば、2 月半ばまでに多くの人がマスクを着けられるようになりました[5]。</p>
-<p><strong>Cofacts と「ユーモアはうわさに勝る」。</strong> g0v から生まれた Cofacts では、市民がネットで広まる投稿や、チャットで回ってきたメッセージに素早く答えます[6]。研究では、これがプロのファクトチェッカー（事実確認の専門家）より速く、同じくらい正確で、読み手を引き込む答えになりうると示されました[6]。</p>
-<p>コロナ禍で「マスクを作るせいでトイレットペーパーが足りなくなる」といううわさが広がったとき、蘇貞昌行政院長（首相にあたる）は、自分のお尻を振る画像で「恐れることはない」と伝えました[6]。本は、こうしたやり方で台湾が「削除なしにインフォデミック（デマの大流行）を、ロックダウンなしにパンデミックを」乗り越えた、と書いています[6]。</p>
+<p><strong>ひまわり学生運動（2014 年）。</strong> 2014 年 3 月 18 日、中国との「海峡両岸サービス貿易協定」の中身と進め方に不満を持つ学生たちが、立法院（台湾の国会）を占拠しました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。3 月 30 日には、本によれば 1980 年代以来最大の 50 万人のデモが起きました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。4 月 6 日に王金平立法院長が審査の手続きについての要求を受け入れ、占拠はまもなく解かれました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>このとき、市民ハッカーの集まり g0v の数百人が、現場の中継や記録、情報の伝達を担いました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。閣僚の蔡玉玲（Jaclyn Tsai）は、のちに本の著者の一人となるオードリー・タン（Audrey Tang）を、若者の目線を教わる「逆メンター」に招き、自らも g0v の集まりに通って支えるようになりました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>マスク地図（2020 年）。</strong> 台湾では以前に SARS という感染症を経験していたため、2020 年 1 月下旬にはもうマスクが足りなくなり始めました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。吳展瑋（Howard Wu）らの市民ハッカーが、政府の公開データを使って、マスクの在庫を地図にするアプリを作りました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。この公開データは、g0v の運動が後押ししてきたものです。本によれば、2 月半ばまでに多くの人がマスクを着けられるようになりました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>Cofacts と「ユーモアはうわさに勝る」。</strong> g0v から生まれた Cofacts では、市民がネットで広まる投稿や、チャットで回ってきたメッセージに素早く答えます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。研究では、これがプロのファクトチェッカー（事実確認の専門家）より速く、同じくらい正確で、読み手を引き込む答えになりうると示されました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>コロナ禍で「マスクを作るせいでトイレットペーパーが足りなくなる」といううわさが広がったとき、蘇貞昌行政院長（首相にあたる）は、自分のお尻を振る画像で「恐れることはない」と伝えました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本は、こうしたやり方で台湾が「削除なしにインフォデミック（デマの大流行）を、ロックダウンなしにパンデミックを」乗り越えた、と書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>くわしく</h2>
 <h3>なぜ台湾なのか</h3>
-<p>本の 2-1 章は、台湾をプレート（地殻の板）の境目にある島にたとえます[7]。毎年少しずつ隆起し、地震に備えて暮らすように、さまざまな文化・歴史・価値のぶつかり合いが繁栄と革新を生んできた、という描き方です[7]。</p>
-<p>本によれば、1996 年の初めての総統の直接選挙は、インターネットの広がりと時期が重なり、台湾ではインターネットと民主主義が「双子」のように育ちました[8]。国民党（青）と民進党（緑）は深く対立していますが、その下には、多元的な民主主義や自由を大事にするという「重なり合う合意」がある、と本は言います[8]。</p>
+<p>本の 2-1 章は、台湾をプレート（地殻の板）の境目にある島にたとえます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。毎年少しずつ隆起し、地震に備えて暮らすように、さまざまな文化・歴史・価値のぶつかり合いが繁栄と革新を生んできた、という描き方です<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>本によれば、1996 年の初めての総統の直接選挙は、インターネットの広がりと時期が重なり、台湾ではインターネットと民主主義が「双子」のように育ちました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。国民党（青）と民進党（緑）は深く対立していますが、その下には、多元的な民主主義や自由を大事にするという「重なり合う合意」がある、と本は言います<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>市民社会が土台</h3>
-<p>本は、台湾のデジタル民主主義を市民の側から支える土台の象徴は g0v だ、と書いています[2]。2-2 章で扱う取り組みの大半は、g0v とその周りから生まれました[2]。g0v が政府のサイトを「フォーク（枝分かれ）」して作った別版が人気になり、閣僚がそれを政府のサービスに「マージ（取り込み）」したのです[2]。</p>
+<p>本は、台湾のデジタル民主主義を市民の側から支える土台の象徴は g0v だ、と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。2-2 章で扱う取り組みの大半は、g0v とその周りから生まれました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。g0v が政府のサイトを「フォーク（枝分かれ）」して作った別版が人気になり、閣僚がそれを政府のサービスに「マージ（取り込み）」したのです<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>政府の側の受け皿</h3>
-<p>ひまわり運動のあと、タンは開放政府・社会革新・青年参加を担当する政務委員（特定の省を持たない大臣）になりました[4]。</p>
-<p>2016 年にタンが作った PDIS（公共デジタル・イノベーション空間）は、二つの場を支えました[9]。市民の話し合いの場 vTaiwan と、政府の提案サイト Join です。Join では、十分な支持を集めた提案に、役所が応える義務があります[9]。PDIS は、各省庁で市民参加を担う公務員「参加官（Participation Officer）」のネットワークも作りました[10]。2022 年 8 月にはデジタル発展部（moda）ができ、タンが初代の部長になりました[10]。</p>
+<p>ひまわり運動のあと、タンは開放政府・社会革新・青年参加を担当する政務委員（特定の省を持たない大臣）になりました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>2016 年にタンが作った PDIS（公共デジタル・イノベーション空間）は、二つの場を支えました<a class="cite" href="#src-9" data-src="src-9">[9]</a>。市民の話し合いの場 vTaiwan と、政府の提案サイト Join です。Join では、十分な支持を集めた提案に、役所が応える義務があります<a class="cite" href="#src-9" data-src="src-9">[9]</a>。PDIS は、各省庁で市民参加を担う公務員「参加官（Participation Officer）」のネットワークも作りました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。2022 年 8 月にはデジタル発展部（moda）ができ、タンが初代の部長になりました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>総統杯ハッカソンとクアドラティック投票</h3>
-<p>総統杯ハッカソンでは、公務員・学者・活動家・技術者が混ざったチームが提案を競います[11]。大気の監視や山火事の早期警報などです。受賞者選びには、参加者と市民がクアドラティック投票（票を重ねるほど負担が増える投票のしかた）で加わりました[11]。賞品は、総統が賞を授ける映像を映す小型プロジェクターでした。受賞者はそれを、役所の協力を引き出すのに使えた、と本は書いています[11]。</p>
+<p>総統杯ハッカソンでは、公務員・学者・活動家・技術者が混ざったチームが提案を競います<a class="cite" href="#src-11" data-src="src-11">[11]</a>。大気の監視や山火事の早期警報などです。受賞者選びには、参加者と市民がクアドラティック投票（票を重ねるほど負担が増える投票のしかた）で加わりました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。賞品は、総統が賞を授ける映像を映す小型プロジェクターでした。受賞者はそれを、役所の協力を引き出すのに使えた、と本は書いています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>10 年の成果</h3>
-<p>本は、因果関係を確かめるのはこの本の範囲外だと断ったうえで、指標を並べます[12]。たとえば、2021 年 4 月までのコロナの死者は 12 人で、ロックダウンはありませんでした[12]。義務投票制でない国の中で最も高い水準の投票率があり、91% の人が民主主義を「かなり良い」以上と考えています[12]。一方で、偽情報の標的としては世界最大だ、とも書いています[12]。</p>
+<p>本は、因果関係を確かめるのはこの本の範囲外だと断ったうえで、指標を並べます<a class="cite" href="#src-12" data-src="src-12">[12]</a>。たとえば、2021 年 4 月までのコロナの死者は 12 人で、ロックダウンはありませんでした<a class="cite" href="#src-12" data-src="src-12">[12]</a>。義務投票制でない国の中で最も高い水準の投票率があり、91% の人が民主主義を「かなり良い」以上と考えています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。一方で、偽情報の標的としては世界最大だ、とも書いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>本自身が認める弱点。</strong> コロナ対応は初期には抜群でしたが、2021 年半ば以降はワクチンの確保と配布の問題で多くの命が失われた、と本は書きます[12]。2050 年のネットゼロ（温室効果ガスの実質ゼロ）を法律で決めたものの、進み方は控えめです[12]。危機のときに生まれた結束と参加を、どう制度として続けるかが課題だ、としています[12]。</li>
-<li><strong>「大失敗」論。</strong> The Daily Beast の記事（2023 年）は、マスク地図などで台湾の民主主義は称賛されたが、vTaiwan とデジタル参加の勢いは何年も前に落ちていた、と伝えます[13]。政府に提言を採り入れる義務がないこと、Cofacts が政府のデマ対策の主な道具にはならなかったこと、議員たちは罰金のような強い手段を好んだことを挙げています[13]。</li>
-<li><strong>政府のやる気しだい。</strong> Netopia に載った書評は、政府が Polis（意見を整理するツール）を本気で決定に取り入れる気がなければ何も起きない、と指摘します[14]。2018 年以降、Polis から始まった政治の決定はない、とも書いています[14]。</li>
-<li><strong>日本からの取材。</strong> 日本のデジタル民主主義研究ユニットの取材では、元 PDIS の林雨蒼が、当時の大臣の強い支えがあったからできた、という趣旨を語っています[15]。vTaiwan の崔家瑋（取材記事での表記は「崔嘉偉」）は、2019 年以降に政府が Join など別の場に力を移したこと、主なメンバーが離れたこと、コロナを失速の理由に挙げました[15]。</li>
-<li><strong>失敗と見るべきではない、という見方。</strong> 『ブロードリスニング』という本は、台湾の話し合いの実験を長い流れとして描きます[16]。2002 年の健康保険をめぐる 20 人の市民の討議に始まり、vTaiwan を経て、2024 年のくじで選んだ市民による会議へ受け継がれた、という流れです。そのうえで、vTaiwan の失速を失敗と見るべきではない、としています[16]。</li>
-<li><strong>「タン一人の成果」ではありません。</strong> 本は g0v の創設者として高嘉良らを挙げ、マスク地図は吳展瑋らの市民ハッカー、Cofacts は g0v から生まれたプロジェクトとして書いています[2][5][6]。</li>
+<li><strong>本自身が認める弱点。</strong> コロナ対応は初期には抜群でしたが、2021 年半ば以降はワクチンの確保と配布の問題で多くの命が失われた、と本は書きます<a class="cite" href="#src-12" data-src="src-12">[12]</a>。2050 年のネットゼロ（温室効果ガスの実質ゼロ）を法律で決めたものの、進み方は控えめです<a class="cite" href="#src-12" data-src="src-12">[12]</a>。危機のときに生まれた結束と参加を、どう制度として続けるかが課題だ、としています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>「大失敗」論。</strong> The Daily Beast の記事（2023 年）は、マスク地図などで台湾の民主主義は称賛されたが、vTaiwan とデジタル参加の勢いは何年も前に落ちていた、と伝えます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。政府に提言を採り入れる義務がないこと、Cofacts が政府のデマ対策の主な道具にはならなかったこと、議員たちは罰金のような強い手段を好んだことを挙げています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>政府のやる気しだい。</strong> Netopia に載った書評は、政府が Polis（意見を整理するツール）を本気で決定に取り入れる気がなければ何も起きない、と指摘します<a class="cite" href="#src-14" data-src="src-14">[14]</a>。2018 年以降、Polis から始まった政治の決定はない、とも書いています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>日本からの取材。</strong> 日本のデジタル民主主義研究ユニットの取材では、元 PDIS の林雨蒼が、当時の大臣の強い支えがあったからできた、という趣旨を語っています<a class="cite" href="#src-15" data-src="src-15">[15]</a>。vTaiwan の崔家瑋（取材記事での表記は「崔嘉偉」）は、2019 年以降に政府が Join など別の場に力を移したこと、主なメンバーが離れたこと、コロナを失速の理由に挙げました<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
+<li><strong>失敗と見るべきではない、という見方。</strong> 『ブロードリスニング』という本は、台湾の話し合いの実験を長い流れとして描きます<a class="cite" href="#src-16" data-src="src-16">[16]</a>。2002 年の健康保険をめぐる 20 人の市民の討議に始まり、vTaiwan を経て、2024 年のくじで選んだ市民による会議へ受け継がれた、という流れです。そのうえで、vTaiwan の失速を失敗と見るべきではない、としています<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</li>
+<li><strong>「タン一人の成果」ではありません。</strong> 本は g0v の創設者として高嘉良らを挙げ、マスク地図は吳展瑋らの市民ハッカー、Cofacts は g0v から生まれたプロジェクトとして書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>台湾は、本の第 2 部（2-1「玉山からの眺め」、2-2「デジタル民主主義の日常」）の主題そのものです。2-2 章は、本の残りの課題を、世界で最も称賛されるこのデジタル民主主義の背後にある、ほかでも使える考え方を言葉にすることだ、と結んでいます[17]。</p>
-<p>本の 3-3 章は、エストニアやフィンランド、シンガポール、韓国なども Plurality の要素に優れているとしつつ、分野をまたいでこれほど幅広く深く制度にした国はない、と書いています[18]。</p>
+<p>台湾は、本の第 2 部（2-1「玉山からの眺め」、2-2「デジタル民主主義の日常」）の主題そのものです。2-2 章は、本の残りの課題を、世界で最も称賛されるこのデジタル民主主義の背後にある、ほかでも使える考え方を言葉にすることだ、と結んでいます<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
+<p>本の 3-3 章は、エストニアやフィンランド、シンガポール、韓国なども Plurality の要素に優れているとしつつ、分野をまたいでこれほど幅広く深く制度にした国はない、と書いています<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</p>
 <p>関連する記事:
 - <a href="digital-democracy.html">デジタル民主主義</a> — 台湾が先頭の例とされる考え方
 - <a href="g0v.html">g0v</a> — 市民ハッカーの集まり
@@ -94,22 +100,52 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」節「Reclaiming our future」— <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
-<li>『Plurality』2-2「The Life of a Digital Democracy」冒頭と g0v の節 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>『Plurality』2-1「A View from Yushan」節「Place of convergence」— <a href="https://www.plurality.net/v/chapters/2-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/eng/</a> ［CC0］</li>
-<li>『Plurality』2-2、節「Sunflower」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>同上、節「Pandemic」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>同上、節「Information integrity」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>『Plurality』2-1「A View from Yushan」冒頭 — <a href="https://www.plurality.net/v/chapters/2-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/eng/</a> ［CC0］</li>
-<li>同上、節「Vibrant democratic generation」— <a href="https://www.plurality.net/v/chapters/2-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/eng/</a> ［CC0］</li>
-<li>『Plurality』2-2、節「vTaiwan and Join」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>同上、節「Other programs」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>同上、節「Hackathons, coalitions and quadratic signals」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>同上、節「Decade of accomplishment」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>Nick Aspinwall「Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop」（The Daily Beast、2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
-<li>Ralf Grötker「Why Technology Can't "Fix" Democracy」（Netopia、2026-08-16）— <a href="https://www.netopia.eu/why-technology-cant-fix-democracy/" target="_blank" rel="noopener">https://www.netopia.eu/why-technology-cant-fix-democracy/</a></li>
-<li>デジタル民主主義研究ユニット「現場取材からみえた台湾デジタル民主主義の理想と課題、そして日本発『デジタル民主主義2030』への指針」（2025-02-19）— <a href="https://note.com/digitaldemocracy/n/naaa818d919c7" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/naaa818d919c7</a></li>
-<li>『ブロードリスニング』11-1「台湾」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>『Plurality』2-2、末尾の段落 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>『Plurality』3-3「The Lost Dao」小節「Nodes of light」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='digital-democracy.html'>デジタル民主主義ってなに？</a> ・ <a href='g0v.html'>g0v（零時政府）ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='sunflower-movement.html'>ひまわり学生運動ってなに？</a> ・ <a href='cofacts.html'>Cofacts（真的假的）ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftaiwan-digital-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%8F%B0%E6%B9%BE%E3%81%AE%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%B0%91%E4%B8%BB%E4%B8%BB%E7%BE%A9%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftaiwan-digital-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」節「Reclaiming our future」— <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
+<li id="src-2">『Plurality』2-2「The Life of a Digital Democracy」冒頭と g0v の節 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-3">『Plurality』2-1「A View from Yushan」節「Place of convergence」— <a href="https://www.plurality.net/v/chapters/2-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』2-2、節「Sunflower」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-5">同上、節「Pandemic」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-6">同上、節「Information integrity」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-7">『Plurality』2-1「A View from Yushan」冒頭 — <a href="https://www.plurality.net/v/chapters/2-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/eng/</a> ［CC0］</li>
+<li id="src-8">同上、節「Vibrant democratic generation」— <a href="https://www.plurality.net/v/chapters/2-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』2-2、節「vTaiwan and Join」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-10">同上、節「Other programs」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-11">同上、節「Hackathons, coalitions and quadratic signals」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-12">同上、節「Decade of accomplishment」— <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-13">Nick Aspinwall「Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop」（The Daily Beast、2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
+<li id="src-14">Ralf Grötker「Why Technology Can't "Fix" Democracy」（Netopia、2026-08-16）— <a href="https://www.netopia.eu/why-technology-cant-fix-democracy/" target="_blank" rel="noopener">https://www.netopia.eu/why-technology-cant-fix-democracy/</a></li>
+<li id="src-15">デジタル民主主義研究ユニット「現場取材からみえた台湾デジタル民主主義の理想と課題、そして日本発『デジタル民主主義2030』への指針」（2025-02-19）— <a href="https://note.com/digitaldemocracy/n/naaa818d919c7" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/naaa818d919c7</a></li>
+<li id="src-16">『ブロードリスニング』11-1「台湾」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-17">『Plurality』2-2、末尾の段落 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-18">『Plurality』3-3「The Lost Dao」小節「Nodes of light」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='digital-democracy.html'>デジタル民主主義ってなに？</a> ・ <a href='g0v.html'>g0v（零時政府）ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='sunflower-movement.html'>ひまわり学生運動ってなに？</a> ・ <a href='cofacts.html'>Cofacts（真的假的）ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftaiwan-digital-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%8F%B0%E6%B9%BE%E3%81%AE%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%B0%91%E4%B8%BB%E4%B8%BB%E7%BE%A9%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Ftaiwan-digital-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

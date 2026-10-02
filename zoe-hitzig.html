@@ -41,22 +41,28 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/zoe-hitzig.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/zoe-hitzig.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/zoe-hitzig.html">简体中文</a></nav></header>
 <main lang="ja"><h1>ゾーイ・ヒッツィグってどんな人？</h1><div class='lead'>多くの人が少しずつ寄付したものほど大きく上乗せして配る「クアドラティック・ファンディング」の最初の論文を、ブテリン、ワイルと書いた研究者です。本『Plurality』では編集に加わり、仕組み設計への批判の論文も引かれています。</div><p>公開のソフトウェアのように、みんなが使えるものにどうお金を配ればよいでしょうか。この問いに、平方根を使ったしくみで答えた論文の書き手の一人が、この人です。</p>
 <h2>ひとことで言うと</h2>
-<p>ゾーイ・ヒッツィグ（Zoë Hitzig）は、<a href="quadratic-funding.html">クアドラティック・ファンディング</a>（QF）を最初に論文にした 3 人のうちの一人です[1]。</p>
-<p>QF は、みんなで支えたいもの（公共財）への寄付に、上乗せのお金を配るしくみです。少ない額でも、多くの人が寄付したものほど大きく上乗せされます[1]。本『Plurality』では編集に加わり、市場の仕組み設計を批判したヒッツィグの論文も引かれています[2][3]。</p>
+<p>ゾーイ・ヒッツィグ（Zoë Hitzig）は、<a href="quadratic-funding.html">クアドラティック・ファンディング</a>（QF）を最初に論文にした 3 人のうちの一人です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>QF は、みんなで支えたいもの（公共財）への寄付に、上乗せのお金を配るしくみです。少ない額でも、多くの人が寄付したものほど大きく上乗せされます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本『Plurality』では編集に加わり、市場の仕組み設計を批判したヒッツィグの論文も引かれています<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>Plurality とのかかわり</h2>
-<p><strong>本の書き手の一人。</strong> 本は、貢献した人を「<a href="plural-credits.html">⿻ クレジット</a>」という記録で表しています。ヒッツィグは「Editing（編集）」の区分に載っていて、2024 年 4 月初めの時点の保有量は 12.00 です[2]。</p>
-<p><strong>QF の最初の論文の共著者。</strong> 論文は、<a href="vitalik-buterin.html">ヴィタリック・ブテリン</a>（Vitalik Buterin）、ヒッツィグ、<a href="glen-weyl.html">グレン・ワイル</a>（E. Glen Weyl）の「A Flexible Design for Funding Public Goods」です。2018 年に論文の公開サイト arXiv に出て、2019 年に学術誌 <em>Management Science</em> に載りました。arXiv 版での所属はハーバード大学です[1][4]。本の 5-7 章「<a href="social-markets.html">社会市場</a>」がこの論文を引いています[4]。</p>
-<p><strong>「本の著者たち」の一人としての批判。</strong> 本の 4-4 章は、電波の割り当てのような市場の制度が、技術官僚的な技術者や経済学者のチームによって、人目につかないところで設計されてきたと書きます。そのうえで脚注で、本の著者たちはこうした設計の有力な批判者だった、と述べています。その例として挙げられるのが、ヒッツィグの論文「The Normative Gap: Mechanism Design and Ideal Theories of Justice」（学術誌 <em>Economics and Philosophy</em>）と、ワイルの論考です[3]。</p>
-<p><strong>ほかの引用。</strong> 4-2 章は、Shrey Jain、ヒッツィグ、Pamela Mishkin の論文「Contextual Confidence and Generative AI」（2023）を引いています[5]。5-7 章と 7-0 章は、ヒッツィグ、Michelle Meagher、André Veiga、ワイルの「Economic Democracy and Market Power」（2020）を引いています[4][6]。</p>
+<p><strong>本の書き手の一人。</strong> 本は、貢献した人を「<a href="plural-credits.html">⿻ クレジット</a>」という記録で表しています。ヒッツィグは「Editing（編集）」の区分に載っていて、2024 年 4 月初めの時点の保有量は 12.00 です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>QF の最初の論文の共著者。</strong> 論文は、<a href="vitalik-buterin.html">ヴィタリック・ブテリン</a>（Vitalik Buterin）、ヒッツィグ、<a href="glen-weyl.html">グレン・ワイル</a>（E. Glen Weyl）の「A Flexible Design for Funding Public Goods」です。2018 年に論文の公開サイト arXiv に出て、2019 年に学術誌 <em>Management Science</em> に載りました。arXiv 版での所属はハーバード大学です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。本の 5-7 章「<a href="social-markets.html">社会市場</a>」がこの論文を引いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>「本の著者たち」の一人としての批判。</strong> 本の 4-4 章は、電波の割り当てのような市場の制度が、技術官僚的な技術者や経済学者のチームによって、人目につかないところで設計されてきたと書きます。そのうえで脚注で、本の著者たちはこうした設計の有力な批判者だった、と述べています。その例として挙げられるのが、ヒッツィグの論文「The Normative Gap: Mechanism Design and Ideal Theories of Justice」（学術誌 <em>Economics and Philosophy</em>）と、ワイルの論考です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>ほかの引用。</strong> 4-2 章は、Shrey Jain、ヒッツィグ、Pamela Mishkin の論文「Contextual Confidence and Generative AI」（2023）を引いています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。5-7 章と 7-0 章は、ヒッツィグ、Michelle Meagher、André Veiga、ワイルの「Economic Democracy and Market Power」（2020）を引いています<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>主な考え</h2>
-<p><strong>クアドラティック・ファンディング。</strong> 論文は、プロジェクトが受け取る額を「受けた寄付それぞれの平方根を足して、2 乗したもの」にするしくみを提案しました[1]。</p>
+<p><strong>クアドラティック・ファンディング。</strong> 論文は、プロジェクトが受け取る額を「受けた寄付それぞれの平方根を足して、2 乗したもの」にするしくみを提案しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>たとえば、1 人が 100 円を寄付したプロジェクトは、√100 = 10 を 2 乗して 100 円です。100 人が 1 円ずつ寄付したプロジェクトは、√1 = 1 を 100 人分足して 100、それを 2 乗して 10,000 円になります。寄付の合計はどちらも 100 円ですが、多くの人に支えられた後者のほうが大きく上乗せされます。差額は、あらかじめ用意された資金から出ます。</p>
-<p>論文は、標準的な前提のもとでは、このしくみで公共財を最もよい量だけ供給できる、と主張しています[1]。→ <a href="quadratic-funding.html">クアドラティック・ファンディング</a></p>
-<p><strong>仕組み設計への規範からの問い。</strong> 「The Normative Gap」は、本の中で、技術官僚が設計した市場の制度への批判の例として挙げられています[3]。</p>
-<p><strong>生成 AI の時代の文脈と本人らしさ。</strong> 「Contextual Confidence」は、本の 4-2 章で、情報がどんな文脈で共有されるかという話の中で引かれています[5]。→ <a href="contextual-integrity.html">コンテキストの完全性</a>、<a href="plural-publics.html">⿻ 公衆</a>。オードリー・タンらの 6-Pack of Care の参考文献の一覧には、ヒッツィグが共著者の「Personhood Credentials」（2024）も載っています。ネットで本物の人間を見分けるための、プライバシーを守る道具についての論文です[7]。→ <a href="proof-of-personhood.html">人間であることの証明</a></p>
+<p>論文は、標準的な前提のもとでは、このしくみで公共財を最もよい量だけ供給できる、と主張しています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。→ <a href="quadratic-funding.html">クアドラティック・ファンディング</a></p>
+<p><strong>仕組み設計への規範からの問い。</strong> 「The Normative Gap」は、本の中で、技術官僚が設計した市場の制度への批判の例として挙げられています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>生成 AI の時代の文脈と本人らしさ。</strong> 「Contextual Confidence」は、本の 4-2 章で、情報がどんな文脈で共有されるかという話の中で引かれています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="contextual-integrity.html">コンテキストの完全性</a>、<a href="plural-publics.html">⿻ 公衆</a>。オードリー・タンらの 6-Pack of Care の参考文献の一覧には、ヒッツィグが共著者の「Personhood Credentials」（2024）も載っています。ネットで本物の人間を見分けるための、プライバシーを守る道具についての論文です<a class="cite" href="#src-7" data-src="src-7">[7]</a>。→ <a href="proof-of-personhood.html">人間であることの証明</a></p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>中国語版ウィキペディア「平方投票法」（繁体中国語・事典、CC BY-SA 4.0）— <a href="https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95</a></li>
@@ -67,11 +73,41 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Buterin, Hitzig, Weyl「A Flexible Design for Funding Public Goods」（arXiv、2018-09-17）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
-<li>『Plurality』⿻ クレジット（credits）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』4-4「Property and Contract」— <a href="https://www.plurality.net/v/chapters/4-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-4/eng/</a> ［CC0］</li>
-<li>『Plurality』5-7「Social Markets」— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>『Plurality』4-2「Association and ⿻ Publics」— <a href="https://www.plurality.net/v/chapters/4-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/eng/</a> ［CC0］</li>
-<li>『Plurality』7-0「Policy」— <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a> ［CC0］</li>
-<li>6-Pack of Care「Sources &amp; Further Reading」— <a href="https://civic.ai/sources/" target="_blank" rel="noopener">https://civic.ai/sources/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='glen-weyl.html'>E・グレン・ワイル（E. Glen Weyl）ってどんな人？</a> ・ <a href='vitalik-buterin.html'>ヴィタリック・ブテリン（Vitalik Buterin）ってどんな人？</a> ・ <a href='contextual-integrity.html'>コンテキストの完全性ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='plural-credits.html'>⿻ クレジット（プルラルクレジット）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzoe-hitzig.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%BE%E3%83%BC%E3%82%A4%E3%83%BB%E3%83%92%E3%83%83%E3%83%84%E3%82%A3%E3%82%B0%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzoe-hitzig.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Buterin, Hitzig, Weyl「A Flexible Design for Funding Public Goods」（arXiv、2018-09-17）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li id="src-2">『Plurality』⿻ クレジット（credits）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-3">『Plurality』4-4「Property and Contract」— <a href="https://www.plurality.net/v/chapters/4-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-4/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』5-7「Social Markets」— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』4-2「Association and ⿻ Publics」— <a href="https://www.plurality.net/v/chapters/4-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/eng/</a> ［CC0］</li>
+<li id="src-6">『Plurality』7-0「Policy」— <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a> ［CC0］</li>
+<li id="src-7">6-Pack of Care「Sources &amp; Further Reading」— <a href="https://civic.ai/sources/" target="_blank" rel="noopener">https://civic.ai/sources/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='glen-weyl.html'>E・グレン・ワイル（E. Glen Weyl）ってどんな人？</a> ・ <a href='vitalik-buterin.html'>ヴィタリック・ブテリン（Vitalik Buterin）ってどんな人？</a> ・ <a href='contextual-integrity.html'>コンテキストの完全性ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='plural-credits.html'>⿻ クレジット（プルラルクレジット）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzoe-hitzig.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%BE%E3%83%BC%E3%82%A4%E3%83%BB%E3%83%92%E3%83%83%E3%83%84%E3%82%A3%E3%82%B0%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzoe-hitzig.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,53 +41,59 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/lost-dao.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/lost-dao.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/lost-dao.html">简体中文</a></nav></header>
 <main lang="ja"><h1>失われた道（The Lost Dao）ってなに？</h1><div class='lead'>インターネットの元をつくった 1960〜70 年代の米国の研究者たちは、コンピュータで人がつながり、一緒に考え、一緒に治めることを目指しました。けれども公的な投資が細るうちに、その志の一部は作られないまま忘れられました。本『Plurality』はこれを「失われた道」と呼びます。</div><p>いま私たちがネットでログインするとき、多くの場合は大きな IT 企業のアカウントを使います。お金を払うときも、どこかの会社のサービスを通ります。でも、インターネットを最初につくった人たちは、こうした土台も「みんなのもの」として作るつもりだった、と本『⿻ Plurality』は書きます。その作られなかった道を、本は「失われた道（The Lost Dao）」と呼びます。</p>
 <h2>ひとことで言うと</h2>
-<p>いまのインターネットの元になった 1960〜70 年代の米国の研究者たちは、<strong>コンピュータで人と人がつながり、一緒に考え、一緒に治めること</strong>を目指していました。ところが、国の研究投資が細り、民間の大企業がその隙間を埋めるうちに、志の一部は作られないまま忘れられました。本人確認・支払い・データの共有といった土台です[1][2]。</p>
-<p>本はこれを「失われた道（ダオ）」と呼び、取り戻そうと呼びかけます[1]。「ダオ」は中国語の「道」です。</p>
+<p>いまのインターネットの元になった 1960〜70 年代の米国の研究者たちは、<strong>コンピュータで人と人がつながり、一緒に考え、一緒に治めること</strong>を目指していました。ところが、国の研究投資が細り、民間の大企業がその隙間を埋めるうちに、志の一部は作られないまま忘れられました。本人確認・支払い・データの共有といった土台です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>本はこれを「失われた道（ダオ）」と呼び、取り戻そうと呼びかけます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。「ダオ」は中国語の「道」です。</p>
 <h2>たとえば</h2>
-<p><strong>「銀河間計算機ネットワーク」（1963 年）。</strong> 米国防総省の研究機関 ARPA で、情報処理の部署を率いた J. C. R. リックライダー（Licklider）は、研究拠点どうしを結ぶネットワークを、冗談めかして「銀河間計算機ネットワーク」と呼びました。コンピュータを通じた協働と、一緒に治めることの手本にしたかったのです。彼が支えたスタンフォード大学や MIT など 5 つの大学は、計算機科学の中心になりました。支援を受けたダグラス・エンゲルバート（Douglas Engelbart）の研究所からは、マウスや、文章どうしをつなぐ「ハイパーテキスト」が生まれました[3]。</p>
-<p><strong>RFC（Request for Comments、意見募集）。</strong> スティーブ・クロッカー（Steve Crocker）が始めた RFC という手続きを、本は「おそらく最初の『ウィキ』的な、非公式で主に追記型の協働の一つ」と呼びます。政府・企業・大学に散らばる人々がこれで協働し、いまのネットの通信の約束事 TCP/IP につながりました。1974 年に TCP が RFC 675 として回覧され、1983 年に TCP/IP が ARPANET の公式の約束事になりました[4]。</p>
-<p>本によれば、「インターネット」の名は、多様な地域のネットワークがつながり合う「ネットワークのネットワーク」から来ています。政府が上から標準を決めたフランスの Minitel とは逆のやり方でした[4]。</p>
-<p><strong>利用者の急増。</strong> 本によれば、ウェブが公開された 1991 年から 2000 年までに、インターネットの利用者は約 400 万人から 4 億人超に増えました[5]。400 万の 100 倍が 4 億なので、10 年たたずに 100 倍以上になった計算です。</p>
+<p><strong>「銀河間計算機ネットワーク」（1963 年）。</strong> 米国防総省の研究機関 ARPA で、情報処理の部署を率いた J. C. R. リックライダー（Licklider）は、研究拠点どうしを結ぶネットワークを、冗談めかして「銀河間計算機ネットワーク」と呼びました。コンピュータを通じた協働と、一緒に治めることの手本にしたかったのです。彼が支えたスタンフォード大学や MIT など 5 つの大学は、計算機科学の中心になりました。支援を受けたダグラス・エンゲルバート（Douglas Engelbart）の研究所からは、マウスや、文章どうしをつなぐ「ハイパーテキスト」が生まれました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>RFC（Request for Comments、意見募集）。</strong> スティーブ・クロッカー（Steve Crocker）が始めた RFC という手続きを、本は「おそらく最初の『ウィキ』的な、非公式で主に追記型の協働の一つ」と呼びます。政府・企業・大学に散らばる人々がこれで協働し、いまのネットの通信の約束事 TCP/IP につながりました。1974 年に TCP が RFC 675 として回覧され、1983 年に TCP/IP が ARPANET の公式の約束事になりました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>本によれば、「インターネット」の名は、多様な地域のネットワークがつながり合う「ネットワークのネットワーク」から来ています。政府が上から標準を決めたフランスの Minitel とは逆のやり方でした<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>利用者の急増。</strong> 本によれば、ウェブが公開された 1991 年から 2000 年までに、インターネットの利用者は約 400 万人から 4 億人超に増えました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。400 万の 100 倍が 4 億なので、10 年たたずに 100 倍以上になった計算です。</p>
 <h2>くわしく</h2>
 <h3>始まりはスプートニク</h3>
-<p>本の 3-3 章によれば、流れが大きく動いたのは、1957 年 10 月にソ連が人工衛星スプートニクを打ち上げたときです。アイゼンハワー政権は、冷戦の熱を科学研究と教育に向け、国防総省の中に半ば独立した ARPA をつくりました。その代表的な計画が、リックライダーの部署でした[6]。</p>
-<p>リックライダーは 1960 年の論文「人間とコンピュータの共生」で、機械がいずれ人間の脳を上回るとしても、その前に、人間とコンピュータが一緒に働いて進歩する長い時期がある、と書きました[6]。本は、この歴史の多くを M・ミッチェル・ワールドロップ（M. Mitchell Waldrop）の本『The Dream Machine』に拠ったと明記しています[6]。</p>
+<p>本の 3-3 章によれば、流れが大きく動いたのは、1957 年 10 月にソ連が人工衛星スプートニクを打ち上げたときです。アイゼンハワー政権は、冷戦の熱を科学研究と教育に向け、国防総省の中に半ば独立した ARPA をつくりました。その代表的な計画が、リックライダーの部署でした<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>リックライダーは 1960 年の論文「人間とコンピュータの共生」で、機械がいずれ人間の脳を上回るとしても、その前に、人間とコンピュータが一緒に働いて進歩する長い時期がある、と書きました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本は、この歴史の多くを M・ミッチェル・ワールドロップ（M. Mitchell Waldrop）の本『The Dream Machine』に拠ったと明記しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>三つの層での ⿻</h3>
-<p>本によれば、インターネットの開発の核心は、中央集権的・一本道・ばらばらの構造を、⿻（多元的）な関係と統治に置き換えることでした。それは三つの層で起こり、1990 年代初めにウェブとして合流しました[4]。</p>
+<p>本によれば、インターネットの開発の核心は、中央集権的・一本道・ばらばらの構造を、⿻（多元的）な関係と統治に置き換えることでした。それは三つの層で起こり、1990 年代初めにウェブとして合流しました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <ol>
 <li><strong>パケット交換。</strong> 中央の交換台を通す代わりに、データを小分けにして網の目を流します。ポール・バラン（Paul Baran）は 1964 年の報告で、中心が多い網は安い部品でも壊れた所を迂回して攻撃に耐える、と論じました。</li>
 <li><strong>ハイパーテキスト。</strong> 一本道の文章の代わりに、文書どうしをリンクでつなぎます。テッド・ネルソン（Ted Nelson）は「ザナドゥ計画」で、読者がいろいろな道筋で読めるようにすることを構想しました。ティム・バーナーズ＝リーのウェブがこれを広めました。</li>
 <li><strong>開かれた標準づくり。</strong> 政府や企業が上から決める代わりに、みんなで約束事を決めます。上の RFC と TCP/IP です。</li>
 </ol>
 <h3>勝利の陰の警告</h3>
-<p>パソコンとインターネットは大成功しました。本によれば、2000 年には米国人の過半が自宅にパソコンを持っていました[5]。</p>
-<p>けれどもネルソンは警告を続けました。安全な ID のしくみが無ければ、無秩序と、国や企業による囲い込みが避けられない。商取引の約束事が無ければ、ネットの仕事の価値が下がるか、金融が独占される。安全な情報の共有と管理が無ければ、監視と情報の囲い込みが避けられない。ジャロン・ラニアー（Jaron Lanier）も、この心配を引き継ぎました[5]。</p>
-<p>リックライダーも 1980 年の論文で、二つの未来を示しました。独占企業に支配されて力がつぶされる道と、社会全体で取り組んでコンピュータが民主主義に役立つ道です。前者で起こる害として、監視と政府への不信、独占、偽の情報、言論の土台を私企業が握ることなどを挙げました。本は、のちの巨大 IT 企業への反発（テックラッシュ）がこの警告に驚くほど似ている、と書きます[7]。</p>
+<p>パソコンとインターネットは大成功しました。本によれば、2000 年には米国人の過半が自宅にパソコンを持っていました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>けれどもネルソンは警告を続けました。安全な ID のしくみが無ければ、無秩序と、国や企業による囲い込みが避けられない。商取引の約束事が無ければ、ネットの仕事の価値が下がるか、金融が独占される。安全な情報の共有と管理が無ければ、監視と情報の囲い込みが避けられない。ジャロン・ラニアー（Jaron Lanier）も、この心配を引き継ぎました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>リックライダーも 1980 年の論文で、二つの未来を示しました。独占企業に支配されて力がつぶされる道と、社会全体で取り組んでコンピュータが民主主義に役立つ道です。前者で起こる害として、監視と政府への不信、独占、偽の情報、言論の土台を私企業が握ることなどを挙げました。本は、のちの巨大 IT 企業への反発（テックラッシュ）がこの警告に驚くほど似ている、と書きます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>なぜ道を失ったのか</h3>
-<p>本は、リックライダー自身の見立てを紹介します[2]。</p>
+<p>本は、リックライダー自身の見立てを紹介します<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ul>
 <li><strong>右から。</strong> 「小さな政府」を掲げる考えが強まり、政府が技術に先回りしてお金を出す役割から退きました。</li>
 <li><strong>左から。</strong> ベトナム戦争で、軍が研究を方向づけることへの反発が強まりました。1970・71・73 年の法律の修正（マンスフィールド修正条項）で、ARPA は国防に直結しない研究にお金を出せなくなりました。</li>
 <li><strong>世界に広がったこと。</strong> インターネットが世界規模になると、そこに投資すべきはっきりした公的な担い手がいなくなりました。</li>
 </ul>
-<p>その空白を民間が埋めた、と本は書きます。ID は Google や Facebook に、支払いは PayPal や Stripe に、データや計算の共有はクラウドの事業者に。リックライダーとネルソンが欠かせないと考えた基本の機能は、インターネットの土台に組み込まれないままでした[2]。</p>
+<p>その空白を民間が埋めた、と本は書きます。ID は Google や Facebook に、支払いは PayPal や Stripe に、データや計算の共有はクラウドの事業者に。リックライダーとネルソンが欠かせないと考えた基本の機能は、インターネットの土台に組み込まれないままでした<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>それでも残る「光」</h3>
-<p>それでも夢は消えていない、と本は続けます。本が挙げるのは、ウィキペディア、オープンソースのソフト、分散型のソーシャルメディア、そして台湾の <a href="g0v.html">g0v</a> や、関治之の Code for Japan などの「シビックテック」（市民が技術で社会の課題に取り組む運動）です[8]。</p>
+<p>それでも夢は消えていない、と本は続けます。本が挙げるのは、ウィキペディア、オープンソースのソフト、分散型のソーシャルメディア、そして台湾の <a href="g0v.html">g0v</a> や、関治之の Code for Japan などの「シビックテック」（市民が技術で社会の課題に取り組む運動）です<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「Dao」は DAO ではない。</strong> ブロックチェーンの世界の「DAO（分散型自律組織）」と見た目が同じですが、別物です。日本語版は章の題を「失われた道（ダオ）」、台湾の中国語版は「我們遺忘的道」と訳し、中国語の「道」として扱っています[9][10]。</li>
-<li><strong>歴史の語りは一冊の本に多く拠る。</strong> 本自身が、リックライダー以後の話の多くはワールドロップの本に由来すると断っています[6]。</li>
-<li><strong>著者たちの以前の議論。</strong> ワイルらは 2019 年のエッセイで、インターネットの土台は、高い信頼と身元のしくみがもともと背後にある環境で育ったため、見知らぬ人どうしの信頼を築く ID の層を欠いた、と論じました。そして商用化の後、少数の巨大な企業が数十億人の ID を引き受けるようになった、と書いています[11]。シッダールトらの 2024 年の論文も、初期のネットは公的なお金と多くの人の標準づくりで治められたが、上の層は私企業に占められた、とし、ID・支払い・データ共有の開かれた約束事を提案しています[12]。</li>
-<li><strong>版による違い。</strong> 台湾の中国語版の 3-3 章は、節の構成が英語版と違います。リックライダーの論文の年を 1979 年と書き（英語版は 1980 年）、マンスフィールド修正条項も 1973 年のものだけを挙げます[10]。日本語版も論文の年を 1979 年としています[9]。</li>
+<li><strong>「Dao」は DAO ではない。</strong> ブロックチェーンの世界の「DAO（分散型自律組織）」と見た目が同じですが、別物です。日本語版は章の題を「失われた道（ダオ）」、台湾の中国語版は「我們遺忘的道」と訳し、中国語の「道」として扱っています<a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>歴史の語りは一冊の本に多く拠る。</strong> 本自身が、リックライダー以後の話の多くはワールドロップの本に由来すると断っています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>著者たちの以前の議論。</strong> ワイルらは 2019 年のエッセイで、インターネットの土台は、高い信頼と身元のしくみがもともと背後にある環境で育ったため、見知らぬ人どうしの信頼を築く ID の層を欠いた、と論じました。そして商用化の後、少数の巨大な企業が数十億人の ID を引き受けるようになった、と書いています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。シッダールトらの 2024 年の論文も、初期のネットは公的なお金と多くの人の標準づくりで治められたが、上の層は私企業に占められた、とし、ID・支払い・データ共有の開かれた約束事を提案しています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>版による違い。</strong> 台湾の中国語版の 3-3 章は、節の構成が英語版と違います。リックライダーの論文の年を 1979 年と書き（英語版は 1980 年）、マンスフィールド修正条項も 1973 年のものだけを挙げます<a class="cite" href="#src-10" data-src="src-10">[10]</a>。日本語版も論文の年を 1979 年としています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>2-0 章は、パソコン・インターネット・スマートフォンが、テクノクラシーにもリバタリアニズムにも収まらない「人の知能を増やす」系譜から来た、と述べて、3-3 章への伏線にします[13]。→ <a href="three-paths.html">三つの道</a></p>
-<p>3-3 章が本拠です。前の 3-2 章で紹介した思想を、技術として実現しようとした歴史として描きます[6]。→ <a href="monist-atomism.html">一元論的アトム主義</a></p>
-<p>同じ章の別の節は、日本では品質管理（PDCA・カイゼン）や鈴木健の「<a href="nameraka-society.html">なめらかな社会</a>」に、もう一つの失われた道が流れていた、と書きます[14]。</p>
-<p>後の章もこの歴史を使います。4-1 章は ID の設計に当てはめ[15]（→ <a href="identity-and-personhood.html">ID と人物性</a>・<a href="digital-public-infrastructure.html">デジタル公共インフラ</a>）、6-0 章はパソコンが少数の早い使い手の共同体から始まったことを、広め方の理論に使います[16]（→ <a href="theory-of-change.html">⿻の変化の理論</a>）。</p>
+<p>2-0 章は、パソコン・インターネット・スマートフォンが、テクノクラシーにもリバタリアニズムにも収まらない「人の知能を増やす」系譜から来た、と述べて、3-3 章への伏線にします<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→ <a href="three-paths.html">三つの道</a></p>
+<p>3-3 章が本拠です。前の 3-2 章で紹介した思想を、技術として実現しようとした歴史として描きます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="monist-atomism.html">一元論的アトム主義</a></p>
+<p>同じ章の別の節は、日本では品質管理（PDCA・カイゼン）や鈴木健の「<a href="nameraka-society.html">なめらかな社会</a>」に、もう一つの失われた道が流れていた、と書きます<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
+<p>後の章もこの歴史を使います。4-1 章は ID の設計に当てはめ<a class="cite" href="#src-15" data-src="src-15">[15]</a>（→ <a href="identity-and-personhood.html">ID と人物性</a>・<a href="digital-public-infrastructure.html">デジタル公共インフラ</a>）、6-0 章はパソコンが少数の早い使い手の共同体から始まったことを、広め方の理論に使います<a class="cite" href="#src-16" data-src="src-16">[16]</a>（→ <a href="theory-of-change.html">⿻の変化の理論</a>）。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』3-3「失われた道」（日本語・本）— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a></li>
@@ -99,20 +105,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』3-3「The Lost Dao」冒頭 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「Losing our dao」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「The Intergalactic Computer Network」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「A network of networks」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「Triumph and tragedy」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「⿻ launches」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「The internet and its discontents」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上「Nodes of light」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>『Plurality』日本語版 3-3「失われた道」— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a> ［CC0］</li>
-<li>『Plurality』繁体中文版 3-3「我們遺忘的道」— <a href="https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin</a> ［CC0］</li>
-<li>Weyl・Young・Geiger「Intersectional Social Data」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/</a></li>
-<li>Siddarth・Prewitt・Weyl「Beyond Public and Private: Collective Provision Under Conditions of Supermodularity」（2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
-<li>『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」— <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
-<li>『Plurality』3-3「Quality Control and Nameraka Society」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Identity and Personhood」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』6-0「From ⿻ to Reality」— <a href="https://www.plurality.net/v/chapters/6-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='monist-atomism.html'>一元論的アトム主義ってなに？</a> ・ <a href='three-paths.html'>「三つの道」ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='digital-public-infrastructure.html'>デジタル公共インフラってなに？</a> ・ <a href='theory-of-change.html'>⿻ の変化の理論ってなに？</a> ・ <a href='g0v.html'>g0v（零時政府）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Flost-dao.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%A4%B1%E3%82%8F%E3%82%8C%E3%81%9F%E9%81%93%EF%BC%88The%20Lost%20Dao%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Flost-dao.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』3-3「The Lost Dao」冒頭 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-2">同上「Losing our dao」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-3">同上「The Intergalactic Computer Network」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-4">同上「A network of networks」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-5">同上「Triumph and tragedy」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-6">同上「⿻ launches」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-7">同上「The internet and its discontents」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-8">同上「Nodes of light」の小節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』日本語版 3-3「失われた道」— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a> ［CC0］</li>
+<li id="src-10">『Plurality』繁体中文版 3-3「我們遺忘的道」— <a href="https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin</a> ［CC0］</li>
+<li id="src-11">Weyl・Young・Geiger「Intersectional Social Data」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/</a></li>
+<li id="src-12">Siddarth・Prewitt・Weyl「Beyond Public and Private: Collective Provision Under Conditions of Supermodularity」（2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
+<li id="src-13">『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」— <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
+<li id="src-14">『Plurality』3-3「Quality Control and Nameraka Society」の節 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-15">『Plurality』4-1「Identity and Personhood」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-16">『Plurality』6-0「From ⿻ to Reality」— <a href="https://www.plurality.net/v/chapters/6-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='monist-atomism.html'>一元論的アトム主義ってなに？</a> ・ <a href='three-paths.html'>「三つの道」ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='digital-public-infrastructure.html'>デジタル公共インフラってなに？</a> ・ <a href='theory-of-change.html'>⿻ の変化の理論ってなに？</a> ・ <a href='g0v.html'>g0v（零時政府）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Flost-dao.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%A4%B1%E3%82%8F%E3%82%8C%E3%81%9F%E9%81%93%EF%BC%88The%20Lost%20Dao%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Flost-dao.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

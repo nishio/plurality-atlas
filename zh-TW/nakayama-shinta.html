@@ -41,32 +41,38 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../nakayama-shinta.html">日本語</a> <a class="lang" hreflang="en" href="../en/nakayama-shinta.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/nakayama-shinta.html">简体中文</a></nav></header>
 <main lang="zh-TW"><h1>中山心太是誰？</h1><div class='lead'>機器學習的技術者暨經營者，在網路上以「ところてん」（tokoroten）之名為人所知。是用 AI 整理大量意見的「広聴AI」的維護者，也是《政治・自治体・企業に広がるブロードリスニング》一書的統籌者。</div><p>成千上萬人的自由意見，要怎樣才能好好地「聽」？在日本用技術面對這個問題的人之一，就是中山心太。</p>
 <h2>一句話說明</h2>
-<p>中山心太（Shinta Nakayama）是專攻機器學習與資料分析的技術者暨經營者。中山是 NextInt 股份有限公司的代表董事，在網路上以「ところてん」（X 帳號 @tokoroten）之名為人所知[1]。</p>
-<p>中山是開源軟體「<a href="kouchou-ai.html">広聴AI</a>」（kouchou-ai，用 AI 整理大量民眾意見、使其看得見的工具）的維護者（統整、支持開發的人）之一[1][2]。中山也擔任把這些經驗整理成書的《政治・自治体・企業に広がるブロードリスニング》（DD2030 社群著，預定由インプレス出版；中文暫稱《廣泛傾聽》）的統籌者[3]。</p>
+<p>中山心太（Shinta Nakayama）是專攻機器學習與資料分析的技術者暨經營者。中山是 NextInt 股份有限公司的代表董事，在網路上以「ところてん」（X 帳號 @tokoroten）之名為人所知<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>中山是開源軟體「<a href="kouchou-ai.html">広聴AI</a>」（kouchou-ai，用 AI 整理大量民眾意見、使其看得見的工具）的維護者（統整、支持開發的人）之一<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。中山也擔任把這些經驗整理成書的《政治・自治体・企業に広がるブロードリスニング》（DD2030 社群著，預定由インプレス出版；中文暫稱《廣泛傾聽》）的統籌者<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>與《Plurality》的關係</h2>
-<p>中山沒有出現在《Plurality》書中。關係是透過広聴AI 產生的。書的 5-4 章討論了聆聽大量聲音的「<a href="broad-listening.html">廣泛傾聽</a>」，並介紹了我城對談（Talk to the City，TTTC）[13]。広聴AI 就相當於它在日本的後繼者。→ <a href="talk-to-the-city.html">我城對談</a>、<a href="augmented-deliberation.html">擴增審議</a></p>
-<p><strong>広聴AI 的維護者。</strong> 中山參與<a href="dd2030.html">デジタル民主主義2030</a>（DD2030），擔任広聴AI 的維護者[1][2]。在 2025 年 6 月的技術解說投影片中，中山說明了從 TTTC 繼承下來的處理流程：抽出意見、轉成數值的向量、把相似的放在一起、分成群組，再讓 AI 為群組命名。中山寫道，目的是讓意見的多樣性（包括少數意見）被看見，而不是意見的數量[4]。2026 年 7 月，中山公開了只在瀏覽器中就能執行同樣分析的版本[5]。</p>
-<p><strong>《廣泛傾聽》一書的統籌者。</strong> 這本書原稿所在的 GitHub 說明寫道，@tokoroten 負責全書的架構與進度管理。序文由<a href="anno-takahiro.html">安野貴博</a>（安野たかひろ）撰寫，推薦文來自<a href="audrey-tang.html">唐鳳</a>（Audrey Tang），授權是 CC BY-NC 4.0（標示出處即可非營利使用）[3]。根據 2026 年 8 月的投影片，中山寫了約 60%，<a href="nishio-hirokazu.html">西尾泰和</a>寫了約 15%，此外還有許多作者[2]。</p>
-<p>唐鳳推薦文的原文是 "Broad Listening puts AI in the human loop: Democracy learned to broadcast — Japan shows it how to receive."。書中刊出西尾補充詞語後的日文翻譯，內容是：廣泛傾聽把 AI 放進人類審議的循環，讓偏重發送的民主擁有「大規模聆聽的能力」，而日本正在示範這個實踐的答案[6]。</p>
-<p><strong>數位民主高峰會 2026。</strong> 2026 年 8 月 2 日，中山與西尾一起發表了演講「ブロードリスニングの技術」（廣泛傾聽的技術）[1][2]。</p>
-<p><strong>與未來團隊（チームみらい，Team Mirai）的距離。</strong> 2026 年 2 月，中山在 X 上寫道，<a href="team-mirai.html">未來團隊</a>已經不再使用 TTTC，也不再使用其後繼者広聴AI；<a href="polis.html">Polis</a> 也在新版本中加入了 AI 摘要。這是對一則時間點有落差的評論所加的保留[7]。這是把広聴AI（由 DD2030 開發）與未來團隊現在使用的機制分開來看的線索之一。</p>
+<p>中山沒有出現在《Plurality》書中。關係是透過広聴AI 產生的。書的 5-4 章討論了聆聽大量聲音的「<a href="broad-listening.html">廣泛傾聽</a>」，並介紹了我城對談（Talk to the City，TTTC）<a class="cite" href="#src-13" data-src="src-13">[13]</a>。広聴AI 就相當於它在日本的後繼者。→ <a href="talk-to-the-city.html">我城對談</a>、<a href="augmented-deliberation.html">擴增審議</a></p>
+<p><strong>広聴AI 的維護者。</strong> 中山參與<a href="dd2030.html">デジタル民主主義2030</a>（DD2030），擔任広聴AI 的維護者<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。在 2025 年 6 月的技術解說投影片中，中山說明了從 TTTC 繼承下來的處理流程：抽出意見、轉成數值的向量、把相似的放在一起、分成群組，再讓 AI 為群組命名。中山寫道，目的是讓意見的多樣性（包括少數意見）被看見，而不是意見的數量<a class="cite" href="#src-4" data-src="src-4">[4]</a>。2026 年 7 月，中山公開了只在瀏覽器中就能執行同樣分析的版本<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>《廣泛傾聽》一書的統籌者。</strong> 這本書原稿所在的 GitHub 說明寫道，@tokoroten 負責全書的架構與進度管理。序文由<a href="anno-takahiro.html">安野貴博</a>（安野たかひろ）撰寫，推薦文來自<a href="audrey-tang.html">唐鳳</a>（Audrey Tang），授權是 CC BY-NC 4.0（標示出處即可非營利使用）<a class="cite" href="#src-3" data-src="src-3">[3]</a>。根據 2026 年 8 月的投影片，中山寫了約 60%，<a href="nishio-hirokazu.html">西尾泰和</a>寫了約 15%，此外還有許多作者<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>唐鳳推薦文的原文是 "Broad Listening puts AI in the human loop: Democracy learned to broadcast — Japan shows it how to receive."。書中刊出西尾補充詞語後的日文翻譯，內容是：廣泛傾聽把 AI 放進人類審議的循環，讓偏重發送的民主擁有「大規模聆聽的能力」，而日本正在示範這個實踐的答案<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>數位民主高峰會 2026。</strong> 2026 年 8 月 2 日，中山與西尾一起發表了演講「ブロードリスニングの技術」（廣泛傾聽的技術）<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>與未來團隊（チームみらい，Team Mirai）的距離。</strong> 2026 年 2 月，中山在 X 上寫道，<a href="team-mirai.html">未來團隊</a>已經不再使用 TTTC，也不再使用其後繼者広聴AI；<a href="polis.html">Polis</a> 也在新版本中加入了 AI 摘要。這是對一則時間點有落差的評論所加的保留<a class="cite" href="#src-7" data-src="src-7">[7]</a>。這是把広聴AI（由 DD2030 開發）與未來團隊現在使用的機制分開來看的線索之一。</p>
 <h3>與未踏的關係</h3>
-<p>中山在 2006 年度下期 IPA 的<a href="mitou.html">未踏</a>青年版（未踏ユース）中，以「次世代Greasemonkey、TsukikageSystemの開発」（次世代 Greasemonkey、TsukikageSystem 的開發）的首席創作者獲選（負責 PM 是安村通晃）[8]。2011 年，中山投稿到雜誌《情報処理》，寫道未踏有趣的地方，在於擅長之事各不相同的人能自然地聚在一起；也說程式設計的本質是溝通[9]。</p>
+<p>中山在 2006 年度下期 IPA 的<a href="mitou.html">未踏</a>青年版（未踏ユース）中，以「次世代Greasemonkey、TsukikageSystemの開発」（次世代 Greasemonkey、TsukikageSystem 的開發）的首席創作者獲選（負責 PM 是安村通晃）<a class="cite" href="#src-8" data-src="src-8">[8]</a>。2011 年，中山投稿到雜誌《情報処理》，寫道未踏有趣的地方，在於擅長之事各不相同的人能自然地聚在一起；也說程式設計的本質是溝通<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h2>主要想法</h2>
-<p><strong>用 AI 跨越規模與深度的取捨。</strong> 中山用一張投影片說明廣泛傾聽：如果經費固定，想問很多人，就只能問簡單的事；想深入地問，就只能問少數人。用 AI 的幫助跨越這種「顧此失彼」，就是廣泛傾聽。中山舉的例子是：令和 7 年（2025 年）的日本國勢調查，向全體家戶詢問 17 個項目，花了約 946 億日圓[2]。→ <a href="broad-listening.html">廣泛傾聽</a></p>
-<p><strong>廣泛傾聽的三種形態。</strong> 同一份投影片把廣泛傾聽分成三種[2]。</p>
+<p><strong>用 AI 跨越規模與深度的取捨。</strong> 中山用一張投影片說明廣泛傾聽：如果經費固定，想問很多人，就只能問簡單的事；想深入地問，就只能問少數人。用 AI 的幫助跨越這種「顧此失彼」，就是廣泛傾聽。中山舉的例子是：令和 7 年（2025 年）的日本國勢調查，向全體家戶詢問 17 個項目，花了約 946 億日圓<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="broad-listening.html">廣泛傾聽</a></p>
+<p><strong>廣泛傾聽的三種形態。</strong> 同一份投影片把廣泛傾聽分成三種<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ol>
 <li>作為工具的廣泛傾聽 — 像 TTTC 或広聴AI 那樣，用 AI 整理大量自由填寫的內容</li>
 <li>支持擴增審議的廣泛傾聽 — 像<a href="idobata.html">いどばた</a>（Idobata）那樣，由 AI 進入人與人之間的討論</li>
 <li>由政治人物或行政主導的廣泛傾聽 — 各政黨或地方政府的做法</li>
 </ol>
-<p>投影片的整理是：在海外擴散的是 2，在日本擴散的是 3[2]。</p>
-<p><strong>把網路炎上的憤怒變成「可以協商的提案」。</strong> 在 2026 年 3 月 X 上的長文中，中山介紹了政治學者 W. Lance Bennett 與 Alexandra Segerberg 對「Collective Action」（集體行動）與「Connective Action」（連結行動）的區分。中山論述：像社群媒體炎上那樣的連結行動，因為沒有進行協商的代表，很難一路走到改變制度。因此需要一種機制，把炎上中產生的憤怒轉成可以協商的提案，連接到正式的管道；中山提議，這正是廣泛傾聽的角色。中山自己也註明，後半的整理並非學術上已確立的東西，而是自己的整理與提議[10]。</p>
-<p><strong>對篩選的警戒。</strong> 2024 年 7 月活動 Funding the Commons Tokyo 期間，中山在 X 上寫下的大意是：在廣泛傾聽之前的階段先篩掉攻擊性的發言非常好，但這也和攻擊性的人失去社會權利的社會只有一線之隔[11]。</p>
-<p><strong>在企業中的用途。</strong> 中山以 DD2030 的身分，採訪了在客服中心用広聴AI 分析顧客聲音的 Altius Link（アルティウスリンク）公司（2025 年 12 月 9 日採訪）[12]。</p>
+<p>投影片的整理是：在海外擴散的是 2，在日本擴散的是 3<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>把網路炎上的憤怒變成「可以協商的提案」。</strong> 在 2026 年 3 月 X 上的長文中，中山介紹了政治學者 W. Lance Bennett 與 Alexandra Segerberg 對「Collective Action」（集體行動）與「Connective Action」（連結行動）的區分。中山論述：像社群媒體炎上那樣的連結行動，因為沒有進行協商的代表，很難一路走到改變制度。因此需要一種機制，把炎上中產生的憤怒轉成可以協商的提案，連接到正式的管道；中山提議，這正是廣泛傾聽的角色。中山自己也註明，後半的整理並非學術上已確立的東西，而是自己的整理與提議<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p><strong>對篩選的警戒。</strong> 2024 年 7 月活動 Funding the Commons Tokyo 期間，中山在 X 上寫下的大意是：在廣泛傾聽之前的階段先篩掉攻擊性的發言非常好，但這也和攻擊性的人失去社會權利的社會只有一線之隔<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p><strong>在企業中的用途。</strong> 中山以 DD2030 的身分，採訪了在客服中心用広聴AI 分析顧客聲音的 Altius Link（アルティウスリンク）公司（2025 年 12 月 9 日採訪）<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>延伸閱讀</h2>
 <ol>
 <li>《多元宇宙》5-4〈擴增審議〉（中文，書）— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
@@ -78,17 +84,47 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出處</h2>
 <ol>
-<li>デジタル民主主義サミット 2026「ブロードリスニングの技術」議程頁面（日文）— <a href="https://summit.dd2030.org/sessions/broad-listening-technology/" target="_blank" rel="noopener">https://summit.dd2030.org/sessions/broad-listening-technology/</a></li>
-<li>中山心太、西尾泰和「ブロードリスニングの技術」投影片（2026-08-02，日文）— <a href="https://www.docswell.com/s/tokoroten/5Q2LVW-tech-of-broadlistening-dd-summit2026" target="_blank" rel="noopener">https://www.docswell.com/s/tokoroten/5Q2LVW-tech-of-broadlistening-dd-summit2026</a></li>
-<li>《廣泛傾聽》原稿儲存庫 README（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>広聴AI 技術解說投影片（2025-06-14，日文）— <a href="https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546" target="_blank" rel="noopener">https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546</a></li>
-<li>kouchou-ai-serverless README — <a href="https://github.com/tokoroten/kouchou-ai-serverless" target="_blank" rel="noopener">https://github.com/tokoroten/kouchou-ai-serverless</a></li>
-<li>《廣泛傾聽》「Audrey Tangから本書に送られた言葉」（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>中山心太的 X 貼文（2026-02-07，日文）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
-<li>IPA 2006 年度下期 未踏ユース 公募結果（日文）— <a href="https://www.ipa.go.jp/jinzai/mitou/esp/2006/2006-2-youth-koubokekka.html" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/esp/2006/2006-2-youth-koubokekka.html</a></li>
-<li>中山心太「プログラマじゃないから続くコミュニティ」（《情報処理》Vol.52 No.12，2011，日文）— <a href="https://ipsj.ixsq.nii.ac.jp/records/78371" target="_blank" rel="noopener">https://ipsj.ixsq.nii.ac.jp/records/78371</a></li>
-<li>中山心太「Collective ActionとConnective Action」（X，2026-03-02，日文）— <a href="https://x.com/tokoroten/status/2028388031192035560" target="_blank" rel="noopener">https://x.com/tokoroten/status/2028388031192035560</a></li>
-<li>中山心太的 X 貼文（2024-07-24，日文）— <a href="https://x.com/tokoroten/status/1816010940988678391" target="_blank" rel="noopener">https://x.com/tokoroten/status/1816010940988678391</a></li>
-<li>DD2030「広聴AIのコンタクトセンターでの活用 - アルティウスリンク株式会社に取材！」（note，2026-02-24，日文）— <a href="https://note.com/dd2030/n/n6db28a76ca95" target="_blank" rel="noopener">https://note.com/dd2030/n/n6db28a76ca95</a></li>
-<li>《多元宇宙》5-4〈擴增審議〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ［CC0］</li>
-</ol><div class='related'>相關: <a href='broad-listening.html'>什麼是廣泛傾聽（Broad Listening）？</a> ・ <a href='kouchou-ai.html'>什麼是広聴AI（kouchou-ai）？</a> ・ <a href='dd2030.html'>什麼是デジタル民主主義2030（DD2030）？</a> ・ <a href='talk-to-the-city.html'>什麼是我城對談（Talk to the City）？</a> ・ <a href='team-mirai.html'>什麼是未來團隊（チームみらい，Team Mirai）？</a> ・ <a href='idobata.html'>什麼是いどばた（Idobata）？</a> ・ <a href='augmented-deliberation.html'>什麼是擴增審議？</a> ・ <a href='mitou.html'>什麼是未踏（IPA 未踏事業）？</a> ・ <a href='nishio-hirokazu.html'>西尾泰和是誰？</a> ・ <a href='polis.html'>什麼是 Polis？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fnakayama-shinta.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%B8%AD%E5%B1%B1%E5%BF%83%E5%A4%AA%E6%98%AF%E8%AA%B0%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fnakayama-shinta.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>
+<li id="src-1">デジタル民主主義サミット 2026「ブロードリスニングの技術」議程頁面（日文）— <a href="https://summit.dd2030.org/sessions/broad-listening-technology/" target="_blank" rel="noopener">https://summit.dd2030.org/sessions/broad-listening-technology/</a></li>
+<li id="src-2">中山心太、西尾泰和「ブロードリスニングの技術」投影片（2026-08-02，日文）— <a href="https://www.docswell.com/s/tokoroten/5Q2LVW-tech-of-broadlistening-dd-summit2026" target="_blank" rel="noopener">https://www.docswell.com/s/tokoroten/5Q2LVW-tech-of-broadlistening-dd-summit2026</a></li>
+<li id="src-3">《廣泛傾聽》原稿儲存庫 README（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-4">広聴AI 技術解說投影片（2025-06-14，日文）— <a href="https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546" target="_blank" rel="noopener">https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546</a></li>
+<li id="src-5">kouchou-ai-serverless README — <a href="https://github.com/tokoroten/kouchou-ai-serverless" target="_blank" rel="noopener">https://github.com/tokoroten/kouchou-ai-serverless</a></li>
+<li id="src-6">《廣泛傾聽》「Audrey Tangから本書に送られた言葉」（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-7">中山心太的 X 貼文（2026-02-07，日文）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
+<li id="src-8">IPA 2006 年度下期 未踏ユース 公募結果（日文）— <a href="https://www.ipa.go.jp/jinzai/mitou/esp/2006/2006-2-youth-koubokekka.html" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/esp/2006/2006-2-youth-koubokekka.html</a></li>
+<li id="src-9">中山心太「プログラマじゃないから続くコミュニティ」（《情報処理》Vol.52 No.12，2011，日文）— <a href="https://ipsj.ixsq.nii.ac.jp/records/78371" target="_blank" rel="noopener">https://ipsj.ixsq.nii.ac.jp/records/78371</a></li>
+<li id="src-10">中山心太「Collective ActionとConnective Action」（X，2026-03-02，日文）— <a href="https://x.com/tokoroten/status/2028388031192035560" target="_blank" rel="noopener">https://x.com/tokoroten/status/2028388031192035560</a></li>
+<li id="src-11">中山心太的 X 貼文（2024-07-24，日文）— <a href="https://x.com/tokoroten/status/1816010940988678391" target="_blank" rel="noopener">https://x.com/tokoroten/status/1816010940988678391</a></li>
+<li id="src-12">DD2030「広聴AIのコンタクトセンターでの活用 - アルティウスリンク株式会社に取材！」（note，2026-02-24，日文）— <a href="https://note.com/dd2030/n/n6db28a76ca95" target="_blank" rel="noopener">https://note.com/dd2030/n/n6db28a76ca95</a></li>
+<li id="src-13">《多元宇宙》5-4〈擴增審議〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ［CC0］</li>
+</ol><div class='related'>相關: <a href='broad-listening.html'>什麼是廣泛傾聽（Broad Listening）？</a> ・ <a href='kouchou-ai.html'>什麼是広聴AI（kouchou-ai）？</a> ・ <a href='dd2030.html'>什麼是デジタル民主主義2030（DD2030）？</a> ・ <a href='talk-to-the-city.html'>什麼是我城對談（Talk to the City）？</a> ・ <a href='team-mirai.html'>什麼是未來團隊（チームみらい，Team Mirai）？</a> ・ <a href='idobata.html'>什麼是いどばた（Idobata）？</a> ・ <a href='augmented-deliberation.html'>什麼是擴增審議？</a> ・ <a href='mitou.html'>什麼是未踏（IPA 未踏事業）？</a> ・ <a href='nishio-hirokazu.html'>西尾泰和是誰？</a> ・ <a href='polis.html'>什麼是 Polis？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fnakayama-shinta.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%B8%AD%E5%B1%B1%E5%BF%83%E5%A4%AA%E6%98%AF%E8%AA%B0%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fnakayama-shinta.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

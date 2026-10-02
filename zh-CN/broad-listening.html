@@ -41,55 +41,61 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../broad-listening.html">日本語</a> <a class="lang" hreflang="en" href="../en/broad-listening.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/broad-listening.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是广泛倾听（Broad Listening）？</h1><div class='lead'>用 AI 阅读成千上万人的自由意见，把相似的意见归在一起、画成一张「论点地图」，让一个人也能听见许多人声音的技术与实践。它正好是电视、广播这类「广播」（broadcast）的反方向。</div><p>透过电视或广播，一个人的声音可以传给几百万人。那反过来，一个人要怎样才能好好听见几百万人的声音？送到政府机关或政治人物手上的意见，往往不是多到读不完，就是少到有偏差。广泛倾听（broad listening）就是为了回答「如何听见许多人的声音」而诞生的想法。</p>
 <h2>一句话说明</h2>
 <p>广泛倾听，是<strong>让一个人能听见许多人声音的技术</strong>。如果说广播（broadcast）是「一对多」，这就是「多对一」。</p>
-<p>具体来说，就是由 AI 阅读成千上万则自由书写的意见，把相似的意见归在一起，把整体画成一张「论点地图」[1]。</p>
+<p>具体来说，就是由 AI 阅读成千上万则自由书写的意见，把相似的意见归在一起，把整体画成一张「论点地图」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>下面的例子多半来自日本，并会随文简单说明日本的背景。</p>
 <h2>举例来说</h2>
-<p><strong>2024 年东京都知事选举。</strong> 参选人安野贵博（日本的 AI 工程师）的团队，透过 X（前 Twitter）的主题标签「#TOKYOAI」和匿名意见箱等管道收集意见，再用「我城对谈」（Talk to the City，TTTC）这个工具画成散布图，在选举期间做了 30 份以上的报告。从匿名意见箱的投稿中抽出的 951 则意见里，浮现出多则希望取消育儿补助所得限制的声音；这个意见被反映在政见（manifesto）从 1.0 版到 2.0 版的更新中[2]。详见〈<a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a>〉。</p>
-<p><strong>东京都的长期战略。</strong> 东京都自 2024-11-22 起征集「你心目中 2050 年代的东京」。收到的 27,915 则意见经 AI 分析，被用来作为重新检视「2050 东京战略」政策分类的材料[3][4][5]。→〈<a href="tokyo-2050-broad-listening.html">东京都「2050 东京战略」的广泛倾听</a>〉</p>
-<p><strong>日本国会。</strong> 2025-03-07，日本国民民主党的参议员伊藤孝惠在参议院预算委员会上，以 TTTC 做出的「论点地图」为资料质询首相。日文书《广泛倾听》（ブロードリスニング，后述）认为，这是国会中第一次以广泛倾听的结果作为质询政府之依据的例子[6][7]。</p>
+<p><strong>2024 年东京都知事选举。</strong> 参选人安野贵博（日本的 AI 工程师）的团队，透过 X（前 Twitter）的主题标签「#TOKYOAI」和匿名意见箱等管道收集意见，再用「我城对谈」（Talk to the City，TTTC）这个工具画成散布图，在选举期间做了 30 份以上的报告。从匿名意见箱的投稿中抽出的 951 则意见里，浮现出多则希望取消育儿补助所得限制的声音；这个意见被反映在政见（manifesto）从 1.0 版到 2.0 版的更新中<a class="cite" href="#src-2" data-src="src-2">[2]</a>。详见〈<a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a>〉。</p>
+<p><strong>东京都的长期战略。</strong> 东京都自 2024-11-22 起征集「你心目中 2050 年代的东京」。收到的 27,915 则意见经 AI 分析，被用来作为重新检视「2050 东京战略」政策分类的材料<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。→〈<a href="tokyo-2050-broad-listening.html">东京都「2050 东京战略」的广泛倾听</a>〉</p>
+<p><strong>日本国会。</strong> 2025-03-07，日本国民民主党的参议员伊藤孝惠在参议院预算委员会上，以 TTTC 做出的「论点地图」为资料质询首相。日文书《广泛倾听》（ブロードリスニング，后述）认为，这是国会中第一次以广泛倾听的结果作为质询政府之依据的例子<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>运作方式</h2>
 <h3>为什么需要</h3>
 <p>和 10 个人各谈一小时，可以深入了解，却不知道这 10 个人能不能代表整体。问 100 万人「是或否」，可以知道整体趋势，却不知道「为什么」「是怎样的」。</p>
-<p>只要人力与时间有限，往往就只能在「深入听」和「广泛听」之间二选一。广泛倾听想要两者兼顾[1]。</p>
-<p>《多元宇宙》第 5-4 章〈扩增审议〉也写道：「虽然广播（允许许多人听到同一个声明）已经大大改进，但广泛倾听（让某人深思熟虑地消化一系列观点）仍然极其困难和耗时」[8]。</p>
+<p>只要人力与时间有限，往往就只能在「深入听」和「广泛听」之间二选一。广泛倾听想要两者兼顾<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>《多元宇宙》第 5-4 章〈扩增审议〉也写道：「虽然广播（允许许多人听到同一个声明）已经大大改进，但广泛倾听（让某人深思熟虑地消化一系列观点）仍然极其困难和耗时」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>怎么运作</h3>
-<p>TTTC，以及以它为基础、为日文打造的<a href="kouchou-ai.html">広聴AI</a>（kouchou-ai，「広聴」是日文「广泛倾听」之意），大致分三个步骤[2]：</p>
+<p>TTTC，以及以它为基础、为日文打造的<a href="kouchou-ai.html">広聴AI</a>（kouchou-ai，「広聴」是日文「广泛倾听」之意），大致分三个步骤<a class="cite" href="#src-2" data-src="src-2">[2]</a>：</p>
 <ol>
 <li>由生成式 AI 从贴文中抽出「意见」</li>
 <li>把文字转成一串数字（向量），把相似的意见归成一群（分群）</li>
 <li>由生成式 AI 为每一群加上标题与摘要</li>
 </ol>
-<p>结果是一张散布图，每个点代表一则意见。可以沿着群组一路读到原始贴文[2]。</p>
-<p>这件事能以实际可负担的成本做到，是最近的事。因为把文字意义转成数字的技术（2019 年）、把高维资料压成二维图的技术（2018 年），以及能摘要大量文字的大型语言模型（LLM，例如 2022 年公开的 ChatGPT）都到齐了[1]。根据《广泛倾听》的试算，用広聴AI 分析 1 万则自由书写意见的费用约为 500 日圆[9]。</p>
+<p>结果是一张散布图，每个点代表一则意见。可以沿着群组一路读到原始贴文<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>这件事能以实际可负担的成本做到，是最近的事。因为把文字意义转成数字的技术（2019 年）、把高维资料压成二维图的技术（2018 年），以及能摘要大量文字的大型语言模型（LLM，例如 2022 年公开的 ChatGPT）都到齐了<a class="cite" href="#src-1" data-src="src-1">[1]</a>。根据《广泛倾听》的试算，用広聴AI 分析 1 万则自由书写意见的费用约为 500 日圆<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>三种意思</h3>
-<p>这个词依脉络有不同意思。《广泛倾听》（DD2030 社群着；DD2030 是以开源方式打造公民参与工具的日本非营利社群）把它分成三种[1]：</p>
+<p>这个词依脉络有不同意思。《广泛倾听》（DD2030 社群着；DD2030 是以开源方式打造公民参与工具的日本非营利社群）把它分成三种<a class="cite" href="#src-1" data-src="src-1">[1]</a>：</p>
 <ol>
 <li><strong>作为工具</strong>——把大量意见用 AI 整理成看得见的形式的「元件」，例如 TTTC、広聴AI、Google Jigsaw 的 Sensemaker 等。</li>
 <li><strong>作为扩增审议（用技术深化讨论）的一部分</strong>——收集意见、讨论、决定政策的流程持续循环，它是其中一环。台湾的 <a href="vtaiwan.html">vTaiwan</a> 与 <a href="polis.html">Polis</a> 是代表例子。</li>
 <li><strong>由政治人物或行政机关直接使用</strong>——不经过讨论的场合，由政治人物或政府机关用工具收集声音、用于政策。在日本，以安野的都知事选举为契机，这种形式先普及开来。</li>
 </ol>
 <h3>和问卷、公众意见征集有什么不同</h3>
-<p>广泛倾听能处理大量的自由书写意见，因此可以找到设计调查的人没想到的论点。《广泛倾听》把这形容为把「决定什么是议题」的权力开放给大家[9]。</p>
-<p>另一方面，对于日本的「パブリックコメント」（公众意见征集，行政机关提出草案后征求意见的程序，简称「パブコメ」），《广泛倾听》把它定位为对「几乎已经完成的草案做最后检查」的场合。书中说，广泛倾听负责在那之前「找出课题」的阶段，两者是互补的[10]。</p>
+<p>广泛倾听能处理大量的自由书写意见，因此可以找到设计调查的人没想到的论点。《广泛倾听》把这形容为把「决定什么是议题」的权力开放给大家<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>另一方面，对于日本的「パブリックコメント」（公众意见征集，行政机关提出草案后征求意见的程序，简称「パブコメ」），《广泛倾听》把它定位为对「几乎已经完成的草案做最后检查」的场合。书中说，广泛倾听负责在那之前「找出课题」的阶段，两者是互补的<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h2>争议与批评</h2>
 <p>《广泛倾听》一书自己就清楚写出了限制与误解。</p>
 <ul>
-<li><strong>偏向声音大的人。</strong> 会写自由意见的，是意见强烈的人；不表达意见的多数人不会出现。书中引用 Pew Research Center（2019）的调查：关于政治的推文有 73% 是由 6% 的用户发出的。书也指出，越习惯写文章的人，声音越容易被听见[9]。</li>
-<li><strong>把数量误读成「民意」。</strong> 散布图的纵轴和横轴没有意义。群组的大小是「贴文数」，不是「持这种意见的人的比例」。书中说，因为赞成的声音是反对的三倍就认为它受支持，是典型的误读；不应只靠广泛倾听来判断政策或选举[9]。书建议的是两阶段做法：用广泛倾听建立假设，再用随机抽样的调查来验证[9]。</li>
-<li><strong>工具不会自己收集意见。</strong> 能收到多少意见，取决于宣传与话题性。书中明白写道，安野团队和东京都能收集到大量意见，并不是工具的功劳。在广岛县的例子里，透过主题标签收到的意见只有 2 则[9][11]。→〈<a href="municipal-broad-listening.html">地方政府的广泛倾听</a>〉</li>
-<li><strong>「由 AI 决定政策」的误解。</strong> 书中说，这是在任何政治体制下都能用的工具，读结果、做决定的是人（选出来的政治人物与议会）[10]。</li>
-<li><strong>东京都公众意见征集中出现的疑虑。</strong> 对 2050 东京战略草案提交的意见中，有人认为收集到的是习惯发表意见的人的声音，不应作为政策依据；也有人认为应审慎检验征集方式，或质疑是否整理公开就结束了。东京都回应说，这是为了作为拟定战略的参考而进行的[12]。</li>
-<li><strong>高估「改变了政策」的故事。</strong> 《广泛倾听》第 5 章（中山心太执笔）检验了东京都「观光成为独立战略」的说法，指出观光政策的扩充在征集意见之前、2024-01 的修订中就已经在推动，并结论说「广泛倾听改变了政策」的故事至少有一部分是高估的[3]。</li>
-<li><strong>「那张散布图」不等于广泛倾听。</strong> 散布图的印象太强烈，常被误以为图本身就是广泛倾听。书中提醒，也有像 Polis 这样放不进散布图的工具[1][2]。</li>
+<li><strong>偏向声音大的人。</strong> 会写自由意见的，是意见强烈的人；不表达意见的多数人不会出现。书中引用 Pew Research Center（2019）的调查：关于政治的推文有 73% 是由 6% 的用户发出的。书也指出，越习惯写文章的人，声音越容易被听见<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>把数量误读成「民意」。</strong> 散布图的纵轴和横轴没有意义。群组的大小是「贴文数」，不是「持这种意见的人的比例」。书中说，因为赞成的声音是反对的三倍就认为它受支持，是典型的误读；不应只靠广泛倾听来判断政策或选举<a class="cite" href="#src-9" data-src="src-9">[9]</a>。书建议的是两阶段做法：用广泛倾听建立假设，再用随机抽样的调查来验证<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>工具不会自己收集意见。</strong> 能收到多少意见，取决于宣传与话题性。书中明白写道，安野团队和东京都能收集到大量意见，并不是工具的功劳。在广岛县的例子里，透过主题标签收到的意见只有 2 则<a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。→〈<a href="municipal-broad-listening.html">地方政府的广泛倾听</a>〉</li>
+<li><strong>「由 AI 决定政策」的误解。</strong> 书中说，这是在任何政治体制下都能用的工具，读结果、做决定的是人（选出来的政治人物与议会）<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>东京都公众意见征集中出现的疑虑。</strong> 对 2050 东京战略草案提交的意见中，有人认为收集到的是习惯发表意见的人的声音，不应作为政策依据；也有人认为应审慎检验征集方式，或质疑是否整理公开就结束了。东京都回应说，这是为了作为拟定战略的参考而进行的<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>高估「改变了政策」的故事。</strong> 《广泛倾听》第 5 章（中山心太执笔）检验了东京都「观光成为独立战略」的说法，指出观光政策的扩充在征集意见之前、2024-01 的修订中就已经在推动，并结论说「广泛倾听改变了政策」的故事至少有一部分是高估的<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</li>
+<li><strong>「那张散布图」不等于广泛倾听。</strong> 散布图的印象太强烈，常被误以为图本身就是广泛倾听。书中提醒，也有像 Polis 这样放不进散布图的工具<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>在《多元宇宙》里，它出现在 5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉，与「广播」对比，作为「广泛倾听」的问题提出[8]。英文版写道，LLM 等<a href="generative-foundation-models.html">生成式基础模型</a>正开始为解决这个问题开路，并举安野团队的做法（在 GitHub 公开的政见、用 TTTC 视觉化、24 小时回答问题的 AI 分身）为例[8]。（目前的繁体中文版 5-4 章没有这段安野的案例。）</p>
-<p>关于词的来源，英文版在注脚中写道，就作者所知，这个概念最早由 Andrew Trask 提出[8]。2024 年 7 月，《Plurality》作者卫谷伦也在 X 上说了同样的事[13]。</p>
-<p>《广泛倾听》提到，这个词在《Plurality》扩增审议一章里只出现了 3 次；并写道，自己这本书暗地里的目标，是用实际案例做出一个好入口的「兑水版 Plurality」[1]。</p>
+<p>在《多元宇宙》里，它出现在 5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉，与「广播」对比，作为「广泛倾听」的问题提出<a class="cite" href="#src-8" data-src="src-8">[8]</a>。英文版写道，LLM 等<a href="generative-foundation-models.html">生成式基础模型</a>正开始为解决这个问题开路，并举安野团队的做法（在 GitHub 公开的政见、用 TTTC 视觉化、24 小时回答问题的 AI 分身）为例<a class="cite" href="#src-8" data-src="src-8">[8]</a>。（目前的繁体中文版 5-4 章没有这段安野的案例。）</p>
+<p>关于词的来源，英文版在注脚中写道，就作者所知，这个概念最早由 Andrew Trask 提出<a class="cite" href="#src-8" data-src="src-8">[8]</a>。2024 年 7 月，《Plurality》作者卫谷伦也在 X 上说了同样的事<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>《广泛倾听》提到，这个词在《Plurality》扩增审议一章里只出现了 3 次；并写道，自己这本书暗地里的目标，是用实际案例做出一个好入口的「兑水版 Plurality」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>相邻的文章：
 - <a href="talk-to-the-city.html">我城对谈</a>与<a href="kouchou-ai.html">広聴AI</a>——从自由意见画出地图的工具
 - <a href="polis.html">Polis</a>——从赞成／反对的投票画出意见地图的工具
@@ -106,17 +112,47 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 4 章第 1 节〈安野贵博の取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 5 章〈东京都、シン东京2050、ブロードリスニングによる政策転换〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>东京都新闻稿（2024-11-22）「シン东京 2050」意见征集（日文）— <a href="https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203" target="_blank" rel="noopener">https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203</a></li>
-<li>东京都政策企画局〈ブロードリスニングの考え方〉（2025-01-31，日文）— <a href="https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3" target="_blank" rel="noopener">https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3</a></li>
-<li>《ブロードリスニング》第 4 章〈日本国内におけるブロードリスニングの広がり〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 4 章第 2 节〈国民民主の国会质问〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；安野的案例与 Trask 的注脚见英文版 <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
-<li>《ブロードリスニング》第 2 章〈ブロードリスニングとアンケートの违い〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 3 章〈デジタル民主主义とブロードリスニング、新しい民意の届け方〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》第 8 章第 2 节〈広岛県の事例〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>东京都「2050 东京战略（草案）」公众意见征集结果（节录，日文）— <a href="https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment" target="_blank" rel="noopener">https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</a></li>
-<li>西尾泰和〈ブロードリスニングの命名〉（含卫谷伦的 X 贴文 <a href="https://x.com/glenweyl/status/1817955522035032270" target="_blank" rel="noopener">https://x.com/glenweyl/status/1817955522035032270</a> ，日文）— <a href="https://scrapbox.io/nishio/ブロードリスニングの命名" target="_blank" rel="noopener">https://scrapbox.io/nishio/ブロードリスニングの命名</a></li>
-</ol><div class='related'>相关: <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='polis.html'>什么是 Polis？</a> ・ <a href='idobata.html'>什么是いどばた（Idobata）？</a> ・ <a href='anno-2024-tokyo-campaign.html'>什么是安野贵博的 2024 年都知事选举？</a> ・ <a href='tokyo-2050-broad-listening.html'>什么是东京都「シン东京2050」的广泛倾听？</a> ・ <a href='municipal-broad-listening.html'>什么是地方政府的广泛倾听？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fbroad-listening.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%BF%E6%B3%9B%E5%80%BE%E5%90%AC%EF%BC%88Broad%20Listening%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fbroad-listening.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-2">《ブロードリスニング》第 4 章第 1 节〈安野贵博の取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-3">《ブロードリスニング》第 5 章〈东京都、シン东京2050、ブロードリスニングによる政策転换〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-4">东京都新闻稿（2024-11-22）「シン东京 2050」意见征集（日文）— <a href="https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203" target="_blank" rel="noopener">https://www.metro.tokyo.lg.jp/information/press/2024/11/2024112203</a></li>
+<li id="src-5">东京都政策企画局〈ブロードリスニングの考え方〉（2025-01-31，日文）— <a href="https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3" target="_blank" rel="noopener">https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/kangaekata3</a></li>
+<li id="src-6">《ブロードリスニング》第 4 章〈日本国内におけるブロードリスニングの広がり〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-7">《ブロードリスニング》第 4 章第 2 节〈国民民主の国会质问〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-8">《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；安野的案例与 Trask 的注脚见英文版 <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li id="src-9">《ブロードリスニング》第 2 章〈ブロードリスニングとアンケートの违い〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-10">《ブロードリスニング》第 3 章〈デジタル民主主义とブロードリスニング、新しい民意の届け方〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-11">《ブロードリスニング》第 8 章第 2 节〈広岛県の事例〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-12">东京都「2050 东京战略（草案）」公众意见征集结果（节录，日文）— <a href="https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment" target="_blank" rel="noopener">https://www.seisakukikaku.metro.tokyo.lg.jp/documents/d/seisakukikaku/2050tokyo_public_comment</a></li>
+<li id="src-13">西尾泰和〈ブロードリスニングの命名〉（含卫谷伦的 X 贴文 <a href="https://x.com/glenweyl/status/1817955522035032270" target="_blank" rel="noopener">https://x.com/glenweyl/status/1817955522035032270</a> ，日文）— <a href="https://scrapbox.io/nishio/ブロードリスニングの命名" target="_blank" rel="noopener">https://scrapbox.io/nishio/ブロードリスニングの命名</a></li>
+</ol><div class='related'>相关: <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='polis.html'>什么是 Polis？</a> ・ <a href='idobata.html'>什么是いどばた（Idobata）？</a> ・ <a href='anno-2024-tokyo-campaign.html'>什么是安野贵博的 2024 年都知事选举？</a> ・ <a href='tokyo-2050-broad-listening.html'>什么是东京都「シン东京2050」的广泛倾听？</a> ・ <a href='municipal-broad-listening.html'>什么是地方政府的广泛倾听？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fbroad-listening.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%BF%E6%B3%9B%E5%80%BE%E5%90%AC%EF%BC%88Broad%20Listening%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fbroad-listening.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,30 +41,36 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/identity-and-personhood.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/identity-and-personhood.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/identity-and-personhood.html">简体中文</a></nav></header>
 <main lang="ja"><h1>ID と人物性（⿻ ID）ってなに？</h1><div class='lead'>ネットで「私は私です」と示す方法を、パスワードや一つの番号・指紋に頼らず、「この人を知っている」と言ってくれる多くの人や組織の重なりで支えよう、という考え方です。身元を示しやすく、しかも一か所から全部を覗かれにくくなる、と本『Plurality』は主張します。</div><p>ネットのサービスに登録するとき、私たちはメールアドレスやパスワード、ときには顔写真や指紋を差し出します。便利ですが、それを握った会社や役所は、私たちの行動をまとめて見られるようになるかもしれません。「自分が自分であること」を示しつつ、のぞかれすぎないようにするにはどうすればよいのか。ID と人物性（⿻ ID）は、この問いへの本『⿻ Plurality』の答えです。</p>
 <h2>ひとことで言うと</h2>
 <p>ネットで「私は私です」と示す方法を、パスワードや一つの番号・指紋に頼るのではなく、<strong>「この人を知っている」と言ってくれる多くの人や組織の重なり</strong>で支えよう、という考え方です。学校、職場、友人、役所などがその例です。</p>
-<p>本は、こうすると身元を示しやすく、しかも一か所から全部をのぞかれにくくなる、と主張します[1][2]。「人物性」とは、ここでは「一人の人として認められること」を指します。</p>
+<p>本は、こうすると身元を示しやすく、しかも一か所から全部をのぞかれにくくなる、と主張します<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。「人物性」とは、ここでは「一人の人として認められること」を指します。</p>
 <h2>たとえば</h2>
-<p><strong>インドの Aadhaar（アーダール）。</strong> インド政府のデジタル基盤の一部で、顔写真、両目の虹彩（目の模様）、10 本の指紋を登録するしくみです。人口の 99% を超える人が加入しました。本は、規模・誰も取り残さないこと・安全性の点で世界有数だと評価します。そのうえで、生体情報を日々の本人確認に使うと、運営する側が市民の活動を横断的に見られるようになる、と指摘します。イスラム教徒の少数派について、活動家がそれを心配しているそうです。インドの最高裁判所は、民間での利用を制限しました[3]。</p>
-<p><strong>Worldcoin（ワールドコイン）。</strong> OpenAI の共同創業者サム・アルトマンらが 2019 年に始めた、「オーブ」という機械で虹彩を読み取る世界規模の ID です。本は、生体情報を最初の登録だけに使えばプライバシーは守れるが、アカウントを盗まれたり売られたりしやすく、「ただ一人の人間であること」以外は何も示せない、と批判します[4]。くわしくは <a href="proof-of-personhood.html">人間であることの証明</a> の記事をどうぞ。</p>
-<p><strong>ソーシャルリカバリ。</strong> 鍵（パスワードのようなもの）をなくしたとき、「5 人のうち 3 人の友人や機関」が同意すれば取り戻せる、というやり方です。本は、Web3（ブロックチェーンを使う新しいネットのしくみ）の世界で標準になり、Apple も取り入れ始めたと紹介し、Plurality らしい ID の取り戻し方だとしています[5]。</p>
+<p><strong>インドの Aadhaar（アーダール）。</strong> インド政府のデジタル基盤の一部で、顔写真、両目の虹彩（目の模様）、10 本の指紋を登録するしくみです。人口の 99% を超える人が加入しました。本は、規模・誰も取り残さないこと・安全性の点で世界有数だと評価します。そのうえで、生体情報を日々の本人確認に使うと、運営する側が市民の活動を横断的に見られるようになる、と指摘します。イスラム教徒の少数派について、活動家がそれを心配しているそうです。インドの最高裁判所は、民間での利用を制限しました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>Worldcoin（ワールドコイン）。</strong> OpenAI の共同創業者サム・アルトマンらが 2019 年に始めた、「オーブ」という機械で虹彩を読み取る世界規模の ID です。本は、生体情報を最初の登録だけに使えばプライバシーは守れるが、アカウントを盗まれたり売られたりしやすく、「ただ一人の人間であること」以外は何も示せない、と批判します<a class="cite" href="#src-4" data-src="src-4">[4]</a>。くわしくは <a href="proof-of-personhood.html">人間であることの証明</a> の記事をどうぞ。</p>
+<p><strong>ソーシャルリカバリ。</strong> 鍵（パスワードのようなもの）をなくしたとき、「5 人のうち 3 人の友人や機関」が同意すれば取り戻せる、というやり方です。本は、Web3（ブロックチェーンを使う新しいネットのしくみ）の世界で標準になり、Apple も取り入れ始めたと紹介し、Plurality らしい ID の取り戻し方だとしています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>くわしく</h2>
 <h3>示すことと、守ることのジレンマ</h3>
-<p>本（第 4-1 章）は、ID のしくみの価値は「どれだけしっかり本人だと示せるか」で決まると言います。でも、いちばん単純な示し方（パスワードを見せるなど）は、見せたとたんに盗まれる危険を生みます。だから ID のしくみでは、個人の情報を守ること自体が役に立つことの中心であり、「示す」と「守る」を同時にこなせるかで評価すべきだ、と本は書きます[6]。</p>
+<p>本（第 4-1 章）は、ID のしくみの価値は「どれだけしっかり本人だと示せるか」で決まると言います。でも、いちばん単純な示し方（パスワードを見せるなど）は、見せたとたんに盗まれる危険を生みます。だから ID のしくみでは、個人の情報を守ること自体が役に立つことの中心であり、「示す」と「守る」を同時にこなせるかで評価すべきだ、と本は書きます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>今の ID は、どれも一長一短</h3>
-<p>本は、今ある ID をこう整理します[7]。</p>
+<p>本は、今ある ID をこう整理します<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <ul>
 <li><strong>国の ID</strong> は正統ですが、いろいろな場面で使い回されて秘密にできず、出生証明のような薄い情報に基づいています。</li>
 <li><strong>大手 IT 企業の「〜でログイン」</strong> は便利ですが、一つの会社が私たちの行動の全体を握ります。</li>
 <li><strong>広告会社や信用スコアの会社</strong> は、私たちのくわしい情報を持っていますが、見えないところで動いています。</li>
 <li><strong>小さな地元の ID</strong>（学歴、職業の団体、宗教の団体、ゲームの中の名前など）は自然で信頼できると感じられますが、ばらばらで使いにくいものです。</li>
 </ul>
-<p>特定の会社に頼らない新しい ID の技術もありますが、鍵を誰の助けも借りずに管理したり、なくしたときに取り戻したりする方法がまだ確立していない、と本は書きます[8]。</p>
+<p>特定の会社に頼らない新しい ID の技術もありますが、鍵を誰の助けも借りずに管理したり、なくしたときに取り戻したりする方法がまだ確立していない、と本は書きます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>「重なり」としての ID</h3>
-<p>本の答えは、人を生き物としてではなく、<strong>社会の中の存在</strong>として捉えることです。私たちが誰かを思い浮かべるとき、それは顔や体つきより、「一緒にしたこと、行った場所、その人のふるまい」によります。本はこれを「ソシオメトリクス（社会的な情報で人を知ること）」と呼びます[9]。</p>
-<p>本は、この考え方の利点を五つにまとめます[9]。</p>
+<p>本の答えは、人を生き物としてではなく、<strong>社会の中の存在</strong>として捉えることです。私たちが誰かを思い浮かべるとき、それは顔や体つきより、「一緒にしたこと、行った場所、その人のふるまい」によります。本はこれを「ソシオメトリクス（社会的な情報で人を知ること）」と呼びます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>本は、この考え方の利点を五つにまとめます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <ol>
 <li><strong>漏れがなく、予備もある。</strong> たくさんの関係があるので、一つが欠けても困りません。</li>
 <li><strong>プライバシー。</strong> 互いに知っている事実を共有するだけなので、見張られている感じがしません。</li>
@@ -73,18 +79,18 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li><strong>取り戻せる。</strong> 互いに示し合わせそうにない別々の人たちが一緒に、なくした ID を取り戻せます。</li>
 </ol>
 <h3>どう回すのか</h3>
-<p>人が安定して保てる関係は約 150 人と言われます（ダンバー数）。だから支えが要る、と本は言います[10]。本は二つの形を挙げます。一つは、中くらいの規模の確認役の組織をたくさん置く形です。もう一つは、「友だちの友だち」をたどって信頼をつなぐ形です。本は、100 億人がそれぞれ 100 の確認役の組織と関係を持つという数の例で、所属がでたらめに分かれていても 300 の確認役が共存でき、現実にはもっと多く、たとえば 10 万ほどまでありうる、と見積もっています。そして両方を組み合わせれば、使えて、しかも私的な ID の世界がつくれる、と論じます[10]。</p>
+<p>人が安定して保てる関係は約 150 人と言われます（ダンバー数）。だから支えが要る、と本は言います<a class="cite" href="#src-10" data-src="src-10">[10]</a>。本は二つの形を挙げます。一つは、中くらいの規模の確認役の組織をたくさん置く形です。もう一つは、「友だちの友だち」をたどって信頼をつなぐ形です。本は、100 億人がそれぞれ 100 の確認役の組織と関係を持つという数の例で、所属がでたらめに分かれていても 300 の確認役が共存でき、現実にはもっと多く、たとえば 10 万ほどまでありうる、と見積もっています。そして両方を組み合わせれば、使えて、しかも私的な ID の世界がつくれる、と論じます<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>ID は「集まり」の問題でもある</h3>
-<p>私たちについての情報のほとんどは、ほかの人も知っていて、ほかの人の情報でもあります。だから守るべきなのは、情報を隠すことより、<strong>情報がもともとの文脈にとどまること</strong>だ、と本は言います。プライバシー研究者ヘレン・ニッセンバウム（Helen Nissenbaum）が「文脈の完全性」と呼ぶものです[11]。それは集団の決まりを守ること、つまり集まる自由の問題になる、と本は結びます[11]。これは次の章の <a href="plural-publics.html">⿻ 公衆</a> につながります。</p>
-<p>この考え方は、本より前から、グレン・ワイルらのブログの連載（2019 年）や、ワイル、プジャ・オールハーバー、ヴィタリック・ブテリンの論文（2022 年）でも展開されていました[12][13]。</p>
+<p>私たちについての情報のほとんどは、ほかの人も知っていて、ほかの人の情報でもあります。だから守るべきなのは、情報を隠すことより、<strong>情報がもともとの文脈にとどまること</strong>だ、と本は言います。プライバシー研究者ヘレン・ニッセンバウム（Helen Nissenbaum）が「文脈の完全性」と呼ぶものです<a class="cite" href="#src-11" data-src="src-11">[11]</a>。それは集団の決まりを守ること、つまり集まる自由の問題になる、と本は結びます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。これは次の章の <a href="plural-publics.html">⿻ 公衆</a> につながります。</p>
+<p>この考え方は、本より前から、グレン・ワイルらのブログの連載（2019 年）や、ワイル、プジャ・オールハーバー、ヴィタリック・ブテリンの論文（2022 年）でも展開されていました<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>ブテリンの評価。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は 2024 年の書評で、本の ID 論の中心を、一つの要素だけに頼る方法はどれも弱すぎるので、いくつもの要素を組み合わせるべきだ、という点にあるとまとめました。取り戻しの仕組みについては、各人が信頼する相手を選び、間違えても影響はその人だけにとどまるので分かりやすい、と認めています。一方、全員に同じお金を配る制度や投票は、共同体の全員についての合意が要るので難しい、と指摘します[14]。</li>
-<li><strong>「一人一つの ID」をめぐる対立。</strong> World（旧 Worldcoin）は、一人に一つだけの資格であることが欠かせず、少しでも複数の資格を許せば売り買いされて大きな穴になる、と主張しています[15]。これに対しブテリンは 2025 年、たとえ暗号の技術で中身を隠しても、「一人一つ」を守ろうとすること自体が、プライバシーを失う・強制される・間違えるといった危険を生む、と書きました。そして「多元的な ID」がいちばん現実的な答えだとしています[16]。本も、唯一であることしか示せない生体 ID の限界を批判しています[4]。</li>
-<li><strong>よくある誤解。</strong> 「⿻ ID は生体認証を否定している」わけではありません。会えば相手の顔なども自然に分かるので、社会的な情報には生体情報も含まれうるが、それだけではない、と本は書いています[9]。</li>
+<li><strong>ブテリンの評価。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は 2024 年の書評で、本の ID 論の中心を、一つの要素だけに頼る方法はどれも弱すぎるので、いくつもの要素を組み合わせるべきだ、という点にあるとまとめました。取り戻しの仕組みについては、各人が信頼する相手を選び、間違えても影響はその人だけにとどまるので分かりやすい、と認めています。一方、全員に同じお金を配る制度や投票は、共同体の全員についての合意が要るので難しい、と指摘します<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>「一人一つの ID」をめぐる対立。</strong> World（旧 Worldcoin）は、一人に一つだけの資格であることが欠かせず、少しでも複数の資格を許せば売り買いされて大きな穴になる、と主張しています<a class="cite" href="#src-15" data-src="src-15">[15]</a>。これに対しブテリンは 2025 年、たとえ暗号の技術で中身を隠しても、「一人一つ」を守ろうとすること自体が、プライバシーを失う・強制される・間違えるといった危険を生む、と書きました。そして「多元的な ID」がいちばん現実的な答えだとしています<a class="cite" href="#src-16" data-src="src-16">[16]</a>。本も、唯一であることしか示せない生体 ID の限界を批判しています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</li>
+<li><strong>よくある誤解。</strong> 「⿻ ID は生体認証を否定している」わけではありません。会えば相手の顔なども自然に分かるので、社会的な情報には生体情報も含まれうるが、それだけではない、と本は書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>この考え方は、本の第 4 部の最初の各論（4-1 章）です。本の章の要約は、権利のうちいちばん基本的なのは「人物性への権利」だとし、Plurality の見方ではそれが多くの社会的な所属に根ざすデジタル ID として実現される、と書いています[2]。</p>
+<p>この考え方は、本の第 4 部の最初の各論（4-1 章）です。本の章の要約は、権利のうちいちばん基本的なのは「人物性への権利」だとし、Plurality の見方ではそれが多くの社会的な所属に根ざすデジタル ID として実現される、と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p><a href="rights-os.html">権利 OS</a> の図でいえば、ID は「点（人）」にあたります。次の章の <a href="plural-publics.html">⿻ 公衆</a> は「点を囲む塊（集まり）」で、二つは表裏の関係です。</p>
 <p>本の後半の多くの仕組みも、この ID に頼っています。たとえば、人のつながりを考えに入れる <a href="plural-voting.html">⿻投票</a> や、利害関係者をたどる <a href="social-markets.html">社会市場</a> です。「ただ一人の人間であること」を示す部分は <a href="proof-of-personhood.html">人間であることの証明</a> で扱います。</p>
 <h2>もっと知りたい人へ</h2>
@@ -98,20 +104,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』4-1「Identity and Personhood」冒頭 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』各章の要約（Chapter 4-1）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』4-1「Public and decentralized digital identity」（Aadhaar）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Public and decentralized digital identity」（Worldcoin）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Identity as an intersection」（Recovery）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1 冒頭第 2〜3 段落 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Digital identity today」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Public and decentralized digital identity」後半 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Identity as an intersection」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「⿻ identity」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Identity and association」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>Weyl・Geiger・Young「Motivating The Case for Decentralized Social Identity」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</a> ／ 「Intersectional Social Data」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/</a></li>
-<li>Ohlhaver・Weyl・Buterin「Decentralized Society: Finding Web3's Soul」（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
-<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」Identity 節（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-<li>World ホワイトペーパー「Achieving Proof of Human」— <a href="https://whitepaper.world.org/achieving-proof-of-human" target="_blank" rel="noopener">https://whitepaper.world.org/achieving-proof-of-human</a></li>
-<li>Vitalik Buterin「Does digital ID have risks even if it's ZK-wrapped?」（2025）— <a href="https://vitalik.eth.limo/general/2025/06/28/zkid.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/06/28/zkid.html</a></li>
-</ol><div class='related'>関連: <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='rights-os.html'>権利 OS ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fidentity-and-personhood.html&title=%5B%E6%8C%87%E6%91%98%5D%20ID%20%E3%81%A8%E4%BA%BA%E7%89%A9%E6%80%A7%EF%BC%88%E2%BF%BB%20ID%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fidentity-and-personhood.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』4-1「Identity and Personhood」冒頭 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-2">『Plurality』各章の要約（Chapter 4-1）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-3">『Plurality』4-1「Public and decentralized digital identity」（Aadhaar）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』4-1「Public and decentralized digital identity」（Worldcoin）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』4-1「Identity as an intersection」（Recovery）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-6">『Plurality』4-1 冒頭第 2〜3 段落 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-7">『Plurality』4-1「Digital identity today」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-8">『Plurality』4-1「Public and decentralized digital identity」後半 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』4-1「Identity as an intersection」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-10">『Plurality』4-1「⿻ identity」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-11">『Plurality』4-1「Identity and association」— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-12">Weyl・Geiger・Young「Motivating The Case for Decentralized Social Identity」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-06-06-d4utdx/</a> ／ 「Intersectional Social Data」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/</a></li>
+<li id="src-13">Ohlhaver・Weyl・Buterin「Decentralized Society: Finding Web3's Soul」（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
+<li id="src-14">Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」Identity 節（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li id="src-15">World ホワイトペーパー「Achieving Proof of Human」— <a href="https://whitepaper.world.org/achieving-proof-of-human" target="_blank" rel="noopener">https://whitepaper.world.org/achieving-proof-of-human</a></li>
+<li id="src-16">Vitalik Buterin「Does digital ID have risks even if it's ZK-wrapped?」（2025）— <a href="https://vitalik.eth.limo/general/2025/06/28/zkid.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/06/28/zkid.html</a></li>
+</ol><div class='related'>関連: <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='rights-os.html'>権利 OS ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fidentity-and-personhood.html&title=%5B%E6%8C%87%E6%91%98%5D%20ID%20%E3%81%A8%E4%BA%BA%E7%89%A9%E6%80%A7%EF%BC%88%E2%BF%BB%20ID%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fidentity-and-personhood.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

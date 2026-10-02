@@ -41,31 +41,37 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../adaptive-administration.html">日本語</a> <a class="lang" hreflang="en" href="../en/adaptive-administration.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/adaptive-administration.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是适应式行政（adaptive administration）？</h1><div class='lead'>用产生文字的 AI 等技术，让政府机关和大企业「按固定格式与规则处理」的制度，能配合每位用户的语言和情况运作。这是《多元宇宙》的构想：保留为了公平而设的规则，同时让多样的人都能直接使用制度。</div><p>你是否曾在机关窗口前，因为不知道表格怎么填而困扰？不在固定的栏位用固定的说法填写，手续就办不下去。对不擅长当地语言、或情况不符合固定格式的人来说，更是困难。适应式行政（Adaptive Administration）是《多元宇宙》这本书的构想：用技术降低这道「格式之墙」。</p>
 <h2>一句话说明</h2>
-<p>这是一种构想：<strong>让政府机关和大企业按固定格式与规则处理的制度，能配合每位用户的语言和情况运作</strong>[1][2]。书的简介说：「『适应式行政』建立跨行政和法律系统的翻译器，让人们以更多样的方式生活，同时仍能在法治下相互协作。」[2]</p>
-<p>书举出的工具，是产生文字等内容的 AI（书的用语是「<a href="generative-foundation-models.html">生成式基础模型</a>」，简称 GFM）。目标是保留为了公平而设的规则，同时让多样的人都能直接使用制度[1]。「适应式」指的是配合对象与情况改变形式。</p>
+<p>这是一种构想：<strong>让政府机关和大企业按固定格式与规则处理的制度，能配合每位用户的语言和情况运作</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。书的简介说：「『适应式行政』建立跨行政和法律系统的翻译器，让人们以更多样的方式生活，同时仍能在法治下相互协作。」<a class="cite" href="#src-2" data-src="src-2">[2]</a></p>
+<p>书举出的工具，是产生文字等内容的 AI（书的用语是「<a href="generative-foundation-models.html">生成式基础模型</a>」，简称 GFM）。目标是保留为了公平而设的规则，同时让多样的人都能直接使用制度<a class="cite" href="#src-1" data-src="src-1">[1]</a>。「适应式」指的是配合对象与情况改变形式。</p>
 <h2>举例来说</h2>
-<p><strong>印度的农民与语音 AI。</strong> 书的 5-5 章开头写道：「在瑞士达沃斯举行的世界经济论坛上，微软首席执行官萨提亚·纳德拉（Satya Nadella）展示了一项创新技术」——印度农村讲当地语言的农民，对功能手机说话；大型语言模型（理解并产生文字的 AI）理解语音，「将当地语言翻译成国家官方语言，并提供相关表格及填写指南，进一步以语音形式向农民提供指导」[3]。</p>
-<p>书说，这项技术源于多年的跨领域合作，「不仅有助于保护和强化印度丰富的文化多样性，还确保了那些语言较少使用、居住在偏远地区的人们能够获得维持生活所需的公共服务」。之后也推出了协助农民申请财政支援计划的政府聊天机器人，以及基于 WhatsApp 的免费多语言聊天机器人[3]。</p>
-<p><strong>引导福利申请的聊天机器人。</strong> 书举出走在前面的例子：芬兰政府的 Kela-Kelpo 项目、德国的联邦养老保险系统、美国的福利数据信托基金等[4]。</p>
-<p><strong>这本书的翻译。</strong> 5-0 章写道：「本书由社群翻译，并使用了我们在《5-5 适应式行政》一章中讨论的许多跨语言和次文化工具。」[5] 带领日文翻译社群的西尾泰和记录道，安野贵博是读了日文翻译社群中的机器翻译，才知道「<a href="broad-listening.html">广泛倾听</a>」这个想法的[6]。→ <a href="plurality-in-japan.html">Plurality 在日本</a></p>
+<p><strong>印度的农民与语音 AI。</strong> 书的 5-5 章开头写道：「在瑞士达沃斯举行的世界经济论坛上，微软首席执行官萨提亚·纳德拉（Satya Nadella）展示了一项创新技术」——印度农村讲当地语言的农民，对功能手机说话；大型语言模型（理解并产生文字的 AI）理解语音，「将当地语言翻译成国家官方语言，并提供相关表格及填写指南，进一步以语音形式向农民提供指导」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>书说，这项技术源于多年的跨领域合作，「不仅有助于保护和强化印度丰富的文化多样性，还确保了那些语言较少使用、居住在偏远地区的人们能够获得维持生活所需的公共服务」。之后也推出了协助农民申请财政支援计划的政府聊天机器人，以及基于 WhatsApp 的免费多语言聊天机器人<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>引导福利申请的聊天机器人。</strong> 书举出走在前面的例子：芬兰政府的 Kela-Kelpo 项目、德国的联邦养老保险系统、美国的福利数据信托基金等<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>这本书的翻译。</strong> 5-0 章写道：「本书由社群翻译，并使用了我们在《5-5 适应式行政》一章中讨论的许多跨语言和次文化工具。」<a class="cite" href="#src-5" data-src="src-5">[5]</a> 带领日文翻译社群的西尾泰和记录道，安野贵博是读了日文翻译社群中的机器翻译，才知道「<a href="broad-listening.html">广泛倾听</a>」这个想法的<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="plurality-in-japan.html">Plurality 在日本</a></p>
 <h2>深入了解</h2>
 <h3>什么是行政管理</h3>
-<p>书说，行政管理和科层组织涉及结构化的交流方式和规则绑定，「通常比自然语言的惯例更为正式和严格」，目的在于实现合法性、公平性和程序正义。法律、财产制度、身分认证、招聘和录取等，都受到它的影响[1]。</p>
-<p>身分证件、履历表、房屋权状、税务单、医疗评估表……书说，生活中许多最重要的时刻，都取决于这些「比我们大多数人的生活形式薄弱得多」的资讯结构[7]。</p>
+<p>书说，行政管理和科层组织涉及结构化的交流方式和规则绑定，「通常比自然语言的惯例更为正式和严格」，目的在于实现合法性、公平性和程序正义。法律、财产制度、身分认证、招聘和录取等，都受到它的影响<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>身分证件、履历表、房屋权状、税务单、医疗评估表……书说，生活中许多最重要的时刻，都取决于这些「比我们大多数人的生活形式薄弱得多」的资讯结构<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>两种方向相反的不满</h3>
-<p>书写道，行政系统面临两个截然相反的问题[8]。</p>
+<p>书写道，行政系统面临两个截然相反的问题<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p><strong>① 太僵化。</strong> 大多数地方都有车速限制，但安全车速因道路和条件而异。来自不同文化背景的人，不得不把自己的经历套进履历和成绩单的格式。20 世纪 90 年代末，一家荷兰航空公司甚至在机场处理掉了数百只没有适当文件的活松鼠。</p>
 <p><strong>② 太复杂。</strong> 就像法兰兹·卡夫卡的《城堡》那样，难以理解，充满繁文缛节，给予行政人员过多的自由裁量权。</p>
-<p>书的总结是，复杂的一个关键原因，是需要处理案件的多样性：「科层组织在试图跨越广泛的社会多样性时变得不合法的主要原因，正是为了适应这种多样性，它们必须变得如此复杂。」[8]</p>
+<p>书的总结是，复杂的一个关键原因，是需要处理案件的多样性：「科层组织在试图跨越广泛的社会多样性时变得不合法的主要原因，正是为了适应这种多样性，它们必须变得如此复杂。」<a class="cite" href="#src-8" data-src="src-8">[8]</a></p>
 <h3>老式 AI 与今天的 AI</h3>
-<p>20 世纪 70、80 年代的「老式 AI」（GOFAI），试图把从专家那里听来的规则写成层层巢状的决策树，将官僚处理自动化：「病人发烧了吗？如果是，她的眼睛是否发红」……这种方式后来遇到了很大的障碍[9]。</p>
-<p>今天的 AI（特别是 GFM）从大量实例中以概率的方式学习，能再现出人类灵活分类、反应与推理的能力。书认为，这让行政程序可以接受更多样和非结构化的输入，同时保有一定程度的可重复性，不会给用户带来「填写专门表格」的过重负担[9]。</p>
-<p>不过书也写道：「GFM 的力量与其说源于『AI』，不如说源于其网络化和概率性结构」，而这种结构也可以存在于人际关系网络中，「包括更具适应性的官僚机构形式」[10]。</p>
+<p>20 世纪 70、80 年代的「老式 AI」（GOFAI），试图把从专家那里听来的规则写成层层巢状的决策树，将官僚处理自动化：「病人发烧了吗？如果是，她的眼睛是否发红」……这种方式后来遇到了很大的障碍<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>今天的 AI（特别是 GFM）从大量实例中以概率的方式学习，能再现出人类灵活分类、反应与推理的能力。书认为，这让行政程序可以接受更多样和非结构化的输入，同时保有一定程度的可重复性，不会给用户带来「填写专门表格」的过重负担<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>不过书也写道：「GFM 的力量与其说源于『AI』，不如说源于其网络化和概率性结构」，而这种结构也可以存在于人际关系网络中，「包括更具适应性的官僚机构形式」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>已有的尝试</h3>
-<p>除了福利的引导，书还举出以下尝试[4][10]：</p>
+<p>除了福利的引导，书还举出以下尝试<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>：</p>
 <ul>
 <li>帮助付不起传统法律支援的人获得法律咨询的服务。</li>
 <li>改变只从名牌大学招聘的做法。不过，过去聘用这类候选人的实例有限，可能削弱这类算法的可靠性。</li>
@@ -74,18 +80,18 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ul>
 <h3>前沿</h3>
 <p>书描绘了两种未来的样貌。</p>
-<p><strong>新一代的徽章。</strong> 这是丹妮尔·艾伦（Danielle Allen）等人的构想：以「徽章」逐步取代传统的课程作业和成绩制度，从认可特定技能的「微徽章」开始，组合成「中徽章」，最终逐级达到可被雇主或教育机构使用的「宏观徽章」。书说，GFM 可能帮助雇主应对更复杂的履历，帮助学生导航更多样的学习途径[11]。</p>
-<p><strong>习俗的翻译。</strong> 书写道，就像 GFM 越来越能以低成本提供翻译一样，「我们可以想像同样快速的、跨文化规范的翻译也可能变得可行」。这样也许能把现代化和殖民主义所覆盖的多样传统（送礼的义务、家庭冲突的解决、土地使用等），与现行的法律体系连结起来[12]。</p>
+<p><strong>新一代的徽章。</strong> 这是丹妮尔·艾伦（Danielle Allen）等人的构想：以「徽章」逐步取代传统的课程作业和成绩制度，从认可特定技能的「微徽章」开始，组合成「中徽章」，最终逐级达到可被雇主或教育机构使用的「宏观徽章」。书说，GFM 可能帮助雇主应对更复杂的履历，帮助学生导航更多样的学习途径<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p><strong>习俗的翻译。</strong> 书写道，就像 GFM 越来越能以低成本提供翻译一样，「我们可以想像同样快速的、跨文化规范的翻译也可能变得可行」。这样也许能把现代化和殖民主义所覆盖的多样传统（送礼的义务、家庭冲突的解决、土地使用等），与现行的法律体系连结起来<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>反而更不透明。</strong> 书自己举出危险：GFM 的不透明性、「有助于掩盖创建条件的自主神秘性」（英文版说明，这种神秘性隐含在一般的「AI」用语中，所以书大多避免这个词）、继承资料来源和创建者偏见的可能，以及滥用的可能。用在行政上，虽然互动可能较不繁琐，「但它们可以说进一步加剧了科层组织的不透明性」，也未必能大幅缓解裁量和人类偏见的问题[13]。</li>
-<li><strong>以谁的条件纳入多样性？</strong> 书说，探索多样性并将其纳入模型的权力条件，将决定模型是为多样性提供机会，还是迫使人们顺从；并以此为戒：「许多古老的人种学家成为殖民征服的工具，而不是包容翻译的代言人」[13]。</li>
-<li><strong>钻法律漏洞的滥用。</strong> 书提醒，在强大利益集团的滥用下，「跨法律制度的互操作性很容易沦为监管套利，利用法律意图与正式规则之间的差距」[13]。</li>
+<li><strong>反而更不透明。</strong> 书自己举出危险：GFM 的不透明性、「有助于掩盖创建条件的自主神秘性」（英文版说明，这种神秘性隐含在一般的「AI」用语中，所以书大多避免这个词）、继承资料来源和创建者偏见的可能，以及滥用的可能。用在行政上，虽然互动可能较不繁琐，「但它们可以说进一步加剧了科层组织的不透明性」，也未必能大幅缓解裁量和人类偏见的问题<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>以谁的条件纳入多样性？</strong> 书说，探索多样性并将其纳入模型的权力条件，将决定模型是为多样性提供机会，还是迫使人们顺从；并以此为戒：「许多古老的人种学家成为殖民征服的工具，而不是包容翻译的代言人」<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>钻法律漏洞的滥用。</strong> 书提醒，在强大利益集团的滥用下，「跨法律制度的互操作性很容易沦为监管套利，利用法律意图与正式规则之间的差距」<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>书的第 5 部列出多种协作形式，适应式行政是第五种。它比讨论（<a href="augmented-deliberation.html">扩增审议</a>）更有固定形式、触及更广；又比投票（<a href="plural-voting.html">⿻投票</a>）允许更长的交流[1][2]。</p>
-<p>也可以说，它是让人实际使用第 4 部的身分、财产、存取权等制度时的窗口。4-1 章也预告，管理多元身分系统的复杂性时，「我们将在往后的章节中，讨论 GFM 可发挥的作用」[14]。→ <a href="identity-and-personhood.html">身分与人格权</a>、<a href="digital-public-infrastructure.html">数位公共建设</a></p>
-<p>书也说，弱点可以由其他章补足：<a href="immersive-shared-reality.html">沉浸式共享实境</a>或<a href="post-symbolic-communication.html">后符号交流</a>能在人类社群中建立信任；集体审议和决策方法，能界定 GFM 的治理与引导方式的合法权力分配[13]。→ <a href="civic-ai.html">仁工智慧</a></p>
+<p>书的第 5 部列出多种协作形式，适应式行政是第五种。它比讨论（<a href="augmented-deliberation.html">扩增审议</a>）更有固定形式、触及更广；又比投票（<a href="plural-voting.html">⿻投票</a>）允许更长的交流<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>也可以说，它是让人实际使用第 4 部的身分、财产、存取权等制度时的窗口。4-1 章也预告，管理多元身分系统的复杂性时，「我们将在往后的章节中，讨论 GFM 可发挥的作用」<a class="cite" href="#src-14" data-src="src-14">[14]</a>。→ <a href="identity-and-personhood.html">身分与人格权</a>、<a href="digital-public-infrastructure.html">数位公共建设</a></p>
+<p>书也说，弱点可以由其他章补足：<a href="immersive-shared-reality.html">沉浸式共享实境</a>或<a href="post-symbolic-communication.html">后符号交流</a>能在人类社群中建立信任；集体审议和决策方法，能界定 GFM 的治理与引导方式的合法权力分配<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→ <a href="civic-ai.html">仁工智慧</a></p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》5-5〈适应式行政〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
@@ -95,18 +101,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《多元宇宙》5-5〈适应式行政〉「行政管理的核心」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>《多元宇宙》简介，各章摘要（5-5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
-<li>《多元宇宙》5-5 章首三段 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>《多元宇宙》5-5「明日的行政管理」一节的条列 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>《多元宇宙》5-0〈协作技术与民主〉章首 — <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
-<li>西尾泰和「Plurality in Japan（サイボウズラボ）」（Cosense，日文）— <a href="https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29" target="_blank" rel="noopener">https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29</a></li>
-<li>《多元宇宙》5-5「今日的行政管理」一节开头 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>同上，谈僵化与复杂的段落 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>《多元宇宙》5-5「明日的行政管理」一节第 1～3 段 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>同上，末段 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>《多元宇宙》5-5「行政管理的前沿」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>同上，谈习俗翻译的段落 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
-<li>《多元宇宙》5-5「行政管理的局限」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a> ；避免「AI」一词的说明见英文版 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a></li>
-<li>《多元宇宙》4-1〈身分与人格权〉— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
-</ol><div class='related'>相关: <a href='generative-foundation-models.html'>什么是生成式基础模型（GFM）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='digital-public-infrastructure.html'>什么是数位公共建设（DPI）？</a> ・ <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fadaptive-administration.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%82%E5%BA%94%E5%BC%8F%E8%A1%8C%E6%94%BF%EF%BC%88adaptive%20administration%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fadaptive-administration.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《多元宇宙》5-5〈适应式行政〉「行政管理的核心」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-2">《多元宇宙》简介，各章摘要（5-5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
+<li id="src-3">《多元宇宙》5-5 章首三段 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-4">《多元宇宙》5-5「明日的行政管理」一节的条列 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-5">《多元宇宙》5-0〈协作技术与民主〉章首 — <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
+<li id="src-6">西尾泰和「Plurality in Japan（サイボウズラボ）」（Cosense，日文）— <a href="https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29" target="_blank" rel="noopener">https://scrapbox.io/nishio/Plurality_in_Japan%28%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%A9%E3%83%9C%29</a></li>
+<li id="src-7">《多元宇宙》5-5「今日的行政管理」一节开头 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-8">同上，谈僵化与复杂的段落 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-9">《多元宇宙》5-5「明日的行政管理」一节第 1～3 段 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-10">同上，末段 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-11">《多元宇宙》5-5「行政管理的前沿」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-12">同上，谈习俗翻译的段落 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li id="src-13">《多元宇宙》5-5「行政管理的局限」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a> ；避免「AI」一词的说明见英文版 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a></li>
+<li id="src-14">《多元宇宙》4-1〈身分与人格权〉— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='generative-foundation-models.html'>什么是生成式基础模型（GFM）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='digital-public-infrastructure.html'>什么是数位公共建设（DPI）？</a> ・ <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fadaptive-administration.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%82%E5%BA%94%E5%BC%8F%E8%A1%8C%E6%94%BF%EF%BC%88adaptive%20administration%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fadaptive-administration.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

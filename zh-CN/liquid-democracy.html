@@ -41,12 +41,18 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../liquid-democracy.html">日本語</a> <a class="lang" hreflang="en" href="../en/liquid-democracy.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/liquid-democracy.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是流动式民主（liquid democracy）？</h1><div class='lead'>每个议题都可以选择「自己投票」或「把票交给信任的人」的机制。受托的人可以再把票转交给别人，委托的人也可以随时收回、自己投票。</div><p>选举时，几年选一次人，之后就全部交给那个人。但你是否也曾想过：「医疗的事我相信那个人，但教育的事我想自己决定」？流动式民主（Liquid Democracy）就是让人能依议题、随时重新选择要委托还是自己决定的想法。「流动」这个名字，表示选票像水一样在人与人之间流动。</p>
 <h2>一句话说明</h2>
-<p>流动式民主是每个议题都能选择「<strong>自己投票</strong>」或「<strong>把票交给信任的人</strong>」的机制。受托的人可以再把票转交给别人。委托的人随时可以收回，自己投票[1][2][3]。</p>
+<p>流动式民主是每个议题都能选择「<strong>自己投票</strong>」或「<strong>把票交给信任的人</strong>」的机制。受托的人可以再把票转交给别人。委托的人随时可以收回，自己投票<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>小例子（为了说明而虚构）。</strong> 假设 5 个人的社区管委会要决定「公园整修」[1][2]。</p>
+<p><strong>小例子（为了说明而虚构）。</strong> 假设 5 个人的社区管委会要决定「公园整修」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ul>
 <li>A 把票交给熟悉植物的 B。</li>
 <li>B 把自己和 A 的 2 票，再转交给造园专家 C。</li>
@@ -54,36 +60,36 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li>D 和 E 各自投 1 票。</li>
 </ul>
 <p>合计 3 + 1 + 1 = 5 票，和人数相同。如果 A 无法认同 C 的方案，可以只在这个议题上收回委托，自己投票。在「税金怎么用」这个另外的议题上，A 也可以把票交给熟悉会计的 D。</p>
-<p><strong>德国海盗党（2000 年代后半～2010 年代）。</strong> 根据德文维基百科，德国海盗党把流动式民主当作取代现行议会的构想，并在党内的意见形成中使用票的委托。转交一再叠加之后，大量的票集中在少数人身上，被称为「超级代表」。2012 年，党的 IT 负责人说，自己受托的 79 票，只要做出离谱的事，可能一夜之间就会消失[1]。</p>
-<p><strong>德国弗里斯兰县（2012～2015 年）。</strong> 同样根据德文维基百科，这个县建立了以流动式民主运作的公民参与平台「LiquidFriesland」。可是市民从一开始就不使用。后来其他县跟进的平台也没人用，到 2017 年 2 月时，最新的贴文已是一年前的[1]。</p>
-<p><strong>书举出的例子。</strong> 《多元宇宙》举出企业和其他营利性组织（例如 DAO，网络上的共同组织）的治理，以及冰岛等少数政治脉络[3]。推动多元宇宙的非营利组织激进变革组织（RadicalxChange）也在内部决策中，实施了与「把流动式民主和平方根权重组合起来」（平方流动式民主）相关的机制[3][4]。</p>
+<p><strong>德国海盗党（2000 年代后半～2010 年代）。</strong> 根据德文维基百科，德国海盗党把流动式民主当作取代现行议会的构想，并在党内的意见形成中使用票的委托。转交一再叠加之后，大量的票集中在少数人身上，被称为「超级代表」。2012 年，党的 IT 负责人说，自己受托的 79 票，只要做出离谱的事，可能一夜之间就会消失<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>德国弗里斯兰县（2012～2015 年）。</strong> 同样根据德文维基百科，这个县建立了以流动式民主运作的公民参与平台「LiquidFriesland」。可是市民从一开始就不使用。后来其他县跟进的平台也没人用，到 2017 年 2 月时，最新的贴文已是一年前的<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>书举出的例子。</strong> 《多元宇宙》举出企业和其他营利性组织（例如 DAO，网络上的共同组织）的治理，以及冰岛等少数政治脉络<a class="cite" href="#src-3" data-src="src-3">[3]</a>。推动多元宇宙的非营利组织激进变革组织（RadicalxChange）也在内部决策中，实施了与「把流动式民主和平方根权重组合起来」（平方流动式民主）相关的机制<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>运作方式</h2>
 <h3>三个特征</h3>
-<p>德文维基百科把它与一般代议制的差别归纳为三点[1]：</p>
+<p>德文维基百科把它与一般代议制的差别归纳为三点<a class="cite" href="#src-1" data-src="src-1">[1]</a>：</p>
 <ol>
 <li><strong>可以细分委托。</strong> 可以就每一个决定委托，也可以就「环境」这样的领域委托。</li>
 <li><strong>随时可以收回。</strong> 不必等到下一次选举。</li>
 <li><strong>可以再委托。</strong> 受托的人可以再转交给别人。</li>
 </ol>
-<p>法文维基百科依照研究者 Bryan Ford 的论文，列出几项原则：任何人都能轻松成为代表、代表的判断公开、个人的投票保密等。并说它可以看成直接民主（所有人自己决定）与代议民主（交给代表）的结合[2]。</p>
+<p>法文维基百科依照研究者 Bryan Ford 的论文，列出几项原则：任何人都能轻松成为代表、代表的判断公开、个人的投票保密等。并说它可以看成直接民主（所有人自己决定）与代议民主（交给代表）的结合<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>书的说明与由来</h3>
-<p>书在 5-6 章说，流动式民主「拓展了比例代表制的理念，让任何选民可将自己的投票权委托给其他人，其他人可以再委托，从而实现了自下而上的新兴代表制模式」[3]。</p>
-<p>英文版 5-6 章把它的源头追溯到《爱丽丝梦游仙境》的作者路易斯·卡罗（本名 Charles Dodgson）1884 年关于议会代表制的研究。书写道，Dodgson 也是第一个提出「持有多张选票的人，票要怎么加权」这个问题的人，这个问题也启发了<a href="quadratic-voting.html">平方投票</a>[5]（目前的繁体中文版 5-6 章没有这一段）。</p>
+<p>书在 5-6 章说，流动式民主「拓展了比例代表制的理念，让任何选民可将自己的投票权委托给其他人，其他人可以再委托，从而实现了自下而上的新兴代表制模式」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>英文版 5-6 章把它的源头追溯到《爱丽丝梦游仙境》的作者路易斯·卡罗（本名 Charles Dodgson）1884 年关于议会代表制的研究。书写道，Dodgson 也是第一个提出「持有多张选票的人，票要怎么加权」这个问题的人，这个问题也启发了<a href="quadratic-voting.html">平方投票</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>（目前的繁体中文版 5-6 章没有这一段）。</p>
 <h3>来自日本的脉络：复体民主</h3>
-<p>英文版 5-6 章的注脚，介绍了日本研究者、创业家铃木健提出的「复体民主」（Divicracy，日文「分人民主主义」）。和流动式民主不同，它不只能把票委托给别人，还能把一票分割、投到多个议题上。铃木在 2000 年代提出这个想法，并在 2013 年的书《平滑社会及其敌人》中详细论述[5]。铃木的官方网站说明：一票可以分割，既能投给政策也能投给人；受托的票可以再委托；已投的票随时可以更改[6]。</p>
+<p>英文版 5-6 章的注脚，介绍了日本研究者、创业家铃木健提出的「复体民主」（Divicracy，日文「分人民主主义」）。和流动式民主不同，它不只能把票委托给别人，还能把一票分割、投到多个议题上。铃木在 2000 年代提出这个想法，并在 2013 年的书《平滑社会及其敌人》中详细论述<a class="cite" href="#src-5" data-src="src-5">[5]</a>。铃木的官方网站说明：一票可以分割，既能投给政策也能投给人；受托的票可以再委托；已投的票随时可以更改<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>AI 时代的脉络</h3>
-<p>研究团体集体智慧计划（Collective Intelligence Project）2023 年的白皮书，把流动式民主列为引出人们价值观的方法之一，并提到把它用于推荐系统设计的实验[7]。OpenAI 征求把公民意见纳入 AI 的尝试时，也把流动式民主列为选项之一[8]。书本身也构想了由数位助理学习本人想法、在本人审查下代为投票的机制[4]。</p>
+<p>研究团体集体智慧计划（Collective Intelligence Project）2023 年的白皮书，把流动式民主列为引出人们价值观的方法之一，并提到把它用于推荐系统设计的实验<a class="cite" href="#src-7" data-src="src-7">[7]</a>。OpenAI 征求把公民意见纳入 AI 的尝试时，也把流动式民主列为选项之一<a class="cite" href="#src-8" data-src="src-8">[8]</a>。书本身也构想了由数位助理学习本人想法、在本人审查下代为投票的机制<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>票会集中在少数人手上。</strong> 书本身承认，这些系统「权力往往过度集中，因为授权往往流向少数人手中」，这在一定程度上削弱了人们最初的热情[3]。德国海盗党的「超级代表」常被当作例子。不过德文维基百科也写道，委托的票随时可以收回，所以权力有限；研究也发现，超级代表大致按照委托者的意向使用选票[1]。</li>
-<li><strong>没人使用。</strong> 就像弗里斯兰县的例子，平台建起来了，市民也可能不参与[1]。</li>
-<li><strong>保密与可验证的两全。</strong> 德文维基百科提到，德国宪法法院判断，要让电子投票充分兼顾投票保密与「能确认计票正确」，目前技术上仍有困难。因此有的系统改为公开投票来因应，但像干部选举这类秘密投票就必须另外进行。也有批评说，不熟悉数位设备的人会吃亏[1]。</li>
-<li><strong>改良方案。</strong> 以太坊创始人维塔利克·布特林（Vitalik Buterin）把流动式民主算作介于民主与市场之间的优秀机制之一[9]。2025 年，布特林介绍了 Eliezer Yudkowsky 的方案：每个人选一位代表，只有集到大约 50～200 票的代表才有权力，再叠两三层组成议会。布特林写道，这不容易被民粹牵着走，但得先找个地方试试看[10]。</li>
+<li><strong>票会集中在少数人手上。</strong> 书本身承认，这些系统「权力往往过度集中，因为授权往往流向少数人手中」，这在一定程度上削弱了人们最初的热情<a class="cite" href="#src-3" data-src="src-3">[3]</a>。德国海盗党的「超级代表」常被当作例子。不过德文维基百科也写道，委托的票随时可以收回，所以权力有限；研究也发现，超级代表大致按照委托者的意向使用选票<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>没人使用。</strong> 就像弗里斯兰县的例子，平台建起来了，市民也可能不参与<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>保密与可验证的两全。</strong> 德文维基百科提到，德国宪法法院判断，要让电子投票充分兼顾投票保密与「能确认计票正确」，目前技术上仍有困难。因此有的系统改为公开投票来因应，但像干部选举这类秘密投票就必须另外进行。也有批评说，不熟悉数位设备的人会吃亏<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>改良方案。</strong> 以太坊创始人维塔利克·布特林（Vitalik Buterin）把流动式民主算作介于民主与市场之间的优秀机制之一<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2025 年，布特林介绍了 Eliezer Yudkowsky 的方案：每个人选一位代表，只有集到大约 50～200 票的代表才有权力，再叠两三层组成议会。布特林写道，这不容易被民粹牵着走，但得先找个地方试试看<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>书在 5-6 章〈<a href="plural-voting.html">⿻投票</a>〉中，把流动式民主和<a href="quadratic-voting.html">平方投票</a>并列为两项「让人期待的方式，尽管还不那么完整」的发展[3]。</p>
-<p>对流动式民主的弱点——权力集中——书认为使用平方根权重的「平方流动式民主」是自然的解方[4]。书也写道，精密的流动式民主制度可能有助于形成新型的联盟和代表，跨越现有的分歧，所以或许不必为了妥协而牺牲多样性[11]。</p>
-<p>在书的制作营运所用的<a href="plural-management-protocol.html">多元管理协定</a>周边，日文版译者之间也在 2024 年 4 月提出了一个方案：以受流动式民主启发的委托方式来分配贡献点数[12]。</p>
+<p>书在 5-6 章〈<a href="plural-voting.html">⿻投票</a>〉中，把流动式民主和<a href="quadratic-voting.html">平方投票</a>并列为两项「让人期待的方式，尽管还不那么完整」的发展<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>对流动式民主的弱点——权力集中——书认为使用平方根权重的「平方流动式民主」是自然的解方<a class="cite" href="#src-4" data-src="src-4">[4]</a>。书也写道，精密的流动式民主制度可能有助于形成新型的联盟和代表，跨越现有的分歧，所以或许不必为了妥协而牺牲多样性<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>在书的制作营运所用的<a href="plural-management-protocol.html">多元管理协定</a>周边，日文版译者之间也在 2024 年 4 月提出了一个方案：以受流动式民主启发的委托方式来分配贡献点数<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》5-6〈⿻投票〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
@@ -96,16 +102,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Liquid Democracy（德文维基百科）— <a href="https://de.wikipedia.org/wiki/Liquid_Democracy" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Liquid_Democracy</a></li>
-<li>Démocratie liquide（法文维基百科）— <a href="https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide" target="_blank" rel="noopener">https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide</a></li>
-<li>《多元宇宙》5-6「明日的投票」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
-<li>《多元宇宙》5-6「未来的投票」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
-<li>《Plurality》英文版 5-6 "⿻ Voting tomorrow" 与注脚（Carroll、Divicracy）— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a></li>
-<li>铃木健《平滑社会及其敌人》官方解说 — <a href="https://nameteki.kensuzuki.org/book-summary-enjazh-tw" target="_blank" rel="noopener">https://nameteki.kensuzuki.org/book-summary-enjazh-tw</a></li>
-<li>Collective Intelligence Project 白皮书（2023）— <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
-<li>OpenAI, "Democratic Inputs to AI"（2023）— <a href="https://openai.com/index/democratic-inputs-to-ai/" target="_blank" rel="noopener">https://openai.com/index/democratic-inputs-to-ai/</a></li>
-<li>Vitalik Buterin, "Blockchain voting is overrated among uninformed people but underrated among informed people"（2021）— <a href="https://vitalik.eth.limo/general/2021/05/25/voting2.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2021/05/25/voting2.html</a></li>
-<li>Vitalik Buterin, "Let a thousand societies bloom"（2025）— <a href="https://vitalik.eth.limo/general/2025/12/17/societies.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/12/17/societies.html</a></li>
-<li>《多元宇宙》5-6「投票的局限」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
-<li>日文版译者的代币分配方案 V2（Cosense，日文）— <a href="https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2</a></li>
-</ol><div class='related'>相关: <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fliquid-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%B5%81%E5%8A%A8%E5%BC%8F%E6%B0%91%E4%B8%BB%EF%BC%88liquid%20democracy%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fliquid-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Liquid Democracy（德文维基百科）— <a href="https://de.wikipedia.org/wiki/Liquid_Democracy" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Liquid_Democracy</a></li>
+<li id="src-2">Démocratie liquide（法文维基百科）— <a href="https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide" target="_blank" rel="noopener">https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide</a></li>
+<li id="src-3">《多元宇宙》5-6「明日的投票」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li id="src-4">《多元宇宙》5-6「未来的投票」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li id="src-5">《Plurality》英文版 5-6 "⿻ Voting tomorrow" 与注脚（Carroll、Divicracy）— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a></li>
+<li id="src-6">铃木健《平滑社会及其敌人》官方解说 — <a href="https://nameteki.kensuzuki.org/book-summary-enjazh-tw" target="_blank" rel="noopener">https://nameteki.kensuzuki.org/book-summary-enjazh-tw</a></li>
+<li id="src-7">Collective Intelligence Project 白皮书（2023）— <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
+<li id="src-8">OpenAI, "Democratic Inputs to AI"（2023）— <a href="https://openai.com/index/democratic-inputs-to-ai/" target="_blank" rel="noopener">https://openai.com/index/democratic-inputs-to-ai/</a></li>
+<li id="src-9">Vitalik Buterin, "Blockchain voting is overrated among uninformed people but underrated among informed people"（2021）— <a href="https://vitalik.eth.limo/general/2021/05/25/voting2.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2021/05/25/voting2.html</a></li>
+<li id="src-10">Vitalik Buterin, "Let a thousand societies bloom"（2025）— <a href="https://vitalik.eth.limo/general/2025/12/17/societies.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/12/17/societies.html</a></li>
+<li id="src-11">《多元宇宙》5-6「投票的局限」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li id="src-12">日文版译者的代币分配方案 V2（Cosense，日文）— <a href="https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2</a></li>
+</ol><div class='related'>相关: <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fliquid-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%B5%81%E5%8A%A8%E5%BC%8F%E6%B0%91%E4%B8%BB%EF%BC%88liquid%20democracy%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fliquid-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

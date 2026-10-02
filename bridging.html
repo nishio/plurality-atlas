@@ -41,43 +41,49 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/bridging.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/bridging.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/bridging.html">简体中文</a></nav></header>
 <main lang="ja"><h1>ブリッジング（橋渡し）ってなに？</h1><div class='lead'>「ふだん意見が分かれる人たちが、そろって支持するもの」を上位に出す設計の考え方です。いいねの数や閲覧数で並べる代わりに、分断をまたぐ支持を重んじます。Community Notes や Polis が代表例です。</div><p>SNS を開くと、怒りをかき立てる投稿や、相手の陣営をあざける投稿ばかりが目に入ることがあります。それは偶然ではなく、多くの SNS が「反応が多いもの」を上に出すように作られているからだ、と指摘されています。では、並べ方の基準を変えたらどうなるでしょう。ブリッジング（橋渡し）は、そのための考え方です。</p>
 <h2>ひとことで言うと</h2>
-<p>ブリッジング（bridging、橋渡し）は、<strong>「ふだん意見が分かれる人たちが、そろって支持するもの」を目立たせる</strong>、という順位づけと設計の考え方です[1][2]。</p>
-<p>多くの SNS のように「反応が多いもの」を上に出すのではありません。分断をまたいで支持されたものを上に出します[1][2]。</p>
+<p>ブリッジング（bridging、橋渡し）は、<strong>「ふだん意見が分かれる人たちが、そろって支持するもの」を目立たせる</strong>、という順位づけと設計の考え方です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>多くの SNS のように「反応が多いもの」を上に出すのではありません。分断をまたいで支持されたものを上に出します<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>Community Notes（X）。</strong> X（旧 Twitter）では、誤解を招く投稿に利用者が補足説明（ノート）を付けられます。そのノートは、過去の評価が食い違ってきた人どうしが「役に立つ」と一致したときにだけ表示されます[3]。多数決ではありません。このしくみの論文（2022 年）は、題名でこの選び方を「Bridging Algorithms（橋渡しのアルゴリズム）」と呼びました[4]。</p>
-<p><strong>Polis（台湾の vTaiwan など）。</strong> 意見集約のツール Polis は、参加者の賛否から意見のグループを見つけ、どのグループからも賛成される意見を示します[5]。本『Plurality』は、Polis は「存在する意見のクラスターを示し、それらを橋渡しするステートメントを強調表示する」と書いています[6]。</p>
-<p><strong>投稿そのものへの応用。</strong> X は、ノートだけでなく投稿についても、「ふだん意見が違う人たちから『いいね』された投稿」を見つける小さな試験を始めました[7]。いまのところ、投稿がどれだけ表示されるかには影響させていない、と明記しています[7]。</p>
+<p><strong>Community Notes（X）。</strong> X（旧 Twitter）では、誤解を招く投稿に利用者が補足説明（ノート）を付けられます。そのノートは、過去の評価が食い違ってきた人どうしが「役に立つ」と一致したときにだけ表示されます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。多数決ではありません。このしくみの論文（2022 年）は、題名でこの選び方を「Bridging Algorithms（橋渡しのアルゴリズム）」と呼びました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>Polis（台湾の vTaiwan など）。</strong> 意見集約のツール Polis は、参加者の賛否から意見のグループを見つけ、どのグループからも賛成される意見を示します<a class="cite" href="#src-5" data-src="src-5">[5]</a>。本『Plurality』は、Polis は「存在する意見のクラスターを示し、それらを橋渡しするステートメントを強調表示する」と書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>投稿そのものへの応用。</strong> X は、ノートだけでなく投稿についても、「ふだん意見が違う人たちから『いいね』された投稿」を見つける小さな試験を始めました<a class="cite" href="#src-7" data-src="src-7">[7]</a>。いまのところ、投稿がどれだけ表示されるかには影響させていない、と明記しています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>しくみ</h2>
 <h3>利用者がすること</h3>
-<p>ブリッジングのしくみは、利用者に特別な操作を求めません[1][3]。利用者はいつもどおり「役に立つ・立たない」を評価したり、「賛成・反対」を押したりします。</p>
-<p>違うのは<strong>集計のしかた</strong>です。画面に上がってくるのが、「自分の陣営で人気のもの」ではなく、「反対側の人も認めたもの」になります[1][3]。</p>
+<p>ブリッジングのしくみは、利用者に特別な操作を求めません<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。利用者はいつもどおり「役に立つ・立たない」を評価したり、「賛成・反対」を押したりします。</p>
+<p>違うのは<strong>集計のしかた</strong>です。画面に上がってくるのが、「自分の陣営で人気のもの」ではなく、「反対側の人も認めたもの」になります<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h3>なぜ必要か</h3>
-<p>研究者アヴィヴ・オヴァジャ（Aviv Ovadya）は 2022 年の論文で、こう論じました[1]。Facebook・YouTube・TikTok などのおすすめ表示は、何を見せるかを通して、社会全体に「何をすれば報われるか」を決めるしくみになっている。反応の数で並べるやり方と人間の心理が組み合わさると、分断をあおる振る舞いほど注目という報酬を得る[1]。</p>
-<p>オヴァジャによれば、これは政治家や記者、芸能人など、誰が成功するかを左右します[1]。ひいては、社会がよい決定をする力や、協力する力、暴力的な対立の起きやすさにまで影響する、というのです[1]。</p>
-<p>ブリッジング型の順位づけは、人々を引き離すこの力に対抗して、引き寄せる力として提案されました[1]。オヴァジャは、時系列順の表示など、ほかの改革案でも、ブリッジングを入れない限り分断をねらう者に報い続けると論じ、初期設定はブリッジング型にすべきだとしています[1]。</p>
+<p>研究者アヴィヴ・オヴァジャ（Aviv Ovadya）は 2022 年の論文で、こう論じました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。Facebook・YouTube・TikTok などのおすすめ表示は、何を見せるかを通して、社会全体に「何をすれば報われるか」を決めるしくみになっている。反応の数で並べるやり方と人間の心理が組み合わさると、分断をあおる振る舞いほど注目という報酬を得る<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>オヴァジャによれば、これは政治家や記者、芸能人など、誰が成功するかを左右します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。ひいては、社会がよい決定をする力や、協力する力、暴力的な対立の起きやすさにまで影響する、というのです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>ブリッジング型の順位づけは、人々を引き離すこの力に対抗して、引き寄せる力として提案されました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。オヴァジャは、時系列順の表示など、ほかの改革案でも、ブリッジングを入れない限り分断をねらう者に報い続けると論じ、初期設定はブリッジング型にすべきだとしています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>言葉の定義</h3>
-<p>オヴァジャとルーク・ソーバーン（Luke Thorburn）は、ブリッジングを「やり方」ではなく「結果」で定義します[8]。目指すのは、「分断をまたぐ相互理解と信頼が増え、生産的な対立・熟議・協力の余地が生まれること」です[8]。ここで「生産的な対立」とあるのが大事です。対立をなくすことではなく、実りのある対立ができるようにすることを目指しているのです。</p>
+<p>オヴァジャとルーク・ソーバーン（Luke Thorburn）は、ブリッジングを「やり方」ではなく「結果」で定義します<a class="cite" href="#src-8" data-src="src-8">[8]</a>。目指すのは、「分断をまたぐ相互理解と信頼が増え、生産的な対立・熟議・協力の余地が生まれること」です<a class="cite" href="#src-8" data-src="src-8">[8]</a>。ここで「生産的な対立」とあるのが大事です。対立をなくすことではなく、実りのある対立ができるようにすることを目指しているのです。</p>
 <h3>どう計算するか ― 二つの代表的な型</h3>
-<p><strong>行列分解型（Community Notes）。</strong> 評価を「全体の甘さ ＋ 評価者の甘さ ＋ ノートそのものの良さ ＋（評価者の立場 × ノートの立場）」という式で説明する計算をします[4][9]。掛け算の部分が「同じ陣営にだけ好かれる」分を吸い取るので、残った「ノートそのものの良さ」が、陣営をまたいだ支持を表します[4][9]。</p>
-<p><strong>グループごとの掛け算（Polis）。</strong> 参加者を票のパターンで意見グループに分け、各グループの人が賛成する確率（グループ内の賛成の割合から見積もった値）を<strong>掛け合わせます</strong>[10]。説明のための作例で考えてみましょう（数字は架空です）。グループ A の 90%、グループ B の 80% が賛成する意見は 0.9 × 0.8 = 0.72 です。A の 100% が賛成しても B の 10% しか賛成しない意見は 1.0 × 0.1 = 0.1 です。どこか一つのグループでも賛成が少なければ値が小さくなるので、多数派だけに支持される意見は上に来ません[10]。</p>
-<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、これらを、分断をわざわざ見つけて、分断を固めるものより橋を架けるものを優遇する、新しい種類のしくみ作りだと呼んでいます[9]。</p>
+<p><strong>行列分解型（Community Notes）。</strong> 評価を「全体の甘さ ＋ 評価者の甘さ ＋ ノートそのものの良さ ＋（評価者の立場 × ノートの立場）」という式で説明する計算をします<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。掛け算の部分が「同じ陣営にだけ好かれる」分を吸い取るので、残った「ノートそのものの良さ」が、陣営をまたいだ支持を表します<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p><strong>グループごとの掛け算（Polis）。</strong> 参加者を票のパターンで意見グループに分け、各グループの人が賛成する確率（グループ内の賛成の割合から見積もった値）を<strong>掛け合わせます</strong><a class="cite" href="#src-10" data-src="src-10">[10]</a>。説明のための作例で考えてみましょう（数字は架空です）。グループ A の 90%、グループ B の 80% が賛成する意見は 0.9 × 0.8 = 0.72 です。A の 100% が賛成しても B の 10% しか賛成しない意見は 1.0 × 0.1 = 0.1 です。どこか一つのグループでも賛成が少なければ値が小さくなるので、多数派だけに支持される意見は上に来ません<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、これらを、分断をわざわざ見つけて、分断を固めるものより橋を架けるものを優遇する、新しい種類のしくみ作りだと呼んでいます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>誤情報への効き方</h3>
-<p>ペン（Peng）とグリメルマン（Grimmelmann）は 2024 年の論文で、誤情報への反論のうち、誤情報に賛成しそうな人と反対しそうな人の両方に好まれるものを上げれば、誤情報をいちばん信じやすい人を説得できる反論が選ばれる、と論じています[2]。判断を会社の手から利用者の投票に戻すので、言論の自由の伝統とも両立する、としています[2]。</p>
+<p>ペン（Peng）とグリメルマン（Grimmelmann）は 2024 年の論文で、誤情報への反論のうち、誤情報に賛成しそうな人と反対しそうな人の両方に好まれるものを上げれば、誤情報をいちばん信じやすい人を説得できる反論が選ばれる、と論じています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。判断を会社の手から利用者の投票に戻すので、言論の自由の伝統とも両立する、としています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>分断の激しい話題を取りこぼす。</strong> Community Notes のノート 190 万件・評価 1 億 3,500 万件を 13 か国のデータと突き合わせた研究があります[11]。それによると、計算が各国の主な対立の軸をうまくとらえるからこそ、しくみの上で、分断の激しい内容ほど訂正が足りなくなります[11]。米・英・仏・独の選挙に関する内容で特に目立った、ということです[11]。</li>
-<li><strong>偽の合意を作れる。</strong> 行列分解型は、少数のそろった投票で「作られた合意」を生み出されるおそれがあります[12]。研究では、10 票に満たない投票で、質の低いノートの最大 10.7% を基準の上に押し上げられました[12]。</li>
-<li><strong>何が分断で、何が橋渡しかを誰が決めるのか。</strong> ブリッジングの研究者たちのサイト bridging.systems は、どんな目標をしくみに組み込むかは価値の判断で、意見の分かれる問いだと認めています[13]。そのうえで、多くの人の意見を集めるしくみや、くじで選んだ市民の会議で決める方法を示しています[13]。オヴァジャも、おすすめ表示が何に報いるべきかを、影響を受ける人々に問う「プラットフォーム民主主義」を提案しています[1]。</li>
-<li><strong>よくある誤解 ―「中道を選ぶ」ことではありません。</strong> Community Notes が見ているのは、利用者が申告した政治の立場ではなく、過去の評価の傾向から推し量った立場です[3]。また本『Plurality』は、合意を見つけることだけでなく、新しい対立を生む役割も大事にしています（次の節）[14]。</li>
+<li><strong>分断の激しい話題を取りこぼす。</strong> Community Notes のノート 190 万件・評価 1 億 3,500 万件を 13 か国のデータと突き合わせた研究があります<a class="cite" href="#src-11" data-src="src-11">[11]</a>。それによると、計算が各国の主な対立の軸をうまくとらえるからこそ、しくみの上で、分断の激しい内容ほど訂正が足りなくなります<a class="cite" href="#src-11" data-src="src-11">[11]</a>。米・英・仏・独の選挙に関する内容で特に目立った、ということです<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>偽の合意を作れる。</strong> 行列分解型は、少数のそろった投票で「作られた合意」を生み出されるおそれがあります<a class="cite" href="#src-12" data-src="src-12">[12]</a>。研究では、10 票に満たない投票で、質の低いノートの最大 10.7% を基準の上に押し上げられました<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>何が分断で、何が橋渡しかを誰が決めるのか。</strong> ブリッジングの研究者たちのサイト bridging.systems は、どんな目標をしくみに組み込むかは価値の判断で、意見の分かれる問いだと認めています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。そのうえで、多くの人の意見を集めるしくみや、くじで選んだ市民の会議で決める方法を示しています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。オヴァジャも、おすすめ表示が何に報いるべきかを、影響を受ける人々に問う「プラットフォーム民主主義」を提案しています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>よくある誤解 ―「中道を選ぶ」ことではありません。</strong> Community Notes が見ているのは、利用者が申告した政治の立場ではなく、過去の評価の傾向から推し量った立場です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。また本『Plurality』は、合意を見つけることだけでなく、新しい対立を生む役割も大事にしています（次の節）<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本『Plurality』は 5-4 章「拡張熟議」で、反応の数で並べる SNS が分断を固めるという心配に対し、逆に「群衆を橋渡しする」ことをねらって作り直した試みとして Community Notes を紹介します[14][15]。Polis も、オヴァジャとソーバーンの言う「橋渡しのしくみ」の典型例とされています[14]。</p>
-<p>同じ章は、橋渡しの議論は合意づくりにかたよりがちだが、もう一つの役割がある、と強調しています[14]。それは「多様性と生産的な対立の再生」です。昔からの思い込みや所属にしばられずに意見のグループを見つければ、既存の分断をなぞらない新しい対立の軸が生まれうる、というのです[14]。</p>
-<p>本の 5-0 章は、違いに橋を架けると違いそのものがすり減る（みんなが似てくる）危険も指摘しています[16]。けれども、橋渡しは行動経済学のような新しい分野も生むので、似てくるのは避けられないことではない、と論じています[16]。</p>
-<p>オードリー・タン（Audrey Tang）は中国語のコラムで、ブリッジング型の順位づけを、対立する二つの集団をつなぎ、両方が同意する見方を見つけてもらうもの、と説明しています[17]。</p>
+<p>本『Plurality』は 5-4 章「拡張熟議」で、反応の数で並べる SNS が分断を固めるという心配に対し、逆に「群衆を橋渡しする」ことをねらって作り直した試みとして Community Notes を紹介します<a class="cite" href="#src-14" data-src="src-14">[14]</a><a class="cite" href="#src-15" data-src="src-15">[15]</a>。Polis も、オヴァジャとソーバーンの言う「橋渡しのしくみ」の典型例とされています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
+<p>同じ章は、橋渡しの議論は合意づくりにかたよりがちだが、もう一つの役割がある、と強調しています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。それは「多様性と生産的な対立の再生」です。昔からの思い込みや所属にしばられずに意見のグループを見つければ、既存の分断をなぞらない新しい対立の軸が生まれうる、というのです<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
+<p>本の 5-0 章は、違いに橋を架けると違いそのものがすり減る（みんなが似てくる）危険も指摘しています<a class="cite" href="#src-16" data-src="src-16">[16]</a>。けれども、橋渡しは行動経済学のような新しい分野も生むので、似てくるのは避けられないことではない、と論じています<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
+<p>オードリー・タン（Audrey Tang）は中国語のコラムで、ブリッジング型の順位づけを、対立する二つの集団をつなぎ、両方が同意する見方を見つけてもらうもの、と説明しています<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
 <p>関連する記事:
 - <a href="community-notes.html">Community Notes</a> — 行列分解型の代表例
 - <a href="polis.html">Polis</a> — グループごとの掛け算の代表例
@@ -95,21 +101,51 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Aviv Ovadya「Bridging-Based Ranking: How Platform Recommendation Systems Might Reduce Division and Strengthen Democracy」（Belfer Center、2022）— <a href="https://www.belfercenter.org/publication/bridging-based-ranking" target="_blank" rel="noopener">https://www.belfercenter.org/publication/bridging-based-ranking</a> ［CC BY-NC 4.0］</li>
-<li>Peng &amp; Grimmelmann「Rescuing Counterspeech: A Bridging-Based Approach to Combating Misinformation」（2024）— <a href="https://arxiv.org/abs/2410.12699" target="_blank" rel="noopener">https://arxiv.org/abs/2410.12699</a> ［CC BY 4.0］</li>
-<li>Community Notes Guide「Diversity of perspectives」— <a href="https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives" target="_blank" rel="noopener">https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives</a> ［Apache-2.0］</li>
-<li>Wojcik ほか「Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation」（2022）— <a href="https://arxiv.org/abs/2210.15723" target="_blank" rel="noopener">https://arxiv.org/abs/2210.15723</a> ［CC BY 4.0］</li>
-<li>Small ほか「Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces」（2021）— <a href="https://doi.org/10.6035/recerca.5516" target="_blank" rel="noopener">https://doi.org/10.6035/recerca.5516</a> ［CC BY-SA 4.0］</li>
-<li>『Plurality』日本語版 2-2「デジタル民主主義の日常」— <a href="https://www.plurality.net/v/chapters/2-2/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/jpn/</a> ［CC0］</li>
-<li>Community Notes Guide「Beyond notes: posts liked by people with different perspectives」— <a href="https://communitynotes.x.com/guide/en/beyond-notes/got-likes" target="_blank" rel="noopener">https://communitynotes.x.com/guide/en/beyond-notes/got-likes</a> ［Apache-2.0］</li>
-<li>bridging.systems「Definitions」— <a href="https://bridging.systems/definitions/" target="_blank" rel="noopener">https://bridging.systems/definitions/</a> ［MIT］</li>
-<li>Vitalik Buterin「What do I think about Community Notes?」（2023-08-16）— <a href="https://vitalik.eth.limo/general/2023/08/16/communitynotes.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</a></li>
-<li>Small ほか（2021）同上、グループをまたぐ合意の計算 — <a href="https://doi.org/10.6035/recerca.5516" target="_blank" rel="noopener">https://doi.org/10.6035/recerca.5516</a> ［CC BY-SA 4.0］</li>
-<li>Bouchaud &amp; Ramaciotti「Community Notes undermoderate polarizing content by design creating risks in electoral processes」（2025）— <a href="https://arxiv.org/abs/2506.15168" target="_blank" rel="noopener">https://arxiv.org/abs/2506.15168</a> ［CC BY-NC-ND 4.0］</li>
-<li>Selvam ほか「Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking」（2026）— <a href="https://arxiv.org/abs/2607.01824" target="_blank" rel="noopener">https://arxiv.org/abs/2607.01824</a> ［CC BY 4.0］</li>
-<li>bridging.systems「Who decides?」— <a href="https://bridging.systems/who-decides/" target="_blank" rel="noopener">https://bridging.systems/who-decides/</a> ［MIT］</li>
-<li>『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>『Plurality』日本語版 5-4「拡張熟議」— <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a> ［CC0］</li>
-<li>『Plurality』5-0「Collaborative Technology and Democracy」— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>唐鳳「讓演算法變得善良」（商業周刊のコラム、2024-07-11）— <a href="https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF" target="_blank" rel="noopener">https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='prosocial-media.html'>向社会的メディアってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fbridging.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8%E3%83%B3%E3%82%B0%EF%BC%88%E6%A9%8B%E6%B8%A1%E3%81%97%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fbridging.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Aviv Ovadya「Bridging-Based Ranking: How Platform Recommendation Systems Might Reduce Division and Strengthen Democracy」（Belfer Center、2022）— <a href="https://www.belfercenter.org/publication/bridging-based-ranking" target="_blank" rel="noopener">https://www.belfercenter.org/publication/bridging-based-ranking</a> ［CC BY-NC 4.0］</li>
+<li id="src-2">Peng &amp; Grimmelmann「Rescuing Counterspeech: A Bridging-Based Approach to Combating Misinformation」（2024）— <a href="https://arxiv.org/abs/2410.12699" target="_blank" rel="noopener">https://arxiv.org/abs/2410.12699</a> ［CC BY 4.0］</li>
+<li id="src-3">Community Notes Guide「Diversity of perspectives」— <a href="https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives" target="_blank" rel="noopener">https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives</a> ［Apache-2.0］</li>
+<li id="src-4">Wojcik ほか「Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation」（2022）— <a href="https://arxiv.org/abs/2210.15723" target="_blank" rel="noopener">https://arxiv.org/abs/2210.15723</a> ［CC BY 4.0］</li>
+<li id="src-5">Small ほか「Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces」（2021）— <a href="https://doi.org/10.6035/recerca.5516" target="_blank" rel="noopener">https://doi.org/10.6035/recerca.5516</a> ［CC BY-SA 4.0］</li>
+<li id="src-6">『Plurality』日本語版 2-2「デジタル民主主義の日常」— <a href="https://www.plurality.net/v/chapters/2-2/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/jpn/</a> ［CC0］</li>
+<li id="src-7">Community Notes Guide「Beyond notes: posts liked by people with different perspectives」— <a href="https://communitynotes.x.com/guide/en/beyond-notes/got-likes" target="_blank" rel="noopener">https://communitynotes.x.com/guide/en/beyond-notes/got-likes</a> ［Apache-2.0］</li>
+<li id="src-8">bridging.systems「Definitions」— <a href="https://bridging.systems/definitions/" target="_blank" rel="noopener">https://bridging.systems/definitions/</a> ［MIT］</li>
+<li id="src-9">Vitalik Buterin「What do I think about Community Notes?」（2023-08-16）— <a href="https://vitalik.eth.limo/general/2023/08/16/communitynotes.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</a></li>
+<li id="src-10">Small ほか（2021）同上、グループをまたぐ合意の計算 — <a href="https://doi.org/10.6035/recerca.5516" target="_blank" rel="noopener">https://doi.org/10.6035/recerca.5516</a> ［CC BY-SA 4.0］</li>
+<li id="src-11">Bouchaud &amp; Ramaciotti「Community Notes undermoderate polarizing content by design creating risks in electoral processes」（2025）— <a href="https://arxiv.org/abs/2506.15168" target="_blank" rel="noopener">https://arxiv.org/abs/2506.15168</a> ［CC BY-NC-ND 4.0］</li>
+<li id="src-12">Selvam ほか「Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking」（2026）— <a href="https://arxiv.org/abs/2607.01824" target="_blank" rel="noopener">https://arxiv.org/abs/2607.01824</a> ［CC BY 4.0］</li>
+<li id="src-13">bridging.systems「Who decides?」— <a href="https://bridging.systems/who-decides/" target="_blank" rel="noopener">https://bridging.systems/who-decides/</a> ［MIT］</li>
+<li id="src-14">『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-15">『Plurality』日本語版 5-4「拡張熟議」— <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a> ［CC0］</li>
+<li id="src-16">『Plurality』5-0「Collaborative Technology and Democracy」— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-17">唐鳳「讓演算法變得善良」（商業周刊のコラム、2024-07-11）— <a href="https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF" target="_blank" rel="noopener">https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='prosocial-media.html'>向社会的メディアってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fbridging.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8%E3%83%B3%E3%82%B0%EF%BC%88%E6%A9%8B%E6%B8%A1%E3%81%97%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fbridging.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

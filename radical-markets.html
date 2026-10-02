@@ -41,20 +41,26 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/radical-markets.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/radical-markets.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/radical-markets.html">简体中文</a></nav></header>
 <main lang="ja"><h1>Radical Markets（ラディカル・マーケット）ってなに？</h1><div class='lead'>法学者エリック・ポズナーと経済学者グレン・ワイルが 2018 年に出した本です。「私有財産」や「一人一票」は人間が設計したしくみなので作り直せる、と主張し、5 つの大胆な改革案を出しました。ワイルは後に『Plurality』へ進み、この本の考え方を自分で批判しています。</div><p>土地は持ち主のもの。選挙は一人一票。私たちはこれを当たり前の決まりだと思っています。でも、それは人間が考えて作ったしくみです。作ったものなら、もっとよい形に作り直せるのではないか。『Radical Markets（ラディカル・マーケット）』は、この問いから大胆な改革案を並べた本です。本『⿻ Plurality』の著者の一人、グレン・ワイルの前の本でもあります。</p>
 <h2>ひとことで言うと</h2>
-<p>『Radical Markets』は、法学者エリック・A・ポズナー（Eric A. Posner）と経済学者 E・グレン・ワイル（E. Glen Weyl）が 2018 年に出した本です[1][2]。</p>
-<p>「私有財産」や「一人一票」は変えられない自然の決まりではなく、<strong>人間が設計したしくみなのだから、もっと公平で効率のよい形に作り直せる</strong>、と主張しました。そして 5 つの大胆な改革案を出しました[1][2]。ワイルはこの本の後『⿻ Plurality』に進み、2020 年にはこの本の考え方を自分で批判しています[3]。</p>
+<p>『Radical Markets』は、法学者エリック・A・ポズナー（Eric A. Posner）と経済学者 E・グレン・ワイル（E. Glen Weyl）が 2018 年に出した本です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>「私有財産」や「一人一票」は変えられない自然の決まりではなく、<strong>人間が設計したしくみなのだから、もっと公平で効率のよい形に作り直せる</strong>、と主張しました。そして 5 つの大胆な改革案を出しました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。ワイルはこの本の後『⿻ Plurality』に進み、2020 年にはこの本の考え方を自分で批判しています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>コロラド州議会のクアドラティック投票（2019 年）。</strong> この本で提案された「<a href="quadratic-voting.html">クアドラティック投票</a>（QV）」は、本『Plurality』によれば、米国のコロラド州議会で、お金の使い道の優先順位を決めるのに何度も使われました[4]。</p>
-<p>スペイン語版ウィキペディアによれば、2019 年 4 月、コロラド州下院の民主党の議員たちが、107 本の法案から今後 2 年の優先順位を決めるのに QV を使いました。各議員に 100 の仮想のトークン（持ち点）が配られました[5]。</p>
-<p><strong>作例（QV の「票の数の 2 乗の持ち点がかかる」しくみから、この記事で計算したもの）。</strong> 1 つの法案に 9 票入れるには、9 × 9 = 81 トークンが要ります[5]。残りは 100 − 81 = 19 トークンなので、別の法案にはせいぜい 4 票（4 × 4 = 16 トークン）しか入れられません。強い気持ちを示せますが、そのぶん、ほかに使える点が減るのです。</p>
-<p><strong>自己申告の財産税と NFT。</strong> この本の「自分で値段をつけ、その値段で買いたい人がいたら売らなければならない」財産税（のちの「部分的共通所有」）は、本『Plurality』によれば、ブロックチェーンのような電子の台帳で実施しやすく、近年は NFT（デジタルの一点物）のアート作品で人気を得ました[6]。→ <a href="harberger-tax.html">ハーバーガー税</a></p>
-<p><strong>暗号通貨の世界での反響。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、発売前に受け取った見本をもとに長い書評を書き、本の提案はブロックチェーンの自動で動く契約（スマートコントラクト）と相性がよい、と論じました[1]。韓国日報の書評も、ブテリン自身が書評を書くほど推したので、この本はブロックチェーンの業界で早くから話題になった、と伝えています[2]。</p>
+<p><strong>コロラド州議会のクアドラティック投票（2019 年）。</strong> この本で提案された「<a href="quadratic-voting.html">クアドラティック投票</a>（QV）」は、本『Plurality』によれば、米国のコロラド州議会で、お金の使い道の優先順位を決めるのに何度も使われました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>スペイン語版ウィキペディアによれば、2019 年 4 月、コロラド州下院の民主党の議員たちが、107 本の法案から今後 2 年の優先順位を決めるのに QV を使いました。各議員に 100 の仮想のトークン（持ち点）が配られました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>作例（QV の「票の数の 2 乗の持ち点がかかる」しくみから、この記事で計算したもの）。</strong> 1 つの法案に 9 票入れるには、9 × 9 = 81 トークンが要ります<a class="cite" href="#src-5" data-src="src-5">[5]</a>。残りは 100 − 81 = 19 トークンなので、別の法案にはせいぜい 4 票（4 × 4 = 16 トークン）しか入れられません。強い気持ちを示せますが、そのぶん、ほかに使える点が減るのです。</p>
+<p><strong>自己申告の財産税と NFT。</strong> この本の「自分で値段をつけ、その値段で買いたい人がいたら売らなければならない」財産税（のちの「部分的共通所有」）は、本『Plurality』によれば、ブロックチェーンのような電子の台帳で実施しやすく、近年は NFT（デジタルの一点物）のアート作品で人気を得ました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="harberger-tax.html">ハーバーガー税</a></p>
+<p><strong>暗号通貨の世界での反響。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、発売前に受け取った見本をもとに長い書評を書き、本の提案はブロックチェーンの自動で動く契約（スマートコントラクト）と相性がよい、と論じました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。韓国日報の書評も、ブテリン自身が書評を書くほど推したので、この本はブロックチェーンの業界で早くから話題になった、と伝えています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>くわしく</h2>
 <h3>5 つの提案</h3>
-<p>ブテリンの書評によれば、本は 5 部に分かれ、それぞれ一つの改革を論じています[1]。</p>
+<p>ブテリンの書評によれば、本は 5 部に分かれ、それぞれ一つの改革を論じています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <ol>
 <li><strong>自己申告の財産税。</strong> 持ち主が財産の値段を自分で申告して税を払い、誰でもその値段で買い取れるようにする。→ <a href="harberger-tax.html">ハーバーガー税</a></li>
 <li><strong>クアドラティック投票。</strong> 票の数の 2 乗の持ち点がかかる投票。→ <a href="quadratic-voting.html">クアドラティック投票</a></li>
@@ -62,33 +68,33 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li><strong>大手の投資グループの解体。</strong> 一見競争しているように見える銀行などの業界を、実は独占のようにふるまわせている大手を解体する。</li>
 <li><strong>個人データの市場。</strong> → <a href="data-dignity.html">データの尊厳</a></li>
 </ol>
-<p>フランスの雑誌 Le Grand Continent の書評は、もう少し詳しくまとめています。①の税は年平均 7% ほどで、税収は公共のものと、全市民への「社会配当」に回す。③は、市民一人ひとりが移民の働き手の身元引受人になれるしくみ。④は、大きな投資家が同じ業界の複数の会社に投資するのを禁じること。⑤は、利用者を「データの働き手」とみなして対価を払うこと、です[7]。</p>
+<p>フランスの雑誌 Le Grand Continent の書評は、もう少し詳しくまとめています。①の税は年平均 7% ほどで、税収は公共のものと、全市民への「社会配当」に回す。③は、市民一人ひとりが移民の働き手の身元引受人になれるしくみ。④は、大きな投資家が同じ業界の複数の会社に投資するのを禁じること。⑤は、利用者を「データの働き手」とみなして対価を払うこと、です<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>考え方の芯</h3>
-<p>ブテリンは、本の考え方をこうまとめます。市場と値段は、資源の使い道を決めるすぐれたしくみだ。でも市場は、社会がつくった財産権の上に立っている。財産権のつくり方は何通りもあり、今よりよいものがありうる。自由とは、いろいろな設計を選べる広い空間のことだ[1]。</p>
-<p>つまり、「市場か、国か」の二択ではなく、市場のしくみそのものを設計し直す、という立場です。ブテリンは、この本には、役人のその場の判断を、お金の損得で動くしくみに置き換える発想が多いので、頼れる裁判所を持たないブロックチェーンでこそ向いている、とも書いています[1]。</p>
+<p>ブテリンは、本の考え方をこうまとめます。市場と値段は、資源の使い道を決めるすぐれたしくみだ。でも市場は、社会がつくった財産権の上に立っている。財産権のつくり方は何通りもあり、今よりよいものがありうる。自由とは、いろいろな設計を選べる広い空間のことだ<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>つまり、「市場か、国か」の二択ではなく、市場のしくみそのものを設計し直す、という立場です。ブテリンは、この本には、役人のその場の判断を、お金の損得で動くしくみに置き換える発想が多いので、頼れる裁判所を持たないブロックチェーンでこそ向いている、とも書いています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>どこから来たのか</h3>
-<p>本『Plurality』の 5-7 章は、市場の活力を生かしつつその限界を補う、という動機は、19 世紀の思想家ヘンリー・ジョージと、その流れをくむ経済学者ウィリアム・ヴィックリー（William Vickrey）から来ている、と書きます。そして、著者の一人の「前の本」（『Radical Markets』）はヴィックリーに捧げられた、と記しています[6]。</p>
+<p>本『Plurality』の 5-7 章は、市場の活力を生かしつつその限界を補う、という動機は、19 世紀の思想家ヘンリー・ジョージと、その流れをくむ経済学者ウィリアム・ヴィックリー（William Vickrey）から来ている、と書きます。そして、著者の一人の「前の本」（『Radical Markets』）はヴィックリーに捧げられた、と記しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>運動へ</h3>
-<p>TIME の記事によれば、この本は 2018 年の出版のとき大きな話題になりました。ワイルはその熱を、本の考えを進める非営利団体 <a href="radicalxchange.html">RadicalxChange 財団</a> の立ち上げに向けました[8]。また、reverse alignment 連合のサイトのワイルの紹介は、この本を英誌 The Economist の 2018 年の年間ベストブックと書いています[9]。</p>
-<p>一方でワイルは 2019 年に、この本は長く、互いにほぼ独立した政策の提案の集まりで、まとまった社会の哲学ではなかった、自分の考えは本の後に大きく広がった、と書いています[10]。</p>
+<p>TIME の記事によれば、この本は 2018 年の出版のとき大きな話題になりました。ワイルはその熱を、本の考えを進める非営利団体 <a href="radicalxchange.html">RadicalxChange 財団</a> の立ち上げに向けました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。また、reverse alignment 連合のサイトのワイルの紹介は、この本を英誌 The Economist の 2018 年の年間ベストブックと書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>一方でワイルは 2019 年に、この本は長く、互いにほぼ独立した政策の提案の集まりで、まとまった社会の哲学ではなかった、自分の考えは本の後に大きく広がった、と書いています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>自己批判と、Plurality への転回</h3>
-<p>2020 年のエッセイ「Why I Am not a Market Radical（私が市場の急進派ではない理由）」で、ワイルは本の問題点を認めました[3]。</p>
-<p>ワイルによれば、この本は経済学の二つの混乱を抱えていました。人を社会より前にいる孤立した個人とみなす考え方と、上から設計する専門家の見方です。本は全体が部分の足し算を上回る状況（→ <a href="supermodularity.html">スーパーモジュラリティ</a>）を大事にしながら、使った分析の道具は、そうした状況がほとんど無いことを前提にしていた、とワイルは書きます[3]。</p>
-<p>たとえば QV は、参加する人を、互いに関係のない、同じ形の粒のように扱います。すると、恋人や同僚、同じ宗教の仲間をどう数えるのか、という矛盾が出てきます。「示し合わせ」と呼ばれて問題にされるものは、むしろ QV が支えたい、人のつながりの自然なはたらきだ、とワイルは書きます[3]。</p>
-<p>それでもワイルは、本の多くの考えは社会のしくみの大きな前進だったと考え続けている、とも同じ文章で書いています[3]。</p>
-<p>鈴木健は日本語版の解説で、二つの本をこう対比しています。『Radical Markets』では「極めてアトミックで個人主義的な人々が市場や投票のメカニズムを通じ最適な解に至る手法」が提案された。一方『Plurality』では、多様な人々が共同体での協働を通して問題を解く、というのです[11]。</p>
+<p>2020 年のエッセイ「Why I Am not a Market Radical（私が市場の急進派ではない理由）」で、ワイルは本の問題点を認めました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>ワイルによれば、この本は経済学の二つの混乱を抱えていました。人を社会より前にいる孤立した個人とみなす考え方と、上から設計する専門家の見方です。本は全体が部分の足し算を上回る状況（→ <a href="supermodularity.html">スーパーモジュラリティ</a>）を大事にしながら、使った分析の道具は、そうした状況がほとんど無いことを前提にしていた、とワイルは書きます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>たとえば QV は、参加する人を、互いに関係のない、同じ形の粒のように扱います。すると、恋人や同僚、同じ宗教の仲間をどう数えるのか、という矛盾が出てきます。「示し合わせ」と呼ばれて問題にされるものは、むしろ QV が支えたい、人のつながりの自然なはたらきだ、とワイルは書きます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>それでもワイルは、本の多くの考えは社会のしくみの大きな前進だったと考え続けている、とも同じ文章で書いています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>鈴木健は日本語版の解説で、二つの本をこう対比しています。『Radical Markets』では「極めてアトミックで個人主義的な人々が市場や投票のメカニズムを通じ最適な解に至る手法」が提案された。一方『Plurality』では、多様な人々が共同体での協働を通して問題を解く、というのです<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「私有財産をなくす話」なのか。</strong> Le Grand Continent の書評は、いくつかの点を批判しました。私有財産の独り占めによる価値の搾取がどこにでもある、という前提は受け入れにくい。景気が悪いときには、お金のある人に財産が移り、富がかえって集まりうる。家族の思い出の家のような、お金に換えられない価値を無視している。そのうえで書評は、この本は法律の手引きというより、財産という考えを神聖なものから引き下ろす政治哲学として読むべきだ、とも書いています[7]。</li>
-<li><strong>論争の多さ。</strong> ブテリンは、少なくとも最初の 3 つの提案はすでに強い論争を呼んでいて、財産や市場についての多くの人の道徳の感覚に反する、と書評で注意しています[1]。</li>
-<li><strong>著者と年の表記の違い。</strong> 本『Plurality』の英語版の 2-0 章の注は、著者に「ブテリン」も加え、出版年を 2019 年と書いています。けれども同じ本の 5-7 章の注と、日本語版・台湾の中国語版の 2-0 章の注は、ポズナーとワイルの 2 人だけを挙げ、5-7 章は 2018 年としています[6][12][13][14]。この本の共著者はポズナーとワイルの 2 人です。</li>
-<li><strong>「続編」と読むと食い違う。</strong> ワイルは 2020 年に上のような自己批判をしているので、『Plurality』を『Radical Markets』の続きとして読むと食い違いが出ます[3]。2025 年の李舜志との対談では、前の本で引いた自由貿易の議論について問われ、自由貿易の広がりを、国と国のあいだに橋を架け、それを保ち続ける協力と対比して語りました。ただし、前の本そのものの評価は述べていません[15]。</li>
+<li><strong>「私有財産をなくす話」なのか。</strong> Le Grand Continent の書評は、いくつかの点を批判しました。私有財産の独り占めによる価値の搾取がどこにでもある、という前提は受け入れにくい。景気が悪いときには、お金のある人に財産が移り、富がかえって集まりうる。家族の思い出の家のような、お金に換えられない価値を無視している。そのうえで書評は、この本は法律の手引きというより、財産という考えを神聖なものから引き下ろす政治哲学として読むべきだ、とも書いています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</li>
+<li><strong>論争の多さ。</strong> ブテリンは、少なくとも最初の 3 つの提案はすでに強い論争を呼んでいて、財産や市場についての多くの人の道徳の感覚に反する、と書評で注意しています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>著者と年の表記の違い。</strong> 本『Plurality』の英語版の 2-0 章の注は、著者に「ブテリン」も加え、出版年を 2019 年と書いています。けれども同じ本の 5-7 章の注と、日本語版・台湾の中国語版の 2-0 章の注は、ポズナーとワイルの 2 人だけを挙げ、5-7 章は 2018 年としています<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a><a class="cite" href="#src-14" data-src="src-14">[14]</a>。この本の共著者はポズナーとワイルの 2 人です。</li>
+<li><strong>「続編」と読むと食い違う。</strong> ワイルは 2020 年に上のような自己批判をしているので、『Plurality』を『Radical Markets』の続きとして読むと食い違いが出ます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。2025 年の李舜志との対談では、前の本で引いた自由貿易の議論について問われ、自由貿易の広がりを、国と国のあいだに橋を架け、それを保ち続ける協力と対比して語りました。ただし、前の本そのものの評価は述べていません<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
 <p>本『Plurality』は、この前の本をいくつかの場所で参照します。</p>
-<p>2-0 章は、この半世紀の「新自由主義」（市場に任せる政策）が停滞と格差にどうかかわったかについて、著者の一人が共著した本に証拠のまとめがある、と書きます[12]。→ <a href="three-paths.html">三つの道</a></p>
-<p>5-7 章「<a href="social-markets.html">社会市場</a>」は、ジョージとヴィックリーの流れとして前の本を挙げ、部分的共通所有と <a href="quadratic-funding.html">クアドラティック・ファンディング</a> を紹介します[6]。→ <a href="property-and-contract.html">財産と契約</a></p>
-<p>5-6 章「<a href="plural-voting.html">⿻投票</a>」は、QV を「私たちの一人が考案した」ものとして扱います。そのうえで、平方根の決まりがいちばんよいのは、投票する人たちが中では一枚岩で、互いに関係がないときだけだ、と注意します[4]。これは、上のワイルの自己批判が QV について挙げた点と重なります。</p>
+<p>2-0 章は、この半世紀の「新自由主義」（市場に任せる政策）が停滞と格差にどうかかわったかについて、著者の一人が共著した本に証拠のまとめがある、と書きます<a class="cite" href="#src-12" data-src="src-12">[12]</a>。→ <a href="three-paths.html">三つの道</a></p>
+<p>5-7 章「<a href="social-markets.html">社会市場</a>」は、ジョージとヴィックリーの流れとして前の本を挙げ、部分的共通所有と <a href="quadratic-funding.html">クアドラティック・ファンディング</a> を紹介します<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="property-and-contract.html">財産と契約</a></p>
+<p>5-6 章「<a href="plural-voting.html">⿻投票</a>」は、QV を「私たちの一人が考案した」ものとして扱います。そのうえで、平方根の決まりがいちばんよいのは、投票する人たちが中では一枚岩で、互いに関係がないときだけだ、と注意します<a class="cite" href="#src-4" data-src="src-4">[4]</a>。これは、上のワイルの自己批判が QV について挙げた点と重なります。</p>
 <p>人を孤立した個人とみなす見方の限界は、本の <a href="monist-atomism.html">一元論的アトム主義</a> への批判につながっていきます。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -101,19 +107,49 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Vitalik Buterin「On Radical Markets」（2018）— <a href="https://vitalik.eth.limo/general/2018/04/20/radical_markets.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</a></li>
-<li>韓国日報『Radical Markets』書評（2019）— <a href="https://www.hankookilbo.com/news/article/201910031442743030" target="_blank" rel="noopener">https://www.hankookilbo.com/news/article/201910031442743030</a></li>
-<li>E. Glen Weyl「Why I Am not a Market Radical」（2020）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
-<li>『Plurality』5-6「⿻ Voting」（コロラド州議会の段落とその次の段落）— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>Votación cuadrática（スペイン語版ウィキペディア）— <a href="https://es.wikipedia.org/wiki/Votaci%C3%B3n_cuadr%C3%A1tica" target="_blank" rel="noopener">https://es.wikipedia.org/wiki/Votaci%C3%B3n_cuadr%C3%A1tica</a></li>
-<li>『Plurality』5-7「Social Markets」（前の本とヴィックリーの段落、部分的共通所有の項、注）— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>Le Grand Continent「Radical Markets : abolir la propriété pour libérer le capitalisme」（2019）— <a href="https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/" target="_blank" rel="noopener">https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/</a></li>
-<li>Will Henshall「Inside Audrey Tang's Plan to Align Technology with Democracy」（TIME）— <a href="https://time.com/6979012/audrey-tang-interview-plurality-democracy/" target="_blank" rel="noopener">https://time.com/6979012/audrey-tang-interview-plurality-democracy/</a></li>
-<li>reverse alignment 連合のサイト（ワイルの紹介）— <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
-<li>E. Glen Weyl「What is RadicalxChange?」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-02-25-xjekue/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-02-25-xjekue/</a></li>
-<li>鈴木健「Plurality 日本語版解説」— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
-<li>『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」の注 — <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
-<li>『Plurality』日本語版 2-0「IT と民主主義　拡大する溝」注 56 — <a href="https://www.plurality.net/v/chapters/2-0/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/jpn/</a> ［CC0］</li>
-<li>『Plurality』繁体中文版 2-0 注 29 — <a href="https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin</a> ［CC0］</li>
-<li>集英社新書プラス「ワイル×李舜志 対談」— <a href="https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554" target="_blank" rel="noopener">https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554</a></li>
-</ol><div class='related'>関連: <a href='harberger-tax.html'>ハーバーガー税ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='monist-atomism.html'>一元論的アトム主義ってなに？</a> ・ <a href='three-paths.html'>「三つの道」ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fradical-markets.html&title=%5B%E6%8C%87%E6%91%98%5D%20Radical%20Markets%EF%BC%88%E3%83%A9%E3%83%87%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%BB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fradical-markets.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Vitalik Buterin「On Radical Markets」（2018）— <a href="https://vitalik.eth.limo/general/2018/04/20/radical_markets.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</a></li>
+<li id="src-2">韓国日報『Radical Markets』書評（2019）— <a href="https://www.hankookilbo.com/news/article/201910031442743030" target="_blank" rel="noopener">https://www.hankookilbo.com/news/article/201910031442743030</a></li>
+<li id="src-3">E. Glen Weyl「Why I Am not a Market Radical」（2020）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
+<li id="src-4">『Plurality』5-6「⿻ Voting」（コロラド州議会の段落とその次の段落）— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-5">Votación cuadrática（スペイン語版ウィキペディア）— <a href="https://es.wikipedia.org/wiki/Votaci%C3%B3n_cuadr%C3%A1tica" target="_blank" rel="noopener">https://es.wikipedia.org/wiki/Votaci%C3%B3n_cuadr%C3%A1tica</a></li>
+<li id="src-6">『Plurality』5-7「Social Markets」（前の本とヴィックリーの段落、部分的共通所有の項、注）— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-7">Le Grand Continent「Radical Markets : abolir la propriété pour libérer le capitalisme」（2019）— <a href="https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/" target="_blank" rel="noopener">https://legrandcontinent.eu/fr/2019/12/25/radical-markets-abolir-la-propriete-pour-liberer-le-capitalisme/</a></li>
+<li id="src-8">Will Henshall「Inside Audrey Tang's Plan to Align Technology with Democracy」（TIME）— <a href="https://time.com/6979012/audrey-tang-interview-plurality-democracy/" target="_blank" rel="noopener">https://time.com/6979012/audrey-tang-interview-plurality-democracy/</a></li>
+<li id="src-9">reverse alignment 連合のサイト（ワイルの紹介）— <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
+<li id="src-10">E. Glen Weyl「What is RadicalxChange?」（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-02-25-xjekue/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-02-25-xjekue/</a></li>
+<li id="src-11">鈴木健「Plurality 日本語版解説」— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li id="src-12">『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」の注 — <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
+<li id="src-13">『Plurality』日本語版 2-0「IT と民主主義　拡大する溝」注 56 — <a href="https://www.plurality.net/v/chapters/2-0/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/jpn/</a> ［CC0］</li>
+<li id="src-14">『Plurality』繁体中文版 2-0 注 29 — <a href="https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/contents/traditional-mandarin</a> ［CC0］</li>
+<li id="src-15">集英社新書プラス「ワイル×李舜志 対談」— <a href="https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554" target="_blank" rel="noopener">https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554</a></li>
+</ol><div class='related'>関連: <a href='harberger-tax.html'>ハーバーガー税ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='monist-atomism.html'>一元論的アトム主義ってなに？</a> ・ <a href='three-paths.html'>「三つの道」ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fradical-markets.html&title=%5B%E6%8C%87%E6%91%98%5D%20Radical%20Markets%EF%BC%88%E3%83%A9%E3%83%87%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%BB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fradical-markets.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

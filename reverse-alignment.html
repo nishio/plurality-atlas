@@ -41,29 +41,35 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/reverse-alignment.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/reverse-alignment.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/reverse-alignment.html">简体中文</a></nav></header>
 <main lang="ja"><h1>reverse alignment（リバース・アラインメント）ってなに？</h1><div class='lead'>AI を人間に合わせる「アラインメント」の反対側、つまり社会の制度やルール、人々の技能のほうを AI の時代に合わせて作り直す取り組みです。グレン・ワイルらが 2026 年に掲げました。</div><p>AI の安全について話すとき、ふつうは「AI をどう人間の価値に合わせるか」が問われます。この研究を「アラインメント（alignment、整合）」と呼びます。けれども、どんなに行儀のよい AI でも、受け止める準備のない社会に入ってくれば、期待外れに終わったり害になったりするかもしれません。reverse alignment（リバース・アラインメント）は、この「社会の側の準備」に目を向ける考え方です。</p>
 <h2>ひとことで言うと</h2>
-<p>reverse alignment は、<strong>社会の制度・ルール・人々の技能・統治のしくみのほうを、AI を安全に使いこなし、その恩恵を広く分け合えるように作り直すこと</strong>です[1][2]。経済学者グレン・ワイル（E. Glen Weyl）らが 2026 年に掲げた議題です。</p>
-<p>ワイルのスライドは、二つを対にして示しています。アラインメントは AI の側を人間の価値に沿わせること、reverse alignment は制度の側がそれを受け止められるよう備えること、という対比です[3]。</p>
+<p>reverse alignment は、<strong>社会の制度・ルール・人々の技能・統治のしくみのほうを、AI を安全に使いこなし、その恩恵を広く分け合えるように作り直すこと</strong>です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。経済学者グレン・ワイル（E. Glen Weyl）らが 2026 年に掲げた議題です。</p>
+<p>ワイルのスライドは、二つを対にして示しています。アラインメントは AI の側を人間の価値に沿わせること、reverse alignment は制度の側がそれを受け止められるよう備えること、という対比です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p>なお、同じ言葉をまったく別の意味で使う論文もあります。これは後の「どこが議論になっているか」で説明します。</p>
 <h2>たとえば</h2>
-<p><strong>Noema 誌の論考（2026 年 7 月 21 日）。</strong> ワイル、ジェームズ・エヴァンズ（James Evans）、クリス・ホワイト（Chris White）が、分野・地域・政治的立場の違う 23 人の連合とともに発表しました。論考は冒頭で、米政府が AI 企業 Anthropic に最上位モデルの外国籍者への提供停止を命じ、同社が数時間のうちに全顧客向けに止めた出来事を取り上げます。そして、AI の能力の伸びに、それを治め、受け止め、理解するための制度が追いついていない、と指摘します[1]。</p>
-<p><strong>歴史の前例。</strong> 同じ論考は、技術の恩恵が制度の側の工夫によって広がった例を並べます。19 世紀の工業化のあとに生まれた大衆民主主義の制度（独占を禁じる法律、独立した規制機関、労働組合など）、戦後の国際金融の枠組み、インターネットの前身の ARPANET、インドのデジタル基盤 India Stack、そして台湾のデジタル民主主義です[1]。ワイルのスライドはこれを「発電機の教訓」とまとめます。技術は、制度が追いつくのを何十年も待つ、という意味です[3]。</p>
-<p><strong>公開講座「Platform Originals」（2026 年 8 月 29 日）。</strong> オードリー・タン（Audrey Tang）は、英国の工場で子どもの労働が制限されるまでに一、二世代かかったことを引きました。そして「AI では、子ども時代まるごと問題の中で待ってから賠償を、というやり方は避けたい」と述べました[4][5]。</p>
+<p><strong>Noema 誌の論考（2026 年 7 月 21 日）。</strong> ワイル、ジェームズ・エヴァンズ（James Evans）、クリス・ホワイト（Chris White）が、分野・地域・政治的立場の違う 23 人の連合とともに発表しました。論考は冒頭で、米政府が AI 企業 Anthropic に最上位モデルの外国籍者への提供停止を命じ、同社が数時間のうちに全顧客向けに止めた出来事を取り上げます。そして、AI の能力の伸びに、それを治め、受け止め、理解するための制度が追いついていない、と指摘します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>歴史の前例。</strong> 同じ論考は、技術の恩恵が制度の側の工夫によって広がった例を並べます。19 世紀の工業化のあとに生まれた大衆民主主義の制度（独占を禁じる法律、独立した規制機関、労働組合など）、戦後の国際金融の枠組み、インターネットの前身の ARPANET、インドのデジタル基盤 India Stack、そして台湾のデジタル民主主義です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。ワイルのスライドはこれを「発電機の教訓」とまとめます。技術は、制度が追いつくのを何十年も待つ、という意味です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>公開講座「Platform Originals」（2026 年 8 月 29 日）。</strong> オードリー・タン（Audrey Tang）は、英国の工場で子どもの労働が制限されるまでに一、二世代かかったことを引きました。そして「AI では、子ども時代まるごと問題の中で待ってから賠償を、というやり方は避けたい」と述べました<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>しくみ</h2>
 <h3>放っておくと起きる三つの失敗</h3>
-<p>Noema の論考は、社会の側が準備しないときに起きる失敗を三つ挙げます[1][2]。</p>
+<p>Noema の論考は、社会の側が準備しないときに起きる失敗を三つ挙げます<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ol>
 <li><strong>繁栄なき生産性</strong> — 仕事の組み替えが、人々の学び直しや移動より速く進みます。すると、生み出された利益が多くの人に届きません。</li>
 <li><strong>検証なき実行</strong> — 文章や画像やコードを作るコストがほぼゼロになります。すると、足りなくなるのは、作られたものが本物かを確かめ、出どころを調べ、責任を引き受ける人間の力です。</li>
 <li><strong>制約なき能力</strong> — 同じ道具が、国や大きな組織が人々を見張るコストも下げます。異議を申し立てるしくみや自由を守るしくみが一緒に育たなければ、力が一か所に集まります。</li>
 </ol>
-<p>論考は、どれも避けられない運命ではなく、制度を放っておいた結果だ、と主張します[1]。</p>
+<p>論考は、どれも避けられない運命ではなく、制度を放っておいた結果だ、と主張します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>お金の偏り</h3>
-<p>論考はまた、AI を賢くするために使われるお金に比べて、AI を社会に組み込むための制度・教育・組織・市民の基盤に回るお金はごく一部しかない、と問題にします[1]。</p>
+<p>論考はまた、AI を賢くするために使われるお金に比べて、AI を社会に組み込むための制度・教育・組織・市民の基盤に回るお金はごく一部しかない、と問題にします<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>12 の課題</h3>
-<p>連合のサイトは、取り組む領域を 12 に分けています[2]。</p>
+<p>連合のサイトは、取り組む領域を 12 に分けています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ul>
 <li>ID（誰かを明かさずに、本物の一人の人間であることを示す）</li>
 <li>プライバシー、出どころの証明、データの価値（AI の学習に使われた人類の記録への対価）</li>
@@ -72,20 +78,20 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ul>
 <p>多くは本『Plurality』が扱う <a href="proof-of-personhood.html">人間であることの証明</a>、<a href="data-dignity.html">データの尊厳</a>、<a href="bridging.html">bridging</a>、<a href="broad-listening.html">ブロードリスニング</a> と重なります。</p>
 <h3>「道具の形に似た制度」という仮説</h3>
-<p>連合には独自の仮説があります。社会が新しい技術を受け入れるとき、うまくいく制度は、その時代の中心的な技術の形に似てくる、というものです[2]。</p>
-<p>たとえば工業化の時代には、標準化された会計と組立ラインが、階層型の企業や中央銀行を生みました。インターネットの時代には、層を重ねた通信のしくみが、層状で協調的な標準化団体のような組織を生みました。そしてニューラルネット（いまの AI の土台）は、違いを平均で消さずに共通の構造を見つけ、貢献を結果までたどるという性質を持ちます。AI を受け止められる制度は、この動きを社会の規模でまねたものになるだろう、と連合は見込んでいます[2]。</p>
+<p>連合には独自の仮説があります。社会が新しい技術を受け入れるとき、うまくいく制度は、その時代の中心的な技術の形に似てくる、というものです<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>たとえば工業化の時代には、標準化された会計と組立ラインが、階層型の企業や中央銀行を生みました。インターネットの時代には、層を重ねた通信のしくみが、層状で協調的な標準化団体のような組織を生みました。そしてニューラルネット（いまの AI の土台）は、違いを平均で消さずに共通の構造を見つけ、貢献を結果までたどるという性質を持ちます。AI を受け止められる制度は、この動きを社会の規模でまねたものになるだろう、と連合は見込んでいます<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>誰が進めているか</h3>
-<p>連合サイトのメンバーには、ワイルとタンが並んでいます[2]。日本語版と華語版のサイトもあります[6][7]。団体 RadicalxChange は 2026 年 9 月、12 の課題のうち民主主義の領域に取り組むと表明しました[8]。</p>
+<p>連合サイトのメンバーには、ワイルとタンが並んでいます<a class="cite" href="#src-2" data-src="src-2">[2]</a>。日本語版と華語版のサイトもあります<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。団体 RadicalxChange は 2026 年 9 月、12 の課題のうち民主主義の領域に取り組むと表明しました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>同じ名前の別の概念に注意。</strong> デイヴィッド・ハリソン（David Jacob Harrison）は 2026 年 4 月の論文で「reverse alignment problem」を論じました。こちらは、機械を人間に合わせる代わりに、<strong>人間の価値や目標のほうが単純になり、機械のようにされてしまう</strong>現象を指します。ワイルらの「社会の制度をわざと作り直す」提案とは、向きが逆です[9]。この記事ではワイルらの意味で使っています。</li>
-<li><strong>効果的利他主義（EA）の側の受け止め。</strong> トム・ヴァルガス（Tom Vargas）はフォーラムで、要点を、制度がまちがっていれば、人間によく合わせた高度な AI が加わっても結果はたぶん悪くなる、という形でまとめました。もっともらしいと評価しつつ、社会の土台を扱うので実行は非常に難しいが、うまくいけばずっと大きく変えられる、と書いています。コメント欄には、個々のモデルを整えても、それを使うシステム全体が整うとは限らない、という趣旨の声もありました[10]。</li>
-<li><strong>「誰が誰に合わせるのか」。</strong> 講座では、reverse alignment は誰が誰に合わせるかを決めることなのか、という質問が出ました。タンは、過去の工業化・電化・インターネットへの制度の対応は、どれも「不満なら誰に訴えるか、どう知るか、どう抜けて別のしくみに移るか」に答えるものだった、と答えました。そして AI でも、インターネットのように小さく試して、よりよいやり方を自分たちで作れる形が望ましい、と述べました[4]。</li>
+<li><strong>同じ名前の別の概念に注意。</strong> デイヴィッド・ハリソン（David Jacob Harrison）は 2026 年 4 月の論文で「reverse alignment problem」を論じました。こちらは、機械を人間に合わせる代わりに、<strong>人間の価値や目標のほうが単純になり、機械のようにされてしまう</strong>現象を指します。ワイルらの「社会の制度をわざと作り直す」提案とは、向きが逆です<a class="cite" href="#src-9" data-src="src-9">[9]</a>。この記事ではワイルらの意味で使っています。</li>
+<li><strong>効果的利他主義（EA）の側の受け止め。</strong> トム・ヴァルガス（Tom Vargas）はフォーラムで、要点を、制度がまちがっていれば、人間によく合わせた高度な AI が加わっても結果はたぶん悪くなる、という形でまとめました。もっともらしいと評価しつつ、社会の土台を扱うので実行は非常に難しいが、うまくいけばずっと大きく変えられる、と書いています。コメント欄には、個々のモデルを整えても、それを使うシステム全体が整うとは限らない、という趣旨の声もありました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>「誰が誰に合わせるのか」。</strong> 講座では、reverse alignment は誰が誰に合わせるかを決めることなのか、という質問が出ました。タンは、過去の工業化・電化・インターネットへの制度の対応は、どれも「不満なら誰に訴えるか、どう知るか、どう抜けて別のしくみに移るか」に答えるものだった、と答えました。そして AI でも、インターネットのように小さく試して、よりよいやり方を自分たちで作れる形が望ましい、と述べました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
 <p>reverse alignment という言葉は、本『Plurality』（英語版）には出てきません。本が出たあとの、2026 年のワイルと連合の主張です。本の主張と混ぜないよう注意が必要です。</p>
-<p>一方で、中身は本とよくつながっています。Noema の論考は結びで、分断した共同体を橋渡しし、信頼を中央の権威ではなく多様な人間関係の網に置き、意見の違いを押さえつけずに共通の足場を見つける協力を処方に挙げます[1]。これは本の中心にある <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a> の考え方です。台湾の例を挙げる点も、本の第 2 部（<a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a>）と同じ素材です。</p>
-<p>タンが関わる <a href="six-pack-of-care.html">6-Pack of Care</a> と <a href="civic-ai.html">Civic AI</a> も近い位置にあります。どちらも「AI の中身を整えるだけでは足りない」と考える点で一致しています。6-Pack は AI が働く場の手続きを設計する枠組みで、reverse alignment は社会全体の制度への投資を呼びかける議題です[2][11]。AI の未来をめぐる論争との関係は <a href="ai-futures-debate.html">AI の未来をめぐる論争</a> を見てください。</p>
+<p>一方で、中身は本とよくつながっています。Noema の論考は結びで、分断した共同体を橋渡しし、信頼を中央の権威ではなく多様な人間関係の網に置き、意見の違いを押さえつけずに共通の足場を見つける協力を処方に挙げます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。これは本の中心にある <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a> の考え方です。台湾の例を挙げる点も、本の第 2 部（<a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a>）と同じ素材です。</p>
+<p>タンが関わる <a href="six-pack-of-care.html">6-Pack of Care</a> と <a href="civic-ai.html">Civic AI</a> も近い位置にあります。どちらも「AI の中身を整えるだけでは足りない」と考える点で一致しています。6-Pack は AI が働く場の手続きを設計する枠組みで、reverse alignment は社会全体の制度への投資を呼びかける議題です<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。AI の未来をめぐる論争との関係は <a href="ai-futures-debate.html">AI の未来をめぐる論争</a> を見てください。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>Reverse Alignment 日本語版サイト（日本語・サイト）— <a href="https://reversealignment.jp/" target="_blank" rel="noopener">https://reversealignment.jp/</a></li>
@@ -97,15 +103,45 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Weyl, Evans, White「What Humanity Needs To Flourish In The Next Decade」（Noema、2026-07-21）— <a href="https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/" target="_blank" rel="noopener">https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</a></li>
-<li>Reverse Alignment 連合サイト — <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
-<li>Weyl「Humanity's Sociotechnical Grand Challenges」（スライド、2026-06-23）— <a href="https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf" target="_blank" rel="noopener">https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf</a></li>
-<li>Platform Originals: The Other Side of Alignment（2026-08-29、英訳の逐語録）— <a href="https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md</a> ［CC0］</li>
-<li>同「對齊的另一面」（中国語の逐語録）— <a href="https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2" target="_blank" rel="noopener">https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2</a> ［CC0］</li>
-<li>Reverse Alignment 日本語版サイト — <a href="https://reversealignment.jp/" target="_blank" rel="noopener">https://reversealignment.jp/</a></li>
-<li>反向對齊（華語版サイト）— <a href="https://reversealignment.tw/" target="_blank" rel="noopener">https://reversealignment.tw/</a></li>
-<li>Jess Scully「On Reverse Alignment」（RadicalxChange、2026-09-10）— <a href="https://www.radicalxchange.org/updates/blog/on-reverse-alignment/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/on-reverse-alignment/</a></li>
-<li>David Jacob Harrison「The reverse alignment problem」（AI &amp; Society、2026-04-25、要旨）— <a href="https://link.springer.com/article/10.1007/s00146-026-03043-4" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s00146-026-03043-4</a></li>
-<li>Tom Vargas「Reverse alignment」（EA Forum、2026-07-22）— <a href="https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment" target="_blank" rel="noopener">https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment</a></li>
-<li>Civic AI — <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='six-pack-of-care.html'>6-Pack of Care（ケアの6パック）ってなに？</a> ・ <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a> ・ <a href='ai-futures-debate.html'>AI の未来をめぐる論争（AI 2027 など）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='bridging.html'>ブリッジング（橋渡し）ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Freverse-alignment.html&title=%5B%E6%8C%87%E6%91%98%5D%20reverse%20alignment%EF%BC%88%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Freverse-alignment.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Weyl, Evans, White「What Humanity Needs To Flourish In The Next Decade」（Noema、2026-07-21）— <a href="https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/" target="_blank" rel="noopener">https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</a></li>
+<li id="src-2">Reverse Alignment 連合サイト — <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
+<li id="src-3">Weyl「Humanity's Sociotechnical Grand Challenges」（スライド、2026-06-23）— <a href="https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf" target="_blank" rel="noopener">https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf</a></li>
+<li id="src-4">Platform Originals: The Other Side of Alignment（2026-08-29、英訳の逐語録）— <a href="https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md</a> ［CC0］</li>
+<li id="src-5">同「對齊的另一面」（中国語の逐語録）— <a href="https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2" target="_blank" rel="noopener">https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2</a> ［CC0］</li>
+<li id="src-6">Reverse Alignment 日本語版サイト — <a href="https://reversealignment.jp/" target="_blank" rel="noopener">https://reversealignment.jp/</a></li>
+<li id="src-7">反向對齊（華語版サイト）— <a href="https://reversealignment.tw/" target="_blank" rel="noopener">https://reversealignment.tw/</a></li>
+<li id="src-8">Jess Scully「On Reverse Alignment」（RadicalxChange、2026-09-10）— <a href="https://www.radicalxchange.org/updates/blog/on-reverse-alignment/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/on-reverse-alignment/</a></li>
+<li id="src-9">David Jacob Harrison「The reverse alignment problem」（AI &amp; Society、2026-04-25、要旨）— <a href="https://link.springer.com/article/10.1007/s00146-026-03043-4" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s00146-026-03043-4</a></li>
+<li id="src-10">Tom Vargas「Reverse alignment」（EA Forum、2026-07-22）— <a href="https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment" target="_blank" rel="noopener">https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment</a></li>
+<li id="src-11">Civic AI — <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='six-pack-of-care.html'>6-Pack of Care（ケアの6パック）ってなに？</a> ・ <a href='civic-ai.html'>Civic AI（シビック AI・仁工智慧）ってなに？</a> ・ <a href='ai-futures-debate.html'>AI の未来をめぐる論争（AI 2027 など）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='bridging.html'>ブリッジング（橋渡し）ってなに？</a> ・ <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Freverse-alignment.html&title=%5B%E6%8C%87%E6%91%98%5D%20reverse%20alignment%EF%BC%88%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Freverse-alignment.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

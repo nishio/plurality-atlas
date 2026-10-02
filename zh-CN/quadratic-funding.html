@@ -41,16 +41,22 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../quadratic-funding.html">日本語</a> <a class="lang" hreflang="en" href="../en/quadratic-funding.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/quadratic-funding.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是平方募资？</h1><div class='lead'>基金为大家的捐款加码配对时，看重「有多少人捐」胜过「捐了多少钱」的规则。比起靠一位大户支撑的项目，由许多人小额支持的项目，能拿到多得多的配对资金。</div><p>公园、图书馆、任何人都能免费使用的软件——这些东西对大家都有用，却没有人想掏钱。因为就算自己不付，只要别人付了，自己也能用。平方募资（Quadratic Funding，简称 QF）就是为了让这类「大家的东西」募得到钱而设计的捐款配对规则。</p>
 <h2>一句话说明</h2>
-<p>QF 是基金为大家的捐款加码配对时，<strong>看重捐款人数、胜过捐款金额</strong>的规则[1][2]。</p>
+<p>QF 是基金为大家的捐款加码配对时，<strong>看重捐款人数、胜过捐款金额</strong>的规则<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>就算募到的总额相同，由许多人小额支持的项目，也会比靠一位大户支持的项目拿到多得多的配对。「平方」一词，来自计算中用到平方。</p>
 <h2>举例来说</h2>
-<p><strong>Gitcoin Grants（2019 年起）。</strong> 这是加密货币以太坊（Ethereum）周边，支持任何人都能使用的开源软件等公共项目的捐款平台。根据以太坊创办人维塔利克·布特林（Vitalik Buterin）的回顾，2019 年第 3 轮有 477 人对 80 个项目捐了共 163,279 美元，由 10 万美元的基金用 QF 配对[3]。2021 年第 9 轮，超过 1 万 2,000 人对 812 个项目捐了 138 万美元，基金为 50 万美元[4]。</p>
-<p>《多元宇宙》一书写道，Gitcoin 等平台已经成为开源软件的重要资金来源，英文版说合计经手超过 1 亿美元（繁体中文版作「数亿美元」）。书中也写到本书自己在 Gitcoin 上的页面：「截至 2024 年 2 月 2 日止，这个项目从来自世界各地 87 位贡献者那里获得了 332.84 美元的资助」[5]。</p>
-<p><strong>台湾。</strong> 书中提到，总统杯黑客松的做法后来扩展到点子松等活动，并依照 QF 的想法，实际拨款给农业、食品安全检验等项目[6]。繁体中文版则具体写出：「『公益创新．征案100』也采用了平方募资」[7]。</p>
-<p><strong>日本。</strong> 中文维基百科记载，2024 年日本数位厅支持的 DigDAO 启动了日本的平方募资实验[8]。</p>
+<p><strong>Gitcoin Grants（2019 年起）。</strong> 这是加密货币以太坊（Ethereum）周边，支持任何人都能使用的开源软件等公共项目的捐款平台。根据以太坊创办人维塔利克·布特林（Vitalik Buterin）的回顾，2019 年第 3 轮有 477 人对 80 个项目捐了共 163,279 美元，由 10 万美元的基金用 QF 配对<a class="cite" href="#src-3" data-src="src-3">[3]</a>。2021 年第 9 轮，超过 1 万 2,000 人对 812 个项目捐了 138 万美元，基金为 50 万美元<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>《多元宇宙》一书写道，Gitcoin 等平台已经成为开源软件的重要资金来源，英文版说合计经手超过 1 亿美元（繁体中文版作「数亿美元」）。书中也写到本书自己在 Gitcoin 上的页面：「截至 2024 年 2 月 2 日止，这个项目从来自世界各地 87 位贡献者那里获得了 332.84 美元的资助」<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>台湾。</strong> 书中提到，总统杯黑客松的做法后来扩展到点子松等活动，并依照 QF 的想法，实际拨款给农业、食品安全检验等项目<a class="cite" href="#src-6" data-src="src-6">[6]</a>。繁体中文版则具体写出：「『公益创新．征案100』也采用了平方募资」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>日本。</strong> 中文维基百科记载，2024 年日本数位厅支持的 DigDAO 启动了日本的平方募资实验<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>运作方式</h2>
 <h3>简单的计算</h3>
 <p>用一个说明用的例子来想：</p>
@@ -59,33 +65,33 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li>项目 B：<strong>100 个人各捐 1 美元</strong>。</li>
 </ul>
 <p>两者募到的都是 100 美元。如果按捐款金额等比例配对，两者拿到的配对也一样。</p>
-<p>QF 的做法是：<strong>把每个人捐款金额的平方根加总，再取平方</strong>，得到的就是项目能拿到的总额[1]。</p>
+<p>QF 的做法是：<strong>把每个人捐款金额的平方根加总，再取平方</strong>，得到的就是项目能拿到的总额<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <ul>
 <li>项目 A：√100 = 10，平方后 10 × 10 = <strong>100 美元</strong>。等于捐款本身，配对 0 美元。</li>
 <li>项目 B：√1 = 1，共 100 人，1 × 100 = 100，平方后 100 × 100 = <strong>10,000 美元</strong>。与捐款 100 美元的差额 <strong>9,900 美元</strong>由基金配对。</li>
 </ul>
-<p>布特林入门文章里的例子是：10 个人各捐 1 美元，(1 + 1 + … + 1)² = 10² = 100 美元，差额 90 美元由基金出。基金不够时，所有项目的配对都按同样比例缩减[1]。</p>
-<p>写成式子，项目拿到的总额是「(√捐款₁ + √捐款₂ + …)²」。只要捐款人有 2 人以上，一定会大于捐款的合计[1][9]。</p>
+<p>布特林入门文章里的例子是：10 个人各捐 1 美元，(1 + 1 + … + 1)² = 10² = 100 美元，差额 90 美元由基金出。基金不够时，所有项目的配对都按同样比例缩减<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>写成式子，项目拿到的总额是「(√捐款₁ + √捐款₂ + …)²」。只要捐款人有 2 人以上，一定会大于捐款的合计<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>为什么这样行得通</h3>
-<p>大家的东西，不只对捐款人自己有用，也对其他人有用。可是人通常只考虑自己能得到的好处来决定捐多少。所以从整体社会来看，捐款总是太少[1]。</p>
-<p>布特林说明，QF 的配对，正是在补上「某人的捐款为别人带来的好处」这一块。把每一对捐款人之间的这部分算出来加总，刚好就是 QF 的公式[1]。</p>
-<p>布特林也写道，QF 可以看成<a href="quadratic-voting.html">平方投票</a>的一种特殊情形：捐款人投下赞成票，基金投下反对票[1]。</p>
+<p>大家的东西，不只对捐款人自己有用，也对其他人有用。可是人通常只考虑自己能得到的好处来决定捐多少。所以从整体社会来看，捐款总是太少<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>布特林说明，QF 的配对，正是在补上「某人的捐款为别人带来的好处」这一块。把每一对捐款人之间的这部分算出来加总，刚好就是 QF 的公式<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>布特林也写道，QF 可以看成<a href="quadratic-voting.html">平方投票</a>的一种特殊情形：捐款人投下赞成票，基金投下反对票<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>从哪里来</h3>
-<p>原始论文是布特林、柔伊·希兹格（Zoë Hitzig）、卫谷伦（E. Glen Weyl）三人在 2018 年发表的 "A Flexible Design for Funding Public Goods"（公共财的弹性资助设计）。论文摘要说，这是把平方投票的想法延伸到资金机制，在一定条件下能产生最适量的公共财，可用于竞选经费、开源软件、新闻报导、城市公共建设等[9]。</p>
+<p>原始论文是布特林、柔伊·希兹格（Zoë Hitzig）、卫谷伦（E. Glen Weyl）三人在 2018 年发表的 "A Flexible Design for Funding Public Goods"（公共财的弹性资助设计）。论文摘要说，这是把平方投票的想法延伸到资金机制，在一定条件下能产生最适量的公共财，可用于竞选经费、开源软件、新闻报导、城市公共建设等<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>书中的定位，以及看见连结的 QF</h3>
-<p>书在 5-7 章写道，配对资金「应该按照个人贡献的平方根之和的平方来分配」，这是「在类似原子化行为的假设下」导出的；而「最近的设计，已经超越了传统的个人主义设计，考虑到多元化的群体利益和从属关系」[10]。</p>
-<p>卫谷伦等人 2023 年的文章论证，QF 最适的证明，是建立在人彼此孤立、只为自己的利益行动的假设上；面对多少会互相串通的一般人，它就不是最适的。文章并写道，应该多配给由多元群体支持的项目，而不是由同质群体支持的项目，这正是 Plurality 的目标[11]。根据 2025 年的报告，纳入这个想法的「连结导向 QF」（Connection-Oriented QF，CO-QF）已用在 Gitcoin 89% 的资助计划中，分配了超过 400 万美元[12]。</p>
+<p>书在 5-7 章写道，配对资金「应该按照个人贡献的平方根之和的平方来分配」，这是「在类似原子化行为的假设下」导出的；而「最近的设计，已经超越了传统的个人主义设计，考虑到多元化的群体利益和从属关系」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>卫谷伦等人 2023 年的文章论证，QF 最适的证明，是建立在人彼此孤立、只为自己的利益行动的假设上；面对多少会互相串通的一般人，它就不是最适的。文章并写道，应该多配给由多元群体支持的项目，而不是由同质群体支持的项目，这正是 Plurality 的目标<a class="cite" href="#src-11" data-src="src-11">[11]</a>。根据 2025 年的报告，纳入这个想法的「连结导向 QF」（Connection-Oriented QF，CO-QF）已用在 Gitcoin 89% 的资助计划中，分配了超过 400 万美元<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>冒名与串通。</strong> 原始论文自己就写道，QF 最大的弱点是串通与舞弊。一个人假装成几十个人各捐小额，就能拿到更多配对。论文认为首要对策是可靠的身分验证[13]。实际上，Gitcoin 第 9 轮就发现了疑似少数人操控大量帐号的群体，Gitcoin 自行负担了约 3 万 3,000 美元的不当配对[4]。→ <a href="proof-of-personhood.html">人格证明</a></li>
-<li><strong>附带回报的捐款。</strong> QF 的前提是「因为希望这个项目实现而捐款」。如果捐款人会得到回报，配对就会过多。布特林写道，Gitcoin 禁止了回报，但也因此必须承担起中央判断的角色[14]。第 9 轮也出现了暗示之后会发东西的「变相买票」问题[4]。</li>
-<li><strong>不过，串通很难持久。</strong> 原始论文试算指出，在大家一起捐款再分赃的串通中，一个人退出不捐反而更划算，所以串通会逐渐瓦解[13]。</li>
-<li><strong>范围划到哪里。</strong> 第 4 轮出现了为以太坊设的基金流向支持其他加密货币帐号的结果。布特林援引管理共有资源的传统智慧，建议为 QF 的适用范围划定边界[14]。</li>
-<li><strong>偏向人气，是缺点吗？</strong> 布特林在第 3 轮时，把 QF 容易选出广受欢迎的项目，评为对技术专家评审的良好修正；但对 Gitcoin 自己的营运经费几乎募不到钱，则表示失望[3]。</li>
+<li><strong>冒名与串通。</strong> 原始论文自己就写道，QF 最大的弱点是串通与舞弊。一个人假装成几十个人各捐小额，就能拿到更多配对。论文认为首要对策是可靠的身分验证<a class="cite" href="#src-13" data-src="src-13">[13]</a>。实际上，Gitcoin 第 9 轮就发现了疑似少数人操控大量帐号的群体，Gitcoin 自行负担了约 3 万 3,000 美元的不当配对<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="proof-of-personhood.html">人格证明</a></li>
+<li><strong>附带回报的捐款。</strong> QF 的前提是「因为希望这个项目实现而捐款」。如果捐款人会得到回报，配对就会过多。布特林写道，Gitcoin 禁止了回报，但也因此必须承担起中央判断的角色<a class="cite" href="#src-14" data-src="src-14">[14]</a>。第 9 轮也出现了暗示之后会发东西的「变相买票」问题<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</li>
+<li><strong>不过，串通很难持久。</strong> 原始论文试算指出，在大家一起捐款再分赃的串通中，一个人退出不捐反而更划算，所以串通会逐渐瓦解<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>范围划到哪里。</strong> 第 4 轮出现了为以太坊设的基金流向支持其他加密货币帐号的结果。布特林援引管理共有资源的传统智慧，建议为 QF 的适用范围划定边界<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>偏向人气，是缺点吗？</strong> 布特林在第 3 轮时，把 QF 容易选出广受欢迎的项目，评为对技术专家评审的良好修正；但对 Gitcoin 自己的营运经费几乎募不到钱，则表示失望<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>QF 是书中 5-7 章〈<a href="social-markets.html">社会市场</a>〉的第一个案例，也是核心机制。书认为，市场对于人们合力创造的东西、对大家都有用的东西，总是生产得太少；QF 是书对这个限制提出的答案之一[10]。</p>
-<p>英文版写道，这本书本身的工作优先顺序与报酬，也是用这一章介绍的「群众募资」式做法决定的[15]。布特林在书评中提到，QF 不用钱的版本「Plural Credits」被用来记录对本书的贡献[16]。这也连结到 <a href="plural-management-protocol.html">多元管理协定</a>（Plural Management Protocol）。</p>
+<p>QF 是书中 5-7 章〈<a href="social-markets.html">社会市场</a>〉的第一个案例，也是核心机制。书认为，市场对于人们合力创造的东西、对大家都有用的东西，总是生产得太少；QF 是书对这个限制提出的答案之一<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>英文版写道，这本书本身的工作优先顺序与报酬，也是用这一章介绍的「群众募资」式做法决定的<a class="cite" href="#src-15" data-src="src-15">[15]</a>。布特林在书评中提到，QF 不用钱的版本「Plural Credits」被用来记录对本书的贡献<a class="cite" href="#src-16" data-src="src-16">[16]</a>。这也连结到 <a href="plural-management-protocol.html">多元管理协定</a>（Plural Management Protocol）。</p>
 <p>「优待由多元的人支持的事物」这个想法，也和投票设计的 <a href="plural-voting.html">⿻投票</a> 相通。</p>
 <h2>延伸阅读</h2>
 <ol>
@@ -99,20 +105,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Vitalik Buterin, "Quadratic Payments: A Primer"（2019）— <a href="https://vitalik.eth.limo/general/2019/12/07/quadratic.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/12/07/quadratic.html</a></li>
-<li>Cybozu 式 唐凤、卫谷伦、关治之三人对谈（编辑部注，日文）— <a href="https://cybozushiki.cybozu.co.jp/articles/m006211.html" target="_blank" rel="noopener">https://cybozushiki.cybozu.co.jp/articles/m006211.html</a></li>
-<li>Vitalik Buterin, "Review of Gitcoin Quadratic Funding Round 3"（2019）— <a href="https://vitalik.eth.limo/general/2019/10/24/gitcoin.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/10/24/gitcoin.html</a></li>
-<li>Vitalik Buterin, "Gitcoin Grants Round 9: The Next Phase of Growth"（2021）— <a href="https://vitalik.eth.limo/general/2021/04/02/round9.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2021/04/02/round9.html</a></li>
-<li>《多元宇宙》5-7〈社会市场〉开头 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a> ；「超过 1 亿美元」见英文版 <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a></li>
-<li>《Plurality》英文版 2-2 "The Life of a Digital Democracy" — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a></li>
-<li>《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
-<li>平方投票法（中文维基百科）「平方募资法」— <a href="https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95</a></li>
-<li>Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods" 摘要（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
-<li>《多元宇宙》5-7〈社会市场〉「明日的市场」— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
-<li>Miller, Weyl, Erichsen, "Designing Pluralistic Mechanisms for Quadratic Funding"（2023）— <a href="https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</a></li>
-<li>Miller, Weyl, Kanich, "Fair Decisions through Plurality: Results from a Crowdfunding Platform"（2025）— <a href="https://arxiv.org/abs/2509.18343" target="_blank" rel="noopener">https://arxiv.org/abs/2509.18343</a></li>
-<li>Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods" 5.2 Collusion and fraud — <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
-<li>Vitalik Buterin, "Review of Gitcoin Quadratic Funding Round 4"（2020）— <a href="https://vitalik.eth.limo/general/2020/01/28/round4.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2020/01/28/round4.html</a></li>
-<li>《Plurality》英文版 5-0 "Collaborative Technology and Democracy" 开头 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
-<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-</ol><div class='related'>相关: <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='social-markets.html'>什么是社会市场？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='proof-of-personhood.html'>什么是人格证明（proof of personhood）？</a> ・ <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fquadratic-funding.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%B3%E6%96%B9%E5%8B%9F%E8%B5%84%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fquadratic-funding.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Vitalik Buterin, "Quadratic Payments: A Primer"（2019）— <a href="https://vitalik.eth.limo/general/2019/12/07/quadratic.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/12/07/quadratic.html</a></li>
+<li id="src-2">Cybozu 式 唐凤、卫谷伦、关治之三人对谈（编辑部注，日文）— <a href="https://cybozushiki.cybozu.co.jp/articles/m006211.html" target="_blank" rel="noopener">https://cybozushiki.cybozu.co.jp/articles/m006211.html</a></li>
+<li id="src-3">Vitalik Buterin, "Review of Gitcoin Quadratic Funding Round 3"（2019）— <a href="https://vitalik.eth.limo/general/2019/10/24/gitcoin.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/10/24/gitcoin.html</a></li>
+<li id="src-4">Vitalik Buterin, "Gitcoin Grants Round 9: The Next Phase of Growth"（2021）— <a href="https://vitalik.eth.limo/general/2021/04/02/round9.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2021/04/02/round9.html</a></li>
+<li id="src-5">《多元宇宙》5-7〈社会市场〉开头 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a> ；「超过 1 亿美元」见英文版 <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a></li>
+<li id="src-6">《Plurality》英文版 2-2 "The Life of a Digital Democracy" — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a></li>
+<li id="src-7">《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li id="src-8">平方投票法（中文维基百科）「平方募资法」— <a href="https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95</a></li>
+<li id="src-9">Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods" 摘要（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li id="src-10">《多元宇宙》5-7〈社会市场〉「明日的市场」— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+<li id="src-11">Miller, Weyl, Erichsen, "Designing Pluralistic Mechanisms for Quadratic Funding"（2023）— <a href="https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/designing-pluralistic-mechanisms-for-quadratic-funding/</a></li>
+<li id="src-12">Miller, Weyl, Kanich, "Fair Decisions through Plurality: Results from a Crowdfunding Platform"（2025）— <a href="https://arxiv.org/abs/2509.18343" target="_blank" rel="noopener">https://arxiv.org/abs/2509.18343</a></li>
+<li id="src-13">Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods" 5.2 Collusion and fraud — <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li id="src-14">Vitalik Buterin, "Review of Gitcoin Quadratic Funding Round 4"（2020）— <a href="https://vitalik.eth.limo/general/2020/01/28/round4.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2020/01/28/round4.html</a></li>
+<li id="src-15">《Plurality》英文版 5-0 "Collaborative Technology and Democracy" 开头 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
+<li id="src-16">Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+</ol><div class='related'>相关: <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='social-markets.html'>什么是社会市场？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='proof-of-personhood.html'>什么是人格证明（proof of personhood）？</a> ・ <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fquadratic-funding.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%B3%E6%96%B9%E5%8B%9F%E8%B5%84%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fquadratic-funding.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

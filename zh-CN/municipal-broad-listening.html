@@ -41,40 +41,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../municipal-broad-listening.html">日本語</a> <a class="lang" hreflang="en" href="../en/municipal-broad-listening.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/municipal-broad-listening.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是地方政府的广泛倾听？</h1><div class='lead'>这是日本的町或县用「広聴AI」等工具自动整理问卷自由填答等居民的声音，把居民整体在说什么视觉化的尝试。2025 年在香川县宇多津町、岩手县、东京都涩谷区、广岛县等地实施。</div><p>市公所或县政府做居民问卷时，常会设一栏「请自由填写」。可是要由职员把好几千则自由填答一则一则读完、分类，非常费工。因此，好不容易收集到的声音，有时没能充分发挥作用。地方政府的广泛倾听，就是用 AI 工具减少这份工夫，掌握居民声音全貌的尝试。</p>
 <h2>一句话说明</h2>
-<p>这是把町或县收集到的问卷自由填答等资料交给 AI 工具，做出依相似意见归类的「地图」与摘要的尝试，目的是在短时间内掌握「居民整体在说什么」。工具主要使用公民团体 <a href="dd2030.html">DD2030</a> 打造的免费软件<a href="kouchou-ai.html">広聴AI</a>[1][2]。</p>
-<p><a href="broad-listening.html">广泛倾听</a>是指广泛听取大量的声音、掌握全貌。从 2025 年起，继<a href="tokyo-2050-broad-listening.html">东京都的大规模实施</a>之后，开始从小町扩展到县[1][3][4]。</p>
+<p>这是把町或县收集到的问卷自由填答等资料交给 AI 工具，做出依相似意见归类的「地图」与摘要的尝试，目的是在短时间内掌握「居民整体在说什么」。工具主要使用公民团体 <a href="dd2030.html">DD2030</a> 打造的免费软件<a href="kouchou-ai.html">広聴AI</a><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><a href="broad-listening.html">广泛倾听</a>是指广泛听取大量的声音、掌握全貌。从 2025 年起，继<a href="tokyo-2050-broad-listening.html">东京都的大规模实施</a>之后，开始从小町扩展到县<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>香川县宇多津町（2025 年 4 月 30 日公布）。</strong> 町在制定长期计划时做了町民问卷，用広聴AI 整理了 396 则自由填答。町方报告说，过去要花很长时间的汇整，AI 大约 10 分钟就处理完成。町长发表的评语大意是：AI 的分类不受情绪或先入为主的想法左右，而是根据资料进行，这一点也很有吸引力[1]。</p>
-<p><strong>东京都涩谷区（2025 年 7 月 2 日公布）。</strong> 分析了区民意识调查的 6,037 则自由填答，产出整体摘要、依话题的分类与分布图，以及依世代、依地区的倾向[5][6]。群组的名称中，出现了要求取缔路上吸烟与饮酒的声音等。区方也试着只取出 30 多岁者的 615 则，来看育儿与教育的论点[6]。</p>
-<p><strong>广岛县（2025 年 8～9 月）。</strong> 县民意见征集「デジタル化で描く未来の広岛は？」（用数位化描绘的未来广岛是什么样子？）收到 2,953 则意见，县方用広聴AI 分析，并在征集期间就公布了期中结果。职员表示，约 3,000 则自由填答不到 30 分钟就分类完成；据说若由人工处理，可能要花约 500 小时[7]。</p>
+<p><strong>香川县宇多津町（2025 年 4 月 30 日公布）。</strong> 町在制定长期计划时做了町民问卷，用広聴AI 整理了 396 则自由填答。町方报告说，过去要花很长时间的汇整，AI 大约 10 分钟就处理完成。町长发表的评语大意是：AI 的分类不受情绪或先入为主的想法左右，而是根据资料进行，这一点也很有吸引力<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>东京都涩谷区（2025 年 7 月 2 日公布）。</strong> 分析了区民意识调查的 6,037 则自由填答，产出整体摘要、依话题的分类与分布图，以及依世代、依地区的倾向<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。群组的名称中，出现了要求取缔路上吸烟与饮酒的声音等。区方也试着只取出 30 多岁者的 615 则，来看育儿与教育的论点<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>广岛县（2025 年 8～9 月）。</strong> 县民意见征集「デジタル化で描く未来の広岛は？」（用数位化描绘的未来广岛是什么样子？）收到 2,953 则意见，县方用広聴AI 分析，并在征集期间就公布了期中结果。职员表示，约 3,000 则自由填答不到 30 分钟就分类完成；据说若由人工处理，可能要花约 500 小时<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>运作方式</h2>
 <h3>在做什么</h3>
-<p>宇多津町、岩手县、涩谷区这 3 个例子，都是<strong>事后</strong>分析早已收集好的问卷或讨论会的自由填答，而不是像东京都那样重新征集意见[1][3][5]。岩手县用「思考幸福的工作坊」的感想，以及向小学生到高中生征询的意见来试用[3][8]。</p>
-<p>3 个例子使用的工具都是広聴AI。広聴AI 在 2025 年 3 月 16 日以任何人都能使用的开源软件形式公开[2]。导入时，提供数位化咨询的公司「株式会社ブーツ」提供了协助[1][3][5]。</p>
+<p>宇多津町、岩手县、涩谷区这 3 个例子，都是<strong>事后</strong>分析早已收集好的问卷或讨论会的自由填答，而不是像东京都那样重新征集意见<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。岩手县用「思考幸福的工作坊」的感想，以及向小学生到高中生征询的意见来试用<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>3 个例子使用的工具都是広聴AI。広聴AI 在 2025 年 3 月 16 日以任何人都能使用的开源软件形式公开<a class="cite" href="#src-2" data-src="src-2">[2]</a>。导入时，提供数位化咨询的公司「株式会社ブーツ」提供了协助<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h3>地方政府举出的效果</h3>
-<p>3 个地方政府举出的效果几乎相同。一是原本靠人工的汇整，能在短时间内完成；二是看得见全貌，更容易掌握居民的声音与课题[3][1][9]。</p>
-<p>岩手县也写道，过去自由填答栏只能把意见条列出来，现在可以附上标题、以视觉化的形式公开[3]。涩谷区表示的大意是：过去因为统计费工而很少做的分析，现在可以更频繁地进行[9]。</p>
+<p>3 个地方政府举出的效果几乎相同。一是原本靠人工的汇整，能在短时间内完成；二是看得见全貌，更容易掌握居民的声音与课题<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>岩手县也写道，过去自由填答栏只能把意见条列出来，现在可以附上标题、以视觉化的形式公开<a class="cite" href="#src-3" data-src="src-3">[3]</a>。涩谷区表示的大意是：过去因为统计费工而很少做的分析，现在可以更频繁地进行<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>广岛县 — 由职员培养给 AI 的指示文字</h3>
-<p>以広聴AI 为主轴解说广泛倾听的书《广泛倾听》（原书名《政治・自治体・企业に広がるブロードリスニング》，以下称「广泛倾听之书」）认为，广岛县最大的收获，是职员亲自调整给 AI 的指示文字（提示词，prompt）的经验[7]。</p>
-<p>第一个问题是，AI 会替简短的投稿补上看似合理的意义。职员在指示文字上下功夫后，就能把「不知道」之类的投稿排除在意见之外[7]。</p>
-<p>第二个是群组的名称。不用「数位技术的活用」这类技术用语，而是改向「交通」「教育」这类行政用语靠拢。结果 20 个名称中含有「数位」的，从 16 个减少到 6 个，在县政府内部更容易讨论[7]。结果在知事（县的首长）出席的会议上分享，并询问各部门的对应情况[7]。</p>
+<p>以広聴AI 为主轴解说广泛倾听的书《广泛倾听》（原书名《政治・自治体・企业に広がるブロードリスニング》，以下称「广泛倾听之书」）认为，广岛县最大的收获，是职员亲自调整给 AI 的指示文字（提示词，prompt）的经验<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>第一个问题是，AI 会替简短的投稿补上看似合理的意义。职员在指示文字上下功夫后，就能把「不知道」之类的投稿排除在意见之外<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>第二个是群组的名称。不用「数位技术的活用」这类技术用语，而是改向「交通」「教育」这类行政用语靠拢。结果 20 个名称中含有「数位」的，从 16 个减少到 6 个，在县政府内部更容易讨论<a class="cite" href="#src-7" data-src="src-7">[7]</a>。结果在知事（县的首长）出席的会议上分享，并询问各部门的对应情况<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>広聴AI 以外的形式 — 协助讨论的 AI</h3>
-<p>群马县太田市在 2025 年度，于抽签选出约 20 名市民讨论的「自分ごと化会议」（把事情当成自己的事来思考的会议）中，引进了合同会社多元现实的工具「倍速会议」（倍速会议）。参与者用智能手机回答 AI 的提问后，立刻就会产出整理了共识点、分歧点、犹豫点的报告，作为会议的起点[10]。广泛倾听之书把这个例子介绍为有别于整理自由填答的工具、提升会议品质的例子[11]。这类尝试是<a href="augmented-deliberation.html">扩增审议</a>（用技术深化讨论）的一种形式。</p>
+<p>群马县太田市在 2025 年度，于抽签选出约 20 名市民讨论的「自分ごと化会议」（把事情当成自己的事来思考的会议）中，引进了合同会社多元现实的工具「倍速会议」（倍速会议）。参与者用智能手机回答 AI 的提问后，立刻就会产出整理了共识点、分歧点、犹豫点的报告，作为会议的起点<a class="cite" href="#src-10" data-src="src-10">[10]</a>。广泛倾听之书把这个例子介绍为有别于整理自由填答的工具、提升会议品质的例子<a class="cite" href="#src-11" data-src="src-11">[11]</a>。这类尝试是<a href="augmented-deliberation.html">扩增审议</a>（用技术深化讨论）的一种形式。</p>
 <h3>扩散</h3>
-<p>广泛倾听之书的附录，也举出京都府舞鹤市、奈良市、京都府与谢野町、大阪府东大阪市等例子[4]。东京都也在 2025 年 2 月的 AI 战略会议上，把如何让广泛倾听广泛用于地方政府的意见征集列为论点，并在都议会答询表示会把经验分享给区市町村[12][13]。广泛倾听之书写道，2026 年 1 月，广岛县、东京都与 GovTech东京就 AI 的活用缔结了合作协定[7]。</p>
+<p>广泛倾听之书的附录，也举出京都府舞鹤市、奈良市、京都府与谢野町、大阪府东大阪市等例子<a class="cite" href="#src-4" data-src="src-4">[4]</a>。东京都也在 2025 年 2 月的 AI 战略会议上，把如何让广泛倾听广泛用于地方政府的意见征集列为论点，并在都议会答询表示会把经验分享给区市町村<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。广泛倾听之书写道，2026 年 1 月，广岛县、东京都与 GovTech东京就 AI 的活用缔结了合作协定<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>意见本身就收集不到。</strong> 根据广泛倾听之书，DD2030 主动接触了地方政府，但试用之后不容易转为正式运用。原因是推动的动机弱、首长与现场的温差、人事调动，以及难以确保技术人员。书中也写道，在许多地方政府，「在分析之前，能否充分收集意见本身就是课题」[2]。</li>
-<li><strong>结果会因传达给谁而改变。</strong> 广岛县因为用和平常问卷一样的方式通知，回答者偏向与县有关系的团体等接近行政的族群；透过社交媒体主题标签来的意见只有 2 则。广泛倾听之书写道，广泛倾听不是「收集意见」的工具，而是「把收集到的意见结构化」的工具[7]。</li>
-<li><strong>AI 的分类真的客观吗？</strong> 宇多津町长评价 AI 的分类是客观的[1]。另一方面，在广岛县的例子中，改变指示文字，抽出的意见数量和群组名称都会改变，也就是说，用户的意图可能进入结果[7]。县的年度报告书主张，不可以任意挑选或改变居民的声音，并建议公开所使用的指示文字与 AI[7]。协助导入的ブーツ公司代表也写道，它对掌握大方向很有效，但在拾取少数却重要的意见等方面，「未必是万能的」[14]。</li>
-<li><strong>与选举中的使用是两回事。</strong> 也有东京都议会选举的候选人使用広聴AI 的例子，但那是选举活动中的使用，不是地方政府的做法[15]。</li>
+<li><strong>意见本身就收集不到。</strong> 根据广泛倾听之书，DD2030 主动接触了地方政府，但试用之后不容易转为正式运用。原因是推动的动机弱、首长与现场的温差、人事调动，以及难以确保技术人员。书中也写道，在许多地方政府，「在分析之前，能否充分收集意见本身就是课题」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
+<li><strong>结果会因传达给谁而改变。</strong> 广岛县因为用和平常问卷一样的方式通知，回答者偏向与县有关系的团体等接近行政的族群；透过社交媒体主题标签来的意见只有 2 则。广泛倾听之书写道，广泛倾听不是「收集意见」的工具，而是「把收集到的意见结构化」的工具<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</li>
+<li><strong>AI 的分类真的客观吗？</strong> 宇多津町长评价 AI 的分类是客观的<a class="cite" href="#src-1" data-src="src-1">[1]</a>。另一方面，在广岛县的例子中，改变指示文字，抽出的意见数量和群组名称都会改变，也就是说，用户的意图可能进入结果<a class="cite" href="#src-7" data-src="src-7">[7]</a>。县的年度报告书主张，不可以任意挑选或改变居民的声音，并建议公开所使用的指示文字与 AI<a class="cite" href="#src-7" data-src="src-7">[7]</a>。协助导入的ブーツ公司代表也写道，它对掌握大方向很有效，但在拾取少数却重要的意见等方面，「未必是万能的」<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>与选举中的使用是两回事。</strong> 也有东京都议会选举的候选人使用広聴AI 的例子，但那是选举活动中的使用，不是地方政府的做法<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
 <p>《Plurality》一书没有谈到市町村或县的例子。日本的行政机关，只有东京都的长期计划出现在英文版与日文版 5-4 章的注脚中（请见〈<a href="tokyo-2050-broad-listening.html">东京都「シン东京2050」的广泛倾听</a>〉；目前的繁体中文版没有这个注脚）。</p>
-<p>地方政府的做法，可以看作是把书 5-4 章〈扩增审议〉所说的广泛倾听，当作行政日常「広聴」（日本行政用语，听取居民声音的工作）的工具来使用的形式。广泛倾听之书也把地方政府在制定计划时的使用，列为由政治人物或行政机关主导的广泛倾听扩散开来的例子[16]。</p>
+<p>地方政府的做法，可以看作是把书 5-4 章〈扩增审议〉所说的广泛倾听，当作行政日常「広聴」（日本行政用语，听取居民声音的工作）的工具来使用的形式。广泛倾听之书也把地方政府在制定计划时的使用，列为由政治人物或行政机关主导的广泛倾听扩散开来的例子<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
 <p>工具的谱系，从<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>延续到<a href="kouchou-ai.html">広聴AI</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
@@ -87,20 +93,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>宇多津町「『ブロードリスニング』の先进的なトライアルを実施しました」（2025-04-30，日文）— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
-<li>《ブロードリスニング》10〈DD2030 による広聴AIの开発活动〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>岩手县「『ブロードリスニング』の検证结果」（日文）— <a href="https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html" target="_blank" rel="noopener">https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html</a></li>
-<li>《ブロードリスニング》附录〈公开事例一覧〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>涩谷区 新闻发布（2025-07-02，日文）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
-<li>涩谷区 区民意识调查 AI 分析的详细资料（日文）— <a href="https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf" target="_blank" rel="noopener">https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf</a></li>
-<li>《ブロードリスニング》8.2〈広岛県の事例〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>岩手县 验证的详细资料（日文）— <a href="https://www.pref.iwate.jp/" target="_blank" rel="noopener">https://www.pref.iwate.jp/</a><em>res/projects/default_project/_page</em>/001/086/730/genkou.pdf</li>
-<li>涩谷区 区民意识调查 AI 分析结果（日文）— <a href="https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html</a></li>
-<li>《ブロードリスニング》8.1〈群马県太田市の自分ごと化会议〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》8〈地方自治体での活用〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>东京都 第 2 回 AI 战略会议 资料（2025-02-06，日文）— <a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo" target="_blank" rel="noopener">https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo</a></li>
-<li>东京都议会 总务委员会（2025-03-17，日文）— <a href="https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html" target="_blank" rel="noopener">https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html</a></li>
-<li>《ブロードリスニング》10.1〈株式会社ブーツ〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》7〈地方选挙での活用〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》1〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-</ol><div class='related'>相关: <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='tokyo-2050-broad-listening.html'>什么是东京都「シン东京2050」的广泛倾听？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fmunicipal-broad-listening.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E7%9A%84%E5%B9%BF%E6%B3%9B%E5%80%BE%E5%90%AC%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fmunicipal-broad-listening.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">宇多津町「『ブロードリスニング』の先进的なトライアルを実施しました」（2025-04-30，日文）— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
+<li id="src-2">《ブロードリスニング》10〈DD2030 による広聴AIの开発活动〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-3">岩手县「『ブロードリスニング』の検证结果」（日文）— <a href="https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html" target="_blank" rel="noopener">https://www.pref.iwate.jp/kensei/kouchoukouhou/1086730.html</a></li>
+<li id="src-4">《ブロードリスニング》附录〈公开事例一覧〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-5">涩谷区 新闻发布（2025-07-02，日文）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
+<li id="src-6">涩谷区 区民意识调查 AI 分析的详细资料（日文）— <a href="https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf" target="_blank" rel="noopener">https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/38d509b421d049c4ad53536fc88ae4ca/kuminishikichosa_ai.pdf</a></li>
+<li id="src-7">《ブロードリスニング》8.2〈広岛県の事例〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-8">岩手县 验证的详细资料（日文）— <a href="https://www.pref.iwate.jp/" target="_blank" rel="noopener">https://www.pref.iwate.jp/</a><em>res/projects/default_project/_page</em>/001/086/730/genkou.pdf</li>
+<li id="src-9">涩谷区 区民意识调查 AI 分析结果（日文）— <a href="https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/kocho/questionnaire/kuminishikichosa_ai.html</a></li>
+<li id="src-10">《ブロードリスニング》8.1〈群马県太田市の自分ごと化会议〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-11">《ブロードリスニング》8〈地方自治体での活用〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-12">东京都 第 2 回 AI 战略会议 资料（2025-02-06，日文）— <a href="https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo" target="_blank" rel="noopener">https://www.digitalservice.metro.tokyo.lg.jp/documents/d/digitalservice/ai_strategy_council02_shiryo</a></li>
+<li id="src-13">东京都议会 总务委员会（2025-03-17，日文）— <a href="https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html" target="_blank" rel="noopener">https://www.gikai.metro.tokyo.lg.jp/record/general-affairs/2025-03.html</a></li>
+<li id="src-14">《ブロードリスニング》10.1〈株式会社ブーツ〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-15">《ブロードリスニング》7〈地方选挙での活用〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-16">《ブロードリスニング》1〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+</ol><div class='related'>相关: <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='tokyo-2050-broad-listening.html'>什么是东京都「シン东京2050」的广泛倾听？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fmunicipal-broad-listening.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%9C%B0%E6%96%B9%E6%94%BF%E5%BA%9C%E7%9A%84%E5%B9%BF%E6%B3%9B%E5%80%BE%E5%90%AC%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fmunicipal-broad-listening.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

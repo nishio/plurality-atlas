@@ -41,33 +41,39 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../petar-maymounkov.html">日本語</a> <a class="lang" hreflang="en" href="../en/petar-maymounkov.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/petar-maymounkov.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>Petar Maymounkov 是谁？</h1><div class='lead'>负责让许多人一起撰写、营运《Plurality》的机制 Gov4Git（后来的 GitRules）与多元管理协定之技术面的技术者。当时是 Protocol Labs 的研究者。</div><p>《Plurality》不是只由两位主要作者写成的书。几十个人参与其中，谁写什么、接受哪些修改，都是大家一边决定一边做出来的。打造这种决定方式之「工具」的技术者之一，就是 Petar Maymounkov。</p>
 <h2>一句话说明</h2>
-<p>Petar Maymounkov 是打造 Gov4Git 这个工具的技术者之一，负责它的技术面[1][2]。</p>
-<p>Gov4Git 是在 git 之上，连「谁决定什么」都包含在内，营运任何人都能参与之协作（开源）的工具。git 是记录文章或程式变更历史的工具[1][2]。《Plurality》除了两位主要作者，还由几十个人一起写成。工作的优先顺序、稿件的采用与否、贡献的纪录，都用了这个机制[3][4][5]。→ <a href="gov4git.html">Gov4Git（GitRules）</a></p>
+<p>Petar Maymounkov 是打造 Gov4Git 这个工具的技术者之一，负责它的技术面<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>Gov4Git 是在 git 之上，连「谁决定什么」都包含在内，营运任何人都能参与之协作（开源）的工具。git 是记录文章或程式变更历史的工具<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。《Plurality》除了两位主要作者，还由几十个人一起写成。工作的优先顺序、稿件的采用与否、贡献的纪录，都用了这个机制<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="gov4git.html">Gov4Git（GitRules）</a></p>
 <h2>与《Plurality》的关系</h2>
-<p><strong>书的「技术」贡献者。</strong> 书用「<a href="plural-credits.html">⿻ 積分</a>」的纪录表示贡献者。Maymounkov 列在「技术」（Technical）类别的第 2 位[6]。</p>
-<p><strong>参与的经过。</strong> 在 2023 年 Microsoft Research 的 podcast 中，Maymounkov 说自己在 Protocol Labs 工作了约三年半。最初几年作为工程师，身在分散式开发的现场，看到了行得通的事与需要改善的事；由此开始处理治理（governance）的问题，研究之中遇到了<a href="glen-weyl.html">卫谷伦</a>（E. Glen Weyl）的工作。Maymounkov 也说，卫谷伦正要开始的「plurality book」作为具体的课题，让这些努力有了形状。节目中的头衔是 Protocol Labs 的 Research Scientist（研究者）[1]。</p>
-<p><strong>Protocol Labs 与本书项目的合作。</strong> 2022 年 9 月 15 日，Protocol Labs 宣布与卫谷伦、<a href="audrey-tang.html">唐凤</a>（Audrey Tang）合作，作为本书项目的技术伙伴打造「Governance for Git」[7]。</p>
-<p><strong>介绍 Gov4Git 的文章。</strong> 2023 年 3 月 19 日，Maymounkov 与卫谷伦、Kasia Sitkiewicz（GitHub）合写了 Microsoft Research 的文章 "Gov4git: A Decentralized Platform for Community Governance"。文章说明，Microsoft Research 与 Protocol Labs 正在一起打造一种在 git 上运作的机制：具备像区块链那样的透明与分散，但不依赖成本高昂的手段[2]。</p>
-<p><strong>PMP 的说明文。</strong> GitHub 上的 issue #333 "Gov4Git and the Plural Management Protocol overview"（2024 年 2 月 26 日）的发文者，就是 Maymounkov（petar）[4]。英文版 5-7 章以「本书制作所用的 Plural Management Protocol」连结到这个 issue[5]。繁体中文版 5-7 章写道：「我们在编写本书时使用的『多元管理协定』，可追踪不同参与者所作贡献的类型和程度」[12]。→ <a href="plural-management-protocol.html">多元管理协定</a></p>
-<p><strong>论文〈Plural Management〉。</strong> 这是 Tobin South、Leon Erichsen、Shrey Jain、Maymounkov、Scott Moore 与卫谷伦的共同著作（2024 年 1 月）。英文版 5-0 章在注脚中引用了它[8][9]。</p>
+<p><strong>书的「技术」贡献者。</strong> 书用「<a href="plural-credits.html">⿻ 積分</a>」的纪录表示贡献者。Maymounkov 列在「技术」（Technical）类别的第 2 位<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>参与的经过。</strong> 在 2023 年 Microsoft Research 的 podcast 中，Maymounkov 说自己在 Protocol Labs 工作了约三年半。最初几年作为工程师，身在分散式开发的现场，看到了行得通的事与需要改善的事；由此开始处理治理（governance）的问题，研究之中遇到了<a href="glen-weyl.html">卫谷伦</a>（E. Glen Weyl）的工作。Maymounkov 也说，卫谷伦正要开始的「plurality book」作为具体的课题，让这些努力有了形状。节目中的头衔是 Protocol Labs 的 Research Scientist（研究者）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>Protocol Labs 与本书项目的合作。</strong> 2022 年 9 月 15 日，Protocol Labs 宣布与卫谷伦、<a href="audrey-tang.html">唐凤</a>（Audrey Tang）合作，作为本书项目的技术伙伴打造「Governance for Git」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>介绍 Gov4Git 的文章。</strong> 2023 年 3 月 19 日，Maymounkov 与卫谷伦、Kasia Sitkiewicz（GitHub）合写了 Microsoft Research 的文章 "Gov4git: A Decentralized Platform for Community Governance"。文章说明，Microsoft Research 与 Protocol Labs 正在一起打造一种在 git 上运作的机制：具备像区块链那样的透明与分散，但不依赖成本高昂的手段<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>PMP 的说明文。</strong> GitHub 上的 issue #333 "Gov4Git and the Plural Management Protocol overview"（2024 年 2 月 26 日）的发文者，就是 Maymounkov（petar）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文版 5-7 章以「本书制作所用的 Plural Management Protocol」连结到这个 issue<a class="cite" href="#src-5" data-src="src-5">[5]</a>。繁体中文版 5-7 章写道：「我们在编写本书时使用的『多元管理协定』，可追踪不同参与者所作贡献的类型和程度」<a class="cite" href="#src-12" data-src="src-12">[12]</a>。→ <a href="plural-management-protocol.html">多元管理协定</a></p>
+<p><strong>论文〈Plural Management〉。</strong> 这是 Tobin South、Leon Erichsen、Shrey Jain、Maymounkov、Scott Moore 与卫谷伦的共同著作（2024 年 1 月）。英文版 5-0 章在注脚中引用了它<a class="cite" href="#src-8" data-src="src-8">[8]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h2>主要想法</h2>
-<p><strong>治理就是「可信计算」。</strong> Maymounkov 在 podcast 中说明，从电脑科学来看，治理和 trusted computation（可信计算）是同一个意思：治理的规则以公开的程式存在，共同体的成员能确认它是否照约定执行[1]。</p>
-<p><strong>现在的区块链，实作还追不上野心。</strong> 在同一个节目中，Maymounkov 说，现在的区块链技术很有前景，但目前野心扩得太大，还没能完全兑现（总有一天会兑现）。大意是：在 git 上，可以更轻松地得到类似的保证[1]。</p>
-<p><strong>多元管理协定。</strong> 根据 issue #333，机制如下[4]。</p>
+<p><strong>治理就是「可信计算」。</strong> Maymounkov 在 podcast 中说明，从电脑科学来看，治理和 trusted computation（可信计算）是同一个意思：治理的规则以公开的程式存在，共同体的成员能确认它是否照约定执行<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>现在的区块链，实作还追不上野心。</strong> 在同一个节目中，Maymounkov 说，现在的区块链技术很有前景，但目前野心扩得太大，还没能完全兑现（总有一天会兑现）。大意是：在 git 上，可以更轻松地得到类似的保证<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>多元管理协定。</strong> 根据 issue #333，机制如下<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <ol>
 <li>投稿者会得到无法转让给他人的贡献凭证「Plural credits」，不能出售</li>
 <li>用 credits 决定 GitHub 上 issue（该做的工作）的优先顺序，方式是<a href="quadratic-funding.html">平方募资</a>的一种</li>
 <li>解决优先顺序高之 issue 的人，会依优先程度得到 credits</li>
 <li>是否接受 PR（投稿），用票数越多、成本按平方增加的<a href="quadratic-voting.html">平方投票</a>决定</li>
 </ol>
-<p><strong>把帐本复制到 git 上保存。</strong> issue #333 说明，Gov4Git 的帐本不是放在区块链上，而是复制到全体成员的 git 仓库。和一般的区块链不同，这里不放金钱上的回报；成员复制帐本的理由，和复制 git 程式码的理由相同，也就是为了参与共同体[4]。</p>
-<p>根据日文翻译社群的纪录，到 2024 年 4 月，正文中的「Gov4Git」一词已经被换成「GitRules」[10]。</p>
+<p><strong>把帐本复制到 git 上保存。</strong> issue #333 说明，Gov4Git 的帐本不是放在区块链上，而是复制到全体成员的 git 仓库。和一般的区块链不同，这里不放金钱上的回报；成员复制帐本的理由，和复制 git 程式码的理由相同，也就是为了参与共同体<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>根据日文翻译社群的纪录，到 2024 年 4 月，正文中的「Gov4Git」一词已经被换成「GitRules」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>参与的困难。</strong> 2025 年 3 月，本书的 GitHub 上出现了 issue #1071，回报因为 GitHub 用户名称与组织名称不同，无法从 Gov4Git 的应用程式参与[11]。卫谷伦回复的大意是：很抱歉，不知道该怎么办，@petar（Maymounkov）也许有想法[11]。这是一个以任何人都能参与为目标的机制，在实际的易用性上受挫的例子。</li>
+<li><strong>参与的困难。</strong> 2025 年 3 月，本书的 GitHub 上出现了 issue #1071，回报因为 GitHub 用户名称与组织名称不同，无法从 Gov4Git 的应用程式参与<a class="cite" href="#src-11" data-src="src-11">[11]</a>。卫谷伦回复的大意是：很抱歉，不知道该怎么办，@petar（Maymounkov）也许有想法<a class="cite" href="#src-11" data-src="src-11">[11]</a>。这是一个以任何人都能参与为目标的机制，在实际的易用性上受挫的例子。</li>
 </ul>
 <h2>延伸阅读</h2>
 <ol>
@@ -80,16 +86,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Microsoft Research Podcast "Collaborators: Gov4git with Kasia Sitkiewicz and Petar Maymounkov"（2023-05-03）— <a href="https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</a></li>
-<li>Weyl, Sitkiewicz, Maymounkov, "Gov4git: A Decentralized Platform for Community Governance"（2023-03-19）— <a href="https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</a></li>
-<li>《Plurality》英文版 "About the authors" — <a href="https://www.plurality.net/" target="_blank" rel="noopener">https://www.plurality.net/</a></li>
-<li>pluralitybook/plurality issue #333（2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a></li>
-<li>《Plurality》英文版 5-7 "Social Markets" — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a></li>
-<li>《Plurality》⿻ 積分（credits）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
-<li>Protocol Labs, "Protocol Labs partners with the Plurality Book Project to build Governance for Git"（2022-09-15）— <a href="https://pl.xyz/blog/protocol-labs-and-plurality-book/" target="_blank" rel="noopener">https://pl.xyz/blog/protocol-labs-and-plurality-book/</a></li>
-<li>South, Erichsen, Jain, Maymounkov, Moore, Weyl, "Plural Management"（SSRN，2024-01-09）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</a></li>
-<li>《Plurality》英文版 5-0 "Collaborative Technology and Democracy" — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
-<li>plurality-japanese「Gov4GitはGitRulesになりました」（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F</a></li>
-<li>pluralitybook/plurality issue #1071（2025-03-14）— <a href="https://github.com/pluralitybook/plurality/issues/1071" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1071</a></li>
-<li>《多元宇宙》5-7〈社会市场〉— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
-</ol><div class='related'>相关: <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a> ・ <a href='gov4git.html'>什么是 Gov4Git（GitRules）？</a> ・ <a href='plural-credits.html'>什么是⿻ 積分（plural credits）？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='glen-weyl.html'>卫谷伦（E. Glen Weyl）是谁？</a> ・ <a href='audrey-tang.html'>唐凤是谁？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fpetar-maymounkov.html&title=%5B%E6%8C%87%E6%91%98%5D%20Petar%20Maymounkov%20%E6%98%AF%E8%B0%81%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fpetar-maymounkov.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Microsoft Research Podcast "Collaborators: Gov4git with Kasia Sitkiewicz and Petar Maymounkov"（2023-05-03）— <a href="https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</a></li>
+<li id="src-2">Weyl, Sitkiewicz, Maymounkov, "Gov4git: A Decentralized Platform for Community Governance"（2023-03-19）— <a href="https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</a></li>
+<li id="src-3">《Plurality》英文版 "About the authors" — <a href="https://www.plurality.net/" target="_blank" rel="noopener">https://www.plurality.net/</a></li>
+<li id="src-4">pluralitybook/plurality issue #333（2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a></li>
+<li id="src-5">《Plurality》英文版 5-7 "Social Markets" — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a></li>
+<li id="src-6">《Plurality》⿻ 積分（credits）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
+<li id="src-7">Protocol Labs, "Protocol Labs partners with the Plurality Book Project to build Governance for Git"（2022-09-15）— <a href="https://pl.xyz/blog/protocol-labs-and-plurality-book/" target="_blank" rel="noopener">https://pl.xyz/blog/protocol-labs-and-plurality-book/</a></li>
+<li id="src-8">South, Erichsen, Jain, Maymounkov, Moore, Weyl, "Plural Management"（SSRN，2024-01-09）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</a></li>
+<li id="src-9">《Plurality》英文版 5-0 "Collaborative Technology and Democracy" — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
+<li id="src-10">plurality-japanese「Gov4GitはGitRulesになりました」（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F</a></li>
+<li id="src-11">pluralitybook/plurality issue #1071（2025-03-14）— <a href="https://github.com/pluralitybook/plurality/issues/1071" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1071</a></li>
+<li id="src-12">《多元宇宙》5-7〈社会市场〉— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a> ・ <a href='gov4git.html'>什么是 Gov4Git（GitRules）？</a> ・ <a href='plural-credits.html'>什么是⿻ 積分（plural credits）？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='glen-weyl.html'>卫谷伦（E. Glen Weyl）是谁？</a> ・ <a href='audrey-tang.html'>唐凤是谁？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fpetar-maymounkov.html&title=%5B%E6%8C%87%E6%91%98%5D%20Petar%20Maymounkov%20%E6%98%AF%E8%B0%81%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fpetar-maymounkov.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

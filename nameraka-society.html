@@ -41,50 +41,56 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/nameraka-society.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/nameraka-society.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/nameraka-society.html">简体中文</a></nav></header>
 <main lang="ja"><h1>なめらかな社会ってなに？</h1><div class='lead'>鈴木健が 2000 年代に考え、2013 年の本にまとめた社会の姿です。人びとが敵と味方にきっぱり分かれず、複雑な世界を複雑なまま生きられる社会を目指します。価値がさかのぼって伝わるお金 PICSY や、1 票を分けて託せる分人民主主義を含みます。</div><p>世の中の議論は、すぐに「賛成か反対か」「味方か敵か」に分かれがちです。けれども実際の人は、ある話では賛成、別の話では反対だったり、心の中で迷っていたりします。「なめらかな社会」は、そうした中間の立場を大事にし、きっぱり二つに分かれない社会を技術で支えよう、という構想です。</p>
 <h2>ひとことで言うと</h2>
-<p>なめらかな社会は、日本の研究者で起業家の鈴木健（すずき・けん）が考えた未来の社会の姿です。人びとが「敵か味方か」に分かれず、たくさんの中間の立場を行き来しながら、複雑な世界を複雑なまま生きられる社会のことです[1]。</p>
-<p>そのための道具として、鈴木はお金の仕組み（PICSY）や投票の仕組み（分人民主主義）を具体的に設計しました[1]。本『Plurality』は、この構想を「もうひとつの失われた道」として紹介しています[2]。</p>
+<p>なめらかな社会は、日本の研究者で起業家の鈴木健（すずき・けん）が考えた未来の社会の姿です。人びとが「敵か味方か」に分かれず、たくさんの中間の立場を行き来しながら、複雑な世界を複雑なまま生きられる社会のことです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>そのための道具として、鈴木はお金の仕組み（PICSY）や投票の仕組み（分人民主主義）を具体的に設計しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本『Plurality』は、この構想を「もうひとつの失われた道」として紹介しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>2013 年の本。</strong> 鈴木は構想を『なめらかな社会とその敵』（勁草書房、2013 年 1 月）にまとめました。数式を含む学術書でしたが、一般の読者も多くつき、2022 年にはちくま学芸文庫で増補版が出ました[1]。</p>
-<p><strong>2002 年、未踏で「伝播貨幣」を作る。</strong> 国の機関 IPA の人材育成事業 <a href="mitou.html">未踏</a>（2002 年度）で、鈴木は「伝播貨幣」のデモ用ソフトを作りました。そして、すぐれた作り手として「スーパークリエータ」に認定されました[3]。これが PICSY の実装にあたります。</p>
-<p><strong>『PLURALITY』日本語版の解説（2025 年）。</strong> 2025 年 5 月に出た日本語版『PLURALITY』で、鈴木は解説を書きました。そこで、この本と『なめらかな社会とその敵』は「双子の書籍といっても過言ではないほどの共通点がある」と述べています[4]。</p>
+<p><strong>2013 年の本。</strong> 鈴木は構想を『なめらかな社会とその敵』（勁草書房、2013 年 1 月）にまとめました。数式を含む学術書でしたが、一般の読者も多くつき、2022 年にはちくま学芸文庫で増補版が出ました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>2002 年、未踏で「伝播貨幣」を作る。</strong> 国の機関 IPA の人材育成事業 <a href="mitou.html">未踏</a>（2002 年度）で、鈴木は「伝播貨幣」のデモ用ソフトを作りました。そして、すぐれた作り手として「スーパークリエータ」に認定されました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。これが PICSY の実装にあたります。</p>
+<p><strong>『PLURALITY』日本語版の解説（2025 年）。</strong> 2025 年 5 月に出た日本語版『PLURALITY』で、鈴木は解説を書きました。そこで、この本と『なめらかな社会とその敵』は「双子の書籍といっても過言ではないほどの共通点がある」と述べています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>くわしく</h2>
 <h3>三つの社会</h3>
-<p>鈴木の公式サイトの解説によれば、社会の形は三つに描き分けられます[1]。</p>
+<p>鈴木の公式サイトの解説によれば、社会の形は三つに描き分けられます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <ul>
 <li><strong>フラットな社会</strong> — どこも同じで、多様性がない社会。</li>
 <li><strong>ステップな社会</strong> — 多様だけれど、グループどうしが混ざらずに対立する社会。</li>
 <li><strong>なめらかな社会</strong> — 中間の状態がたくさんあり、そこを通って別の状態へなめらかに移れる社会。</li>
 </ul>
-<p>中間的な人が多いので、なめらかな社会は「誰もが少数派」の社会ともいえる、と説明されています[1]。鈴木は、社会が敵と味方に分かれる性質を改めない限り、どんな制度の進歩も砂の上の城になる、と論じます。だから、お金・投票・法・軍事という社会の中心の仕組みを、技術で作り直すべきだと考えます[1]。</p>
+<p>中間的な人が多いので、なめらかな社会は「誰もが少数派」の社会ともいえる、と説明されています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。鈴木は、社会が敵と味方に分かれる性質を改めない限り、どんな制度の進歩も砂の上の城になる、と論じます。だから、お金・投票・法・軍事という社会の中心の仕組みを、技術で作り直すべきだと考えます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>膜と核</h3>
-<p>なぜ社会は分かれてしまうのでしょうか。鈴木は生命の起源から説明します。細胞は膜を作って内と外を分け、資源を内側に囲い込みます。DNA のように、少ない情報で全体を動かす「核」も生まれます[5]。</p>
-<p>この「膜」と「核」が、社会では国のメンバーシップ（誰が内側か）や権力になる、という見立てです[5][2]。本『Plurality』の 3-3 章もこの説明を紹介し、鈴木の構想は技術で膜と核の構造をほどき、暮らしをもっとネットワークのようにしようとするものだ、と書いています[2]。</p>
+<p>なぜ社会は分かれてしまうのでしょうか。鈴木は生命の起源から説明します。細胞は膜を作って内と外を分け、資源を内側に囲い込みます。DNA のように、少ない情報で全体を動かす「核」も生まれます<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>この「膜」と「核」が、社会では国のメンバーシップ（誰が内側か）や権力になる、という見立てです<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。本『Plurality』の 3-3 章もこの説明を紹介し、鈴木の構想は技術で膜と核の構造をほどき、暮らしをもっとネットワークのようにしようとするものだ、と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>PICSY — 価値がさかのぼって伝わるお金</h3>
-<p>鈴木は 2000 年ごろ、AI の学習の仕組み（ニューラルネットワークの誤差逆伝播法）から着想して、価値が取引のつながりをさかのぼって伝わるお金を思いつきました。これが PICSY（ピクシー、伝播投資貨幣）です[1]。</p>
-<p>PICSY は、すべての取引を一種の「投資」とみなします。取引の全体を数学の表（行列）で表し、そこから一人ひとりの社会への貢献度を計算します。仕組みは Google の検索順位の計算に近いのですが、鈴木は独自に考えたそうです[1]。</p>
-<p>講演では、こんな例で説明しています。医師がある患者を治療し、その患者がのちに元気に働いて稼ぐと、その収入の一部が医師にも伝わって戻ってくる[5]。本『Plurality』の 5-7 章は、時間をまたいで価値をやり取りする経済の仕組みの例として、PICSY を脚注で挙げています[6]。</p>
+<p>鈴木は 2000 年ごろ、AI の学習の仕組み（ニューラルネットワークの誤差逆伝播法）から着想して、価値が取引のつながりをさかのぼって伝わるお金を思いつきました。これが PICSY（ピクシー、伝播投資貨幣）です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>PICSY は、すべての取引を一種の「投資」とみなします。取引の全体を数学の表（行列）で表し、そこから一人ひとりの社会への貢献度を計算します。仕組みは Google の検索順位の計算に近いのですが、鈴木は独自に考えたそうです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>講演では、こんな例で説明しています。医師がある患者を治療し、その患者がのちに元気に働いて稼ぐと、その収入の一部が医師にも伝わって戻ってくる<a class="cite" href="#src-5" data-src="src-5">[5]</a>。本『Plurality』の 5-7 章は、時間をまたいで価値をやり取りする経済の仕組みの例として、PICSY を脚注で挙げています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>分人民主主義 — 1 票を分けて託す</h3>
-<p>一人の人の中にも揺らぎがあり、違う意見がせめぎ合い、時とともに変わります。鈴木は、哲学者ドゥルーズの「分人（ディビジュアル）」という言葉でこれを表しました[1]。</p>
-<p>そして、1 票を分けて複数の政策や人に投じる、預けた票をさらに別の人に預ける、投じた票をいつでも変える、といったことができる投票の仕組みを提案しました。これが分人民主主義です[1]。本の 5-6 章は、票を人に預ける <a href="liquid-democracy.html">液体民主主義</a> と違って、分人民主主義は票を複数の争点に分けることも認める、と脚注で説明しています[7]。</p>
+<p>一人の人の中にも揺らぎがあり、違う意見がせめぎ合い、時とともに変わります。鈴木は、哲学者ドゥルーズの「分人（ディビジュアル）」という言葉でこれを表しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>そして、1 票を分けて複数の政策や人に投じる、預けた票をさらに別の人に預ける、投じた票をいつでも変える、といったことができる投票の仕組みを提案しました。これが分人民主主義です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本の 5-6 章は、票を人に預ける <a href="liquid-democracy.html">液体民主主義</a> と違って、分人民主主義は票を複数の争点に分けることも認める、と脚注で説明しています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>法を組み立てる言語</h3>
-<p>鈴木は 2005 年、人間と機械の両方が読める法の言語と、それで社会の約束ごと（社会契約）そのものを組み立てる構想を発表しました。本『Plurality』は、これが 2014 年のイーサリアム（自動で実行される契約の仕組みを持つブロックチェーン）に先行していた、と書いています[2][1]。</p>
+<p>鈴木は 2005 年、人間と機械の両方が読める法の言語と、それで社会の約束ごと（社会契約）そのものを組み立てる構想を発表しました。本『Plurality』は、これが 2014 年のイーサリアム（自動で実行される契約の仕組みを持つブロックチェーン）に先行していた、と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>300 年という時間</h3>
-<p>鈴木は、活版印刷から宗教改革や市民革命までにおよそ 300 年かかったことを引きます。人の寿命のように技術では速くならないものがあるので、社会の仕組みを本格的に作り直すにも 300 年ほどかかるだろう、と述べています[5]。</p>
+<p>鈴木は、活版印刷から宗教改革や市民革命までにおよそ 300 年かかったことを引きます。人の寿命のように技術では速くならないものがあるので、社会の仕組みを本格的に作り直すにも 300 年ほどかかるだろう、と述べています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>構想は実際に使われたのか。</strong> 2023 年 4 月ごろ、イベント「Plurality Tokyo」の主催側の高木俊輔は X で、鈴木は PICSY のあと社会で実際に使える形にしたのか、なぜ Plurality の場にいないのか、と批判的に投稿しました。その後、仲直りしたと報告しています[8]。長く実装されてこなかった構想への、若い世代からの問いでした。</li>
-<li><strong>本人も「未解決」と書く問題。</strong> 公式サイトの解説は、法をなめらかにしても、敵と味方に分かれて戦う問題は残ると認めています。軍事や暴力をなめらかに扱う具体的な方法は本では示しておらず、未解決の問題だとしています[1]。</li>
-<li><strong>同じ章の、日本の品質管理の扱い。</strong> 一田和樹は、本『Plurality』が日本の QC 活動（職場の品質改善活動）をほぼ手放しで成功例としている点に、現場にいた経験から疑問を示しました。形だけになったり、教条的になったりする面がある、という指摘です[9]。これはなめらかな社会そのものへの批判ではありませんが、本がなめらかな社会を置いた文脈への批判です。</li>
-<li><strong>「Plurality の元ネタ」ではありません。</strong> 本は、なめらかな社会を、インターネットの発展と「おおむね並行して、別に」起きた流れとして紹介しています[2]。鈴木自身も、違いを強調する必要はなく、協力関係を作ることが大事だ、という趣旨を語っています[10]。</li>
+<li><strong>構想は実際に使われたのか。</strong> 2023 年 4 月ごろ、イベント「Plurality Tokyo」の主催側の高木俊輔は X で、鈴木は PICSY のあと社会で実際に使える形にしたのか、なぜ Plurality の場にいないのか、と批判的に投稿しました。その後、仲直りしたと報告しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。長く実装されてこなかった構想への、若い世代からの問いでした。</li>
+<li><strong>本人も「未解決」と書く問題。</strong> 公式サイトの解説は、法をなめらかにしても、敵と味方に分かれて戦う問題は残ると認めています。軍事や暴力をなめらかに扱う具体的な方法は本では示しておらず、未解決の問題だとしています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>同じ章の、日本の品質管理の扱い。</strong> 一田和樹は、本『Plurality』が日本の QC 活動（職場の品質改善活動）をほぼ手放しで成功例としている点に、現場にいた経験から疑問を示しました。形だけになったり、教条的になったりする面がある、という指摘です<a class="cite" href="#src-9" data-src="src-9">[9]</a>。これはなめらかな社会そのものへの批判ではありませんが、本がなめらかな社会を置いた文脈への批判です。</li>
+<li><strong>「Plurality の元ネタ」ではありません。</strong> 本は、なめらかな社会を、インターネットの発展と「おおむね並行して、別に」起きた流れとして紹介しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。鈴木自身も、違いを強調する必要はなく、協力関係を作ることが大事だ、という趣旨を語っています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>なめらかな社会は、本の 3-3 章「<a href="lost-dao.html">失われた道</a>」の節「品質管理となめらかな社会」に出てきます[2][11]。本は、ウィーナーのサイバネティクス（機械と生き物の制御と通信の学問）が、日本ではインターネットではなく別の道で根づいた、と描きます。デミングの品質管理（PDCA やカイゼン）、複雑系や人工生命の研究をへて、鈴木の社会理論に至る流れです。本はこれを、「もうひとつの失われた道」を掘り起こし組み直す試みと位置づけています[2]。</p>
-<p>鈴木の「分人」は、本の中心の考え方の一つ、ジンメルの <a href="intersectional-identity.html">交差的アイデンティティ</a>（人はいくつもの集団に同時に属する、という見方）と比べられています。日本語版の注は、ジンメルは人間関係から考え、鈴木はより生物学的なドゥルーズの分人から着想した、と説明しています[11]。</p>
-<p>本の 5-6 章「<a href="plural-voting.html">⿻ 投票</a>」には分人民主主義が、5-7 章「<a href="social-markets.html">社会市場</a>」には PICSY が、脚注で登場します[7][6]。英語版の推薦文で鈴木は、Plurality を「リバタリアニズムとテクノクラシーを超える第三の道」と評しました[12]。</p>
-<p>実践の面では、鈴木は 2025 年、安野貴博と「<a href="dd2030.html">デジタル民主主義2030</a>」を始めました[4]。日本での広がりは <a href="plurality-in-japan.html">日本での Plurality の広がり</a> の記事にまとめています。</p>
+<p>なめらかな社会は、本の 3-3 章「<a href="lost-dao.html">失われた道</a>」の節「品質管理となめらかな社会」に出てきます<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。本は、ウィーナーのサイバネティクス（機械と生き物の制御と通信の学問）が、日本ではインターネットではなく別の道で根づいた、と描きます。デミングの品質管理（PDCA やカイゼン）、複雑系や人工生命の研究をへて、鈴木の社会理論に至る流れです。本はこれを、「もうひとつの失われた道」を掘り起こし組み直す試みと位置づけています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>鈴木の「分人」は、本の中心の考え方の一つ、ジンメルの <a href="intersectional-identity.html">交差的アイデンティティ</a>（人はいくつもの集団に同時に属する、という見方）と比べられています。日本語版の注は、ジンメルは人間関係から考え、鈴木はより生物学的なドゥルーズの分人から着想した、と説明しています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>本の 5-6 章「<a href="plural-voting.html">⿻ 投票</a>」には分人民主主義が、5-7 章「<a href="social-markets.html">社会市場</a>」には PICSY が、脚注で登場します<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。英語版の推薦文で鈴木は、Plurality を「リバタリアニズムとテクノクラシーを超える第三の道」と評しました<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
+<p>実践の面では、鈴木は 2025 年、安野貴博と「<a href="dd2030.html">デジタル民主主義2030</a>」を始めました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。日本での広がりは <a href="plurality-in-japan.html">日本での Plurality の広がり</a> の記事にまとめています。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>鈴木健『PLURALITY』日本語版の解説（日本語・解説）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
@@ -96,16 +102,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>鈴木健「BOOK SUMMARY『なめらかな社会』とは」— <a href="https://nameteki.kensuzuki.org/book-summary-enjazh-tw" target="_blank" rel="noopener">https://nameteki.kensuzuki.org/book-summary-enjazh-tw</a></li>
-<li>『Plurality』3-3「The Lost Dao」— <a href="https://www.plurality.net/v/chapters/3-3/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/</a> ［CC0］</li>
-<li>IPA 2002 年度 未踏ソフトウェア創造事業 スーパークリエータ資料 — <a href="https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000js0d-att/000050657.pdf" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000js0d-att/000050657.pdf</a></li>
-<li>鈴木健『PLURALITY』日本語版 解説 — <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
-<li>鈴木健「300年後の読者に向けて」（弘前大学出版会 20 周年講演、2024-06-28）— <a href="https://hupress.hirosaki-u.ac.jp/special-page/hupress-20th" target="_blank" rel="noopener">https://hupress.hirosaki-u.ac.jp/special-page/hupress-20th</a></li>
-<li>『Plurality』5-7「Social Markets」— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>『Plurality』5-6「⿻ Voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>西尾泰和「tkgshnの鈴木健批判と和解」（X 投稿の記録）— <a href="https://scrapbox.io/nishio/tkgshnの鈴木健批判と和解" target="_blank" rel="noopener">https://scrapbox.io/nishio/tkgshnの鈴木健批判と和解</a></li>
-<li>一田和樹の note 記事 — <a href="https://note.com/ichi_twnovel/n/n1a945d0925da" target="_blank" rel="noopener">https://note.com/ichi_twnovel/n/n1a945d0925da</a></li>
-<li>西尾泰和「Pluralityと鈴木健」（なめら会議の実況メモ）— <a href="https://scrapbox.io/nishio/Pluralityと鈴木健" target="_blank" rel="noopener">https://scrapbox.io/nishio/Pluralityと鈴木健</a></li>
-<li>『PLURALITY』日本語版 3-3「失われた道」— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a> ［CC0］</li>
-<li>『Plurality』推薦文（Ken Suzuki）— <a href="https://www.plurality.net/" target="_blank" rel="noopener">https://www.plurality.net/</a></li>
-</ol><div class='related'>関連: <a href='lost-dao.html'>失われた道（The Lost Dao）ってなに？</a> ・ <a href='liquid-democracy.html'>液体民主主義ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='intersectional-identity.html'>交差的アイデンティティってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='plurality-in-japan.html'>日本での Plurality の広がりってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnameraka-society.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%81%AA%E3%82%81%E3%82%89%E3%81%8B%E3%81%AA%E7%A4%BE%E4%BC%9A%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnameraka-society.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">鈴木健「BOOK SUMMARY『なめらかな社会』とは」— <a href="https://nameteki.kensuzuki.org/book-summary-enjazh-tw" target="_blank" rel="noopener">https://nameteki.kensuzuki.org/book-summary-enjazh-tw</a></li>
+<li id="src-2">『Plurality』3-3「The Lost Dao」— <a href="https://www.plurality.net/v/chapters/3-3/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/</a> ［CC0］</li>
+<li id="src-3">IPA 2002 年度 未踏ソフトウェア創造事業 スーパークリエータ資料 — <a href="https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000js0d-att/000050657.pdf" target="_blank" rel="noopener">https://www.ipa.go.jp/jinzai/mitou/it/qv6pgp000000js0d-att/000050657.pdf</a></li>
+<li id="src-4">鈴木健『PLURALITY』日本語版 解説 — <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li id="src-5">鈴木健「300年後の読者に向けて」（弘前大学出版会 20 周年講演、2024-06-28）— <a href="https://hupress.hirosaki-u.ac.jp/special-page/hupress-20th" target="_blank" rel="noopener">https://hupress.hirosaki-u.ac.jp/special-page/hupress-20th</a></li>
+<li id="src-6">『Plurality』5-7「Social Markets」— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-7">『Plurality』5-6「⿻ Voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-8">西尾泰和「tkgshnの鈴木健批判と和解」（X 投稿の記録）— <a href="https://scrapbox.io/nishio/tkgshnの鈴木健批判と和解" target="_blank" rel="noopener">https://scrapbox.io/nishio/tkgshnの鈴木健批判と和解</a></li>
+<li id="src-9">一田和樹の note 記事 — <a href="https://note.com/ichi_twnovel/n/n1a945d0925da" target="_blank" rel="noopener">https://note.com/ichi_twnovel/n/n1a945d0925da</a></li>
+<li id="src-10">西尾泰和「Pluralityと鈴木健」（なめら会議の実況メモ）— <a href="https://scrapbox.io/nishio/Pluralityと鈴木健" target="_blank" rel="noopener">https://scrapbox.io/nishio/Pluralityと鈴木健</a></li>
+<li id="src-11">『PLURALITY』日本語版 3-3「失われた道」— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a> ［CC0］</li>
+<li id="src-12">『Plurality』推薦文（Ken Suzuki）— <a href="https://www.plurality.net/" target="_blank" rel="noopener">https://www.plurality.net/</a></li>
+</ol><div class='related'>関連: <a href='lost-dao.html'>失われた道（The Lost Dao）ってなに？</a> ・ <a href='liquid-democracy.html'>液体民主主義ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='intersectional-identity.html'>交差的アイデンティティってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='plurality-in-japan.html'>日本での Plurality の広がりってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnameraka-society.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%81%AA%E3%82%81%E3%82%89%E3%81%8B%E3%81%AA%E7%A4%BE%E4%BC%9A%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnameraka-society.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

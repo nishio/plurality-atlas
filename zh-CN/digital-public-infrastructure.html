@@ -41,45 +41,51 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../digital-public-infrastructure.html">日本語</a> <a class="lang" hreflang="en" href="../en/digital-public-infrastructure.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/digital-public-infrastructure.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是数位公共建设（DPI）？</h1><div class='lead'>就像用公共资金修道路、建自来水一样，网络上的身分验证、支付、资料交换这些基本元件，也应该做成不属于特定企业的公共设施。《多元宇宙》还主张，每个人都能存取未经窜改的资讯，是一项权利。</div><p>道路、自来水、图书馆，都是用大家的税金建造、人人都能使用的。可是在网络世界里，登入、付款，很多都依赖民间大企业的系统。「数位公共建设」（Digital Public Infrastructure，简称 DPI）的想法是：网络的这些底层基础，也应该当作公共的东西来建造。「基础建设」指的是从底层支撑社会的基盘。</p>
 <h2>一句话说明</h2>
-<p>这是一种想法：<strong>把网络上的身分验证、支付、资料交换这些「基本元件」，做成不属于特定企业的公共设施</strong>[1]。</p>
-<p>《多元宇宙》这本书还进一步主张，每个人都能以取得「未经窜改的资讯」的方式存取这些设施，是一项权利。书称之为「具完整性的存取」[2]。</p>
+<p>这是一种想法：<strong>把网络上的身分验证、支付、资料交换这些「基本元件」，做成不属于特定企业的公共设施</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>《多元宇宙》这本书还进一步主张，每个人都能以取得「未经窜改的资讯」的方式存取这些设施，是一项权利。书称之为「具完整性的存取」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>印度的 India Stack。</strong> 书把印度在过去十年开发的「India stack」列为数位公共建设最突出的例子[3]。其中以照片、指纹和虹膜扫描为基础的身分系统 Aadhaar，取得了「令人惊讶的 99% 公民使用率」。在印度经验基础上的开源身分平台 MOSIP，已被亚洲（如菲律宾）和非洲（如乌干达）的一些国家采用[4]。英文版还写道，Aadhaar 成为每月领取配给的 8 亿多人的社会服务的关键，采用 MOSIP 的国家包括菲律宾、斯里兰卡、乌干达、摩洛哥、衣索比亚等[4]（目前的繁体中文版没有这些细节）。</p>
-<p>书说，政府可以根据其采用的标准、购买的实体等来影响整个数位生态系统，「这就是『印度堆叠』（India Stack）如何成为私营部门核心的主要原因」[5]。</p>
-<p><strong>乌克兰的 Diia 与爱沙尼亚的 mRiik。</strong> 两者都是让公民安全取得政府服务和即时资讯的公共应用程式。书说：「『Diia』向全球展示了数位技术如何打破长期存在的腐败。」爱沙尼亚推出的 mRiik，设计灵感主要来自 Diia；乌克兰的数位部长也表示愿意与爱沙尼亚分享原始码和 UX/UI 设计方法[6]。</p>
-<p><strong>台湾的 IPFS 与公共程式码。</strong> 书说，台湾是阻断服务攻击（DDoS）的主要热点之一。台湾政府采用把档案分散保存在许多电脑上的 IPFS 框架作为网站架构，「更能抵抗突如其来的阻断攻击」[7]。时任数位发展部部长的唐凤（Audrey Tang）在 2023 年的演讲中说明，台湾数位发展部的网站看起来像英国政府的网站，是因为采用了「公共程式码」；民主国家之间共享的不只是设计，还包括经过安全检验的输入画面和认证[8]。</p>
+<p><strong>印度的 India Stack。</strong> 书把印度在过去十年开发的「India stack」列为数位公共建设最突出的例子<a class="cite" href="#src-3" data-src="src-3">[3]</a>。其中以照片、指纹和虹膜扫描为基础的身分系统 Aadhaar，取得了「令人惊讶的 99% 公民使用率」。在印度经验基础上的开源身分平台 MOSIP，已被亚洲（如菲律宾）和非洲（如乌干达）的一些国家采用<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文版还写道，Aadhaar 成为每月领取配给的 8 亿多人的社会服务的关键，采用 MOSIP 的国家包括菲律宾、斯里兰卡、乌干达、摩洛哥、衣索比亚等<a class="cite" href="#src-4" data-src="src-4">[4]</a>（目前的繁体中文版没有这些细节）。</p>
+<p>书说，政府可以根据其采用的标准、购买的实体等来影响整个数位生态系统，「这就是『印度堆叠』（India Stack）如何成为私营部门核心的主要原因」<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>乌克兰的 Diia 与爱沙尼亚的 mRiik。</strong> 两者都是让公民安全取得政府服务和即时资讯的公共应用程式。书说：「『Diia』向全球展示了数位技术如何打破长期存在的腐败。」爱沙尼亚推出的 mRiik，设计灵感主要来自 Diia；乌克兰的数位部长也表示愿意与爱沙尼亚分享原始码和 UX/UI 设计方法<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>台湾的 IPFS 与公共程式码。</strong> 书说，台湾是阻断服务攻击（DDoS）的主要热点之一。台湾政府采用把档案分散保存在许多电脑上的 IPFS 框架作为网站架构，「更能抵抗突如其来的阻断攻击」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。时任数位发展部部长的唐凤（Audrey Tang）在 2023 年的演讲中说明，台湾数位发展部的网站看起来像英国政府的网站，是因为采用了「公共程式码」；民主国家之间共享的不只是设计，还包括经过安全检验的输入画面和认证<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>深入了解</h2>
 <h3>书所说的 DPI</h3>
-<p>书的 7-0 章写道，有一种理念正日益成为模式：以建立基础设施为公共使命，「通过与民间社会的合作和私营部门的参与而非主导，增强分散式创新的能力」。这「通常被称为『数位公共建设』」[1]。</p>
-<p>书举出的例子有「印度堆叠」、欧盟的欧洲数位身分和 Gaia-X 资料共享计划，以及巴西和新加坡等地的类似做法（英文版举出巴西的即时支付 Pix 与新加坡的 FAST）。书说：「在很大程度上，我们主要是倡导扩大这种方式的规模，使其成为全球⿻社會发展的核心方式。」[1]2023 年，G20 的数位部长们表明，数位公共建设（DPI）是全球合作的重点[9]。</p>
+<p>书的 7-0 章写道，有一种理念正日益成为模式：以建立基础设施为公共使命，「通过与民间社会的合作和私营部门的参与而非主导，增强分散式创新的能力」。这「通常被称为『数位公共建设』」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>书举出的例子有「印度堆叠」、欧盟的欧洲数位身分和 Gaia-X 资料共享计划，以及巴西和新加坡等地的类似做法（英文版举出巴西的即时支付 Pix 与新加坡的 FAST）。书说：「在很大程度上，我们主要是倡导扩大这种方式的规模，使其成为全球⿻社會发展的核心方式。」<a class="cite" href="#src-1" data-src="src-1">[1]</a>2023 年，G20 的数位部长们表明，数位公共建设（DPI）是全球合作的重点<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>规模有多大</h3>
-<p>书描绘了未来的目标：「大多数国家的政府和慈善捐助方将把大约 1% 的 GDP 投入到数位公共研究、开发和基础设施上，全球每年的投入将近一兆美元，大约相当于目前全球对资讯技术投资的一半。」这将使数位公共建设的投资「至少增加两个数量级」，也就是至少 100 倍[10]。</p>
-<p>书说，推动者不是单一国家，而是各国的数位部会与开放源码社群所组成的跨国网络。书举出的例子有：台湾在 2016 年任命了数位政委、于 2022 年成立数位发展部；乌克兰自 2019 年起的数位转型部；以及受到与台湾讨论的启发，于 2021 年成立的日本数位厅[11]。</p>
+<p>书描绘了未来的目标：「大多数国家的政府和慈善捐助方将把大约 1% 的 GDP 投入到数位公共研究、开发和基础设施上，全球每年的投入将近一兆美元，大约相当于目前全球对资讯技术投资的一半。」这将使数位公共建设的投资「至少增加两个数量级」，也就是至少 100 倍<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>书说，推动者不是单一国家，而是各国的数位部会与开放源码社群所组成的跨国网络。书举出的例子有：台湾在 2016 年任命了数位政委、于 2022 年成立数位发展部；乌克兰自 2019 年起的数位转型部；以及受到与台湾讨论的启发，于 2021 年成立的日本数位厅<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>「具完整性的存取」</h3>
-<p>4-5 章说，前几章描绘的数位生活的权利，「除非每个人都能安全、完整地接取我们所想像的世界，否则这些对人类生活毫无意义」[2]。</p>
-<p>书要的不只是存取。「如果某些人接收到的资讯是准确的，而其他人接收到的资讯却是被窜改的，后者往往比完全无法存取资讯还要糟糕。」[2] 书回顾从 1948 年的《世界人权宣言》到 2023 年回应生成式 AI 大规模操弄能力的《全球线上资讯完整性宣言》，并说：「我们需要让所有人都能平等接触到脉络完整的资讯」[2]。→ <a href="contextual-integrity.html">脉络完整性</a></p>
+<p>4-5 章说，前几章描绘的数位生活的权利，「除非每个人都能安全、完整地接取我们所想像的世界，否则这些对人类生活毫无意义」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>书要的不只是存取。「如果某些人接收到的资讯是准确的，而其他人接收到的资讯却是被窜改的，后者往往比完全无法存取资讯还要糟糕。」<a class="cite" href="#src-2" data-src="src-2">[2]</a> 书回顾从 1948 年的《世界人权宣言》到 2023 年回应生成式 AI 大规模操弄能力的《全球线上资讯完整性宣言》，并说：「我们需要让所有人都能平等接触到脉络完整的资讯」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="contextual-integrity.html">脉络完整性</a></p>
 <h3>落差与两个方向</h3>
-<p>书说：「在疫情前，全球 76% 的城市家庭拥有家庭互联网存取，几乎是农村地区 39% 的两倍。」根据国际电信联盟（ITU）的数据，2020 年有 4.66 亿人首次存取互联网[12]。</p>
-<p>台湾、爱沙尼亚和斯堪地纳维亚等民主国家成为了典范。但书说，「对于数位公共基础建设所需的长期投资来说，这只是头期款」，并提出两个重要的行动方向[13]：</p>
+<p>书说：「在疫情前，全球 76% 的城市家庭拥有家庭互联网存取，几乎是农村地区 39% 的两倍。」根据国际电信联盟（ITU）的数据，2020 年有 4.66 亿人首次存取互联网<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
+<p>台湾、爱沙尼亚和斯堪地纳维亚等民主国家成为了典范。但书说，「对于数位公共基础建设所需的长期投资来说，这只是头期款」，并提出两个重要的行动方向<a class="cite" href="#src-13" data-src="src-13">[13]</a>：</p>
 <ol>
 <li>数位基础建设：开发国际互通的建设模式，克服集体行动的挑战。</li>
 <li>资讯完整性：解决模仿模型（所谓的「深伪」技术）带来的挑战，以维持语义安全。</li>
 </ol>
-<p>书引用森林研究者 Suzanne Simard 的研究：在由真菌网络牵引的环境中，不同种类的树木能够相互传递警告信号，并分享养分。书说，数位基础建设也透过开源软件和开放资料建立起类似的模式，共同防御当前的数位威胁[14]。</p>
+<p>书引用森林研究者 Suzanne Simard 的研究：在由真菌网络牵引的环境中，不同种类的树木能够相互传递警告信号，并分享养分。书说，数位基础建设也透过开源软件和开放资料建立起类似的模式，共同防御当前的数位威胁<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>DPI 的身分系统容易中心化（书自己的批评）。</strong> 4-1 章写道，身分工具领域最具影响力的发展，一般出现在开发中国家，「通常打着『数位公共建设』的旗号」；但这些系统选择了基于生物识别技术、高度一致性和集中化的结构，「却难以用来细致地识别身分，和有力地保护它」[4]。关于 Aadhaar，书提到管理者可能获得监视公民广泛活动的能力（一些社运人士就印度穆斯林少数民族的地位提出忧虑），也提到印度最高法院限制了该系统的强制性（英文版的写法是限制了民间的使用）[4][15]。也就是说，书一方面推动 DPI，一方面主张其中的身分元件应该是多元的身分。→ <a href="identity-and-personhood.html">身分与人格权</a></li>
-<li><strong>常见的误解：「DPI＝一切由国家建造」。</strong> 书所说的 DPI，是私营部门参与而非主导，并与民间社会和开放源码合作。书也说，「没有哪个国家能够，或应该单独成为此类工作的主要场所」[1][11]。</li>
-<li><strong>法律形式的障碍。</strong> 书指出，开放源码组织难以同时保持非营利性和国际影响力，并写道，「要建立支持和维护跨国民主非营利组织形式的法律框架，仍需进一步的努力」。英文版还举出，曾支持本书写作的开放集体基金会（Open Collective Foundation）正在解散中[16]。</li>
+<li><strong>DPI 的身分系统容易中心化（书自己的批评）。</strong> 4-1 章写道，身分工具领域最具影响力的发展，一般出现在开发中国家，「通常打着『数位公共建设』的旗号」；但这些系统选择了基于生物识别技术、高度一致性和集中化的结构，「却难以用来细致地识别身分，和有力地保护它」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。关于 Aadhaar，书提到管理者可能获得监视公民广泛活动的能力（一些社运人士就印度穆斯林少数民族的地位提出忧虑），也提到印度最高法院限制了该系统的强制性（英文版的写法是限制了民间的使用）<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-15" data-src="src-15">[15]</a>。也就是说，书一方面推动 DPI，一方面主张其中的身分元件应该是多元的身分。→ <a href="identity-and-personhood.html">身分与人格权</a></li>
+<li><strong>常见的误解：「DPI＝一切由国家建造」。</strong> 书所说的 DPI，是私营部门参与而非主导，并与民间社会和开放源码合作。书也说，「没有哪个国家能够，或应该单独成为此类工作的主要场所」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>法律形式的障碍。</strong> 书指出，开放源码组织难以同时保持非营利性和国际影响力，并写道，「要建立支持和维护跨国民主非营利组织形式的法律框架，仍需进一步的努力」。英文版还举出，曾支持本书写作的开放集体基金会（Open Collective Foundation）正在解散中<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>这是第 4 部（以 4-0 章〈权利、作业系统与数位自由〉开头的一部。→ <a href="rights-os.html">权利、作业系统与数位自由</a>）最后的 4-5 章〈存取权〉。书的简介这样总结：「要使所有这些成为真正的人权，就需要在资讯完整的情况下普遍获得上述能力，因此需要运用开放协定，以经过验证的冗余储存资讯作为基础。」[17]</p>
-<p>在最后谈政策的 7-0 章，DPI 成为书的政策提案的核心。它被描绘成把 3-3 章〈<a href="lost-dao.html">我们遗忘的道</a>〉中美国研究机构的做法，以及<a href="taiwan-digital-democracy.html">台湾的数位民主</a>的经验，依当今世界重新组合的东西[1][11]。</p>
+<p>这是第 4 部（以 4-0 章〈权利、作业系统与数位自由〉开头的一部。→ <a href="rights-os.html">权利、作业系统与数位自由</a>）最后的 4-5 章〈存取权〉。书的简介这样总结：「要使所有这些成为真正的人权，就需要在资讯完整的情况下普遍获得上述能力，因此需要运用开放协定，以经过验证的冗余储存资讯作为基础。」<a class="cite" href="#src-17" data-src="src-17">[17]</a></p>
+<p>在最后谈政策的 7-0 章，DPI 成为书的政策提案的核心。它被描绘成把 3-3 章〈<a href="lost-dao.html">我们遗忘的道</a>〉中美国研究机构的做法，以及<a href="taiwan-digital-democracy.html">台湾的数位民主</a>的经验，依当今世界重新组合的东西<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>各个元件分别在<a href="identity-and-personhood.html">身分与人格权</a>（身分）、<a href="commerce-and-trust.html">商业与信任</a>（即时支付）、<a href="property-and-contract.html">财产与合约</a>（IPFS、资料共享）各章讨论。</p>
-<p>唐凤在 2024 年说，公共数位基础的想法在日本和台湾早就有了，但主要是在地方政府的层级实现。国际性的 DPI 被认为不可或缺，是在出现了像疫苗证明这样人人都需要的基础建设的疫情之后[18]。</p>
+<p>唐凤在 2024 年说，公共数位基础的想法在日本和台湾早就有了，但主要是在地方政府的层级实现。国际性的 DPI 被认为不可或缺，是在出现了像疫苗证明这样人人都需要的基础建设的疫情之后<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》4-5〈存取权〉（中文，书）— <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
@@ -91,22 +97,52 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《多元宇宙》7-0〈政策〉谈 ARPANET 与台湾之后的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a> ；Pix 与 FAST 见英文版 — <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a></li>
-<li>《多元宇宙》4-5〈存取权〉导言 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-<li>《多元宇宙》4-0「⿻自由」一节 — <a href="https://www.plurality.net/v/chapters/4-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/zh-tw/</a></li>
-<li>《多元宇宙》4-1〈身分与人格权〉谈数位公共建设与 Aadhaar 的段落 — <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a> ；配给与 MOSIP 采用国的细节见英文版 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a></li>
-<li>《多元宇宙》7-0 谈政府的协调与标准化的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
-<li>《多元宇宙》4-5「资讯完整性的基础建设」一节后半 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-<li>同上（IPFS 的段落）— <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-<li>Audrey Tang, "Speech at LSE IDEAS"（2023-12-01）— <a href="https://archive.tw/2023-12-01-speech-at-lse-ideas" target="_blank" rel="noopener">https://archive.tw/2023-12-01-speech-at-lse-ideas</a></li>
-<li>《多元宇宙》7-0 谈数位部会的段落（G20）— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
-<li>《多元宇宙》7-0 章首的未来愿景 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
-<li>《多元宇宙》7-0 谈数位部会与跨国网络的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
-<li>《多元宇宙》4-5「弥平数位鸿沟」一节第 2 段 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-<li>同上，第 1、3～5 段 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-<li>《多元宇宙》4-5「资讯完整性的基础建设」一节开头 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-<li>《Plurality》英文版 4-1 "Public and decentralized digital identity" 一节 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a></li>
-<li>《多元宇宙》7-0 谈法律框架的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a> ；Open Collective Foundation 解散的记述见英文版 — <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a></li>
-<li>《多元宇宙》简介，各章摘要（4-5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
-<li>Audrey Tang, "Conversation with Hal Seki and Japanese delegates"（2024-03-22）— <a href="https://github.com/audreyt/transcript/blob/main/2024-03-22-Conversation-with-Hal-Seki-and-Japanese-delegates.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-03-22-Conversation-with-Hal-Seki-and-Japanese-delegates.md</a></li>
-</ol><div class='related'>相关: <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='commerce-and-trust.html'>什么是「商业与信任」（多元通货）？</a> ・ <a href='property-and-contract.html'>什么是「财产与合约」（多元资产）？</a> ・ <a href='contextual-integrity.html'>什么是脉络完整性（contextual integrity）？</a> ・ <a href='lost-dao.html'>什么是「我们遗忘的道」（The Lost Dao）？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a> ・ <a href='rights-os.html'>什么是权利 OS（权利、作业系统与数位自由）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-public-infrastructure.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E4%BD%8D%E5%85%AC%E5%85%B1%E5%BB%BA%E8%AE%BE%EF%BC%88DPI%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-public-infrastructure.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《多元宇宙》7-0〈政策〉谈 ARPANET 与台湾之后的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a> ；Pix 与 FAST 见英文版 — <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a></li>
+<li id="src-2">《多元宇宙》4-5〈存取权〉导言 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li id="src-3">《多元宇宙》4-0「⿻自由」一节 — <a href="https://www.plurality.net/v/chapters/4-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/zh-tw/</a></li>
+<li id="src-4">《多元宇宙》4-1〈身分与人格权〉谈数位公共建设与 Aadhaar 的段落 — <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a> ；配给与 MOSIP 采用国的细节见英文版 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a></li>
+<li id="src-5">《多元宇宙》7-0 谈政府的协调与标准化的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
+<li id="src-6">《多元宇宙》4-5「资讯完整性的基础建设」一节后半 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li id="src-7">同上（IPFS 的段落）— <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li id="src-8">Audrey Tang, "Speech at LSE IDEAS"（2023-12-01）— <a href="https://archive.tw/2023-12-01-speech-at-lse-ideas" target="_blank" rel="noopener">https://archive.tw/2023-12-01-speech-at-lse-ideas</a></li>
+<li id="src-9">《多元宇宙》7-0 谈数位部会的段落（G20）— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
+<li id="src-10">《多元宇宙》7-0 章首的未来愿景 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
+<li id="src-11">《多元宇宙》7-0 谈数位部会与跨国网络的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
+<li id="src-12">《多元宇宙》4-5「弥平数位鸿沟」一节第 2 段 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li id="src-13">同上，第 1、3～5 段 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li id="src-14">《多元宇宙》4-5「资讯完整性的基础建设」一节开头 — <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li id="src-15">《Plurality》英文版 4-1 "Public and decentralized digital identity" 一节 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a></li>
+<li id="src-16">《多元宇宙》7-0 谈法律框架的段落 — <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a> ；Open Collective Foundation 解散的记述见英文版 — <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a></li>
+<li id="src-17">《多元宇宙》简介，各章摘要（4-5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
+<li id="src-18">Audrey Tang, "Conversation with Hal Seki and Japanese delegates"（2024-03-22）— <a href="https://github.com/audreyt/transcript/blob/main/2024-03-22-Conversation-with-Hal-Seki-and-Japanese-delegates.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-03-22-Conversation-with-Hal-Seki-and-Japanese-delegates.md</a></li>
+</ol><div class='related'>相关: <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='commerce-and-trust.html'>什么是「商业与信任」（多元通货）？</a> ・ <a href='property-and-contract.html'>什么是「财产与合约」（多元资产）？</a> ・ <a href='contextual-integrity.html'>什么是脉络完整性（contextual integrity）？</a> ・ <a href='lost-dao.html'>什么是「我们遗忘的道」（The Lost Dao）？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a> ・ <a href='rights-os.html'>什么是权利 OS（权利、作业系统与数位自由）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-public-infrastructure.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E4%BD%8D%E5%85%AC%E5%85%B1%E5%BB%BA%E8%AE%BE%EF%BC%88DPI%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-public-infrastructure.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

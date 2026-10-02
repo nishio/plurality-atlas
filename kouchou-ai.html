@@ -41,33 +41,39 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/kouchou-ai.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/kouchou-ai.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/kouchou-ai.html">简体中文</a></nav></header>
 <main lang="ja"><h1>広聴AI（kouchou-ai）ってなに？</h1><div class='lead'>何千件もの自由記述を表のファイルで読み込ませると、AI が似た意見をまとめて「意見の地図」と要約を作ってくれる、日本製の無料ソフトです。米国の Talk to the City をもとに、デジタル民主主義2030（DD2030）が作りました。</div><p>市役所がアンケートを取ると、「ご自由にお書きください」の欄に何千件もの回答が集まることがあります。職員が一件ずつ読んで分類するには、何週間もかかります。広聴AI は、この「読みきれない声」を AI で整理するための道具です。</p>
 <h2>ひとことで言うと</h2>
-<p>広聴AI（こうちょうエーアイ、英語名 kouchou-ai）は、<strong>大量の自由記述をまとめて「意見の地図」にするソフト</strong>です。アンケートの回答や SNS の投稿を CSV（表の形のファイル）で読み込ませると、AI が似た意見どうしを近くに並べて色分けし、要約を付けてくれます[1][2]。</p>
-<p>無料で誰でも使えます。中身のプログラムも公開されています（オープンソース、略して OSS）。作ったのは市民の集まり <a href="dd2030.html">デジタル民主主義2030（DD2030）</a> です。米国の <a href="talk-to-the-city.html">Talk to the City</a> をもとに、日本の自治体や政治家の実務向けに作り直しました[1][2]。</p>
+<p>広聴AI（こうちょうエーアイ、英語名 kouchou-ai）は、<strong>大量の自由記述をまとめて「意見の地図」にするソフト</strong>です。アンケートの回答や SNS の投稿を CSV（表の形のファイル）で読み込ませると、AI が似た意見どうしを近くに並べて色分けし、要約を付けてくれます<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>無料で誰でも使えます。中身のプログラムも公開されています（オープンソース、略して OSS）。作ったのは市民の集まり <a href="dd2030.html">デジタル民主主義2030（DD2030）</a> です。米国の <a href="talk-to-the-city.html">Talk to the City</a> をもとに、日本の自治体や政治家の実務向けに作り直しました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>こうした「大勢の声を聴く」技術を <a href="broad-listening.html">ブロードリスニング</a> と呼びます。</p>
 <h2>たとえば</h2>
-<p><strong>香川県宇多津町（2025-04-30 公表）。</strong> 町の総合計画を作るときの町民アンケートで、自由記述 396 件を広聴AI で整理しました。町は、これまで長い時間がかかっていたとりまとめを、AI が 10 分ほどで済ませたと報告しています[3]。</p>
-<p><strong>渋谷区（2025-07-02 公表）。</strong> 区民意識調査の自由記述 6,037 件を分析しました。全体の要約、話題ごとの分類と図、世代別・地域別の傾向を出しています[4]。</p>
-<p><strong>広島県（2025 年 8〜9 月）。</strong> 県民から募った意見 2,953 件を分析しました。職員は、約 3,000 件の自由記述を 30 分かからずに分類できたと述べています。人の手なら約 500 時間かかった可能性があるとされます[5]。</p>
-<p><strong>チームみらい（2025 年の参院選）。</strong> 政党の <a href="team-mirai.html">チームみらい</a> は、市民から届いた政策の変更提案を広聴AI の図で眺めました。図の点から元の提案へ一クリックで飛べる機能を足し、この機能は後に DD2030 の本体に取り込まれました[6][7]。</p>
+<p><strong>香川県宇多津町（2025-04-30 公表）。</strong> 町の総合計画を作るときの町民アンケートで、自由記述 396 件を広聴AI で整理しました。町は、これまで長い時間がかかっていたとりまとめを、AI が 10 分ほどで済ませたと報告しています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>渋谷区（2025-07-02 公表）。</strong> 区民意識調査の自由記述 6,037 件を分析しました。全体の要約、話題ごとの分類と図、世代別・地域別の傾向を出しています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>広島県（2025 年 8〜9 月）。</strong> 県民から募った意見 2,953 件を分析しました。職員は、約 3,000 件の自由記述を 30 分かからずに分類できたと述べています。人の手なら約 500 時間かかった可能性があるとされます<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>チームみらい（2025 年の参院選）。</strong> 政党の <a href="team-mirai.html">チームみらい</a> は、市民から届いた政策の変更提案を広聴AI の図で眺めました。図の点から元の提案へ一クリックで飛べる機能を足し、この機能は後に DD2030 の本体に取り込まれました<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p>自治体の例は <a href="municipal-broad-listening.html">自治体のブロードリスニング</a> の記事にまとめます。</p>
 <h2>しくみ</h2>
 <h3>生まれた経緯</h3>
-<p>元になったのは、米国の NPO（非営利団体）AI Objectives Institute が 2023 年に作った Talk to the City（TTTC）です[2]。</p>
-<p>安野貴博のチームは、2024 年の都知事選や、テレビ局の選挙報道、東京都の意見募集で TTTC を使いました。その中で、エンジニアでない人でもファイルを上げるだけで使えるしくみが要る、という課題がはっきりしました[2]。</p>
-<p>そこで TTTC の散布図版から枝分かれする形で開発が始まり、2025-03-16 に OSS として公開されました[1][2]。</p>
+<p>元になったのは、米国の NPO（非営利団体）AI Objectives Institute が 2023 年に作った Talk to the City（TTTC）です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>安野貴博のチームは、2024 年の都知事選や、テレビ局の選挙報道、東京都の意見募集で TTTC を使いました。その中で、エンジニアでない人でもファイルを上げるだけで使えるしくみが要る、という課題がはっきりしました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>そこで TTTC の散布図版から枝分かれする形で開発が始まり、2025-03-16 に OSS として公開されました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>TTTC から何を変えたのか</h3>
-<p>ブロードリスニング本（DD2030 コミュニティ著）によれば、主な違いは次のとおりです[6]。</p>
+<p>ブロードリスニング本（DD2030 コミュニティ著）によれば、主な違いは次のとおりです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <ul>
 <li><strong>ブラウザで使えるようにした。</strong> 元の版は、黒い画面にコマンドを打って動かすもので、プログラムの環境づくりが必要でした。広聴AI は、一度サーバーを用意すれば、ブラウザでファイルを上げて分析し、URL を送るだけで結果を見せられます。</li>
 <li><strong>大小のまとまりを同時に見られる。</strong> 大きなグループの中に小さなグループがある、という入れ子の形で意見を整理します。</li>
 <li><strong>まとまりの濃いところだけを取り出せる。</strong> 関係の薄い意見が混ざったグループを除けます。</li>
-<li><strong>見た目の分かりやすさを優先した。</strong> 元の方式では、図の上で同じグループが離れた場所に飛び散ることがありました。広聴AI は「近くの点は同じグループ」になる方式に変えました。同書は、精密さよりも見た目のまとまりを優先した、と書いています[6]。</li>
+<li><strong>見た目の分かりやすさを優先した。</strong> 元の方式では、図の上で同じグループが離れた場所に飛び散ることがありました。広聴AI は「近くの点は同じグループ」になる方式に変えました。同書は、精密さよりも見た目のまとまりを優先した、と書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 </ul>
 <h3>処理の流れ</h3>
-<p>おおまかには次の順に進みます[8]。</p>
+<p>おおまかには次の順に進みます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <ol>
 <li>大規模言語モデル（LLM、文章を扱う AI）が、一つの投稿を個々の論点に分ける</li>
 <li>論点を数字の並び（ベクトル）に変える</li>
@@ -75,22 +81,22 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li>近いものどうしをグループにまとめ、さらに大きなグループへ束ねる</li>
 <li>LLM が、グループに名前を付け、全体の要約を書く</li>
 </ol>
-<p>ブロードリスニング本の試算では、gpt-4o-mini（OpenAI の安価な AI モデル）を使って 1 万件を処理する費用は約 480 円です。そのうち 9 割以上は、最初の「論点に分ける」段階にかかります[8]。</p>
+<p>ブロードリスニング本の試算では、gpt-4o-mini（OpenAI の安価な AI モデル）を使って 1 万件を処理する費用は約 480 円です。そのうち 9 割以上は、最初の「論点に分ける」段階にかかります<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>版の歩みと開発</h3>
-<p>2025-04-29 に v2.0.0 が出ました[9]。2025-12-28 の v4.0.0 では、使える AI の種類を増やし、限定公開のレポートが検索エンジンに載らないようにしました[10]。</p>
-<p>ブロードリスニング本によれば、開発開始から約 1 年で 807 件の変更がまとめられました。全 2,756 件の記録のうち 210 件（約 7.6%）は、プログラムを書く AI（Devin）によるものでした[6]。</p>
-<p>開発体制には揺れもありました。2025 年 5 月に安野が DD2030 を離れてチームみらいを作ると、開発者の多くがそちらに移りました。変更の確認が返らず、取り込みまで 2.5 か月空くこともありました。同書は、少人数が定例の会合を続けて開発を途切れさせないようにした、と記録しています[6]。</p>
+<p>2025-04-29 に v2.0.0 が出ました<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2025-12-28 の v4.0.0 では、使える AI の種類を増やし、限定公開のレポートが検索エンジンに載らないようにしました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>ブロードリスニング本によれば、開発開始から約 1 年で 807 件の変更がまとめられました。全 2,756 件の記録のうち 210 件（約 7.6%）は、プログラムを書く AI（Devin）によるものでした<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>開発体制には揺れもありました。2025 年 5 月に安野が DD2030 を離れてチームみらいを作ると、開発者の多くがそちらに移りました。変更の確認が返らず、取り込みまで 2.5 か月空くこともありました。同書は、少人数が定例の会合を続けて開発を途切れさせないようにした、と記録しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>作った側自身の注意書き。</strong> DD2030 の公式ページは、分析結果に頼りすぎないよう求めています。ネット上の意見は偏りやすいので、結果をそのまま政策にすることは想定していない、決めるのは使う側が十分に確かめてから、という趣旨です[2]。偏りや読み違えの一般的な注意は <a href="broad-listening.html">ブロードリスニング</a> の記事にあります。</li>
-<li><strong>賛成と反対が同じグループに入る。</strong> 同じ話題の賛成意見と反対意見は、AI にとって「似た文章」に見えやすく、一つにまとまってしまうことがあります。ブロードリスニング本はこれをまだ解けていない課題とし、いくつかの工夫を紹介しています[8]。</li>
-<li><strong>自治体に広まりにくい。</strong> DD2030 は自治体に声をかけましたが、動機づけの弱さ、首長と現場の温度差、人事異動、エンジニア不足などで、試しに使っても本格運用に移りにくかったといいます。多くの自治体では、分析より前に「意見が十分に集まらない」ことが課題でした[6]。</li>
-<li><strong>責任があいまいだという批判。</strong> ある市民の note 記事は、広聴AI や <a href="idobata.html">いどばた</a> のような OSS 型の市民参加は、品質や説明責任、保守の保証があいまいだと論じています[11]。</li>
-<li><strong>チームみらいの道具、とは限らない。</strong> ブロードリスニング本の主著者の中山心太は、2026 年 2 月に X で、チームみらいはもう TTTC も広聴AI も使っていないと書いています[12]。</li>
+<li><strong>作った側自身の注意書き。</strong> DD2030 の公式ページは、分析結果に頼りすぎないよう求めています。ネット上の意見は偏りやすいので、結果をそのまま政策にすることは想定していない、決めるのは使う側が十分に確かめてから、という趣旨です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。偏りや読み違えの一般的な注意は <a href="broad-listening.html">ブロードリスニング</a> の記事にあります。</li>
+<li><strong>賛成と反対が同じグループに入る。</strong> 同じ話題の賛成意見と反対意見は、AI にとって「似た文章」に見えやすく、一つにまとまってしまうことがあります。ブロードリスニング本はこれをまだ解けていない課題とし、いくつかの工夫を紹介しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
+<li><strong>自治体に広まりにくい。</strong> DD2030 は自治体に声をかけましたが、動機づけの弱さ、首長と現場の温度差、人事異動、エンジニア不足などで、試しに使っても本格運用に移りにくかったといいます。多くの自治体では、分析より前に「意見が十分に集まらない」ことが課題でした<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>責任があいまいだという批判。</strong> ある市民の note 記事は、広聴AI や <a href="idobata.html">いどばた</a> のような OSS 型の市民参加は、品質や説明責任、保守の保証があいまいだと論じています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>チームみらいの道具、とは限らない。</strong> ブロードリスニング本の主著者の中山心太は、2026 年 2 月に X で、チームみらいはもう TTTC も広聴AI も使っていないと書いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本『Plurality』は広聴AI の名前を出しません。ただし 5-4「<a href="augmented-deliberation.html">拡張熟議</a>」で、元になった Talk to the City と、安野の都知事選での使い方を、ブロードリスニングの例に挙げています[13]。広聴AI は、その TTTC を日本で「誰でも使える部品」にしたもの、と言えます。</p>
-<p>ブロードリスニング本の分け方では「道具としてのブロードリスニング」の代表です。<a href="idobata.html">いどばた</a> や <a href="polis.html">Polis</a> のような話し合いの場とは、役割が違います[14]。開発元の <a href="dd2030.html">DD2030</a> は、政党や自治体に中立に提供する公共の財産として作っています[6]。</p>
+<p>本『Plurality』は広聴AI の名前を出しません。ただし 5-4「<a href="augmented-deliberation.html">拡張熟議</a>」で、元になった Talk to the City と、安野の都知事選での使い方を、ブロードリスニングの例に挙げています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。広聴AI は、その TTTC を日本で「誰でも使える部品」にしたもの、と言えます。</p>
+<p>ブロードリスニング本の分け方では「道具としてのブロードリスニング」の代表です。<a href="idobata.html">いどばた</a> や <a href="polis.html">Polis</a> のような話し合いの場とは、役割が違います<a class="cite" href="#src-14" data-src="src-14">[14]</a>。開発元の <a href="dd2030.html">DD2030</a> は、政党や自治体に中立に提供する公共の財産として作っています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>DD2030「広聴AI」紹介ページ（日本語・Web）— <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
@@ -101,18 +107,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>kouchou-ai README — <a href="https://github.com/digitaldemocracy2030/kouchou-ai" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/kouchou-ai</a></li>
-<li>DD2030「広聴AI」紹介ページ — <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
-<li>宇多津町「ブロードリスニングの試行」— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
-<li>渋谷区 報道発表（2025-07-02）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
-<li>ブロードリスニング本 第 8 章 2 節「広島県の事例」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 第 10 章「DD2030による広聴AIの開発活動」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 第 6 章 1 節「チームみらい」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>ブロードリスニング本 第 13 章「広聴AIの技術スタック解説」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>DD2030 お知らせ「広聴AI v2.0.0」— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
-<li>DD2030 お知らせ「広聴AI v4.0.0」— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
-<li>「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
-<li>中山心太の X 投稿（2026-02-07）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
-<li>『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>ブロードリスニング本 第 1 章「ブロードリスニングとは何か？」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-</ol><div class='related'>関連: <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='municipal-broad-listening.html'>自治体のブロードリスニングってなに？</a> ・ <a href='team-mirai.html'>チームみらいってなに？</a> ・ <a href='idobata.html'>いどばたってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fkouchou-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%BA%83%E8%81%B4AI%EF%BC%88kouchou-ai%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fkouchou-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">kouchou-ai README — <a href="https://github.com/digitaldemocracy2030/kouchou-ai" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/kouchou-ai</a></li>
+<li id="src-2">DD2030「広聴AI」紹介ページ — <a href="https://dd2030.org/kouchou-ai/" target="_blank" rel="noopener">https://dd2030.org/kouchou-ai/</a></li>
+<li id="src-3">宇多津町「ブロードリスニングの試行」— <a href="https://www.town.utazu.lg.jp/page/4114.html" target="_blank" rel="noopener">https://www.town.utazu.lg.jp/page/4114.html</a></li>
+<li id="src-4">渋谷区 報道発表（2025-07-02）— <a href="https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html" target="_blank" rel="noopener">https://www.city.shibuya.tokyo.jp/kusei/hodo/hodo-2025/hodo_20250702.html</a></li>
+<li id="src-5">ブロードリスニング本 第 8 章 2 節「広島県の事例」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-6">ブロードリスニング本 第 10 章「DD2030による広聴AIの開発活動」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-7">ブロードリスニング本 第 6 章 1 節「チームみらい」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-8">ブロードリスニング本 第 13 章「広聴AIの技術スタック解説」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-9">DD2030 お知らせ「広聴AI v2.0.0」— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
+<li id="src-10">DD2030 お知らせ「広聴AI v4.0.0」— <a href="https://dd2030.org/" target="_blank" rel="noopener">https://dd2030.org/</a></li>
+<li id="src-11">「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
+<li id="src-12">中山心太の X 投稿（2026-02-07）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
+<li id="src-13">『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-14">ブロードリスニング本 第 1 章「ブロードリスニングとは何か？」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+</ol><div class='related'>関連: <a href='broad-listening.html'>ブロードリスニングってなに？</a> ・ <a href='talk-to-the-city.html'>Talk to the City（TTTC）ってなに？</a> ・ <a href='dd2030.html'>デジタル民主主義2030（DD2030）ってなに？</a> ・ <a href='municipal-broad-listening.html'>自治体のブロードリスニングってなに？</a> ・ <a href='team-mirai.html'>チームみらいってなに？</a> ・ <a href='idobata.html'>いどばたってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fkouchou-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%BA%83%E8%81%B4AI%EF%BC%88kouchou-ai%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fkouchou-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,29 +41,35 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/glen-weyl.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/glen-weyl.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/glen-weyl.html">简体中文</a></nav></header>
 <main lang="ja"><h1>E・グレン・ワイル（E. Glen Weyl）ってどんな人？</h1><div class='lead'>アメリカの経済学者で、本『⿻ Plurality』をオードリー・タンと書いた主な書き手です。気持ちの強さまで票に表せる「クアドラティック投票」などを考えた一人で、RadicalxChange の創設者でもあります。</div><p>本『⿻ Plurality』の表紙には、オードリー・タンと並んでこの名前があります。「クアドラティック投票」や「クアドラティック・ファンディング」といった、Plurality の話でよく出てくる仕組みを考えた一人でもあります。</p>
 <h2>ひとことで言うと</h2>
-<p>E・グレン・ワイル（E. Glen Weyl）は、アメリカの経済学者です。『⿻ Plurality』をオードリー・タン（唐鳳）と世界中の協力者とともに書きました[1]。賛成・反対だけでなく思いの強さも票に表せる投票のしかた（<a href="quadratic-voting.html">クアドラティック投票</a>）や、多くの人が少しずつお金を出すものほど多く上乗せする寄付の配り方（<a href="quadratic-funding.html">クアドラティック・ファンディング</a>）を考えた一人として知られています[2][3]。</p>
-<p>本の著者紹介は、ワイルを <a href="radicalxchange.html">RadicalxChange</a> の創設者、Microsoft Research の Plural Technology Collaboratory と Plurality Institute の創設者、本『ラディカル・マーケット』の共著者と紹介しています[1]。日本語版の著者紹介は、シカゴ大学・プリンストン大学・イェール大学で経済学を教えたと書いています[4]。</p>
+<p>E・グレン・ワイル（E. Glen Weyl）は、アメリカの経済学者です。『⿻ Plurality』をオードリー・タン（唐鳳）と世界中の協力者とともに書きました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。賛成・反対だけでなく思いの強さも票に表せる投票のしかた（<a href="quadratic-voting.html">クアドラティック投票</a>）や、多くの人が少しずつお金を出すものほど多く上乗せする寄付の配り方（<a href="quadratic-funding.html">クアドラティック・ファンディング</a>）を考えた一人として知られています<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>本の著者紹介は、ワイルを <a href="radicalxchange.html">RadicalxChange</a> の創設者、Microsoft Research の Plural Technology Collaboratory と Plurality Institute の創設者、本『ラディカル・マーケット』の共著者と紹介しています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。日本語版の著者紹介は、シカゴ大学・プリンストン大学・イェール大学で経済学を教えたと書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>Plurality とのかかわり</h2>
-<p><strong>本の主な書き手です。</strong> 本の引用例（BibTeX）の著者表記は「Weyl, E. Glen and Tang, Audrey and {the Plurality Community}」です[5]。TIME の取材記事によると、本はワイルのブログ記事から始まりました。ワイルとタンが企画し、ワイルが主な書き手を務め、100 人以上が校正や図、章の執筆などで関わったといいます[6]。</p>
-<p><strong>「Plurality」という言葉。</strong> ワイルは 2022 年 2 月のエッセイ「Why I am a Pluralist」で、自分を「pluralist」と呼び、技術が進むべき方向を「Plurality」と呼ぶと書きました。本の投票の章もこのエッセイを参照しています[7][2]。</p>
-<p><strong>タンとの出会い。</strong> TIME によれば、2 人を 2018 年に引き合わせたのは <a href="vitalik-buterin.html">ヴィタリック・ブテリン</a> です[6]。2018 年 11 月 21 日に台北でタンと会った記録も残っています[8]。</p>
-<p><strong>広める役。</strong> TIME は、ワイルがタンの世界ツアーの計画を主に仕掛けたと伝えています[6]。</p>
-<p><strong>日本とのかかわり。</strong> 2024 年 1 月に東京で基調講演をしました[9]。2024 年 10 月にはタン・関治之と鼎談しました[18]。日本語版が出た 2025 年 5 月の前後には、寄稿や李舜志との対談を重ねています[10][11]。</p>
+<p><strong>本の主な書き手です。</strong> 本の引用例（BibTeX）の著者表記は「Weyl, E. Glen and Tang, Audrey and {the Plurality Community}」です<a class="cite" href="#src-5" data-src="src-5">[5]</a>。TIME の取材記事によると、本はワイルのブログ記事から始まりました。ワイルとタンが企画し、ワイルが主な書き手を務め、100 人以上が校正や図、章の執筆などで関わったといいます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>「Plurality」という言葉。</strong> ワイルは 2022 年 2 月のエッセイ「Why I am a Pluralist」で、自分を「pluralist」と呼び、技術が進むべき方向を「Plurality」と呼ぶと書きました。本の投票の章もこのエッセイを参照しています<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>タンとの出会い。</strong> TIME によれば、2 人を 2018 年に引き合わせたのは <a href="vitalik-buterin.html">ヴィタリック・ブテリン</a> です<a class="cite" href="#src-6" data-src="src-6">[6]</a>。2018 年 11 月 21 日に台北でタンと会った記録も残っています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p><strong>広める役。</strong> TIME は、ワイルがタンの世界ツアーの計画を主に仕掛けたと伝えています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>日本とのかかわり。</strong> 2024 年 1 月に東京で基調講演をしました<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2024 年 10 月にはタン・関治之と鼎談しました<a class="cite" href="#src-18" data-src="src-18">[18]</a>。日本語版が出た 2025 年 5 月の前後には、寄稿や李舜志との対談を重ねています<a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>主な考え</h2>
-<p><strong>クアドラティック投票。</strong> 票を買うためのコストを、票数の 2 乗にする投票です。本はこの仕組みを「私たちの一人が考案した」と書いています[2]。くわしくは <a href="quadratic-voting.html">クアドラティック投票</a> と <a href="plural-voting.html">⿻ 投票</a> の記事にあります。</p>
-<p><strong>クアドラティック・ファンディング。</strong> ブテリン、ゾーイ・ヒッツィグとの 2018 年の共著論文が出発点です[3]。のちにワイルらは、参加者どうしのつながりを計算に入れて、示し合わせた不正に強くする方向へ発展させました。→ <a href="quadratic-funding.html">クアドラティック・ファンディング</a>・<a href="social-markets.html">社会市場</a></p>
-<p><strong>データの尊厳。</strong> <a href="jaron-lanier.html">ジャロン・ラニアー</a>との 2018 年の共著記事で、データを出す人たちの代わりにまとめて交渉する仲介の組織を提案しました[12]。→ <a href="data-dignity.html">データの尊厳</a></p>
-<p><strong>分散型社会とソウルバウンド・トークン。</strong> 2022 年にプジャ・オールハーバー、ブテリンと、譲り渡せないトークンで人と人の関係を表す構想を出しました[13]。→ <a href="soulbound-tokens.html">ソウルバウンド・トークン</a>・<a href="identity-and-personhood.html">ID と人物性</a></p>
-<p><strong>技術官僚主義と、自分の旧著への批判。</strong> ワイルは 2019 年の連作で技術官僚主義などを批判し、2020 年には自分の『ラディカル・マーケット』は経済学に寄りすぎていた、という趣旨で振り返りました[14]。これらの批判は、本の <a href="three-paths.html">三つの道</a> や <a href="monist-atomism.html">一元論的アトム主義</a> の議論とつながっています。</p>
-<p><strong>リバース・アラインメント。</strong> 2026 年 7 月、ジェームズ・エヴァンスらと、社会が AI を安全に使い恩恵を広く分かち合えるよう、制度や規範、統治の枠組みを作り直そう、と唱える文を発表しました[15]。→ <a href="reverse-alignment.html">リバース・アラインメント</a></p>
+<p><strong>クアドラティック投票。</strong> 票を買うためのコストを、票数の 2 乗にする投票です。本はこの仕組みを「私たちの一人が考案した」と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。くわしくは <a href="quadratic-voting.html">クアドラティック投票</a> と <a href="plural-voting.html">⿻ 投票</a> の記事にあります。</p>
+<p><strong>クアドラティック・ファンディング。</strong> ブテリン、ゾーイ・ヒッツィグとの 2018 年の共著論文が出発点です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。のちにワイルらは、参加者どうしのつながりを計算に入れて、示し合わせた不正に強くする方向へ発展させました。→ <a href="quadratic-funding.html">クアドラティック・ファンディング</a>・<a href="social-markets.html">社会市場</a></p>
+<p><strong>データの尊厳。</strong> <a href="jaron-lanier.html">ジャロン・ラニアー</a>との 2018 年の共著記事で、データを出す人たちの代わりにまとめて交渉する仲介の組織を提案しました<a class="cite" href="#src-12" data-src="src-12">[12]</a>。→ <a href="data-dignity.html">データの尊厳</a></p>
+<p><strong>分散型社会とソウルバウンド・トークン。</strong> 2022 年にプジャ・オールハーバー、ブテリンと、譲り渡せないトークンで人と人の関係を表す構想を出しました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→ <a href="soulbound-tokens.html">ソウルバウンド・トークン</a>・<a href="identity-and-personhood.html">ID と人物性</a></p>
+<p><strong>技術官僚主義と、自分の旧著への批判。</strong> ワイルは 2019 年の連作で技術官僚主義などを批判し、2020 年には自分の『ラディカル・マーケット』は経済学に寄りすぎていた、という趣旨で振り返りました<a class="cite" href="#src-14" data-src="src-14">[14]</a>。これらの批判は、本の <a href="three-paths.html">三つの道</a> や <a href="monist-atomism.html">一元論的アトム主義</a> の議論とつながっています。</p>
+<p><strong>リバース・アラインメント。</strong> 2026 年 7 月、ジェームズ・エヴァンスらと、社会が AI を安全に使い恩恵を広く分かち合えるよう、制度や規範、統治の枠組みを作り直そう、と唱える文を発表しました<a class="cite" href="#src-15" data-src="src-15">[15]</a>。→ <a href="reverse-alignment.html">リバース・アラインメント</a></p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>運動づくりの実績。</strong> TIME は、ワイルが作った RadicalxChange Foundation は一定の成果を上げたものの、ワイルが Plurality に掲げる目標には遠く及ばなかった、と書いています[6]。</li>
-<li><strong>考えのまとめ方。</strong> ブテリンは本の書評で、「Plurality の雰囲気」という傘の下に、性格の違う考えがまとめて入っていると感じることがある、と書きました。そのうえで、雰囲気に賛成しなくても得るものはある、と論じています[16]。</li>
-<li><strong>ヤーヴィンとの討論。</strong> 2025 年 9 月、ワイルはカーティス・ヤーヴィンと「CEO 独裁」をめぐって公開で討論しました。李舜志が日本語で要約と論評を書いています[17]。</li>
+<li><strong>運動づくりの実績。</strong> TIME は、ワイルが作った RadicalxChange Foundation は一定の成果を上げたものの、ワイルが Plurality に掲げる目標には遠く及ばなかった、と書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>考えのまとめ方。</strong> ブテリンは本の書評で、「Plurality の雰囲気」という傘の下に、性格の違う考えがまとめて入っていると感じることがある、と書きました。そのうえで、雰囲気に賛成しなくても得るものはある、と論じています<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</li>
+<li><strong>ヤーヴィンとの討論。</strong> 2025 年 9 月、ワイルはカーティス・ヤーヴィンと「CEO 独裁」をめぐって公開で討論しました。李舜志が日本語で要約と論評を書いています<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</li>
 </ul>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -76,24 +82,54 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』著者紹介（英語版）— <a href="https://github.com/pluralitybook/plurality/blob/main/contents/english/0-1-About-the-authors.md" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/blob/main/contents/english/0-1-About-the-authors.md</a> ［CC0］</li>
-<li>『Plurality』5-6「⿻ Voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>Buterin, Hitzig, Weyl「A Flexible Design for Funding Public Goods」（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
-<li>『Plurality』日本語版 著者紹介 — <a href="https://github.com/nishio/plurality-japanese" target="_blank" rel="noopener">https://github.com/nishio/plurality-japanese</a> ［CC0］</li>
-<li>『Plurality』リポジトリ（本の引用のしかた）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>Will Henshall「Inside Audrey Tang's Plan to Align Technology with Democracy」（TIME、2024-05-20）— <a href="https://time.com/6979012/audrey-tang-interview-plurality-democracy/" target="_blank" rel="noopener">https://time.com/6979012/audrey-tang-interview-plurality-democracy/</a></li>
-<li>E. Glen Weyl「Why I am a Pluralist」（2022-02-10）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-a-pluralist/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-a-pluralist/</a></li>
-<li>Meeting with Glen Weyl（2018-11-21）— <a href="https://github.com/audreyt/transcript/blob/main/2018-11-21-Meeting-with-Glen-Weyl.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2018-11-21-Meeting-with-Glen-Weyl.md</a> ［CC0］</li>
-<li>
+<li id="src-1">『Plurality』著者紹介（英語版）— <a href="https://github.com/pluralitybook/plurality/blob/main/contents/english/0-1-About-the-authors.md" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/blob/main/contents/english/0-1-About-the-authors.md</a> ［CC0］</li>
+<li id="src-2">『Plurality』5-6「⿻ Voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-3">Buterin, Hitzig, Weyl「A Flexible Design for Funding Public Goods」（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li id="src-4">『Plurality』日本語版 著者紹介 — <a href="https://github.com/nishio/plurality-japanese" target="_blank" rel="noopener">https://github.com/nishio/plurality-japanese</a> ［CC0］</li>
+<li id="src-5">『Plurality』リポジトリ（本の引用のしかた）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-6">Will Henshall「Inside Audrey Tang's Plan to Align Technology with Democracy」（TIME、2024-05-20）— <a href="https://time.com/6979012/audrey-tang-interview-plurality-democracy/" target="_blank" rel="noopener">https://time.com/6979012/audrey-tang-interview-plurality-democracy/</a></li>
+<li id="src-7">E. Glen Weyl「Why I am a Pluralist」（2022-02-10）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-a-pluralist/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-a-pluralist/</a></li>
+<li id="src-8">Meeting with Glen Weyl（2018-11-21）— <a href="https://github.com/audreyt/transcript/blob/main/2018-11-21-Meeting-with-Glen-Weyl.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2018-11-21-Meeting-with-Glen-Weyl.md</a> ［CC0］</li>
+<li id="src-9">
 <h1>GleninJapan 基調講演（2024-01-03）— <a href="https://www.youtube.com/watch?v=h1rccL0zKOQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=h1rccL0zKOQ</a></h1>
 </li>
-<li>サイボウズ式 ワイル寄稿「日本にデジタル民主主義の日が昇るとき」— <a href="https://cybozushiki.cybozu.co.jp/articles/m006261.html" target="_blank" rel="noopener">https://cybozushiki.cybozu.co.jp/articles/m006261.html</a></li>
-<li>集英社新書プラス「E・グレン・ワイル × 李舜志」— <a href="https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554" target="_blank" rel="noopener">https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554</a></li>
-<li>Lanier &amp; Weyl「A Blueprint for a Better Digital Society」（HBR、2018）— <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
-<li>Ohlhaver, Weyl, Buterin「Decentralized Society: Finding Web3's Soul」（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
-<li>E. Glen Weyl「Why I Am not a Market Radical」（2020-12-15）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
-<li>Weyl, Evans, White「What Humanity Needs to Flourish in the Next Decade」（Noema、2026-07-21）— <a href="https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/" target="_blank" rel="noopener">https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</a></li>
-<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-<li>李舜志「ヤーヴィン vs ワイル」— <a href="https://note.com/chic_borage2648/n/ne5e7100346b9" target="_blank" rel="noopener">https://note.com/chic_borage2648/n/ne5e7100346b9</a></li>
-<li>サイボウズ式「タン×ワイル×関治之」鼎談（2024-10-03）— <a href="https://cybozushiki.cybozu.co.jp/articles/m006211.html" target="_blank" rel="noopener">https://cybozushiki.cybozu.co.jp/articles/m006211.html</a></li>
-</ol><div class='related'>関連: <a href='audrey-tang.html'>オードリー・タン（唐鳳）ってどんな人？</a> ・ <a href='plurality.html'>⿻ Plurality（プルラリティ）ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='radicalxchange.html'>RadicalxChange（RxC）とは？どんな団体？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='reverse-alignment.html'>reverse alignment（リバース・アラインメント）ってなに？</a> ・ <a href='vitalik-buterin.html'>ヴィタリック・ブテリン（Vitalik Buterin）ってどんな人？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fglen-weyl.html&title=%5B%E6%8C%87%E6%91%98%5D%20E%E3%83%BB%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%AB%EF%BC%88E.%20Glen%20Weyl%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fglen-weyl.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-10">サイボウズ式 ワイル寄稿「日本にデジタル民主主義の日が昇るとき」— <a href="https://cybozushiki.cybozu.co.jp/articles/m006261.html" target="_blank" rel="noopener">https://cybozushiki.cybozu.co.jp/articles/m006261.html</a></li>
+<li id="src-11">集英社新書プラス「E・グレン・ワイル × 李舜志」— <a href="https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554" target="_blank" rel="noopener">https://shinsho-plus.shueisha.co.jp/interview/e_lee/30554</a></li>
+<li id="src-12">Lanier &amp; Weyl「A Blueprint for a Better Digital Society」（HBR、2018）— <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
+<li id="src-13">Ohlhaver, Weyl, Buterin「Decentralized Society: Finding Web3's Soul」（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
+<li id="src-14">E. Glen Weyl「Why I Am not a Market Radical」（2020-12-15）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
+<li id="src-15">Weyl, Evans, White「What Humanity Needs to Flourish in the Next Decade」（Noema、2026-07-21）— <a href="https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/" target="_blank" rel="noopener">https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</a></li>
+<li id="src-16">Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li id="src-17">李舜志「ヤーヴィン vs ワイル」— <a href="https://note.com/chic_borage2648/n/ne5e7100346b9" target="_blank" rel="noopener">https://note.com/chic_borage2648/n/ne5e7100346b9</a></li>
+<li id="src-18">サイボウズ式「タン×ワイル×関治之」鼎談（2024-10-03）— <a href="https://cybozushiki.cybozu.co.jp/articles/m006211.html" target="_blank" rel="noopener">https://cybozushiki.cybozu.co.jp/articles/m006211.html</a></li>
+</ol><div class='related'>関連: <a href='audrey-tang.html'>オードリー・タン（唐鳳）ってどんな人？</a> ・ <a href='plurality.html'>⿻ Plurality（プルラリティ）ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='radicalxchange.html'>RadicalxChange（RxC）とは？どんな団体？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a> ・ <a href='reverse-alignment.html'>reverse alignment（リバース・アラインメント）ってなに？</a> ・ <a href='vitalik-buterin.html'>ヴィタリック・ブテリン（Vitalik Buterin）ってどんな人？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fglen-weyl.html&title=%5B%E6%8C%87%E6%91%98%5D%20E%E3%83%BB%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%AB%EF%BC%88E.%20Glen%20Weyl%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fglen-weyl.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

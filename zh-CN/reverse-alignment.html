@@ -41,29 +41,35 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../reverse-alignment.html">日本語</a> <a class="lang" hreflang="en" href="../en/reverse-alignment.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/reverse-alignment.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是反向对齐（reverse alignment）？</h1><div class='lead'>让 AI 配合人类的「对齐」的另一面：让社会的制度、规则、人们的技能配合 AI 时代重新打造。这是卫谷伦等人在 2026 年提出的议题。</div><p>谈到 AI 安全时，通常问的是「怎么让 AI 符合人类的价值」。这方面的研究称为「对齐」（alignment）。然而，再守规矩的 AI，进入一个还没准备好接住它的社会，也可能令人失望，甚至造成伤害。反向对齐（reverse alignment）就是把目光放在「社会这一侧的准备」上的想法。</p>
 <h2>一句话说明</h2>
-<p>反向对齐是<strong>重新打造社会的制度、规则、人们的技能与治理机制，让社会能安全驾驭 AI，并广泛分享它的好处</strong>[1][2]。这是经济学者卫谷伦（E. Glen Weyl）等人在 2026 年提出的议题。</p>
-<p>卫谷伦的简报把两者成对呈现：对齐是让 AI 这一侧符合人类的价值，反向对齐则是让制度这一侧做好接住它的准备[3]。</p>
+<p>反向对齐是<strong>重新打造社会的制度、规则、人们的技能与治理机制，让社会能安全驾驭 AI，并广泛分享它的好处</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。这是经济学者卫谷伦（E. Glen Weyl）等人在 2026 年提出的议题。</p>
+<p>卫谷伦的简报把两者成对呈现：对齐是让 AI 这一侧符合人类的价值，反向对齐则是让制度这一侧做好接住它的准备<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p>另外，也有论文用同一个词指完全不同的意思，后面的「争议与批评」会说明。</p>
 <h2>举例来说</h2>
-<p><strong>Noema 杂志的文章（2026 年 7 月 21 日）。</strong> 卫谷伦、James Evans、Chris White 与一个跨领域、跨地区、跨政治立场的 23 人联盟一起发表了〈未来十年，人类繁荣需要什么〉（What Humanity Needs To Flourish In The Next Decade）[1]。文章开头提到一件事：美国政府命令 AI 公司 Anthropic 停止向外国籍人士提供最高阶的模型，该公司在几小时内就对所有客户停止了提供。文章指出，AI 能力的成长，已经超过了治理、接住、理解它的制度[1]。</p>
-<p><strong>历史的先例。</strong> 同一篇文章列出技术的好处因制度这一侧的巧思而扩散的例子：19 世纪工业化之后出现的大众民主制度（反垄断法、独立的监管机关、工会等）、战后的国际金融架构、互联网的前身 ARPANET、印度的数位基础建设 India Stack，以及台湾的数位民主[1]。卫谷伦的简报把这总结为发电机的教训：技术要等上几十年，等制度追上来[3]。</p>
-<p><strong>公开讲座「Platform Originals」（2026 年 8 月 29 日）。</strong> 唐凤（Audrey Tang）提到，英国的工厂要花一两代人的时间，才把童工的限制写进制度[4][5]。唐凤说：「我们不希望像当年英国工厂那样子，就是你要等一两代人，整个童年都受到这个问题影响之后，才说：『喔，那 Meta 要赔几千亿元。』」[5]</p>
+<p><strong>Noema 杂志的文章（2026 年 7 月 21 日）。</strong> 卫谷伦、James Evans、Chris White 与一个跨领域、跨地区、跨政治立场的 23 人联盟一起发表了〈未来十年，人类繁荣需要什么〉（What Humanity Needs To Flourish In The Next Decade）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。文章开头提到一件事：美国政府命令 AI 公司 Anthropic 停止向外国籍人士提供最高阶的模型，该公司在几小时内就对所有客户停止了提供。文章指出，AI 能力的成长，已经超过了治理、接住、理解它的制度<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>历史的先例。</strong> 同一篇文章列出技术的好处因制度这一侧的巧思而扩散的例子：19 世纪工业化之后出现的大众民主制度（反垄断法、独立的监管机关、工会等）、战后的国际金融架构、互联网的前身 ARPANET、印度的数位基础建设 India Stack，以及台湾的数位民主<a class="cite" href="#src-1" data-src="src-1">[1]</a>。卫谷伦的简报把这总结为发电机的教训：技术要等上几十年，等制度追上来<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>公开讲座「Platform Originals」（2026 年 8 月 29 日）。</strong> 唐凤（Audrey Tang）提到，英国的工厂要花一两代人的时间，才把童工的限制写进制度<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。唐凤说：「我们不希望像当年英国工厂那样子，就是你要等一两代人，整个童年都受到这个问题影响之后，才说：『喔，那 Meta 要赔几千亿元。』」<a class="cite" href="#src-5" data-src="src-5">[5]</a></p>
 <h2>运作方式</h2>
 <h3>放着不管会出现的三种失败</h3>
-<p>Noema 的文章列出，社会这一侧不做准备时会出现的三种失败[1][2]（以下名称依反向对齐中文网站的译法）：</p>
+<p>Noema 的文章列出，社会这一侧不做准备时会出现的三种失败<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>（以下名称依反向对齐中文网站的译法）：</p>
 <ol>
 <li><strong>有产能，却无繁荣</strong>——工作重组的速度，快过人们重新学习、转换跑道的速度，于是创造出的利益到不了多数人手上。</li>
 <li><strong>有执行，却无验证</strong>——生成文字、影像、程式码的成本几乎归零。于是稀缺的，变成人类确认产出是否真实、查出处、为它负责的能力。</li>
 <li><strong>有能力，却无约束</strong>——同样的工具，也压低了国家或大型组织监视人们的成本。如果提出异议、保护自由的机制没有一起成长，权力就会集中于一处。</li>
 </ol>
-<p>文章主张，这些都不是无法避免的命运，而是放任制度不管的结果[1]。</p>
+<p>文章主张，这些都不是无法避免的命运，而是放任制度不管的结果<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>资金的偏向</h3>
-<p>文章也把问题指向：比起投入让 AI 更聪明的资金，流向让 AI 融入社会的制度、教育、组织与公民基础的资金，只有一小部分[1]。</p>
+<p>文章也把问题指向：比起投入让 AI 更聪明的资金，流向让 AI 融入社会的制度、教育、组织与公民基础的资金，只有一小部分<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>12 项挑战</h3>
-<p>联盟的网站把要处理的领域分成 12 项[2]：</p>
+<p>联盟的网站把要处理的领域分成 12 项<a class="cite" href="#src-2" data-src="src-2">[2]</a>：</p>
 <ul>
 <li>身分（不透露是谁，也能证明自己是独一无二的真人）</li>
 <li>隐私、内容溯源、资料价值（用来训练 AI 的人类纪录应得的报酬）</li>
@@ -72,20 +78,20 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ul>
 <p>其中许多与《多元宇宙》处理的<a href="proof-of-personhood.html">人格证明</a>、<a href="data-dignity.html">资料尊严</a>、<a href="bridging.html">桥接</a>、<a href="broad-listening.html">广泛倾听</a>重叠。</p>
 <h3>「依其工具之形而立的制度」这个假说</h3>
-<p>联盟有一个独到的假说：社会吸纳新技术时，胜出的制度会长得像那个时代的核心技术[2]。</p>
-<p>例如在工业化时代，标准化的会计与装配线，产生了层级式的公司和中央银行。在互联网时代，分层的通讯协定，产生了像标准化组织那样分层、协调的组织。而神经网络（当今 AI 的基础）的性质，是不把差异平均掉而找出共同结构，并能把贡献追溯到结果。联盟预料，能接住 AI 的制度，会是在社会规模上模仿这种运作的制度[2]。</p>
+<p>联盟有一个独到的假说：社会吸纳新技术时，胜出的制度会长得像那个时代的核心技术<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>例如在工业化时代，标准化的会计与装配线，产生了层级式的公司和中央银行。在互联网时代，分层的通讯协定，产生了像标准化组织那样分层、协调的组织。而神经网络（当今 AI 的基础）的性质，是不把差异平均掉而找出共同结构，并能把贡献追溯到结果。联盟预料，能接住 AI 的制度，会是在社会规模上模仿这种运作的制度<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>谁在推动</h3>
-<p>联盟网站的成员中，卫谷伦和唐凤都列名其中[2]。网站也有日文版和中文版[6][7]。RadicalxChange 在 2026 年 9 月表示，将投入 12 项挑战中的民主领域[8]。</p>
+<p>联盟网站的成员中，卫谷伦和唐凤都列名其中<a class="cite" href="#src-2" data-src="src-2">[2]</a>。网站也有日文版和中文版<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。RadicalxChange 在 2026 年 9 月表示，将投入 12 项挑战中的民主领域<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>注意同名的另一个概念。</strong> David Jacob Harrison 在 2026 年 4 月的论文中讨论了 "reverse alignment problem"。它指的是，不是让机器配合人类，而是<strong>人类的价值和目标反而被简化、被变得像机器一样</strong>的现象[9]。这和卫谷伦等人「刻意重新打造社会制度」的提案方向相反[9]。本文用的是卫谷伦等人的意思。</li>
-<li><strong>有效利他主义（EA）一方的反应。</strong> Tom Vargas 在论坛上把要点整理为：如果制度是错的，即使加上与人类充分对齐的先进 AI，结果大概还是会很糟[10]。Vargas 认为这很有说服力，并写道，因为处理的是社会的基础，执行起来非常困难，但如果成功，改变会大得多[10]。留言区也有人大意是说，把个别模型调好，不代表使用它们的整个系统就会调好[10]。</li>
-<li><strong>「谁去对齐谁？」</strong> 讲座中有人问，反向对齐是不是在决定谁要去配合谁。唐凤回答，过去对工业化、电气化、互联网的制度因应，讲的都是：「如果你不满意，要去找谁申诉？你要怎么样知情？要怎么样退出，或换成另外一套制度？」[5] 唐凤也说，在 AI 这个题目上，希望它比较像互联网，「你在小规模里面觉得怎么样更好，就可以试一个怎么样更好的方法」[5]。</li>
+<li><strong>注意同名的另一个概念。</strong> David Jacob Harrison 在 2026 年 4 月的论文中讨论了 "reverse alignment problem"。它指的是，不是让机器配合人类，而是<strong>人类的价值和目标反而被简化、被变得像机器一样</strong>的现象<a class="cite" href="#src-9" data-src="src-9">[9]</a>。这和卫谷伦等人「刻意重新打造社会制度」的提案方向相反<a class="cite" href="#src-9" data-src="src-9">[9]</a>。本文用的是卫谷伦等人的意思。</li>
+<li><strong>有效利他主义（EA）一方的反应。</strong> Tom Vargas 在论坛上把要点整理为：如果制度是错的，即使加上与人类充分对齐的先进 AI，结果大概还是会很糟<a class="cite" href="#src-10" data-src="src-10">[10]</a>。Vargas 认为这很有说服力，并写道，因为处理的是社会的基础，执行起来非常困难，但如果成功，改变会大得多<a class="cite" href="#src-10" data-src="src-10">[10]</a>。留言区也有人大意是说，把个别模型调好，不代表使用它们的整个系统就会调好<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>「谁去对齐谁？」</strong> 讲座中有人问，反向对齐是不是在决定谁要去配合谁。唐凤回答，过去对工业化、电气化、互联网的制度因应，讲的都是：「如果你不满意，要去找谁申诉？你要怎么样知情？要怎么样退出，或换成另外一套制度？」<a class="cite" href="#src-5" data-src="src-5">[5]</a> 唐凤也说，在 AI 这个题目上，希望它比较像互联网，「你在小规模里面觉得怎么样更好，就可以试一个怎么样更好的方法」<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
 <p>反向对齐这个词，没有出现在《Plurality》（英文版）中。这是书出版之后，卫谷伦与联盟在 2026 年的主张，需要注意不要和书本身的主张混在一起。</p>
-<p>另一方面，内容和书紧密相连。Noema 的文章在结尾提出的处方，是这样的合作：为分裂的社群架桥，把信任放在多样的人际网络而不是中央权威上，不压制意见分歧而找到共同的立足点[1]。这正是书的核心——<a href="collaboration-across-difference.html">跨越社会差异的协作</a>——的想法。举台湾为例这一点，也和书的第 2 部（<a href="taiwan-digital-democracy.html">台湾的数位民主</a>）是同样的素材。</p>
-<p>唐凤参与的<a href="six-pack-of-care.html">关怀六力</a>与<a href="civic-ai.html">仁工智慧</a>，位置也很接近。两者都认为只把 AI 内部调好是不够的。关怀六力是设计 AI 运作现场之程序的框架，反向对齐则是呼吁投资整个社会之制度的议题[2][11]。与 AI 未来论争的关系，请见〈<a href="ai-futures-debate.html">AI 未来的论争</a>〉。</p>
+<p>另一方面，内容和书紧密相连。Noema 的文章在结尾提出的处方，是这样的合作：为分裂的社群架桥，把信任放在多样的人际网络而不是中央权威上，不压制意见分歧而找到共同的立足点<a class="cite" href="#src-1" data-src="src-1">[1]</a>。这正是书的核心——<a href="collaboration-across-difference.html">跨越社会差异的协作</a>——的想法。举台湾为例这一点，也和书的第 2 部（<a href="taiwan-digital-democracy.html">台湾的数位民主</a>）是同样的素材。</p>
+<p>唐凤参与的<a href="six-pack-of-care.html">关怀六力</a>与<a href="civic-ai.html">仁工智慧</a>，位置也很接近。两者都认为只把 AI 内部调好是不够的。关怀六力是设计 AI 运作现场之程序的框架，反向对齐则是呼吁投资整个社会之制度的议题<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。与 AI 未来论争的关系，请见〈<a href="ai-futures-debate.html">AI 未来的论争</a>〉。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>反向对齐（中文网站）— <a href="https://reversealignment.tw/" target="_blank" rel="noopener">https://reversealignment.tw/</a></li>
@@ -98,15 +104,45 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Weyl, Evans, White, "What Humanity Needs To Flourish In The Next Decade"（Noema，2026-07-21）— <a href="https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/" target="_blank" rel="noopener">https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</a></li>
-<li>Reverse Alignment 联盟网站 — <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
-<li>Weyl, "Humanity's Sociotechnical Grand Challenges"（简报，2026-06-23）— <a href="https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf" target="_blank" rel="noopener">https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf</a></li>
-<li>"Platform Originals: The Other Side of Alignment"（2026-08-29，英译逐字稿）— <a href="https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md</a></li>
-<li>唐凤等〈Platform Originals：对齐的另一面〉（2026-08-29，逐字稿）— <a href="https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2" target="_blank" rel="noopener">https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2</a></li>
-<li>Reverse Alignment 日文网站 — <a href="https://reversealignment.jp/" target="_blank" rel="noopener">https://reversealignment.jp/</a></li>
-<li>反向对齐（中文网站）— <a href="https://reversealignment.tw/" target="_blank" rel="noopener">https://reversealignment.tw/</a></li>
-<li>Jess Scully, "On Reverse Alignment"（RadicalxChange，2026-09-10）— <a href="https://www.radicalxchange.org/updates/blog/on-reverse-alignment/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/on-reverse-alignment/</a></li>
-<li>David Jacob Harrison, "The reverse alignment problem"（AI &amp; Society，2026-04-25，摘要）— <a href="https://link.springer.com/article/10.1007/s00146-026-03043-4" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s00146-026-03043-4</a></li>
-<li>Tom Vargas, "Reverse alignment"（EA Forum，2026-07-22）— <a href="https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment" target="_blank" rel="noopener">https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment</a></li>
-<li>Civic AI — <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
-</ol><div class='related'>相关: <a href='six-pack-of-care.html'>什么是关怀六力（6-Pack of Care）？</a> ・ <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a> ・ <a href='ai-futures-debate.html'>什么是关于 AI 未来的论争（AI 2027 等）？</a> ・ <a href='proof-of-personhood.html'>什么是人格证明（proof of personhood）？</a> ・ <a href='data-dignity.html'>什么是资料尊严（data dignity）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Freverse-alignment.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%90%91%E5%AF%B9%E9%BD%90%EF%BC%88reverse%20alignment%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Freverse-alignment.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Weyl, Evans, White, "What Humanity Needs To Flourish In The Next Decade"（Noema，2026-07-21）— <a href="https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/" target="_blank" rel="noopener">https://www.noemamag.com/what-humanity-needs-to-flourish-in-the-next-decade/</a></li>
+<li id="src-2">Reverse Alignment 联盟网站 — <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
+<li id="src-3">Weyl, "Humanity's Sociotechnical Grand Challenges"（简报，2026-06-23）— <a href="https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf" target="_blank" rel="noopener">https://reversealignment.ai/assets/documents/grand-challenges-deck.pdf</a></li>
+<li id="src-4">"Platform Originals: The Other Side of Alignment"（2026-08-29，英译逐字稿）— <a href="https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2026-08-29-Platform-Originals-The-Other-Side-of-Alignment.md</a></li>
+<li id="src-5">唐凤等〈Platform Originals：对齐的另一面〉（2026-08-29，逐字稿）— <a href="https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2" target="_blank" rel="noopener">https://sayit.archive.tw/2026-08-29-platform-originals-%E5%B0%8D%E9%BD%8A%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2</a></li>
+<li id="src-6">Reverse Alignment 日文网站 — <a href="https://reversealignment.jp/" target="_blank" rel="noopener">https://reversealignment.jp/</a></li>
+<li id="src-7">反向对齐（中文网站）— <a href="https://reversealignment.tw/" target="_blank" rel="noopener">https://reversealignment.tw/</a></li>
+<li id="src-8">Jess Scully, "On Reverse Alignment"（RadicalxChange，2026-09-10）— <a href="https://www.radicalxchange.org/updates/blog/on-reverse-alignment/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/on-reverse-alignment/</a></li>
+<li id="src-9">David Jacob Harrison, "The reverse alignment problem"（AI &amp; Society，2026-04-25，摘要）— <a href="https://link.springer.com/article/10.1007/s00146-026-03043-4" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s00146-026-03043-4</a></li>
+<li id="src-10">Tom Vargas, "Reverse alignment"（EA Forum，2026-07-22）— <a href="https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment" target="_blank" rel="noopener">https://forum.effectivealtruism.org/posts/eAq8R3hs7qg6DareE/reverse-alignment</a></li>
+<li id="src-11">Civic AI — <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
+</ol><div class='related'>相关: <a href='six-pack-of-care.html'>什么是关怀六力（6-Pack of Care）？</a> ・ <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a> ・ <a href='ai-futures-debate.html'>什么是关于 AI 未来的论争（AI 2027 等）？</a> ・ <a href='proof-of-personhood.html'>什么是人格证明（proof of personhood）？</a> ・ <a href='data-dignity.html'>什么是资料尊严（data dignity）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Freverse-alignment.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%90%91%E5%AF%B9%E9%BD%90%EF%BC%88reverse%20alignment%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Freverse-alignment.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

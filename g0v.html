@@ -41,42 +41,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/g0v.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/g0v.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/g0v.html">简体中文</a></nav></header>
 <main lang="ja"><h1>g0v（零時政府）ってなに？</h1><div class='lead'>2012 年に台湾のプログラマーたちが始めた、市民のオープンソース・コミュニティです。政府のサイトを自分たちで「作り直して」見やすく公開し、定期的なハッカソンで市民の問題に取り組みます。vTaiwan、マスク地図、Cofacts などを生みました。</div><p>役所のウェブサイトが分かりにくくて、欲しい情報にたどり着けない。そんな経験は多くの人にあるでしょう。台湾では、それに不満を持ったプログラマーたちが、文句を言うだけでなく、自分たちで分かりやすい版を作ってしまいました。その集まりが g0v（ガブゼロ、零時政府）です。</p>
 <h2>ひとことで言うと</h2>
-<p>g0v は、台湾のプログラマー・デザイナー・記者・市民が集まるボランティアのコミュニティです。政府の情報を誰にでも分かる形にしたり、社会の問題を解く道具を作ったりしています[1][2]。</p>
-<p>名前は、台湾の政府のウェブサイトの住所（ドメイン）の末尾「gov.tw」の「o」を「0（ゼロ）」に替えたものです[1]。「ゼロから政府を考え直す」という意味もこめられています[2]。</p>
+<p>g0v は、台湾のプログラマー・デザイナー・記者・市民が集まるボランティアのコミュニティです。政府の情報を誰にでも分かる形にしたり、社会の問題を解く道具を作ったりしています<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>名前は、台湾の政府のウェブサイトの住所（ドメイン）の末尾「gov.tw」の「o」を「0（ゼロ）」に替えたものです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。「ゼロから政府を考え直す」という意味もこめられています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>政府予算の見える化（2012 年）。</strong> g0v の公式の紹介によると、2012 年 10 月、ネット企業のハッカソン（短い期間で集中してものを作る催し）の前夜のことでした[2]。社会問題に関心のある IT の人たちが、政府の経済政策の広告に不満を持ちました。そこで作るテーマを急に変えて、国の予算全体を図で見えるようにするサイトを 3 日で作りました[2]。</p>
-<p>中国語版ウィキペディアによると、この作品は入賞し、高嘉良（Chia-liang Kao）、吳泰輝、瞿筱葳らが賞金の残りで次のハッカソンを開き、g0v が始まりました[3]。公式の紹介は、そのハッカソンを 2012 年 12 月 1 日とし、ここでコミュニティが正式に動き出したとしています[2]。サイトを置くために高嘉良が取ったのが、「gov.tw」と 1 文字違いの「g0v.tw」でした[4]。</p>
-<p><strong>ひまわり運動の中継（2014 年）。</strong> 2014 年、学生たちが台湾の国会にあたる立法院を占拠しました。本『Plurality』によると、その間、g0v の数百人がその場で中継・記録・情報の伝達を担いました[1]。</p>
-<p>『ブロードリスニング』という本は、イベント設営の技を持つ g0v のチームを中心に、100 人以上が中継に関わったと書いています[4]。のちのデジタル大臣オードリー・タン（Audrey Tang）が 350 メートルの LAN ケーブルを敷いた話も、一人の英雄の話ではなく、大勢の市民の力でできたことだった、というのです[4]。</p>
-<p><strong>辞書アプリ「萌典」など。</strong> 本の脚注によると、g0v の初期のプロジェクトである中国語辞典「萌典（MoeDict）」は、タンが率いました[1]。g0v から生まれたものとして、中国語版ウィキペディアは、萌典のほか、ファクトチェック（事実確認）の Cofacts、選挙の投票ガイドなどを挙げています[3]。</p>
+<p><strong>政府予算の見える化（2012 年）。</strong> g0v の公式の紹介によると、2012 年 10 月、ネット企業のハッカソン（短い期間で集中してものを作る催し）の前夜のことでした<a class="cite" href="#src-2" data-src="src-2">[2]</a>。社会問題に関心のある IT の人たちが、政府の経済政策の広告に不満を持ちました。そこで作るテーマを急に変えて、国の予算全体を図で見えるようにするサイトを 3 日で作りました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>中国語版ウィキペディアによると、この作品は入賞し、高嘉良（Chia-liang Kao）、吳泰輝、瞿筱葳らが賞金の残りで次のハッカソンを開き、g0v が始まりました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。公式の紹介は、そのハッカソンを 2012 年 12 月 1 日とし、ここでコミュニティが正式に動き出したとしています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。サイトを置くために高嘉良が取ったのが、「gov.tw」と 1 文字違いの「g0v.tw」でした<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>ひまわり運動の中継（2014 年）。</strong> 2014 年、学生たちが台湾の国会にあたる立法院を占拠しました。本『Plurality』によると、その間、g0v の数百人がその場で中継・記録・情報の伝達を担いました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>『ブロードリスニング』という本は、イベント設営の技を持つ g0v のチームを中心に、100 人以上が中継に関わったと書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。のちのデジタル大臣オードリー・タン（Audrey Tang）が 350 メートルの LAN ケーブルを敷いた話も、一人の英雄の話ではなく、大勢の市民の力でできたことだった、というのです<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>辞書アプリ「萌典」など。</strong> 本の脚注によると、g0v の初期のプロジェクトである中国語辞典「萌典（MoeDict）」は、タンが率いました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。g0v から生まれたものとして、中国語版ウィキペディアは、萌典のほか、ファクトチェック（事実確認）の Cofacts、選挙の投票ガイドなどを挙げています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>しくみ</h2>
 <h3>フォークとマージ</h3>
-<p>本によると、g0v の市民ハッカーは、政府のサイトからデータを取り出し、同じ内容を別の見せ方で g0v.tw に置きました[1]。ソフトウェアの言葉で、元から枝分かれさせることを「フォーク」と言います。</p>
-<p>このフォーク版は、しばしば本家より人気になりました[1]。すると、張善政（Simon Chang）らの閣僚が、そのデザインを政府のサービスに取り込み始めました[1]。これを「マージ（合流）」と言います。</p>
-<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は書評で、このやり方に注目しています[5]。小さく枝分かれして生まれた改良が、社会の本流に取り込み直される。その素早いくり返しが、タンとワイルの構想の特徴だ、とブテリンは論じています[5]。</p>
+<p>本によると、g0v の市民ハッカーは、政府のサイトからデータを取り出し、同じ内容を別の見せ方で g0v.tw に置きました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。ソフトウェアの言葉で、元から枝分かれさせることを「フォーク」と言います。</p>
+<p>このフォーク版は、しばしば本家より人気になりました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。すると、張善政（Simon Chang）らの閣僚が、そのデザインを政府のサービスに取り込み始めました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。これを「マージ（合流）」と言います。</p>
+<p>イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は書評で、このやり方に注目しています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。小さく枝分かれして生まれた改良が、社会の本流に取り込み直される。その素早いくり返しが、タンとワイルの構想の特徴だ、とブテリンは論じています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h3>「あなたがその『誰も』だ」</h3>
-<p>本は、g0v のハッカソンの特徴を三つ挙げます[1]。参加者が多様であること（たいてい半分以上がプログラマーではなく、男女ほぼ同数）。もうけではなく市民の問題に向かうこと。市民団体と密に協力すること、です。</p>
-<p>本はそれを、g0v のスローガンにまとめています[1]。英語版では「Ask not why nobody is doing this. You are the 'nobody'!」。「なぜ誰もやらないのか、と問うな。あなたがその『誰も』なのだ」という意味です。そのため g0v は「nobody 運動」とも呼ばれます[1]。g0v の公式 FAQ は、参加者の 3〜4 割がプログラミングをしない人だと書いています[6]。</p>
+<p>本は、g0v のハッカソンの特徴を三つ挙げます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。参加者が多様であること（たいてい半分以上がプログラマーではなく、男女ほぼ同数）。もうけではなく市民の問題に向かうこと。市民団体と密に協力すること、です。</p>
+<p>本はそれを、g0v のスローガンにまとめています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。英語版では「Ask not why nobody is doing this. You are the 'nobody'!」。「なぜ誰もやらないのか、と問うな。あなたがその『誰も』なのだ」という意味です。そのため g0v は「nobody 運動」とも呼ばれます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。g0v の公式 FAQ は、参加者の 3〜4 割がプログラミングをしない人だと書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>中心がない、党派がない</h3>
-<p>2019 年に改められた g0v の宣言は、g0v に一つの中心・代表・責任者はないとしています[7]。参加者は自分で関わるプロジェクトを選んだり始めたりでき、プロジェクトごとに運営のしかたを決めます[7]。成果は誰でも使える形で公開し、g0v は党派に属さない、営利を目的としない、草の根の市民運動だとしています[7]。</p>
-<p>公式 FAQ は、「反政府の組織なのか」「ウィキリークスのようなものか」という問いに答えています[6]。g0v は政府がすでに出している情報を使いやすく見せ、データを開く政策を後押しするもので、秘密を暴く活動とは目的もやり方も違う、という答えです[6]。</p>
+<p>2019 年に改められた g0v の宣言は、g0v に一つの中心・代表・責任者はないとしています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。参加者は自分で関わるプロジェクトを選んだり始めたりでき、プロジェクトごとに運営のしかたを決めます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。成果は誰でも使える形で公開し、g0v は党派に属さない、営利を目的としない、草の根の市民運動だとしています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>公式 FAQ は、「反政府の組織なのか」「ウィキリークスのようなものか」という問いに答えています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。g0v は政府がすでに出している情報を使いやすく見せ、データを開く政策を後押しするもので、秘密を暴く活動とは目的もやり方も違う、という答えです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>三つの円</h3>
-<p>本は g0v の原則を、三つの円が重なる図で示します[1]。「オープンソース」「実際に手を動かす」「公共の精神」の三つです。そのまん中に g0v がある、という図です[1]。</p>
+<p>本は g0v の原則を、三つの円が重なる図で示します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。「オープンソース」「実際に手を動かす」「公共の精神」の三つです。そのまん中に g0v がある、という図です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>規模</h3>
-<p>中国語版ウィキペディアは、42 回以上のハッカソン、三つの大陸にまたがる 8,000 人以上の貢献者と書いています[3]。『ブロードリスニング』本は、チャットの場（Slack）の参加者を 1 万 4 千人以上としています[4]。</p>
+<p>中国語版ウィキペディアは、42 回以上のハッカソン、三つの大陸にまたがる 8,000 人以上の貢献者と書いています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。『ブロードリスニング』本は、チャットの場（Slack）の参加者を 1 万 4 千人以上としています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「タンが作った」わけではありません。</strong> 本は創設者として高嘉良らを挙げています[1]。『ブロードリスニング』本は、2014 年末の時点でもタンは民間の g0v の一参加者にすぎなかった、と注意を促しています[4]。</li>
-<li><strong>政府との距離。</strong> g0v の宣言は、党派に属さない草の根の運動だとしています[7]。一方で本が描くように、ひまわり運動のあとは政府が g0v のやり方を取り入れ、閣僚が g0v の集まりに通うようになりました[1]。高嘉良は 2018 年の文章で、情報を「開く」だけのプロジェクトでも、開き方にすでに解釈が入っている、と指摘しています[8]。そして、自分の作ったものが憎しみの拡散や監視に使われることに、技術者はどう向き合うのか、と問いかけています[8]。</li>
-<li><strong>政府に採用されなかった例。</strong> The Daily Beast の記事は、g0v から生まれた Cofacts が、政府のデマ対策の主な道具には採用されなかったと伝えています[9]。議員たちは、罰金のような強い手段を好んだ、ということです[9]。</li>
-<li><strong>研究。</strong> 人類学者の李梅君は、政治献金の記録をデジタル化する g0v のプロジェクトを調べました[10]。市民が紙の報告書を手で打ち込んでデータを「開く」協働そのものが、新しい参加のかたちを生んだ、と論じています[10]。</li>
+<li><strong>「タンが作った」わけではありません。</strong> 本は創設者として高嘉良らを挙げています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。『ブロードリスニング』本は、2014 年末の時点でもタンは民間の g0v の一参加者にすぎなかった、と注意を促しています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</li>
+<li><strong>政府との距離。</strong> g0v の宣言は、党派に属さない草の根の運動だとしています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。一方で本が描くように、ひまわり運動のあとは政府が g0v のやり方を取り入れ、閣僚が g0v の集まりに通うようになりました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。高嘉良は 2018 年の文章で、情報を「開く」だけのプロジェクトでも、開き方にすでに解釈が入っている、と指摘しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。そして、自分の作ったものが憎しみの拡散や監視に使われることに、技術者はどう向き合うのか、と問いかけています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
+<li><strong>政府に採用されなかった例。</strong> The Daily Beast の記事は、g0v から生まれた Cofacts が、政府のデマ対策の主な道具には採用されなかったと伝えています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。議員たちは、罰金のような強い手段を好んだ、ということです<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>研究。</strong> 人類学者の李梅君は、政治献金の記録をデジタル化する g0v のプロジェクトを調べました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。市民が紙の報告書を手で打ち込んでデータを「開く」協働そのものが、新しい参加のかたちを生んだ、と論じています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>g0v は、本の 2-2 章「デジタル民主主義の日常」の最初の事例です。本は、ほかのどの組織にもまして g0v が、台湾のデジタル民主主義を市民の側から支える土台を象徴する、と書いています[1]。この章で取り上げる取り組みの大半は、g0v とその周りから生まれました[1]。</p>
-<p>本の 3-3 章は、g0v が議事録などを共同で編集するツール HackMD を、開かれた協働の例に挙げています[11]。そして、ほかの国のシビックテック（市民による公共のための技術）は、g0v が台湾で持ったような全国規模の影響を持ちにくかった、としています[11]。</p>
+<p>g0v は、本の 2-2 章「デジタル民主主義の日常」の最初の事例です。本は、ほかのどの組織にもまして g0v が、台湾のデジタル民主主義を市民の側から支える土台を象徴する、と書いています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。この章で取り上げる取り組みの大半は、g0v とその周りから生まれました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>本の 3-3 章は、g0v が議事録などを共同で編集するツール HackMD を、開かれた協働の例に挙げています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。そして、ほかの国のシビックテック（市民による公共のための技術）は、g0v が台湾で持ったような全国規模の影響を持ちにくかった、としています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>関連する記事:
 - <a href="taiwan-digital-democracy.html">台湾のデジタル民主主義</a> — g0v が土台になった全体像
 - <a href="vtaiwan.html">vTaiwan</a> — g0v が作った、政策を話し合う場
@@ -94,15 +100,45 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』2-2「The Life of a Digital Democracy」の g0v・Sunflower の節、図 2-2-A、脚注 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>g0v 公式の紹介 — <a href="https://g0v.tw/about.html" target="_blank" rel="noopener">https://g0v.tw/about.html</a></li>
-<li>G0v零時政府（中国語版ウィキペディア）— <a href="https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C</a> ［CC BY-SA 4.0］</li>
-<li>『ブロードリスニング』11-1「台湾」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
-<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」節「What are the megapolitics of Plurality?」— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-<li>g0v 公式 FAQ — <a href="https://g0v.tw/faq.html" target="_blank" rel="noopener">https://g0v.tw/faq.html</a></li>
-<li>g0v 宣言（2019 年改訂）— <a href="https://g0v.tw/manifesto.html" target="_blank" rel="noopener">https://g0v.tw/manifesto.html</a></li>
-<li>高嘉良「寫在 g0v summit 2018 之前」（2018-09-30）— <a href="https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462" target="_blank" rel="noopener">https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462</a></li>
-<li>Nick Aspinwall「Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop」（The Daily Beast、2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
-<li>李梅君「Free the Data from the Birdcage」（PoLAR、2020、抄録）— <a href="https://doi.org/10.1111/plar.12371" target="_blank" rel="noopener">https://doi.org/10.1111/plar.12371</a></li>
-<li>『Plurality』3-3「The Lost Dao」小節「Nodes of light」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='cofacts.html'>Cofacts（真的假的）ってなに？</a> ・ <a href='civic-tech.html'>シビックテックってなに？</a> ・ <a href='clkao.html'>高嘉良（clkao）ってどんな人？</a> ・ <a href='g0v-people.html'>g0v・vTaiwan の人々ってどんな人たち？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fg0v.html&title=%5B%E6%8C%87%E6%91%98%5D%20g0v%EF%BC%88%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fg0v.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』2-2「The Life of a Digital Democracy」の g0v・Sunflower の節、図 2-2-A、脚注 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-2">g0v 公式の紹介 — <a href="https://g0v.tw/about.html" target="_blank" rel="noopener">https://g0v.tw/about.html</a></li>
+<li id="src-3">G0v零時政府（中国語版ウィキペディア）— <a href="https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C</a> ［CC BY-SA 4.0］</li>
+<li id="src-4">『ブロードリスニング』11-1「台湾」— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-5">Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」節「What are the megapolitics of Plurality?」— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li id="src-6">g0v 公式 FAQ — <a href="https://g0v.tw/faq.html" target="_blank" rel="noopener">https://g0v.tw/faq.html</a></li>
+<li id="src-7">g0v 宣言（2019 年改訂）— <a href="https://g0v.tw/manifesto.html" target="_blank" rel="noopener">https://g0v.tw/manifesto.html</a></li>
+<li id="src-8">高嘉良「寫在 g0v summit 2018 之前」（2018-09-30）— <a href="https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462" target="_blank" rel="noopener">https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462</a></li>
+<li id="src-9">Nick Aspinwall「Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop」（The Daily Beast、2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
+<li id="src-10">李梅君「Free the Data from the Birdcage」（PoLAR、2020、抄録）— <a href="https://doi.org/10.1111/plar.12371" target="_blank" rel="noopener">https://doi.org/10.1111/plar.12371</a></li>
+<li id="src-11">『Plurality』3-3「The Lost Dao」小節「Nodes of light」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='taiwan-digital-democracy.html'>台湾のデジタル民主主義ってなに？</a> ・ <a href='vtaiwan.html'>vTaiwan ってなに？</a> ・ <a href='cofacts.html'>Cofacts（真的假的）ってなに？</a> ・ <a href='civic-tech.html'>シビックテックってなに？</a> ・ <a href='clkao.html'>高嘉良（clkao）ってどんな人？</a> ・ <a href='g0v-people.html'>g0v・vTaiwan の人々ってどんな人たち？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fg0v.html&title=%5B%E6%8C%87%E6%91%98%5D%20g0v%EF%BC%88%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fg0v.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

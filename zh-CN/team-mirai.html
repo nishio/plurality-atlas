@@ -41,40 +41,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../team-mirai.html">日本語</a> <a class="lang" hreflang="en" href="../en/team-mirai.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/team-mirai.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是未来团队（チームみらい，Team Mirai）？</h1><div class='lead'>AI 工程师安野贵博在 2025 年成立的日本政党。揭示让选民能与 AI 对话、对政见提出意见的机制等「数位民主」，并把 Plurality 列为指针之一。在 2026 年的众议院选举中取得 11 席。</div><p>政党的政见，通常是党制定好再提给选民看的。选民这一方能说「请修改这里」的场合并不多。未来团队（チームみらい，Team Mirai）是一个想用 AI 和网络工具，让这个流程变成双向的日本政党。</p>
 <h2>一句话说明</h2>
-<p>未来团队是曾参选 2024 年东京都知事选举的 AI 工程师、科幻作家安野贵博（Takahiro Anno），在 2025 年 5 月 8 日成立的政党。安野在建党记者会上谈到的目标，大意是用科技打造不让任何人落后的日本[1]。</p>
-<p>这个党实践的是用技术扩大政治参与的「数位民主」。党的政见把唐凤（Audrey Tang）与卫谷伦（E. Glen Weyl）的 <a href="plurality.html">Plurality</a>（用技术支持跨越差异之协作的想法），介绍为数位民主的重要指针[2]。</p>
+<p>未来团队是曾参选 2024 年东京都知事选举的 AI 工程师、科幻作家安野贵博（Takahiro Anno），在 2025 年 5 月 8 日成立的政党。安野在建党记者会上谈到的目标，大意是用科技打造不让任何人落后的日本<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>这个党实践的是用技术扩大政治参与的「数位民主」。党的政见把唐凤（Audrey Tang）与卫谷伦（E. Glen Weyl）的 <a href="plurality.html">Plurality</a>（用技术支持跨越差异之协作的想法），介绍为数位民主的重要指针<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>「しゃべれるマニフェスト」（会说话的政见，2025 年参议院选举）。</strong> 这是 2025 年 5 月 16 日公开的机制：AI 向选民听取意见，再把政见的修改案送到 GitHub（可以记录、提出文件修改的服务）。收到的政策提案有 8,559 件。日本的实践者写的关于广泛倾听（广泛听取大量声音、掌握全貌）的书整理道：都知事选举时直接送到 GitHub 的修改提案是 104 件，把入口改成「对话」后，增加到约 80 倍[3]。</p>
-<p><strong>国会质询（2026 年）。</strong> 在 2026 年 5 月 21 日的参议院总务委员会，安野根据在「みらい议会」（未来议会）的 AI 访谈中收集的专家与当事人的声音 264 件（约 47 小时份）提出质询[4]。</p>
+<p><strong>「しゃべれるマニフェスト」（会说话的政见，2025 年参议院选举）。</strong> 这是 2025 年 5 月 16 日公开的机制：AI 向选民听取意见，再把政见的修改案送到 GitHub（可以记录、提出文件修改的服务）。收到的政策提案有 8,559 件。日本的实践者写的关于广泛倾听（广泛听取大量声音、掌握全貌）的书整理道：都知事选举时直接送到 GitHub 的修改提案是 104 件，把入口改成「对话」后，增加到约 80 倍<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>国会质询（2026 年）。</strong> 在 2026 年 5 月 21 日的参议院总务委员会，安野根据在「みらい议会」（未来议会）的 AI 访谈中收集的专家与当事人的声音 264 件（约 47 小时份）提出质询<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>深入了解</h2>
 <h3>从都知事选举诞生</h3>
-<p>2024 年都知事选举中，安野阵营同时运作三个机制：AI 虚拟化身（分身）「AIあんの」（AI 安野）、用 AI 整理大量声音的<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>，以及在 GitHub 上改善政见。安野获得约 15 万票，名列第 5[3][1]。</p>
-<p>安野在建党记者会上说，要以这约「1%」的支持为本钱，成立国政政党[1]。根据日文维基百科，参议院选举的候选人大多是在都知事选举时为了支持安野而聚集的成员[5]。详见〈<a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a>〉。</p>
+<p>2024 年都知事选举中，安野阵营同时运作三个机制：AI 虚拟化身（分身）「AIあんの」（AI 安野）、用 AI 整理大量声音的<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>，以及在 GitHub 上改善政见。安野获得约 15 万票，名列第 5<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>安野在建党记者会上说，要以这约「1%」的支持为本钱，成立国政政党<a class="cite" href="#src-1" data-src="src-1">[1]</a>。根据日文维基百科，参议院选举的候选人大多是在都知事选举时为了支持安野而聚集的成员<a class="cite" href="#src-5" data-src="src-5">[5]</a>。详见〈<a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a>〉。</p>
 <h3>成为国政政党的过程</h3>
-<p>在 2025 年 7 月 20 日的参议院选举中，这个党在比例代表取得 1 席（安野）。得票率约 2.6%，符合了法律上「政党」的要件[3][5]。</p>
-<p>党用来自国家的政党补助金，成立了「永田町エンジニアチーム」（永田町工程师团队）。党公开了让任何人都能看到政治资金流向的「みらい まる见え政治资金」（政治资金一览无遗，2025 年 10 月 2 日），以及浅白说明法案的「みらい议会」（2025 年 10 月 16 日）[6]。</p>
-<p>在 2026 年 2 月 8 日的第 51 届众议院选举中，党在比例代表获得 381 万 3,749 票（得票率 6.66%），有 11 人当选，国会议员包括安野在内共 12 人。党报告说，半年内进行了超过 150 次国会质询[7][8]。</p>
+<p>在 2025 年 7 月 20 日的参议院选举中，这个党在比例代表取得 1 席（安野）。得票率约 2.6%，符合了法律上「政党」的要件<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>党用来自国家的政党补助金，成立了「永田町エンジニアチーム」（永田町工程师团队）。党公开了让任何人都能看到政治资金流向的「みらい まる见え政治资金」（政治资金一览无遗，2025 年 10 月 2 日），以及浅白说明法案的「みらい议会」（2025 年 10 月 16 日）<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>在 2026 年 2 月 8 日的第 51 届众议院选举中，党在比例代表获得 381 万 3,749 票（得票率 6.66%），有 11 人当选，国会议员包括安野在内共 12 人。党报告说，半年内进行了超过 150 次国会质询<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>「听取、打磨、传达」</h3>
-<p>都知事选举的政见中，有一个想法：快速转动听取选民声音、打磨政策、再加以传达的循环。广泛倾听之书说明，这成了党的机制核心[9]。</p>
-<p>在 2026 年 7 月 18 日的第 1 届党大会上，约 1,100 人用党的应用程式，以智能手机参与表决。党介绍安野的想法是：数位民主的目的不是把政治判断交给 AI，而是借助 AI 增加参与的人，把提出的声音连结到政策，并且能确认之后的结果[10]。</p>
+<p>都知事选举的政见中，有一个想法：快速转动听取选民声音、打磨政策、再加以传达的循环。广泛倾听之书说明，这成了党的机制核心<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>在 2026 年 7 月 18 日的第 1 届党大会上，约 1,100 人用党的应用程式，以智能手机参与表决。党介绍安野的想法是：数位民主的目的不是把政治判断交给 AI，而是借助 AI 增加参与的人，把提出的声音连结到政策，并且能确认之后的结果<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>机制的修正</h3>
-<p>参议院选举的「しゃべれるマニフェスト」也出现了问题：同一个地方有数十件提案互相冲突、提案的人没有「被接住了」的感觉、GitHub 的留言区变得混乱等[3]。</p>
-<p>因此在 2026 年的众议院选举，改为「声が届くマニフェスト」（声音传得到的政见）。新增了可以选取本文开始提问或提案的画面、由 AI 提示选项的聊天、提案的自动分类与相似提案的汇整、负责人用的管理画面等[11]。根据杂志《Noema》的报导，众议院选举期间，党的聊天机器人收到超过 3 万 8 千个提问与超过 6 千件提案，也帮助找出了对消费税减税抱持怀疑的选民族群[12]。</p>
+<p>参议院选举的「しゃべれるマニフェスト」也出现了问题：同一个地方有数十件提案互相冲突、提案的人没有「被接住了」的感觉、GitHub 的留言区变得混乱等<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>因此在 2026 年的众议院选举，改为「声が届くマニフェスト」（声音传得到的政见）。新增了可以选取本文开始提问或提案的画面、由 AI 提示选项的聊天、提案的自动分类与相似提案的汇整、负责人用的管理画面等<a class="cite" href="#src-11" data-src="src-11">[11]</a>。根据杂志《Noema》的报导，众议院选举期间，党的聊天机器人收到超过 3 万 8 千个提问与超过 6 千件提案，也帮助找出了对消费税减税抱持怀疑的选民族群<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h3>与 DD2030 的关系</h3>
-<p>安野在 2025 年 1 月，与铃木健等人发起开源（以任何人都能使用、改良的形式公开）社群「<a href="dd2030.html">デジタル民主主义2030</a>」（数位民主主义 2030，DD2030）。不过为了保持政治中立，安野在 2025 年 5 月 7 日卸下了营运职务（董事）。未来团队复制了 DD2030 的<a href="kouchou-ai.html">広聴AI</a>，加上选举用的功能，再把改良回馈给原本的项目[13]。</p>
+<p>安野在 2025 年 1 月，与铃木健等人发起开源（以任何人都能使用、改良的形式公开）社群「<a href="dd2030.html">デジタル民主主义2030</a>」（数位民主主义 2030，DD2030）。不过为了保持政治中立，安野在 2025 年 5 月 7 日卸下了营运职务（董事）。未来团队复制了 DD2030 的<a href="kouchou-ai.html">広聴AI</a>，加上选举用的功能，再把改良回馈给原本的项目<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>Plurality 会不会只是招牌？</strong> 一位市民的 note 文章（2025 年 10 月）批评，党的 Plurality 只有理念，没有描绘出支撑它的制度内容。文章也主张，收集到的政见修改提案实际上没有被使用，与其说是超越分裂，不如说让分裂变得看不见。不过这篇文章也包含未经验证的主张[14]。作为参考，党的政策仓库收到的修改提案（Pull Request）共 9,686 件，其中被采纳（合并）的是 194 件。GitHub 上的政见更新停在 2025 年 7 月 26 日[15][16]。</li>
-<li><strong>支持者会不会变得教条化？</strong> 一田和树一方面肯定《PLURALITY》一书，一方面质疑书把日本的 QC 活动（职场的品质改善活动）毫无保留地当作成功案例。一田认为这个担心也适用于在日本与这本书共鸣的人们，并举党政策仓库的修改提案为例[17]。</li>
-<li><strong>由谁划定要问什么的界线？</strong> 《Noema》（2026 年 6 月）指出，党的聊天机器人程式码中有「NG 词」（禁用词），加上底层 AI（Claude）的限制，政治对话的范围可能在看不见的地方被决定。另一方面，文章也评价说，党的工具不试图制造共识，而把判断留给党与选民，这一点是民主的[12]。</li>
-<li><strong>支持层的偏向。</strong> 哲学家东浩纪在《朝日新闻》的访谈（2026 年 5 月）中说，众议院选举的跃进，是因为成了在野党自行崩解后的承接者，以及年轻世代的期待；主要的支持者是富裕阶层与科技业的商务人士。这是认为其中同时有希望与「菁英」之局限的看法[18]。</li>
-<li><strong>「未来团队＝広聴AI」并不正确。</strong> 広聴AI 和<a href="idobata.html">いどばた</a>（Idobata）是 DD2030 的开源软件，不属于这个党[3]。广泛倾听之书的主要作者中山心太在 2026 年 2 月写道，这个党已经不再使用我城对谈，也不再使用広聴AI[19]。</li>
+<li><strong>Plurality 会不会只是招牌？</strong> 一位市民的 note 文章（2025 年 10 月）批评，党的 Plurality 只有理念，没有描绘出支撑它的制度内容。文章也主张，收集到的政见修改提案实际上没有被使用，与其说是超越分裂，不如说让分裂变得看不见。不过这篇文章也包含未经验证的主张<a class="cite" href="#src-14" data-src="src-14">[14]</a>。作为参考，党的政策仓库收到的修改提案（Pull Request）共 9,686 件，其中被采纳（合并）的是 194 件。GitHub 上的政见更新停在 2025 年 7 月 26 日<a class="cite" href="#src-15" data-src="src-15">[15]</a><a class="cite" href="#src-16" data-src="src-16">[16]</a>。</li>
+<li><strong>支持者会不会变得教条化？</strong> 一田和树一方面肯定《PLURALITY》一书，一方面质疑书把日本的 QC 活动（职场的品质改善活动）毫无保留地当作成功案例。一田认为这个担心也适用于在日本与这本书共鸣的人们，并举党政策仓库的修改提案为例<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</li>
+<li><strong>由谁划定要问什么的界线？</strong> 《Noema》（2026 年 6 月）指出，党的聊天机器人程式码中有「NG 词」（禁用词），加上底层 AI（Claude）的限制，政治对话的范围可能在看不见的地方被决定。另一方面，文章也评价说，党的工具不试图制造共识，而把判断留给党与选民，这一点是民主的<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>支持层的偏向。</strong> 哲学家东浩纪在《朝日新闻》的访谈（2026 年 5 月）中说，众议院选举的跃进，是因为成了在野党自行崩解后的承接者，以及年轻世代的期待；主要的支持者是富裕阶层与科技业的商务人士。这是认为其中同时有希望与「菁英」之局限的看法<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</li>
+<li><strong>「未来团队＝広聴AI」并不正确。</strong> 広聴AI 和<a href="idobata.html">いどばた</a>（Idobata）是 DD2030 的开源软件，不属于这个党<a class="cite" href="#src-3" data-src="src-3">[3]</a>。广泛倾听之书的主要作者中山心太在 2026 年 2 月写道，这个党已经不再使用我城对谈，也不再使用広聴AI<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>《Plurality》英文版的 5-4 章〈扩增审议〉，把建党前 2024 年都知事选举的安野阵营，列为把<a href="broad-listening.html">广泛倾听</a>带进选举的例子[20]（目前的繁体中文版 5-4 章没有这一段[21]）。党名本身没有出现在书中。</p>
+<p>《Plurality》英文版的 5-4 章〈扩增审议〉，把建党前 2024 年都知事选举的安野阵营，列为把<a href="broad-listening.html">广泛倾听</a>带进选举的例子<a class="cite" href="#src-20" data-src="src-20">[20]</a>（目前的繁体中文版 5-4 章没有这一段<a class="cite" href="#src-21" data-src="src-21">[21]</a>）。党名本身没有出现在书中。</p>
 <p>未来团队可以解读为顺着这个方向，试图把书所说的<a href="augmented-deliberation.html">扩增审议</a>（用技术深化讨论的尝试）纳入政党营运的例子。党大会的手机投票，以及把 AI 访谈用在国会质询上的尝试，与<a href="plural-voting.html">⿻投票</a>和<a href="adaptive-administration.html">适应式行政</a>的问题意识重叠。不过，书并没有直接讨论这些做法。</p>
 <p>它在日本如何被接受的全貌，整理在〈<a href="plurality-in-japan.html">Plurality 在日本是怎么传开的？</a>〉一文。</p>
 <h2>延伸阅读</h2>
@@ -89,25 +95,55 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>安野贵博「结党会见 全文」（2025-05-08，日文）— <a href="https://note.com/takahiroanno/n/nebe958c4651c" target="_blank" rel="noopener">https://note.com/takahiroanno/n/nebe958c4651c</a></li>
-<li>未来团队 政见「ステップ1 デジタル民主主义」（日文）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
-<li>《ブロードリスニング》6.1〈2025年参院选 チームみらいの取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>未来团队「参议院総务委员会（2026-05-21）」的纪录（日文）— <a href="https://note.com/team_mirai_log/n/n3c57f6729185" target="_blank" rel="noopener">https://note.com/team_mirai_log/n/n3c57f6729185</a></li>
-<li>日文维基百科「チームみらい」— <a href="https://ja.wikipedia.org/wiki/チームみらい" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/チームみらい</a></li>
-<li>未来团队官方网站（日文）— <a href="https://team-mir.ai/" target="_blank" rel="noopener">https://team-mir.ai/</a></li>
-<li>未来团队「第 51 回众院选 结果报告」（日文）— <a href="https://note.com/team_mirai_jp/n/n4a15f23f129d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/n4a15f23f129d</a></li>
-<li>未来团队「国会半年の记录」（2026-08，日文）— <a href="https://note.com/team_mirai_jp/n/nb07827d2292d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/nb07827d2292d</a></li>
-<li>《ブロードリスニング》4.1〈安野贵博の取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>未来团队「第 1 回党大会のスマホ投票」（日文）— <a href="https://note.com/team_mirai_jp/n/n2092f0dc600d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/n2092f0dc600d</a></li>
-<li>《ブロードリスニング》6.2〈2026年众院选〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>Noema, "Democracy Needs Friction To Function"（2026-06-10）— <a href="https://www.noemamag.com/democracy-needs-friction-to-function" target="_blank" rel="noopener">https://www.noemamag.com/democracy-needs-friction-to-function</a></li>
-<li>《ブロードリスニング》10〈DD2030 による広聴AIの开発活动〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>市民的 note 文章（2025-10，免费部分，日文）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
-<li>team-mirai 的 GitHub 仓库 — <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
-<li>team-mirai/policy 的 README（日文）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
-<li>一田和树的 note 文章（日文）— <a href="https://note.com/ichi_twnovel/n/n1a945d0925da" target="_blank" rel="noopener">https://note.com/ichi_twnovel/n/n1a945d0925da</a></li>
-<li>《朝日新闻》东浩纪访谈（2026-05-21，免费部分，日文）— <a href="https://www.asahi.com/articles/ASV5N2691V5NUPQJ004M.html" target="_blank" rel="noopener">https://www.asahi.com/articles/ASV5N2691V5NUPQJ004M.html</a></li>
-<li>中山心太的 X 贴文（2026-02-07，日文）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
-<li>《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
-<li>《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
-</ol><div class='related'>相关: <a href='anno-2024-tokyo-campaign.html'>什么是安野贵博的 2024 年都知事选举？</a> ・ <a href='idobata.html'>什么是いどばた（Idobata）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='plurality-in-japan.html'>Plurality 在日本是怎么传开的？</a> ・ <a href='digital-democracy.html'>什么是数位民主？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fteam-mirai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%AA%E6%9D%A5%E5%9B%A2%E9%98%9F%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%81%BF%E3%82%89%E3%81%84%EF%BC%8CTeam%20Mirai%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fteam-mirai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">安野贵博「结党会见 全文」（2025-05-08，日文）— <a href="https://note.com/takahiroanno/n/nebe958c4651c" target="_blank" rel="noopener">https://note.com/takahiroanno/n/nebe958c4651c</a></li>
+<li id="src-2">未来团队 政见「ステップ1 デジタル民主主义」（日文）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
+<li id="src-3">《ブロードリスニング》6.1〈2025年参院选 チームみらいの取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-4">未来团队「参议院総务委员会（2026-05-21）」的纪录（日文）— <a href="https://note.com/team_mirai_log/n/n3c57f6729185" target="_blank" rel="noopener">https://note.com/team_mirai_log/n/n3c57f6729185</a></li>
+<li id="src-5">日文维基百科「チームみらい」— <a href="https://ja.wikipedia.org/wiki/チームみらい" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/チームみらい</a></li>
+<li id="src-6">未来团队官方网站（日文）— <a href="https://team-mir.ai/" target="_blank" rel="noopener">https://team-mir.ai/</a></li>
+<li id="src-7">未来团队「第 51 回众院选 结果报告」（日文）— <a href="https://note.com/team_mirai_jp/n/n4a15f23f129d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/n4a15f23f129d</a></li>
+<li id="src-8">未来团队「国会半年の记录」（2026-08，日文）— <a href="https://note.com/team_mirai_jp/n/nb07827d2292d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/nb07827d2292d</a></li>
+<li id="src-9">《ブロードリスニング》4.1〈安野贵博の取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-10">未来团队「第 1 回党大会のスマホ投票」（日文）— <a href="https://note.com/team_mirai_jp/n/n2092f0dc600d" target="_blank" rel="noopener">https://note.com/team_mirai_jp/n/n2092f0dc600d</a></li>
+<li id="src-11">《ブロードリスニング》6.2〈2026年众院选〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-12">Noema, "Democracy Needs Friction To Function"（2026-06-10）— <a href="https://www.noemamag.com/democracy-needs-friction-to-function" target="_blank" rel="noopener">https://www.noemamag.com/democracy-needs-friction-to-function</a></li>
+<li id="src-13">《ブロードリスニング》10〈DD2030 による広聴AIの开発活动〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-14">市民的 note 文章（2025-10，免费部分，日文）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
+<li id="src-15">team-mirai 的 GitHub 仓库 — <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
+<li id="src-16">team-mirai/policy 的 README（日文）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
+<li id="src-17">一田和树的 note 文章（日文）— <a href="https://note.com/ichi_twnovel/n/n1a945d0925da" target="_blank" rel="noopener">https://note.com/ichi_twnovel/n/n1a945d0925da</a></li>
+<li id="src-18">《朝日新闻》东浩纪访谈（2026-05-21，免费部分，日文）— <a href="https://www.asahi.com/articles/ASV5N2691V5NUPQJ004M.html" target="_blank" rel="noopener">https://www.asahi.com/articles/ASV5N2691V5NUPQJ004M.html</a></li>
+<li id="src-19">中山心太的 X 贴文（2026-02-07，日文）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
+<li id="src-20">《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li id="src-21">《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='anno-2024-tokyo-campaign.html'>什么是安野贵博的 2024 年都知事选举？</a> ・ <a href='idobata.html'>什么是いどばた（Idobata）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='plurality-in-japan.html'>Plurality 在日本是怎么传开的？</a> ・ <a href='digital-democracy.html'>什么是数位民主？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fteam-mirai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%AA%E6%9D%A5%E5%9B%A2%E9%98%9F%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%81%BF%E3%82%89%E3%81%84%EF%BC%8CTeam%20Mirai%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fteam-mirai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

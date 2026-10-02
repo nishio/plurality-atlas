@@ -41,23 +41,29 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../vitalik-buterin.html">日本語</a> <a class="lang" hreflang="en" href="../en/vitalik-buterin.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/vitalik-buterin.html">简体中文</a></nav></header>
 <main lang="zh-TW"><h1>維塔利克·布特林（Vitalik Buterin）是誰？</h1><div class='lead'>打造區塊鏈「以太坊」的人。和衛谷倫等人合寫了平方募資等論文，為《多元宇宙》寫了推薦語，也參與了編輯，並寫過這本書的長篇書評。</div><p>有些人可能在加密貨幣的新聞裡看過這個名字。在 Plurality 的話題裡，這個人也一再出現：作為和衛谷倫一起構思機制的共同作者、作為介紹衛谷倫與唐鳳認識的人，以及作為仔細讀完這本書的書評作者。</p>
 <h2>一句話說明</h2>
-<p>維塔利克·布特林（Vitalik Buterin）是打造「以太坊」（Ethereum）的人。以太坊是網路上大家共享的交易紀錄（區塊鏈）之一[1]。布特林和衛谷倫（E. Glen Weyl）等人合作，在論文中提出一種資金分配方式：從越多人那裡得到小額支持的公共專案，得到的補助越多（<a href="quadratic-funding.html">平方募資</a>）。這個方式在《多元宇宙》中也有介紹[2]。</p>
+<p>維塔利克·布特林（Vitalik Buterin）是打造「以太坊」（Ethereum）的人。以太坊是網路上大家共享的交易紀錄（區塊鏈）之一<a class="cite" href="#src-1" data-src="src-1">[1]</a>。布特林和衛谷倫（E. Glen Weyl）等人合作，在論文中提出一種資金分配方式：從越多人那裡得到小額支持的公共專案，得到的補助越多（<a href="quadratic-funding.html">平方募資</a>）。這個方式在《多元宇宙》中也有介紹<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>與《Plurality》的關係</h2>
-<p><strong>推薦語與編輯。</strong> 在書開頭的名家推薦中，布特林以「以太坊創辦人」具名寫道：「在科技先進、政治充滿挑戰、瞬息萬變的 21 世紀，自由開放的未來會是什麼樣子？衛谷倫、唐鳳和共筆作者群，提供了令人信服的前進之路。」[1] 在本書的貢獻者名單中，布特林的名字排在「編輯」（Editing）類別的第一位[3]。</p>
-<p><strong>書中的描寫。</strong> 3-3 章〈我們遺忘的道〉寫道：「儘管在這個領域的許多專案受到『放任主義』和超級金融化的影響」，但與網際網路最初願景仍然持久連接，「特別是在維塔利克·布特林（Vitalik Buterin，最大的智慧合約平臺以太坊的創始人）的領導下，啟發了許多專案，如 GitCoin 和去中心化身分，這些都是現今⿻的核心靈感來源」[4]。書的各章也常在註腳中引用布特林的部落格文章[5]。</p>
-<p><strong>與衛谷倫的共同著作。</strong> 2018 年與 柔伊·希茲格（Zoë Hitzig）、衛谷倫合寫平方募資的論文[2]；2022 年與 Puja Ohlhaver、衛谷倫合寫「去中心化社會」（DeSoc）的論文[6]。</p>
-<p><strong>介紹兩人認識的人。</strong> 鈴木健在日文版的解說中寫道，衛谷倫和唐鳳是在以太坊社群中認識的，唐鳳是透過布特林被介紹給衛谷倫的[7]。</p>
-<p><strong>書評。</strong> 2024 年 8 月，布特林在部落格上長篇討論這本書，把書的內容整理成四根支柱，並評論說：衛谷倫的前作《激進市場》試圖重新打造經濟學，《多元宇宙》則試圖重新打造自由主義[8]。</p>
+<p><strong>推薦語與編輯。</strong> 在書開頭的名家推薦中，布特林以「以太坊創辦人」具名寫道：「在科技先進、政治充滿挑戰、瞬息萬變的 21 世紀，自由開放的未來會是什麼樣子？衛谷倫、唐鳳和共筆作者群，提供了令人信服的前進之路。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> 在本書的貢獻者名單中，布特林的名字排在「編輯」（Editing）類別的第一位<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>書中的描寫。</strong> 3-3 章〈我們遺忘的道〉寫道：「儘管在這個領域的許多專案受到『放任主義』和超級金融化的影響」，但與網際網路最初願景仍然持久連接，「特別是在維塔利克·布特林（Vitalik Buterin，最大的智慧合約平臺以太坊的創始人）的領導下，啟發了許多專案，如 GitCoin 和去中心化身分，這些都是現今⿻的核心靈感來源」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。書的各章也常在註腳中引用布特林的部落格文章<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>與衛谷倫的共同著作。</strong> 2018 年與 柔伊·希茲格（Zoë Hitzig）、衛谷倫合寫平方募資的論文<a class="cite" href="#src-2" data-src="src-2">[2]</a>；2022 年與 Puja Ohlhaver、衛谷倫合寫「去中心化社會」（DeSoc）的論文<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>介紹兩人認識的人。</strong> 鈴木健在日文版的解說中寫道，衛谷倫和唐鳳是在以太坊社群中認識的，唐鳳是透過布特林被介紹給衛谷倫的<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>書評。</strong> 2024 年 8 月，布特林在部落格上長篇討論這本書，把書的內容整理成四根支柱，並評論說：衛谷倫的前作《激進市場》試圖重新打造經濟學，《多元宇宙》則試圖重新打造自由主義<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>主要想法</h2>
-<p><strong>平方募資。</strong> 把募到的每一筆捐款取平方根、加總後再平方，依此金額分配給專案的方式。論文寫道，它以中立、非威權的規則支持人們聚集起來行動，藉此回應自由主義與社群主義的長久論爭[2]。它的原型是<a href="quadratic-voting.html">平方投票</a>。</p>
-<p><strong>去中心化社會與靈魂綁定憑證。</strong> 現在的 web3（用區塊鏈打造的下一代網路）以可以轉讓給他人的金融資產為中心，但現實經濟的很大部分，是建立在不可轉讓、長期持續的關係上。論文這樣提出問題，並提出用不可轉讓的代幣來表示人際關係與所屬的構想[6]。書中除了關於身分的章節，關於商業、投票與社會市場的章節也引用了這篇論文[5]。→ <a href="soulbound-tokens.html">靈魂綁定憑證</a>・<a href="proof-of-personhood.html">人格證明</a></p>
-<p><strong>d/acc。</strong> 布特林在 2023 年的〈My techno-optimism〉中提出的想法，主張優先推進防禦性、分散性的技術。布特林在文中寫道，對於衛谷倫意義上的「多元主義者」（pluralist）而言，d/acc 也是可以自然地納入 Plurality 所重視之民主協作技術的框架[9]。→ <a href="d-acc.html">d/acc</a></p>
-<p><strong>對社群備註的分析。</strong> 布特林寫過分析 X（原 Twitter）備註機制的部落格文章，書的 5-4 章在註腳中引用了它[5]。→ <a href="community-notes.html">社群備註</a></p>
+<p><strong>平方募資。</strong> 把募到的每一筆捐款取平方根、加總後再平方，依此金額分配給專案的方式。論文寫道，它以中立、非威權的規則支持人們聚集起來行動，藉此回應自由主義與社群主義的長久論爭<a class="cite" href="#src-2" data-src="src-2">[2]</a>。它的原型是<a href="quadratic-voting.html">平方投票</a>。</p>
+<p><strong>去中心化社會與靈魂綁定憑證。</strong> 現在的 web3（用區塊鏈打造的下一代網路）以可以轉讓給他人的金融資產為中心，但現實經濟的很大部分，是建立在不可轉讓、長期持續的關係上。論文這樣提出問題，並提出用不可轉讓的代幣來表示人際關係與所屬的構想<a class="cite" href="#src-6" data-src="src-6">[6]</a>。書中除了關於身分的章節，關於商業、投票與社會市場的章節也引用了這篇論文<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="soulbound-tokens.html">靈魂綁定憑證</a>・<a href="proof-of-personhood.html">人格證明</a></p>
+<p><strong>d/acc。</strong> 布特林在 2023 年的〈My techno-optimism〉中提出的想法，主張優先推進防禦性、分散性的技術。布特林在文中寫道，對於衛谷倫意義上的「多元主義者」（pluralist）而言，d/acc 也是可以自然地納入 Plurality 所重視之民主協作技術的框架<a class="cite" href="#src-9" data-src="src-9">[9]</a>。→ <a href="d-acc.html">d/acc</a></p>
+<p><strong>對社群備註的分析。</strong> 布特林寫過分析 X（原 Twitter）備註機制的部落格文章，書的 5-4 章在註腳中引用了它<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="community-notes.html">社群備註</a></p>
 <h2>爭議與批評</h2>
-<p>布特林贊同這本書，但在書評中也寫下自己的保留[8]：</p>
+<p>布特林贊同這本書，但在書評中也寫下自己的保留<a class="cite" href="#src-8" data-src="src-8">[8]</a>：</p>
 <ul>
 <li><strong>傘太大了。</strong> 布特林指出，有時覺得在 Plurality 的氛圍這一把傘下，收進了接受理由各不相同、相當不同的想法。</li>
 <li><strong>目標太保守。</strong> 布特林認為書在第六部分提出的目標（提高生產力、讓壽命延長 20 年等）很了不起，但也寫道，自己對技術所期待的，不是比現在好一點，而是好上好幾個數量級的未來。在此基礎上，布特林主張，像以民主方式分配公共財資金的機制這類 Plurality 的工具，可以成為防止技術急速成長轉變為力量差距的手段。</li>
@@ -75,13 +81,43 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出處</h2>
 <ol>
-<li>《多元宇宙》〈名家推薦〉— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods"（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
-<li>《Plurality》貢獻者名單（⿻ 積分）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>《多元宇宙》3-3〈我們遺忘的道〉「光明的節點」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《Plurality》4-1〈身分與人格權〉、5-4〈擴增審議〉等的註腳 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>Ohlhaver, Weyl, Buterin, "Decentralized Society: Finding Web3's Soul"（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
-<li>鈴木健「Plurality 日本語版解説」（日文）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
-<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-<li>Vitalik Buterin, "My techno-optimism"（2023-11-27）— <a href="https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</a></li>
-</ol><div class='related'>相關: <a href='glen-weyl.html'>衛谷倫（E. Glen Weyl）是誰？</a> ・ <a href='audrey-tang.html'>唐鳳是誰？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='quadratic-voting.html'>什麼是平方投票？</a> ・ <a href='d-acc.html'>什麼是 d/acc（防衛性加速）？</a> ・ <a href='soulbound-tokens.html'>什麼是靈魂綁定憑證（SBT）？</a> ・ <a href='proof-of-personhood.html'>什麼是人格證明（proof of personhood）？</a> ・ <a href='community-notes.html'>什麼是社群備註（Community Notes）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fvitalik-buterin.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E7%B6%AD%E5%A1%94%E5%88%A9%E5%85%8B%C2%B7%E5%B8%83%E7%89%B9%E6%9E%97%EF%BC%88Vitalik%20Buterin%EF%BC%89%E6%98%AF%E8%AA%B0%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fvitalik-buterin.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>
+<li id="src-1">《多元宇宙》〈名家推薦〉— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-2">Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods"（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li id="src-3">《Plurality》貢獻者名單（⿻ 積分）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-4">《多元宇宙》3-3〈我們遺忘的道〉「光明的節點」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-5">《Plurality》4-1〈身分與人格權〉、5-4〈擴增審議〉等的註腳 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-6">Ohlhaver, Weyl, Buterin, "Decentralized Society: Finding Web3's Soul"（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
+<li id="src-7">鈴木健「Plurality 日本語版解説」（日文）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li id="src-8">Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li id="src-9">Vitalik Buterin, "My techno-optimism"（2023-11-27）— <a href="https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</a></li>
+</ol><div class='related'>相關: <a href='glen-weyl.html'>衛谷倫（E. Glen Weyl）是誰？</a> ・ <a href='audrey-tang.html'>唐鳳是誰？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='quadratic-voting.html'>什麼是平方投票？</a> ・ <a href='d-acc.html'>什麼是 d/acc（防衛性加速）？</a> ・ <a href='soulbound-tokens.html'>什麼是靈魂綁定憑證（SBT）？</a> ・ <a href='proof-of-personhood.html'>什麼是人格證明（proof of personhood）？</a> ・ <a href='community-notes.html'>什麼是社群備註（Community Notes）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fvitalik-buterin.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E7%B6%AD%E5%A1%94%E5%88%A9%E5%85%8B%C2%B7%E5%B8%83%E7%89%B9%E6%9E%97%EF%BC%88Vitalik%20Buterin%EF%BC%89%E6%98%AF%E8%AA%B0%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fvitalik-buterin.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

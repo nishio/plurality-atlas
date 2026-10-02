@@ -41,23 +41,29 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/vitalik-buterin.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/vitalik-buterin.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/vitalik-buterin.html">简体中文</a></nav></header>
 <main lang="ja"><h1>ヴィタリック・ブテリン（Vitalik Buterin）ってどんな人？</h1><div class='lead'>ブロックチェーン「イーサリアム」を作った人です。グレン・ワイルらとクアドラティック・ファンディングなどの論文を共著し、本『⿻ Plurality』には推薦文を寄せ、編集にも加わりました。本の長い書評も書いています。</div><p>暗号資産（仮想通貨）のニュースでこの名前を見たことがある人もいるでしょう。Plurality の話にも、この人は何度も出てきます。ワイルと仕組みを考えた共著者として、ワイルとタンを引き合わせた人として、そして本を細かく読んだ書評の書き手としてです。</p>
 <h2>ひとことで言うと</h2>
-<p>ヴィタリック・ブテリン（Vitalik Buterin）は、インターネット上でみんなが共有する取引の記録（ブロックチェーン）の一つ「イーサリアム（Ethereum）」を作った人です[1]。グレン・ワイルらと組んで、少額の支持を多くの人から集めた公共のプロジェクトほど多く補助する資金の配り方（<a href="quadratic-funding.html">クアドラティック・ファンディング</a>）を論文で提案しました。この方式は『Plurality』でも取り上げられています[2]。</p>
+<p>ヴィタリック・ブテリン（Vitalik Buterin）は、インターネット上でみんなが共有する取引の記録（ブロックチェーン）の一つ「イーサリアム（Ethereum）」を作った人です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。グレン・ワイルらと組んで、少額の支持を多くの人から集めた公共のプロジェクトほど多く補助する資金の配り方（<a href="quadratic-funding.html">クアドラティック・ファンディング</a>）を論文で提案しました。この方式は『Plurality』でも取り上げられています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>Plurality とのかかわり</h2>
-<p><strong>推薦文と編集。</strong> 本の冒頭の推薦文に「イーサリアム創設者」として名を連ね、「技術が進み、政治が難しく、変化の速い 21 世紀に、自由で開かれた未来はどんな姿か。グレン、オードリーと共著者たちは説得力のある道筋を示している」と書いています（英文からの訳）[1]。本の貢献者の一覧では、「編集（Editing）」の区分の最初に名前があります[3]。</p>
-<p><strong>本の中での扱い。</strong> 第 3-3 章「失われた道」は、web3（ブロックチェーンを使う次のインターネット）の世界の多くがリバタリアニズム（自由至上主義）と行き過ぎた金融化に引っ張られる中で、ブテリンが率いるイーサリアムの周りはインターネット本来の志とのつながりを保ち、Plurality の着想源を生んだ、と書いています[4]。本の各章は、ブテリンのブログ記事を脚注でよく引いています[5]。</p>
-<p><strong>ワイルとの共著。</strong> 2018 年にゾーイ・ヒッツィグ、ワイルとクアドラティック・ファンディングの論文を[2]、2022 年にプジャ・オールハーバー、ワイルと「分散型社会（DeSoc）」の論文を書きました[6]。</p>
-<p><strong>2 人を引き合わせた人。</strong> 日本語版の解説で鈴木健は、ワイルとタンが出会ったのはイーサリアムのコミュニティで、ブテリンを通じてタンが紹介されたからだ、と書いています[7]。</p>
-<p><strong>書評。</strong> 2024 年 8 月、ブテリンはブログで本を長く論じました。本の中身を 4 つの柱にまとめ、ワイルの前著『ラディカル・マーケット』が経済学を作り直そうとしたのに対し、『Plurality』はリベラリズム（自由主義）を作り直そうとしている、と評しています[8]。</p>
+<p><strong>推薦文と編集。</strong> 本の冒頭の推薦文に「イーサリアム創設者」として名を連ね、「技術が進み、政治が難しく、変化の速い 21 世紀に、自由で開かれた未来はどんな姿か。グレン、オードリーと共著者たちは説得力のある道筋を示している」と書いています（英文からの訳）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本の貢献者の一覧では、「編集（Editing）」の区分の最初に名前があります<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>本の中での扱い。</strong> 第 3-3 章「失われた道」は、web3（ブロックチェーンを使う次のインターネット）の世界の多くがリバタリアニズム（自由至上主義）と行き過ぎた金融化に引っ張られる中で、ブテリンが率いるイーサリアムの周りはインターネット本来の志とのつながりを保ち、Plurality の着想源を生んだ、と書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。本の各章は、ブテリンのブログ記事を脚注でよく引いています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>ワイルとの共著。</strong> 2018 年にゾーイ・ヒッツィグ、ワイルとクアドラティック・ファンディングの論文を<a class="cite" href="#src-2" data-src="src-2">[2]</a>、2022 年にプジャ・オールハーバー、ワイルと「分散型社会（DeSoc）」の論文を書きました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>2 人を引き合わせた人。</strong> 日本語版の解説で鈴木健は、ワイルとタンが出会ったのはイーサリアムのコミュニティで、ブテリンを通じてタンが紹介されたからだ、と書いています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>書評。</strong> 2024 年 8 月、ブテリンはブログで本を長く論じました。本の中身を 4 つの柱にまとめ、ワイルの前著『ラディカル・マーケット』が経済学を作り直そうとしたのに対し、『Plurality』はリベラリズム（自由主義）を作り直そうとしている、と評しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>主な考え</h2>
-<p><strong>クアドラティック・ファンディング。</strong> 集まった寄付の平方根を足し合わせて 2 乗した額を、プロジェクトに配る方式です。論文は、中立で権威的でないルールで人々が集まって動くのを支えることで、自由主義と共同体主義の古い論争に答える、と述べています[2]。元になった考えは <a href="quadratic-voting.html">クアドラティック投票</a> です。</p>
-<p><strong>分散型社会とソウルバウンド・トークン。</strong> いまの web3 は、人に譲り渡せる金融資産を中心にしている。けれども実際の経済の多くは、譲り渡せない長く続く関係の上に立っている。論文はこう問題を立て、譲渡できないトークンで人の関係や所属を表す構想を出しました[6]。本は ID の章をはじめ、取引・投票・社会市場の章でもこの論文を引いています[5]。→ <a href="soulbound-tokens.html">ソウルバウンド・トークン</a>・<a href="proof-of-personhood.html">人間であることの証明</a></p>
-<p><strong>d/acc。</strong> 2023 年の「My techno-optimism」で唱えた考えです。防御的・分散的な技術を優先して進めよう、というものです。ブテリンはその中で、ワイルの意味での「プルラリスト」にとっても、d/acc は Plurality が大事にする民主的な協力の技術を無理なく含む枠組みだ、と書いています[9]。→ <a href="d-acc.html">d/acc</a></p>
-<p><strong>Community Notes の分析。</strong> X（旧 Twitter）の注記の仕組みを分析したブログ記事があり、本の 5-4 章が脚注で引いています[5]。→ <a href="community-notes.html">Community Notes</a></p>
+<p><strong>クアドラティック・ファンディング。</strong> 集まった寄付の平方根を足し合わせて 2 乗した額を、プロジェクトに配る方式です。論文は、中立で権威的でないルールで人々が集まって動くのを支えることで、自由主義と共同体主義の古い論争に答える、と述べています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。元になった考えは <a href="quadratic-voting.html">クアドラティック投票</a> です。</p>
+<p><strong>分散型社会とソウルバウンド・トークン。</strong> いまの web3 は、人に譲り渡せる金融資産を中心にしている。けれども実際の経済の多くは、譲り渡せない長く続く関係の上に立っている。論文はこう問題を立て、譲渡できないトークンで人の関係や所属を表す構想を出しました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本は ID の章をはじめ、取引・投票・社会市場の章でもこの論文を引いています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="soulbound-tokens.html">ソウルバウンド・トークン</a>・<a href="proof-of-personhood.html">人間であることの証明</a></p>
+<p><strong>d/acc。</strong> 2023 年の「My techno-optimism」で唱えた考えです。防御的・分散的な技術を優先して進めよう、というものです。ブテリンはその中で、ワイルの意味での「プルラリスト」にとっても、d/acc は Plurality が大事にする民主的な協力の技術を無理なく含む枠組みだ、と書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。→ <a href="d-acc.html">d/acc</a></p>
+<p><strong>Community Notes の分析。</strong> X（旧 Twitter）の注記の仕組みを分析したブログ記事があり、本の 5-4 章が脚注で引いています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="community-notes.html">Community Notes</a></p>
 <h2>どこが議論になっているか</h2>
-<p>ブテリンは本の賛同者ですが、書評には自分の留保も書いています[8]。</p>
+<p>ブテリンは本の賛同者ですが、書評には自分の留保も書いています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <ul>
 <li><strong>傘が大きすぎる。</strong> 「Plurality の雰囲気」という一つの傘に、受け入れる理由の違う、かなり別々の考えが入っていると感じることがある、と指摘しました。</li>
 <li><strong>目標が控えめすぎる。</strong> 本が第 6 部で掲げる目標（生産性を上げる、寿命を 20 年延ばす、など）は立派だとしつつ、自分が技術に望むのは今より少し良い未来ではなく、桁違いに良い未来だ、と書いています。そのうえで、公共財に民主的にお金を配る仕組みなど Plurality の道具は、急な技術の成長が力の格差に変わるのを防ぐ手段になりうる、と論じています。</li>
@@ -73,13 +79,43 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』推薦文 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>Buterin, Hitzig, Weyl「A Flexible Design for Funding Public Goods」（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
-<li>『Plurality』貢献者の一覧（⿻ クレジット）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』3-3「The Lost Dao」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>『Plurality』4-1「Identity and Personhood」、5-4「Augmented Deliberation」ほかの脚注 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>Ohlhaver, Weyl, Buterin「Decentralized Society: Finding Web3's Soul」（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
-<li>鈴木健「Plurality 日本語版解説」— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
-<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-<li>Vitalik Buterin「My techno-optimism」（2023-11-27）— <a href="https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</a></li>
-</ol><div class='related'>関連: <a href='glen-weyl.html'>E・グレン・ワイル（E. Glen Weyl）ってどんな人？</a> ・ <a href='audrey-tang.html'>オードリー・タン（唐鳳）ってどんな人？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='d-acc.html'>d/acc（防御的な加速）ってなに？</a> ・ <a href='soulbound-tokens.html'>ソウルバウンド・トークン（SBT）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fvitalik-buterin.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%B4%E3%82%A3%E3%82%BF%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%83%96%E3%83%86%E3%83%AA%E3%83%B3%EF%BC%88Vitalik%20Buterin%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fvitalik-buterin.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』推薦文 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-2">Buterin, Hitzig, Weyl「A Flexible Design for Funding Public Goods」（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li id="src-3">『Plurality』貢献者の一覧（⿻ クレジット）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-4">『Plurality』3-3「The Lost Dao」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』4-1「Identity and Personhood」、5-4「Augmented Deliberation」ほかの脚注 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-6">Ohlhaver, Weyl, Buterin「Decentralized Society: Finding Web3's Soul」（2022）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763</a></li>
+<li id="src-7">鈴木健「Plurality 日本語版解説」— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li id="src-8">Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li id="src-9">Vitalik Buterin「My techno-optimism」（2023-11-27）— <a href="https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html</a></li>
+</ol><div class='related'>関連: <a href='glen-weyl.html'>E・グレン・ワイル（E. Glen Weyl）ってどんな人？</a> ・ <a href='audrey-tang.html'>オードリー・タン（唐鳳）ってどんな人？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='d-acc.html'>d/acc（防御的な加速）ってなに？</a> ・ <a href='soulbound-tokens.html'>ソウルバウンド・トークン（SBT）ってなに？</a> ・ <a href='proof-of-personhood.html'>proof of personhood（人間であることの証明）ってなに？</a> ・ <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fvitalik-buterin.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%B4%E3%82%A3%E3%82%BF%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%83%96%E3%83%86%E3%83%AA%E3%83%B3%EF%BC%88Vitalik%20Buterin%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fvitalik-buterin.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

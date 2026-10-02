@@ -41,25 +41,31 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../six-pack-of-care.html">日本語</a> <a class="lang" hreflang="en" href="../en/six-pack-of-care.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/six-pack-of-care.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是关怀六力（6-Pack of Care）？</h1><div class='lead'>检验 AI 是否真正为人服务的六项原则：不只看 AI 本身，也要问「现场的声音有没有被听见、谁负责、出错能不能修正、能不能停下来」。由唐凤与 Caroline Green 在 2025 年提出。</div><p>当 AI 开始用在政府机关、医院、长照现场，「这个 AI 真的有好好运作吗？」该由谁、用什么方式确认，就成了问题。一般的想法是：只要开发 AI 的公司写好规则、好好训练，就可以放心。关怀六力（6-Pack of Care）则认为光这样不够，把<strong>让 AI 使用现场的人能自己检查、修正、叫停的程序</strong>整理成六项。</p>
 <h2>一句话说明</h2>
-<p>关怀六力是<strong>用于 AI 治理（如何运作、由谁负责的规则）的六项原则</strong>。由台湾前数位发展部部长唐凤（Audrey Tang）与 Caroline Green 在 2025 年于牛津大学提出[1][2]。</p>
-<p>它问的不只是 AI 的效能，而是「谁的声音被听见」「谁承担责任」「失败怎么修正」「什么时候停下来」[1]。</p>
+<p>关怀六力是<strong>用于 AI 治理（如何运作、由谁负责的规则）的六项原则</strong>。由台湾前数位发展部部长唐凤（Audrey Tang）与 Caroline Green 在 2025 年于牛津大学提出<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>它问的不只是 AI 的效能，而是「谁的声音被听见」「谁承担责任」「失败怎么修正」「什么时候停下来」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>台湾的诈骗广告对策（2024 年）。</strong> 2024 年 3 月，Facebook 上大量出现冒充半导体企业 NVIDIA 执行长黄仁勋、由 AI 生成的投资诈骗广告。台湾政府随机发送 20 万则简讯，从回应者中依人口结构挑选 447 人，分成每桌 10 人进行讨论。这叫做对齐大会（<a href="alignment-assemblies.html">Alignment Assemblies</a>）[3]。</p>
-<p>讨论出的提案被用于立法；唐凤写道，到 2025 年，诈骗广告减少了超过 94%[3]。不过 civic.ai 的 FAQ 把这个数字限定在「对策涵盖领域中的冒名诈骗广告」[4]。2026 年 9 月的编者注更谨慎地改写说：这场大会并不是撰写法律的主体，而是对已在审议中的法案回馈意见的管道[5]。唐凤把这个案例当作第一力「觉察力」的实例[3]。</p>
-<p><strong>英国的照护 AI。</strong> 在 Green 的计划中，被照护者、照顾者、业者等 100 多人，从自己重视的事物出发，共同写出「照护中负责任的 AI」的定义。civic.ai 也把它当作第一力的现场例子[1][6]。</p>
-<p><strong>ROOST（2025 年）。</strong> 一套公开的、用来侦测儿童性剥削影像的共享工具。唐凤在宣言中介绍它：不必依赖单一公司的判定器，Bluesky、Roblox、Discord 等可以各自训练符合自身文化的小型 AI[7]。civic.ai 第五力与第六力的页面也以它为例，但补充说明，它还不是各个 AI 彼此分享威胁情报、互相训练的网络[16]。</p>
+<p><strong>台湾的诈骗广告对策（2024 年）。</strong> 2024 年 3 月，Facebook 上大量出现冒充半导体企业 NVIDIA 执行长黄仁勋、由 AI 生成的投资诈骗广告。台湾政府随机发送 20 万则简讯，从回应者中依人口结构挑选 447 人，分成每桌 10 人进行讨论。这叫做对齐大会（<a href="alignment-assemblies.html">Alignment Assemblies</a>）<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>讨论出的提案被用于立法；唐凤写道，到 2025 年，诈骗广告减少了超过 94%<a class="cite" href="#src-3" data-src="src-3">[3]</a>。不过 civic.ai 的 FAQ 把这个数字限定在「对策涵盖领域中的冒名诈骗广告」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。2026 年 9 月的编者注更谨慎地改写说：这场大会并不是撰写法律的主体，而是对已在审议中的法案回馈意见的管道<a class="cite" href="#src-5" data-src="src-5">[5]</a>。唐凤把这个案例当作第一力「觉察力」的实例<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>英国的照护 AI。</strong> 在 Green 的计划中，被照护者、照顾者、业者等 100 多人，从自己重视的事物出发，共同写出「照护中负责任的 AI」的定义。civic.ai 也把它当作第一力的现场例子<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>ROOST（2025 年）。</strong> 一套公开的、用来侦测儿童性剥削影像的共享工具。唐凤在宣言中介绍它：不必依赖单一公司的判定器，Bluesky、Roblox、Discord 等可以各自训练符合自身文化的小型 AI<a class="cite" href="#src-7" data-src="src-7">[7]</a>。civic.ai 第五力与第六力的页面也以它为例，但补充说明，它还不是各个 AI 彼此分享威胁情报、互相训练的网络<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
 <h2>运作方式</h2>
 <h3>只靠「由上而下」不够</h3>
-<p>AI 对齐（让 AI 符合人类价值的研究）的主流做法是「由上而下」：写出好规则、推估人的偏好、训练模型。关怀六力并不否定这些，但认为光是这样不够[1]。</p>
-<p>civic.ai 的立场是：对齐不是一次就能解决的问题，而是需要在公开场合持续照料的程序，称为「透过流程对齐」（alignment-by-process）[1][8]。</p>
+<p>AI 对齐（让 AI 符合人类价值的研究）的主流做法是「由上而下」：写出好规则、推估人的偏好、训练模型。关怀六力并不否定这些，但认为光是这样不够<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>civic.ai 的立场是：对齐不是一次就能解决的问题，而是需要在公开场合持续照料的程序，称为「透过流程对齐」（alignment-by-process）<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>把关怀的想法变成制度</h3>
-<p>六力的名称来自「关怀伦理」（ethics of care）。基础是伦理学者 Joan Tronto 与 Berenice Fisher 在 1990 年提出的关怀四阶段（关心、承担照顾、提供照顾、接受照顾），以及 Tronto 后来加上的「共同关怀」[1][8]。</p>
-<p>civic.ai 说，它的价值不在于发明了六种新美德，而在于把关怀翻译成制度的机制。甚至写道：如果名称不能改变「谁能提出异议、谁来回应、记录了什么、失败之后会发生什么」，那就只是装饰[1][8]。</p>
+<p>六力的名称来自「关怀伦理」（ethics of care）。基础是伦理学者 Joan Tronto 与 Berenice Fisher 在 1990 年提出的关怀四阶段（关心、承担照顾、提供照顾、接受照顾），以及 Tronto 后来加上的「共同关怀」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>civic.ai 说，它的价值不在于发明了六种新美德，而在于把关怀翻译成制度的机制。甚至写道：如果名称不能改变「谁能提出异议、谁来回应、记录了什么、失败之后会发生什么」，那就只是装饰<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>六力</h3>
-<p>中文名称依唐凤的用法[9]。</p>
+<p>中文名称依唐凤的用法<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <table>
 <thead>
 <tr>
@@ -101,23 +107,23 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </tr>
 </tbody>
 </table>
-<p>第一到第四力构成「觉察力 → 负责力 → 胜任力 → 回应力 → 再回到觉察力」的循环。第五力把这个循环延伸到组织之外。第六力则是让每一次部署都维持在地、多元、有期限的「边界条件」[1][8]。</p>
-<p>每一力也都有公开的指标，例如第二力是「守住承诺的比例」，第六力是「是否准备好交接或停止」。这些指标不是为了「最大化」，而是为了检查「够不够」；多少才算够，由各个现场自己决定[10]。</p>
-<p>唐凤在 2026 年的访谈中这样总结：「觉察实际需要、以负责力守住承诺、以胜任力提供透明、以回应力让社群共同评估，再加上防止锁定的团结力，以及在地共生的共生力——这六种模式合在一起，就是我所说『AI 系统能真正促成关怀关系』的具体意思。」[9]</p>
+<p>第一到第四力构成「觉察力 → 负责力 → 胜任力 → 回应力 → 再回到觉察力」的循环。第五力把这个循环延伸到组织之外。第六力则是让每一次部署都维持在地、多元、有期限的「边界条件」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>每一力也都有公开的指标，例如第二力是「守住承诺的比例」，第六力是「是否准备好交接或停止」。这些指标不是为了「最大化」，而是为了检查「够不够」；多少才算够，由各个现场自己决定<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>唐凤在 2026 年的访谈中这样总结：「觉察实际需要、以负责力守住承诺、以胜任力提供透明、以回应力让社群共同评估，再加上防止锁定的团结力，以及在地共生的共生力——这六种模式合在一起，就是我所说『AI 系统能真正促成关怀关系』的具体意思。」<a class="cite" href="#src-9" data-src="src-9">[9]</a></p>
 <h3>小型 AI「地神」（Kami）</h3>
-<p>关怀六力中的 AI 单位，不是治理一切的单一巨大 AI，而是服务特定场所或群体的小型 AI，称为<a href="kami.html">地神</a>（Kami）[1]。在关怀六力下治理的 AI 整体，则称为<a href="civic-ai.html">仁工智慧</a>（Civic AI）。</p>
+<p>关怀六力中的 AI 单位，不是治理一切的单一巨大 AI，而是服务特定场所或群体的小型 AI，称为<a href="kami.html">地神</a>（Kami）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。在关怀六力下治理的 AI 整体，则称为<a href="civic-ai.html">仁工智慧</a>（Civic AI）。</p>
 <h3>名称的变迁</h3>
-<p>2025 年牛津大学发表时，原则的名称稍长，例如 "Attentiveness in Recognition"[2]。宣言（manifesto）是 2025 年 9 月 1 日在 Google DeepMind（伦敦）的演讲[7][11]。2026 年 3 月在牛津举行了 Civic AI Conference；专书 <em>Civic AI: 6-Pack of Care</em> 预定由 Wiley 在 2027 年 2 月出版[1]。</p>
+<p>2025 年牛津大学发表时，原则的名称稍长，例如 "Attentiveness in Recognition"<a class="cite" href="#src-2" data-src="src-2">[2]</a>。宣言（manifesto）是 2025 年 9 月 1 日在 Google DeepMind（伦敦）的演讲<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。2026 年 3 月在牛津举行了 Civic AI Conference；专书 <em>Civic AI: 6-Pack of Care</em> 预定由 Wiley 在 2027 年 2 月出版<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>「没有解决 AI 的核心问题」。</strong> 线上论坛 LessWrong 的读者指出，关怀六力只是既有 AI 安全研究的补充，而且预设了 AI 大致已经符合人类价值。唐凤回应：对齐有让单一 AI 忠实的「垂直」问题，也有让忠实的 AI 所组成的社会不陷入冲突的「水平」问题，关怀六力处理的是后者[12]。civic.ai 的 FAQ 也明白写道，它并不宣称能解决让最先进的 AI 符合人类价值的问题，而是为了回答「在这个场域，这个 AI 有义务向谁负责」[13]。</li>
-<li><strong>「在逐利竞争中太天真」。</strong> 同一个讨论中，也有人质疑：在企业激烈竞争下，协作型的 AI 能存活吗？唐凤与 FAQ 的回答是，可以用服务之间的互通、资料可携、公共采购等手段，不靠善意、而是改变利害得失的结构[12][14]。</li>
-<li><strong>「是因为台湾才做得到吧？」</strong> FAQ 承认，机制可以移植到其他国家，但细节无法照搬；在公民社会薄弱或分裂严重的国家，也还没有验证[4]。</li>
-<li><strong>主张的修正。</strong> 2025 年的宣言加上了 2026 年 9 月的编者注，对大会的角色、某州法的效果范围等做了更正或限定。演讲版本中的数字与因果关系，引用时要特别留意[5]。</li>
+<li><strong>「没有解决 AI 的核心问题」。</strong> 线上论坛 LessWrong 的读者指出，关怀六力只是既有 AI 安全研究的补充，而且预设了 AI 大致已经符合人类价值。唐凤回应：对齐有让单一 AI 忠实的「垂直」问题，也有让忠实的 AI 所组成的社会不陷入冲突的「水平」问题，关怀六力处理的是后者<a class="cite" href="#src-12" data-src="src-12">[12]</a>。civic.ai 的 FAQ 也明白写道，它并不宣称能解决让最先进的 AI 符合人类价值的问题，而是为了回答「在这个场域，这个 AI 有义务向谁负责」<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>「在逐利竞争中太天真」。</strong> 同一个讨论中，也有人质疑：在企业激烈竞争下，协作型的 AI 能存活吗？唐凤与 FAQ 的回答是，可以用服务之间的互通、资料可携、公共采购等手段，不靠善意、而是改变利害得失的结构<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>「是因为台湾才做得到吧？」</strong> FAQ 承认，机制可以移植到其他国家，但细节无法照搬；在公民社会薄弱或分裂严重的国家，也还没有验证<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</li>
+<li><strong>主张的修正。</strong> 2025 年的宣言加上了 2026 年 9 月的编者注，对大会的角色、某州法的效果范围等做了更正或限定。演讲版本中的数字与因果关系，引用时要特别留意<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>关怀六力是比《多元宇宙》（2024 年）更晚出现的想法，书中并没有提到。civic.ai 自己把关怀六力定位为把 <a href="plurality.html">Plurality</a> 应用到 AI 治理上[1][8]。也就是说，这不是书本身的主张，而是作者之一唐凤与共同作者 Green 在 2025 年以后的发展。</p>
-<p>它和书也有交集。书中已经把对齐大会列为台湾数位民主的例子：「台湾率先召开，广纳公民共同参与 AI 基础模型的监管和指导，这个模式已逐渐推广到全球」[15]。关怀六力把它当作核心工具。第一力使用的<a href="broad-listening.html">广泛倾听</a>（听见许多人声音的方法）与<a href="bridging.html">桥接</a>（找出立场不同的人们之共同点的机制），也和书的第 5 部的讨论相连[7]。</p>
+<p>关怀六力是比《多元宇宙》（2024 年）更晚出现的想法，书中并没有提到。civic.ai 自己把关怀六力定位为把 <a href="plurality.html">Plurality</a> 应用到 AI 治理上<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。也就是说，这不是书本身的主张，而是作者之一唐凤与共同作者 Green 在 2025 年以后的发展。</p>
+<p>它和书也有交集。书中已经把对齐大会列为台湾数位民主的例子：「台湾率先召开，广纳公民共同参与 AI 基础模型的监管和指导，这个模式已逐渐推广到全球」<a class="cite" href="#src-15" data-src="src-15">[15]</a>。关怀六力把它当作核心工具。第一力使用的<a href="broad-listening.html">广泛倾听</a>（听见许多人声音的方法）与<a href="bridging.html">桥接</a>（找出立场不同的人们之共同点的机制），也和书的第 5 部的讨论相连<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p>建议一起读的文章：</p>
 <ul>
 <li><a href="civic-ai.html">仁工智慧</a>——在关怀六力下治理的 AI</li>
@@ -137,20 +143,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Civic AI — 6-Pack of Care（首页）— <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
-<li>牛津大学 AI 伦理研究所 Accelerator Fellowship Programme 的发表 — <a href="https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health" target="_blank" rel="noopener">https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health</a></li>
-<li>Audrey Tang, "AI Alignment Cannot Be Top-Down"（2025-11-03）— <a href="https://civic.ai/ai-alignment-cannot-be-top-down/" target="_blank" rel="noopener">https://civic.ai/ai-alignment-cannot-be-top-down/</a></li>
-<li>civic.ai FAQ Q7 — <a href="https://civic.ai/faq/#faq-7" target="_blank" rel="noopener">https://civic.ai/faq/#faq-7</a></li>
-<li>"6-Pack of Care: A Manifesto" 文末编者注（2026 年 9 月）— <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a></li>
-<li>Caroline Green, "Care AI" — <a href="https://civic.ai/care-ai/" target="_blank" rel="noopener">https://civic.ai/care-ai/</a></li>
-<li>"6-Pack of Care: A Manifesto" — <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a></li>
-<li>civic.ai 词汇表 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a></li>
-<li>唐凤 Open Commons 专访（2026-07-16）— <a href="https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA" target="_blank" rel="noopener">https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA</a></li>
-<li>civic.ai "Map &amp; Measures" — <a href="https://civic.ai/measures/" target="_blank" rel="noopener">https://civic.ai/measures/</a></li>
-<li>LessWrong, "⿻ Plurality &amp; 6pack.care" — <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
-<li>同上留言区（2025-09-02）— <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
-<li>civic.ai FAQ Q17 — <a href="https://civic.ai/faq/#faq-17" target="_blank" rel="noopener">https://civic.ai/faq/#faq-17</a></li>
-<li>civic.ai FAQ Q1 — <a href="https://civic.ai/faq/#faq-1" target="_blank" rel="noopener">https://civic.ai/faq/#faq-1</a></li>
-<li>《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
-<li>civic.ai "Pack 5: Solidarity"、"Pack 6: Symbiosis" — <a href="https://civic.ai/5/" target="_blank" rel="noopener">https://civic.ai/5/</a> 、 <a href="https://civic.ai/6/" target="_blank" rel="noopener">https://civic.ai/6/</a></li>
-</ol><div class='related'>相关: <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a> ・ <a href='kami.html'>什么是地神（Kami）？</a> ・ <a href='reverse-alignment.html'>什么是反向对齐（reverse alignment）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a> ・ <a href='plurality.html'>什么是 ⿻ Plurality（多元宇宙）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsix-pack-of-care.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B3%E6%80%80%E5%85%AD%E5%8A%9B%EF%BC%886-Pack%20of%20Care%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsix-pack-of-care.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Civic AI — 6-Pack of Care（首页）— <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
+<li id="src-2">牛津大学 AI 伦理研究所 Accelerator Fellowship Programme 的发表 — <a href="https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health" target="_blank" rel="noopener">https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health</a></li>
+<li id="src-3">Audrey Tang, "AI Alignment Cannot Be Top-Down"（2025-11-03）— <a href="https://civic.ai/ai-alignment-cannot-be-top-down/" target="_blank" rel="noopener">https://civic.ai/ai-alignment-cannot-be-top-down/</a></li>
+<li id="src-4">civic.ai FAQ Q7 — <a href="https://civic.ai/faq/#faq-7" target="_blank" rel="noopener">https://civic.ai/faq/#faq-7</a></li>
+<li id="src-5">"6-Pack of Care: A Manifesto" 文末编者注（2026 年 9 月）— <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a></li>
+<li id="src-6">Caroline Green, "Care AI" — <a href="https://civic.ai/care-ai/" target="_blank" rel="noopener">https://civic.ai/care-ai/</a></li>
+<li id="src-7">"6-Pack of Care: A Manifesto" — <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a></li>
+<li id="src-8">civic.ai 词汇表 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a></li>
+<li id="src-9">唐凤 Open Commons 专访（2026-07-16）— <a href="https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA" target="_blank" rel="noopener">https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA</a></li>
+<li id="src-10">civic.ai "Map &amp; Measures" — <a href="https://civic.ai/measures/" target="_blank" rel="noopener">https://civic.ai/measures/</a></li>
+<li id="src-11">LessWrong, "⿻ Plurality &amp; 6pack.care" — <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
+<li id="src-12">同上留言区（2025-09-02）— <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
+<li id="src-13">civic.ai FAQ Q17 — <a href="https://civic.ai/faq/#faq-17" target="_blank" rel="noopener">https://civic.ai/faq/#faq-17</a></li>
+<li id="src-14">civic.ai FAQ Q1 — <a href="https://civic.ai/faq/#faq-1" target="_blank" rel="noopener">https://civic.ai/faq/#faq-1</a></li>
+<li id="src-15">《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li id="src-16">civic.ai "Pack 5: Solidarity"、"Pack 6: Symbiosis" — <a href="https://civic.ai/5/" target="_blank" rel="noopener">https://civic.ai/5/</a> 、 <a href="https://civic.ai/6/" target="_blank" rel="noopener">https://civic.ai/6/</a></li>
+</ol><div class='related'>相关: <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a> ・ <a href='kami.html'>什么是地神（Kami）？</a> ・ <a href='reverse-alignment.html'>什么是反向对齐（reverse alignment）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a> ・ <a href='plurality.html'>什么是 ⿻ Plurality（多元宇宙）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsix-pack-of-care.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B3%E6%80%80%E5%85%AD%E5%8A%9B%EF%BC%886-Pack%20of%20Care%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fsix-pack-of-care.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

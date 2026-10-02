@@ -41,40 +41,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../digital-democracy.html">日本語</a> <a class="lang" hreflang="en" href="../en/digital-democracy.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/digital-democracy.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是数位民主？</h1><div class='lead'>用网络、AI 等数位技术，让公民能更广、更深地参与政治与公共决定的想法与实践。《多元宇宙》以台湾为世界的典范，把它当作取代以 AI 为中心的专家统治、以加密技术为中心的放任主义的另一条路。</div><p>除了在选举时投一票，一般人参与政治的管道并不多。另一方面，网络让收集众人的声音变得前所未有地容易；但也有人说，网络反而成了煽动分裂的地方。能不能让数位技术站到支持民主、而不是破坏民主的一边？数位民主就是对这个问题的回答之一。</p>
 <h2>一句话说明</h2>
 <p>数位民主是<strong>用网络、AI 等数位技术，让公民能更广、更深地参与政治与公共决定的想法与实践</strong>。</p>
-<p>《多元宇宙》在技术正在破坏民主的时代主张：「技术和民主可以作为彼此最宏大的盟友。」[1] 并举台湾为走在最前面的例子[2]。</p>
+<p>《多元宇宙》在技术正在破坏民主的时代主张：「技术和民主可以作为彼此最宏大的盟友。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> 并举台湾为走在最前面的例子<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>台湾的 g0v（2012 年起）。</strong> 书写道，g0v（零时政府）「成立于 2012 年，由公民黑客高嘉良（Kao Chia-liang）等人发起」[3]。公民黑客（把技术用在公共事务上的程式设计师）抓取政府网站（gov.tw）的资料，在 g0v.tw 上建立更好用的版本[3]。</p>
-<p>书说，这些「分叉」版本的政府网站往往更受支持；在 318 运动后，「张善政等政府官员，开始将这些设计『合并』回政府服务里」[3]。书把 g0v 当作从公民这一侧支撑台湾数位民主的基础的象征[3]。</p>
-<p><strong>爱沙尼亚。</strong> 书的 3-3 章写道，在体现「多元宇宙」理想的社会中，「有两个典范最为突出：爱沙尼亚和台湾」，并说「爱沙尼亚率先使用多元技术改造国家政府」[4]。英文版还写道，爱沙尼亚常被称为世界上数位化程度最高的民主政府，从 1990 年代后期就比几乎任何国家都早开拓了数位民主[4]。</p>
-<p><strong>日本的「デジタル民主主义2030」（数位民主 2030，2025 年起）。</strong> 铃木健在书的日文版解说中写道，2025 年自己和安野贵博发起了名为「デジタル民主主义2030」的开源项目，正在尝试用生成式 AI 进行大规模的讨论[5]。</p>
+<p><strong>台湾的 g0v（2012 年起）。</strong> 书写道，g0v（零时政府）「成立于 2012 年，由公民黑客高嘉良（Kao Chia-liang）等人发起」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。公民黑客（把技术用在公共事务上的程式设计师）抓取政府网站（gov.tw）的资料，在 g0v.tw 上建立更好用的版本<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>书说，这些「分叉」版本的政府网站往往更受支持；在 318 运动后，「张善政等政府官员，开始将这些设计『合并』回政府服务里」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。书把 g0v 当作从公民这一侧支撑台湾数位民主的基础的象征<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>爱沙尼亚。</strong> 书的 3-3 章写道，在体现「多元宇宙」理想的社会中，「有两个典范最为突出：爱沙尼亚和台湾」，并说「爱沙尼亚率先使用多元技术改造国家政府」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文版还写道，爱沙尼亚常被称为世界上数位化程度最高的民主政府，从 1990 年代后期就比几乎任何国家都早开拓了数位民主<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>日本的「デジタル民主主义2030」（数位民主 2030，2025 年起）。</strong> 铃木健在书的日文版解说中写道，2025 年自己和安野贵博发起了名为「デジタル民主主义2030」的开源项目，正在尝试用生成式 AI 进行大规模的讨论<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>深入了解</h2>
 <h3>名称的来源：游戏里的三种政体</h3>
-<p>书的 2-0 章从游戏借来这个词[6]。在策略游戏《文明帝国 VI》的「风云际会」扩展包中，「未来时代」的意识形态有三种：「合成专家统治」（Synthetic Technocracy）、「法人自由意志主义」（Corporate Libertarianism）和「数位民主」（Digital Democracy）[6]。</p>
-<p>书用这三者来描绘当今技术思想的大论战，就像 20 世纪的共产主义、法西斯主义和民主主义之争[6]。章末写道：「大规模的『数位民主』是我们正在开始描绘轮廓的梦想，一个需要前所未有的技术才可能造出的愿景。」[1]</p>
-<p>以太坊创办人维塔利克·布特林（Vitalik Buterin）把这第三条路称为 "Digital democracy / Plurality" 来介绍[7]。照布特林的整理，它是建立透过网络细致收集许多人意见的民主机制，让公民做出更好的决定[7]。</p>
+<p>书的 2-0 章从游戏借来这个词<a class="cite" href="#src-6" data-src="src-6">[6]</a>。在策略游戏《文明帝国 VI》的「风云际会」扩展包中，「未来时代」的意识形态有三种：「合成专家统治」（Synthetic Technocracy）、「法人自由意志主义」（Corporate Libertarianism）和「数位民主」（Digital Democracy）<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>书用这三者来描绘当今技术思想的大论战，就像 20 世纪的共产主义、法西斯主义和民主主义之争<a class="cite" href="#src-6" data-src="src-6">[6]</a>。章末写道：「大规模的『数位民主』是我们正在开始描绘轮廓的梦想，一个需要前所未有的技术才可能造出的愿景。」<a class="cite" href="#src-1" data-src="src-1">[1]</a></p>
+<p>以太坊创办人维塔利克·布特林（Vitalik Buterin）把这第三条路称为 "Digital democracy / Plurality" 来介绍<a class="cite" href="#src-7" data-src="src-7">[7]</a>。照布特林的整理，它是建立透过网络细致收集许多人意见的民主机制，让公民做出更好的决定<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>为什么是台湾</h3>
-<p>书的 2-1 章说，台湾虽有深刻的分歧，底下却有共同的基础[2]：「这些重叠共识的结合，包括多元主义、复杂、自由、面向世界的民主，可以透过易取得的数位工具来协助解决由此产生的歧异，让台湾成为全球数位民主的典范。」[2]</p>
-<p>2-2 章〈数位民主的日常〉用台湾的六个例子说明这一点[8]：零时政府（g0v）、318 运动、vTaiwan 与 Join、黑客松与平方投票、疫情应对，以及 Cofacts。详见〈<a href="taiwan-digital-democracy.html">台湾的数位民主</a>〉。</p>
+<p>书的 2-1 章说，台湾虽有深刻的分歧，底下却有共同的基础<a class="cite" href="#src-2" data-src="src-2">[2]</a>：「这些重叠共识的结合，包括多元主义、复杂、自由、面向世界的民主，可以透过易取得的数位工具来协助解决由此产生的歧异，让台湾成为全球数位民主的典范。」<a class="cite" href="#src-2" data-src="src-2">[2]</a></p>
+<p>2-2 章〈数位民主的日常〉用台湾的六个例子说明这一点<a class="cite" href="#src-8" data-src="src-8">[8]</a>：零时政府（g0v）、318 运动、vTaiwan 与 Join、黑客松与平方投票、疫情应对，以及 Cofacts。详见〈<a href="taiwan-digital-democracy.html">台湾的数位民主</a>〉。</p>
 <h3>不只是政府的事</h3>
-<p>唐凤在 2022 年的一场讲课中说：「Digital democracy is not a public-sector-only thing. People can do that in social sector as well.」（数位民主不只是公部门的事，社会部门也做得到。）[9] 书也说明，第 5 部所说的「民主」，「远远超出仅将民主作为国家治理体系的许多传统描述」[10]。</p>
+<p>唐凤在 2022 年的一场讲课中说：「Digital democracy is not a public-sector-only thing. People can do that in social sector as well.」（数位民主不只是公部门的事，社会部门也做得到。）<a class="cite" href="#src-9" data-src="src-9">[9]</a> 书也说明，第 5 部所说的「民主」，「远远超出仅将民主作为国家治理体系的许多传统描述」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>与 Plurality 的关系</h3>
-<p>书的简介写道：「在这本书中，台湾享誉国际的数位民主开创者，与您分享成功的方程式。」[11] 并把它称为多元宇宙（⿻）[11]。</p>
-<p>唐凤在 2024 年的一场对谈中大意是说，如果叫它「数位民主」，大家会联想到电子投票机；明明也能用在职场等地方，却不会被这样理解，所以刻意创造了 Plurality 这个新词[12]。也就是说，照唐凤的说明，Plurality 是一个没有既定色彩的新词，用来称呼一个若叫做「数位民主」就容易被窄化理解成电子投票之类的想法[12]。</p>
+<p>书的简介写道：「在这本书中，台湾享誉国际的数位民主开创者，与您分享成功的方程式。」<a class="cite" href="#src-11" data-src="src-11">[11]</a> 并把它称为多元宇宙（⿻）<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>唐凤在 2024 年的一场对谈中大意是说，如果叫它「数位民主」，大家会联想到电子投票机；明明也能用在职场等地方，却不会被这样理解，所以刻意创造了 Plurality 这个新词<a class="cite" href="#src-12" data-src="src-12">[12]</a>。也就是说，照唐凤的说明，Plurality 是一个没有既定色彩的新词，用来称呼一个若叫做「数位民主」就容易被窄化理解成电子投票之类的想法<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h3>漫长的前史</h3>
-<p>铃木健把数位民主运动的起点追溯到 1999 年「Web 2.0」的想法[5]。接着举出伊藤穰一的「创发民主制」（2003 年）、Tim O'Reilly 的「Gov 2.0」（2009 年前后）、Code for America（2009 年）、关治之的 Code for Japan（2013 年），以及欧巴马政府的开放政府等[5]。</p>
-<p>书的 3-3 章也介绍了把技术用于行政与公民的运动：「政府科技」（GovTech）与「公民科技」（Civic Tech）[13]。例如 Code for America 的创始人 Jennifer Pahlka 和 GovLab 的创始人 Beth Simone Noveck（英文版还举了 Code for Japan）[13]。书把这些看成「复兴早期互联网的公共和多元精神与理想的运动」[13]。</p>
+<p>铃木健把数位民主运动的起点追溯到 1999 年「Web 2.0」的想法<a class="cite" href="#src-5" data-src="src-5">[5]</a>。接着举出伊藤穰一的「创发民主制」（2003 年）、Tim O'Reilly 的「Gov 2.0」（2009 年前后）、Code for America（2009 年）、关治之的 Code for Japan（2013 年），以及欧巴马政府的开放政府等<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>书的 3-3 章也介绍了把技术用于行政与公民的运动：「政府科技」（GovTech）与「公民科技」（Civic Tech）<a class="cite" href="#src-13" data-src="src-13">[13]</a>。例如 Code for America 的创始人 Jennifer Pahlka 和 GovLab 的创始人 Beth Simone Noveck（英文版还举了 Code for Japan）<a class="cite" href="#src-13" data-src="src-13">[13]</a>。书把这些看成「复兴早期互联网的公共和多元精神与理想的运动」<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>它不是「电子投票」。</strong> 如上述唐凤的话，书关心的不是投票机[12]，而是讨论、建立共识、分配资金等协作的全貌[10]。</li>
-<li><strong>vTaiwan 失速的报导。</strong> The Daily Beast 的报导（2023 年）说，vTaiwan 的气势早在多年前就消失了[14]。报导引述共同创办人、前立法委员 Jason Hsu 的说法，指出 2018 年以后它没有被用在重大决策上、政府也没有采纳建议的义务等[14]。书的 2-2 章自己也承认，疫情「中断了面对面的聚会，导致活跃度下降」，以及「需要大量的志愿努力、缺乏政府回应的授权」[8]。</li>
-<li><strong>是不是太依赖魅力人物？</strong> 铃木健在日文版解说中写道，从对台湾相关人士的采访中学到，实践需要大量的线下努力，以及政府内部部长级的强力投入[5]。铃木也说，唐凤卸任后，台湾的数位民主来到了平台期[5]。同一次采访的报告也说，vTaiwan 当年有部长的强力支持才能反映到政策上，后来政治上的后盾减弱了[15]。铃木把制度化扎根，以及做成对用户真正有用的形式（产品与市场的契合，product-market fit）列为课题[5]。</li>
+<li><strong>它不是「电子投票」。</strong> 如上述唐凤的话，书关心的不是投票机<a class="cite" href="#src-12" data-src="src-12">[12]</a>，而是讨论、建立共识、分配资金等协作的全貌<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>vTaiwan 失速的报导。</strong> The Daily Beast 的报导（2023 年）说，vTaiwan 的气势早在多年前就消失了<a class="cite" href="#src-14" data-src="src-14">[14]</a>。报导引述共同创办人、前立法委员 Jason Hsu 的说法，指出 2018 年以后它没有被用在重大决策上、政府也没有采纳建议的义务等<a class="cite" href="#src-14" data-src="src-14">[14]</a>。书的 2-2 章自己也承认，疫情「中断了面对面的聚会，导致活跃度下降」，以及「需要大量的志愿努力、缺乏政府回应的授权」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
+<li><strong>是不是太依赖魅力人物？</strong> 铃木健在日文版解说中写道，从对台湾相关人士的采访中学到，实践需要大量的线下努力，以及政府内部部长级的强力投入<a class="cite" href="#src-5" data-src="src-5">[5]</a>。铃木也说，唐凤卸任后，台湾的数位民主来到了平台期<a class="cite" href="#src-5" data-src="src-5">[5]</a>。同一次采访的报告也说，vTaiwan 当年有部长的强力支持才能反映到政策上，后来政治上的后盾减弱了<a class="cite" href="#src-15" data-src="src-15">[15]</a>。铃木把制度化扎根，以及做成对用户真正有用的形式（产品与市场的契合，product-market fit）列为课题<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>数位民主是书的第 2 部的主题。2-0 章谈技术与民主之间的鸿沟，以及鸿沟之后的梦想[1]。2-1 章与 2-2 章描写台湾的历史与实践[2][8]。3-3 章讨论爱沙尼亚等其他国家的先例与公民科技[4][13]。4-5 章〈存取权〉写道：「存取权是实现数位民主和社会包容的基石。」[16]</p>
+<p>数位民主是书的第 2 部的主题。2-0 章谈技术与民主之间的鸿沟，以及鸿沟之后的梦想<a class="cite" href="#src-1" data-src="src-1">[1]</a>。2-1 章与 2-2 章描写台湾的历史与实践<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。3-3 章讨论爱沙尼亚等其他国家的先例与公民科技<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。4-5 章〈存取权〉写道：「存取权是实现数位民主和社会包容的基石。」<a class="cite" href="#src-16" data-src="src-16">[16]</a></p>
 <p>相关文章：
 - <a href="plurality.html">⿻ Plurality（多元宇宙）</a>——包含数位民主的更广的想法
 - <a href="three-paths.html">三条道路</a>——来自游戏中三种政体的对比
@@ -92,20 +98,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《多元宇宙》2-0〈资讯技术与民主：日益扩大的鸿沟〉「重塑我们的未来」— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
-<li>《多元宇宙》2-1〈玉山视野〉— <a href="https://www.plurality.net/v/chapters/2-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/zh-tw/</a></li>
-<li>《多元宇宙》2-2〈数位民主的日常〉「零时政府」— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
-<li>《多元宇宙》3-3〈我们遗忘的道〉章末 — <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ；「数位化程度最高」一句见英文版 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a></li>
-<li>铃木健〈Plurality 日本语版解说〉（日文）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
-<li>《多元宇宙》2-0「二十一世纪的意识形态」— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
-<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-<li>《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
-<li>Audrey Tang, "Lecture at IESE-Shizenkan MBA course"（2022-03-22，英文逐字稿）— <a href="https://archive.tw/2022-03-22-lecture-at-iese-shizenkan-mba-course" target="_blank" rel="noopener">https://archive.tw/2022-03-22-lecture-at-iese-shizenkan-mba-course</a></li>
-<li>《多元宇宙》5-0〈协作技术与民主〉— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
-<li>《多元宇宙》简介 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
-<li>西尾泰和〈Pluralityは无色の新语として作られた〉（2024-07-26 对谈的逐字与日译，日文）— <a href="https://scrapbox.io/nishio/Pluralityは無色の新語として作られた" target="_blank" rel="noopener">https://scrapbox.io/nishio/Pluralityは無色の新語として作られた</a></li>
-<li>《多元宇宙》3-3〈我们遗忘的道〉「光明的节点」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ；Code for Japan 见英文版 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a></li>
-<li>Nick Aspinwall, "Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop"（The Daily Beast，2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
-<li>デジタル民主主义研究ユニット〈现场取材からみえた台湾デジタル民主主义の理想と课题、そして日本発『デジタル民主主义2030』への指针〉（2025-02-19，日文）— <a href="https://note.com/digitaldemocracy/n/naaa818d919c7" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/naaa818d919c7</a></li>
-<li>《多元宇宙》4-5〈存取权〉— <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
-</ol><div class='related'>相关: <a href='plurality.html'>什么是 ⿻ Plurality（多元宇宙）？</a> ・ <a href='three-paths.html'>什么是「三条道路」？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a> ・ <a href='g0v.html'>什么是 g0v（零时政府）？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='collaborative-technology.html'>什么是协作技术？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E4%BD%8D%E6%B0%91%E4%B8%BB%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《多元宇宙》2-0〈资讯技术与民主：日益扩大的鸿沟〉「重塑我们的未来」— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
+<li id="src-2">《多元宇宙》2-1〈玉山视野〉— <a href="https://www.plurality.net/v/chapters/2-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-1/zh-tw/</a></li>
+<li id="src-3">《多元宇宙》2-2〈数位民主的日常〉「零时政府」— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li id="src-4">《多元宇宙》3-3〈我们遗忘的道〉章末 — <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ；「数位化程度最高」一句见英文版 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a></li>
+<li id="src-5">铃木健〈Plurality 日本语版解说〉（日文）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li id="src-6">《多元宇宙》2-0「二十一世纪的意识形态」— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
+<li id="src-7">Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li id="src-8">《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li id="src-9">Audrey Tang, "Lecture at IESE-Shizenkan MBA course"（2022-03-22，英文逐字稿）— <a href="https://archive.tw/2022-03-22-lecture-at-iese-shizenkan-mba-course" target="_blank" rel="noopener">https://archive.tw/2022-03-22-lecture-at-iese-shizenkan-mba-course</a></li>
+<li id="src-10">《多元宇宙》5-0〈协作技术与民主〉— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
+<li id="src-11">《多元宇宙》简介 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a></li>
+<li id="src-12">西尾泰和〈Pluralityは无色の新语として作られた〉（2024-07-26 对谈的逐字与日译，日文）— <a href="https://scrapbox.io/nishio/Pluralityは無色の新語として作られた" target="_blank" rel="noopener">https://scrapbox.io/nishio/Pluralityは無色の新語として作られた</a></li>
+<li id="src-13">《多元宇宙》3-3〈我们遗忘的道〉「光明的节点」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ；Code for Japan 见英文版 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a></li>
+<li id="src-14">Nick Aspinwall, "Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop"（The Daily Beast，2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
+<li id="src-15">デジタル民主主义研究ユニット〈现场取材からみえた台湾デジタル民主主义の理想と课题、そして日本発『デジタル民主主义2030』への指针〉（2025-02-19，日文）— <a href="https://note.com/digitaldemocracy/n/naaa818d919c7" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/naaa818d919c7</a></li>
+<li id="src-16">《多元宇宙》4-5〈存取权〉— <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='plurality.html'>什么是 ⿻ Plurality（多元宇宙）？</a> ・ <a href='three-paths.html'>什么是「三条道路」？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a> ・ <a href='g0v.html'>什么是 g0v（零时政府）？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='collaborative-technology.html'>什么是协作技术？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E4%BD%8D%E6%B0%91%E4%B8%BB%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fdigital-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

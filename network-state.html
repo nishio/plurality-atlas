@@ -41,18 +41,24 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/network-state.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/network-state.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/network-state.html">简体中文</a></nav></header>
 <main lang="ja"><h1>ネットワーク国家ってなに？</h1><div class='lead'>考えの近い人々がまずネット上で強くまとまり、資金を集めて世界各地に土地を持ち、やがて既存の国から国として認められる、という新しい国のつくり方です。起業家バラジ・スリニバサンが 2022 年の本で唱えました。Plurality の側は「抜け出すこと」に偏っていると批判します。</div><p>今の国のしくみに不満があるとき、どうすればよいでしょうか。選挙で声を上げて内側から変える道もあれば、別の場所へ移る道もあります。「ネットワーク国家」は後者を突き詰めた構想です。気の合う仲間とネット上で集まり、自分たちの新しい国を作ってしまおう、というのです。</p>
 <h2>ひとことで言うと</h2>
-<p>ネットワーク国家は、同じ考えを持つ人々がまずインターネット上で強くまとまった共同体を作り、お金を出し合って世界のあちこちに土地や建物を持ち、最後には既存の国から「国」として認めてもらう、という新しい国のつくり方の構想です[1][2]。</p>
-<p>起業家のバラジ・スリニバサン（Balaji Srinivasan）が、2022 年の本『The Network State』で唱えました[1]。</p>
+<p>ネットワーク国家は、同じ考えを持つ人々がまずインターネット上で強くまとまった共同体を作り、お金を出し合って世界のあちこちに土地や建物を持ち、最後には既存の国から「国」として認めてもらう、という新しい国のつくり方の構想です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>起業家のバラジ・スリニバサン（Balaji Srinivasan）が、2022 年の本『The Network State』で唱えました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>本そのもの（2022 年）。</strong> バラジは本文を Web サイトで公開しました。短い定義はおおよそ次のとおりです。みんなで行動する力を持ち、世界中の土地をクラウドファンディング（ネットで広く資金を集めること）で手に入れ、やがて既存の国から外交上の承認を得る、強く結びついたオンラインの共同体[1]。</p>
-<p><strong>Network School（2024 年〜）。</strong> バラジは 2024 年 8 月、シンガポール近くの島で「Network School」を始めると告知しました。まずは 9 月 23 日から 12 月 23 日までの 90 日間、一緒に暮らしながら学ぶ形です。貧しい国に生まれた父が機会を得て身を立てたことを動機に挙げ、世界に埋もれた才能に機会を広げたい、と書いています[3]。</p>
-<p><strong>Zuzalu（2023 年）。</strong> イーサリアムの考案者ヴィタリック・ブテリン（Vitalik Buterin）は、2023 年 3 月 25 日から約 2 か月、モンテネグロのリゾートに約 200 人が暮らす「期間限定の小さな都市」Zuzalu を開きました。ブテリンは、ネットでできた共同体を現実の場所に移す発想の系譜に『The Network State』を挙げています。ただし Zuzalu は、バラジのものを含め特定の構想を中心には据えなかった、と書いています[4]。</p>
+<p><strong>本そのもの（2022 年）。</strong> バラジは本文を Web サイトで公開しました。短い定義はおおよそ次のとおりです。みんなで行動する力を持ち、世界中の土地をクラウドファンディング（ネットで広く資金を集めること）で手に入れ、やがて既存の国から外交上の承認を得る、強く結びついたオンラインの共同体<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>Network School（2024 年〜）。</strong> バラジは 2024 年 8 月、シンガポール近くの島で「Network School」を始めると告知しました。まずは 9 月 23 日から 12 月 23 日までの 90 日間、一緒に暮らしながら学ぶ形です。貧しい国に生まれた父が機会を得て身を立てたことを動機に挙げ、世界に埋もれた才能に機会を広げたい、と書いています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>Zuzalu（2023 年）。</strong> イーサリアムの考案者ヴィタリック・ブテリン（Vitalik Buterin）は、2023 年 3 月 25 日から約 2 か月、モンテネグロのリゾートに約 200 人が暮らす「期間限定の小さな都市」Zuzalu を開きました。ブテリンは、ネットでできた共同体を現実の場所に移す発想の系譜に『The Network State』を挙げています。ただし Zuzalu は、バラジのものを含め特定の構想を中心には据えなかった、と書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>しくみ</h2>
 <h3>七つの段階</h3>
-<p>バラジの要約では、ネットワーク国家は「ネットが先、土地は最後」の順で作ります[2]。</p>
+<p>バラジの要約では、ネットワーク国家は「ネットが先、土地は最後」の順で作ります<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ol>
 <li>大きな志を持つオンラインの共同体「スタートアップ社会」を作る。誰でも作れ、作った人の正統性は、人々がついていくかどうかで決まる、とバラジは書きます。</li>
 <li>みんなで行動できる「ネットワーク・ユニオン」に組織する。</li>
@@ -62,31 +68,31 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li>暗号の技術で確かめられる国勢調査で、人口・所得・不動産の規模を示す。</li>
 <li>少なくとも一つの既存の政府から外交上の承認を得て、そこから少しずつ主権を広げる。</li>
 </ol>
-<p>バラジは、ふつうの国民国家が「地図」から始まるのに対し、ネットワーク国家は「心」から始まる、と言います[1]。</p>
+<p>バラジは、ふつうの国民国家が「地図」から始まるのに対し、ネットワーク国家は「心」から始まる、と言います<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>定義の中身</h3>
-<p>長いほうの定義は、新しい道徳の考え、国民としての意識、認められた創設者、暗号通貨、合意による政府、飛び地の群島のような領土、ネット上の国勢調査などを要素に挙げています[1]。ビットコインも Facebook も、外交上の承認などが無いのでネットワーク国家ではない、とも書いています[1]。</p>
+<p>長いほうの定義は、新しい道徳の考え、国民としての意識、認められた創設者、暗号通貨、合意による政府、飛び地の群島のような領土、ネット上の国勢調査などを要素に挙げています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。ビットコインも Facebook も、外交上の承認などが無いのでネットワーク国家ではない、とも書いています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>源流は「退出」</h3>
-<p>バラジは 2013 年の講演で、アメリカを国の世界の「マイクロソフト」にたとえました。内側から変える「発言（voice）」のほかに、オープンソースのソフトの枝分かれのような「退出（exit）」という道がある、と論じたのです[5]。</p>
-<p>バラジは退出を、発言を補い、少数派の権利を守る力だと考えます。政治に関わらずに悪い政策から穏やかに抜ける道具です。最終的には、アメリカの外に、技術で運営される参加自由の社会を作ることを「究極の退出」と呼びました[5]。2021 年には、選挙・革命・戦争・海上都市など新しい国のつくり方を比べ、ネットから始める道を推しています[6]。</p>
+<p>バラジは 2013 年の講演で、アメリカを国の世界の「マイクロソフト」にたとえました。内側から変える「発言（voice）」のほかに、オープンソースのソフトの枝分かれのような「退出（exit）」という道がある、と論じたのです<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>バラジは退出を、発言を補い、少数派の権利を守る力だと考えます。政治に関わらずに悪い政策から穏やかに抜ける道具です。最終的には、アメリカの外に、技術で運営される参加自由の社会を作ることを「究極の退出」と呼びました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。2021 年には、選挙・革命・戦争・海上都市など新しい国のつくり方を比べ、ネットから始める道を推しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>本『Plurality』での扱い</h3>
-<p>本の 2-0 章は、Plurality と対になる考え方の一つ「リバタリアニズム」（自由至上主義）の代表的な本の一冊として、『The Network State』を挙げています[7]。</p>
-<p>5-5 章は、ネットワーク国家やチャーター都市、海上都市のように、既存の国の法から逃れる形が提案されてきたと書きます。そして、それらは広い公共財や社会の秩序を保つこととぶつかる、と指摘します。そのうえで、きれいに切り離さなくても、実験が既存の法の中で理解され、組み込まれるなら、多様な実験を支えられるかもしれない、と別の道を示しています[8]。</p>
+<p>本の 2-0 章は、Plurality と対になる考え方の一つ「リバタリアニズム」（自由至上主義）の代表的な本の一冊として、『The Network State』を挙げています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>5-5 章は、ネットワーク国家やチャーター都市、海上都市のように、既存の国の法から逃れる形が提案されてきたと書きます。そして、それらは広い公共財や社会の秩序を保つこととぶつかる、と指摘します。そのうえで、きれいに切り離さなくても、実験が既存の法の中で理解され、組み込まれるなら、多様な実験を支えられるかもしれない、と別の道を示しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「ネットワーク国家ではなくネットワーク社会を」（2024 年 5 月）。</strong> ディヴィヤ・シッダールト（Divya Siddarth）、グレン・ワイル（E. Glen Weyl）、アン＝マリー・スローター（Anne-Marie Slaughter）は、<a href="collective-intelligence-project.html">集合知プロジェクト（CIP）</a> のブログに載った文章で、この本の思想を「退出」中心の考え方だと批判しました。退出は必要な権利だが、退出する先が要る、という指摘です[9]。
-  三人は、バラジの描く国は、一つの厳しい決まりに身をささげる共同体を創設者が治め、ブロックチェーンの契約で守らせるものだ、と読みます。今の国から抜ける権利は絶対だとする一方、新しい国では創設者が住民の資産を凍結できる、という「非対称」も指摘しています。対案の「ネットワーク社会」は、人は国・勤め先・宗教など多くの共同体に同時に属している、という前提に立ちます[9]。</li>
-<li><strong>ブテリンの書評（2022 年 7 月）。</strong> ブテリンは、健康的な暮らしの実験や、公共財の資金集めの実験をするような共同体は見てみたい、としました。そのうえで、気がかりな点を四つ挙げています[10]。</li>
+<li><strong>「ネットワーク国家ではなくネットワーク社会を」（2024 年 5 月）。</strong> ディヴィヤ・シッダールト（Divya Siddarth）、グレン・ワイル（E. Glen Weyl）、アン＝マリー・スローター（Anne-Marie Slaughter）は、<a href="collective-intelligence-project.html">集合知プロジェクト（CIP）</a> のブログに載った文章で、この本の思想を「退出」中心の考え方だと批判しました。退出は必要な権利だが、退出する先が要る、という指摘です<a class="cite" href="#src-9" data-src="src-9">[9]</a>。
+  三人は、バラジの描く国は、一つの厳しい決まりに身をささげる共同体を創設者が治め、ブロックチェーンの契約で守らせるものだ、と読みます。今の国から抜ける権利は絶対だとする一方、新しい国では創設者が住民の資産を凍結できる、という「非対称」も指摘しています。対案の「ネットワーク社会」は、人は国・勤め先・宗教など多くの共同体に同時に属している、という前提に立ちます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>ブテリンの書評（2022 年 7 月）。</strong> ブテリンは、健康的な暮らしの実験や、公共財の資金集めの実験をするような共同体は見てみたい、としました。そのうえで、気がかりな点を四つ挙げています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 <li>「認められた創設者」が定義に組み込まれているのに、より多くの人が統治に参加する道筋が無いこと。</li>
 <li>移住できる裕福な人や、受け入れたい人材にしか役立たず、逃げたくても受け入れ先の無い人々を救えないこと。</li>
 <li>退出だけでは世界の政治を安定させられないこと。</li>
 <li>地球規模で他人に及ぶ悪い影響（負の外部性）。
-  ブテリンは中間の道として、創設者から始めても共同体に統治を移す道筋を最初から決めておく、といった案も出しました[10]。</li>
-<li><strong>日本語の批判。</strong> ある note の記事は、ネットワーク国家は同意と契約だけにもとづく社会で、自分が病気や事故で弱い立場になる可能性を計算に入れていないため、弱い人を切り捨ててしまう、と論じています[11]。</li>
-<li><strong>誤解：本『Plurality』はネットワーク国家を支持しているのか。</strong> 本は、実験の多様さそのものは歓迎します。けれども既存の法からきれいに切り離す形には、公共財や社会の秩序とのぶつかりがあると書き、組み込みながら実験する道を対案に置いています[8]。</li>
+  ブテリンは中間の道として、創設者から始めても共同体に統治を移す道筋を最初から決めておく、といった案も出しました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>日本語の批判。</strong> ある note の記事は、ネットワーク国家は同意と契約だけにもとづく社会で、自分が病気や事故で弱い立場になる可能性を計算に入れていないため、弱い人を切り捨ててしまう、と論じています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>誤解：本『Plurality』はネットワーク国家を支持しているのか。</strong> 本は、実験の多様さそのものは歓迎します。けれども既存の法からきれいに切り離す形には、公共財や社会の秩序とのぶつかりがあると書き、組み込みながら実験する道を対案に置いています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本は、ネットワーク国家を <a href="three-paths.html">三つの道</a> のうちリバタリアニズムの代表の一つとして扱います。7-1 章の結論は、「ピーター・ティール、マーク・アンドリーセン、バラジ・スリニバサンのようなリバタリアンが望むように、個人を解放して、制約も責任もない原子的な行為者にすべきか？」という問いを、退けるべき問いとして置いています[12]。ワイルも 2022 年のエッセイで、「企業リバタリアニズム」の代表人物にバラジを挙げました[13]。</p>
-<p>ブテリンは 2024 年の文章で、両者の違いを整理しています。バラジの構想の中心は、新しい制度と共同体を作り、それが育つ安全な場を与えることです。一方、タンとワイルの方法は、台湾の電子政府に見られる「枝分かれして、改良を本流に戻す」やり方に代表される、とします[14]。ブテリンは同じ文章で、ネットワーク国家や期間限定の都市も、内部の統治や周りとの協力を必要としており、Plurality の仕組みがそれらをよくしうる、とも書いています[14]。</p>
+<p>本は、ネットワーク国家を <a href="three-paths.html">三つの道</a> のうちリバタリアニズムの代表の一つとして扱います。7-1 章の結論は、「ピーター・ティール、マーク・アンドリーセン、バラジ・スリニバサンのようなリバタリアンが望むように、個人を解放して、制約も責任もない原子的な行為者にすべきか？」という問いを、退けるべき問いとして置いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。ワイルも 2022 年のエッセイで、「企業リバタリアニズム」の代表人物にバラジを挙げました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>ブテリンは 2024 年の文章で、両者の違いを整理しています。バラジの構想の中心は、新しい制度と共同体を作り、それが育つ安全な場を与えることです。一方、タンとワイルの方法は、台湾の電子政府に見られる「枝分かれして、改良を本流に戻す」やり方に代表される、とします<a class="cite" href="#src-14" data-src="src-14">[14]</a>。ブテリンは同じ文章で、ネットワーク国家や期間限定の都市も、内部の統治や周りとの協力を必要としており、Plurality の仕組みがそれらをよくしうる、とも書いています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
 <p>「ネットワーク社会」の考え方は、人がいくつもの集団に同時に属するという <a href="intersectional-identity.html">交差的アイデンティティ</a> や、<a href="plural-publics.html">⿻ 公衆</a> の考え方とつながっています。制度の実験の話は <a href="adaptive-administration.html">適応型管理行政</a> の記事でも扱います。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -99,18 +105,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Balaji Srinivasan『The Network State』1.2「The Network State in One Sentence」（2022-07-04）— <a href="https://thenetworkstate.com/the-network-state-in-one-sentence" target="_blank" rel="noopener">https://thenetworkstate.com/the-network-state-in-one-sentence</a></li>
-<li>同 1.4「The Network State in One Thousand Words」— <a href="https://thenetworkstate.com/the-network-state-in-one-thousand-words" target="_blank" rel="noopener">https://thenetworkstate.com/the-network-state-in-one-thousand-words</a></li>
-<li>Balaji Srinivasan「The Network School」（2024-08-16）— <a href="https://balajis.com/p/network-school" target="_blank" rel="noopener">https://balajis.com/p/network-school</a></li>
-<li>Vitalik Buterin「Why I Built Zuzalu」（2023-10-06）— <a href="https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/" target="_blank" rel="noopener">https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/</a></li>
-<li>Balaji Srinivasan「Silicon Valley's Ultimate Exit」（2013、有志の書き起こし）— <a href="https://genius.com/Balaji-srinivasan-silicon-valleys-ultimate-exit-annotated" target="_blank" rel="noopener">https://genius.com/Balaji-srinivasan-silicon-valleys-ultimate-exit-annotated</a></li>
-<li>Balaji Srinivasan「How to Start a New Country」（2021-04-09）— <a href="https://balajis.com/p/how-to-start-a-new-country" target="_blank" rel="noopener">https://balajis.com/p/how-to-start-a-new-country</a></li>
-<li>『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」— <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
-<li>『Plurality』5-5「Adaptive Administration」— <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
-<li>Divya Siddarth, Glen Weyl, Anne-Marie Slaughter「We need network societies, not network states」（2024-05-20）— <a href="https://www.cip.org/blog/network-societies" target="_blank" rel="noopener">https://www.cip.org/blog/network-societies</a></li>
-<li>Vitalik Buterin「What do I think about network states?」（2022-07-13）— <a href="https://vitalik.eth.limo/general/2022/07/13/networkstates.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2022/07/13/networkstates.html</a></li>
-<li>Project Aequitas の note 記事 — <a href="https://note.com/glossy_lemur5728/n/n75e891a7f46b" target="_blank" rel="noopener">https://note.com/glossy_lemur5728/n/n75e891a7f46b</a></li>
-<li>『Plurality』7-1「結論」— <a href="https://www.plurality.net/v/chapters/7-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-1/eng/</a> ［CC0］</li>
-<li>Glen Weyl「Political Ideologies for the 21st Century」（2022-02-17）— <a href="https://www.radicalxchange.org/updates/blog/political-ideologies-for-the-21st-century/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/political-ideologies-for-the-21st-century/</a></li>
-<li>Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
-</ol><div class='related'>関連: <a href='three-paths.html'>「三つの道」ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='intersectional-identity.html'>交差的アイデンティティってなに？</a> ・ <a href='collective-intelligence-project.html'>Collective Intelligence Project（CIP）とは？どんな団体？</a> ・ <a href='d-acc.html'>d/acc（防御的な加速）ってなに？</a> ・ <a href='adaptive-administration.html'>適応型管理行政ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnetwork-state.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%9B%BD%E5%AE%B6%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnetwork-state.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Balaji Srinivasan『The Network State』1.2「The Network State in One Sentence」（2022-07-04）— <a href="https://thenetworkstate.com/the-network-state-in-one-sentence" target="_blank" rel="noopener">https://thenetworkstate.com/the-network-state-in-one-sentence</a></li>
+<li id="src-2">同 1.4「The Network State in One Thousand Words」— <a href="https://thenetworkstate.com/the-network-state-in-one-thousand-words" target="_blank" rel="noopener">https://thenetworkstate.com/the-network-state-in-one-thousand-words</a></li>
+<li id="src-3">Balaji Srinivasan「The Network School」（2024-08-16）— <a href="https://balajis.com/p/network-school" target="_blank" rel="noopener">https://balajis.com/p/network-school</a></li>
+<li id="src-4">Vitalik Buterin「Why I Built Zuzalu」（2023-10-06）— <a href="https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/" target="_blank" rel="noopener">https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/</a></li>
+<li id="src-5">Balaji Srinivasan「Silicon Valley's Ultimate Exit」（2013、有志の書き起こし）— <a href="https://genius.com/Balaji-srinivasan-silicon-valleys-ultimate-exit-annotated" target="_blank" rel="noopener">https://genius.com/Balaji-srinivasan-silicon-valleys-ultimate-exit-annotated</a></li>
+<li id="src-6">Balaji Srinivasan「How to Start a New Country」（2021-04-09）— <a href="https://balajis.com/p/how-to-start-a-new-country" target="_blank" rel="noopener">https://balajis.com/p/how-to-start-a-new-country</a></li>
+<li id="src-7">『Plurality』2-0「Information Technology and Democracy: A Widening Gulf」— <a href="https://www.plurality.net/v/chapters/2-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/eng/</a> ［CC0］</li>
+<li id="src-8">『Plurality』5-5「Adaptive Administration」— <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a> ［CC0］</li>
+<li id="src-9">Divya Siddarth, Glen Weyl, Anne-Marie Slaughter「We need network societies, not network states」（2024-05-20）— <a href="https://www.cip.org/blog/network-societies" target="_blank" rel="noopener">https://www.cip.org/blog/network-societies</a></li>
+<li id="src-10">Vitalik Buterin「What do I think about network states?」（2022-07-13）— <a href="https://vitalik.eth.limo/general/2022/07/13/networkstates.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2022/07/13/networkstates.html</a></li>
+<li id="src-11">Project Aequitas の note 記事 — <a href="https://note.com/glossy_lemur5728/n/n75e891a7f46b" target="_blank" rel="noopener">https://note.com/glossy_lemur5728/n/n75e891a7f46b</a></li>
+<li id="src-12">『Plurality』7-1「結論」— <a href="https://www.plurality.net/v/chapters/7-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-1/eng/</a> ［CC0］</li>
+<li id="src-13">Glen Weyl「Political Ideologies for the 21st Century」（2022-02-17）— <a href="https://www.radicalxchange.org/updates/blog/political-ideologies-for-the-21st-century/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/political-ideologies-for-the-21st-century/</a></li>
+<li id="src-14">Vitalik Buterin「Plurality philosophy in an incredibly oversized nutshell」（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+</ol><div class='related'>関連: <a href='three-paths.html'>「三つの道」ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='intersectional-identity.html'>交差的アイデンティティってなに？</a> ・ <a href='collective-intelligence-project.html'>Collective Intelligence Project（CIP）とは？どんな団体？</a> ・ <a href='d-acc.html'>d/acc（防御的な加速）ってなに？</a> ・ <a href='adaptive-administration.html'>適応型管理行政ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnetwork-state.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%9B%BD%E5%AE%B6%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fnetwork-state.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

@@ -41,23 +41,29 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/aviv-ovadya.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/aviv-ovadya.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/aviv-ovadya.html">简体中文</a></nav></header>
 <main lang="ja"><h1>アヴィヴ・オヴァジャ（Aviv Ovadya）ってどんな人？</h1><div class='lead'>意見が分かれる人たちがそろって支持するものを上に出す「ブリッジング（橋渡し）」の考えに名前をつけ、SNS や AI の方針を市民の話し合いで決める方法を研究・提案している技術者・研究者です。</div><p>SNS を開くと、怒りをあおる投稿ばかりが目に入る。そう感じたことはないでしょうか。多くの SNS は、反応が多い投稿ほど上に出すからです。この人は、その並べ方を「ふだん対立する人どうしが、そろって良いと言うもの」を上に出す形に変えよう、と提案してきました。</p>
 <h2>ひとことで言うと</h2>
-<p>アヴィヴ・オヴァジャ（Aviv Ovadya）は、SNS のおすすめの並べ方を、怒りを呼ぶものではなく、ふだん対立する人たちがともに良いと言うものを上に出すように変える「ブリッジング型ランキング（bridging-based ranking）」を 2022 年に名づけ、論文で提案した人です[1][2]。</p>
-<p>あわせて、巨大な SNS の方針を、くじで選んだ市民の話し合いで決める「プラットフォーム民主主義」を唱え[3]、同じ考えを AI の統治にも広げています[4][5]。</p>
+<p>アヴィヴ・オヴァジャ（Aviv Ovadya）は、SNS のおすすめの並べ方を、怒りを呼ぶものではなく、ふだん対立する人たちがともに良いと言うものを上に出すように変える「ブリッジング型ランキング（bridging-based ranking）」を 2022 年に名づけ、論文で提案した人です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>あわせて、巨大な SNS の方針を、くじで選んだ市民の話し合いで決める「プラットフォーム民主主義」を唱え<a class="cite" href="#src-3" data-src="src-3">[3]</a>、同じ考えを AI の統治にも広げています<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>Plurality とのかかわり</h2>
-<p><strong>本の中の紹介。</strong> 本の 5-4 章「<a href="augmented-deliberation.html">拡張熟議</a>」は、意見を地図にする道具 <a href="polis.html">Polis</a> を、オヴァジャとルーク・ソーバーン（Luke Thorburn）が「集合応答システム」「橋渡しシステム」と呼ぶものの代表例として紹介しています。日本語版は二人を「一流の技術者」と呼び、脚注で二人の論文を挙げています[6]。</p>
-<p><strong>6-Pack of Care の用語集。</strong> <a href="audrey-tang.html">オードリー・タン</a> らの 6-Pack of Care の用語集は、ブリッジング型ランキングを「2022 年に Aviv Ovadya が名づけた」考え方と説明し、オヴァジャの論文を参考文献に挙げています[2]。→ <a href="six-pack-of-care.html">6-Pack of Care</a></p>
-<p><strong>共著。</strong> タン、<a href="divya-siddarth.html">ディヴィヤ・シッダールト</a>、エレーヌ・ランデモアらと、2024 年の総説「AI and the Future of Digital Public Squares」を共著しています[7]。</p>
-<p><strong>経歴の一部。</strong> 2022 年、ハーバード大学ケネディ・スクールのベルファー・センターから論文「Bridging-Based Ranking」を出しました[1]。WIRED への寄稿では、GPT-4 の公開前に外部の検証役（レッドチーム）として OpenAI に招かれたと書いています[8]。2024 年 8 月には AI &amp; Democracy Foundation を立ち上げたと告知しました[5]。</p>
+<p><strong>本の中の紹介。</strong> 本の 5-4 章「<a href="augmented-deliberation.html">拡張熟議</a>」は、意見を地図にする道具 <a href="polis.html">Polis</a> を、オヴァジャとルーク・ソーバーン（Luke Thorburn）が「集合応答システム」「橋渡しシステム」と呼ぶものの代表例として紹介しています。日本語版は二人を「一流の技術者」と呼び、脚注で二人の論文を挙げています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>6-Pack of Care の用語集。</strong> <a href="audrey-tang.html">オードリー・タン</a> らの 6-Pack of Care の用語集は、ブリッジング型ランキングを「2022 年に Aviv Ovadya が名づけた」考え方と説明し、オヴァジャの論文を参考文献に挙げています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="six-pack-of-care.html">6-Pack of Care</a></p>
+<p><strong>共著。</strong> タン、<a href="divya-siddarth.html">ディヴィヤ・シッダールト</a>、エレーヌ・ランデモアらと、2024 年の総説「AI and the Future of Digital Public Squares」を共著しています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>経歴の一部。</strong> 2022 年、ハーバード大学ケネディ・スクールのベルファー・センターから論文「Bridging-Based Ranking」を出しました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。WIRED への寄稿では、GPT-4 の公開前に外部の検証役（レッドチーム）として OpenAI に招かれたと書いています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。2024 年 8 月には AI &amp; Democracy Foundation を立ち上げたと告知しました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>主な考え</h2>
-<p><strong>ブリッジング。</strong> オヴァジャとソーバーンは「橋渡しシステム」を、分断を越えて理解と信頼を高め、実りのある対立や話し合い、協力の余地をつくる仕組み、と定義しました。そのうえで、SNS のおすすめ、集合応答システム、人が進行する話し合いの三つを、どれも「人々の注意をどこに向けるか」を決める仕組みとしてまとめて捉えています[9][10]。→ <a href="bridging.html">ブリッジング</a></p>
-<p><strong>ブリッジング型ランキング。</strong> 反応の多さで並べる代わりに、ふだん意見の分かれる人たちのあいだで支持が重なるものを上に出す並べ方です。論文は、X（旧 Twitter）の <a href="community-notes.html">Community Notes</a>（当時は Birdwatch）や Polis を例に挙げています[1]。</p>
-<p><strong>集合応答システム。</strong> ある集団にお題を出し、答えと評価を集めて、集団としての意見を浮かび上がらせる仕組みを、こう呼びました。2023 年の論文でその構造と原則を整理しています[11]。</p>
-<p><strong>プラットフォーム民主主義。</strong> 発言のルールのように意見が割れる方針を、会社のトップや党派的な政府の圧力ではなく、市民会議などの話し合いで決めよう、という提案です。韓国の原発政策やアイルランドの中絶をめぐる市民の話し合いを、うまくいった例として挙げています[3]。</p>
-<p><strong>バイオレット・チーミング。</strong> AI の弱点を探す「レッドチーミング」に加えて、同じ AI を使い、被害を受けうる制度や公共の財産を守る道具を作ろう、という提案です[8]。</p>
-<p><strong>AI を民主的に治める。</strong> 「AI の民主化」という言葉には、使うこと・作ること・利益・統治の四つの意味があると区別しました（シッダールトらと共著）[12]。また、AI についての決定がどれだけ民主的かを段階で示す「Democracy Levels」という枠組みを提案しています[4]。→ <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
+<p><strong>ブリッジング。</strong> オヴァジャとソーバーンは「橋渡しシステム」を、分断を越えて理解と信頼を高め、実りのある対立や話し合い、協力の余地をつくる仕組み、と定義しました。そのうえで、SNS のおすすめ、集合応答システム、人が進行する話し合いの三つを、どれも「人々の注意をどこに向けるか」を決める仕組みとしてまとめて捉えています<a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>。→ <a href="bridging.html">ブリッジング</a></p>
+<p><strong>ブリッジング型ランキング。</strong> 反応の多さで並べる代わりに、ふだん意見の分かれる人たちのあいだで支持が重なるものを上に出す並べ方です。論文は、X（旧 Twitter）の <a href="community-notes.html">Community Notes</a>（当時は Birdwatch）や Polis を例に挙げています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>集合応答システム。</strong> ある集団にお題を出し、答えと評価を集めて、集団としての意見を浮かび上がらせる仕組みを、こう呼びました。2023 年の論文でその構造と原則を整理しています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p><strong>プラットフォーム民主主義。</strong> 発言のルールのように意見が割れる方針を、会社のトップや党派的な政府の圧力ではなく、市民会議などの話し合いで決めよう、という提案です。韓国の原発政策やアイルランドの中絶をめぐる市民の話し合いを、うまくいった例として挙げています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>バイオレット・チーミング。</strong> AI の弱点を探す「レッドチーミング」に加えて、同じ AI を使い、被害を受けうる制度や公共の財産を守る道具を作ろう、という提案です<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p><strong>AI を民主的に治める。</strong> 「AI の民主化」という言葉には、使うこと・作ること・利益・統治の四つの意味があると区別しました（シッダールトらと共著）<a class="cite" href="#src-12" data-src="src-12">[12]</a>。また、AI についての決定がどれだけ民主的かを段階で示す「Democracy Levels」という枠組みを提案しています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>Bridging Systems のサイト（英語・解説）— <a href="https://bridging.systems/" target="_blank" rel="noopener">https://bridging.systems/</a></li>
@@ -69,16 +75,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Aviv Ovadya「Bridging-Based Ranking」（Belfer Center、2022）— <a href="https://www.belfercenter.org/publication/bridging-based-ranking" target="_blank" rel="noopener">https://www.belfercenter.org/publication/bridging-based-ranking</a> ［CC BY-NC 4.0］</li>
-<li>civic.ai 用語集 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a> ［CC0］</li>
-<li>Aviv Ovadya「Towards Platform Democracy」（Belfer Center、2021）— <a href="https://www.belfercenter.org/publication/towards-platform-democracy-policymaking-beyond-corporate-ceos-and-partisan-pressure" target="_blank" rel="noopener">https://www.belfercenter.org/publication/towards-platform-democracy-policymaking-beyond-corporate-ceos-and-partisan-pressure</a></li>
-<li>「Democracy Levels」の枠組み（2024）— <a href="https://arxiv.org/abs/2411.09222" target="_blank" rel="noopener">https://arxiv.org/abs/2411.09222</a> ［CC BY 4.0］</li>
-<li>Aviv Ovadya「AI &amp; Democracy Foundation: founding and hiring」（2024-08）— <a href="https://reimagine.aviv.me/p/ai-and-democracy-foundation-founding-and-hiring" target="_blank" rel="noopener">https://reimagine.aviv.me/p/ai-and-democracy-foundation-founding-and-hiring</a></li>
-<li>『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
-<li>「AI and the Future of Digital Public Squares」（2024）— <a href="https://arxiv.org/abs/2412.09988" target="_blank" rel="noopener">https://arxiv.org/abs/2412.09988</a> ［CC BY-SA 4.0］</li>
-<li>Aviv Ovadya「Red Teaming Improved GPT-4. Violet Teaming Goes Even Further」（WIRED、2023）— <a href="https://www.wired.com/story/red-teaming-gpt-4-was-valuable-violet-teaming-will-make-it-better/" target="_blank" rel="noopener">https://www.wired.com/story/red-teaming-gpt-4-was-valuable-violet-teaming-will-make-it-better/</a></li>
-<li>Ovadya, Thorburn「Bridging Systems」（2023）— <a href="https://arxiv.org/abs/2301.09976" target="_blank" rel="noopener">https://arxiv.org/abs/2301.09976</a></li>
-<li>Bridging Systems — <a href="https://bridging.systems/" target="_blank" rel="noopener">https://bridging.systems/</a> ［MIT］</li>
-<li>Aviv Ovadya「'Generative CI' Through Collective Response Systems」（2023）— <a href="https://arxiv.org/abs/2302.00672" target="_blank" rel="noopener">https://arxiv.org/abs/2302.00672</a></li>
-<li>Seger, Ovadya, Siddarth ほか「Democratising AI: Multiple Meanings」（2023）— <a href="https://arxiv.org/abs/2303.12642" target="_blank" rel="noopener">https://arxiv.org/abs/2303.12642</a> ［CC BY 4.0］</li>
-</ol><div class='related'>関連: <a href='bridging.html'>ブリッジング（橋渡し）ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='alignment-assemblies.html'>Alignment Assemblies（アライメント集会）ってなに？</a> ・ <a href='prosocial-media.html'>向社会的メディアってなに？</a> ・ <a href='divya-siddarth.html'>ディヴィヤ・シッダールト（Divya Siddarth）ってどんな人？</a> ・ <a href='colin-megill.html'>コリン・メギル（Colin Megill）ってどんな人？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faviv-ovadya.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%A2%E3%83%B4%E3%82%A3%E3%83%B4%E3%83%BB%E3%82%AA%E3%83%B4%E3%82%A1%E3%82%B8%E3%83%A3%EF%BC%88Aviv%20Ovadya%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faviv-ovadya.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Aviv Ovadya「Bridging-Based Ranking」（Belfer Center、2022）— <a href="https://www.belfercenter.org/publication/bridging-based-ranking" target="_blank" rel="noopener">https://www.belfercenter.org/publication/bridging-based-ranking</a> ［CC BY-NC 4.0］</li>
+<li id="src-2">civic.ai 用語集 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a> ［CC0］</li>
+<li id="src-3">Aviv Ovadya「Towards Platform Democracy」（Belfer Center、2021）— <a href="https://www.belfercenter.org/publication/towards-platform-democracy-policymaking-beyond-corporate-ceos-and-partisan-pressure" target="_blank" rel="noopener">https://www.belfercenter.org/publication/towards-platform-democracy-policymaking-beyond-corporate-ceos-and-partisan-pressure</a></li>
+<li id="src-4">「Democracy Levels」の枠組み（2024）— <a href="https://arxiv.org/abs/2411.09222" target="_blank" rel="noopener">https://arxiv.org/abs/2411.09222</a> ［CC BY 4.0］</li>
+<li id="src-5">Aviv Ovadya「AI &amp; Democracy Foundation: founding and hiring」（2024-08）— <a href="https://reimagine.aviv.me/p/ai-and-democracy-foundation-founding-and-hiring" target="_blank" rel="noopener">https://reimagine.aviv.me/p/ai-and-democracy-foundation-founding-and-hiring</a></li>
+<li id="src-6">『Plurality』5-4「Augmented Deliberation」— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
+<li id="src-7">「AI and the Future of Digital Public Squares」（2024）— <a href="https://arxiv.org/abs/2412.09988" target="_blank" rel="noopener">https://arxiv.org/abs/2412.09988</a> ［CC BY-SA 4.0］</li>
+<li id="src-8">Aviv Ovadya「Red Teaming Improved GPT-4. Violet Teaming Goes Even Further」（WIRED、2023）— <a href="https://www.wired.com/story/red-teaming-gpt-4-was-valuable-violet-teaming-will-make-it-better/" target="_blank" rel="noopener">https://www.wired.com/story/red-teaming-gpt-4-was-valuable-violet-teaming-will-make-it-better/</a></li>
+<li id="src-9">Ovadya, Thorburn「Bridging Systems」（2023）— <a href="https://arxiv.org/abs/2301.09976" target="_blank" rel="noopener">https://arxiv.org/abs/2301.09976</a></li>
+<li id="src-10">Bridging Systems — <a href="https://bridging.systems/" target="_blank" rel="noopener">https://bridging.systems/</a> ［MIT］</li>
+<li id="src-11">Aviv Ovadya「'Generative CI' Through Collective Response Systems」（2023）— <a href="https://arxiv.org/abs/2302.00672" target="_blank" rel="noopener">https://arxiv.org/abs/2302.00672</a></li>
+<li id="src-12">Seger, Ovadya, Siddarth ほか「Democratising AI: Multiple Meanings」（2023）— <a href="https://arxiv.org/abs/2303.12642" target="_blank" rel="noopener">https://arxiv.org/abs/2303.12642</a> ［CC BY 4.0］</li>
+</ol><div class='related'>関連: <a href='bridging.html'>ブリッジング（橋渡し）ってなに？</a> ・ <a href='polis.html'>Polis（ポリス）ってなに？</a> ・ <a href='community-notes.html'>Community Notes（コミュニティノート）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='alignment-assemblies.html'>Alignment Assemblies（アライメント集会）ってなに？</a> ・ <a href='prosocial-media.html'>向社会的メディアってなに？</a> ・ <a href='divya-siddarth.html'>ディヴィヤ・シッダールト（Divya Siddarth）ってどんな人？</a> ・ <a href='colin-megill.html'>コリン・メギル（Colin Megill）ってどんな人？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faviv-ovadya.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%A2%E3%83%B4%E3%82%A3%E3%83%B4%E3%83%BB%E3%82%AA%E3%83%B4%E3%82%A1%E3%82%B8%E3%83%A3%EF%BC%88Aviv%20Ovadya%EF%BC%89%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Faviv-ovadya.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

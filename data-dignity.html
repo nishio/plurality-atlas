@@ -41,46 +41,52 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/data-dignity.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/data-dignity.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/data-dignity.html">简体中文</a></nav></header>
 <main lang="ja"><h1>データの尊厳ってなに？</h1><div class='lead'>私たちがネットで生み出すデータは、AI や広告の原料として大きな価値を持ちます。それを企業にただで吸い上げさせず、作った人の「働き」として認め、労働組合のような中間の組織を通じて集団で交渉・管理しよう、という考え方です。</div><p>あなたが書いた口コミ、投稿した写真、翻訳した文章。そうしたデータは、AI を賢くしたり広告を届けたりする原料になっています。でも、あなたにお金が払われることはほとんどありません。「データの尊厳（data dignity）」は、この状態を変えようとする考え方です。</p>
 <h2>ひとことで言うと</h2>
-<p>検索の履歴や投稿、翻訳、写真など、私たちがネットで生み出すデータは、AI や広告の原料として大きな価値を持ちます。それを企業にただで吸い上げさせるのではなく、<strong>作った人の「働き」として認め、労働組合のような中間の組織を通じて、集団で交渉し管理しよう</strong>、という考え方です[1][2]。</p>
+<p>検索の履歴や投稿、翻訳、写真など、私たちがネットで生み出すデータは、AI や広告の原料として大きな価値を持ちます。それを企業にただで吸い上げさせるのではなく、<strong>作った人の「働き」として認め、労働組合のような中間の組織を通じて、集団で交渉し管理しよう</strong>、という考え方です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>翻訳する人の例（2018 年）。</strong> 計算機科学者ジャロン・ラニアー（Jaron Lanier）と経済学者グレン・ワイル（E. Glen Weyl）は、『Harvard Business Review』の論考で、自動翻訳の矛盾を指摘しました。自動翻訳は人間の翻訳者の仕事を脅かしています。けれども、新しい言葉や流行についていくために、まさにその翻訳者たちから毎日たくさんの新しいデータを必要としています[1]。</p>
-<p>友だちのために外国映画に字幕をつけている人は、自分がどれほどの価値を差し出しているか知りません。二人は、必要とされていると正直に知らされれば、人は報酬を受け取り、より良いデータを誇りを持って出すようになるだろう、と論じます[1]。</p>
-<p><strong>台湾の「データ連合」。</strong> 本『⿻ Plurality』によれば、台湾の総統杯ハッカソン（技術で社会の課題を解くコンテスト）は、公務員・研究者・活動家・技術者の混成チームを集めました。そして、自分たちのデータで政府や民間と「集団で交渉」するための道具や取り決めを提案させ、政府が支える「データ連合」の取り組みにつなげました。例として、大気の質の見張りや、山火事の早めの警報が挙がっています[3]。</p>
-<p><strong>6-Pack of Care のデータ連合。</strong> オードリー・タンとキャロライン・グリーン（Caroline Green）の <a href="six-pack-of-care.html">6-Pack of Care</a> は、町内会や組合、協同組合、宗教団体などの今ある共同体の組織を「データ連合」として位置づけます。組織はメンバーから預かった知識の管理人になり、AI との使用の契約を交渉し、何を共有して何をネットに出さないかを決めます。そして対価を、個人ごとではなく集団で受け取ります[4]。→ <a href="kami.html">Kami</a></p>
+<p><strong>翻訳する人の例（2018 年）。</strong> 計算機科学者ジャロン・ラニアー（Jaron Lanier）と経済学者グレン・ワイル（E. Glen Weyl）は、『Harvard Business Review』の論考で、自動翻訳の矛盾を指摘しました。自動翻訳は人間の翻訳者の仕事を脅かしています。けれども、新しい言葉や流行についていくために、まさにその翻訳者たちから毎日たくさんの新しいデータを必要としています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>友だちのために外国映画に字幕をつけている人は、自分がどれほどの価値を差し出しているか知りません。二人は、必要とされていると正直に知らされれば、人は報酬を受け取り、より良いデータを誇りを持って出すようになるだろう、と論じます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>台湾の「データ連合」。</strong> 本『⿻ Plurality』によれば、台湾の総統杯ハッカソン（技術で社会の課題を解くコンテスト）は、公務員・研究者・活動家・技術者の混成チームを集めました。そして、自分たちのデータで政府や民間と「集団で交渉」するための道具や取り決めを提案させ、政府が支える「データ連合」の取り組みにつなげました。例として、大気の質の見張りや、山火事の早めの警報が挙がっています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>6-Pack of Care のデータ連合。</strong> オードリー・タンとキャロライン・グリーン（Caroline Green）の <a href="six-pack-of-care.html">6-Pack of Care</a> は、町内会や組合、協同組合、宗教団体などの今ある共同体の組織を「データ連合」として位置づけます。組織はメンバーから預かった知識の管理人になり、AI との使用の契約を交渉し、何を共有して何をネットに出さないかを決めます。そして対価を、個人ごとではなく集団で受け取ります<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="kami.html">Kami</a></p>
 <h2>くわしく</h2>
 <h3>「無料」の裏側</h3>
-<p>HBR の論考は、いまのネットの大手企業のしくみを批判します。サービスを無料で使わせ、その費用を「利用者に影響を与えたい第三者」から取っている。その結果、社会が、納得の上の対話ではなく、こっそり注ぎ込まれる操作の上に築かれている、というのです[2]。</p>
-<p>また、動画サイトのような巨大な場は、動画を作る側と見る側の両方を握っています。どの作り手にいくら払うかを、たった一社が上から決めている、と二人は言います[2]。</p>
+<p>HBR の論考は、いまのネットの大手企業のしくみを批判します。サービスを無料で使わせ、その費用を「利用者に影響を与えたい第三者」から取っている。その結果、社会が、納得の上の対話ではなく、こっそり注ぎ込まれる操作の上に築かれている、というのです<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>また、動画サイトのような巨大な場は、動画を作る側と見る側の両方を握っています。どの作り手にいくら払うかを、たった一社が上から決めている、と二人は言います<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>データの尊厳とは</h3>
-<p>二人の提案は、人が自分のデータに対して支払いを受け、他人のデータを使うサービスには支払う、という本当の市場の経済です[1]。</p>
-<p>ワイルはこれを「データ労働」、ラニアーは「人間主義のデジタル経済学」と呼んできました。この論考では、政治の色が薄い「データの尊厳」という言葉を選んでいます。20 世紀の全体主義に立ち向かううえで中心だった「人間の尊厳」を、新しい権力の集中からデータを守るという、いまの場面に移したものだ、と二人は説明します[1]。</p>
-<p>同じ年の経済学の論文「Should We Treat Data as Labor?」も、利用者のデータを企業の資本とみなす扱いは、データを生む利用者の役割を無視し、利益を不公平に配る、と論じています[5]。</p>
-<p>ラニアーは 2023 年の『New Yorker』の記事で、デジタルのものが、それを作った人と結びついたまま流れる世界を描きました。大きな AI のモデルで組み替えられても、作った人が対価を得られる世界です[6]。</p>
+<p>二人の提案は、人が自分のデータに対して支払いを受け、他人のデータを使うサービスには支払う、という本当の市場の経済です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>ワイルはこれを「データ労働」、ラニアーは「人間主義のデジタル経済学」と呼んできました。この論考では、政治の色が薄い「データの尊厳」という言葉を選んでいます。20 世紀の全体主義に立ち向かううえで中心だった「人間の尊厳」を、新しい権力の集中からデータを守るという、いまの場面に移したものだ、と二人は説明します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>同じ年の経済学の論文「Should We Treat Data as Labor?」も、利用者のデータを企業の資本とみなす扱いは、データを生む利用者の役割を無視し、利益を不公平に配る、と論じています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>ラニアーは 2023 年の『New Yorker』の記事で、デジタルのものが、それを作った人と結びついたまま流れる世界を描きました。大きな AI のモデルで組み替えられても、作った人が対価を得られる世界です<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>個人ではなく、あいだの組織（MID）</h3>
-<p>巨大な企業と一人ひとりの力の差は、とても大きいものです。個人が一人でデータの尊厳を求めても、政府に規制を頼んでも、うまくいかない、と二人は言います[7]。</p>
-<p>そこで二人は、「個人データの仲介者（MID）」という中くらいの組織の層を提案します。MID は、独自の決まりを持つ有志の集まりです。メンバーのためにデータの使用料を交渉し、品質の基準やブランドをつくり、会計や法務も担います。二人は、企業・労働組合・農協・大学・出版社などが、物の世界で同じ役目を果たしてきたので、この発想そのものは目新しくない、とも書いています[7]。</p>
+<p>巨大な企業と一人ひとりの力の差は、とても大きいものです。個人が一人でデータの尊厳を求めても、政府に規制を頼んでも、うまくいかない、と二人は言います<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>そこで二人は、「個人データの仲介者（MID）」という中くらいの組織の層を提案します。MID は、独自の決まりを持つ有志の集まりです。メンバーのためにデータの使用料を交渉し、品質の基準やブランドをつくり、会計や法務も担います。二人は、企業・労働組合・農協・大学・出版社などが、物の世界で同じ役目を果たしてきたので、この発想そのものは目新しくない、とも書いています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>本『Plurality』での展開</h3>
-<p>本の 4-4 章は「データの尊厳」という言葉は使いませんが、この流れを財産とデータ共有の問題として引き継ぎます。本は、三つの理由から、データの持ち主を集団で代表する組織が要る、と書きます[8]。</p>
+<p>本の 4-4 章は「データの尊厳」という言葉は使いませんが、この流れを財産とデータ共有の問題として引き継ぎます。本は、三つの理由から、データの持ち主を集団で代表する組織が要る、と書きます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <ol>
 <li><strong>社会的なもれ。</strong> 遺伝の情報のように、一人のデータから他人のことがわかってしまう。</li>
 <li><strong>管理の難しさ。</strong> 一人では、共有が何を意味するのかを理解しきれない。</li>
 <li><strong>交渉の力。</strong> 巨大企業と対等に交渉するには、団体で交渉する必要がある。</li>
 </ol>
-<p>本は、そうした組織として、データ信託・協同組合・MID などを挙げます。今ある組織を広げる道もあります。たとえば、創作をする人の組合が作品を代表したり、ウィキペディアがボランティアの編集者の利益を代表したりすることです。一方、AI の学習に使われたオープンソースの貢献者や、ファンの二次創作の書き手のように、新しく組織をつくる必要がある場合もある、と本は書きます[8]。</p>
-<p>メンバーが勝手にデータを明かすのを防ぐ決まりも要る、と本は言います。労働組合でのスト破りの禁止にあたるものです[8]。</p>
+<p>本は、そうした組織として、データ信託・協同組合・MID などを挙げます。今ある組織を広げる道もあります。たとえば、創作をする人の組合が作品を代表したり、ウィキペディアがボランティアの編集者の利益を代表したりすることです。一方、AI の学習に使われたオープンソースの貢献者や、ファンの二次創作の書き手のように、新しく組織をつくる必要がある場合もある、と本は書きます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>メンバーが勝手にデータを明かすのを防ぐ決まりも要る、と本は言います。労働組合でのスト破りの禁止にあたるものです<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>ワイル自身の反省（2020 年）。</strong> ワイルは『Radical Markets』のデータの章を振り返り、「データ労働」のたとえは、労働運動の歴史と団体交渉を思い出させるためだった、と書きました。けれども、デジタルの取り分の話に偏り、情報の質（偽のニュース）、情報の流れ（プライバシー）、人の注意といった、集団で取り組むべき本当の力の問題を見落とした、と反省しています[9]。</li>
-<li><strong>考える手間（ブテリン、2018 年）。</strong> イーサリアムの創始者ヴィタリック・ブテリンは、<a href="harberger-tax.html">ハーバーガー税</a> への心配（人が数えきれない値付けを抱える負担）と同じ批判が、個人のデータの市場の多くにも当てはまるかもしれない、と述べています[10]。</li>
-<li><strong>ベーシックインカムとの対立。</strong> AI で仕事が失われるという心配から、「多くの人が貧しくなるか、国が管理するお金で全員に最低限の収入を配るか」という二択がよく出てきます。HBR の論考は、どちらも権力を集めすぎ、データを作る人の価値を無視する暗い未来だとして退けます[2]。ラニアーも 2023 年に、全員に配る収入の案は、中身の見えない AI という考えを守るために、全員を施しに頼らせるものだ、と批判しています[6]。</li>
-<li><strong>よくある誤解：「個人にデータ代を払う話」。</strong> 本・HBR の論考・6-Pack of Care のどれも、交渉と対価の単位を、個人ではなく、あいだの組織（MID やデータ連合）に置いています[7][8][4]。</li>
+<li><strong>ワイル自身の反省（2020 年）。</strong> ワイルは『Radical Markets』のデータの章を振り返り、「データ労働」のたとえは、労働運動の歴史と団体交渉を思い出させるためだった、と書きました。けれども、デジタルの取り分の話に偏り、情報の質（偽のニュース）、情報の流れ（プライバシー）、人の注意といった、集団で取り組むべき本当の力の問題を見落とした、と反省しています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>考える手間（ブテリン、2018 年）。</strong> イーサリアムの創始者ヴィタリック・ブテリンは、<a href="harberger-tax.html">ハーバーガー税</a> への心配（人が数えきれない値付けを抱える負担）と同じ批判が、個人のデータの市場の多くにも当てはまるかもしれない、と述べています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>ベーシックインカムとの対立。</strong> AI で仕事が失われるという心配から、「多くの人が貧しくなるか、国が管理するお金で全員に最低限の収入を配るか」という二択がよく出てきます。HBR の論考は、どちらも権力を集めすぎ、データを作る人の価値を無視する暗い未来だとして退けます<a class="cite" href="#src-2" data-src="src-2">[2]</a>。ラニアーも 2023 年に、全員に配る収入の案は、中身の見えない AI という考えを守るために、全員を施しに頼らせるものだ、と批判しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>よくある誤解：「個人にデータ代を払う話」。</strong> 本・HBR の論考・6-Pack of Care のどれも、交渉と対価の単位を、個人ではなく、あいだの組織（MID やデータ連合）に置いています<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本では、4-4 章「<a href="property-and-contract.html">財産と契約</a>」の「⿻ 財産」の、組織の層にあたります[8]。データが社会的なものだという議論は、<a href="contextual-integrity.html">コンテキストの完全性</a> と <a href="plural-publics.html">⿻公衆</a> から来ています。</p>
-<p>4-1 章「<a href="identity-and-personhood.html">ID と人物性</a>」では、MID が、本人確認のために一人が管理すべき関係の数を減らす「中くらいの仲介役」として登場します[11]。5-7 章「<a href="social-markets.html">社会市場</a>」は、「データ組合」を企業のあり方を変える改革の一つに数えます[12]。6-4 章（環境）は、川のデジタルの複製をめぐって、データ連合を、生態系の恵みを受ける人々がつくる小さな集まりとして位置づけます[13]。AI の学習データの問題（<a href="generative-foundation-models.html">生成基盤モデル</a>）とも直接つながります。</p>
+<p>本では、4-4 章「<a href="property-and-contract.html">財産と契約</a>」の「⿻ 財産」の、組織の層にあたります<a class="cite" href="#src-8" data-src="src-8">[8]</a>。データが社会的なものだという議論は、<a href="contextual-integrity.html">コンテキストの完全性</a> と <a href="plural-publics.html">⿻公衆</a> から来ています。</p>
+<p>4-1 章「<a href="identity-and-personhood.html">ID と人物性</a>」では、MID が、本人確認のために一人が管理すべき関係の数を減らす「中くらいの仲介役」として登場します<a class="cite" href="#src-11" data-src="src-11">[11]</a>。5-7 章「<a href="social-markets.html">社会市場</a>」は、「データ組合」を企業のあり方を変える改革の一つに数えます<a class="cite" href="#src-12" data-src="src-12">[12]</a>。6-4 章（環境）は、川のデジタルの複製をめぐって、データ連合を、生態系の恵みを受ける人々がつくる小さな集まりとして位置づけます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。AI の学習データの問題（<a href="generative-foundation-models.html">生成基盤モデル</a>）とも直接つながります。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>Lanier &amp; Weyl「A Blueprint for a Better Digital Society」（英語・論考、HBR 2018）— <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
@@ -92,17 +98,47 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Lanier &amp; Weyl「A Blueprint for a Better Digital Society」（HBR、2018）の「Data Dignity」の節 — <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
-<li>同上 冒頭 — <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
-<li>『Plurality』2-2「Hackathons, coalitions and quadratic signals」の節 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
-<li>civic.ai 用語集「data coalition」と FAQ — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a> ・ <a href="https://civic.ai/faq/" target="_blank" rel="noopener">https://civic.ai/faq/</a> ［CC0］</li>
-<li>Arrieta-Ibarra ほか「Should We Treat Data as Labor?」（2018）要旨 — <a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20181003" target="_blank" rel="noopener">https://www.aeaweb.org/articles?id=10.1257/pandp.20181003</a></li>
-<li>Jaron Lanier「There Is No A.I.」（New Yorker、2023-04-20）— <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai" target="_blank" rel="noopener">https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</a></li>
-<li>Lanier &amp; Weyl「A Blueprint for a Better Digital Society」の「MIDs」の節 — <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
-<li>『Plurality』4-4「⿻ property」の節 — <a href="https://www.plurality.net/v/chapters/4-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-4/eng/</a> ［CC0］</li>
-<li>E. Glen Weyl「Why I Am not a Market Radical」（2020）の Data as Labor の項 — <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
-<li>Vitalik Buterin「On Radical Markets」（2018）— <a href="https://vitalik.eth.limo/general/2018/04/20/radical_markets.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</a></li>
-<li>『Plurality』4-1「⿻ identity」の節 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
-<li>『Plurality』5-7「Social markets tomorrow」の節 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>『Plurality』6-4「Environment」— <a href="https://www.plurality.net/v/chapters/6-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-4/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='property-and-contract.html'>財産と契約（⿻ 財産）ってなに？</a> ・ <a href='contextual-integrity.html'>コンテキストの完全性ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='generative-foundation-models.html'>生成基盤モデル（GFM）ってなに？</a> ・ <a href='six-pack-of-care.html'>6-Pack of Care（ケアの6パック）ってなに？</a> ・ <a href='kami.html'>Kami（地神・小さな AI の守り手）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fdata-dignity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%B0%8A%E5%8E%B3%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fdata-dignity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Lanier &amp; Weyl「A Blueprint for a Better Digital Society」（HBR、2018）の「Data Dignity」の節 — <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
+<li id="src-2">同上 冒頭 — <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
+<li id="src-3">『Plurality』2-2「Hackathons, coalitions and quadratic signals」の節 — <a href="https://www.plurality.net/v/chapters/2-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/eng/</a> ［CC0］</li>
+<li id="src-4">civic.ai 用語集「data coalition」と FAQ — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a> ・ <a href="https://civic.ai/faq/" target="_blank" rel="noopener">https://civic.ai/faq/</a> ［CC0］</li>
+<li id="src-5">Arrieta-Ibarra ほか「Should We Treat Data as Labor?」（2018）要旨 — <a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20181003" target="_blank" rel="noopener">https://www.aeaweb.org/articles?id=10.1257/pandp.20181003</a></li>
+<li id="src-6">Jaron Lanier「There Is No A.I.」（New Yorker、2023-04-20）— <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai" target="_blank" rel="noopener">https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</a></li>
+<li id="src-7">Lanier &amp; Weyl「A Blueprint for a Better Digital Society」の「MIDs」の節 — <a href="https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society" target="_blank" rel="noopener">https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society</a></li>
+<li id="src-8">『Plurality』4-4「⿻ property」の節 — <a href="https://www.plurality.net/v/chapters/4-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-4/eng/</a> ［CC0］</li>
+<li id="src-9">E. Glen Weyl「Why I Am not a Market Radical」（2020）の Data as Labor の項 — <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
+<li id="src-10">Vitalik Buterin「On Radical Markets」（2018）— <a href="https://vitalik.eth.limo/general/2018/04/20/radical_markets.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2018/04/20/radical_markets.html</a></li>
+<li id="src-11">『Plurality』4-1「⿻ identity」の節 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a> ［CC0］</li>
+<li id="src-12">『Plurality』5-7「Social markets tomorrow」の節 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-13">『Plurality』6-4「Environment」— <a href="https://www.plurality.net/v/chapters/6-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-4/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='property-and-contract.html'>財産と契約（⿻ 財産）ってなに？</a> ・ <a href='contextual-integrity.html'>コンテキストの完全性ってなに？</a> ・ <a href='plural-publics.html'>⿻ 公衆（プルラル・パブリック）ってなに？</a> ・ <a href='identity-and-personhood.html'>ID と人物性（⿻ ID）ってなに？</a> ・ <a href='generative-foundation-models.html'>生成基盤モデル（GFM）ってなに？</a> ・ <a href='six-pack-of-care.html'>6-Pack of Care（ケアの6パック）ってなに？</a> ・ <a href='kami.html'>Kami（地神・小さな AI の守り手）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fdata-dignity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%B0%8A%E5%8E%B3%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fdata-dignity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

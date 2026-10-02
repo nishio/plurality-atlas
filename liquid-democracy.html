@@ -41,12 +41,18 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/liquid-democracy.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/liquid-democracy.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/liquid-democracy.html">简体中文</a></nav></header>
 <main lang="ja"><h1>液体民主主義ってなに？</h1><div class='lead'>議題ごとに「自分で投票する」か「信頼する誰かに票を預ける」かを選べる仕組みです。預かった人はさらに別の人へ預け直せ、預けた本人はいつでも取り消して自分で投票できます。</div><p>選挙では、数年に一度だれかを選んだら、あとは全部その人に任せることになります。でも「医療のことはあの人を信じるけれど、教育のことは自分で決めたい」と思うことはないでしょうか。液体民主主義（Liquid Democracy）は、任せるか自分で決めるかを、議題ごとに、いつでも選び直せるようにする考え方です。「液体」という名前は、票が水のように人から人へ流れていくことを表しています。</p>
 <h2>ひとことで言うと</h2>
-<p>液体民主主義は、議題ごとに「<strong>自分で投票する</strong>」か「<strong>信頼する誰かに票を預ける</strong>」かを選べる仕組みです。預かった人は、その票をさらに別の人に預け直せます。預けた本人は、いつでも取り消して自分で投票できます[1][2][3]。</p>
+<p>液体民主主義は、議題ごとに「<strong>自分で投票する</strong>」か「<strong>信頼する誰かに票を預ける</strong>」かを選べる仕組みです。預かった人は、その票をさらに別の人に預け直せます。預けた本人は、いつでも取り消して自分で投票できます<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>小さな例（説明のための作り話）。</strong> 5 人の町内会で「公園の改修」を決めるとします[1][2]。</p>
+<p><strong>小さな例（説明のための作り話）。</strong> 5 人の町内会で「公園の改修」を決めるとします<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ul>
 <li>A さんは、植物に詳しい B さんに票を預けます。</li>
 <li>B さんは、自分と A さんの 2 票を、造園の専門家の C さんに預け直します。</li>
@@ -54,36 +60,36 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li>D さんと E さんは、自分で 1 票ずつ投じます。</li>
 </ul>
 <p>合わせて 3 + 1 + 1 = 5 票で、人数と同じです。もし A さんが C さんの案に納得できなければ、この議題だけ預けるのをやめて、自分で投票できます。「税金の使い道」という別の議題では、A さんは会計に詳しい D さんに預けてもかまいません。</p>
-<p><strong>ドイツ海賊党（2000 年代後半〜2010 年代）。</strong> ドイツ語版ウィキペディアによれば、ドイツの海賊党は液体民主主義を今の議会に代わるものとして掲げ、党の中の意見づくりで票の委任（預けること）を使いました。預け直しが重なると、少数の人に大きな票が集まり、「スーパー代議員」と呼ばれました。2012 年、党の IT 担当者は、自分が預かる 79 票は的外れなことをすれば一晩で消えるかもしれない、と語っています[1]。</p>
-<p><strong>ドイツ・フリースラント郡（2012〜2015 年）。</strong> 同じくドイツ語版ウィキペディアによれば、この郡は液体民主主義で動く市民参加の場「LiquidFriesland」を作りました。しかし、市民は最初から使いませんでした。あとに続いた別の郡の場も使われず、2017 年 2 月の時点で、いちばん新しい投稿が 1 年前のものでした[1]。</p>
-<p><strong>本が挙げる例。</strong> 本『⿻ Plurality』は、会社やインターネット上の共同組織（DAO）の運営、アイスランドなどでの政治の場を挙げています。Plurality を広める非営利団体 RadicalxChange も、液体民主主義に平方根の重みを組み合わせる考え（クアドラティック液体民主主義）に関連する仕組みを、内部の意思決定に取り入れています[3][4]。</p>
+<p><strong>ドイツ海賊党（2000 年代後半〜2010 年代）。</strong> ドイツ語版ウィキペディアによれば、ドイツの海賊党は液体民主主義を今の議会に代わるものとして掲げ、党の中の意見づくりで票の委任（預けること）を使いました。預け直しが重なると、少数の人に大きな票が集まり、「スーパー代議員」と呼ばれました。2012 年、党の IT 担当者は、自分が預かる 79 票は的外れなことをすれば一晩で消えるかもしれない、と語っています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>ドイツ・フリースラント郡（2012〜2015 年）。</strong> 同じくドイツ語版ウィキペディアによれば、この郡は液体民主主義で動く市民参加の場「LiquidFriesland」を作りました。しかし、市民は最初から使いませんでした。あとに続いた別の郡の場も使われず、2017 年 2 月の時点で、いちばん新しい投稿が 1 年前のものでした<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>本が挙げる例。</strong> 本『⿻ Plurality』は、会社やインターネット上の共同組織（DAO）の運営、アイスランドなどでの政治の場を挙げています。Plurality を広める非営利団体 RadicalxChange も、液体民主主義に平方根の重みを組み合わせる考え（クアドラティック液体民主主義）に関連する仕組みを、内部の意思決定に取り入れています<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>しくみ</h2>
 <h3>三つの特徴</h3>
-<p>ドイツ語版ウィキペディアは、ふつうの代表制との違いを三つにまとめています[1]。</p>
+<p>ドイツ語版ウィキペディアは、ふつうの代表制との違いを三つにまとめています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <ol>
 <li><strong>細かく預けられる。</strong> 一つひとつの決定ごとにも、「環境」のような分野ごとにも預けられます。</li>
 <li><strong>いつでも取り消せる。</strong> 次の選挙を待つ必要がありません。</li>
 <li><strong>預け直せる。</strong> 預かった人が、さらに別の人に預けられます。</li>
 </ol>
-<p>フランス語版ウィキペディアは、研究者ブライアン・フォード（Bryan Ford）の論文に沿って、誰でも手軽に代議員になれること、代議員の判断は公開されること、個人の投票は秘密にされることなどの原則を挙げています。そして、直接民主制（全員が自分で決める）と代表民主制（代表に任せる）を合わせたものと見なせる、としています[2]。</p>
+<p>フランス語版ウィキペディアは、研究者ブライアン・フォード（Bryan Ford）の論文に沿って、誰でも手軽に代議員になれること、代議員の判断は公開されること、個人の投票は秘密にされることなどの原則を挙げています。そして、直接民主制（全員が自分で決める）と代表民主制（代表に任せる）を合わせたものと見なせる、としています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>本の説明と由来</h3>
-<p>本は 5-6 章で、液体民主主義を「比例代表の考えを広げたもの」と説明します。誰もが自分の票を他人に預けられ、預かった人がさらに預け直せることで、下から自然に代表が生まれる、というのです[3]。</p>
-<p>本はその源を、『不思議の国のアリス』の作者ルイス・キャロル（本名チャールズ・ドジソン）が 1884 年に書いた議会の代表についての研究にさかのぼらせます。ドジソンは、複数の票を持つ人の票をどう重みづけるかという、<a href="quadratic-voting.html">クアドラティック投票</a> の発想にもつながる問いを初めて立てた人でもある、と本は書いています[3]。</p>
+<p>本は 5-6 章で、液体民主主義を「比例代表の考えを広げたもの」と説明します。誰もが自分の票を他人に預けられ、預かった人がさらに預け直せることで、下から自然に代表が生まれる、というのです<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>本はその源を、『不思議の国のアリス』の作者ルイス・キャロル（本名チャールズ・ドジソン）が 1884 年に書いた議会の代表についての研究にさかのぼらせます。ドジソンは、複数の票を持つ人の票をどう重みづけるかという、<a href="quadratic-voting.html">クアドラティック投票</a> の発想にもつながる問いを初めて立てた人でもある、と本は書いています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h3>日本からの流れ ― 分人民主主義</h3>
-<p>本の注は、日本の研究者・起業家の鈴木健が提唱した「分人民主主義（divicracy）」を紹介しています。液体民主主義と違い、票を人に預けるだけでなく、1 票を分けて複数の争点に投じることもできます。鈴木は 2000 年代にこれを唱え、2013 年の本『なめらかな社会とその敵』でくわしく書きました[5]。鈴木の公式サイトは、1 票を分けて政策にも人にも投じられ、預かった票は預け直せ、投じた票はいつでも変えられる、と説明しています[6]。</p>
+<p>本の注は、日本の研究者・起業家の鈴木健が提唱した「分人民主主義（divicracy）」を紹介しています。液体民主主義と違い、票を人に預けるだけでなく、1 票を分けて複数の争点に投じることもできます。鈴木は 2000 年代にこれを唱え、2013 年の本『なめらかな社会とその敵』でくわしく書きました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。鈴木の公式サイトは、1 票を分けて政策にも人にも投じられ、預かった票は預け直せ、投じた票はいつでも変えられる、と説明しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>AI の時代の文脈</h3>
-<p>研究団体 Collective Intelligence Project の 2023 年の白書は、液体民主主義を人々の価値観を引き出す方法の一つに挙げ、おすすめの仕組みの設計に使う実験に触れています[7]。OpenAI が AI に市民の声を入れる試みを募ったときも、選択肢の一つに液体民主主義を挙げました[8]。本自身も、デジタルの助手が本人の考えを学び、本人の確認のもとで代わりに投票する仕組みを構想しています[4]。</p>
+<p>研究団体 Collective Intelligence Project の 2023 年の白書は、液体民主主義を人々の価値観を引き出す方法の一つに挙げ、おすすめの仕組みの設計に使う実験に触れています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。OpenAI が AI に市民の声を入れる試みを募ったときも、選択肢の一つに液体民主主義を挙げました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。本自身も、デジタルの助手が本人の考えを学び、本人の確認のもとで代わりに投票する仕組みを構想しています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>票が少数に集まる。</strong> 本自身が、票はしばしば少数の人に流れて力が集まりすぎ、そのせいで最初の熱気は少し冷めた、と認めています[3]。ドイツ海賊党の「スーパー代議員」はその例として語られてきました。ただしドイツ語版ウィキペディアは、預けた票はいつでも取り消せるので力は限られ、研究ではスーパー代議員はおおむね預けた人たちの意向に沿って票を使った、とも書いています[1]。</li>
-<li><strong>使われない。</strong> フリースラント郡の例のように、場を作っても市民が参加しないことがあります[1]。</li>
-<li><strong>秘密と確かめやすさの両立。</strong> ドイツ語版ウィキペディアは、ドイツの憲法裁判所が、投票の秘密と、正しく数えられたかを確かめられることを十分に両立する電子投票は今のところ技術的に難しい、と判断したことを挙げています。そのため、ある仕組みは投票を公開にして対処していますが、役員選挙のような秘密投票は別に行う必要がある、と書きます。デジタル機器に慣れない人が不利になる、という批判もあります[1]。</li>
-<li><strong>改良の案。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、液体民主主義を、民主主義と市場の中間にある仕組みの優れた例の一つに数えています[9]。2025 年には、エリーザー・ユドコウスキー（Eliezer Yudkowsky）の案を紹介しました。一人ひとりが代議員を選び、50〜200 票ほどを集めた代議員だけが力を持ち、それを 2〜3 段重ねて議会をつくる、というものです。ブテリンは、人気取り（ポピュリズム）に流されにくいが、まずどこかで試す必要がある、と書きました[10]。</li>
+<li><strong>票が少数に集まる。</strong> 本自身が、票はしばしば少数の人に流れて力が集まりすぎ、そのせいで最初の熱気は少し冷めた、と認めています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。ドイツ海賊党の「スーパー代議員」はその例として語られてきました。ただしドイツ語版ウィキペディアは、預けた票はいつでも取り消せるので力は限られ、研究ではスーパー代議員はおおむね預けた人たちの意向に沿って票を使った、とも書いています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>使われない。</strong> フリースラント郡の例のように、場を作っても市民が参加しないことがあります<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>秘密と確かめやすさの両立。</strong> ドイツ語版ウィキペディアは、ドイツの憲法裁判所が、投票の秘密と、正しく数えられたかを確かめられることを十分に両立する電子投票は今のところ技術的に難しい、と判断したことを挙げています。そのため、ある仕組みは投票を公開にして対処していますが、役員選挙のような秘密投票は別に行う必要がある、と書きます。デジタル機器に慣れない人が不利になる、という批判もあります<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>改良の案。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は、液体民主主義を、民主主義と市場の中間にある仕組みの優れた例の一つに数えています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2025 年には、エリーザー・ユドコウスキー（Eliezer Yudkowsky）の案を紹介しました。一人ひとりが代議員を選び、50〜200 票ほどを集めた代議員だけが力を持ち、それを 2〜3 段重ねて議会をつくる、というものです。ブテリンは、人気取り（ポピュリズム）に流されにくいが、まずどこかで試す必要がある、と書きました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>本は 5-6 章「<a href="plural-voting.html">⿻投票</a>」で、液体民主主義を <a href="quadratic-voting.html">クアドラティック投票</a> と並ぶ「有望だが不完全な」二つの工夫の一つとしています[3]。</p>
-<p>液体民主主義の弱点である力の集中について、本は、平方根の重みを使う「クアドラティック液体民主主義」が自然な治し方だとしています[4]。さらに、よく工夫された液体民主主義は、今ある分断を横切る新しい組み合わせの代表を生むので、妥協のために多様性を捨てずにすむかもしれない、とも書きます[11]。</p>
-<p>本の制作の運営に使った <a href="plural-management-protocol.html">Plural Management Protocol</a> のまわりでも、日本語の翻訳者たちの間で、液体民主主義に着想を得た委任のやり方で貢献の点を配る案が 2024 年 4 月に出されました[12]。</p>
+<p>本は 5-6 章「<a href="plural-voting.html">⿻投票</a>」で、液体民主主義を <a href="quadratic-voting.html">クアドラティック投票</a> と並ぶ「有望だが不完全な」二つの工夫の一つとしています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>液体民主主義の弱点である力の集中について、本は、平方根の重みを使う「クアドラティック液体民主主義」が自然な治し方だとしています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。さらに、よく工夫された液体民主主義は、今ある分断を横切る新しい組み合わせの代表を生むので、妥協のために多様性を捨てずにすむかもしれない、とも書きます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>本の制作の運営に使った <a href="plural-management-protocol.html">Plural Management Protocol</a> のまわりでも、日本語の翻訳者たちの間で、液体民主主義に着想を得た委任のやり方で貢献の点を配る案が 2024 年 4 月に出されました<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』5-6「⿻投票」（日本語・本）— <a href="https://www.plurality.net/v/chapters/5-6/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/jpn/</a></li>
@@ -95,16 +101,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>Liquid Democracy（ドイツ語版ウィキペディア）— <a href="https://de.wikipedia.org/wiki/Liquid_Democracy" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Liquid_Democracy</a></li>
-<li>Démocratie liquide（フランス語版ウィキペディア）— <a href="https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide" target="_blank" rel="noopener">https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide</a></li>
-<li>『Plurality』5-6「⿻ Voting tomorrow」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>『Plurality』5-6「Frontiers of voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>『Plurality』5-6 注（Divicracy）— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>鈴木健『なめらかな社会とその敵』公式の解説 — <a href="https://nameteki.kensuzuki.org/book-summary-enjazh-tw" target="_blank" rel="noopener">https://nameteki.kensuzuki.org/book-summary-enjazh-tw</a></li>
-<li>Collective Intelligence Project 白書（2023）— <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
-<li>OpenAI「Democratic Inputs to AI」（2023）— <a href="https://openai.com/index/democratic-inputs-to-ai/" target="_blank" rel="noopener">https://openai.com/index/democratic-inputs-to-ai/</a></li>
-<li>Vitalik Buterin「Blockchain voting is overrated among uninformed people but underrated among informed people」（2021）— <a href="https://vitalik.eth.limo/general/2021/05/25/voting2.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2021/05/25/voting2.html</a></li>
-<li>Vitalik Buterin「Let a thousand societies bloom」（2025）— <a href="https://vitalik.eth.limo/general/2025/12/17/societies.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/12/17/societies.html</a></li>
-<li>『Plurality』5-6「Limits of ⿻ voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-<li>日本語翻訳者のためのトークン配布プラン V2（Cosense）— <a href="https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2</a></li>
-</ol><div class='related'>関連: <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='plural-management-protocol.html'>Plural Management Protocol（PMP）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fliquid-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E6%B6%B2%E4%BD%93%E6%B0%91%E4%B8%BB%E4%B8%BB%E7%BE%A9%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fliquid-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">Liquid Democracy（ドイツ語版ウィキペディア）— <a href="https://de.wikipedia.org/wiki/Liquid_Democracy" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Liquid_Democracy</a></li>
+<li id="src-2">Démocratie liquide（フランス語版ウィキペディア）— <a href="https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide" target="_blank" rel="noopener">https://fr.wikipedia.org/wiki/D%C3%A9mocratie_liquide</a></li>
+<li id="src-3">『Plurality』5-6「⿻ Voting tomorrow」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』5-6「Frontiers of voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』5-6 注（Divicracy）— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-6">鈴木健『なめらかな社会とその敵』公式の解説 — <a href="https://nameteki.kensuzuki.org/book-summary-enjazh-tw" target="_blank" rel="noopener">https://nameteki.kensuzuki.org/book-summary-enjazh-tw</a></li>
+<li id="src-7">Collective Intelligence Project 白書（2023）— <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
+<li id="src-8">OpenAI「Democratic Inputs to AI」（2023）— <a href="https://openai.com/index/democratic-inputs-to-ai/" target="_blank" rel="noopener">https://openai.com/index/democratic-inputs-to-ai/</a></li>
+<li id="src-9">Vitalik Buterin「Blockchain voting is overrated among uninformed people but underrated among informed people」（2021）— <a href="https://vitalik.eth.limo/general/2021/05/25/voting2.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2021/05/25/voting2.html</a></li>
+<li id="src-10">Vitalik Buterin「Let a thousand societies bloom」（2025）— <a href="https://vitalik.eth.limo/general/2025/12/17/societies.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/12/17/societies.html</a></li>
+<li id="src-11">『Plurality』5-6「Limits of ⿻ voting」— <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+<li id="src-12">日本語翻訳者のためのトークン配布プラン V2（Cosense）— <a href="https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%97%E3%83%A9%E3%83%B3V2</a></li>
+</ol><div class='related'>関連: <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='quadratic-voting.html'>クアドラティック投票ってなに？</a> ・ <a href='plural-management-protocol.html'>Plural Management Protocol（PMP）ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fliquid-democracy.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E6%B6%B2%E4%BD%93%E6%B0%91%E4%B8%BB%E4%B8%BB%E7%BE%A9%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fliquid-democracy.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

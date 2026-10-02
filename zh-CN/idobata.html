@@ -41,48 +41,54 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../idobata.html">日本語</a> <a class="lang" hreflang="en" href="../en/idobata.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/idobata.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是いどばた（Idobata）？</h1><div class='lead'>每个人各自和 AI 聊天，再由 AI 把内容汇集起来，整理成论点与政策修改案的日本讨论工具。由デジタル民主主义2030（DD2030）免费公开，并用在未来团队（チームみらい，Team Mirai）的政见制定上。</div><p>很多人在同一个留言板上发言时，往往只有声音大的人的意见特别显眼，话题也收不拢。可是要一个一个听每个人说话，又太费工。「いどばた」（Idobata）就是想让 AI 一个一个听人说话、再把这些话串连起来，借此解决这个问题的工具。</p>
 <h2>一句话说明</h2>
-<p>いどばた是<strong>让每个人各自和 AI 一对一聊天，再由 AI 把内容汇集起来，整理成「大家的论点」或「政策修改案」的工具</strong>[1][2]。</p>
-<p>打造它的是日本的志愿者社群<a href="dd2030.html">デジタル民主主义2030（DD2030）</a>。为了让任何人都能免费重新使用，程式的内容是公开的（开源）[1]。</p>
+<p>いどばた是<strong>让每个人各自和 AI 一对一聊天，再由 AI 把内容汇集起来，整理成「大家的论点」或「政策修改案」的工具</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>打造它的是日本的志愿者社群<a href="dd2030.html">デジタル民主主义2030（DD2030）</a>。为了让任何人都能免费重新使用，程式的内容是公开的（开源）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>未来团队（チームみらい，Team Mirai）的「しゃべれるマニフェスト」（会说话的政见，2025 年参议院选举）。</strong> 由政党<a href="team-mirai.html">未来团队</a>在 2025-05-16 公开。选民和 AI 聊天时，AI 会一边提问，一边帮忙把想法化为语言。最后由 AI 整理出政见（公约）的修改提案并送出[2]。</p>
-<p>4 天后，党首安野贵博贴文说，提案书超过 1,300 件，是「预想的 10 倍以上」。最后收到的政策提案有 8,559 件[2]。</p>
-<p><strong>Cybozu（サイボウズ）公司内部的工作坊。</strong> AI 针对参与者写的内容回问，加以深挖。AI 在几分钟内读完 50 人份的聊天，把常出现的主题、意见一致与分歧之处做成报告[3]。</p>
-<p><strong>东大阪市的居民会议。</strong> 在居民彼此讨论的会议之后，いどばた被当作持续收集意见的场域。AI 整理出「把不安的未来，变成有希望的未来」等 12 个论点[4]。→〈<a href="municipal-broad-listening.html">地方政府的广泛倾听</a>〉</p>
+<p><strong>未来团队（チームみらい，Team Mirai）的「しゃべれるマニフェスト」（会说话的政见，2025 年参议院选举）。</strong> 由政党<a href="team-mirai.html">未来团队</a>在 2025-05-16 公开。选民和 AI 聊天时，AI 会一边提问，一边帮忙把想法化为语言。最后由 AI 整理出政见（公约）的修改提案并送出<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>4 天后，党首安野贵博贴文说，提案书超过 1,300 件，是「预想的 10 倍以上」。最后收到的政策提案有 8,559 件<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>Cybozu（サイボウズ）公司内部的工作坊。</strong> AI 针对参与者写的内容回问，加以深挖。AI 在几分钟内读完 50 人份的聊天，把常出现的主题、意见一致与分歧之处做成报告<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>东大阪市的居民会议。</strong> 在居民彼此讨论的会议之后，いどばた被当作持续收集意见的场域。AI 整理出「把不安的未来，变成有希望的未来」等 12 个论点<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→〈<a href="municipal-broad-listening.html">地方政府的广泛倾听</a>〉</p>
 <h2>运作方式</h2>
 <h3>两个零件</h3>
-<p>いどばた由两个可以分开使用的零件组成[1]。</p>
+<p>いどばた由两个可以分开使用的零件组成<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <ul>
 <li><strong>いどばたビジョン（Idobata Vision）</strong> — 由政党、地方政府、企业、学校等决定主题，用户在聊天中自由写下意见或问题，系统抽出重要的论点，整理成「重要论点」。这是用来广泛收集未来愿景与方向的零件。</li>
-<li><strong>いどばた政策（Idobata Policy）</strong> — 透过与用户的对话，修改既有草案（例如政见）的零件。修改提案会做成程式共享网站 GitHub 上的「Pull Request」（修改申请）[1][5]。</li>
+<li><strong>いどばた政策（Idobata Policy）</strong> — 透过与用户的对话，修改既有草案（例如政见）的零件。修改提案会做成程式共享网站 GitHub 上的「Pull Request」（修改申请）<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
 </ul>
-<p>说明文件（README）写道，把两者接续使用，就能一贯地处理从发现课题到把施策具体化的过程[1]。</p>
+<p>说明文件（README）写道，把两者接续使用，就能一贯地处理从发现课题到把施策具体化的过程<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>为什么要打造它</h3>
-<p>说明文件举出过去讨论尝试的课题：意见收不拢、只留下大声的意见、收集到的意见难以连结到政策[1]。</p>
-<p>在 2025-01-16 DD2030 的发起记者会上，安野把它宣布为「用民意反映政策」的项目。大意是参考台湾的 <a href="vtaiwan.html">vTaiwan</a> 与 Join（台湾政府的公民参与网站），打造能在网络上大规模讨论的场域[6][7]。</p>
+<p>说明文件举出过去讨论尝试的课题：意见收不拢、只留下大声的意见、收集到的意见难以连结到政策<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>在 2025-01-16 DD2030 的发起记者会上，安野把它宣布为「用民意反映政策」的项目。大意是参考台湾的 <a href="vtaiwan.html">vTaiwan</a> 与 Join（台湾政府的公民参与网站），打造能在网络上大规模讨论的场域<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>「透过 AI 相连」的新形式</h3>
-<p>《广泛倾听》（原书名《政治・自治体・企业に広がるブロードリスニング》，DD2030 社群的志愿者写的书）中西尾泰和的一节，把いどばた说明为「第三种形式」的沟通[2]。</p>
+<p>《广泛倾听》（原书名《政治・自治体・企业に広がるブロードリスニング》，DD2030 社群的志愿者写的书）中西尾泰和的一节，把いどばた说明为「第三种形式」的沟通<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ul>
 <li>第一种，是大家都在同一个聊天室的形式（留言板等）。</li>
 <li>第二种，是只有一个人和 AI 的封闭形式（ChatGPT 等）。</li>
 <li>第三种就是いどばた：分处不同聊天室的人们，透过 AI 相连。</li>
 </ul>
-<p>例如，いどばた政策的 AI 们共享「目前的政见」。当人类认可了从某人的对话中产生的修改案，下一个和人对话的 AI，就会读取修改后的政见来对话[2]。西尾把这连结到哲学家约翰·杜威（John Dewey）的讨论：技术的变化会改变「公共」的形态[2]。→〈<a href="emergent-publics.html">新兴公众</a>〉</p>
+<p>例如，いどばた政策的 AI 们共享「目前的政见」。当人类认可了从某人的对话中产生的修改案，下一个和人对话的 AI，就会读取修改后的政见来对话<a class="cite" href="#src-2" data-src="src-2">[2]</a>。西尾把这连结到哲学家约翰·杜威（John Dewey）的讨论：技术的变化会改变「公共」的形态<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→〈<a href="emergent-publics.html">新兴公众</a>〉</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>没有被接住的感觉。</strong> 「しゃべれるマニフェスト」在送出提案之后就结束了。之后提案怎么被处理，提案者本人看不到，因此出现了自己的意见没有被接住的声音。西尾总结说，需要能一路追踪意见「去了哪里」的机制[2]。</li>
-<li><strong>提案太细而互相冲突。</strong> 同一个地方叠了数十件修改案，负责人只能全部读完再重写，变成靠蛮力处理。西尾写道，AI 该问的，也许不是「文字要怎么改」，而是「你在为什么困扰」。西尾并引用唐凤的讨论程序：先收集事实，再收集感受，之后才询问点子[2]。</li>
-<li><strong>GitHub 直接变成了留言板。</strong> 曾有一件提案被留了 236 则留言[8]。出现了带刺的争吵，也有人擅自把安野的大头照拿来当头像。在 X 上，还流传着把这些误解为「未来团队内部讨论」的资讯。西尾写道，当初应该不让人直接看到 GitHub，而是用专用的画面把它包起来[2]。</li>
-<li><strong>提案的品质与责任。</strong> 一位市民的 note 文章介绍了一些批评，例如原本提案的品质很低、审查方式应该修正。文章甚至写道，开源型的公民参与责任归属模糊，未来团队实质上把收集到的提案丢掉了。不过，这些主张有一部分未经确认[9]。作为参考，未来团队政策仓库收到的提案共 9,686 件，其中被采纳的是 194 件；GitHub 上的政见更新在 2025-07-26 就结束了[10][11]。</li>
-<li><strong>看不太出是什么用途的工具。</strong> 另一位 note 作者写下感想：いどばたビジョン对第一次使用的人来说用途不容易理解，气氛像是公众意见征集（行政机关的意见征集）[12]。</li>
-<li><strong>由谁决定听取的范围？</strong> 杂志《Noema》的文章（2026 年 6 月）指出，未来团队在 2026 年众议院选举中使用的 AI 聊天机器人程式，设定了对话中要避开的「NG 词」（禁用词）（文章并没有点名这个聊天机器人就是いどばた）。文章的问题是：加上底层 AI（Claude）那一侧的限制，政治对话的界线可能在好几个地方被决定。另一方面，文章也评价这个工具不勉强制造共识、把判断留给党与选民，这一点是民主的[13]。</li>
+<li><strong>没有被接住的感觉。</strong> 「しゃべれるマニフェスト」在送出提案之后就结束了。之后提案怎么被处理，提案者本人看不到，因此出现了自己的意见没有被接住的声音。西尾总结说，需要能一路追踪意见「去了哪里」的机制<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
+<li><strong>提案太细而互相冲突。</strong> 同一个地方叠了数十件修改案，负责人只能全部读完再重写，变成靠蛮力处理。西尾写道，AI 该问的，也许不是「文字要怎么改」，而是「你在为什么困扰」。西尾并引用唐凤的讨论程序：先收集事实，再收集感受，之后才询问点子<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
+<li><strong>GitHub 直接变成了留言板。</strong> 曾有一件提案被留了 236 则留言<a class="cite" href="#src-8" data-src="src-8">[8]</a>。出现了带刺的争吵，也有人擅自把安野的大头照拿来当头像。在 X 上，还流传着把这些误解为「未来团队内部讨论」的资讯。西尾写道，当初应该不让人直接看到 GitHub，而是用专用的画面把它包起来<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
+<li><strong>提案的品质与责任。</strong> 一位市民的 note 文章介绍了一些批评，例如原本提案的品质很低、审查方式应该修正。文章甚至写道，开源型的公民参与责任归属模糊，未来团队实质上把收集到的提案丢掉了。不过，这些主张有一部分未经确认<a class="cite" href="#src-9" data-src="src-9">[9]</a>。作为参考，未来团队政策仓库收到的提案共 9,686 件，其中被采纳的是 194 件；GitHub 上的政见更新在 2025-07-26 就结束了<a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>看不太出是什么用途的工具。</strong> 另一位 note 作者写下感想：いどばたビジョン对第一次使用的人来说用途不容易理解，气氛像是公众意见征集（行政机关的意见征集）<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>由谁决定听取的范围？</strong> 杂志《Noema》的文章（2026 年 6 月）指出，未来团队在 2026 年众议院选举中使用的 AI 聊天机器人程式，设定了对话中要避开的「NG 词」（禁用词）（文章并没有点名这个聊天机器人就是いどばた）。文章的问题是：加上底层 AI（Claude）那一侧的限制，政治对话的界线可能在好几个地方被决定。另一方面，文章也评价这个工具不勉强制造共识、把判断留给党与选民，这一点是民主的<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>《Plurality》一书没有提到いどばた的名字。不过，它相当于 5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉所描绘、让对话能以大规模进行的工具（<a href="polis.html">Polis</a>、vTaiwan、用 AI 进行的<a href="broad-listening.html">广泛倾听</a>）在日本的实作之一[14]。</p>
-<p>同样出自 DD2030 的<a href="kouchou-ai.html">広聴AI</a>，是「把收集到的声音画成地图」的工具；いどばた则负责「一个一个听取声音、加以整理、连结到下一步行动」的那一侧。两者是 DD2030 发起时 3 个项目中的两个[6]。</p>
-<p>《广泛倾听》强调，いどばた不是「未来团队的所有物」，而是任何人都能使用的公共财产。书中也写道，2025 年另一个政党也在准备导入，但因为对方负责人的人事调动而不了了之[2]。</p>
+<p>《Plurality》一书没有提到いどばた的名字。不过，它相当于 5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉所描绘、让对话能以大规模进行的工具（<a href="polis.html">Polis</a>、vTaiwan、用 AI 进行的<a href="broad-listening.html">广泛倾听</a>）在日本的实作之一<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
+<p>同样出自 DD2030 的<a href="kouchou-ai.html">広聴AI</a>，是「把收集到的声音画成地图」的工具；いどばた则负责「一个一个听取声音、加以整理、连结到下一步行动」的那一侧。两者是 DD2030 发起时 3 个项目中的两个<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>《广泛倾听》强调，いどばた不是「未来团队的所有物」，而是任何人都能使用的公共财产。书中也写道，2025 年另一个政党也在准备导入，但因为对方负责人的人事调动而不了了之<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》5-4〈扩增审议〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
@@ -95,18 +101,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>idobata README（日文）— <a href="https://github.com/digitaldemocracy2030/idobata" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/idobata</a></li>
-<li>《ブロードリスニング》6.1〈チームみらい〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》9.2〈サイボウズ〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》10.3〈多元现実〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>《ブロードリスニング》附录〈用语集〉（英文版）— <a href="https://broadlisteningbook.com/" target="_blank" rel="noopener">https://broadlisteningbook.com/</a></li>
-<li>DD2030 发起记者会全文（日文）— <a href="https://note.com/annotakahiro24/n/nfd4a855cd1a8" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/nfd4a855cd1a8</a></li>
-<li>DD2030「いどばた」介绍页（日文）— <a href="https://dd2030.org/idobata" target="_blank" rel="noopener">https://dd2030.org/idobata</a></li>
-<li>西尾泰和「チームみらいの社会実験『しゃべれるマニフェスト』から得られた知见」（日文）— <a href="https://note.com/nishiohirokazu/n/nb35e8d526fd4" target="_blank" rel="noopener">https://note.com/nishiohirokazu/n/nb35e8d526fd4</a></li>
-<li>「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note，日文）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
-<li>team-mirai/policy 仓库（2026-09-24 时的件数）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
-<li>team-mirai/policy README（日文）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
-<li>电気好太郎「デジタル民主主义２０３０の『いどばたビジョン』って何のツールなの？」（note，2025-06-03，日文）— <a href="https://note.com/denkikotaro/n/nf9df91dcb4af" target="_blank" rel="noopener">https://note.com/denkikotaro/n/nf9df91dcb4af</a></li>
-<li>Noema, "Democracy Needs Friction To Function"（2026-06-10）— <a href="https://www.noemamag.com/democracy-needs-friction-to-function" target="_blank" rel="noopener">https://www.noemamag.com/democracy-needs-friction-to-function</a></li>
-<li>《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
-</ol><div class='related'>相关: <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='team-mirai.html'>什么是未来团队（チームみらい，Team Mirai）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='polis.html'>什么是 Polis？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fidobata.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E3%81%84%E3%81%A9%E3%81%B0%E3%81%9F%EF%BC%88Idobata%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fidobata.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">idobata README（日文）— <a href="https://github.com/digitaldemocracy2030/idobata" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/idobata</a></li>
+<li id="src-2">《ブロードリスニング》6.1〈チームみらい〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-3">《ブロードリスニング》9.2〈サイボウズ〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-4">《ブロードリスニング》10.3〈多元现実〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-5">《ブロードリスニング》附录〈用语集〉（英文版）— <a href="https://broadlisteningbook.com/" target="_blank" rel="noopener">https://broadlisteningbook.com/</a></li>
+<li id="src-6">DD2030 发起记者会全文（日文）— <a href="https://note.com/annotakahiro24/n/nfd4a855cd1a8" target="_blank" rel="noopener">https://note.com/annotakahiro24/n/nfd4a855cd1a8</a></li>
+<li id="src-7">DD2030「いどばた」介绍页（日文）— <a href="https://dd2030.org/idobata" target="_blank" rel="noopener">https://dd2030.org/idobata</a></li>
+<li id="src-8">西尾泰和「チームみらいの社会実験『しゃべれるマニフェスト』から得られた知见」（日文）— <a href="https://note.com/nishiohirokazu/n/nb35e8d526fd4" target="_blank" rel="noopener">https://note.com/nishiohirokazu/n/nb35e8d526fd4</a></li>
+<li id="src-9">「『チームみらい』が唱える『Plurality』は看板だけにならないか」（note，日文）— <a href="https://note.com/ippanjin_2025/n/n299555fb4908" target="_blank" rel="noopener">https://note.com/ippanjin_2025/n/n299555fb4908</a></li>
+<li id="src-10">team-mirai/policy 仓库（2026-09-24 时的件数）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
+<li id="src-11">team-mirai/policy README（日文）— <a href="https://github.com/team-mirai/policy" target="_blank" rel="noopener">https://github.com/team-mirai/policy</a></li>
+<li id="src-12">电気好太郎「デジタル民主主义２０３０の『いどばたビジョン』って何のツールなの？」（note，2025-06-03，日文）— <a href="https://note.com/denkikotaro/n/nf9df91dcb4af" target="_blank" rel="noopener">https://note.com/denkikotaro/n/nf9df91dcb4af</a></li>
+<li id="src-13">Noema, "Democracy Needs Friction To Function"（2026-06-10）— <a href="https://www.noemamag.com/democracy-needs-friction-to-function" target="_blank" rel="noopener">https://www.noemamag.com/democracy-needs-friction-to-function</a></li>
+<li id="src-14">《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+</ol><div class='related'>相关: <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a> ・ <a href='team-mirai.html'>什么是未来团队（チームみらい，Team Mirai）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='polis.html'>什么是 Polis？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fidobata.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E3%81%84%E3%81%A9%E3%81%B0%E3%81%9F%EF%BC%88Idobata%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fidobata.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

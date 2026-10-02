@@ -41,38 +41,44 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/collaborative-technology.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/collaborative-technology.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/collaborative-technology.html">简体中文</a></nav></header>
 <main lang="ja"><h1>協働テクノロジーってなに？</h1><div class='lead'>人の代わりに働く技術ではなく、人どうし、とくに立場や文化の違う人どうしが一緒に考え、決め、作るのを助ける技術のことです。本『⿻ Plurality』の副題に使われた言葉で、本の第 5 部が熟議・投票・市場・共同創作などの具体例を並べています。</div><p>「技術の進歩」と聞くと、多くの人は機械が人の仕事を肩代わりする姿を思い浮かべます。けれども、技術にはもう一つの向きがあります。人どうしが話し合い、決め、一緒に作るのを手伝う向きです。本『⿻ Plurality』は、この二つ目の向きの技術を「協働テクノロジー」と呼び、本の副題にも使っています。</p>
 <h2>ひとことで言うと</h2>
 <p>協働テクノロジー（collaborative technology）とは、<strong>人どうしが一緒に考え、決め、作るのを助ける技術</strong>のことです。</p>
-<p>本は、デジタルの道具を「人間や信頼を置き換えるため」ではなく、社会の多様さが持つエネルギーを対立ではなく前進に向けるために使う、と説明しています[1]。本の英語版の副題は「The Future of Collaborative Technology and Democracy」です[2]。日本語版の書名は『PLURALITY 対立を創造に変える、協働テクノロジーと民主主義の未来』です[3]。</p>
+<p>本は、デジタルの道具を「人間や信頼を置き換えるため」ではなく、社会の多様さが持つエネルギーを対立ではなく前進に向けるために使う、と説明しています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本の英語版の副題は「The Future of Collaborative Technology and Democracy」です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。日本語版の書名は『PLURALITY 対立を創造に変える、協働テクノロジーと民主主義の未来』です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>この本そのもの。</strong> 本の文章は、ソフトウェア開発で使う Git（変更の履歴を管理する道具）で管理され、CC0（著作権を放棄して誰でも自由に使える形）で公開されました[4]。作業の優先順位と報酬は、クラウドファンディングに似たやり方で決めました。貢献は、仲間うちの通貨とグループの ID の印で記録しました。意見が割れた点は、話し合いの道具で解きました。本は、第 5 部で紹介する道具で自分自身を作り、「語るだけでなく見せる」ことを目指した、と書いています[4]。</p>
-<p><strong>Wikipedia とオープンソース。</strong> 本は、誰でも編集できる Wikipedia と、Linux や GitHub に代表されるオープンソース・ソフトウェア（設計図を公開して誰でも改良できるソフト）を挙げます[5]。どちらも、開かれた協働による自己統治が大きな規模で成功した「光の点」だ、というのが本の見方です[5]。</p>
-<p><strong>エンゲルバートの「すべてのデモの母」。</strong> 米国の研究資金機関 ARPA の支援を受けたダグラス・エンゲルバート（Douglas Engelbart）は、マウスやハイパーテキスト（文書どうしをリンクでつなぐしくみ）を含むシステム NLS を公開しました[6]。ARPA のリックライダー（J. C. R. Licklider）が最初に資金を出してから、わずか 6 年後のことです[6]。本はこれを、人の知性を機械で置き換えるのではなく、広げる流れの代表として描いています[6]。</p>
+<p><strong>この本そのもの。</strong> 本の文章は、ソフトウェア開発で使う Git（変更の履歴を管理する道具）で管理され、CC0（著作権を放棄して誰でも自由に使える形）で公開されました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。作業の優先順位と報酬は、クラウドファンディングに似たやり方で決めました。貢献は、仲間うちの通貨とグループの ID の印で記録しました。意見が割れた点は、話し合いの道具で解きました。本は、第 5 部で紹介する道具で自分自身を作り、「語るだけでなく見せる」ことを目指した、と書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>Wikipedia とオープンソース。</strong> 本は、誰でも編集できる Wikipedia と、Linux や GitHub に代表されるオープンソース・ソフトウェア（設計図を公開して誰でも改良できるソフト）を挙げます<a class="cite" href="#src-5" data-src="src-5">[5]</a>。どちらも、開かれた協働による自己統治が大きな規模で成功した「光の点」だ、というのが本の見方です<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>エンゲルバートの「すべてのデモの母」。</strong> 米国の研究資金機関 ARPA の支援を受けたダグラス・エンゲルバート（Douglas Engelbart）は、マウスやハイパーテキスト（文書どうしをリンクでつなぐしくみ）を含むシステム NLS を公開しました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。ARPA のリックライダー（J. C. R. Licklider）が最初に資金を出してから、わずか 6 年後のことです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本はこれを、人の知性を機械で置き換えるのではなく、広げる流れの代表として描いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>しくみ</h2>
 <h3>本の言う「協働」</h3>
-<p>本の 5-0 章は、協働を「複数の人や集団が、共通の目標に向けて共に働くこと」と定めます[7]。そのうえで本が本当に注目するのは、一緒に働くことで、部分を足したより大きなものが生まれる力です[7]。本はこれを数学の言葉で「スーパーモジュラリティ」と呼びます。</p>
-<p>ここでいう「得るもの」は、お金に限りません。集まる人や共同体が何を大事にするかで決まる、と本は言います[7]。</p>
+<p>本の 5-0 章は、協働を「複数の人や集団が、共通の目標に向けて共に働くこと」と定めます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。そのうえで本が本当に注目するのは、一緒に働くことで、部分を足したより大きなものが生まれる力です<a class="cite" href="#src-7" data-src="src-7">[7]</a>。本はこれを数学の言葉で「スーパーモジュラリティ」と呼びます。</p>
+<p>ここでいう「得るもの」は、お金に限りません。集まる人や共同体が何を大事にするかで決まる、と本は言います<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>「民主主義」の意味を広げる</h3>
-<p>第 5 部の題は「民主主義」です。けれども本は、国の政治の制度という普通の意味をはるかに超えて、あらゆる協働を扱う、と断っています[7]。序文も、Plurality を「民主主義と協働テクノロジーがたがいに支え合う関係」と言い換えています[8]。</p>
+<p>第 5 部の題は「民主主義」です。けれども本は、国の政治の制度という普通の意味をはるかに超えて、あらゆる協働を扱う、と断っています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。序文も、Plurality を「民主主義と協働テクノロジーがたがいに支え合う関係」と言い換えています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>深さと広さ</h3>
-<p>協働には兼ね合いがあります[9]。少人数の似た人どうしで深くつながるか、多くの違う人と浅くつながるか、です。本は「深さ」を足し算以上の効果の大きさ、「広さ」を社会や文化の距離をまたいで人を含める度合い、と説明します[9]。</p>
-<p>本は、親しい人間関係から国、市場までを一本の線の上に並べる図（図 5-0-A）を示します[9]。Plurality の目標は、この線をあらゆる点で外側へ押し広げること、つまり深さと広さを同時に高めることです[9]。本によれば、「話し合いを重んじる民主主義」と「選挙を重んじる民主主義」の論争も、この線の上の「国」の範囲にある 2 点にすぎません[9]。</p>
+<p>協働には兼ね合いがあります<a class="cite" href="#src-9" data-src="src-9">[9]</a>。少人数の似た人どうしで深くつながるか、多くの違う人と浅くつながるか、です。本は「深さ」を足し算以上の効果の大きさ、「広さ」を社会や文化の距離をまたいで人を含める度合い、と説明します<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>本は、親しい人間関係から国、市場までを一本の線の上に並べる図（図 5-0-A）を示します<a class="cite" href="#src-9" data-src="src-9">[9]</a>。Plurality の目標は、この線をあらゆる点で外側へ押し広げること、つまり深さと広さを同時に高めることです<a class="cite" href="#src-9" data-src="src-9">[9]</a>。本によれば、「話し合いを重んじる民主主義」と「選挙を重んじる民主主義」の論争も、この線の上の「国」の範囲にある 2 点にすぎません<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>設計の原則</h3>
-<p>本は二つの失敗を避けたいと言います[10]。一つは、はじめに目的を一つ決めて、それを最大にしようとすること。本はこれを「早すぎる最適化」と呼びます。もう一つは、目的を持たずに生活をまねるだけの技術です。こうした技術は権力やもうけに取り込まれやすい、と本は言います[10]。</p>
-<p>その間を通る原則として、本は「より大きな協力と合意を可能にすると同時に、より大きな多様性の余地をつくる道具を作る」を掲げます[10]。</p>
-<p>また、違いに橋を架けると違いがすり減る（みんなが似てくる）危険もあります。そこで本は、多様性を「再生」させることも目標に含めています[11]。</p>
+<p>本は二つの失敗を避けたいと言います<a class="cite" href="#src-10" data-src="src-10">[10]</a>。一つは、はじめに目的を一つ決めて、それを最大にしようとすること。本はこれを「早すぎる最適化」と呼びます。もう一つは、目的を持たずに生活をまねるだけの技術です。こうした技術は権力やもうけに取り込まれやすい、と本は言います<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>その間を通る原則として、本は「より大きな協力と合意を可能にすると同時に、より大きな多様性の余地をつくる道具を作る」を掲げます<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>また、違いに橋を架けると違いがすり減る（みんなが似てくる）危険もあります。そこで本は、多様性を「再生」させることも目標に含めています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>歴史の中で</h3>
-<p>本の 3-3 章によると、この発想は ARPA のリックライダーが唱えた「人間とコンピュータの共生」にさかのぼります[6]。リックライダーとテイラーの論文「通信装置としてのコンピュータ」（本文では 1968 年、脚注では 1967 年）もその流れにあります。本は、この論文が、数十年後のパソコン・インターネット・スマートフォンの文化の多くを描き出していた、と書いています[12]。</p>
+<p>本の 3-3 章によると、この発想は ARPA のリックライダーが唱えた「人間とコンピュータの共生」にさかのぼります<a class="cite" href="#src-6" data-src="src-6">[6]</a>。リックライダーとテイラーの論文「通信装置としてのコンピュータ」（本文では 1968 年、脚注では 1967 年）もその流れにあります。本は、この論文が、数十年後のパソコン・インターネット・スマートフォンの文化の多くを描き出していた、と書いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「技術で民主主義は直せない」という批判。</strong> Netopia に載ったラルフ・グレトカー（Ralf Grötker）の書評は、意見集約ツール Polis の成功は政府が取り入れるかどうか次第で、民主主義は結局は権力の問題だ、と論じます[13]。そのうえで本を、技術で何でも解けると考える「ソリューショニズム」だと評しています[13]。</li>
-<li><strong>みんなが似てくる危険は、本自身も認めています。</strong> 橋渡しは多様性を減らしうるとし、各章でリスクと、その和らげ方を扱う構成にしています[11][14]。</li>
-<li><strong>訳語の注意。</strong> トルコ語訳の訳語集は、「collaborative」を「işbirlikçi」と訳さない、と明記しています[15]。この語はトルコ語では「敵に協力する者」という意味を持つからです。代わりに「işbirliğine dayalı（協働に基づく）」を使います[15]。</li>
+<li><strong>「技術で民主主義は直せない」という批判。</strong> Netopia に載ったラルフ・グレトカー（Ralf Grötker）の書評は、意見集約ツール Polis の成功は政府が取り入れるかどうか次第で、民主主義は結局は権力の問題だ、と論じます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。そのうえで本を、技術で何でも解けると考える「ソリューショニズム」だと評しています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>みんなが似てくる危険は、本自身も認めています。</strong> 橋渡しは多様性を減らしうるとし、各章でリスクと、その和らげ方を扱う構成にしています<a class="cite" href="#src-11" data-src="src-11">[11]</a><a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
+<li><strong>訳語の注意。</strong> トルコ語訳の訳語集は、「collaborative」を「işbirlikçi」と訳さない、と明記しています<a class="cite" href="#src-15" data-src="src-15">[15]</a>。この語はトルコ語では「敵に協力する者」という意味を持つからです。代わりに「işbirliğine dayalı（協働に基づく）」を使います<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>協働テクノロジーは、本の第 5 部「民主主義」の主題です。5-0 章が枠組みを示し、深い側から広い側へ 7 つの章が続きます[1][9]。</p>
+<p>協働テクノロジーは、本の第 5 部「民主主義」の主題です。5-0 章が枠組みを示し、深い側から広い側へ 7 つの章が続きます<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <ol>
 <li><a href="post-symbolic-communication.html">ポスト表象コミュニケーション</a>（5-1）</li>
 <li><a href="immersive-shared-reality.html">没入型共有現実</a>（5-2）</li>
@@ -82,7 +88,7 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li><a href="plural-voting.html">⿻ 投票</a>（5-6）</li>
 <li><a href="social-markets.html">社会市場</a>（5-7）</li>
 </ol>
-<p>本の要約は、第 5 部の核を「社会的差異をまたぐ協働のための技術」としています[1]。これは <a href="plurality.html">Plurality</a> の定義そのものです。くわしくは <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a> の記事をどうぞ。</p>
+<p>本の要約は、第 5 部の核を「社会的差異をまたぐ協働のための技術」としています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。これは <a href="plurality.html">Plurality</a> の定義そのものです。くわしくは <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a> の記事をどうぞ。</p>
 <p>土台になるのは、第 4 部の <a href="rights-os.html">権利 OS</a>（ID・人の集まり・取引・財産・アクセスの基本のしくみ）です。政治の文脈では <a href="digital-democracy.html">デジタル民主主義</a> とつながります。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -94,19 +100,49 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』各部の要約（Part 3・Part 5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』の書誌 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>鈴木健「Plurality 日本語版解説」— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
-<li>『Plurality』5-0「Collaborative Technology and Democracy」冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』3-3「The Lost Dao」小節「Nodes of light」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>同上、小節「Sputnik and the Advanced Research Projects Agency」「The Intergalactic Computer Network」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-0、区切り線のあとの段落 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』序文（英語版）— <a href="https://www.plurality.net/v/chapters/1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/1/eng/</a> ［CC0］</li>
-<li>『Plurality』5-0、節「The depth-breadth spectrum」と図 5-0-A — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>同上、節「Goals, affordances and multipolarity」— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>同上、節「Collaboration across diversity: promise and challenges」の末尾と節「Regenerating diversity」— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』3-3、小節「A network of networks」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>Ralf Grötker「Why Technology Can't "Fix" Democracy」（Netopia、2026-08-16）— <a href="https://www.netopia.eu/why-technology-cant-fix-democracy/" target="_blank" rel="noopener">https://www.netopia.eu/why-technology-cant-fix-democracy/</a></li>
-<li>『Plurality』5-0、章末の構成の段落 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>トルコ語訳の訳語集 — <a href="https://github.com/omgbbqhaxx/plurality" target="_blank" rel="noopener">https://github.com/omgbbqhaxx/plurality</a></li>
-</ol><div class='related'>関連: <a href='plurality.html'>⿻ Plurality（プルラリティ）ってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a> ・ <a href='supermodularity.html'>スーパーモジュラリティってなに？</a> ・ <a href='digital-democracy.html'>デジタル民主主義ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcollaborative-technology.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%8D%94%E5%83%8D%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcollaborative-technology.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』各部の要約（Part 3・Part 5）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-2">『Plurality』の書誌 — <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-3">鈴木健「Plurality 日本語版解説」— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li id="src-4">『Plurality』5-0「Collaborative Technology and Democracy」冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』3-3「The Lost Dao」小節「Nodes of light」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-6">同上、小節「Sputnik and the Advanced Research Projects Agency」「The Intergalactic Computer Network」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-7">『Plurality』5-0、区切り線のあとの段落 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-8">『Plurality』序文（英語版）— <a href="https://www.plurality.net/v/chapters/1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/1/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』5-0、節「The depth-breadth spectrum」と図 5-0-A — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-10">同上、節「Goals, affordances and multipolarity」— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-11">同上、節「Collaboration across diversity: promise and challenges」の末尾と節「Regenerating diversity」— <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-12">『Plurality』3-3、小節「A network of networks」— <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-13">Ralf Grötker「Why Technology Can't "Fix" Democracy」（Netopia、2026-08-16）— <a href="https://www.netopia.eu/why-technology-cant-fix-democracy/" target="_blank" rel="noopener">https://www.netopia.eu/why-technology-cant-fix-democracy/</a></li>
+<li id="src-14">『Plurality』5-0、章末の構成の段落 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-15">トルコ語訳の訳語集 — <a href="https://github.com/omgbbqhaxx/plurality" target="_blank" rel="noopener">https://github.com/omgbbqhaxx/plurality</a></li>
+</ol><div class='related'>関連: <a href='plurality.html'>⿻ Plurality（プルラリティ）ってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a> ・ <a href='supermodularity.html'>スーパーモジュラリティってなに？</a> ・ <a href='digital-democracy.html'>デジタル民主主義ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='plural-voting.html'>⿻投票（プルラル投票）ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcollaborative-technology.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E5%8D%94%E5%83%8D%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcollaborative-technology.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

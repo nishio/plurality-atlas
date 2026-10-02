@@ -41,41 +41,47 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/supermodularity.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/supermodularity.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/supermodularity.html">简体中文</a></nav></header>
 <main lang="ja"><h1>スーパーモジュラリティってなに？</h1><div class='lead'>「全体は部分の和より大きい」という性質です。人やものが集まって一緒に働くと、ばらばらに働いたときの合計より大きな価値が生まれます。本『Plurality』は、協働の力をこの言葉で言い表します。</div><p>電話を持っているのが世界で一人だけなら、その電話は役に立ちません。使う人が増えるほど、一台一台の値打ちが上がります。このように「集まるほど、一緒にやるほど得をする」性質を、数学の言葉でスーパーモジュラリティ（supermodularity）と呼びます。本『⿻ Plurality』は、この言葉を「協働とは何か」を定義するのに使います。</p>
 <h2>ひとことで言うと</h2>
-<p>スーパーモジュラリティは、<strong>「全体は部分の和より大きい」という性質</strong>です。人やものが集まって一緒に働くと、ばらばらに働いたときの合計よりも大きな価値が生まれます[1]。本の 3-2 章は、「収穫逓増（しゅうかくていぞう）」とも呼ばれると補っています[2]。「収穫逓増」は、つぎ込むほど得られるものが、だんだん増えていくという意味の経済学の言葉です。</p>
+<p>スーパーモジュラリティは、<strong>「全体は部分の和より大きい」という性質</strong>です。人やものが集まって一緒に働くと、ばらばらに働いたときの合計よりも大きな価値が生まれます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本の 3-2 章は、「収穫逓増（しゅうかくていぞう）」とも呼ばれると補っています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。「収穫逓増」は、つぎ込むほど得られるものが、だんだん増えていくという意味の経済学の言葉です。</p>
 <h2>たとえば</h2>
 <p><strong>作例（説明のための架空の数字）。</strong> A さんが一人で作れば 3 の価値、B さんが一人で作っても 3 の価値だとします。別々なら合計 3 + 3 = 6 です。二人が一緒に作って 10 の価値が生まれるなら、10 は 6 より大きいので、この協働はスーパーモジュラーです。逆に、一緒に作っても 5 にしかならないなら、全体が部分の和より小さい「サブモジュラー（収穫逓減）」です。</p>
-<p><strong>鉄道網。</strong> 本の 3-2 章は、全体が部分の和より大きくなる技術の例に鉄道網を挙げます。こうした技術は、市場を支配する力や、取引の外にいる人への影響を生みます。そのため市場にも、いまある民主的な制度にも扱いにくい、という哲学者ジョン・デューイ（John Dewey）の議論の中で出てきます[2]。</p>
-<p><strong>オープンソースのソフトウェア。</strong> 4-3 章は、誰でも使えて改良できるオープンソースのソフトを、スーパーモジュラーな生産の例とします。多くの人の協働が、一人ひとりの行動だけより大きな価値を生み、できたものは複製されて多くの人の役に立ちます。こういう場面では、お金は価値をたどる手段としてほとんど役に立たない、と本は書きます[3]。</p>
-<p><strong>テック企業のネットワーク効果。</strong> 6-0 章は、投資を受けた企業が利用者を急速に増やし、市場で支配的な地位を得るようすを描きます。そのとき効いているのが、利用者が増えるほど価値が上がる「ネットワーク効果」や、利用者のデータから学べることなど、スーパーモジュラリティの利点です[4]。</p>
+<p><strong>鉄道網。</strong> 本の 3-2 章は、全体が部分の和より大きくなる技術の例に鉄道網を挙げます。こうした技術は、市場を支配する力や、取引の外にいる人への影響を生みます。そのため市場にも、いまある民主的な制度にも扱いにくい、という哲学者ジョン・デューイ（John Dewey）の議論の中で出てきます<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><strong>オープンソースのソフトウェア。</strong> 4-3 章は、誰でも使えて改良できるオープンソースのソフトを、スーパーモジュラーな生産の例とします。多くの人の協働が、一人ひとりの行動だけより大きな価値を生み、できたものは複製されて多くの人の役に立ちます。こういう場面では、お金は価値をたどる手段としてほとんど役に立たない、と本は書きます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>テック企業のネットワーク効果。</strong> 6-0 章は、投資を受けた企業が利用者を急速に増やし、市場で支配的な地位を得るようすを描きます。そのとき効いているのが、利用者が増えるほど価値が上がる「ネットワーク効果」や、利用者のデータから学べることなど、スーパーモジュラリティの利点です<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>くわしく</h2>
 <h3>協働の定義として</h3>
-<p>5-0 章は、協働を「複数の人や集団が共通の目標に向けて一緒に働くこと」と言うだけでは、肝心な点が抜けると書きます。肝心なのは、一緒に働くと、別々に作れたものの総和より大きなものが生まれる力です[1]。</p>
-<p>本によれば、数学ではこれをスーパーモジュラリティと呼びます。アリストテレスのものとされる「全体は部分の和より大きい」という古い考えにあたります。数量として使った早い例は、経済学者デヴィッド・リカード（David Ricardo）が 1817 年に示した「比較優位」だ、と本は書きます[1]。</p>
+<p>5-0 章は、協働を「複数の人や集団が共通の目標に向けて一緒に働くこと」と言うだけでは、肝心な点が抜けると書きます。肝心なのは、一緒に働くと、別々に作れたものの総和より大きなものが生まれる力です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>本によれば、数学ではこれをスーパーモジュラリティと呼びます。アリストテレスのものとされる「全体は部分の和より大きい」という古い考えにあたります。数量として使った早い例は、経済学者デヴィッド・リカード（David Ricardo）が 1817 年に示した「比較優位」だ、と本は書きます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>なぜ市場はうまく扱えないのか</h3>
-<p>5-7 章によれば、市場で利益が出て効率よく回るための条件の一つは「収穫逓減」、つまり全体が部分の和より小さいことです。スーパーモジュラリティはその逆です。収穫逓増のときに、全員に「その人が加わって増えたぶん」どおりに払うと、赤字になってしまいます[5]。</p>
+<p>5-7 章によれば、市場で利益が出て効率よく回るための条件の一つは「収穫逓減」、つまり全体が部分の和より小さいことです。スーパーモジュラリティはその逆です。収穫逓増のときに、全員に「その人が加わって増えたぶん」どおりに払うと、赤字になってしまいます<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <p>たとえば作例で言えば、A さんが加わって増えたのは 10 − 3 = 7、B さんが加わって増えたのも 7 です。二人に 7 ずつ払うと 14 になり、生まれた 10 を上回ります。本の説明を数字で確かめると、こういうことです。</p>
-<p>公共財（道路や公園のように、みんなが使えるもの）はその極端な例です。市場が公共財を大きく作り不足にすることは、経済学者が昔から論じてきました。けれども本は、それほど極端でない収穫逓増も、資本主義のもとでは深刻に作り不足になる、と書きます[5]。</p>
+<p>公共財（道路や公園のように、みんなが使えるもの）はその極端な例です。市場が公共財を大きく作り不足にすることは、経済学者が昔から論じてきました。けれども本は、それほど極端でない収穫逓増も、資本主義のもとでは深刻に作り不足になる、と書きます<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h3>もとになった論文</h3>
-<p>本がこの言葉に付けている参照先は、ディヴィヤ・シッダールト（Divya Siddarth）、マシュー・プルウィット（Matthew Prewitt）、グレン・ワイル（Glen Weyl）の論文です（Collective Intelligence Project、2024 年）[1][6]。</p>
-<p>論文は、多くの人にまとめて提供するほうが一人ずつより安く済むものを「スーパーモジュラー財」と呼びます。いわゆる公共財より広い考えで、物流網・公衆衛生・デジタルの基盤・科学研究を例に挙げています。そして、AI がこの傾向をかつてないほど強めている、と見ています[6]。</p>
-<p>論文によれば、こうした分野は独占や投資不足に陥りやすく、国だけに任せても、民間だけに任せてもうまくいきません。そこで論文は、民主的な決め方・市場・コミュニティの運営を組み合わせるしくみを提案します。例として、<a href="quadratic-funding.html">クアドラティック・ファンディング</a>、コミュニティ通貨、<a href="polis.html">Polis</a> などを使った話し合いを挙げています[6]。</p>
+<p>本がこの言葉に付けている参照先は、ディヴィヤ・シッダールト（Divya Siddarth）、マシュー・プルウィット（Matthew Prewitt）、グレン・ワイル（Glen Weyl）の論文です（Collective Intelligence Project、2024 年）<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>論文は、多くの人にまとめて提供するほうが一人ずつより安く済むものを「スーパーモジュラー財」と呼びます。いわゆる公共財より広い考えで、物流網・公衆衛生・デジタルの基盤・科学研究を例に挙げています。そして、AI がこの傾向をかつてないほど強めている、と見ています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>論文によれば、こうした分野は独占や投資不足に陥りやすく、国だけに任せても、民間だけに任せてもうまくいきません。そこで論文は、民主的な決め方・市場・コミュニティの運営を組み合わせるしくみを提案します。例として、<a href="quadratic-funding.html">クアドラティック・ファンディング</a>、コミュニティ通貨、<a href="polis.html">Polis</a> などを使った話し合いを挙げています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>深さと広さ</h3>
-<p>5-0 章は、協働の「深さ」を、一緒に作るものが別々に作るものの和をどれだけ上回るか、とおおまかに定義します。愛のような深い関係はいちばん深く、市場での見知らぬ人どうしの取引は浅い、と本は書きます[7]。</p>
-<p>そして本の第 5 部は、技術を使って「社会的差異をまたぐスーパーモジュラリティ」を強める方法を描く、と宣言します。ふだんの言葉で言えば「多様性をまたぐ協働」です[1]。</p>
+<p>5-0 章は、協働の「深さ」を、一緒に作るものが別々に作るものの和をどれだけ上回るか、とおおまかに定義します。愛のような深い関係はいちばん深く、市場での見知らぬ人どうしの取引は浅い、と本は書きます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>そして本の第 5 部は、技術を使って「社会的差異をまたぐスーパーモジュラリティ」を強める方法を描く、と宣言します。ふだんの言葉で言えば「多様性をまたぐ協働」です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「多いほど良い」ではない。</strong> 本自身が危険を指摘しています。違う人どうしが協働すると、違いそのものがすり減り、将来の協働の力が減ることがある、というのです。本は、グローバル化で食べられる料理は多様になったが、文化はおそらく均質になった、という例を挙げます。だから ⿻ は多様性を「生かす」だけでなく「育て直す」必要がある、と本は書きます[8]。</li>
-<li><strong>全員参加が得とは限らない。</strong> 6-2 章は、健康保険は加入する集団が大きいほど得をするスーパーモジュラーなものだとしつつ、全員の参加が要るわけではなく、全員が得をするとも限らない、と限定をつけています[9]。</li>
-<li><strong>読者の問い。</strong> ジェフリー・フォセット（Jeffrey Fossett）は読書ノートで、スーパーモジュラリティを比較優位と結びつける説明を興味深いと評しました。そのうえで、多様性を平らにならさずに、多様性をまたぐ協働をどう進めるのか、それは本当にできるのか、と問いを立てています[10]。</li>
+<li><strong>「多いほど良い」ではない。</strong> 本自身が危険を指摘しています。違う人どうしが協働すると、違いそのものがすり減り、将来の協働の力が減ることがある、というのです。本は、グローバル化で食べられる料理は多様になったが、文化はおそらく均質になった、という例を挙げます。だから ⿻ は多様性を「生かす」だけでなく「育て直す」必要がある、と本は書きます<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
+<li><strong>全員参加が得とは限らない。</strong> 6-2 章は、健康保険は加入する集団が大きいほど得をするスーパーモジュラーなものだとしつつ、全員の参加が要るわけではなく、全員が得をするとも限らない、と限定をつけています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>読者の問い。</strong> ジェフリー・フォセット（Jeffrey Fossett）は読書ノートで、スーパーモジュラリティを比較優位と結びつける説明を興味深いと評しました。そのうえで、多様性を平らにならさずに、多様性をまたぐ協働をどう進めるのか、それは本当にできるのか、と問いを立てています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
-<p>この言葉は本のあちこちに出てきます。3-2 章では、デューイの「<a href="emergent-publics.html">創発的公衆</a>」の節で、技術が生む新しい結びつきを市場が扱えない理由として登場します[2]。</p>
-<p>5-0 章では第 5 部全体を定義する言葉です。「社会的差異をまたぐスーパーモジュラリティ」は「<a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a>」と同じ意味で、それを支える道具が <a href="collaborative-technology.html">協働テクノロジー</a> です[1]。</p>
-<p>5-7 章「<a href="social-markets.html">社会市場</a>」では、資本主義がスーパーモジュラーな協働を支えきれないことを示します。そのうえで、正しく設計された共同所有の税で、こうした投資に要るお金をまかなえる、という「ヘンリー・ジョージ定理」などの処方を述べます[11]。→ <a href="harberger-tax.html">ハーバーガー税</a></p>
-<p>ほかに、4-3 章「<a href="commerce-and-trust.html">商取引と信頼</a>」、6-2 章（保健）、7-0 章（政策）にも出てきます[3][9][12]。7-0 章は、共有のものが生んだ価値はどこかに溜まるので、それを源へ戻すべきだ、と述べています[12]。</p>
+<p>この言葉は本のあちこちに出てきます。3-2 章では、デューイの「<a href="emergent-publics.html">創発的公衆</a>」の節で、技術が生む新しい結びつきを市場が扱えない理由として登場します<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>5-0 章では第 5 部全体を定義する言葉です。「社会的差異をまたぐスーパーモジュラリティ」は「<a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a>」と同じ意味で、それを支える道具が <a href="collaborative-technology.html">協働テクノロジー</a> です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>5-7 章「<a href="social-markets.html">社会市場</a>」では、資本主義がスーパーモジュラーな協働を支えきれないことを示します。そのうえで、正しく設計された共同所有の税で、こうした投資に要るお金をまかなえる、という「ヘンリー・ジョージ定理」などの処方を述べます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。→ <a href="harberger-tax.html">ハーバーガー税</a></p>
+<p>ほかに、4-3 章「<a href="commerce-and-trust.html">商取引と信頼</a>」、6-2 章（保健）、7-0 章（政策）にも出てきます<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-12" data-src="src-12">[12]</a>。7-0 章は、共有のものが生んだ価値はどこかに溜まるので、それを源へ戻すべきだ、と述べています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』5-0「協働テクノロジーと民主主義」の冒頭（日本語・本）— <a href="https://www.plurality.net/v/chapters/5-0/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/jpn/</a></li>
@@ -86,16 +92,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』5-0「Collaborative Technology and Democracy」冒頭と脚注 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』3-2「Connected Society」の「John Dewey's emergent publics」の節 — <a href="https://www.plurality.net/v/chapters/3-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/eng/</a> ［CC0］</li>
-<li>『Plurality』4-3「Commerce and Trust」— <a href="https://www.plurality.net/v/chapters/4-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/eng/</a> ［CC0］</li>
-<li>『Plurality』6-0「From ⿻ to Reality」— <a href="https://www.plurality.net/v/chapters/6-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/eng/</a> ［CC0］</li>
-<li>『Plurality』5-7「Social Markets」図 5-7-C の前後 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>Siddarth・Prewitt・Weyl「Beyond Public and Private: Collective Provision Under Conditions of Supermodularity」（CIP、2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
-<li>『Plurality』5-0「The depth-breadth spectrum」の節 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』5-0「Collaboration across diversity: promise and challenges」の節 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』6-2「Health」— <a href="https://www.plurality.net/v/chapters/6-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-2/eng/</a> ［CC0］</li>
-<li>Jeffrey Fossett「Notes on the Plurality Book」— <a href="https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html" target="_blank" rel="noopener">https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html</a></li>
-<li>『Plurality』5-7「Social Markets」（Henry George Theorem の段落）— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>『Plurality』7-0「Policy」— <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='emergent-publics.html'>創発的公衆ってなに？</a> ・ <a href='commerce-and-trust.html'>商取引と信頼ってなに？</a> ・ <a href='collaborative-technology.html'>協働テクノロジーってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fsupermodularity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%AA%E3%83%86%E3%82%A3%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fsupermodularity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』5-0「Collaborative Technology and Democracy」冒頭と脚注 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-2">『Plurality』3-2「Connected Society」の「John Dewey's emergent publics」の節 — <a href="https://www.plurality.net/v/chapters/3-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/eng/</a> ［CC0］</li>
+<li id="src-3">『Plurality』4-3「Commerce and Trust」— <a href="https://www.plurality.net/v/chapters/4-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』6-0「From ⿻ to Reality」— <a href="https://www.plurality.net/v/chapters/6-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』5-7「Social Markets」図 5-7-C の前後 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-6">Siddarth・Prewitt・Weyl「Beyond Public and Private: Collective Provision Under Conditions of Supermodularity」（CIP、2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
+<li id="src-7">『Plurality』5-0「The depth-breadth spectrum」の節 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-8">『Plurality』5-0「Collaboration across diversity: promise and challenges」の節 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-9">『Plurality』6-2「Health」— <a href="https://www.plurality.net/v/chapters/6-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-2/eng/</a> ［CC0］</li>
+<li id="src-10">Jeffrey Fossett「Notes on the Plurality Book」— <a href="https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html" target="_blank" rel="noopener">https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html</a></li>
+<li id="src-11">『Plurality』5-7「Social Markets」（Henry George Theorem の段落）— <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-12">『Plurality』7-0「Policy」— <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a> ・ <a href='social-markets.html'>社会市場ってなに？</a> ・ <a href='quadratic-funding.html'>クアドラティック・ファンディングってなに？</a> ・ <a href='emergent-publics.html'>創発的公衆ってなに？</a> ・ <a href='commerce-and-trust.html'>商取引と信頼ってなに？</a> ・ <a href='collaborative-technology.html'>協働テクノロジーってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fsupermodularity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%AA%E3%83%86%E3%82%A3%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fsupermodularity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

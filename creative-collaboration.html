@@ -41,38 +41,44 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/creative-collaboration.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/creative-collaboration.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/creative-collaboration.html">简体中文</a></nav></header>
 <main lang="ja"><h1>クリエイティブな協働ってなに？</h1><div class='lead'>芸術から科学まで、国も専門も違う大勢が知恵と経験を持ち寄って、一緒に何かを創ることです。本『Plurality』は、ネットの共同作業の道具と、文章や絵を生み出す AI がその範囲を広げると描き、同時に均質化と独占を警戒します。</div><p>ウィキペディアは、世界中の知らない人どうしが少しずつ書き足してできた百科事典です。一人の天才が書いたものではありません。クリエイティブな協働（Creative Collaboration）は、こうした「大勢で一緒に創る」営みのことです。本『⿻ Plurality』は、ネットの道具や AI によって、その範囲がさらに広がると考えます。</p>
 <h2>ひとことで言うと</h2>
-<p>クリエイティブな協働は、<strong>芸術から科学まで、国も専門も違う大勢が知恵と経験を持ち寄って、一緒に何かを創ること</strong>です[1]。</p>
-<p>本は、ネットの共同作業の道具と、文章・絵・音を生み出す AI（本の用語では「<a href="generative-foundation-models.html">生成基盤モデル</a>」、略して GFM）が、その範囲を大きく広げると描きます。同時に、みんなが似たものしか作らなくなる「均質化」や、一部の企業による独り占めを警戒しています[1][2]。</p>
+<p>クリエイティブな協働は、<strong>芸術から科学まで、国も専門も違う大勢が知恵と経験を持ち寄って、一緒に何かを創ること</strong>です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>本は、ネットの共同作業の道具と、文章・絵・音を生み出す AI（本の用語では「<a href="generative-foundation-models.html">生成基盤モデル</a>」、略して GFM）が、その範囲を大きく広げると描きます。同時に、みんなが似たものしか作らなくなる「均質化」や、一部の企業による独り占めを警戒しています<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>ヴェスヴィオ・チャレンジ（2023〜24 年）。</strong> 西暦 79 年のヴェスヴィオ山の噴火で炭になった古代の巻物を、スキャンした画像から仮想的に「開いて」読む、懸賞つきの挑戦です[3]。</p>
-<p>主催者は、情報を独り占めされないように、コードや研究を公開することを条件にした「途中の賞」を 2 か月ごとに設けました。公開された成果が次々に積み重なりました。巻物の表面をたどる道具、文字をなす「ひび割れ」の模様の発見、AI を別の種類のデータに合わせる工夫などです[3]。</p>
-<p>2024 年 2 月 5 日に発表された大賞 70 万ドルは、21 歳の大学生ルーク・ファリター（Luke Farritor）、ベルリンの博士課程の学生ユセフ・ナデル（Youssef Nader）、スイスの大学を出たばかりのジュリアン・シリガー（Julian Schilliger）のチームが得ました。求められた量を超えて、11 列・2,000 字を超える文字を読み取りました[3]。</p>
-<p><strong>Netflix Prize（2009 年）。</strong> 動画配信の Netflix は、自社のおすすめのしくみを 10% 上回るチームに 100 万ドルを出す懸賞を開きました。本によれば、2 年半以上だれも達成できませんでした。先頭のチームが単独をやめ、違うやり方を持つほかのチームと組んだとき、初めて達成されたのです[4]。</p>
-<p><strong>この本そのもの。</strong> 『Plurality』は、ソフト開発の共同作業の場 GitHub をおもな執筆の場にして、大陸をまたぐ多くの人が書きました。誰でも自由に使える形（CC0）で公開されています。音声版は、多くの参加者の声を混ぜた「共通の声」で読まれました[5][6][7]。→ <a href="plural-management-protocol.html">Plural Management Protocol</a></p>
+<p><strong>ヴェスヴィオ・チャレンジ（2023〜24 年）。</strong> 西暦 79 年のヴェスヴィオ山の噴火で炭になった古代の巻物を、スキャンした画像から仮想的に「開いて」読む、懸賞つきの挑戦です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>主催者は、情報を独り占めされないように、コードや研究を公開することを条件にした「途中の賞」を 2 か月ごとに設けました。公開された成果が次々に積み重なりました。巻物の表面をたどる道具、文字をなす「ひび割れ」の模様の発見、AI を別の種類のデータに合わせる工夫などです<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>2024 年 2 月 5 日に発表された大賞 70 万ドルは、21 歳の大学生ルーク・ファリター（Luke Farritor）、ベルリンの博士課程の学生ユセフ・ナデル（Youssef Nader）、スイスの大学を出たばかりのジュリアン・シリガー（Julian Schilliger）のチームが得ました。求められた量を超えて、11 列・2,000 字を超える文字を読み取りました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>Netflix Prize（2009 年）。</strong> 動画配信の Netflix は、自社のおすすめのしくみを 10% 上回るチームに 100 万ドルを出す懸賞を開きました。本によれば、2 年半以上だれも達成できませんでした。先頭のチームが単独をやめ、違うやり方を持つほかのチームと組んだとき、初めて達成されたのです<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>この本そのもの。</strong> 『Plurality』は、ソフト開発の共同作業の場 GitHub をおもな執筆の場にして、大陸をまたぐ多くの人が書きました。誰でも自由に使える形（CC0）で公開されています。音声版は、多くの参加者の声を混ぜた「共通の声」で読まれました<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。→ <a href="plural-management-protocol.html">Plural Management Protocol</a></p>
 <h2>くわしく</h2>
 <h3>共創は昔からあったが、遅くて高かった</h3>
-<p>本は、聖書、インドの聖典『バガヴァッド・ギーター』、ホメロスの叙事詩は、ほぼ確実に何世代にもわたる多くの手で書かれた、と書きます。科学の協働には、原子爆弾を開発したロスアラモスのような巨大な共同の施設が必要でした[6]。</p>
-<p>本によれば、音楽・美術・演劇・建築・映画・料理などの芸術の表現は、集団の文化を形づくる、もっとも強い土台の一つです。すべての感覚を分かち合う体験ほど強くはありませんが、ずっと遠くまで広がります[2]。</p>
+<p>本は、聖書、インドの聖典『バガヴァッド・ギーター』、ホメロスの叙事詩は、ほぼ確実に何世代にもわたる多くの手で書かれた、と書きます。科学の協働には、原子爆弾を開発したロスアラモスのような巨大な共同の施設が必要でした<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>本によれば、音楽・美術・演劇・建築・映画・料理などの芸術の表現は、集団の文化を形づくる、もっとも強い土台の一つです。すべての感覚を分かち合う体験ほど強くはありませんが、ずっと遠くまで広がります<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>ネットの道具がすでに変えた</h3>
-<p>本は、インターネットの上に生まれた共同作業の道具を並べます。チャットの Slack、文書の Notion や Google Docs、GitHub、ウィキペディア、AI を一緒に開発する Hugging Face、オンライン講座、クラウドファンディングの Kickstarter などです。これらが、共に創るやり方を変えた、と本は書きます[6]。→ <a href="lost-dao.html">失われた道</a></p>
-<p>ジャロン・ラニアーとグレン・ワイルは 2020 年の論説で、共同作業の価値が見えにくいことを指摘しました。人間がつくったウィキペディアが無ければ検索エンジンの価値は大きく下がるのに、ウィキペディアは貧しい非営利団体で、検索エンジンはもっとも価値の高い資産の一つになっている、というのです[8]。</p>
+<p>本は、インターネットの上に生まれた共同作業の道具を並べます。チャットの Slack、文書の Notion や Google Docs、GitHub、ウィキペディア、AI を一緒に開発する Hugging Face、オンライン講座、クラウドファンディングの Kickstarter などです。これらが、共に創るやり方を変えた、と本は書きます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="lost-dao.html">失われた道</a></p>
+<p>ジャロン・ラニアーとグレン・ワイルは 2020 年の論説で、共同作業の価値が見えにくいことを指摘しました。人間がつくったウィキペディアが無ければ検索エンジンの価値は大きく下がるのに、ウィキペディアは貧しい非営利団体で、検索エンジンはもっとも価値の高い資産の一つになっている、というのです<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>違う人どうしが組むと勝つ</h3>
-<p>Netflix Prize の話は、スコット・ペイジ（Scott Page）の本『The Diversity Bonus』の議論に沿って紹介されています。多様な集団のほうが、よい答えにたどり着ける、という考えです[4]。</p>
-<p>本はさらに、AI のしくみ（ニューラルネットワーク）そのものを、「多様な見方を持つ人々のつながり」をまねたものと見直せるかもしれない、と書きます。たくさんの見方を同時にまねることが、AI が幅広い課題に強い理由なのかもしれない、というのです[4]。→ <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a>・<a href="supermodularity.html">スーパーモジュラリティ</a></p>
+<p>Netflix Prize の話は、スコット・ペイジ（Scott Page）の本『The Diversity Bonus』の議論に沿って紹介されています。多様な集団のほうが、よい答えにたどり着ける、という考えです<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>本はさらに、AI のしくみ（ニューラルネットワーク）そのものを、「多様な見方を持つ人々のつながり」をまねたものと見直せるかもしれない、と書きます。たくさんの見方を同時にまねることが、AI が幅広い課題に強い理由なのかもしれない、というのです<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="collaboration-across-difference.html">社会的差異をまたぐ協働</a>・<a href="supermodularity.html">スーパーモジュラリティ</a></p>
 <h3>明日の実践</h3>
-<p>本は、これからの姿を四つ挙げます[7]。</p>
+<p>本は、これからの姿を四つ挙げます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <ol>
 <li><strong>つくられた楽器と、AI の芸術。</strong> 音楽家ホリー・ハーンドン（Holly Herndon）とマット・ドライハースト（Mat Dryhurst）は AI を使って、歴史上の人物の声で歌い、ほかの人が自分たちの声で歌えるようにしました。</li>
 <li><strong>文化をまたぐ協働。</strong> AI が、言葉だけでなく文化の型まで訳します。</li>
 <li><strong>「異星人の芸術」。</strong> 人間をまねるのではなく、人間が思いつかない方向に考えを導きます。本は、自分どうしの対戦だけで学んだ囲碁の AI の戦略に触れたことで、人間の棋士の打ち手が新しく多様になった、という研究を挙げます。</li>
 <li><strong>デジタルの双子。</strong> 人のようにふるまう AI たちが暮らす仮想の SNS で、投稿の並べ方を試し、対立や意見の分かれ方にどう効くかを調べます。</li>
 </ol>
-<p>さらに先には、言葉を通らない創造の交流や、イルカやタコとの協働、過去や未来の心との協働まで描かれています[9]。→ <a href="post-symbolic-communication.html">ポスト表象コミュニケーション</a></p>
+<p>さらに先には、言葉を通らない創造の交流や、イルカやタコとの協働、過去や未来の心との協働まで描かれています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。→ <a href="post-symbolic-communication.html">ポスト表象コミュニケーション</a></p>
 <h2>どこが議論になっているか</h2>
-<p>本自身が、小説『ザ・サークル』を引いて、いくつもの危険を挙げています[10]。</p>
+<p>本自身が、小説『ザ・サークル』を引いて、いくつもの危険を挙げています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <ul>
 <li><strong>プライバシーと自律を失う。</strong> いつも開かれていることを求められ、一人ひとりの創造性が押しつぶされます。</li>
 <li><strong>創造性が均一になる。</strong> 協働を助けるはずのしくみが、変わった見方や型破りな発想を、合意と予想どおりのものにならしてしまいます。本は、つながりにくい考えや共同体を橋渡しする AI の設計が必要だとします。</li>
@@ -80,11 +86,11 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li><strong>企業による搾取。</strong> 企業の土台の上で作品が取り込まれ、監視や操作に使われます。本は、創る意欲を減らせば、AI の学習データという「金の卵」を産む創造性と多様性という「ガチョウ」を殺してしまう、と書きます。</li>
 <li><strong>文化の多様性が削られる。</strong> 世界規模の土台が、地域の表現や少数の声を覆い、ただ一つの文化に行き着きます。</li>
 </ul>
-<p>処方として本は、オープンソースの技術と ⿻ の原則を挙げます。そして、ハーンドンや俳優ジョセフ・ゴードン＝レヴィット（Joseph Gordon-Levitt）らが、AI を生かしながら作り手の名前と報酬を守る設計を訴えていることを紹介します[11]。→ <a href="data-dignity.html">データの尊厳</a></p>
-<p>また本は、一つのメディアによる均一化を防ぐには、より親密な技術で、深い関係と、一人で考える場を支える必要がある、と書きます[11]。</p>
+<p>処方として本は、オープンソースの技術と ⿻ の原則を挙げます。そして、ハーンドンや俳優ジョセフ・ゴードン＝レヴィット（Joseph Gordon-Levitt）らが、AI を生かしながら作り手の名前と報酬を守る設計を訴えていることを紹介します<a class="cite" href="#src-11" data-src="src-11">[11]</a>。→ <a href="data-dignity.html">データの尊厳</a></p>
+<p>また本は、一つのメディアによる均一化を防ぐには、より親密な技術で、深い関係と、一人で考える場を支える必要がある、と書きます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>Plurality の中での位置</h2>
-<p>本の第 5 部は、協働のかたちを 7 つ並べます。クリエイティブな協働はその 3 番目です。<a href="immersive-shared-reality.html">没入型共有現実</a> の次、<a href="augmented-deliberation.html">拡張熟議</a> の前に置かれています。英語版の章の要約は、芸術から科学までのプロジェクトで、知性と経験を混ぜ合わせて一緒に働けるようにするもの、とまとめています[1]。</p>
-<p>5-6 章「<a href="plural-voting.html">⿻投票</a>」は、クリエイティブな協働や話し合い、想像、行政の運営という文脈があってはじめて、集団で決めることに意味が出る、と書いています[12]。</p>
+<p>本の第 5 部は、協働のかたちを 7 つ並べます。クリエイティブな協働はその 3 番目です。<a href="immersive-shared-reality.html">没入型共有現実</a> の次、<a href="augmented-deliberation.html">拡張熟議</a> の前に置かれています。英語版の章の要約は、芸術から科学までのプロジェクトで、知性と経験を混ぜ合わせて一緒に働けるようにするもの、とまとめています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>5-6 章「<a href="plural-voting.html">⿻投票</a>」は、クリエイティブな協働や話し合い、想像、行政の運営という文脈があってはじめて、集団で決めることに意味が出る、と書いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>本『Plurality』5-3「クリエイティブなコラボレーション」（日本語・本）— <a href="https://www.plurality.net/v/chapters/5-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/jpn/</a></li>
@@ -94,16 +100,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出典</h2>
 <ol>
-<li>『Plurality』各章の要約（Chapter 5-3）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
-<li>『Plurality』5-3 冒頭の区切りの後の導入 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-3 冒頭 3 段落 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-3「Creative collaboration tomorrow」の節 第 1〜2 段落 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-0 冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>『Plurality』5-3「Cocreation today」の節 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-3「Creative collaboration tomorrow」の節の箇条書き — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>Jaron Lanier &amp; E. Glen Weyl「AI is An Ideology, Not A Technology」（WIRED、2020）— <a href="https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/" target="_blank" rel="noopener">https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</a></li>
-<li>『Plurality』5-3「Frontiers of creative collaboration」の節 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-3「Limits of creative collaboration」の節 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>同上 末尾 2 段落 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
-<li>『Plurality』5-6「Limits of ⿻ voting」の節 — <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
-</ol><div class='related'>関連: <a href='immersive-shared-reality.html'>没入型共有現実（ISR）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='post-symbolic-communication.html'>ポスト表象コミュニケーションってなに？</a> ・ <a href='generative-foundation-models.html'>生成基盤モデル（GFM）ってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a> ・ <a href='supermodularity.html'>スーパーモジュラリティってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcreative-collaboration.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%81%AA%E5%8D%94%E5%83%8D%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcreative-collaboration.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main></body></html>
+<li id="src-1">『Plurality』各章の要約（Chapter 5-3）— <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality</a> ［CC0］</li>
+<li id="src-2">『Plurality』5-3 冒頭の区切りの後の導入 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-3">『Plurality』5-3 冒頭 3 段落 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-4">『Plurality』5-3「Creative collaboration tomorrow」の節 第 1〜2 段落 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-5">『Plurality』5-0 冒頭 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-6">『Plurality』5-3「Cocreation today」の節 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-7">『Plurality』5-3「Creative collaboration tomorrow」の節の箇条書き — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-8">Jaron Lanier &amp; E. Glen Weyl「AI is An Ideology, Not A Technology」（WIRED、2020）— <a href="https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/" target="_blank" rel="noopener">https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</a></li>
+<li id="src-9">『Plurality』5-3「Frontiers of creative collaboration」の節 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-10">『Plurality』5-3「Limits of creative collaboration」の節 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-11">同上 末尾 2 段落 — <a href="https://www.plurality.net/v/chapters/5-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/eng/</a> ［CC0］</li>
+<li id="src-12">『Plurality』5-6「Limits of ⿻ voting」の節 — <a href="https://www.plurality.net/v/chapters/5-6/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/eng/</a> ［CC0］</li>
+</ol><div class='related'>関連: <a href='immersive-shared-reality.html'>没入型共有現実（ISR）ってなに？</a> ・ <a href='augmented-deliberation.html'>拡張熟議ってなに？</a> ・ <a href='post-symbolic-communication.html'>ポスト表象コミュニケーションってなに？</a> ・ <a href='generative-foundation-models.html'>生成基盤モデル（GFM）ってなに？</a> ・ <a href='collaboration-across-difference.html'>社会的差異をまたぐ協働ってなに？</a> ・ <a href='supermodularity.html'>スーパーモジュラリティってなに？</a> ・ <a href='data-dignity.html'>データの尊厳ってなに？</a></div><div class='feedback'><p>記事の間違いや、知りたいこと（「〜ってなに？」）を受け付けています。送られた内容は公開の issue になります。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcreative-collaboration.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%81%AA%E5%8D%94%E5%83%8D%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB%EF%BC%9F' target='_blank' rel='noopener'>この記事の間違いを知らせる</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fcreative-collaboration.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>質問する</a></p></div><footer>このサイトの文章は CC0（パブリックドメイン）です。引用した部分の権利はそれぞれの原典にあり、ライセンスがわかるものは各記事の出典の欄の［ ］に書いています。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

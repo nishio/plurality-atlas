@@ -41,46 +41,52 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../ai-objectives-institute.html">日本語</a> <a class="lang" hreflang="en" href="../en/ai-objectives-institute.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/ai-objectives-institute.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是 AI Objectives Institute（AOI）？</h1><div class='lead'>以引导 AI 朝向保护并增强人的主体性（自己思考、决定、行动的能力）为宗旨的美国非营利研究团体。它打造了用 AI 把大量意见画成地图的工具「我城对谈」（Talk to the City）。这个工具用在台湾的讨论中，也成了日本广泛倾听的起点。</div><p>即使请好几千人自由写下意见，要全部读完、整理，也很不容易。AI Objectives Institute（AOI）就是打造了用 AI 阅读这些大量意见、画成论点地图之工具的团体。这个工具从台湾传到日本，成了日本数位民主尝试的起点。</p>
 <h2>一句话说明</h2>
-<p>AI Objectives Institute（AOI）是美国的非营利团体。《Plurality》日文版把它译作「AI目的研究所」[1]。</p>
-<p>AOI 从事研究与实践，让 AI 朝向保护并增强人的主体性，也就是自己思考、决定、行动的能力[2]。它以打造并公开让任何人都能使用的工具<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>（TTTC）而知名：用 AI 阅读大量自由填写的意见，做成「论点地图」[1][3]。</p>
+<p>AI Objectives Institute（AOI）是美国的非营利团体。《Plurality》日文版把它译作「AI目的研究所」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>AOI 从事研究与实践，让 AI 朝向保护并增强人的主体性，也就是自己思考、决定、行动的能力<a class="cite" href="#src-2" data-src="src-2">[2]</a>。它以打造并公开让任何人都能使用的工具<a href="talk-to-the-city.html">我城对谈（Talk to the City）</a>（TTTC）而知名：用 AI 阅读大量自由填写的意见，做成「论点地图」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>我城对谈（2023 年～）。</strong> AOI 的 Colleen McKenzie 说明，TTTC 是能摘要大量对话的话语分析工具，适合从大群体收集意见[4]。</p>
-<p>《多元宇宙》5-4 章提到这个工具：「例如，『我城对谈』（Talk to the City）项目，就说明了如何用语言模型，来取代描述群体观点的陈述列表，让人们可以通过与互动代理对话来了解他们的观点。」[5]</p>
-<p><strong>台湾的对齐大会（2023 年）。</strong> 台湾的数位发展部在 2023 年举办了关于生成式 AI 的审议式工作坊。根据该活动页面，AOI 使用活动的开放资料，制作了视觉化的互动报告[6]。2024 年 5 月，唐凤（Audrey Tang）与 AOI 的会谈中，讨论了 AOI、<a href="vtaiwan.html">vTaiwan</a> 与数位发展部三方合作的构想[4]。详见〈<a href="alignment-assemblies.html">对齐大会</a>〉。</p>
-<p><strong>走向日本的广泛倾听（2024 年～）。</strong> 根据《广泛倾听》（原书名《政治・自治体・企业に広がるブロードリスニング》），2024 年 5 月 23 日，Code for Japan 的关治之在与安野贵博、西尾泰和的会谈中介绍了 TTTC，这连结到安野在东京都知事选举中的使用[7]。</p>
-<p>公民团体 <a href="dd2030.html">DD2030</a> 的<a href="kouchou-ai.html">広聴AI</a>，在说明文件（README）中明记：它参考 AOI 开发的 TTTC，依照其授权使用了部分原始码而打造[8]。</p>
+<p><strong>我城对谈（2023 年～）。</strong> AOI 的 Colleen McKenzie 说明，TTTC 是能摘要大量对话的话语分析工具，适合从大群体收集意见<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>《多元宇宙》5-4 章提到这个工具：「例如，『我城对谈』（Talk to the City）项目，就说明了如何用语言模型，来取代描述群体观点的陈述列表，让人们可以通过与互动代理对话来了解他们的观点。」<a class="cite" href="#src-5" data-src="src-5">[5]</a></p>
+<p><strong>台湾的对齐大会（2023 年）。</strong> 台湾的数位发展部在 2023 年举办了关于生成式 AI 的审议式工作坊。根据该活动页面，AOI 使用活动的开放资料，制作了视觉化的互动报告<a class="cite" href="#src-6" data-src="src-6">[6]</a>。2024 年 5 月，唐凤（Audrey Tang）与 AOI 的会谈中，讨论了 AOI、<a href="vtaiwan.html">vTaiwan</a> 与数位发展部三方合作的构想<a class="cite" href="#src-4" data-src="src-4">[4]</a>。详见〈<a href="alignment-assemblies.html">对齐大会</a>〉。</p>
+<p><strong>走向日本的广泛倾听（2024 年～）。</strong> 根据《广泛倾听》（原书名《政治・自治体・企业に広がるブロードリスニング》），2024 年 5 月 23 日，Code for Japan 的关治之在与安野贵博、西尾泰和的会谈中介绍了 TTTC，这连结到安野在东京都知事选举中的使用<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>公民团体 <a href="dd2030.html">DD2030</a> 的<a href="kouchou-ai.html">広聴AI</a>，在说明文件（README）中明记：它参考 AOI 开发的 TTTC，依照其授权使用了部分原始码而打造<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>深入了解</h2>
 <h3>由谁创立</h3>
-<p>AOI 的共同创办人 Brittney Gallagher 在 2024 年 5 月与唐凤的会谈中说，唐凤的工作最初启发了 Peter Eckersley 和自己[4]。</p>
-<p>中山心太解说広聴AI 技术的幻灯片，把 AOI 介绍为以引导 AI 保护并增强人的主体性为目的而成立的 NPO，并写道创办人 Eckersley 是让网络通讯安全的机制 Let's Encrypt 的创办人之一，已因病过世[2]。</p>
-<p>西尾泰和读书会的笔记写道，AOI 是 Eckersley 在 2021 年创立的非营利组织；Eckersley 在 2022 年过世，由 Deger Turan 与 Gallagher 为中心接续活动[9]。</p>
+<p>AOI 的共同创办人 Brittney Gallagher 在 2024 年 5 月与唐凤的会谈中说，唐凤的工作最初启发了 Peter Eckersley 和自己<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>中山心太解说広聴AI 技术的幻灯片，把 AOI 介绍为以引导 AI 保护并增强人的主体性为目的而成立的 NPO，并写道创办人 Eckersley 是让网络通讯安全的机制 Let's Encrypt 的创办人之一，已因病过世<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>西尾泰和读书会的笔记写道，AOI 是 Eckersley 在 2021 年创立的非营利组织；Eckersley 在 2022 年过世，由 Deger Turan 与 Gallagher 为中心接续活动<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>TTTC 是怎么诞生的</h3>
-<p>Anders Sandberg 发文表示，大意是：TTTC 原本是 Eckersley 在大家讨论如何用 AI 引出大量人群的偏好时想出来的[10]。</p>
+<p>Anders Sandberg 发文表示，大意是：TTTC 原本是 Eckersley 在大家讨论如何用 AI 引出大量人群的偏好时想出来的<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>研究的支柱</h3>
-<p>中山的幻灯片举出 AOI 的三项活动[2]。</p>
+<p>中山的幻灯片举出 AOI 的三项活动<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <ul>
 <li><strong>TTTC</strong> — 分析只数数字看不出来的意见内容，支持政策制定的工具。</li>
 <li><strong>Moral Learning</strong> — 让 AI 学会道德价值观的研究。</li>
 <li><strong>AI Supply Chain Observatory</strong> — 用 AI 观察物资的供应流向与市场的计划。</li>
 </ul>
-<p>2023 年，Turan、Eckersley、Divya Siddarth、Gallagher 等人发表了整理打造富足文明之研究计划的白皮书[11]。Turan 也是讨论 AI 逐步夺走人类力量之风险的论文 "Gradual Disempowerment"（2025 年）的共同作者之一[12]。</p>
+<p>2023 年，Turan、Eckersley、Divya Siddarth、Gallagher 等人发表了整理打造富足文明之研究计划的白皮书<a class="cite" href="#src-11" data-src="src-11">[11]</a>。Turan 也是讨论 AI 逐步夺走人类力量之风险的论文 "Gradual Disempowerment"（2025 年）的共同作者之一<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
 <h3>与台湾的往来</h3>
-<p>在 2023 年 10 月 25 日与唐凤的会谈中，Turan 说，希望不只处理简短的贴文，也能处理「浓厚」的资料，例如在美国底特律访谈 13 位非裔居民、每人 1 小时的录音[13]。</p>
-<p>唐凤回应，最优先的是让资料的汇入能「像 Google Forms 一样」自己完成，让社群不需要技术专业知识也能自己开始讨论[13]。Turan 也谈到方针：任何人都能使用的第一版不放入试验中的功能，从好用的东西依序推出[13]。</p>
-<p>在 2023 年 11 月 3 日的会谈中，数位发展部、AI Academy 与 vTaiwan 都表示想把 TTTC 用在讨论上，并讨论了在 GitHub 上接受改善提案[14]。</p>
+<p>在 2023 年 10 月 25 日与唐凤的会谈中，Turan 说，希望不只处理简短的贴文，也能处理「浓厚」的资料，例如在美国底特律访谈 13 位非裔居民、每人 1 小时的录音<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>唐凤回应，最优先的是让资料的汇入能「像 Google Forms 一样」自己完成，让社群不需要技术专业知识也能自己开始讨论<a class="cite" href="#src-13" data-src="src-13">[13]</a>。Turan 也谈到方针：任何人都能使用的第一版不放入试验中的功能，从好用的东西依序推出<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>在 2023 年 11 月 3 日的会谈中，数位发展部、AI Academy 与 vTaiwan 都表示想把 TTTC 用在讨论上，并讨论了在 GitHub 上接受改善提案<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
 <h2>争议与批评</h2>
 <p>在本文介绍的资料中，没有出现对 AOI 本身的批评。不过，阅读时有几点值得注意。</p>
 <ul>
-<li><strong>成立经过的资讯大多是二手资料。</strong> 创立的年份与交接的经过，主要根据中山的幻灯片与西尾的笔记（都不是 AOI 自己的文件）[2][9]。</li>
-<li><strong>书的各版写法不同。</strong> 《Plurality》英文版与日文版刊出 AOI 的名字和网站连结，但繁体中文版把 TTTC 译为「我城对谈」，没有提到 AOI 的名字[5][1][15]。</li>
+<li><strong>成立经过的资讯大多是二手资料。</strong> 创立的年份与交接的经过，主要根据中山的幻灯片与西尾的笔记（都不是 AOI 自己的文件）<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
+<li><strong>书的各版写法不同。</strong> 《Plurality》英文版与日文版刊出 AOI 的名字和网站连结，但繁体中文版把 TTTC 译为「我城对谈」，没有提到 AOI 的名字<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>《多元宇宙》5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉写道：「其中最明显的发展方向之一，就是如何利用现代图论和语言模型，来扩展 Pol.is 和 Community Notes 等系统」，并以我城对谈为例[5]。英文版的同一处把它写成 AOI 的 TTTC，并附上 AOI 的网站连结[15]。</p>
-<p><a href="collective-intelligence-project.html">集体智慧计划（CIP）</a>的白皮书，也把 TTTC 列为相近的支持性尝试之一[16]。</p>
-<p>《广泛倾听》把 TTTC 定位为美国 AI Objectives Institute 在 2023 年公开的开源工具，是日本广泛倾听实践的起点[17]。<a href="broad-listening.html">广泛倾听</a>（广泛听取大量声音、掌握全貌）的扩散，在该文中介绍。</p>
+<p>《多元宇宙》5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉写道：「其中最明显的发展方向之一，就是如何利用现代图论和语言模型，来扩展 Pol.is 和 Community Notes 等系统」，并以我城对谈为例<a class="cite" href="#src-5" data-src="src-5">[5]</a>。英文版的同一处把它写成 AOI 的 TTTC，并附上 AOI 的网站连结<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
+<p><a href="collective-intelligence-project.html">集体智慧计划（CIP）</a>的白皮书，也把 TTTC 列为相近的支持性尝试之一<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
+<p>《广泛倾听》把 TTTC 定位为美国 AI Objectives Institute 在 2023 年公开的开源工具，是日本广泛倾听实践的起点<a class="cite" href="#src-17" data-src="src-17">[17]</a>。<a href="broad-listening.html">广泛倾听</a>（广泛听取大量声音、掌握全貌）的扩散，在该文中介绍。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>《多元宇宙》5-4〈扩增审议〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
@@ -93,21 +99,51 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>《PLURALITY》日文版 5-4「拡张熟议」— <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a></li>
-<li>中山心太「広聴AI技术解说」（2025-06-14，日文）— <a href="https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546" target="_blank" rel="noopener">https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546</a></li>
-<li>《ブロードリスニング》序文（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>Audrey Tang, "Conversation with AI Objectives Institute"（2024-05-06）— <a href="https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md</a></li>
-<li>《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
-<li>数位发展部「AI 未来民主化审议式工作坊」— <a href="https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459" target="_blank" rel="noopener">https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</a></li>
-<li>《ブロードリスニング》4.1〈安野贵博の取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-<li>広聴AI（kouchou-ai）README（日文）— <a href="https://github.com/digitaldemocracy2030/kouchou-ai" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/kouchou-ai</a></li>
-<li>西尾泰和「Talk to the City勉强会」（日文）— <a href="https://scrapbox.io/nishio/Talk_to_the_City勉強会" target="_blank" rel="noopener">https://scrapbox.io/nishio/Talk_to_the_City勉強会</a></li>
-<li>Anders Sandberg 的 X 贴文 — <a href="https://x.com/anderssandberg/status/1849570772869656662" target="_blank" rel="noopener">https://x.com/anderssandberg/status/1849570772869656662</a></li>
-<li>AI Objectives Institute 白皮书（2023）— <a href="https://ai.objectives.institute/whitepaper" target="_blank" rel="noopener">https://ai.objectives.institute/whitepaper</a></li>
-<li>"Gradual Disempowerment"（2025）— <a href="https://gradual-disempowerment.ai/" target="_blank" rel="noopener">https://gradual-disempowerment.ai/</a></li>
-<li>Audrey Tang, "Conversation with AI Objectives Institute"（2023-10-25）— <a href="https://github.com/audreyt/transcript/blob/main/2023-10-25-Conversation-with-AI-Objectives-Institute.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2023-10-25-Conversation-with-AI-Objectives-Institute.md</a></li>
-<li>"Conversation with Vehbi Deger Turan, Isabel Hou, Jia-Wei Cui"（2023-11-03）— <a href="https://sayit.archive.tw/2023-11-03-Conversation-with-Vehbi-Deger-Turan%2C-Isabel-Hou%2C-Jia-Wei-Cui" target="_blank" rel="noopener">https://sayit.archive.tw/2023-11-03-Conversation-with-Vehbi-Deger-Turan%2C-Isabel-Hou%2C-Jia-Wei-Cui</a></li>
-<li>《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
-<li>CIP 白皮书（2023）— <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
-<li>《ブロードリスニング》附录〈用语集〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
-</ol><div class='related'>相关: <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='collective-intelligence-project.html'>什么是集体智慧计划（Collective Intelligence Project，CIP）？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fai-objectives-institute.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%20AI%20Objectives%20Institute%EF%BC%88AOI%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fai-objectives-institute.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">《PLURALITY》日文版 5-4「拡张熟议」— <a href="https://www.plurality.net/v/chapters/5-4/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/jpn/</a></li>
+<li id="src-2">中山心太「広聴AI技术解说」（2025-06-14，日文）— <a href="https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546" target="_blank" rel="noopener">https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546</a></li>
+<li id="src-3">《ブロードリスニング》序文（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-4">Audrey Tang, "Conversation with AI Objectives Institute"（2024-05-06）— <a href="https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md</a></li>
+<li id="src-5">《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
+<li id="src-6">数位发展部「AI 未来民主化审议式工作坊」— <a href="https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459" target="_blank" rel="noopener">https://moda.gov.tw/major-policies/alignment-assemblies/2023-ideathon/1459</a></li>
+<li id="src-7">《ブロードリスニング》4.1〈安野贵博の取り组み〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li id="src-8">広聴AI（kouchou-ai）README（日文）— <a href="https://github.com/digitaldemocracy2030/kouchou-ai" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/kouchou-ai</a></li>
+<li id="src-9">西尾泰和「Talk to the City勉强会」（日文）— <a href="https://scrapbox.io/nishio/Talk_to_the_City勉強会" target="_blank" rel="noopener">https://scrapbox.io/nishio/Talk_to_the_City勉強会</a></li>
+<li id="src-10">Anders Sandberg 的 X 贴文 — <a href="https://x.com/anderssandberg/status/1849570772869656662" target="_blank" rel="noopener">https://x.com/anderssandberg/status/1849570772869656662</a></li>
+<li id="src-11">AI Objectives Institute 白皮书（2023）— <a href="https://ai.objectives.institute/whitepaper" target="_blank" rel="noopener">https://ai.objectives.institute/whitepaper</a></li>
+<li id="src-12">"Gradual Disempowerment"（2025）— <a href="https://gradual-disempowerment.ai/" target="_blank" rel="noopener">https://gradual-disempowerment.ai/</a></li>
+<li id="src-13">Audrey Tang, "Conversation with AI Objectives Institute"（2023-10-25）— <a href="https://github.com/audreyt/transcript/blob/main/2023-10-25-Conversation-with-AI-Objectives-Institute.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2023-10-25-Conversation-with-AI-Objectives-Institute.md</a></li>
+<li id="src-14">"Conversation with Vehbi Deger Turan, Isabel Hou, Jia-Wei Cui"（2023-11-03）— <a href="https://sayit.archive.tw/2023-11-03-Conversation-with-Vehbi-Deger-Turan%2C-Isabel-Hou%2C-Jia-Wei-Cui" target="_blank" rel="noopener">https://sayit.archive.tw/2023-11-03-Conversation-with-Vehbi-Deger-Turan%2C-Isabel-Hou%2C-Jia-Wei-Cui</a></li>
+<li id="src-15">《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li id="src-16">CIP 白皮书（2023）— <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
+<li id="src-17">《ブロードリスニング》附录〈用语集〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+</ol><div class='related'>相关: <a href='talk-to-the-city.html'>什么是我城对谈（Talk to the City）？</a> ・ <a href='kouchou-ai.html'>什么是広聴AI（kouchou-ai）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='collective-intelligence-project.html'>什么是集体智慧计划（Collective Intelligence Project，CIP）？</a> ・ <a href='dd2030.html'>什么是デジタル民主主义2030（DD2030）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fai-objectives-institute.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%20AI%20Objectives%20Institute%EF%BC%88AOI%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fai-objectives-institute.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

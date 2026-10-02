@@ -41,40 +41,46 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../civic-ai.html">日本語</a> <a class="lang" hreflang="en" href="../en/civic-ai.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/civic-ai.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是仁工智慧（Civic AI）？</h1><div class='lead'>对受它影响的人负起回应义务的 AI。不是由一个巨大的 AI 治理所有人，而是打造许多由社区或团体自己拥有、能检查、能修正、能停用的小型 AI，这是唐凤等人的构想。</div><p>我们现在使用的 AI，大多由大公司打造，照那家公司的方针运作。如果这样的 AI 被用在社区的讨论、学校或照护现场，出了问题时，该向谁申诉？仁工智慧（Civic AI）对这个问题的回答是：「AI 应该对使用它的社区或团体的人们负责」。</p>
 <h2>一句话说明</h2>
-<p>仁工智慧是<strong>对受它影响的人们负起回应义务的 AI</strong>[1]。不是用一个强大的 AI 治理所有人，而是打造许多由社区、学校、团体等自己拥有，能检查内容、修正错误，也能停止使用的小型 AI[1]。</p>
-<p>这是前数位发展部部长唐凤（Audrey Tang）等人从 2025 年起提倡的想法。唐凤在一次访谈中说：「我正在推广『仁工智慧』（Civic AI）的概念，这意味着人们，例如我刚刚提到的学童，能够调整、引导、在地解释与他们相关的 AI 系统。」[2]「仁工智慧」和「人工智能」只差一个字：把「人」换成了儒家讲关爱的德目「仁」[2][3]。</p>
+<p>仁工智慧是<strong>对受它影响的人们负起回应义务的 AI</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a>。不是用一个强大的 AI 治理所有人，而是打造许多由社区、学校、团体等自己拥有，能检查内容、修正错误，也能停止使用的小型 AI<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>这是前数位发展部部长唐凤（Audrey Tang）等人从 2025 年起提倡的想法。唐凤在一次访谈中说：「我正在推广『仁工智慧』（Civic AI）的概念，这意味着人们，例如我刚刚提到的学童，能够调整、引导、在地解释与他们相关的 AI 系统。」<a class="cite" href="#src-2" data-src="src-2">[2]</a>「仁工智慧」和「人工智能」只差一个字：把「人」换成了儒家讲关爱的德目「仁」<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>台湾对诈骗广告的因应（2024 年）。</strong> 透过随机发送的简讯聚集起来的 447 人，每 10 人一组在线上讨论。AI 负责即时把发言转成文字、协助主持，并整理出现的提案。唐凤把这套机制称为使用仁工智慧的例子[4]。唐凤在中文访谈中也说：「所以，我们改用仁工智慧来倾听。」[3]</p>
-<p><strong>Engaged California（美国加州）。</strong> 这是和州政府一起打造的讨论平台。洛杉矶山火之后，用 AI 整理意见、拟定重建计划。接着又从 1,400 多名州政府职员那里，收集了 2,600 多个提升行政效率的点子。根据 civic.ai，2026 年 9 月州长签署了法案，从 2027 年起成为州的正式计划[4][5]。</p>
-<p><strong>唐凤自己的小型 AI。</strong> 唐凤和 Tenzin Yangtso 一起照料名为「jdd-kami」的仁工智慧。唐凤说，它在自己拥有、能检查、能停止的小型机器上离线运作[6]。唐凤准备演讲时，jdd-kami 负责从声音与关怀（voice and care）的角度检视讲稿的结构[7]。</p>
+<p><strong>台湾对诈骗广告的因应（2024 年）。</strong> 透过随机发送的简讯聚集起来的 447 人，每 10 人一组在线上讨论。AI 负责即时把发言转成文字、协助主持，并整理出现的提案。唐凤把这套机制称为使用仁工智慧的例子<a class="cite" href="#src-4" data-src="src-4">[4]</a>。唐凤在中文访谈中也说：「所以，我们改用仁工智慧来倾听。」<a class="cite" href="#src-3" data-src="src-3">[3]</a></p>
+<p><strong>Engaged California（美国加州）。</strong> 这是和州政府一起打造的讨论平台。洛杉矶山火之后，用 AI 整理意见、拟定重建计划。接着又从 1,400 多名州政府职员那里，收集了 2,600 多个提升行政效率的点子。根据 civic.ai，2026 年 9 月州长签署了法案，从 2027 年起成为州的正式计划<a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>唐凤自己的小型 AI。</strong> 唐凤和 Tenzin Yangtso 一起照料名为「jdd-kami」的仁工智慧。唐凤说，它在自己拥有、能检查、能停止的小型机器上离线运作<a class="cite" href="#src-6" data-src="src-6">[6]</a>。唐凤准备演讲时，jdd-kami 负责从声音与关怀（voice and care）的角度检视讲稿的结构<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>深入了解</h2>
 <h3>「公民的」指的是什么</h3>
-<p>许多 AI 是为了让个人用得越久越好，或让公司的收益最大而打造的。civic.ai 的词汇表把仁工智慧定义成与此不同的东西：它是作为在地的关怀基础设施而打造、帮助社群跨越差异合作而不是被煽动对立，并由它所服务的社群来治理的 AI[8]。</p>
-<p>设计上最重视的是「关系的健康」（relational health）：人与人、人与 AI 提供者、人与 AI、AI 与 AI 之间的关系是否健康[8]。为此的六项设计原则就是<a href="six-pack-of-care.html">关怀六力</a>，实际部署的 AI 单位则是<a href="kami.html">地神</a>（Kami）[1]。</p>
+<p>许多 AI 是为了让个人用得越久越好，或让公司的收益最大而打造的。civic.ai 的词汇表把仁工智慧定义成与此不同的东西：它是作为在地的关怀基础设施而打造、帮助社群跨越差异合作而不是被煽动对立，并由它所服务的社群来治理的 AI<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>设计上最重视的是「关系的健康」（relational health）：人与人、人与 AI 提供者、人与 AI、AI 与 AI 之间的关系是否健康<a class="cite" href="#src-8" data-src="src-8">[8]</a>。为此的六项设计原则就是<a href="six-pack-of-care.html">关怀六力</a>，实际部署的 AI 单位则是<a href="kami.html">地神</a>（Kami）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>和最先进 AI 的安全研究分工不同</h3>
-<p>civic.ai 明白写道，仁工智慧是补充、而不是取代让最先进的巨大 AI 符合人类价值的研究（前沿 AI 的对齐）；它也不从巨大模型的内部去解决控制问题[1]。</p>
-<p>它面对的是照护机构、教室、讨论现场、议会等 AI 已经在运作的「房间」，目的是在那里维持问责[1]。FAQ 把这说明成两个问题的不同：第一个问题是「让强大的 AI 符合全人类的价值」，第二个问题是「在这个房间里，这个 AI 有义务向谁负责」[9]。</p>
+<p>civic.ai 明白写道，仁工智慧是补充、而不是取代让最先进的巨大 AI 符合人类价值的研究（前沿 AI 的对齐）；它也不从巨大模型的内部去解决控制问题<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>它面对的是照护机构、教室、讨论现场、议会等 AI 已经在运作的「房间」，目的是在那里维持问责<a class="cite" href="#src-1" data-src="src-1">[1]</a>。FAQ 把这说明成两个问题的不同：第一个问题是「让强大的 AI 符合全人类的价值」，第二个问题是「在这个房间里，这个 AI 有义务向谁负责」<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>与其更聪明的聊天机器人，不如更强的自治</h3>
-<p>civic.ai 写道，真正的突破不是更聪明的聊天机器人，而是更强的自我治理：公开工作内容、在公开场合修复伤害、跨世代传承公民记忆的制度[1]。</p>
-<p>civic.ai 接着说："The superintelligence does not need to come. It is already here. It is us"（超级智慧不必到来，它已经在这里，就是我们）[1]。但附有但书：这不是说抽签选出的小团体等于机器的超级智慧，而是说，在合适的制度下，手上有工具的人们，会产生中央的最佳化器无法正当取代的、可问责的集体智慧[1]。</p>
+<p>civic.ai 写道，真正的突破不是更聪明的聊天机器人，而是更强的自我治理：公开工作内容、在公开场合修复伤害、跨世代传承公民记忆的制度<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>civic.ai 接着说："The superintelligence does not need to come. It is already here. It is us"（超级智慧不必到来，它已经在这里，就是我们）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。但附有但书：这不是说抽签选出的小团体等于机器的超级智慧，而是说，在合适的制度下，手上有工具的人们，会产生中央的最佳化器无法正当取代的、可问责的集体智慧<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>判断留给人</h3>
-<p>宣言写道，仁工智慧不取代代议民主。它扩大倾听的范围、记录理由、让义务得到回应，但判断仍然留给人们和他们的制度[4]。</p>
-<p>根据演讲的报导文章，唐凤在 2026 年 5 月于牛津的演讲中，把「是否增强社群关怀自身的能力」当作值得打造的 AI 的试金石。报导也总结说，唐凤提供的是一种信任：接手这些系统的人，自己就能修好它们[10]。</p>
+<p>宣言写道，仁工智慧不取代代议民主。它扩大倾听的范围、记录理由、让义务得到回应，但判断仍然留给人们和他们的制度<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>根据演讲的报导文章，唐凤在 2026 年 5 月于牛津的演讲中，把「是否增强社群关怀自身的能力」当作值得打造的 AI 的试金石。报导也总结说，唐凤提供的是一种信任：接手这些系统的人，自己就能修好它们<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>名称的由来</h3>
-<p>「Civic AI」这个名称，出现在唐凤与 Caroline Green 2025 年在牛津大学 AI 伦理研究所的计划中发表的研究名称里。目标是结合 Joan Tronto 的关怀伦理与唐凤的 Plurality 构想，把「公民关怀」（civic care）纳入 AI 的设计与治理[11]。</p>
+<p>「Civic AI」这个名称，出现在唐凤与 Caroline Green 2025 年在牛津大学 AI 伦理研究所的计划中发表的研究名称里。目标是结合 Joan Tronto 的关怀伦理与唐凤的 Plurality 构想，把「公民关怀」（civic care）纳入 AI 的设计与治理<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>「没有解决 AI 安全的核心」的批评。</strong> 这项批评，以及「让一个 AI 忠实的问题，和让 AI 们组成的社会不起冲突的问题是两回事」的回应，详见〈<a href="six-pack-of-care.html">关怀六力</a>〉。civic.ai 自己也提醒，把范围限定在在地，是设计上的选择，并不是社群真的支配着 AI 的证据[1]。</li>
-<li><strong>案例的限制。</strong> civic.ai 举了台湾的大会、日本的<a href="team-mirai.html">未来团队</a>（チームみらい，Team Mirai）、Engaged California 等 7 个案例，但写道它们不是同一件事的 7 个证明[1]。civic.ai 也承认，其中许多是从公民黑客、回应迅速的行政、活跃的公民团体这类已经整好的土壤中长出来的[1]。</li>
-<li><strong>常见的误解：仁工智慧不等于「政府用的 AI」。</strong> 定义的核心是「向谁负责」。使用的主体设想得很广：邻里聚会、学校、工会、信仰团体、城市，乃至海外侨民的社群[1]。</li>
+<li><strong>「没有解决 AI 安全的核心」的批评。</strong> 这项批评，以及「让一个 AI 忠实的问题，和让 AI 们组成的社会不起冲突的问题是两回事」的回应，详见〈<a href="six-pack-of-care.html">关怀六力</a>〉。civic.ai 自己也提醒，把范围限定在在地，是设计上的选择，并不是社群真的支配着 AI 的证据<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>案例的限制。</strong> civic.ai 举了台湾的大会、日本的<a href="team-mirai.html">未来团队</a>（チームみらい，Team Mirai）、Engaged California 等 7 个案例，但写道它们不是同一件事的 7 个证明<a class="cite" href="#src-1" data-src="src-1">[1]</a>。civic.ai 也承认，其中许多是从公民黑客、回应迅速的行政、活跃的公民团体这类已经整好的土壤中长出来的<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>常见的误解：仁工智慧不等于「政府用的 AI」。</strong> 定义的核心是「向谁负责」。使用的主体设想得很广：邻里聚会、学校、工会、信仰团体、城市，乃至海外侨民的社群<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>《多元宇宙》（2024 年）的本文没有出现仁工智慧这个词。关于 AI，书在 2-0 章把「AI 与专家统治」描写成三种未来愿景之一，并加以批判[12]。2-2 章则把台湾的<a href="alignment-assemblies.html">对齐大会</a>举为公民参与 AI 监管与指导的例子[13]。</p>
-<p>仁工智慧可以看成是唐凤在 2025 年以后，把书的这些问题意识扩展到 AI 的实作与治理框架上。也就是说，<strong>这不是书本身的主张，而是唐凤（与 Green）的主张</strong>[1]。共同作者卫谷伦同一时期的议题是<a href="reverse-alignment.html">反向对齐</a>，唐凤也名列其联盟[14]。</p>
-<p>使用的工具和书的第 5 部重叠，例如<a href="broad-listening.html">广泛倾听</a>（听取许多人声音的方法）、<a href="bridging.html">桥接</a>（找出立场不同的人之共同点的机制）、<a href="polis.html">Polis</a>、<a href="community-notes.html">社群备注</a>[4]。以太坊创办人维塔利克·布特林（Vitalik Buterin）也在 civic.ai 上撰文，认为 AI 应该是「心灵的自行车」（bicycle for the mind），而不是让人睡在里面被载着走的汽车，并讨论如何抵抗 AI 的单一化[15]。</p>
+<p>《多元宇宙》（2024 年）的本文没有出现仁工智慧这个词。关于 AI，书在 2-0 章把「AI 与专家统治」描写成三种未来愿景之一，并加以批判<a class="cite" href="#src-12" data-src="src-12">[12]</a>。2-2 章则把台湾的<a href="alignment-assemblies.html">对齐大会</a>举为公民参与 AI 监管与指导的例子<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>仁工智慧可以看成是唐凤在 2025 年以后，把书的这些问题意识扩展到 AI 的实作与治理框架上。也就是说，<strong>这不是书本身的主张，而是唐凤（与 Green）的主张</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a>。共同作者卫谷伦同一时期的议题是<a href="reverse-alignment.html">反向对齐</a>，唐凤也名列其联盟<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
+<p>使用的工具和书的第 5 部重叠，例如<a href="broad-listening.html">广泛倾听</a>（听取许多人声音的方法）、<a href="bridging.html">桥接</a>（找出立场不同的人之共同点的机制）、<a href="polis.html">Polis</a>、<a href="community-notes.html">社群备注</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。以太坊创办人维塔利克·布特林（Vitalik Buterin）也在 civic.ai 上撰文，认为 AI 应该是「心灵的自行车」（bicycle for the mind），而不是让人睡在里面被载着走的汽车，并讨论如何抵抗 AI 的单一化<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>唐凤〈Open Commons 专访〉（2026-07-16，中文，逐字稿）— <a href="https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA" target="_blank" rel="noopener">https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA</a></li>
@@ -86,19 +92,49 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Civic AI — 6-Pack of Care（首页）— <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
-<li>唐凤〈末日辩论〉（Doom Debates 中文逐字稿，2026-01-20）— <a href="https://sayit.archive.tw/2026-01-20-%E6%9C%AB%E6%97%A5%E8%BE%AF%E8%AB%96" target="_blank" rel="noopener">https://sayit.archive.tw/2026-01-20-%E6%9C%AB%E6%97%A5%E8%BE%AF%E8%AB%96</a></li>
-<li>唐凤〈Open Commons 专访〉（2026-07-16，逐字稿）— <a href="https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA" target="_blank" rel="noopener">https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA</a></li>
-<li>"6-Pack of Care: A Manifesto" — <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a></li>
-<li>civic.ai FAQ Q7 — <a href="https://civic.ai/faq/#faq-7" target="_blank" rel="noopener">https://civic.ai/faq/#faq-7</a></li>
-<li>"Democracy Needs Civic AI" — <a href="https://civic.ai/democracy-needs-civic-ai/" target="_blank" rel="noopener">https://civic.ai/democracy-needs-civic-ai/</a></li>
-<li>uncommon-ground（唐凤准备演讲的流程，节录）— <a href="https://github.com/audreyt/uncommon-ground" target="_blank" rel="noopener">https://github.com/audreyt/uncommon-ground</a></li>
-<li>civic.ai 词汇表 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a></li>
-<li>civic.ai FAQ Q17 — <a href="https://civic.ai/faq/#faq-17" target="_blank" rel="noopener">https://civic.ai/faq/#faq-17</a></li>
-<li>Sarah Cao, "Civic AI and the Muscles of Care"（STAIR，2026-06-27）— <a href="https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang" target="_blank" rel="noopener">https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</a></li>
-<li>牛津大学 AI 伦理研究所 Accelerator Fellowship Programme 的发表 — <a href="https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health" target="_blank" rel="noopener">https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health</a></li>
-<li>《多元宇宙》2-0〈资讯技术与民主：日益扩大的鸿沟〉— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
-<li>《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
-<li>Reverse Alignment 联盟网站 — <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
-<li>Vitalik Buterin, "AI With Us, Not Without Us"（2026-03-25）— <a href="https://civic.ai/ai-with-us/" target="_blank" rel="noopener">https://civic.ai/ai-with-us/</a></li>
-</ol><div class='related'>相关: <a href='six-pack-of-care.html'>什么是关怀六力（6-Pack of Care）？</a> ・ <a href='kami.html'>什么是地神（Kami）？</a> ・ <a href='reverse-alignment.html'>什么是反向对齐（reverse alignment）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a> ・ <a href='plurality.html'>什么是 ⿻ Plurality（多元宇宙）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcivic-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%81%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%88Civic%20AI%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcivic-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Civic AI — 6-Pack of Care（首页）— <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
+<li id="src-2">唐凤〈末日辩论〉（Doom Debates 中文逐字稿，2026-01-20）— <a href="https://sayit.archive.tw/2026-01-20-%E6%9C%AB%E6%97%A5%E8%BE%AF%E8%AB%96" target="_blank" rel="noopener">https://sayit.archive.tw/2026-01-20-%E6%9C%AB%E6%97%A5%E8%BE%AF%E8%AB%96</a></li>
+<li id="src-3">唐凤〈Open Commons 专访〉（2026-07-16，逐字稿）— <a href="https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA" target="_blank" rel="noopener">https://sayit.archive.tw/2026-07-16-open-commons-%E5%B0%88%E8%A8%AA</a></li>
+<li id="src-4">"6-Pack of Care: A Manifesto" — <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a></li>
+<li id="src-5">civic.ai FAQ Q7 — <a href="https://civic.ai/faq/#faq-7" target="_blank" rel="noopener">https://civic.ai/faq/#faq-7</a></li>
+<li id="src-6">"Democracy Needs Civic AI" — <a href="https://civic.ai/democracy-needs-civic-ai/" target="_blank" rel="noopener">https://civic.ai/democracy-needs-civic-ai/</a></li>
+<li id="src-7">uncommon-ground（唐凤准备演讲的流程，节录）— <a href="https://github.com/audreyt/uncommon-ground" target="_blank" rel="noopener">https://github.com/audreyt/uncommon-ground</a></li>
+<li id="src-8">civic.ai 词汇表 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a></li>
+<li id="src-9">civic.ai FAQ Q17 — <a href="https://civic.ai/faq/#faq-17" target="_blank" rel="noopener">https://civic.ai/faq/#faq-17</a></li>
+<li id="src-10">Sarah Cao, "Civic AI and the Muscles of Care"（STAIR，2026-06-27）— <a href="https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang" target="_blank" rel="noopener">https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</a></li>
+<li id="src-11">牛津大学 AI 伦理研究所 Accelerator Fellowship Programme 的发表 — <a href="https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health" target="_blank" rel="noopener">https://afp.oxford-aiethics.ox.ac.uk/article/civic-ai-and-6-pack-care-reimagining-ai-alignment-relational-health</a></li>
+<li id="src-12">《多元宇宙》2-0〈资讯技术与民主：日益扩大的鸿沟〉— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
+<li id="src-13">《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li id="src-14">Reverse Alignment 联盟网站 — <a href="https://reversealignment.ai/" target="_blank" rel="noopener">https://reversealignment.ai/</a></li>
+<li id="src-15">Vitalik Buterin, "AI With Us, Not Without Us"（2026-03-25）— <a href="https://civic.ai/ai-with-us/" target="_blank" rel="noopener">https://civic.ai/ai-with-us/</a></li>
+</ol><div class='related'>相关: <a href='six-pack-of-care.html'>什么是关怀六力（6-Pack of Care）？</a> ・ <a href='kami.html'>什么是地神（Kami）？</a> ・ <a href='reverse-alignment.html'>什么是反向对齐（reverse alignment）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a> ・ <a href='broad-listening.html'>什么是广泛倾听（Broad Listening）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a> ・ <a href='plurality.html'>什么是 ⿻ Plurality（多元宇宙）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcivic-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%81%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%88Civic%20AI%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcivic-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

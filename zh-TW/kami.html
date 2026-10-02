@@ -41,22 +41,28 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../kami.html">日本語</a> <a class="lang" hreflang="en" href="../en/kami.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/kami.html">简体中文</a></nav></header>
 <main lang="zh-TW"><h1>什麼是地神（Kami）？</h1><div class='lead'>只服務一個場所或一個群體的小型 AI。那裡的人能檢查它的內容、修正它，也能隨時讓它退休。這是唐鳳借用神道「土地之神」的形式所做的比喻。</div><p>說到 AI 的未來，許多人可能會想到一個無所不知、掌管一切的巨大 AI。地神（Kami）是朝相反方向走的想法：在社區、教室、小型慈善團體等地方，放置許多<strong>只照顧一個地方的小型 AI</strong>。</p>
 <h2>一句話說明</h2>
-<p>地神是<strong>只服務一個場所或一個群體的小型 AI 幫手</strong>。它回答那裡的人們的問題，紀錄可以被查閱，可以被修正，也可以隨時被關掉[1][2]。</p>
+<p>地神是<strong>只服務一個場所或一個群體的小型 AI 幫手</strong>。它回答那裡的人們的問題，紀錄可以被查閱，可以被修正，也可以隨時被關掉<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>這是前數位發展部部長唐鳳（Audrey Tang）等人，從 2025 年起在 AI 治理框架<a href="six-pack-of-care.html">關懷六力</a>中使用的想法。它是實際部署<a href="civic-ai.html">仁工智慧</a>（對社區或團體負責的 AI）時的單位。</p>
 <h2>舉例來說</h2>
-<p><strong>在自己的筆電上運作的地神。</strong> civic.ai 在 2026 年 6 月公開了啟動地神的步驟：用免費應用程式 Ollama 在自己的電腦上執行語言模型，再對 AI 代理（會自己推進工作的 AI）OpenClaw 說一句 "Please read civic.ai and become my local Kami." 就可以了[1][3]。</p>
-<p>接著，地神會先替自己寫下三份筆記：承諾做什麼、名字與行為方式、服務誰以及不可越過的界線。然後它會反問：「我是為了哪個場所或群體而存在？」「哪些判斷應該留給人類？」「要怎麼修正或停止我？」[1] 同一頁也提醒，設定只要 10 分鐘，難的是之後如何取得社群的信任並持續下去[1]。</p>
-<p><strong>一起準備演講的地神。</strong> 2026 年 7 月，唐鳳在巴黎法國國家圖書館的維基媒體聚會上說，這場演講本身就是和地神一起準備的[4]。唐鳳列出這個地神的「勞動條件」：沒有出處就不成句（No source, no sentence）；讀過公共財（大家共有的資源）的 AI，要回報一筆編輯；衝突的編輯不默默覆蓋，而由人類調解[4]。</p>
-<p><strong>家庭的地神。</strong> 唐鳳在 2026 年 6 月的演講中說，和弟弟一起替家人的聊天群組做了一個小機制，稱它為地神[5]。唐鳳說，母親訂下的目標是減少父親對螢幕的依賴、增加內心的平靜[5]。</p>
+<p><strong>在自己的筆電上運作的地神。</strong> civic.ai 在 2026 年 6 月公開了啟動地神的步驟：用免費應用程式 Ollama 在自己的電腦上執行語言模型，再對 AI 代理（會自己推進工作的 AI）OpenClaw 說一句 "Please read civic.ai and become my local Kami." 就可以了<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>接著，地神會先替自己寫下三份筆記：承諾做什麼、名字與行為方式、服務誰以及不可越過的界線。然後它會反問：「我是為了哪個場所或群體而存在？」「哪些判斷應該留給人類？」「要怎麼修正或停止我？」<a class="cite" href="#src-1" data-src="src-1">[1]</a> 同一頁也提醒，設定只要 10 分鐘，難的是之後如何取得社群的信任並持續下去<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>一起準備演講的地神。</strong> 2026 年 7 月，唐鳳在巴黎法國國家圖書館的維基媒體聚會上說，這場演講本身就是和地神一起準備的<a class="cite" href="#src-4" data-src="src-4">[4]</a>。唐鳳列出這個地神的「勞動條件」：沒有出處就不成句（No source, no sentence）；讀過公共財（大家共有的資源）的 AI，要回報一筆編輯；衝突的編輯不默默覆蓋，而由人類調解<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>家庭的地神。</strong> 唐鳳在 2026 年 6 月的演講中說，和弟弟一起替家人的聊天群組做了一個小機制，稱它為地神<a class="cite" href="#src-5" data-src="src-5">[5]</a>。唐鳳說，母親訂下的目標是減少父親對螢幕的依賴、增加內心的平靜<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>運作方式</h2>
 <h3>名稱的由來</h3>
-<p>Kami 是 "Knowledge Artefact Management Intelligence"（管理知識成果的智慧）的縮寫。同時也刻意呼應日本神道的「神」（kami）：寄宿在特定的河流、森林或老樹中，與那一樣東西的健康密不可分的土地之神。civic.ai 寫道，河流的守護神沒有管理森林的野心[6][2]。</p>
-<p>不過，縮寫的說明可能是後來才加上的。2025 年 9 月演講的紀錄中，出現了作為「場所之靈」（spirit of place）的 Kami，卻看不到縮寫的展開。能確認縮寫的最早資料是 2026 年 3 月的[7][8]。</p>
+<p>Kami 是 "Knowledge Artefact Management Intelligence"（管理知識成果的智慧）的縮寫。同時也刻意呼應日本神道的「神」（kami）：寄宿在特定的河流、森林或老樹中，與那一樣東西的健康密不可分的土地之神。civic.ai 寫道，河流的守護神沒有管理森林的野心<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>不過，縮寫的說明可能是後來才加上的。2025 年 9 月演講的紀錄中，出現了作為「場所之靈」（spirit of place）的 Kami，卻看不到縮寫的展開。能確認縮寫的最早資料是 2026 年 3 月的<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>四個性質</h3>
-<p>唐鳳在巴黎的演講中，用四個詞說明地神[4]：</p>
+<p>唐鳳在巴黎的演講中，用四個詞說明地神<a class="cite" href="#src-4" data-src="src-4">[4]</a>：</p>
 <ul>
 <li><strong>Bounded（範圍有限）</strong>——為一個目的而打造，不是為所有目的</li>
 <li><strong>Local（在手邊）</strong>——記憶、出處帳本和家規，都放在 16GB 記憶體的筆電上；使用的語言模型供應者可以替換</li>
@@ -64,26 +70,26 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li><strong>Retirable（可退休）</strong>——隨時可以讓它停止。唐鳳說，退休不是詩，而是契約的條款</li>
 </ul>
 <h3>為什麼要做小</h3>
-<p>AI 彼此競爭、擴張勢力，最後由一個 AI 支配一切——關懷六力的第六力「共生力」（Symbiosis），就是要回應對這種「單一體」（singleton，唯一的支配者）的恐懼[6]。</p>
-<p>宣言寫道，解決之道不是讓更大的 AI 來支配，而是用兩種方式讓它們協調[6][2]：</p>
+<p>AI 彼此競爭、擴張勢力，最後由一個 AI 支配一切——關懷六力的第六力「共生力」（Symbiosis），就是要回應對這種「單一體」（singleton，唯一的支配者）的恐懼<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>宣言寫道，解決之道不是讓更大的 AI 來支配，而是用兩種方式讓它們協調<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>：</p>
 <ol>
 <li><strong>聯邦（federation）</strong>——AI 之間同意共同的交流規則</li>
 <li><strong>輔助性（subsidiarity）</strong>——問題盡量在最近的層級解決。例如國家層級的 AI，只在城市層級的 AI 真的解決不了時才出場</li>
 </ol>
-<p>宣言明白寫道，範圍有限不是 AI 天生具備的性質，而是要透過資源上限、期限計時器、不擴張勢力的承諾、改變範圍時需要新的民主授權等方式「打造進去」的[6][2]。宣言也說，因為人同時屬於許多重疊的社群，任何一個地神都無法支配一個人的全部[6]。</p>
+<p>宣言明白寫道，範圍有限不是 AI 天生具備的性質，而是要透過資源上限、期限計時器、不擴張勢力的承諾、改變範圍時需要新的民主授權等方式「打造進去」的<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。宣言也說，因為人同時屬於許多重疊的社群，任何一個地神都無法支配一個人的全部<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>不是上下關係，而是重疊的中心</h3>
-<p>在線上論壇 LessWrong 上被問到地神的社會是平等的還是階層的時，唐鳳回答兩者都不是[9]。處理整個大陸氣候的地神，和處理地區用水的地神大小不同，但那不是地位的差別，而是負責範圍的不同。唐鳳說明，每個地神都只在自己的範圍內強大[9]。</p>
+<p>在線上論壇 LessWrong 上被問到地神的社會是平等的還是階層的時，唐鳳回答兩者都不是<a class="cite" href="#src-9" data-src="src-9">[9]</a>。處理整個大陸氣候的地神，和處理地區用水的地神大小不同，但那不是地位的差別，而是負責範圍的不同。唐鳳說明，每個地神都只在自己的範圍內強大<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>它有心嗎？</h3>
-<p>civic.ai 的 FAQ 刻意不決定地神有沒有心或意識[10]。同時也說，地神是人們組裝、掌舵的基礎設施，不應該取代人與人之間的關懷[10]。</p>
+<p>civic.ai 的 FAQ 刻意不決定地神有沒有心或意識<a class="cite" href="#src-10" data-src="src-10">[10]</a>。同時也說，地神是人們組裝、掌舵的基礎設施，不應該取代人與人之間的關懷<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h2>爭議與批評</h2>
 <ul>
-<li><strong>可以借用宗教的概念嗎？</strong> 唐鳳自己限定了借用的範圍。根據報導文章，在道教家庭長大的唐鳳說明，自己不是日本人、也沒有學過神道，並明確與國家神道、皇室、靖國無關；借用的只是與特定場所連結、小而人能理解的存在這層意思[11]。唐鳳在巴黎的演講中也說，只是帶著敬意借用形式，並不對任何人的宗教主張權利[4]。在與東浩紀的對談中，唐鳳這樣對照：「它不是那種自虛無而來、全知全能、普遍支配的一神教式 God，而是同樣一個漢字『神』，卻有完全不同的意思。」[12] 另外，本站收集的資料中，還沒有第三方對這種借用的批評。</li>
-<li><strong>「在手邊」不等於「安全」。</strong> civic.ai 警告，手邊的小模型也和遠端的大模型一樣，會流暢又自信地說謊：private does not mean honest（不公開，不代表誠實）[1]。civic.ai 建議問它一件不存在的事，看它會不會回答「不知道」[1]。</li>
-<li><strong>常見的誤解：地神不是某個特定的軟體產品。</strong> 目前沒有找到獨立的實作；civic.ai 提供的是設定既有 AI 代理的步驟[1]。</li>
+<li><strong>可以借用宗教的概念嗎？</strong> 唐鳳自己限定了借用的範圍。根據報導文章，在道教家庭長大的唐鳳說明，自己不是日本人、也沒有學過神道，並明確與國家神道、皇室、靖國無關；借用的只是與特定場所連結、小而人能理解的存在這層意思<a class="cite" href="#src-11" data-src="src-11">[11]</a>。唐鳳在巴黎的演講中也說，只是帶著敬意借用形式，並不對任何人的宗教主張權利<a class="cite" href="#src-4" data-src="src-4">[4]</a>。在與東浩紀的對談中，唐鳳這樣對照：「它不是那種自虛無而來、全知全能、普遍支配的一神教式 God，而是同樣一個漢字『神』，卻有完全不同的意思。」<a class="cite" href="#src-12" data-src="src-12">[12]</a> 另外，本站收集的資料中，還沒有第三方對這種借用的批評。</li>
+<li><strong>「在手邊」不等於「安全」。</strong> civic.ai 警告，手邊的小模型也和遠端的大模型一樣，會流暢又自信地說謊：private does not mean honest（不公開，不代表誠實）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。civic.ai 建議問它一件不存在的事，看它會不會回答「不知道」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>常見的誤解：地神不是某個特定的軟體產品。</strong> 目前沒有找到獨立的實作；civic.ai 提供的是設定既有 AI 代理的步驟<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
 <p>《多元宇宙》（2024 年）中沒有出現地神（本站編輯時，檢索了書的日文、英文、中文版來確認）。這是書出版後，在關懷六力（2025 年起）中帶進來的想法，<strong>不是書本身的主張，而是唐鳳的主張</strong>。</p>
-<p>不過它和書仍有關聯。書的 2-2 章卷首，引用了唐鳳 2016 年寫的詩，繁體中文版是：「聽說『奇點即將接近』—— 多元宇宙，已經來臨。」[13] 唐鳳多次用這一句來說明地神。宣言接著說，奇點是縱向的未來願景，Plurality 是橫向的未來願景；AI 的未來是小而開放、可在地驗證的系統，也就是在地地神的分散式網路[6]。</p>
+<p>不過它和書仍有關聯。書的 2-2 章卷首，引用了唐鳳 2016 年寫的詩，繁體中文版是：「聽說『奇點即將接近』—— 多元宇宙，已經來臨。」<a class="cite" href="#src-13" data-src="src-13">[13]</a> 唐鳳多次用這一句來說明地神。宣言接著說，奇點是縱向的未來願景，Plurality 是橫向的未來願景；AI 的未來是小而開放、可在地驗證的系統，也就是在地地神的分散式網路<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p>相關文章：</p>
 <ul>
 <li><a href="civic-ai.html">仁工智慧</a>——地神是它的部署單位</li>
@@ -102,17 +108,47 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出處</h2>
 <ol>
-<li>civic.ai, "Set up your own Kami"（2026-06-06）— <a href="https://civic.ai/kami/" target="_blank" rel="noopener">https://civic.ai/kami/</a> ［CC0］</li>
-<li>civic.ai 詞彙表 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a> ［CC0］</li>
-<li>OpenClaw 的 README — <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">https://github.com/openclaw/openclaw</a> ［MIT］</li>
-<li>Audrey Tang, "Kami: Knowledge Artefact Management Intelligence"（BnF 巴黎，2026-07-21）— <a href="https://audreyt.org/kami-mosaic.html" target="_blank" rel="noopener">https://audreyt.org/kami-mosaic.html</a> ［CC0］</li>
-<li>civic.ai, "Reimagining AI Alignment"（2026-06-02）— <a href="https://civic.ai/reimagining-ai-alignment/" target="_blank" rel="noopener">https://civic.ai/reimagining-ai-alignment/</a> ［CC0］</li>
-<li>"6-Pack of Care: A Manifesto" — <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a> ［CC0］</li>
-<li>LessWrong, "⿻ Plurality &amp; 6pack.care"（2025-09-01 的演講筆記）— <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
-<li>civic.ai, "Democracy Needs Civic AI"（2026-03-25）— <a href="https://civic.ai/democracy-needs-civic-ai/" target="_blank" rel="noopener">https://civic.ai/democracy-needs-civic-ai/</a> ［CC0］</li>
-<li>同一篇 LessWrong 的留言區（2025-09-02）— <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
-<li>civic.ai FAQ Q20 — <a href="https://civic.ai/faq/#faq-20" target="_blank" rel="noopener">https://civic.ai/faq/#faq-20</a> ［CC0］</li>
-<li>Sarah Cao, "Civic AI and the Muscles of Care"（STAIR，2026-06-27）— <a href="https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang" target="_blank" rel="noopener">https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</a></li>
-<li>唐鳳〈東浩紀對談〉（2026-03-15，逐字稿）— <a href="https://sayit.archive.tw/2026-03-15-%E6%9D%B1%E6%B5%A9%E7%B4%80%E5%B0%8D%E8%AB%87" target="_blank" rel="noopener">https://sayit.archive.tw/2026-03-15-%E6%9D%B1%E6%B5%A9%E7%B4%80%E5%B0%8D%E8%AB%87</a> ［CC0］</li>
-<li>《多元宇宙》2-2〈數位民主的日常〉卷首 — <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a> ［CC0］</li>
-</ol><div class='related'>相關: <a href='civic-ai.html'>什麼是仁工智慧（Civic AI）？</a> ・ <a href='six-pack-of-care.html'>什麼是關懷六力（6-Pack of Care）？</a> ・ <a href='superintelligence.html'>什麼是超級智慧（superintelligence）？</a> ・ <a href='ai-futures-debate.html'>什麼是關於 AI 未來的論爭（AI 2027 等）？</a> ・ <a href='plurality.html'>什麼是 ⿻ Plurality（多元宇宙）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fkami.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E5%9C%B0%E7%A5%9E%EF%BC%88Kami%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fkami.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>
+<li id="src-1">civic.ai, "Set up your own Kami"（2026-06-06）— <a href="https://civic.ai/kami/" target="_blank" rel="noopener">https://civic.ai/kami/</a> ［CC0］</li>
+<li id="src-2">civic.ai 詞彙表 — <a href="https://civic.ai/glossary/" target="_blank" rel="noopener">https://civic.ai/glossary/</a> ［CC0］</li>
+<li id="src-3">OpenClaw 的 README — <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">https://github.com/openclaw/openclaw</a> ［MIT］</li>
+<li id="src-4">Audrey Tang, "Kami: Knowledge Artefact Management Intelligence"（BnF 巴黎，2026-07-21）— <a href="https://audreyt.org/kami-mosaic.html" target="_blank" rel="noopener">https://audreyt.org/kami-mosaic.html</a> ［CC0］</li>
+<li id="src-5">civic.ai, "Reimagining AI Alignment"（2026-06-02）— <a href="https://civic.ai/reimagining-ai-alignment/" target="_blank" rel="noopener">https://civic.ai/reimagining-ai-alignment/</a> ［CC0］</li>
+<li id="src-6">"6-Pack of Care: A Manifesto" — <a href="https://civic.ai/manifesto/" target="_blank" rel="noopener">https://civic.ai/manifesto/</a> ［CC0］</li>
+<li id="src-7">LessWrong, "⿻ Plurality &amp; 6pack.care"（2025-09-01 的演講筆記）— <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
+<li id="src-8">civic.ai, "Democracy Needs Civic AI"（2026-03-25）— <a href="https://civic.ai/democracy-needs-civic-ai/" target="_blank" rel="noopener">https://civic.ai/democracy-needs-civic-ai/</a> ［CC0］</li>
+<li id="src-9">同一篇 LessWrong 的留言區（2025-09-02）— <a href="https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care" target="_blank" rel="noopener">https://www.lesswrong.com/posts/anoK4akwe8PKjtzkL/plurality-and-6pack-care</a></li>
+<li id="src-10">civic.ai FAQ Q20 — <a href="https://civic.ai/faq/#faq-20" target="_blank" rel="noopener">https://civic.ai/faq/#faq-20</a> ［CC0］</li>
+<li id="src-11">Sarah Cao, "Civic AI and the Muscles of Care"（STAIR，2026-06-27）— <a href="https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang" target="_blank" rel="noopener">https://www.stairjournal.com/oped/2026/6/27/civic-ai-and-the-muscles-of-care-reflections-from-ambassador-audrey-tang</a></li>
+<li id="src-12">唐鳳〈東浩紀對談〉（2026-03-15，逐字稿）— <a href="https://sayit.archive.tw/2026-03-15-%E6%9D%B1%E6%B5%A9%E7%B4%80%E5%B0%8D%E8%AB%87" target="_blank" rel="noopener">https://sayit.archive.tw/2026-03-15-%E6%9D%B1%E6%B5%A9%E7%B4%80%E5%B0%8D%E8%AB%87</a> ［CC0］</li>
+<li id="src-13">《多元宇宙》2-2〈數位民主的日常〉卷首 — <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a> ［CC0］</li>
+</ol><div class='related'>相關: <a href='civic-ai.html'>什麼是仁工智慧（Civic AI）？</a> ・ <a href='six-pack-of-care.html'>什麼是關懷六力（6-Pack of Care）？</a> ・ <a href='superintelligence.html'>什麼是超級智慧（superintelligence）？</a> ・ <a href='ai-futures-debate.html'>什麼是關於 AI 未來的論爭（AI 2027 等）？</a> ・ <a href='plurality.html'>什麼是 ⿻ Plurality（多元宇宙）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fkami.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E5%9C%B0%E7%A5%9E%EF%BC%88Kami%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fkami.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

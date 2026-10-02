@@ -41,53 +41,59 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../lost-dao.html">日本語</a> <a class="lang" hreflang="en" href="../en/lost-dao.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/lost-dao.html">简体中文</a></nav></header>
 <main lang="zh-TW"><h1>什麼是「我們遺忘的道」（The Lost Dao）？</h1><div class='lead'>打造網際網路原型的 1960～70 年代美國研究者，想用電腦讓人們彼此連結、一起思考、一起治理。可是隨著公共投資萎縮，這份志向的一部分沒被做出來就被遺忘了。《多元宇宙》把它稱為「我們遺忘的道」。</div><p>現在我們在網路上登入時，多半是用大型科技公司的帳號；付錢時，也要經過某家公司的服務。可是《多元宇宙》寫道，最早打造網際網路的人，本來打算把這些基礎也做成「大家的東西」。書把這條沒被做出來的道路，稱為「我們遺忘的道」（The Lost Dao）。</p>
 <h2>一句話說明</h2>
-<p>作為今日網際網路原型的 1960～70 年代美國研究者，目標是<strong>用電腦讓人與人連結、一起思考、一起治理</strong>。然而，在國家的研究投資萎縮、民間大企業填補空缺的過程中，這份志向的一部分沒被做出來就被遺忘了：身分識別、支付、資料共享這類基礎[1][2]。</p>
-<p>書把這稱為「我們遺忘的道」，並呼籲把它找回來[1]。英文的 "Dao" 就是中文的「道」。</p>
+<p>作為今日網際網路原型的 1960～70 年代美國研究者，目標是<strong>用電腦讓人與人連結、一起思考、一起治理</strong>。然而，在國家的研究投資萎縮、民間大企業填補空缺的過程中，這份志向的一部分沒被做出來就被遺忘了：身分識別、支付、資料共享這類基礎<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>書把這稱為「我們遺忘的道」，並呼籲把它找回來<a class="cite" href="#src-1" data-src="src-1">[1]</a>。英文的 "Dao" 就是中文的「道」。</p>
 <h2>舉例來說</h2>
-<p><strong>「星際電腦網路」（1963 年）。</strong> 在美國國防部的研究機構 ARPA 領導資訊處理辦公室的約瑟夫·利克萊德（J. C. R. Licklider），以半開玩笑的口吻，把連接各研究據點的網路稱為「星際電腦網路」，期望它能提供「以電腦為媒介的合作和共同治理的模式」[3]。利克萊德支持的史丹佛、MIT 等大學成為電腦科學的中心。受資助的道格拉斯·恩格爾巴特（Douglas Engelbart）的研究中心，發明了滑鼠等個人計算的基礎元素，也和超文本（把文件彼此連結起來的機制）的發展相連[3]。</p>
-<p><strong>RFC（意見徵詢）。</strong> 書把史蒂芬·克羅克（Steve Crocker）開發的「意見徵詢」（Request for Comments, RFC）過程，稱為「可以說是第一個類似於『共筆』（wiki）的非正式協作過程」[4]。分散在政府、企業、大學的協作者用它合作，最終促成了今天網路的通訊協定 TCP/IP。1974 年，TCP 首次作為 RFC 675 分發；1983 年，TCP/IP 成為 ARPANET 的官方協定[4]。</p>
-<p>根據書的說法，「網際網路」之名，來自許多不同的在地網路相互協作的「由網路組成的網路」。這和政府自上而下的集中式網路（如法國的 Minitel）相反[4]。</p>
-<p><strong>使用者的急速增加。</strong> 書寫道，從 1991 年全球資訊網推出，到千禧年末，網際網路的使用從大約 400 萬人增長到 4 億多人[5]。4 億是 400 萬的 100 倍，所以是不到 10 年就增加了 100 倍以上。</p>
+<p><strong>「星際電腦網路」（1963 年）。</strong> 在美國國防部的研究機構 ARPA 領導資訊處理辦公室的約瑟夫·利克萊德（J. C. R. Licklider），以半開玩笑的口吻，把連接各研究據點的網路稱為「星際電腦網路」，期望它能提供「以電腦為媒介的合作和共同治理的模式」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。利克萊德支持的史丹佛、MIT 等大學成為電腦科學的中心。受資助的道格拉斯·恩格爾巴特（Douglas Engelbart）的研究中心，發明了滑鼠等個人計算的基礎元素，也和超文本（把文件彼此連結起來的機制）的發展相連<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>RFC（意見徵詢）。</strong> 書把史蒂芬·克羅克（Steve Crocker）開發的「意見徵詢」（Request for Comments, RFC）過程，稱為「可以說是第一個類似於『共筆』（wiki）的非正式協作過程」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。分散在政府、企業、大學的協作者用它合作，最終促成了今天網路的通訊協定 TCP/IP。1974 年，TCP 首次作為 RFC 675 分發；1983 年，TCP/IP 成為 ARPANET 的官方協定<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>根據書的說法，「網際網路」之名，來自許多不同的在地網路相互協作的「由網路組成的網路」。這和政府自上而下的集中式網路（如法國的 Minitel）相反<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>使用者的急速增加。</strong> 書寫道，從 1991 年全球資訊網推出，到千禧年末，網際網路的使用從大約 400 萬人增長到 4 億多人<a class="cite" href="#src-5" data-src="src-5">[5]</a>。4 億是 400 萬的 100 倍，所以是不到 10 年就增加了 100 倍以上。</p>
 <h2>深入了解</h2>
 <h3>從人造衛星開始</h3>
-<p>根據書的 3-3 章，局勢大動是在 1957 年 10 月蘇聯發射第一顆軌道衛星（史普尼克）的時候。艾森豪政府想把冷戰的激情轉化為改善科學研究和教育的國家戰略，在國防部內建立了半獨立的 ARPA[6]。利克萊德的辦公室就是其中的代表性計畫。</p>
-<p>利克萊德在 1960 年的論文〈人機共生〉中寫道，機器總有一天會在大部分功能上超過人腦，但在那之前，會有一個人與電腦一起工作、一起進步的漫長過渡期[6]。書也寫明，這段歷史很多是根據 M. Mitchell Waldrop 的書 <em>The Dream Machine</em>[6]。</p>
+<p>根據書的 3-3 章，局勢大動是在 1957 年 10 月蘇聯發射第一顆軌道衛星（史普尼克）的時候。艾森豪政府想把冷戰的激情轉化為改善科學研究和教育的國家戰略，在國防部內建立了半獨立的 ARPA<a class="cite" href="#src-6" data-src="src-6">[6]</a>。利克萊德的辦公室就是其中的代表性計畫。</p>
+<p>利克萊德在 1960 年的論文〈人機共生〉中寫道，機器總有一天會在大部分功能上超過人腦，但在那之前，會有一個人與電腦一起工作、一起進步的漫長過渡期<a class="cite" href="#src-6" data-src="src-6">[6]</a>。書也寫明，這段歷史很多是根據 M. Mitchell Waldrop 的書 <em>The Dream Machine</em><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>三個層面的 ⿻</h3>
-<p>書寫道：「網際網路發展的核心，是用網絡化的關係和治理取代集中式的、線性的和原子化的結構。」這發生在三個層面，最終在 1990 年代初融合為全球資訊網[4]：</p>
+<p>書寫道：「網際網路發展的核心，是用網絡化的關係和治理取代集中式的、線性的和原子化的結構。」這發生在三個層面，最終在 1990 年代初融合為全球資訊網<a class="cite" href="#src-4" data-src="src-4">[4]</a>：</p>
 <ol>
 <li><strong>封包交換。</strong> 不透過中央的交換機，而是把資料切成小份在網中流動。保羅·巴蘭（Paul Baran）在 1964 年的報告中主張，用價格低、不那麼可靠的組件構建多個中心的網路，可以「繞過損害的路由」，抵禦破壞性的攻擊。</li>
 <li><strong>超文本。</strong> 用連結把文件彼此接起來，取代線性的文本。泰德·尼爾森（Ted Nelson）在「Xanadu」計畫中，構想讓讀者能沿著各種路徑閱讀。提姆·柏內茲-李（Tim Berners-Lee）的全球資訊網把它推廣開來。</li>
 <li><strong>開放標準的制定流程。</strong> 取代政府和企業自上而下的決策，由大家一起決定協定。也就是上面的 RFC 和 TCP/IP。</li>
 </ol>
 <h3>勝利背後的警告</h3>
-<p>個人電腦和網際網路大獲成功。書寫道：「到 2000 年，大多數美國人的家中都有一台個人電腦。」[5]</p>
-<p>可是尼爾森不斷警告：「如果沒有安全的身分系統……民族國家和企業行為者的無政府狀態與巧取豪奪，將不可避免地發生。」沒有嵌入式的商業協定，線上工作要嘛失去價值，要嘛是金融系統被壟斷者控制；沒有更好的安全資訊共用和控制結構，監控和數據孤島將無處不在[5]。杰倫·拉尼爾（Jaron Lanier）也承接了這些擔憂[5]。</p>
-<p>利克萊德也為運算的未來寫下了「兩種情況」：被壟斷的公司控制、潛力被扼殺；或者出現全面的社會動員，使運算服務於民主。在前一種情況下，利克萊德預測的弊病包括普遍性的監控與公眾對政府失去信任、壟斷、普遍存在的數位不實資訊、私營企業控制了公共討論的基礎平臺等[7]。書寫道，後來對巨大科技公司的反彈（科技反撲），和這些警告驚人地相似[7]。</p>
+<p>個人電腦和網際網路大獲成功。書寫道：「到 2000 年，大多數美國人的家中都有一台個人電腦。」<a class="cite" href="#src-5" data-src="src-5">[5]</a></p>
+<p>可是尼爾森不斷警告：「如果沒有安全的身分系統……民族國家和企業行為者的無政府狀態與巧取豪奪，將不可避免地發生。」沒有嵌入式的商業協定，線上工作要嘛失去價值，要嘛是金融系統被壟斷者控制；沒有更好的安全資訊共用和控制結構，監控和數據孤島將無處不在<a class="cite" href="#src-5" data-src="src-5">[5]</a>。杰倫·拉尼爾（Jaron Lanier）也承接了這些擔憂<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>利克萊德也為運算的未來寫下了「兩種情況」：被壟斷的公司控制、潛力被扼殺；或者出現全面的社會動員，使運算服務於民主。在前一種情況下，利克萊德預測的弊病包括普遍性的監控與公眾對政府失去信任、壟斷、普遍存在的數位不實資訊、私營企業控制了公共討論的基礎平臺等<a class="cite" href="#src-7" data-src="src-7">[7]</a>。書寫道，後來對巨大科技公司的反彈（科技反撲），和這些警告驚人地相似<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>為什麼失去了道</h3>
-<p>書介紹利克萊德自己的分析[2]：</p>
+<p>書介紹利克萊德自己的分析<a class="cite" href="#src-2" data-src="src-2">[2]</a>：</p>
 <ul>
 <li><strong>來自右方。</strong> 隨著「小政府保守主義」興起，政府從主動資助和塑造工業與技術中撤退。</li>
 <li><strong>來自左方。</strong> 越戰使許多左翼人士反對國防機構影響研究，導致《曼斯菲爾德修正案》禁止 ARPA 資助任何與「國防職能」無直接關係的研究。</li>
 <li><strong>走向全球。</strong> 網際網路成為全球性網路之後，就沒有明確的公共權力機構來進行必要的投資。</li>
 </ul>
-<p>書寫道，私營企業步入了這個巨大的空洞：「被忽視的身分識別功能由 Google 和 Facebook 的崛起填補。PayPal 和 Stripe 填補了數位支付的空白。」資料、運算與儲存的共享，則由雲端服務供應商接手[2]。書寫道：「利克和尼爾森認為必不可少的基本功能卻從未整合。」[2]</p>
+<p>書寫道，私營企業步入了這個巨大的空洞：「被忽視的身分識別功能由 Google 和 Facebook 的崛起填補。PayPal 和 Stripe 填補了數位支付的空白。」資料、運算與儲存的共享，則由雲端服務供應商接手<a class="cite" href="#src-2" data-src="src-2">[2]</a>。書寫道：「利克和尼爾森認為必不可少的基本功能卻從未整合。」<a class="cite" href="#src-2" data-src="src-2">[2]</a></p>
 <h3>仍然留著的「光」</h3>
-<p>但書接著說，夢想並沒有消失。書舉出的是維基百科、開源軟體、去中心化的社群媒體，以及「公民科技」（Civic Tech，市民用技術處理社會課題的運動）[8]。英文版還在這裡舉出臺灣的 <a href="g0v.html">g0v</a>（零時政府），以及關治之的 Code for Japan[9]。</p>
+<p>但書接著說，夢想並沒有消失。書舉出的是維基百科、開源軟體、去中心化的社群媒體，以及「公民科技」（Civic Tech，市民用技術處理社會課題的運動）<a class="cite" href="#src-8" data-src="src-8">[8]</a>。英文版還在這裡舉出臺灣的 <a href="g0v.html">g0v</a>（零時政府），以及關治之的 Code for Japan<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h2>爭議與批評</h2>
 <ul>
-<li><strong>"Dao" 不是 DAO。</strong> 它和區塊鏈世界的「DAO」（分散式自治組織）拼法看起來一樣，但是不同的東西。繁體中文版把章名譯為〈我們遺忘的道〉，日文版譯為「失われた道（ダオ）」，都當作中文的「道」[10][11]。</li>
-<li><strong>歷史的敘述大量依據一本書。</strong> 書本身說明，利克萊德之後的故事很多來自 Waldrop 的書[6]。</li>
-<li><strong>作者們先前的論述。</strong> 衛谷倫（E. Glen Weyl）等人在 2019 年的文章中主張，網際網路的基礎是在原本就有高度信任和身分機制的環境中成長的，所以缺少了在陌生人之間建立信任的身分層；商業化之後，少數巨大企業承接了數十億人的身分[12]。Divya Siddarth 等人 2024 年的論文也認為，早期的網路由公共資金和眾人參與的標準制定來治理，但上層被私營企業占據，並提出身分、支付、資料共享的開放協定[13]。</li>
-<li><strong>版本之間的差異。</strong> 繁體中文版 3-3 章的節構成和英文版不同。它把利克萊德論文的年份寫成 1979 年（英文版是 1980 年），《曼斯菲爾德修正案》也只舉出 1973 年的那一次（英文版列出 1970、71、73 年的修正）[10][1]。日文版也把論文年份寫成 1979 年[11]。</li>
+<li><strong>"Dao" 不是 DAO。</strong> 它和區塊鏈世界的「DAO」（分散式自治組織）拼法看起來一樣，但是不同的東西。繁體中文版把章名譯為〈我們遺忘的道〉，日文版譯為「失われた道（ダオ）」，都當作中文的「道」<a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>歷史的敘述大量依據一本書。</strong> 書本身說明，利克萊德之後的故事很多來自 Waldrop 的書<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>作者們先前的論述。</strong> 衛谷倫（E. Glen Weyl）等人在 2019 年的文章中主張，網際網路的基礎是在原本就有高度信任和身分機制的環境中成長的，所以缺少了在陌生人之間建立信任的身分層；商業化之後，少數巨大企業承接了數十億人的身分<a class="cite" href="#src-12" data-src="src-12">[12]</a>。Divya Siddarth 等人 2024 年的論文也認為，早期的網路由公共資金和眾人參與的標準制定來治理，但上層被私營企業占據，並提出身分、支付、資料共享的開放協定<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
+<li><strong>版本之間的差異。</strong> 繁體中文版 3-3 章的節構成和英文版不同。它把利克萊德論文的年份寫成 1979 年（英文版是 1980 年），《曼斯菲爾德修正案》也只舉出 1973 年的那一次（英文版列出 1970、71、73 年的修正）<a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>。日文版也把論文年份寫成 1979 年<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>2-0 章寫道，個人電腦、網際網路、智慧型手機，「源自於與專家統治或放任主義截然不同的傳統」，也就是增強人類智慧的譜系，為 3-3 章埋下伏筆[14]。→ <a href="three-paths.html">三條道路</a></p>
-<p>3-3 章是它的主場。它把前一章 3-2 介紹的思想，描寫成試圖用技術實現它們的歷史[6]。→ <a href="monist-atomism.html">一元原子論</a></p>
-<p>英文版 3-3 章另有一節寫道，在日本，品質管理（PDCA、改善）與鈴木健的「<a href="nameraka-society.html">平滑社會</a>」中，流著另一條被遺忘的道[15]（目前的繁體中文版 3-3 章沒有這一節）。</p>
-<p>後面的章節也運用這段歷史。4-1 章把它套用到身分的設計上[16]（→ <a href="identity-and-personhood.html">身分與人格權</a>・<a href="digital-public-infrastructure.html">數位公共建設</a>），6-0 章則把個人電腦從少數早期使用者的社群開始這件事，用在推廣的理論上[17]（→ <a href="theory-of-change.html">變革理論</a>）。</p>
+<p>2-0 章寫道，個人電腦、網際網路、智慧型手機，「源自於與專家統治或放任主義截然不同的傳統」，也就是增強人類智慧的譜系，為 3-3 章埋下伏筆<a class="cite" href="#src-14" data-src="src-14">[14]</a>。→ <a href="three-paths.html">三條道路</a></p>
+<p>3-3 章是它的主場。它把前一章 3-2 介紹的思想，描寫成試圖用技術實現它們的歷史<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="monist-atomism.html">一元原子論</a></p>
+<p>英文版 3-3 章另有一節寫道，在日本，品質管理（PDCA、改善）與鈴木健的「<a href="nameraka-society.html">平滑社會</a>」中，流著另一條被遺忘的道<a class="cite" href="#src-15" data-src="src-15">[15]</a>（目前的繁體中文版 3-3 章沒有這一節）。</p>
+<p>後面的章節也運用這段歷史。4-1 章把它套用到身分的設計上<a class="cite" href="#src-16" data-src="src-16">[16]</a>（→ <a href="identity-and-personhood.html">身分與人格權</a>・<a href="digital-public-infrastructure.html">數位公共建設</a>），6-0 章則把個人電腦從少數早期使用者的社群開始這件事，用在推廣的理論上<a class="cite" href="#src-17" data-src="src-17">[17]</a>（→ <a href="theory-of-change.html">變革理論</a>）。</p>
 <h2>延伸閱讀</h2>
 <ol>
 <li>《多元宇宙》3-3〈我們遺忘的道〉（中文，書）— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a></li>
@@ -100,21 +106,51 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出處</h2>
 <ol>
-<li>《Plurality》英文版 3-3 "The Lost Dao" 開頭與註腳 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「我們遺忘的道」一節 — <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「星際電腦網路」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「由網路組成的網路」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「勝利和悲歌」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「⿻啟航」與「人造衛星和 ARPA」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「網際網路及其不滿」「預知混亂紀事」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》3-3「光明的節點」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>《Plurality》英文版 3-3 "Nodes of light" — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>《多元宇宙》繁體中文版 3-3〈我們遺忘的道〉— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
-<li>『Plurality』日文版 3-3「失われた道」— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a> ［CC0］</li>
-<li>Weyl、Young、Geiger, "Intersectional Social Data"（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/</a></li>
-<li>Siddarth、Prewitt、Weyl, "Beyond Public and Private: Collective Provision Under Conditions of Supermodularity"（2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
-<li>《多元宇宙》2-0〈資訊技術與民主：日益擴大的鴻溝〉— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a> ［CC0］</li>
-<li>《Plurality》英文版 3-3 "Quality Control and Nameraka Society" — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
-<li>《多元宇宙》4-1〈身分與人格權〉— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a> ［CC0］</li>
-<li>《多元宇宙》6-0〈從⿻到現實社會〉— <a href="https://www.plurality.net/v/chapters/6-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/zh-tw/</a> ［CC0］</li>
-</ol><div class='related'>相關: <a href='monist-atomism.html'>什麼是一元原子論（monist atomism）？</a> ・ <a href='three-paths.html'>什麼是「三條道路」？</a> ・ <a href='identity-and-personhood.html'>什麼是「身分與人格權」（多元身分）？</a> ・ <a href='digital-public-infrastructure.html'>什麼是數位公共建設（DPI）？</a> ・ <a href='theory-of-change.html'>什麼是⿻的變革理論？</a> ・ <a href='g0v.html'>什麼是 g0v（零時政府）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Flost-dao.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E3%80%8C%E6%88%91%E5%80%91%E9%81%BA%E5%BF%98%E7%9A%84%E9%81%93%E3%80%8D%EF%BC%88The%20Lost%20Dao%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Flost-dao.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>
+<li id="src-1">《Plurality》英文版 3-3 "The Lost Dao" 開頭與註腳 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-2">《多元宇宙》3-3「我們遺忘的道」一節 — <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-3">《多元宇宙》3-3「星際電腦網路」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-4">《多元宇宙》3-3「由網路組成的網路」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-5">《多元宇宙》3-3「勝利和悲歌」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-6">《多元宇宙》3-3「⿻啟航」與「人造衛星和 ARPA」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-7">《多元宇宙》3-3「網際網路及其不滿」「預知混亂紀事」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-8">《多元宇宙》3-3「光明的節點」— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-9">《Plurality》英文版 3-3 "Nodes of light" — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-10">《多元宇宙》繁體中文版 3-3〈我們遺忘的道〉— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ［CC0］</li>
+<li id="src-11">『Plurality』日文版 3-3「失われた道」— <a href="https://www.plurality.net/v/chapters/3-3/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/jpn/</a> ［CC0］</li>
+<li id="src-12">Weyl、Young、Geiger, "Intersectional Social Data"（2019）— <a href="https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/2019-10-24-uh78r5/</a></li>
+<li id="src-13">Siddarth、Prewitt、Weyl, "Beyond Public and Private: Collective Provision Under Conditions of Supermodularity"（2024）— <a href="https://www.cip.org/supermodular" target="_blank" rel="noopener">https://www.cip.org/supermodular</a></li>
+<li id="src-14">《多元宇宙》2-0〈資訊技術與民主：日益擴大的鴻溝〉— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a> ［CC0］</li>
+<li id="src-15">《Plurality》英文版 3-3 "Quality Control and Nameraka Society" — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-16">《多元宇宙》4-1〈身分與人格權〉— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a> ［CC0］</li>
+<li id="src-17">《多元宇宙》6-0〈從⿻到現實社會〉— <a href="https://www.plurality.net/v/chapters/6-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-0/zh-tw/</a> ［CC0］</li>
+</ol><div class='related'>相關: <a href='monist-atomism.html'>什麼是一元原子論（monist atomism）？</a> ・ <a href='three-paths.html'>什麼是「三條道路」？</a> ・ <a href='identity-and-personhood.html'>什麼是「身分與人格權」（多元身分）？</a> ・ <a href='digital-public-infrastructure.html'>什麼是數位公共建設（DPI）？</a> ・ <a href='theory-of-change.html'>什麼是⿻的變革理論？</a> ・ <a href='g0v.html'>什麼是 g0v（零時政府）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Flost-dao.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E3%80%8C%E6%88%91%E5%80%91%E9%81%BA%E5%BF%98%E7%9A%84%E9%81%93%E3%80%8D%EF%BC%88The%20Lost%20Dao%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Flost-dao.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

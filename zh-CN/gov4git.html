@@ -41,44 +41,50 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../gov4git.html">日本語</a> <a class="lang" hreflang="en" href="../en/gov4git.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/gov4git.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是 Gov4Git（GitRules）？</h1><div class='lead'>很多人一起写程式码或文件时，用来记录并执行「谁是成员、谁有多少发言权、要采用哪些稿件」的开源工具。它被用在《多元宇宙》的写作中，2024 年改名为 GitRules。</div><p>几个人一起写文件，商量一下就能决定。可是参与者一旦有几百、几千人，「先处理谁的提案」「怎么认可谁的贡献」，就很难靠现场气氛决定。Gov4Git 就是一个试图把这种「很多人一起做东西时的决定方式」，做成软件机制的工具。</p>
 <h2>一句话说明</h2>
-<p>Gov4Git 是在 git（记录、共享档案变更历史的机制，GitHub 是代表性的服务）之上，记录并执行以下事项的开源工具（以任何人都能使用、改良的形式公开的软件）[1][2]：</p>
+<p>Gov4Git 是在 git（记录、共享档案变更历史的机制，GitHub 是代表性的服务）之上，记录并执行以下事项的开源工具（以任何人都能使用、改良的形式公开的软件）<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>：</p>
 <ul>
 <li>谁是社群的成员</li>
 <li>谁持有多少「积分」（可用于发言和投票的点数）</li>
 <li>要优先处理哪些议题、采用哪些稿件</li>
 </ul>
-<p>由参与者大家各自保存纪录副本这一点，和区块链（由许多人共享交易纪录以防窜改的机制）相似。但说明中指出，不同之处在于它不是用金钱报酬驱动人，而是依靠因为想参与、所以保存纪录这种开源的动机[2]。2024 年改名为 GitRules[3]。</p>
+<p>由参与者大家各自保存纪录副本这一点，和区块链（由许多人共享交易纪录以防窜改的机制）相似。但说明中指出，不同之处在于它不是用金钱报酬驱动人，而是依靠因为想参与、所以保存纪录这种开源的动机<a class="cite" href="#src-2" data-src="src-2">[2]</a>。2024 年改名为 GitRules<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>举例来说</h2>
-<p><strong>《多元宇宙》的写作（2024 年）。</strong> 这本书是由许多贡献者写成的，支撑其营运规则<a href="plural-management-protocol.html">多元管理协定</a>（PMP）运作的就是 Gov4Git。作者、经济学者卫谷伦（E. Glen Weyl）在 2024 年 3 月 2 日宣布，Gov4Git 的公开版已经启动，登记的人就能得到积分[4]。想参加的人，会在 GitHub 上自动产生「我想加入这个社群」的请求（issue），经管理者核准后加入[5]。</p>
-<p>英文版 5-0 章写道，优先排序、核准与贡献认定的纪录，都透过「以开源参与而非金钱诱因为基础」的协定 GitRules，记录在分散式帐本上[6]（目前的繁体中文版 5-0 章没有这一句）。</p>
-<p><strong>日本参与者的试用（2024 年 3 月）。</strong> 日文翻译社群（plurality-japanese）里，有参与者自己建立试验用的环境（沙盒），试着当管理者的纪录：需要 GitHub 的「组织」帐号、在权限设定上卡关、投票结果要几个小时才会反映。这位参与者留下的感想是：用在小小的决定上还不太方便，但几个小时就能建立类似游戏货币的东西，让人觉得有可能性[7]。</p>
+<p><strong>《多元宇宙》的写作（2024 年）。</strong> 这本书是由许多贡献者写成的，支撑其营运规则<a href="plural-management-protocol.html">多元管理协定</a>（PMP）运作的就是 Gov4Git。作者、经济学者卫谷伦（E. Glen Weyl）在 2024 年 3 月 2 日宣布，Gov4Git 的公开版已经启动，登记的人就能得到积分<a class="cite" href="#src-4" data-src="src-4">[4]</a>。想参加的人，会在 GitHub 上自动产生「我想加入这个社群」的请求（issue），经管理者核准后加入<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p>英文版 5-0 章写道，优先排序、核准与贡献认定的纪录，都透过「以开源参与而非金钱诱因为基础」的协定 GitRules，记录在分散式帐本上<a class="cite" href="#src-6" data-src="src-6">[6]</a>（目前的繁体中文版 5-0 章没有这一句）。</p>
+<p><strong>日本参与者的试用（2024 年 3 月）。</strong> 日文翻译社群（plurality-japanese）里，有参与者自己建立试验用的环境（沙盒），试着当管理者的纪录：需要 GitHub 的「组织」帐号、在权限设定上卡关、投票结果要几个小时才会反映。这位参与者留下的感想是：用在小小的决定上还不太方便，但几个小时就能建立类似游戏货币的东西，让人觉得有可能性<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>运作方式</h2>
 <h3>开端</h3>
-<p>2022 年 9 月 15 日，Protocol Labs 宣布成为本书项目的技术伙伴，要打造「Governance for Git」。构想是把治理（集体的决定方式）看作 git 贡献者共享的程序，并把它的历史以无法窜改的形式嵌入 git 的历史中[8]。</p>
-<p>依白皮书（说明设计的文件），本书项目预期贡献者会有数百到数千人。这超过了一般认为人能维持面对面关系的上限「邓巴数」，所以需要不是临时凑合的机制[9]。</p>
+<p>2022 年 9 月 15 日，Protocol Labs 宣布成为本书项目的技术伙伴，要打造「Governance for Git」。构想是把治理（集体的决定方式）看作 git 贡献者共享的程序，并把它的历史以无法窜改的形式嵌入 git 的历史中<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>依白皮书（说明设计的文件），本书项目预期贡献者会有数百到数千人。这超过了一般认为人能维持面对面关系的上限「邓巴数」，所以需要不是临时凑合的机制<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>为什么需要</h3>
-<p>2023 年 3 月微软研究院的文章（卫谷伦等人）指出，开源世界缺乏方便又安全的治理机制，因此许多社群没有诞生，也长不大。文章也提到，随着生成式 AI 普及，伪装成合作者的恶意参与者可能增加[10]。</p>
-<p>最初试作的核心有两个：用<a href="quadratic-voting.html">平方投票</a>（越把很多票集中在一处就越贵的投票法）决定稿件的优先顺序；以及像投票用积分这样只在社群内通用的「货币」[10]。文章也写道，要让那些创始的单一领导者已经负荷不了的社群，能够自己延续下去[10]。</p>
+<p>2023 年 3 月微软研究院的文章（卫谷伦等人）指出，开源世界缺乏方便又安全的治理机制，因此许多社群没有诞生，也长不大。文章也提到，随着生成式 AI 普及，伪装成合作者的恶意参与者可能增加<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>最初试作的核心有两个：用<a href="quadratic-voting.html">平方投票</a>（越把很多票集中在一处就越贵的投票法）决定稿件的优先顺序；以及像投票用积分这样只在社群内通用的「货币」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。文章也写道，要让那些创始的单一领导者已经负荷不了的社群，能够自己延续下去<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>和区块链的不同</h3>
-<p>依白皮书，Gov4Git 的纪录是单一社群专用的。要求互相冲突时，由该社群的治理规则裁决。所以不需要像公开区块链那样，用耗电的计算竞赛决定胜者；在小型电脑（Raspberry Pi）或 GitHub 的免费自动执行环境上也能运作[9]。</p>
-<p>白皮书也举出另一个理由：公开区块链的位置为人所知，可能被威权国家锁定封锁[9]。开发者 Petar Maymounkov 在 2023 年的 Podcast 中表示，大意是：公开区块链是为了在全球高速处理许多应用而设计的，而单一社群内由人来讨论决定的治理，用不到其中大部分功能，所以选择了不同的设计[11]。</p>
+<p>依白皮书，Gov4Git 的纪录是单一社群专用的。要求互相冲突时，由该社群的治理规则裁决。所以不需要像公开区块链那样，用耗电的计算竞赛决定胜者；在小型电脑（Raspberry Pi）或 GitHub 的免费自动执行环境上也能运作<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>白皮书也举出另一个理由：公开区块链的位置为人所知，可能被威权国家锁定封锁<a class="cite" href="#src-9" data-src="src-9">[9]</a>。开发者 Petar Maymounkov 在 2023 年的 Podcast 中表示，大意是：公开区块链是为了在全球高速处理许多应用而设计的，而单一社群内由人来讨论决定的治理，用不到其中大部分功能，所以选择了不同的设计<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>用法与扩散</h3>
-<p>依说明书（README），平常必要的基础设施只有 git 的存放处，不是技术人员的人也能从桌面应用程式使用[1]。本书项目的说明写道，这套机制不是 PMP 专用，而是几乎可以承载任何决定方式的底座；本书在上面用的是 PMP[2]。</p>
-<p>开发团队自己也用 Gov4Git 管理开发计划[12]。艺术文化平台 Cube Commons、地球科学软件 EarthSciML 也采用了它[13]。</p>
+<p>依说明书（README），平常必要的基础设施只有 git 的存放处，不是技术人员的人也能从桌面应用程式使用<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本书项目的说明写道，这套机制不是 PMP 专用，而是几乎可以承载任何决定方式的底座；本书在上面用的是 PMP<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>开发团队自己也用 Gov4Git 管理开发计划<a class="cite" href="#src-12" data-src="src-12">[12]</a>。艺术文化平台 Cube Commons、地球科学软件 EarthSciML 也采用了它<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h3>改了名字</h3>
-<p>Gov4Git 在 2024 年 3 月宣布改名为 GitRules。依日文社群的纪录，到 4 月 10 日，书的正文中的「Gov4Git」已全部换成「GitRules」。西尾泰和写道，连「旧 Gov4Git」都没写，可能会有人不知道两者的关系[3][5]。</p>
+<p>Gov4Git 在 2024 年 3 月宣布改名为 GitRules。依日文社群的纪录，到 4 月 10 日，书的正文中的「Gov4Git」已全部换成「GitRules」。西尾泰和写道，连「旧 Gov4Git」都没写，可能会有人不知道两者的关系<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>参与门槛高。</strong> 日文的安装步骤笔记写道，对不熟悉 git 的人来说，要轻松试用门槛很高。笔记也记下一个疑问：这是贡献越多、发言权越大的机制，对不是特别想发言的人来说，参与的意义是不是很薄弱？[14]</li>
-<li><strong>无法参与的例子。</strong> 2025 年 3 月，一位用户报告，因为 GitHub 的个人帐号与组织名称对不上，无法从应用程式参与。卫谷伦道歉后，回复的大意是：自己不知道解决办法，开发者也许有想法[15]。</li>
-<li><strong>是区块链，还是不是？</strong> 介绍文写的是「类似区块链」，白皮书称之为「治理的区块链」。不过它和公开区块链不同，不使用金钱诱因，也不使用计算竞赛[2][9]。要注意别只看名称就以为是同一种东西。</li>
+<li><strong>参与门槛高。</strong> 日文的安装步骤笔记写道，对不熟悉 git 的人来说，要轻松试用门槛很高。笔记也记下一个疑问：这是贡献越多、发言权越大的机制，对不是特别想发言的人来说，参与的意义是不是很薄弱？<a class="cite" href="#src-14" data-src="src-14">[14]</a></li>
+<li><strong>无法参与的例子。</strong> 2025 年 3 月，一位用户报告，因为 GitHub 的个人帐号与组织名称对不上，无法从应用程式参与。卫谷伦道歉后，回复的大意是：自己不知道解决办法，开发者也许有想法<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
+<li><strong>是区块链，还是不是？</strong> 介绍文写的是「类似区块链」，白皮书称之为「治理的区块链」。不过它和公开区块链不同，不使用金钱诱因，也不使用计算竞赛<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>。要注意别只看名称就以为是同一种东西。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>英文版 5-0 章〈协作技术与民主〉在说明本书本身的做法时提到 GitRules[6]。本书的营运文件说明，积分帐本由全体成员的 git 各自保存副本，不一致时以治理程序解决[16]。</p>
-<p>Gov4Git 是执行本书营运规则<a href="plural-management-protocol.html">多元管理协定</a>的底座，也是记录在其中发放的 <a href="plural-credits.html">⿻ 積分</a>的帐本。卫谷伦在 2023 年 12 月的视频讯息中表示，大意是：参与者把自己维护资料库当作参与的一部分，这一点是和区块链的不同[17]。很多人一起写书的尝试，本身也是<a href="creative-collaboration.html">创意协作</a>的实例。</p>
+<p>英文版 5-0 章〈协作技术与民主〉在说明本书本身的做法时提到 GitRules<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本书的营运文件说明，积分帐本由全体成员的 git 各自保存副本，不一致时以治理程序解决<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
+<p>Gov4Git 是执行本书营运规则<a href="plural-management-protocol.html">多元管理协定</a>的底座，也是记录在其中发放的 <a href="plural-credits.html">⿻ 積分</a>的帐本。卫谷伦在 2023 年 12 月的视频讯息中表示，大意是：参与者把自己维护资料库当作参与的一部分，这一点是和区块链的不同<a class="cite" href="#src-17" data-src="src-17">[17]</a>。很多人一起写书的尝试，本身也是<a href="creative-collaboration.html">创意协作</a>的实例。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>本书的营运文件 "Gov4Git"（英文，文件）— <a href="https://github.com/pluralitybook/plurality/tree/main/docs" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/docs</a></li>
@@ -90,21 +96,51 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出处</h2>
 <ol>
-<li>Gov4Git README — <a href="https://github.com/gov4git/gov4git" target="_blank" rel="noopener">https://github.com/gov4git/gov4git</a></li>
-<li>pluralitybook issue #333（Gov4Git 与 PMP 概要，2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a></li>
-<li>plurality-japanese「Gov4GitはGitRulesになりました」（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F</a></li>
-<li>plurality-japanese「Gov4Gitパブリックプレビュー开始」（2024-03-02，日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4Git%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E9%96%8B%E5%A7%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4Git%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E9%96%8B%E5%A7%8B</a></li>
-<li>plurality-japanese「Gov4git」（日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4git" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4git</a></li>
-<li>《Plurality》英文版 5-0 "Collaborative Technology and Democracy" — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
-<li>plurality-japanese「gov4gitの管理者として游んでみる」（2024-03-06，日文）— <a href="https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E7%AE%A1%E7%90%86%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E7%AE%A1%E7%90%86%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B</a></li>
-<li>Protocol Labs, "Protocol Labs partners with the Plurality Book Project"（2022-09-15）— <a href="https://pl.xyz/blog/protocol-labs-and-plurality-book/" target="_blank" rel="noopener">https://pl.xyz/blog/protocol-labs-and-plurality-book/</a></li>
-<li>Governance for git 白皮书 — <a href="https://github.com/gov4git/doc/blob/main/whitepaper/whitepaper.md" target="_blank" rel="noopener">https://github.com/gov4git/doc/blob/main/whitepaper/whitepaper.md</a></li>
-<li>微软研究院 "Gov4git: A Decentralized Platform for Community Governance"（2023-03-19）— <a href="https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</a></li>
-<li>微软研究院 Podcast "Collaborators: Gov4git"（2023-05-03）— <a href="https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</a></li>
-<li>gov4git/roadmap — <a href="https://github.com/gov4git/roadmap" target="_blank" rel="noopener">https://github.com/gov4git/roadmap</a></li>
-<li>GitHub 上采用例的搜寻 — <a href="https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues" target="_blank" rel="noopener">https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues</a></li>
-<li>plurality-japanese「gov4gitのインストール方法」（日文）— <a href="https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95</a></li>
-<li>pluralitybook issue #1071（2025-03-14）— <a href="https://github.com/pluralitybook/plurality/issues/1071" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1071</a></li>
-<li>pluralitybook 营运文件 "Gov4Git" — <a href="https://github.com/pluralitybook/plurality/tree/main/docs" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/docs</a></li>
-<li>Glen Weyl on Plurality Seoul（2023-12-02，视频讯息）— <a href="https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</a></li>
-</ol><div class='related'>相关: <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a> ・ <a href='plural-credits.html'>什么是⿻ 積分（plural credits）？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='creative-collaboration.html'>什么是创意协作（creative collaboration）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fgov4git.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%20Gov4Git%EF%BC%88GitRules%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fgov4git.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
+<li id="src-1">Gov4Git README — <a href="https://github.com/gov4git/gov4git" target="_blank" rel="noopener">https://github.com/gov4git/gov4git</a></li>
+<li id="src-2">pluralitybook issue #333（Gov4Git 与 PMP 概要，2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a></li>
+<li id="src-3">plurality-japanese「Gov4GitはGitRulesになりました」（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4Git%E3%81%AFGitRules%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F</a></li>
+<li id="src-4">plurality-japanese「Gov4Gitパブリックプレビュー开始」（2024-03-02，日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4Git%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E9%96%8B%E5%A7%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4Git%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E9%96%8B%E5%A7%8B</a></li>
+<li id="src-5">plurality-japanese「Gov4git」（日文）— <a href="https://scrapbox.io/plurality-japanese/Gov4git" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Gov4git</a></li>
+<li id="src-6">《Plurality》英文版 5-0 "Collaborative Technology and Democracy" — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
+<li id="src-7">plurality-japanese「gov4gitの管理者として游んでみる」（2024-03-06，日文）— <a href="https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E7%AE%A1%E7%90%86%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E7%AE%A1%E7%90%86%E8%80%85%E3%81%A8%E3%81%97%E3%81%A6%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%8B</a></li>
+<li id="src-8">Protocol Labs, "Protocol Labs partners with the Plurality Book Project"（2022-09-15）— <a href="https://pl.xyz/blog/protocol-labs-and-plurality-book/" target="_blank" rel="noopener">https://pl.xyz/blog/protocol-labs-and-plurality-book/</a></li>
+<li id="src-9">Governance for git 白皮书 — <a href="https://github.com/gov4git/doc/blob/main/whitepaper/whitepaper.md" target="_blank" rel="noopener">https://github.com/gov4git/doc/blob/main/whitepaper/whitepaper.md</a></li>
+<li id="src-10">微软研究院 "Gov4git: A Decentralized Platform for Community Governance"（2023-03-19）— <a href="https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/articles/gov4git-a-decentralized-platform-for-community-governance/</a></li>
+<li id="src-11">微软研究院 Podcast "Collaborators: Gov4git"（2023-05-03）— <a href="https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/podcast/collaborators-gov4git-with-kasia-sitkiewicz-and-petar-maymounkov/</a></li>
+<li id="src-12">gov4git/roadmap — <a href="https://github.com/gov4git/roadmap" target="_blank" rel="noopener">https://github.com/gov4git/roadmap</a></li>
+<li id="src-13">GitHub 上采用例的搜寻 — <a href="https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues" target="_blank" rel="noopener">https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues</a></li>
+<li id="src-14">plurality-japanese「gov4gitのインストール方法」（日文）— <a href="https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/gov4git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95</a></li>
+<li id="src-15">pluralitybook issue #1071（2025-03-14）— <a href="https://github.com/pluralitybook/plurality/issues/1071" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1071</a></li>
+<li id="src-16">pluralitybook 营运文件 "Gov4Git" — <a href="https://github.com/pluralitybook/plurality/tree/main/docs" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/docs</a></li>
+<li id="src-17">Glen Weyl on Plurality Seoul（2023-12-02，视频讯息）— <a href="https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</a></li>
+</ol><div class='related'>相关: <a href='plural-management-protocol.html'>什么是多元管理协定（Plural Management Protocol，PMP）？</a> ・ <a href='plural-credits.html'>什么是⿻ 積分（plural credits）？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='creative-collaboration.html'>什么是创意协作（creative collaboration）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fgov4git.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%20Gov4Git%EF%BC%88GitRules%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fgov4git.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

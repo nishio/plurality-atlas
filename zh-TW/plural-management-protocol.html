@@ -41,27 +41,33 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 .pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
 .acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
 @media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../plural-management-protocol.html">日本語</a> <a class="lang" hreflang="en" href="../en/plural-management-protocol.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/plural-management-protocol.html">简体中文</a></nav></header>
 <main lang="zh-TW"><h1>什麼是多元管理協定（Plural Management Protocol，PMP）？</h1><div class='lead'>很多人一起做一本書或一套軟體時，由參與者大家、而不是單一領導者，決定「下一步做什麼」和「是否採用收到的稿件」的營運規則。《多元宇宙》這本書本身就是用這套規則寫成的。</div><p>很多人一起做一件作品時，總得有人決定「下一步做這個」「這個提案採用，那個不採用」。由單一領導者決定，那個人一忙，工作就停下來；大家完全平等，又很難定出方向。多元管理協定（Plural Management Protocol，簡稱 PMP）就是試圖回應這個煩惱的營運規則。</p>
 <h2>一句話說明</h2>
-<p>PMP 是很多人一起做一件作品（書或軟體）時，<strong>由參與者大家、而不是上司或單一領導者，決定「下一步該做什麼」和「是否採用收到的稿件」</strong>的營運規則[1]。</p>
-<p>貢獻者會得到不是金錢的點數（<strong>積分</strong>），再用這些積分參與工作的優先排序，以及是否採用的投票[1]。《多元宇宙》這本書本身，就是用這套規則寫成的[2]。</p>
+<p>PMP 是很多人一起做一件作品（書或軟體）時，<strong>由參與者大家、而不是上司或單一領導者，決定「下一步該做什麼」和「是否採用收到的稿件」</strong>的營運規則<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>貢獻者會得到不是金錢的點數（<strong>積分</strong>），再用這些積分參與工作的優先排序，以及是否採用的投票<a class="cite" href="#src-1" data-src="src-1">[1]</a>。《多元宇宙》這本書本身，就是用這套規則寫成的<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>舉例來說</h2>
-<p><strong>《多元宇宙》的寫作（2024 年）。</strong> 書的 5-7 章說：「我們在編寫本書時使用的『多元管理協定』，可追蹤不同參與者所作貢獻的類型和程度」，並用來確定工作的優先次序，以及決定哪些工作應納入專案[3]。英文版在這裡連結到 GitHub（程式共享網站）上的說明文。那篇說明文是為這套機制打造工具 Gov4Git 的 Petar Maymounkov 在 2024 年 2 月 26 日寫的，把本書的目標定為依照書中所講的原理來寫這本書[1]。</p>
-<p><strong>進入大家共同管理的階段（2024 年 5 月）。</strong> 共同作者、經濟學者衛谷倫（E. Glen Weyl）在 2024 年 5 月左右呼籲參與者：已經進入以 Gov4Git 完全由社群管理的階段，請大家看稿並投票。西尾泰和問，晚到的推薦語要怎麼加進去；衛谷倫回答的大意是：不需要積分的話，直接提交稿件就好；想要積分的話，先開一個議題，等衛谷倫支持之後，再提交解決該議題的稿件[4]。</p>
-<p><strong>書以外的擴散。</strong> GitHub 上也找得到幾個其他的使用例，例如一個地球科學軟體專案在貢獻指南中寫道，其營運依據 Plural Management 的模式[5]。</p>
+<p><strong>《多元宇宙》的寫作（2024 年）。</strong> 書的 5-7 章說：「我們在編寫本書時使用的『多元管理協定』，可追蹤不同參與者所作貢獻的類型和程度」，並用來確定工作的優先次序，以及決定哪些工作應納入專案<a class="cite" href="#src-3" data-src="src-3">[3]</a>。英文版在這裡連結到 GitHub（程式共享網站）上的說明文。那篇說明文是為這套機制打造工具 Gov4Git 的 Petar Maymounkov 在 2024 年 2 月 26 日寫的，把本書的目標定為依照書中所講的原理來寫這本書<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>進入大家共同管理的階段（2024 年 5 月）。</strong> 共同作者、經濟學者衛谷倫（E. Glen Weyl）在 2024 年 5 月左右呼籲參與者：已經進入以 Gov4Git 完全由社群管理的階段，請大家看稿並投票。西尾泰和問，晚到的推薦語要怎麼加進去；衛谷倫回答的大意是：不需要積分的話，直接提交稿件就好；想要積分的話，先開一個議題，等衛谷倫支持之後，再提交解決該議題的稿件<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>書以外的擴散。</strong> GitHub 上也找得到幾個其他的使用例，例如一個地球科學軟體專案在貢獻指南中寫道，其營運依據 Plural Management 的模式<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>運作方式</h2>
 <h3>為什麼需要</h3>
-<p>2024 年 2 月的說明文列出四個目標[1]：</p>
+<p>2024 年 2 月的說明文列出四個目標<a class="cite" href="#src-1" data-src="src-1">[1]</a>：</p>
 <ol>
 <li>用明確的數字、民主地認可貢獻，而不是用模糊難懂的方式；並為工作排出優先順序。</li>
 <li>避免積分成為以增值為目的的買賣對象。</li>
 <li>讓大家能共同決定專案的方向，最終把營運交給社群。</li>
 <li>為了防範惡意攻擊，逐步擴大由大家決定的範圍。</li>
 </ol>
-<p>西尾泰和在 2024 年 3 月的演講中說明：有上下關係的組織，工作會卡在做決定的人那裡；沒有上下關係的組織，又很難朝同一個方向前進。特別是在任何人都能參與的軟體開發中，專案一變大，評估貢獻與排定優先順序就變得困難。西尾的整理是：解決這個問題的就是 PMP[6]。</p>
+<p>西尾泰和在 2024 年 3 月的演講中說明：有上下關係的組織，工作會卡在做決定的人那裡；沒有上下關係的組織，又很難朝同一個方向前進。特別是在任何人都能參與的軟體開發中，專案一變大，評估貢獻與排定優先順序就變得困難。西尾的整理是：解決這個問題的就是 PMP<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>五個步驟</h3>
-<p>依說明文，PMP 由以下五個步驟構成[1]：</p>
+<p>依說明文，PMP 由以下五個步驟構成<a class="cite" href="#src-1" data-src="src-1">[1]</a>：</p>
 <ol>
 <li><strong>優先排序。</strong> 用一種<a href="quadratic-funding.html">平方募資</a>來決定「該做的議題」的優先度。越多人各出一點支持的議題，得到的助力越大。</li>
 <li><strong>補助。</strong> 助力所需的積分由贊助者出。說明文寫道，贊助者大概會是衛谷倫或唐鳳（Audrey Tang）這類持有最多積分的人。</li>
@@ -70,31 +76,31 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 <li><strong>預測。</strong> 投票同時也是對「大家會怎麼決定」的預測。除了上面的費用，還要付與票數相同的積分；結果若與自己投票的方向一致，就拿回兩倍。</li>
 </ol>
 <h3>小小的計算例</h3>
-<p>以下是本文把說明文的公式代入數字的範例。設 k = 1，某人對某份稿件投了 3 張贊成票[1]：</p>
+<p>以下是本文把說明文的公式代入數字的範例。設 k = 1，某人對某份稿件投了 3 張贊成票<a class="cite" href="#src-1" data-src="src-1">[1]</a>：</p>
 <ul>
 <li>投票費用是 1 × 3² = 1 × 9 = <strong>9 積分</strong>。</li>
 <li>為了預測，再付與票數相同的 <strong>3 積分</strong>。</li>
 <li>稿件若被採用（投票方向與結果一致），拿回 3 的兩倍 <strong>6 積分</strong>。只看預測的部分，淨賺 6 − 3 = <strong>3 積分</strong>。</li>
 </ul>
-<p>說明文寫道，有了這個預測機制，積分少但有時間的人，可以代替積分多但沒時間的人幫忙挑選稿件，並因此得到積分[1]。</p>
-<p>Gov4Git 的規格書用工具的語言描述同一套機制：可以在稿件說明中寫「解決了這個議題」來主張；稿件被採用時，累積在該議題上的積分會整筆成為給作者的賞金[7]。</p>
+<p>說明文寫道，有了這個預測機制，積分少但有時間的人，可以代替積分多但沒時間的人幫忙挑選稿件，並因此得到積分<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>Gov4Git 的規格書用工具的語言描述同一套機制：可以在稿件說明中寫「解決了這個議題」來主張；稿件被採用時，累積在該議題上的積分會整筆成為給作者的賞金<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>原型論文</h3>
-<p>整套機制來自衛谷倫、Maymounkov 等人 2024 年 1 月發表的論文〈Plural Management〉。依摘要，這是一種以在連結中產生權威的機制，取代層級組織部分權威的模型：參與者透過預測或實現組織的優先事項來獲得影響力，再用它決定優先順序、確認貢獻[8]。</p>
+<p>整套機制來自衛谷倫、Maymounkov 等人 2024 年 1 月發表的論文〈Plural Management〉。依摘要，這是一種以在連結中產生權威的機制，取代層級組織部分權威的模型：參與者透過預測或實現組織的優先事項來獲得影響力，再用它決定優先順序、確認貢獻<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h3>實際的運作</h3>
-<p>一開始並不是靠投票運作的。西尾在 2024 年 3 月的演講中報告：當時是由一位領導者帶頭的時期，由衛谷倫判斷貢獻並發行積分，採用與否的投票還沒有實際體驗過[6]。關於英文版紙本書，衛谷倫在 2024 年 3 月公布了編輯截止日，寫道在那之後的修改不會進入紙本，但經 PMP 核准的修改會收進線上版[9]。</p>
-<p>根據本書專案的統計畫面（2025 年 10 月 24 日），至今議題與稿件共開了 116 件，對議題的投票 135 次，對稿件的投票 41 次，新參與者 74 人；最近 30 天的活動為零[10]。</p>
-<p>之後，Gov4Git 團隊公開了為軟體開發重新設計的機制「Waimea」。它把積分視為類似公司員工持股的東西，也允許成員之間轉讓[11]。這和最初「不當作買賣對象」的方針，重點並不相同。</p>
+<p>一開始並不是靠投票運作的。西尾在 2024 年 3 月的演講中報告：當時是由一位領導者帶頭的時期，由衛谷倫判斷貢獻並發行積分，採用與否的投票還沒有實際體驗過<a class="cite" href="#src-6" data-src="src-6">[6]</a>。關於英文版紙本書，衛谷倫在 2024 年 3 月公布了編輯截止日，寫道在那之後的修改不會進入紙本，但經 PMP 核准的修改會收進線上版<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>根據本書專案的統計畫面（2025 年 10 月 24 日），至今議題與稿件共開了 116 件，對議題的投票 135 次，對稿件的投票 41 次，新參與者 74 人；最近 30 天的活動為零<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>之後，Gov4Git 團隊公開了為軟體開發重新設計的機制「Waimea」。它把積分視為類似公司員工持股的東西，也允許成員之間轉讓<a class="cite" href="#src-11" data-src="src-11">[11]</a>。這和最初「不當作買賣對象」的方針，重點並不相同。</p>
 <h2>爭議與批評</h2>
 <ul>
-<li><strong>不是一人一票，也不是一元一票。</strong> 西尾在演講中整理道，PMP 既不是依人數決定發言權，也不是用錢買發言權，而是對專案做出越多有用貢獻的人發言權越大的「能力主義」[6]。</li>
-<li><strong>投票會讓積分減少。</strong> 2024 年 3 月拿到第一筆積分的西尾半開玩笑地寫道：這是用了就會減少的點數，所以是不是只有持續貢獻、點數有剩的人，才能當一等公民？[12]</li>
-<li><strong>設計與實際的落差。</strong> 在日文譯者們的紀錄中，西尾寫道：設計上稿件是否採用由大家決定，但在英文版出版之前，是由衛谷倫一個人判斷的[13]。Waimea 的文件也明寫，管理者可以不管投票結果決定是否採用稿件，也可以發行或刪除積分（這些操作一律留在公開紀錄中）[11]。</li>
-<li><strong>參與的難度與停滯。</strong> 除了參與手續困難之外，如上所見，到 2025 年 10 月時，最近 30 天沒有任何活動[10]。</li>
+<li><strong>不是一人一票，也不是一元一票。</strong> 西尾在演講中整理道，PMP 既不是依人數決定發言權，也不是用錢買發言權，而是對專案做出越多有用貢獻的人發言權越大的「能力主義」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>投票會讓積分減少。</strong> 2024 年 3 月拿到第一筆積分的西尾半開玩笑地寫道：這是用了就會減少的點數，所以是不是只有持續貢獻、點數有剩的人，才能當一等公民？<a class="cite" href="#src-12" data-src="src-12">[12]</a></li>
+<li><strong>設計與實際的落差。</strong> 在日文譯者們的紀錄中，西尾寫道：設計上稿件是否採用由大家決定，但在英文版出版之前，是由衛谷倫一個人判斷的<a class="cite" href="#src-13" data-src="src-13">[13]</a>。Waimea 的文件也明寫，管理者可以不管投票結果決定是否採用稿件，也可以發行或刪除積分（這些操作一律留在公開紀錄中）<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
+<li><strong>參與的難度與停滯。</strong> 除了參與手續困難之外，如上所見，到 2025 年 10 月時，最近 30 天沒有任何活動<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>書在 5-7 章〈<a href="social-markets.html">社會市場</a>〉把「多元管理」列為超越市場局限的例子之一。書說，這使得科層制度的一些重要組成部分——「由受信任的權威機構進行評估，根據這些權威機構的表現來轉移這種權威」——「在沒有科層式直接報告結構的情況下，仍然得以實現，從而可能使網絡取代嚴格的階層制度」[3]。</p>
-<p>5-0 章在說明本書的寫作方式時寫道：「社群通過使用我們在下方的《5-6 ⿻投票》一章中描述的先進投票程序，和預測市場的混合方式，集體批准對文本的更改。」[2]（→ <a href="plural-voting.html">⿻投票</a>）英文版還寫道，工作的優先順序與報酬是用 5-7 章的群眾募資方式決定的，並把這套做法稱為「⿻ Management Protocol」[2]。</p>
-<p>也就是說，PMP 是把書中各章介紹的機制組合起來的東西：優先排序用<a href="quadratic-funding.html">平方募資</a>，採用與否用<a href="quadratic-voting.html">平方投票</a>，核准用預測。衛谷倫在 2023 年 12 月的影片中也說明，PMP 使用賞金、QV、QF、預測市場等書中的想法，讓人透過貢獻得到積分，再用積分引導專案的方向[14]。</p>
+<p>書在 5-7 章〈<a href="social-markets.html">社會市場</a>〉把「多元管理」列為超越市場局限的例子之一。書說，這使得科層制度的一些重要組成部分——「由受信任的權威機構進行評估，根據這些權威機構的表現來轉移這種權威」——「在沒有科層式直接報告結構的情況下，仍然得以實現，從而可能使網絡取代嚴格的階層制度」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p>5-0 章在說明本書的寫作方式時寫道：「社群通過使用我們在下方的《5-6 ⿻投票》一章中描述的先進投票程序，和預測市場的混合方式，集體批准對文本的更改。」<a class="cite" href="#src-2" data-src="src-2">[2]</a>（→ <a href="plural-voting.html">⿻投票</a>）英文版還寫道，工作的優先順序與報酬是用 5-7 章的群眾募資方式決定的，並把這套做法稱為「⿻ Management Protocol」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>也就是說，PMP 是把書中各章介紹的機制組合起來的東西：優先排序用<a href="quadratic-funding.html">平方募資</a>，採用與否用<a href="quadratic-voting.html">平方投票</a>，核准用預測。衛谷倫在 2023 年 12 月的影片中也說明，PMP 使用賞金、QV、QF、預測市場等書中的想法，讓人透過貢獻得到積分，再用積分引導專案的方向<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
 <h2>延伸閱讀</h2>
 <ol>
 <li>《多元宇宙》5-7〈社會市場〉「多元管理」一項（中文，書）— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
@@ -106,18 +112,48 @@ footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid 
 </ol>
 <h2>出處</h2>
 <ol>
-<li>"Gov4Git and the Plural Management Protocol overview"（2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a> ［CC0］</li>
-<li>《多元宇宙》5-0〈協作技術與民主〉— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a> ；群眾募資與「⿻ Management Protocol」的說法見英文版 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
-<li>《多元宇宙》5-7〈社會市場〉「多元管理」一項 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a> ；連結到說明文的是英文版 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
-<li>日文翻譯社群的紀錄「完全コミュニティ管理フェーズ」（2024-05-10，日文）— <a href="https://scrapbox.io/plurality-japanese/%E5%AE%8C%E5%85%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E9%96%8B%E5%A7%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E5%AE%8C%E5%85%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E9%96%8B%E5%A7%8B</a></li>
-<li>Gov4Git 使用例的搜尋 — <a href="https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues" target="_blank" rel="noopener">https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues</a> ［MIT］</li>
-<li>西尾泰和「⿻PluralityとPlural Management Protocol」（2024-03-30，日文）— <a href="https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol" target="_blank" rel="noopener">https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol</a></li>
-<li>Gov4Git "MECHANISM.md"（PMP 規格 v0.0.1）— <a href="https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md</a> ［MIT / Apache-2.0］</li>
-<li>South、Erichsen、Jain、Maymounkov、Moore、Weyl, "Plural Management" 摘要（2024-01-09）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</a></li>
-<li>日文翻譯社群的紀錄（2024-03-02 的截止日公告）— <a href="https://scrapbox.io/plurality-japanese/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E6%8F%90%E5%87%BA%E6%9C%9F%E9%99%90" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E6%8F%90%E5%87%BA%E6%9C%9F%E9%99%90</a></li>
-<li>本書儲存庫的 Gov4Git 儀表板（2025-10-24）— <a href="https://github.com/pluralitybook/plurality/issues/1094" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1094</a> ［CC0］</li>
-<li>Gov4Git "WAIMEA.md" — <a href="https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md</a> ［MIT / Apache-2.0］</li>
-<li>日文翻譯社群的紀錄（2024-03-01，日文）— <a href="https://scrapbox.io/plurality-japanese/The_public_launch_of_the_Plurality_Book_Project_--_using_Gov4git" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/The_public_launch_of_the_Plurality_Book_Project_--_using_Gov4git</a></li>
-<li>日文翻譯社群的紀錄（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/PMP%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B%28Bluemo%29" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/PMP%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B%28Bluemo%29</a></li>
-<li>Glen Weyl 給 Plurality Seoul 的影片（2023-12-02）— <a href="https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</a></li>
-</ol><div class='related'>相關: <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='quadratic-voting.html'>什麼是平方投票？</a> ・ <a href='plural-voting.html'>什麼是⿻投票（plural voting）？</a> ・ <a href='social-markets.html'>什麼是社會市場？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fplural-management-protocol.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E5%A4%9A%E5%85%83%E7%AE%A1%E7%90%86%E5%8D%94%E5%AE%9A%EF%BC%88Plural%20Management%20Protocol%EF%BC%8CPMP%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fplural-management-protocol.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main></body></html>
+<li id="src-1">"Gov4Git and the Plural Management Protocol overview"（2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a> ［CC0］</li>
+<li id="src-2">《多元宇宙》5-0〈協作技術與民主〉— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a> ；群眾募資與「⿻ Management Protocol」的說法見英文版 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-3">《多元宇宙》5-7〈社會市場〉「多元管理」一項 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a> ；連結到說明文的是英文版 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-4">日文翻譯社群的紀錄「完全コミュニティ管理フェーズ」（2024-05-10，日文）— <a href="https://scrapbox.io/plurality-japanese/%E5%AE%8C%E5%85%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E9%96%8B%E5%A7%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E5%AE%8C%E5%85%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E9%96%8B%E5%A7%8B</a></li>
+<li id="src-5">Gov4Git 使用例的搜尋 — <a href="https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues" target="_blank" rel="noopener">https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues</a> ［MIT］</li>
+<li id="src-6">西尾泰和「⿻PluralityとPlural Management Protocol」（2024-03-30，日文）— <a href="https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol" target="_blank" rel="noopener">https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol</a></li>
+<li id="src-7">Gov4Git "MECHANISM.md"（PMP 規格 v0.0.1）— <a href="https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md</a> ［MIT / Apache-2.0］</li>
+<li id="src-8">South、Erichsen、Jain、Maymounkov、Moore、Weyl, "Plural Management" 摘要（2024-01-09）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</a></li>
+<li id="src-9">日文翻譯社群的紀錄（2024-03-02 的截止日公告）— <a href="https://scrapbox.io/plurality-japanese/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E6%8F%90%E5%87%BA%E6%9C%9F%E9%99%90" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E6%8F%90%E5%87%BA%E6%9C%9F%E9%99%90</a></li>
+<li id="src-10">本書儲存庫的 Gov4Git 儀表板（2025-10-24）— <a href="https://github.com/pluralitybook/plurality/issues/1094" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1094</a> ［CC0］</li>
+<li id="src-11">Gov4Git "WAIMEA.md" — <a href="https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md</a> ［MIT / Apache-2.0］</li>
+<li id="src-12">日文翻譯社群的紀錄（2024-03-01，日文）— <a href="https://scrapbox.io/plurality-japanese/The_public_launch_of_the_Plurality_Book_Project_--_using_Gov4git" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/The_public_launch_of_the_Plurality_Book_Project_--_using_Gov4git</a></li>
+<li id="src-13">日文翻譯社群的紀錄（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/PMP%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B%28Bluemo%29" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/PMP%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B%28Bluemo%29</a></li>
+<li id="src-14">Glen Weyl 給 Plurality Seoul 的影片（2023-12-02）— <a href="https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</a></li>
+</ol><div class='related'>相關: <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='quadratic-voting.html'>什麼是平方投票？</a> ・ <a href='plural-voting.html'>什麼是⿻投票（plural voting）？</a> ・ <a href='social-markets.html'>什麼是社會市場？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fplural-management-protocol.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E5%A4%9A%E5%85%83%E7%AE%A1%E7%90%86%E5%8D%94%E5%AE%9A%EF%BC%88Plural%20Management%20Protocol%EF%BC%8CPMP%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fplural-management-protocol.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。</footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>
