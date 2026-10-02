@@ -1,0 +1,118 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是平方投票？</title><meta name="description" content="每个人拿到同样多的「点数」，自由分配给想支持的提案。投 1 票花 1 点、2 票花 4 点、3 票花 9 点，成本是票数的平方；所以强烈的偏好表达得出来，但把点数全押在一个提案上，就很不划算。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/quadratic-voting.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/quadratic-voting.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/quadratic-voting.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/quadratic-voting.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/quadratic-voting.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/quadratic-voting.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是平方投票？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/quadratic-voting.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="每个人拿到同样多的「点数」，自由分配给想支持的提案。投 1 票花 1 点、2 票花 4 点、3 票花 9 点，成本是票数的平方；所以强烈的偏好表达得出来，但把点数全押在一个提案上，就很不划算。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../quadratic-voting.html">日本語</a> <a class="lang" hreflang="en" href="../en/quadratic-voting.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/quadratic-voting.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是平方投票？</h1><div class='lead'>每个人拿到同样多的「点数」，自由分配给想支持的提案。投 1 票花 1 点、2 票花 4 点、3 票花 9 点，成本是票数的平方；所以强烈的偏好表达得出来，但把点数全押在一个提案上，就很不划算。</div><p>一般的投票，「有点赞成」的人和「反对到攸关生计」的人，都只有一票。这样一来，偏好强弱的差别就不会反映在结果上。平方投票（Quadratic Voting，简称 QV）就是为了让选票反映「有多想要」而设计的投票方式。「平方」指的是成本随票数的平方增加；中文维基百科说，早期也译作「二次方投票」[5]。</p>
+<h2>一句话说明</h2>
+<p>在 QV 里，每个人拿到同样多的<strong>点数</strong>，可以自由分配给想支持的提案。但在同一个提案上投 1 票花 1 点、2 票花 4 点、3 票花 9 点，<strong>要付出的点数是票数的平方</strong>[1][2]。</p>
+<p>所以，真正在乎的提案可以多投几票；可是把点数全押在一个提案上，票数并不会跟着点数等比例增加。</p>
+<h2>举例来说</h2>
+<p><strong>总统杯黑客松（2019 年）。</strong> 台湾政府在请参与者与民众协助票选优胜团队时使用了 QV。时任数位政委的唐凤，在筹备会议上这样说明：「当你有一百点的时候，你全部灌到一个案子，它只有十票，但是你灌到两个案子，每个都有七票，而且你还剩两点可以用。」（7 × 7 = 49 点，两个案子合计 98 点）[1] 唐凤在同年另一场会面中提到，正式投票时是每人 99 点[3]。《多元宇宙》一书写道，这种模式让强烈支持某个项目的人能给它巨大的推动力，「从而使众多参与者至少成为部分获胜者」[4]。</p>
+<p><strong>美国科罗拉多州议会（2019 年）。</strong> 根据中文维基百科，2019 年 4 月，科罗拉多州众议院民主党核心小组试行了 QV。每人 100 枚代币，同一项法案最多投 10 票，或对 4 项法案各投 5 票。得票最多的是《同工同酬法案》（60 票），而且没有任何参与者把代币全部花在同一项法案上[5]。</p>
+<p><strong>游戏《文明帝国 VI》。</strong> 这款策略游戏的扩充包「风云际会」中，「世界议会」的投票，每个文明可以免费获得一票，但额外的票需要越来越多的「外交支持」。书中介绍说，这是「作者之一发明的『平方投票』」的变形（日文版明确写出是卫谷伦）[6]。</p>
+<h2>运作方式</h2>
+<h3>简单的计算</h3>
+<p>假设你有 16 点[5]。</p>
+<ul>
+<li>对 16 个提案各投 1 票 → 1 点 × 16 = <strong>16 点</strong></li>
+<li>对 1 个提案投 4 票 → 4 × 4 = <strong>16 点</strong></li>
+</ul>
+<p>两者都是 16 点。集中在一个提案上是 4 票，分散投出去合计是 16 票。你可以用较多的票表达强烈的偏好，但能用在其他提案上的点数也跟着变少。日本学者铃木健在日文版的解说中，举了投 5 票要花 25 点的例子（5 × 5 = 25）[2]。</p>
+<h3>为什么是「平方」</h3>
+<p>以太坊创办人维塔利克·布特林（Vitalik Buterin）在一篇入门文章里，把它换个说法：第 n 票要付 n 元（文章中用美元）[7]。</p>
+<p>第 1 票 1 元、第 2 票 2 元、第 3 票 3 元……下一票越来越贵。于是，人会一直买票，直到「下一票的价格」追上「这个提案对自己有多重要」为止。如果某人对某提案的重视程度是另一人的 2 倍，这个人刚好会买 2 倍的票。也就是说，<strong>票数会和偏好的强度刚好成正比</strong>。</p>
+<p>把 n 票的价格全部加起来，大约是 n² ÷ 2。布特林说明，「平方（二次）」这个名称就是这样来的[7]。卫谷伦等人论文的摘要也写道，只有成本是平方时才会出现这个性质，并带来对整体社会最好的结果[8]。</p>
+<h3>书中的说明：平方根</h3>
+<p>《多元宇宙》第 5-6 章从另一个角度说明[9]。彼此无关的人所投的票，平均起来会互相抵销，所以影响力只随票数的<strong>平方根</strong>增加；而一个人手上集中的票，则会原封不动地发挥作用。书中写道：「10,000 张互不相关的选票，与 100 张彼此相关选票的权重，是一样大的」（100 × 100 = 10,000）[9]。</p>
+<p>因此书认为，公平的做法是给每个人「偏好强度的平方根」那么多的权重。在 QV 里，票数是点数的平方根（16 点换 4 票），正好是这个形式[9]。</p>
+<p>唐凤在 2019 年的会面中也这样说明：「我就算砸1万元，只不过等于一百票，但是动员到100个人，都只花1元，也是有一百票，所以是让有钱的人、有人脉的人是在一样好的位置」[3]。</p>
+<h3>用钱，还是用点数</h3>
+<p>QV 也有用钱买票的设计。在这种设计下，收到的钱会用于公共目的，回到投票者身上[5]。而台湾黑客松用的点数并不是钱[1]。唐凤也提到另一个好处：「没有逼每一个人表态，如果他不懂就不表态，而且点数可以留着」[3]。</p>
+<h3>从哪里来</h3>
+<p>类似的平方机制，1970 年代就有人提出。布特林等人 2018 年的论文整理说，卫谷伦在 2012 年以投票的形式重新提出，后来也得到数学上的证明[10]。QV 也是卫谷伦与法学者艾瑞克·波斯纳（Eric Posner）前一本书《激进市场》（Radical Markets）的核心提案[11]。</p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>一个人能变成好几个人，就会失灵。</strong> 布特林指出，如果能轻易注册很多个身分（帐号），就能用新身分反复买便宜的第一票，整个机制就垮了。布特林说，身分系统不必完美，但必须牢固到作弊划不来的程度[7]。→ <a href="proof-of-personhood.html">人格证明</a></li>
+<li><strong>买卖选票、串通。</strong> 如果选票可以卖，最后还是钱多的人赢。所以布特林认为，需要保密到连本人都无法向别人证明自己投了什么的程度[7][12]。</li>
+<li><strong>用钱买票，不是对有钱人有利吗？</strong> 布特林指出，因为成本是平方，100 倍的钱只能换到 10 倍的影响力；如果发给每个人同样的点数，差距还能再压低[7]。</li>
+<li><strong>议题由谁决定？</strong> 布特林指出，QV 本身没有决定要把什么拿出来投票的机制[7]。一篇日文读书笔记也批评，划定议题范围的权力问题没有被讨论[13]。书本身也承认投票的局限：即使是最丰富的投票形式，「也仅是在表达和决定对其他社会进程已经提出的决策的偏好」[14]。</li>
+<li><strong>会不会让组织票更强？</strong> 西尾泰和（日本工程师）的笔记引用了一种看法：QV 看重「组织起来的 100 人各投 1 票」胜过「1 个人投 100 票」，因此可能强化组织票[15]。</li>
+<li><strong>挡不住狂热。</strong> 一篇日文 note 文章批评，QV 以偏好强度为输入，所以在几乎没有反对声音的狂热之中，无法阻止失控[16]。</li>
+<li><strong>发明者本人的反省。</strong> 卫谷伦在 2020 年回顾说，包含 QV 在内的《激进市场》，带有把人看成脱离社会的个体、由上而下设计制度的思考方式[17]。</li>
+<li><strong>也有不适用的场合。</strong> 西尾写道，如果是被选中的提案要由负责人陪跑支援半年左右的计划，负责人自己支持的案子落选后，很难用同样的热情去陪伴，因此 QV 并不适合[18]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》在第 5-6 章〈<a href="plural-voting.html">⿻投票</a>〉，把 QV 和<a href="liquid-democracy.html">流动式民主</a>并列为「让人期待的方式，尽管还不那么完整」[9]。</p>
+<p>不过书并没有停在 QV。书中写道：「只有当投票人内部完全统一、外部完全不相关或未协调时，这样简洁扼要的规则才是最佳的」[9]。因此书往前推进，把人与人之间的连结也纳入计票的考量。布特林评论这个转变：在《激进市场》里，问题是偏好的强度；到了《Plurality》，处理的是彼此相连的选票该怎么计算这个不同的问题[11]。</p>
+<p>把同样的想法用在资金分配上，就是第 5-7 章的<a href="quadratic-funding.html">平方募资</a>[19]。而 QV 以「一个人不能变成好几个人」为前提，这一点也连到<a href="identity-and-personhood.html">身分与人格权</a>的讨论。</p>
+<h2>延伸阅读</h2>
+<ol>
+<li>平方投票法（中文维基百科）— <a href="https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95</a></li>
+<li>总统杯黑客松票选方式讨论（2019，中文，逐字稿）— <a href="https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96" target="_blank" rel="noopener">https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96</a></li>
+<li>《多元宇宙》5-6〈⿻投票〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li>Vitalik Buterin, "Quadratic Payments: A Primer"（英文，文章）— <a href="https://vitalik.eth.limo/general/2019/12/07/quadratic.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/12/07/quadratic.html</a></li>
+<li>Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods"（英文，论文）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li>铃木健〈Plurality 日本语版解说〉（日文，解说）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>总统杯黑客松票选方式讨论（2019-02-18，唐凤的逐字稿）— <a href="https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96" target="_blank" rel="noopener">https://sayit.archive.tw/2019-02-18-%E7%B8%BD%E7%B5%B1%E7%9B%83%E9%BB%91%E5%AE%A2%E6%9D%BE%E7%A5%A8%E9%81%B8%E6%96%B9%E5%BC%8F%E8%A8%8E%E8%AB%96</a></li>
+<li>铃木健〈Plurality 日本语版解说〉（日文）— <a href="https://note.com/digitaldemocracy/n/nb8b59a6b775d" target="_blank" rel="noopener">https://note.com/digitaldemocracy/n/nb8b59a6b775d</a></li>
+<li>唐凤与张洁平、高重建会面（2019-09-23）— <a href="https://sayit.archive.tw/2019-09-23-%E5%BC%B5%E6%BD%94%E5%B9%B3%E5%8F%8A%E9%AB%98%E9%87%8D%E5%BB%BA%E6%8B%9C%E6%9C%83" target="_blank" rel="noopener">https://sayit.archive.tw/2019-09-23-%E5%BC%B5%E6%BD%94%E5%B9%B3%E5%8F%8A%E9%AB%98%E9%87%8D%E5%BB%BA%E6%8B%9C%E6%9C%83</a></li>
+<li>《多元宇宙》2-2〈数位民主的日常〉— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li>平方投票法（中文维基百科）— <a href="https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%E6%B3%95</a></li>
+<li>《多元宇宙》5-6〈⿻投票〉开头 — <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li>Vitalik Buterin, "Quadratic Payments: A Primer"（2019）— <a href="https://vitalik.eth.limo/general/2019/12/07/quadratic.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/12/07/quadratic.html</a></li>
+<li>Lalley &amp; Weyl, "Quadratic voting: How mechanism design can radicalize democracy" 摘要（2018）— <a href="https://www.microsoft.com/en-us/research/publication/quadratic-voting-how-mechanism-design-can-radicalize-democracy/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/publication/quadratic-voting-how-mechanism-design-can-radicalize-democracy/</a></li>
+<li>《多元宇宙》5-6〈⿻投票〉「明日的投票」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li>Buterin, Hitzig, Weyl, "A Flexible Design for Funding Public Goods"（2018）— <a href="https://arxiv.org/abs/1809.06421" target="_blank" rel="noopener">https://arxiv.org/abs/1809.06421</a></li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（2024-08-21）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li>Vitalik Buterin, "On Collusion"（2019）— <a href="https://vitalik.eth.limo/general/2019/04/03/collusion.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2019/04/03/collusion.html</a></li>
+<li>syumi_data〈読书022_テクノ専制とコモンへの道（李舜志）〉（note，2026-01-03，日文）— <a href="https://note.com/syumi_data1230/n/n5d4a2c2115e0" target="_blank" rel="noopener">https://note.com/syumi_data1230/n/n5d4a2c2115e0</a></li>
+<li>《多元宇宙》5-6〈⿻投票〉「投票的局限」— <a href="https://www.plurality.net/v/chapters/5-6/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-6/zh-tw/</a></li>
+<li>西尾泰和〈Quadratic Votingと组织票〉（Cosense，日文）— <a href="https://scrapbox.io/nishio/Quadratic_Voting%E3%81%A8%E7%B5%84%E7%B9%94%E7%A5%A8" target="_blank" rel="noopener">https://scrapbox.io/nishio/Quadratic_Voting%E3%81%A8%E7%B5%84%E7%B9%94%E7%A5%A8</a></li>
+<li>Project Aequitas〈民主主义をアップデートしようとした三人と、その共通のバグ〉（note，2026-07-11，日文）— <a href="https://note.com/glossy_lemur5728/n/n75e891a7f46b" target="_blank" rel="noopener">https://note.com/glossy_lemur5728/n/n75e891a7f46b</a></li>
+<li>E. Glen Weyl, "Why I Am not a Market Radical"（2020）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-not-a-market-radical/</a></li>
+<li>西尾泰和〈伴走型プログラムの采択にQVは向いていない〉（Cosense，日文）— <a href="https://scrapbox.io/nishio/%E4%BC%B4%E8%B5%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E6%8E%A1%E6%8A%9E%E3%81%ABQV%E3%81%AF%E5%90%91%E3%81%84%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84" target="_blank" rel="noopener">https://scrapbox.io/nishio/%E4%BC%B4%E8%B5%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E6%8E%A1%E6%8A%9E%E3%81%ABQV%E3%81%AF%E5%90%91%E3%81%84%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84</a></li>
+<li>《多元宇宙》5-7〈社会市场〉— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='liquid-democracy.html'>什么是流动式民主（liquid democracy）？</a> ・ <a href='proof-of-personhood.html'>什么是人格证明（proof of personhood）？</a> ・ <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fquadratic-voting.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%B3%E6%96%B9%E6%8A%95%E7%A5%A8%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fquadratic-voting.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>

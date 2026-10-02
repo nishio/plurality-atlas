@@ -1,0 +1,100 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是 Cofacts（真的假的）？</title><meta name="description" content="台湾的民众把在 LINE 等处收到的可疑讯息转传给聊天机器人，就会收到志工查证后写下的回应；这是一套人人都能参与的事实查核机制。它从公民技术社群 g0v 诞生，收集到的资料任何人都能使用。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/cofacts.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/cofacts.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/cofacts.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/cofacts.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/cofacts.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/cofacts.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是 Cofacts（真的假的）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/cofacts.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="台湾的民众把在 LINE 等处收到的可疑讯息转传给聊天机器人，就会收到志工查证后写下的回应；这是一套人人都能参与的事实查核机制。它从公民技术社群 g0v 诞生，收集到的资料任何人都能使用。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../cofacts.html">日本語</a> <a class="lang" hreflang="en" href="../en/cofacts.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/cofacts.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是 Cofacts（真的假的）？</h1><div class='lead'>台湾的民众把在 LINE 等处收到的可疑讯息转传给聊天机器人，就会收到志工查证后写下的回应；这是一套人人都能参与的事实查核机制。它从公民技术社群 g0v 诞生，收集到的资料任何人都能使用。</div><p>家人的群组里，是不是曾经传来「喝这个就能治病」「某某很危险」之类的讯息？想知道是真是假，自己查又很费工夫。Cofacts 是台湾的一套机制：只要把这类讯息转传给聊天机器人，就会收到公民查证后写下的回应。</p>
+<h2>一句话说明</h2>
+<p>Cofacts 是诞生于台湾的事实查核机制：把可疑的说法转传给聊天机器人（自动对话的程式），就会收到志工公民查证后写下的回应。中文名称是「真的假的」[1][2][3]。</p>
+<p>任何人都能撰写回应，收集到的资料也任何人都能自由使用[1][2][3]。</p>
+<h2>举例来说</h2>
+<p><strong>外界看不见的对话中的谣言。</strong> 在台湾广泛使用的 LINE 这类通讯软件，对话内容外界看不见，因此调查和因应假讯息都很困难。Cofacts 的核心成员 Johnson Liang 写道，用户传给机器人的讯息本身，就成了了解封闭社交媒体里发生什么事的珍贵纪录[2]。2018 年 3 月，这些资料经过去识别化处理后公开[2]。</p>
+<p><strong>同婚公投之前（2018 年）。</strong> Johnson Liang 写道，Cofacts 的分析功能已经可以用图表呈现含有「同性恋」的讯息流传了多少[2]。在海外媒体报导台湾如何在同婚公投前对抗反 LGBT 假新闻时，Cofacts 也接受了采访[2]。</p>
+<p><strong>其他机器人的「枢纽」。</strong> Cofacts 的资料库以任何人都能无限制使用的形式（CC0）公开。因此，由别人制作的热门机器人「美玉姨」也使用 Cofacts 的资料[3]。唐凤（Audrey Tang）把 Cofacts 称为连接许多机器人的「枢纽」（hub）[4]。</p>
+<p>唐凤说，会用手机但不擅长电脑的年长父母，只要加入这些机器人，也能成为请求查证、把结果转传给家人的参与者[4]。唐凤也说，泰国也有同样的机制[5]。</p>
+<h2>运作方式</h2>
+<h3>转传过去，回应就回来</h3>
+<p>《多元宇宙》写道，在 Cofacts 这个项目中，「参与的公民快速回应社交媒体上的热门内容，以及从私人管道转发到公开留言区的讯息，并提供解答」[1]。</p>
+<p>根据 Johnson Liang 2019 年的回顾，用户超过 7 万人，撰写回应的编辑却没有增加[2]。因此在 2018 年 7 月加入了一项功能：传送讯息时，请用户写下觉得哪里可疑[2]。</p>
+<p>目的有三个：筛掉闹着玩的贴文；让编辑能挑选该查证的讯息；让传送者自己怀疑资讯，踏出媒体识读（解读资讯的能力）的第一步[2]。8 月还加上了把有帮助的回应分享给朋友的按钮[2]。</p>
+<h3>谁在做</h3>
+<p>Cofacts 是从公民技术社群 <a href="g0v.html">g0v</a>（零时政府）衍生出来的项目[1]。李比邻（Billion Lee）被介绍为共同创办人[6]。</p>
+<p>Johnson Liang 记述，2018 年每周三晚上举行实体会议，共开了 50 次；每两个月举办一次编辑小聚，大家一起写回应 100 分钟[2]。</p>
+<p>根据 Johnson Liang 2019 年的文章，Cofacts 在还没完成的 2017 年初意外受到注目，涌进来的是用户而不是编辑协作者[3]。英文名称 Cofacts 在 2017 年 4 月确定[3]。它接受了 g0v 公民科技的奖助金，但文章写道，出资的一方不干预营运[3][2]。</p>
+<h3>不是「公正第三方」</h3>
+<p>Johnson Liang 承认，既然任何人都能参与，就无法保证每一则回应都正确；但任何人随时都能补上另一则回应[3]。回应有「含有个人意见」的分类，一则讯息的所有回应会并列显示。如果不喜欢回应者的组成，也可以用公开的资料和程式码架设自己的机器人[3]。</p>
+<p>Johnson Liang 写道，Cofacts 不限制编辑的身分，是一种尝试用言论自由对抗假讯息的做法；不论成功或失败，都能成为有同样烦恼的国家的参考[2]。</p>
+<h3>导入 AI</h3>
+<p>唐凤在 2023 年说：「像『Cofacts』他们现在也都用语言模型技术，也就是不是靠人一则一则去澄清而已，他们已经训练一个语言模型，然后第一时间看到这一些讯息攻击的时候，加入它的脉络或者是给一些批判思考想法的这些事都已经是 AI 在做了」[7] 2024 年，唐凤说明，对于人还没看过、刚开始流行的谣言，它会从过去的例子中连结相关的提醒，立即回应[8]。</p>
+<p>在 2025 年的一次德文访谈中，唐凤把 Cofacts 形容为像是事实查核界的维基百科[9]。唐凤说，它不是由政府营运，也有专家支持，并被用在学校的媒体识读课上[9]。</p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>是不是政府的工具？</strong> 2019 年，一篇专栏把 Cofacts 描写成像是取缔言论的机关，并暗示是唐凤或当时政府在背后指使。Johnson Liang 逐一反驳：美玉姨机器人是别人做的；项目从来没有停过；和唐凤只是作为同样的 g0v 参与者见过面而已[3]。唐凤在 2024 年也说，Cofacts 不在政府那一边，而是在公民社会这一边，靠捐款等资金运作[8]。</li>
+<li><strong>没有被政府采用。</strong> The Daily Beast 的报导（2023 年）批评，Cofacts 并没有被政府采用为打击假讯息的主要工具[10]。报导说，立委们偏好对散播假讯息的民众罚款这类强硬手段[10]。</li>
+<li><strong>志工的负担。</strong> 用户增加、编辑却没有增加，这是 Cofacts 自己列出的 2018 年课题[2]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》2-2 章〈数位民主的日常〉的「资讯透明」一节，把 Cofacts 介绍为台湾迅速回应假讯息之「超能力」的核心：「在众多努力中，最为重要的或许就是从 g0v 衍生出的项目『Cofacts』。」[1] 书引用研究写道：「与量能有限的专业事实查核机构相比，这些系统通常能够以同等的准确性、更快的速度，且更具吸引力的方式来回应谣言。」[1]</p>
+<p>同一节也列出了其他 LINE 机器人，以及「以幽默对抗谣言」这种台湾对抗假讯息的想法[1]。台湾的全貌见〈<a href="taiwan-digital-democracy.html">台湾的数位民主</a>〉。</p>
+<p>在由公民补写说明这一点上，Cofacts 和 X 的<a href="community-notes.html">社群备注</a>是相近的机制。唐凤在 2023 年的访谈中，把 Polis、Cofacts 和社群备注并列为这样的技术：「它给大家看到的就是最大的声量，不是吵得最凶的，而是能够把意见最不同的人桥接在一起」[7]。这个想法详见〈<a href="bridging.html">桥接</a>〉。</p>
+<h2>延伸阅读</h2>
+<ol>
+<li>《多元宇宙》2-2〈数位民主的日常〉「资讯透明」一节（中文，书）— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li>Cofacts 真的假的 官方网站（中文，服务）— <a href="https://cofacts.g0v.tw/" target="_blank" rel="noopener">https://cofacts.g0v.tw/</a></li>
+<li>Johnson Liang〈2019 第一天，来看看两岁的 Cofacts〉（中文，文章）— <a href="https://medium.com/cofacts/2019-%E7%AC%AC%E4%B8%80%E5%A4%A9-%E4%BE%86%E7%9C%8B%E7%9C%8B%E5%85%A9%E6%AD%B2%E7%9A%84-cofacts-d2330f01727b" target="_blank" rel="noopener">https://medium.com/cofacts/2019-%E7%AC%AC%E4%B8%80%E5%A4%A9-%E4%BE%86%E7%9C%8B%E7%9C%8B%E5%85%A9%E6%AD%B2%E7%9A%84-cofacts-d2330f01727b</a></li>
+<li>〈美国之音专访唐凤部长逐字稿〉（2023-09-23，中文，逐字稿）— <a href="https://sayit.archive.tw/2023-09-23-%E7%BE%8E%E5%9C%8B%E4%B9%8B%E9%9F%B3%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF" target="_blank" rel="noopener">https://sayit.archive.tw/2023-09-23-%E7%BE%8E%E5%9C%8B%E4%B9%8B%E9%9F%B3%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF</a></li>
+<li>Audrey Tang, "Interview with Microsoft Research, Part II"（英文，访谈）— <a href="https://github.com/audreyt/transcript/blob/main/2024-01-01-Interview-with-Microsoft-Research%2C-Part-II.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-01-01-Interview-with-Microsoft-Research%2C-Part-II.md</a></li>
+<li>Andy Zhao &amp; Mor Naaman 的比较研究（英文，论文）— <a href="https://doi.org/10.54501/jots.v2i1.118" target="_blank" rel="noopener">https://doi.org/10.54501/jots.v2i1.118</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>《多元宇宙》2-2〈数位民主的日常〉「资讯透明」— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li>Johnson Liang〈2019 第一天，来看看两岁的 Cofacts〉（2019-01-01）— <a href="https://medium.com/cofacts/2019-%E7%AC%AC%E4%B8%80%E5%A4%A9-%E4%BE%86%E7%9C%8B%E7%9C%8B%E5%85%A9%E6%AD%B2%E7%9A%84-cofacts-d2330f01727b" target="_blank" rel="noopener">https://medium.com/cofacts/2019-%E7%AC%AC%E4%B8%80%E5%A4%A9-%E4%BE%86%E7%9C%8B%E7%9C%8B%E5%85%A9%E6%AD%B2%E7%9A%84-cofacts-d2330f01727b</a></li>
+<li>Johnson Liang〈摘掉「公正第三方」的高帽子 — Cofacts 对阴谋论的回应〉（2019-01-11）— <a href="https://medium.com/cofacts/%E6%91%98%E6%8E%89-%E5%85%AC%E6%AD%A3%E7%AC%AC%E4%B8%89%E6%96%B9-%E7%9A%84%E9%AB%98%E5%B8%BD%E5%AD%90-cofacts-%E5%B0%8D%E9%99%B0%E8%AC%80%E8%AB%96%E7%9A%84%E5%9B%9E%E6%87%89-bd948d128d6c" target="_blank" rel="noopener">https://medium.com/cofacts/%E6%91%98%E6%8E%89-%E5%85%AC%E6%AD%A3%E7%AC%AC%E4%B8%89%E6%96%B9-%E7%9A%84%E9%AB%98%E5%B8%BD%E5%AD%90-cofacts-%E5%B0%8D%E9%99%B0%E8%AC%80%E8%AB%96%E7%9A%84%E5%9B%9E%E6%87%89-bd948d128d6c</a></li>
+<li>Audrey Tang, "Interview with Microsoft Research, Part II"（2024-01-01）— <a href="https://github.com/audreyt/transcript/blob/main/2024-01-01-Interview-with-Microsoft-Research%2C-Part-II.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-01-01-Interview-with-Microsoft-Research%2C-Part-II.md</a></li>
+<li>Audrey Tang, "Conversation with AI Objectives Institute"（2024-05-06）— <a href="https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-05-06-Conversation-with-AI-Objectives-Institute.md</a></li>
+<li>〈国防在线急 S2E7〉（李比邻出演，视频）— <a href="https://www.youtube.com/watch?v=mCHU0RsVbL8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=mCHU0RsVbL8</a></li>
+<li>〈美国之音专访唐凤部长逐字稿〉（2023-09-23）— <a href="https://sayit.archive.tw/2023-09-23-%E7%BE%8E%E5%9C%8B%E4%B9%8B%E9%9F%B3%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF" target="_blank" rel="noopener">https://sayit.archive.tw/2023-09-23-%E7%BE%8E%E5%9C%8B%E4%B9%8B%E9%9F%B3%E5%B0%88%E8%A8%AA%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF</a></li>
+<li>Audrey Tang, "Interview with Your Undivided Attention podcast"（2024-01-24）— <a href="https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md</a></li>
+<li>D+C, "Taiwan hat die gesellschaftliche Polarisierung abgeschwächt …"（唐凤访谈，2025，德文）— <a href="https://www.dandc.eu/de/article/taiwan-hat-die-gesellschaftliche-polarisierung-abgeschwaecht-und-ist-heute-besser-gegen" target="_blank" rel="noopener">https://www.dandc.eu/de/article/taiwan-hat-die-gesellschaftliche-polarisierung-abgeschwaecht-und-ist-heute-besser-gegen</a></li>
+<li>The Daily Beast, "Taiwan tried to digitize democracy with vTaiwan. It was a huge flop"（2023）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
+</ol><div class='related'>相关: <a href='g0v.html'>什么是 g0v（零时政府）？</a> ・ <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a> ・ <a href='community-notes.html'>什么是社群备注（Community Notes）？</a> ・ <a href='bridging.html'>什么是桥接（bridging）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcofacts.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%20Cofacts%EF%BC%88%E7%9C%9F%E7%9A%84%E5%81%87%E7%9A%84%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcofacts.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>

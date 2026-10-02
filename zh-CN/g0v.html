@@ -1,0 +1,109 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是 g0v（零时政府）？</title><meta name="description" content="台湾的程式设计师、设计师、记者与公民自发组成的社群。他们把政府资讯做成人人看得懂的形式，并打造解决社会问题的工具。名称是把政府网址「gov.tw」的「o」换成「0」。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/g0v.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/g0v.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/g0v.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/g0v.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/g0v.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/g0v.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是 g0v（零时政府）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/g0v.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="台湾的程式设计师、设计师、记者与公民自发组成的社群。他们把政府资讯做成人人看得懂的形式，并打造解决社会问题的工具。名称是把政府网址「gov.tw」的「o」换成「0」。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../g0v.html">日本語</a> <a class="lang" hreflang="en" href="../en/g0v.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/g0v.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是 g0v（零时政府）？</h1><div class='lead'>台湾的程式设计师、设计师、记者与公民自发组成的社群。他们把政府资讯做成人人看得懂的形式，并打造解决社会问题的工具。名称是把政府网址「gov.tw」的「o」换成「0」。</div><p>政府网站看不懂、找不到想要的资讯——很多人都有这种经验。在台湾，一群对此不满的程式设计师，不只是抱怨，而是自己动手做出更好懂的版本。这个社群就是 g0v（零时政府）。</p>
+<p>台湾读者对 g0v 大多不陌生。这篇文章的重点，是从《多元宇宙》（<em>⿻數位 Plurality</em>）这本书的角度，看 g0v 被放在什么位置。</p>
+<h2>一句话说明</h2>
+<p>g0v 是台湾的程式设计师、设计师、记者与公民组成的志工社群。他们把政府资讯做成人人看得懂的形式，也打造解决社会问题的工具[1][2]。</p>
+<p>名称来自台湾政府网站网址（网域）的结尾「gov.tw」，把其中的「o」换成「0」[1]。繁体中文版写道，这「象征着从零开始重新思考政府的角色」[1][2]。</p>
+<h2>举例来说</h2>
+<p><strong>政府总预算视觉化（2012 年）。</strong> 根据 g0v 官方介绍，2012 年 10 月一场网络公司主办的黑客松前夕，一群关心社会议题的资讯人，对政府的经济政策广告感到不满，临时改变题目，在三天内做出把中央政府总预算视觉化的网站[2]。</p>
+<p>根据中文维基百科，这个作品得奖后，高嘉良（Chia-liang Kao）、吴泰辉、瞿筱葳等人用剩下的奖金举办了下一场黑客松，g0v 就此展开[3]。官方介绍把那场黑客松记为 2012 年 12 月 1 日，社群从此正式运作[2]。为了架设网站，高嘉良注册了和「gov.tw」只差一个字的「g0v.tw」[4]。</p>
+<p><strong>太阳花运动的直播（2014 年）。</strong> 2014 年学生占领立法院期间，书中写道：「g0v 社群中数百名贡献者协助广播、记录和传达公民行动」[1]。</p>
+<p>日文书《广泛倾听》（ブロードリスニング）写道，以擅长活动架设的 g0v 团队为中心，有超过 100 人参与直播[4]。后来成为数位部长的唐凤（Audrey Tang）拉了 350 公尺网络线的故事，书中也强调，那不是一个英雄的故事，而是许多公民合力完成的[4]。</p>
+<p><strong>萌典等项目。</strong> 书中的注脚提到，g0v 早期的项目之一、中文辞典「萌典」（MoeDict），是由作者之一唐凤主导的（繁体中文版写作「本书作者之一贡献的」）[1]。中文维基百科列举 g0v 衍生的项目，除了萌典，还有事实查核的 Cofacts、选举投票指南等[3]。</p>
+<h2>运作方式</h2>
+<h3>分叉与合并</h3>
+<p>书中写道，g0v 的公民黑客「抓取政府网站（后缀为 gov.tw），并且建立更好用、更鼓励全民参与的版本，发表在 g0v.tw 上」[1]。在软件的用语里，从原本的版本另开分支叫做「分叉」（fork）。</p>
+<p>书中接着说：「这些『分叉』版本的政府网站（例如下文将提到的口罩地图），往往更受到社会支持。在 318 运动后，张善政等政府官员，开始将这些设计『合并』回政府服务里」[1]。</p>
+<p>以太坊创办人维塔利克·布特林（Vitalik Buterin）在书评中特别注意这个做法[5]。小规模分叉中诞生的改良，又被社会主流重新吸收；布特林认为，这种快速的循环正是唐凤与卫谷伦构想的特色[5]。</p>
+<h3>「你就是『没有人』」</h3>
+<p>书中举出 g0v 黑客松的三个特点：「参与者的多样性（多数为非技术人员，男女比例几乎完全平等）、处理民间问题而非商业成果，以及与许多公民组织的密切协作」[1]。</p>
+<p>书把这些特点归结为 g0v 的口号：「不要问为何没有人做这个，先承认你就是『没有人』！」这句口号也「使 g0v 社群被称为『没有人运动』」[1]。g0v 官方 FAQ 则写道，参与者中有三到四成不写程式[6]。</p>
+<h3>没有中心，没有党派</h3>
+<p>2019 年修订的 g0v 宣言指出，g0v 没有单一的中心、代表或负责人[7]。参与者可以自行选择或发起项目，各项目自己决定治理方式[7]。宣言也说，成果以任何人都能使用的方式公开；书中的注脚引用宣言，把 g0v 定位为「无党派、非营利、草根集结的公民运动」[1][7]。</p>
+<p>官方 FAQ 回答了 g0v 是不是反政府组织、是不是像维基解密（WikiLeaks）一样等问题[6]。回答的要点是：g0v 是把政府已经公开的资讯用更好用的方式呈现，并推动开放资料的政策，在目的和做法上都和揭露机密的行动不同[6]。</p>
+<h3>三个圆</h3>
+<p>书中用三个圆交叠的图说明 g0v 的原则：「开源」「动手做」「公共精神」三者，而 g0v 位在正中央[1]。</p>
+<h3>规模</h3>
+<p>中文维基百科写道，g0v 已举办超过 42 次黑客松，有横跨三大洲的 8,000 多名贡献者[3]。《广泛倾听》则说，聊天平台（Slack）的参与者超过 1 万 4 千人[4]。</p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>不是「唐凤创立的」。</strong> 书中列出的发起人是高嘉良等人[1]。《广泛倾听》也提醒，到 2014 年底，唐凤也还只是民间 g0v 的一名参与者[4]。</li>
+<li><strong>与政府的距离。</strong> g0v 宣言说它是无党派的草根运动[7]。但就像书中描写的，太阳花运动之后，政府开始吸收 g0v 的做法，阁员也开始参加 g0v 的活动[1]。高嘉良在 2018 年的文章里指出，即使是只「开放」资讯的项目，开放的方式本身就已经带有诠释[8]；并提出疑问：当自己做出来的东西被用来散播仇恨或监控时，技术人该如何面对[8]。</li>
+<li><strong>没有被政府采用的例子。</strong> The Daily Beast 的报导指出，g0v 衍生的 Cofacts 并没有被政府采用为打击假讯息的主要工具；立委们偏好罚款之类的强硬手段[9]。</li>
+<li><strong>研究。</strong> 人类学者李梅君研究了 g0v 把政治献金纪录数位化的项目[10]。李梅君认为，公民以人工把纸本报告一笔笔打成资料、「开放」资料的协作本身，就创造了新的参与形式[10]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>g0v 是书中 2-2 章〈数位民主的日常〉的第一个案例。书中写道：「与其他机构相比，零时政府（g0v，发音为 gov-zero）运动更能象征台湾的公民社会基础」[1]。这一章介绍的许多倡议，都是从 g0v 出发或与它紧密关联[1]。</p>
+<p>书的 3-3 章〈我们遗忘的道〉，举 g0v 大量用来协作编辑文件、公开会议纪录的 HackMD，作为开放协作的例子[11]。书也认为，其他国家的「公民科技」运动，很难产生像 g0v 在台湾那样全国规模的影响[11]。</p>
+<p>相关文章：
+- <a href="taiwan-digital-democracy.html">台湾的数位民主</a>——以 g0v 为基础的全貌
+- <a href="vtaiwan.html">vTaiwan</a>——g0v 打造的政策讨论平台
+- <a href="cofacts.html">Cofacts</a>——g0v 衍生的事实查核
+- <a href="community-notes.html">社群备注</a>——公民事实查核的相近例子
+- <a href="civic-tech.html">公民科技</a>、<a href="clkao.html">高嘉良</a>、<a href="g0v-people.html">g0v 与 vTaiwan 的人们</a></p>
+<h2>延伸阅读</h2>
+<ol>
+<li>《多元宇宙》2-2〈数位民主的日常〉「零时政府」一节（中文，书）— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li>g0v 官方介绍、宣言与 FAQ（中文）— <a href="https://g0v.tw/about.html" target="_blank" rel="noopener">https://g0v.tw/about.html</a> ； <a href="https://g0v.tw/manifesto.html" target="_blank" rel="noopener">https://g0v.tw/manifesto.html</a> ； <a href="https://g0v.tw/faq.html" target="_blank" rel="noopener">https://g0v.tw/faq.html</a></li>
+<li>G0v零时政府（中文维基百科）— <a href="https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C</a></li>
+<li>报导者〈拆政府原地重建，零时政府3年跻身全球前3大黑客社群〉（2016，中文，报导）— <a href="https://www.twreporter.org/a/g0v-civic-tech-community" target="_blank" rel="noopener">https://www.twreporter.org/a/g0v-civic-tech-community</a></li>
+<li>高嘉良〈写在 g0v summit 2018 之前〉（中文，文章）— <a href="https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462" target="_blank" rel="noopener">https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462</a></li>
+<li>《ブロードリスニング》11-1〈台湾〉「台湾零时政府g0v」一节（日文，书）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>《多元宇宙》2-2〈数位民主的日常〉的零时政府与 318 运动各节、g0v 示意图、注脚 — <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li>g0v 官方介绍 — <a href="https://g0v.tw/about.html" target="_blank" rel="noopener">https://g0v.tw/about.html</a></li>
+<li>G0v零时政府（中文维基百科）— <a href="https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/G0v%E9%9B%B6%E6%99%82%E6%94%BF%E5%BA%9C</a></li>
+<li>《ブロードリスニング》11-1〈台湾〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a></li>
+<li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell" 之 "What are the megapolitics of Plurality?" 一节 — <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
+<li>g0v 官方 FAQ — <a href="https://g0v.tw/faq.html" target="_blank" rel="noopener">https://g0v.tw/faq.html</a></li>
+<li>g0v 宣言（2019 年修订）— <a href="https://g0v.tw/manifesto.html" target="_blank" rel="noopener">https://g0v.tw/manifesto.html</a></li>
+<li>高嘉良〈写在 g0v summit 2018 之前〉（2018-09-30）— <a href="https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462" target="_blank" rel="noopener">https://medium.com/@clkao/%E5%AF%AB%E5%9C%A8-g0v-summit-2018-%E5%89%8D-5869b6afe462</a></li>
+<li>Nick Aspinwall, "Taiwan Tried to Digitize Democracy With vTaiwan. It Was a Huge Flop"（The Daily Beast，2023-11-01）— <a href="https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/" target="_blank" rel="noopener">https://www.thedailybeast.com/taiwan-tried-to-digitize-democracy-with-vtaiwan-it-was-a-huge-flop/</a></li>
+<li>李梅君, "Free the Data from the Birdcage"（PoLAR，2020，摘要）— <a href="https://doi.org/10.1111/plar.12371" target="_blank" rel="noopener">https://doi.org/10.1111/plar.12371</a></li>
+<li>《多元宇宙》3-3〈我们遗忘的道〉— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='taiwan-digital-democracy.html'>什么是台湾的数位民主？</a> ・ <a href='vtaiwan.html'>什么是 vTaiwan？</a> ・ <a href='cofacts.html'>什么是 Cofacts（真的假的）？</a> ・ <a href='civic-tech.html'>什么是公民科技（Civic Tech）？</a> ・ <a href='clkao.html'>高嘉良（clkao）是谁？</a> ・ <a href='g0v-people.html'>g0v 与 vTaiwan 的人们是谁？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fg0v.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%20g0v%EF%BC%88%E9%9B%B6%E6%97%B6%E6%94%BF%E5%BA%9C%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fg0v.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>

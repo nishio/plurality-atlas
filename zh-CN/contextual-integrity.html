@@ -1,0 +1,109 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是脉络完整性（contextual integrity）？</title><meta name="description" content="隐私不是「把资讯藏起来」，而是「资讯依照分享它的那个场合的规矩被对待」。《多元宇宙》把这个想法当作设计网络身分、支付与资料共享的标准。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/contextual-integrity.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/contextual-integrity.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/contextual-integrity.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/contextual-integrity.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/contextual-integrity.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是脉络完整性（contextual integrity）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/contextual-integrity.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="隐私不是「把资讯藏起来」，而是「资讯依照分享它的那个场合的规矩被对待」。《多元宇宙》把这个想法当作设计网络身分、支付与资料共享的标准。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../contextual-integrity.html">日本語</a> <a class="lang" hreflang="en" href="../en/contextual-integrity.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/contextual-integrity.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是脉络完整性（contextual integrity）？</h1><div class='lead'>隐私不是「把资讯藏起来」，而是「资讯依照分享它的那个场合的规矩被对待」。《多元宇宙》把这个想法当作设计网络身分、支付与资料共享的标准。</div><p>跟医生说的身体困扰，如果传到公司，你一定不愿意。可是如果医生不知道，就没办法治疗。所以重要的不是「藏不藏」，而是「这些话会不会留在说出它的那个场合里」。这种看法称为「脉络完整性」。「脉络」指的是资讯被交流的那个场合、那个背景。</p>
+<h2>一句话说明</h2>
+<p>隐私<strong>不是把资讯藏起来，而是资讯依照它被分享时那个场合的规矩被对待</strong>[1]。</p>
+<p>在医院说的话应该留在医疗的场合，跟朋友说的话应该留在朋友之间。被带到外面就是侵害；反过来，该传到的对象没有收到，也是一种伤害[1]。《多元宇宙》这本书把这个想法当作设计网络身分、支付与资料共享的标准。</p>
+<h2>举例来说</h2>
+<p><strong>初吻。</strong> 书指出，几乎所有与我们有关的事情，都会被他人知道。书说：「从初吻对象的脑海中抹去关于那个吻的记忆、和我们二人中的一个人不适当地分享初吻资讯相同，都是对隐私的侵犯行为。」[1]</p>
+<p>所以书写道，我们所追求的价值，「并不能完全用『隐私』一词来形容，而是关于资讯是否可停留在其应该存在的社交脉络中，也就是学者海伦·尼森鲍姆（Helen Nissenbaum）所说的『脉络完整性』」[1]。</p>
+<p><strong>基因资料。</strong> 基因在家庭中大量共用，所以公开某个人的基因资料，也会暴露其家庭，甚至远亲的情况[2]。书说：「由于亲属间具有共同的基因结构，从人口中抽取 1% 的统计样本就可以从基因图谱中识别出任何个人，这使得保护基因隐私成为一项影响深远的社会任务。」[3]</p>
+<p><strong>金钱的流向。</strong> 金融交易总是涉及两方以上，也至少某部分会被社群中的其他人察觉。所以书说，金融的目标「与其说隐私，不如说是确保脉络的完整性：确保这些资讯停留在连动的社群内，除非它对其他社群产生重要且广为人知的溢出效应」[4]。→ <a href="commerce-and-trust.html">商业与信任</a></p>
+<h2>深入了解</h2>
+<h3>不是「公开或秘密」</h3>
+<p>依书的论点，资讯没有传给该传的人、没有被理解，和资讯被过度分享一样有害。书说：「事实上，这需要某种程度的公开」[1]。</p>
+<p>而且，因为这些资讯本质上是社会性的，问题的核心就不是个人的选择或保护，而是「如何保护群体，免受违反其集体资讯准则的行为伤害」。书由此得出结论：「简单来说，核心问题涉及另一项基本权利：结社自由。」[1]（结社自由是人们自由聚集、组成团体的自由。）</p>
+<h3>资料几乎都是「群体的」</h3>
+<p>4-2 章写道，虽然大多的密码学和法规都将隐私视为个人权利，「但我们通常所说的隐私其大部分是与群体有关的」[5]。</p>
+<ul>
+<li>基因与医疗资料，和家庭有关。</li>
+<li>通讯与财务资料，和交易的对方有关。</li>
+<li>位置资料，和当时在场的其他人有关。</li>
+</ul>
+<p>书说，唯一真正个人化的资讯，是官僚机构为识别而发放的号码；但即使是这些号码，也描述了与发放机构的关系。因此，个人单方面揭露资料时，几乎总是会威胁到其他人的隐私[5]。</p>
+<h3>不只是外部的窥探</h3>
+<p>书指出，许多密码学与法规集中在防止外部监视，却不擅长防止内部成员过度分享[6]。</p>
+<p>因此书举出抑制从内部过度扩散的技术，例如会消失的讯息，以及只能由特定收件者验证真实性的「指定验证者证明」（DVP）[6]。从群体的角度把这些组合起来的想法，就是<a href="plural-publics.html">多元公众</a>。书说，这需要保持「脉络信心」（contextual confidence），也就是参与者可以很容易地确定并保护其交流的脉络[7]。</p>
+<h3>作为设计的标准</h3>
+<p>在书中，这个想法在第 4 部的各章一再成为标准。</p>
+<ul>
+<li><strong>身分。</strong> 把社交活动中自然产生的资讯用于身分验证时，书说「需要非常谨慎，以确保将其用于身分验证不会违反这些 "脉络完整性" 规范」[8]。→ <a href="identity-and-personhood.html">身分与人格权</a></li>
+<li><strong>支付。</strong> 除了上面「留在社群内」的原则，书也说多元「制衡」的精髓在于，相关社群必须主动参与外部监督，「而不是单方面承受外部监管」[4]。</li>
+<li><strong>资料共享。</strong> 书指出，由于基因资讯的社交泄漏、管理的困难和集体谈判力不足等原因，在个人层面组织资料权利和控制是不切实际的，并提出集体代表资料主体的组织[3]。→ <a href="property-and-contract.html">财产与合约</a>、<a href="data-dignity.html">资料尊严</a></li>
+<li><strong>存取权。</strong> 4-5 章写道，政策制定者需要采取的措施，包括「对数位公共建设的投资，以守护线上交流的脉络完整性」[9]。→ <a href="digital-public-infrastructure.html">数位公共建设</a></li>
+</ul>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>常见的误解：「加强隐私＝藏得更多」。</strong> 依书的立场，藏得太多（该传的人没收到）也是伤害。目标不是让秘密最大化[1]。</li>
+<li><strong>判断错了怎么办？</strong> 关于金融，书说社群有责任确保自身的文化不支持对外部有害的活动，并在外部施加不正当要求时捍卫自身活动的权利[4]。不过，社群在这个判断上出错时该怎么办，书中仍然停留在抽象的层次。</li>
+<li><strong>与吹哨者的紧张关系。</strong> 6-3 章承认，保护脉络的工具可能和违反组织规范、泄露资讯给媒体的消息来源发生冲突[10]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>这个想法来自尼森鲍姆 2004 年的论文 "Privacy as Contextual Integrity"。英文版 4-1 章的注脚引用了这篇论文[1]（目前的繁体中文版没有这个注脚）。</p>
+<p>在书中，它出现在 4-1 章〈<a href="identity-and-personhood.html">身分与人格权</a>〉的结尾，成为 4-2 章〈<a href="plural-publics.html">结社与多元公众</a>〉的出发点，接着用在 4-3 章〈<a href="commerce-and-trust.html">商业与信任</a>〉、4-4 章〈<a href="property-and-contract.html">财产与合约</a>〉、4-5 章〈存取权〉（→ <a href="digital-public-infrastructure.html">数位公共建设</a>）。可以说是贯穿第 4 部〈<a href="rights-os.html">权利、作业系统与数位自由</a>〉的一条线。</p>
+<p>作者们后来的工作也延续同样的读法。卫谷伦（E. Glen Weyl）、唐凤（Audrey Tang）等人的论文〈Community by Design〉依循尼森鲍姆，把隐私整理为与其说是个人的权利，不如说是对社群、依场合而定的保密义务；并把「让彼此交错的多样社群各自获得与此相近的『情境信心』（contextual confidence），同时让人能在其中的复杂性里来去」列为主要目标之一[11]。</p>
+<h2>延伸阅读</h2>
+<ol>
+<li>《多元宇宙》4-1〈身分与人格权〉（中文，书）— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
+<li>《多元宇宙》4-2〈结社与多元公众〉（中文，书）— <a href="https://www.plurality.net/v/chapters/4-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/zh-tw/</a></li>
+<li>《多元宇宙》4-3〈商业与信任〉「数位货币与隐私」一节（中文，书）— <a href="https://www.plurality.net/v/chapters/4-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/zh-tw/</a></li>
+<li>《Plurality》英文版 4-1 "Identity and Personhood" 的 "Identity and association" 一节（英文，书，含尼森鲍姆的注脚）— <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a></li>
+<li>Weyl、Tang 等, "Community by Design"（英文，论文）— <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li>Jain、Hitzig、Mishkin, "Contextual Confidence and Generative AI"（英文，论文）— <a href="https://arxiv.org/abs/2311.01193" target="_blank" rel="noopener">https://arxiv.org/abs/2311.01193</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>《多元宇宙》4-1〈身分与人格权〉章末 — <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a> ；尼森鲍姆的注脚见英文版 — <a href="https://www.plurality.net/v/chapters/4-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/eng/</a></li>
+<li>《多元宇宙》4-2〈结社与多元公众〉「保护脉络」一节（基因资料）— <a href="https://www.plurality.net/v/chapters/4-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/zh-tw/</a></li>
+<li>《多元宇宙》4-4〈财产与合约〉— <a href="https://www.plurality.net/v/chapters/4-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-4/zh-tw/</a></li>
+<li>《多元宇宙》4-3〈商业与信任〉「数位货币与隐私」一节 — <a href="https://www.plurality.net/v/chapters/4-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/zh-tw/</a></li>
+<li>《多元宇宙》4-2「保护脉络」一节中段 — <a href="https://www.plurality.net/v/chapters/4-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/zh-tw/</a></li>
+<li>《多元宇宙》4-2「保护脉络」一节后半 — <a href="https://www.plurality.net/v/chapters/4-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/zh-tw/</a></li>
+<li>《多元宇宙》4-2「多元公众」一节 — <a href="https://www.plurality.net/v/chapters/4-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-2/zh-tw/</a></li>
+<li>《多元宇宙》4-1「多元交织的身分」一节 — <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
+<li>《多元宇宙》4-5〈存取权〉— <a href="https://www.plurality.net/v/chapters/4-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-5/zh-tw/</a></li>
+<li>《多元宇宙》6-3〈媒体〉— <a href="https://www.plurality.net/v/chapters/6-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-3/zh-tw/</a></li>
+<li>Weyl、Tang 等, "Community by Design" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+</ol><div class='related'>相关: <a href='plural-publics.html'>什么是多元公众（plural publics）？</a> ・ <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='commerce-and-trust.html'>什么是「商业与信任」（多元通货）？</a> ・ <a href='property-and-contract.html'>什么是「财产与合约」（多元资产）？</a> ・ <a href='data-dignity.html'>什么是资料尊严（data dignity）？</a> ・ <a href='digital-public-infrastructure.html'>什么是数位公共建设（DPI）？</a> ・ <a href='rights-os.html'>什么是权利 OS（权利、作业系统与数位自由）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcontextual-integrity.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%84%89%E7%BB%9C%E5%AE%8C%E6%95%B4%E6%80%A7%EF%BC%88contextual%20integrity%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fcontextual-integrity.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>

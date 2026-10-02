@@ -1,0 +1,123 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是多元管理协定（Plural Management Protocol，PMP）？</title><meta name="description" content="很多人一起做一本书或一套软件时，由参与者大家、而不是单一领导者，决定「下一步做什么」和「是否采用收到的稿件」的营运规则。《多元宇宙》这本书本身就是用这套规则写成的。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/plural-management-protocol.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/plural-management-protocol.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/plural-management-protocol.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/plural-management-protocol.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/plural-management-protocol.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/plural-management-protocol.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是多元管理协定（Plural Management Protocol，PMP）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/plural-management-protocol.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="很多人一起做一本书或一套软件时，由参与者大家、而不是单一领导者，决定「下一步做什么」和「是否采用收到的稿件」的营运规则。《多元宇宙》这本书本身就是用这套规则写成的。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../plural-management-protocol.html">日本語</a> <a class="lang" hreflang="en" href="../en/plural-management-protocol.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/plural-management-protocol.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是多元管理协定（Plural Management Protocol，PMP）？</h1><div class='lead'>很多人一起做一本书或一套软件时，由参与者大家、而不是单一领导者，决定「下一步做什么」和「是否采用收到的稿件」的营运规则。《多元宇宙》这本书本身就是用这套规则写成的。</div><p>很多人一起做一件作品时，总得有人决定「下一步做这个」「这个提案采用，那个不采用」。由单一领导者决定，那个人一忙，工作就停下来；大家完全平等，又很难定出方向。多元管理协定（Plural Management Protocol，简称 PMP）就是试图回应这个烦恼的营运规则。</p>
+<h2>一句话说明</h2>
+<p>PMP 是很多人一起做一件作品（书或软件）时，<strong>由参与者大家、而不是上司或单一领导者，决定「下一步该做什么」和「是否采用收到的稿件」</strong>的营运规则[1]。</p>
+<p>贡献者会得到不是金钱的点数（<strong>积分</strong>），再用这些积分参与工作的优先排序，以及是否采用的投票[1]。《多元宇宙》这本书本身，就是用这套规则写成的[2]。</p>
+<h2>举例来说</h2>
+<p><strong>《多元宇宙》的写作（2024 年）。</strong> 书的 5-7 章说：「我们在编写本书时使用的『多元管理协定』，可追踪不同参与者所作贡献的类型和程度」，并用来确定工作的优先次序，以及决定哪些工作应纳入项目[3]。英文版在这里连结到 GitHub（程式共享网站）上的说明文。那篇说明文是为这套机制打造工具 Gov4Git 的 Petar Maymounkov 在 2024 年 2 月 26 日写的，把本书的目标定为依照书中所讲的原理来写这本书[1]。</p>
+<p><strong>进入大家共同管理的阶段（2024 年 5 月）。</strong> 共同作者、经济学者卫谷伦（E. Glen Weyl）在 2024 年 5 月左右呼吁参与者：已经进入以 Gov4Git 完全由社群管理的阶段，请大家看稿并投票。西尾泰和问，晚到的推荐语要怎么加进去；卫谷伦回答的大意是：不需要积分的话，直接提交稿件就好；想要积分的话，先开一个议题，等卫谷伦支持之后，再提交解决该议题的稿件[4]。</p>
+<p><strong>书以外的扩散。</strong> GitHub 上也找得到几个其他的使用例，例如一个地球科学软件项目在贡献指南中写道，其营运依据 Plural Management 的模式[5]。</p>
+<h2>运作方式</h2>
+<h3>为什么需要</h3>
+<p>2024 年 2 月的说明文列出四个目标[1]：</p>
+<ol>
+<li>用明确的数字、民主地认可贡献，而不是用模糊难懂的方式；并为工作排出优先顺序。</li>
+<li>避免积分成为以增值为目的的买卖对象。</li>
+<li>让大家能共同决定项目的方向，最终把营运交给社群。</li>
+<li>为了防范恶意攻击，逐步扩大由大家决定的范围。</li>
+</ol>
+<p>西尾泰和在 2024 年 3 月的演讲中说明：有上下关系的组织，工作会卡在做决定的人那里；没有上下关系的组织，又很难朝同一个方向前进。特别是在任何人都能参与的软件开发中，项目一变大，评估贡献与排定优先顺序就变得困难。西尾的整理是：解决这个问题的就是 PMP[6]。</p>
+<h3>五个步骤</h3>
+<p>依说明文，PMP 由以下五个步骤构成[1]：</p>
+<ol>
+<li><strong>优先排序。</strong> 用一种<a href="quadratic-funding.html">平方募资</a>来决定「该做的议题」的优先度。越多人各出一点支持的议题，得到的助力越大。</li>
+<li><strong>补助。</strong> 助力所需的积分由赞助者出。说明文写道，赞助者大概会是卫谷伦或唐凤（Audrey Tang）这类持有最多积分的人。</li>
+<li><strong>赏金。</strong> 解决议题的稿件被采用时，作者依该议题的优先度得到积分。</li>
+<li><strong>采用与否的投票。</strong> 对是否采用稿件投下赞成或反对票。在规定期间（当时是一周）结束时，赞成扣掉反对后若为正，就采用。投 v 票所需的积分是「k × v²」（k 是每份稿件各自决定的数），这就是<a href="quadratic-voting.html">平方投票</a>的形式。</li>
+<li><strong>预测。</strong> 投票同时也是对「大家会怎么决定」的预测。除了上面的费用，还要付与票数相同的积分；结果若与自己投票的方向一致，就拿回两倍。</li>
+</ol>
+<h3>小小的计算例</h3>
+<p>以下是本文把说明文的公式代入数字的范例。设 k = 1，某人对某份稿件投了 3 张赞成票[1]：</p>
+<ul>
+<li>投票费用是 1 × 3² = 1 × 9 = <strong>9 积分</strong>。</li>
+<li>为了预测，再付与票数相同的 <strong>3 积分</strong>。</li>
+<li>稿件若被采用（投票方向与结果一致），拿回 3 的两倍 <strong>6 积分</strong>。只看预测的部分，净赚 6 − 3 = <strong>3 积分</strong>。</li>
+</ul>
+<p>说明文写道，有了这个预测机制，积分少但有时间的人，可以代替积分多但没时间的人帮忙挑选稿件，并因此得到积分[1]。</p>
+<p>Gov4Git 的规格书用工具的语言描述同一套机制：可以在稿件说明中写「解决了这个议题」来主张；稿件被采用时，累积在该议题上的积分会整笔成为给作者的赏金[7]。</p>
+<h3>原型论文</h3>
+<p>整套机制来自卫谷伦、Maymounkov 等人 2024 年 1 月发表的论文〈Plural Management〉。依摘要，这是一种以在连结中产生权威的机制，取代层级组织部分权威的模型：参与者透过预测或实现组织的优先事项来获得影响力，再用它决定优先顺序、确认贡献[8]。</p>
+<h3>实际的运作</h3>
+<p>一开始并不是靠投票运作的。西尾在 2024 年 3 月的演讲中报告：当时是由一位领导者带头的时期，由卫谷伦判断贡献并发行积分，采用与否的投票还没有实际体验过[6]。关于英文版纸本书，卫谷伦在 2024 年 3 月公布了编辑截止日，写道在那之后的修改不会进入纸本，但经 PMP 核准的修改会收进线上版[9]。</p>
+<p>根据本书项目的统计划面（2025 年 10 月 24 日），至今议题与稿件共开了 116 件，对议题的投票 135 次，对稿件的投票 41 次，新参与者 74 人；最近 30 天的活动为零[10]。</p>
+<p>之后，Gov4Git 团队公开了为软件开发重新设计的机制「Waimea」。它把积分视为类似公司员工持股的东西，也允许成员之间转让[11]。这和最初「不当作买卖对象」的方针，重点并不相同。</p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>不是一人一票，也不是一元一票。</strong> 西尾在演讲中整理道，PMP 既不是依人数决定发言权，也不是用钱买发言权，而是对项目做出越多有用贡献的人发言权越大的「能力主义」[6]。</li>
+<li><strong>投票会让积分减少。</strong> 2024 年 3 月拿到第一笔积分的西尾半开玩笑地写道：这是用了就会减少的点数，所以是不是只有持续贡献、点数有剩的人，才能当一等公民？[12]</li>
+<li><strong>设计与实际的落差。</strong> 在日文译者们的纪录中，西尾写道：设计上稿件是否采用由大家决定，但在英文版出版之前，是由卫谷伦一个人判断的[13]。Waimea 的文件也明写，管理者可以不管投票结果决定是否采用稿件，也可以发行或删除积分（这些操作一律留在公开纪录中）[11]。</li>
+<li><strong>参与的难度与停滞。</strong> 除了参与手续困难之外，如上所见，到 2025 年 10 月时，最近 30 天没有任何活动[10]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>书在 5-7 章〈<a href="social-markets.html">社会市场</a>〉把「多元管理」列为超越市场局限的例子之一。书说，这使得科层制度的一些重要组成部分——「由受信任的权威机构进行评估，根据这些权威机构的表现来转移这种权威」——「在没有科层式直接报告结构的情况下，仍然得以实现，从而可能使网络取代严格的阶层制度」[3]。</p>
+<p>5-0 章在说明本书的写作方式时写道：「社群通过使用我们在下方的《5-6 ⿻投票》一章中描述的先进投票程序，和预测市场的混合方式，集体批准对文本的更改。」[2]（→ <a href="plural-voting.html">⿻投票</a>）英文版还写道，工作的优先顺序与报酬是用 5-7 章的群众募资方式决定的，并把这套做法称为「⿻ Management Protocol」[2]。</p>
+<p>也就是说，PMP 是把书中各章介绍的机制组合起来的东西：优先排序用<a href="quadratic-funding.html">平方募资</a>，采用与否用<a href="quadratic-voting.html">平方投票</a>，核准用预测。卫谷伦在 2023 年 12 月的视频中也说明，PMP 使用赏金、QV、QF、预测市场等书中的想法，让人透过贡献得到积分，再用积分引导项目的方向[14]。</p>
+<h2>延伸阅读</h2>
+<ol>
+<li>《多元宇宙》5-7〈社会市场〉「多元管理」一项（中文，书）— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+<li>"Gov4Git and the Plural Management Protocol overview"（英文，说明文）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a></li>
+<li>PMP 规格 v0.0.1（英文，规格书）— <a href="https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md</a></li>
+<li>论文 "Plural Management"（英文，论文）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</a></li>
+<li>本书的营运文件（英文，文件）— <a href="https://github.com/pluralitybook/plurality/tree/main/docs" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/tree/main/docs</a></li>
+<li>西尾泰和「⿻PluralityとPlural Management Protocol」（日文，演讲资料）— <a href="https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol" target="_blank" rel="noopener">https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>"Gov4Git and the Plural Management Protocol overview"（2024-02-26）— <a href="https://github.com/pluralitybook/plurality/issues/333" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/333</a></li>
+<li>《多元宇宙》5-0〈协作技术与民主〉— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a> ；群众募资与「⿻ Management Protocol」的说法见英文版 — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a></li>
+<li>《多元宇宙》5-7〈社会市场〉「多元管理」一项 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a> ；连结到说明文的是英文版 — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a></li>
+<li>日文翻译社群的纪录「完全コミュニティ管理フェーズ」（2024-05-10，日文）— <a href="https://scrapbox.io/plurality-japanese/%E5%AE%8C%E5%85%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E9%96%8B%E5%A7%8B" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E5%AE%8C%E5%85%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E9%96%8B%E5%A7%8B</a></li>
+<li>Gov4Git 使用例的搜寻 — <a href="https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues" target="_blank" rel="noopener">https://github.com/search?q=label%3Agov4git%3Amanaged&amp;type=issues</a></li>
+<li>西尾泰和「⿻PluralityとPlural Management Protocol」（2024-03-30，日文）— <a href="https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol" target="_blank" rel="noopener">https://scrapbox.io/nishio/%E2%BF%BBPlurality%E3%81%A8Plural_Management_Protocol</a></li>
+<li>Gov4Git "MECHANISM.md"（PMP 规格 v0.0.1）— <a href="https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/MECHANISM.md</a></li>
+<li>South、Erichsen、Jain、Maymounkov、Moore、Weyl, "Plural Management" 摘要（2024-01-09）— <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4688040</a></li>
+<li>日文翻译社群的纪录（2024-03-02 的截止日公告）— <a href="https://scrapbox.io/plurality-japanese/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E6%8F%90%E5%87%BA%E6%9C%9F%E9%99%90" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E6%8F%90%E5%87%BA%E6%9C%9F%E9%99%90</a></li>
+<li>本书仓库的 Gov4Git 仪表板（2025-10-24）— <a href="https://github.com/pluralitybook/plurality/issues/1094" target="_blank" rel="noopener">https://github.com/pluralitybook/plurality/issues/1094</a></li>
+<li>Gov4Git "WAIMEA.md" — <a href="https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md" target="_blank" rel="noopener">https://github.com/gov4git/gov4git/blob/main/doc/WAIMEA.md</a></li>
+<li>日文翻译社群的纪录（2024-03-01，日文）— <a href="https://scrapbox.io/plurality-japanese/The_public_launch_of_the_Plurality_Book_Project_--_using_Gov4git" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/The_public_launch_of_the_Plurality_Book_Project_--_using_Gov4git</a></li>
+<li>日文翻译社群的纪录（2024-04-10，日文）— <a href="https://scrapbox.io/plurality-japanese/PMP%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B%28Bluemo%29" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/PMP%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B%28Bluemo%29</a></li>
+<li>Glen Weyl 给 Plurality Seoul 的视频（2023-12-02）— <a href="https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20Weyl%20on%20Plurality%20Seoul</a></li>
+</ol><div class='related'>相关: <a href='quadratic-funding.html'>什么是平方募资？</a> ・ <a href='quadratic-voting.html'>什么是平方投票？</a> ・ <a href='plural-voting.html'>什么是⿻投票（plural voting）？</a> ・ <a href='social-markets.html'>什么是社会市场？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fplural-management-protocol.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E5%85%83%E7%AE%A1%E7%90%86%E5%8D%8F%E5%AE%9A%EF%BC%88Plural%20Management%20Protocol%EF%BC%8CPMP%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fplural-management-protocol.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>

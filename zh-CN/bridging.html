@@ -1,0 +1,114 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是桥接（bridging）？</title><meta name="description" content="把「平常意见分歧的人都一致支持的东西」排在前面的设计想法。它不用按赞数或浏览数来排序，而是重视跨越分歧的支持。社群备注和 Polis 是代表性的例子。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/bridging.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/bridging.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/bridging.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/bridging.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/bridging.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/bridging.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是桥接（bridging）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/bridging.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="把「平常意见分歧的人都一致支持的东西」排在前面的设计想法。它不用按赞数或浏览数来排序，而是重视跨越分歧的支持。社群备注和 Polis 是代表性的例子。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../bridging.html">日本語</a> <a class="lang" hreflang="en" href="../en/bridging.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/bridging.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是桥接（bridging）？</h1><div class='lead'>把「平常意见分歧的人都一致支持的东西」排在前面的设计想法。它不用按赞数或浏览数来排序，而是重视跨越分歧的支持。社群备注和 Polis 是代表性的例子。</div><p>打开社交媒体，有时满眼都是煽动愤怒、嘲讽对方阵营的贴文。有人指出，这不是偶然，而是因为许多社交媒体被设计成把「反应多的东西」往上推。那么，如果改变排序的标准，会怎么样？桥接（bridging）就是为此而生的想法。</p>
+<h2>一句话说明</h2>
+<p>桥接（bridging）是一种排序与设计的想法：<strong>让「平常意见分歧的人都一致支持的东西」更显眼</strong>[1][2]。</p>
+<p>它不像许多社交媒体那样把「反应多的东西」往上推，而是把跨越分歧而获得支持的东西往上推[1][2]。</p>
+<h2>举例来说</h2>
+<p><strong>社群备注（X）。</strong> 在 X（前 Twitter）上，用户可以替误导人的贴文加上补充说明（备注）。只有过去评分意见分歧的人一致认为「有帮助」时，备注才会显示[3]。这不是多数决。介绍这个机制的论文（2022 年）在标题中，把这种挑选方式称为「Bridging Algorithms」（桥接算法）[4]。</p>
+<p><strong>Polis（台湾的 vTaiwan 等）。</strong> 意见整理工具 Polis 从参与者的赞成与反对中找出意见群体，并列出每个群体都赞成的意见[5]。《多元宇宙》写道：「Polis 并非显示最大限度地提高点击率的内容，而是展示存在的意见丛集，并强调桥接它们的陈述。」[6]</p>
+<p><strong>用在贴文本身。</strong> X 开始了一项小规模测试，不只针对备注，也针对贴文，找出「受到平常意见不同的人按赞的贴文」[7]。X 明白写道，目前不会影响贴文的曝光量[7]。</p>
+<h2>运作方式</h2>
+<h3>用户要做的事</h3>
+<p>桥接的机制不要求用户做特别的操作[1][3]。用户照常评分「有没有帮助」，或按「赞成・反对」。</p>
+<p>不同的是<strong>统计的方式</strong>。浮上画面的，不再是「在自己阵营受欢迎的东西」，而是「连另一边的人也认可的东西」[1][3]。</p>
+<h3>为什么需要它</h3>
+<p>研究者 Aviv Ovadya 在 2022 年的论文中主张[1]：Facebook、YouTube、TikTok 等的推荐系统，透过决定要给人看什么，成了决定整个社会「做什么会得到回报」的机制。用反应数量排序的做法和人类心理结合起来，越是煽动分裂的行为，越能得到关注这个报酬[1]。</p>
+<p>根据 Ovadya，这会左右政治人物、记者、艺人等谁能成功[1]，进而影响社会做出好决定的能力、合作的能力，以及暴力冲突发生的可能[1]。</p>
+<p>桥接式排序（bridging-based ranking）被提出来，作为对抗这股把人拉开的力量、把人拉近的力量[1]。Ovadya 认为，按时间顺序显示等其他改革方案，只要不加入桥接，就会继续奖励那些以分裂为目标的人，所以预设应该采用桥接式排序[1]。</p>
+<h3>这个词的定义</h3>
+<p>Ovadya 与 Luke Thorburn 不是用「方法」，而是用「结果」来定义桥接[8]：目标是让跨越分歧的相互理解与信任增加，并创造出有建设性的冲突、审议与合作的空间[8]。这里的「有建设性的冲突」很重要。目标不是消除冲突，而是让有成果的冲突成为可能。</p>
+<h3>怎么计算：两种代表性的类型</h3>
+<p><strong>矩阵分解型（社群备注）。</strong> 用「整体的宽松程度 ＋ 评分者的宽松程度 ＋ 备注本身的好坏 ＋（评分者的立场 × 备注的立场）」这样的式子来解释评分[4][9]。乘积的部分吸收掉「只受同一阵营喜爱」的成分，所以剩下的「备注本身的好坏」代表跨越阵营的支持[4][9]。</p>
+<p><strong>各群体相乘（Polis）。</strong> 依投票模式把参与者分成意见群体，再把各群体成员赞成的机率（由群体内赞成的比例估计）<strong>相乘</strong>[10]。用一个说明用的例子来想（数字是虚构的）：群体 A 有 90%、群体 B 有 80% 赞成的意见，得分是 0.9 × 0.8 = 0.72。A 有 100% 赞成、但 B 只有 10% 赞成的意见，得分是 1.0 × 0.1 = 0.1。只要有任何一个群体赞成的人少，数值就会变小，所以只受多数派支持的意见不会排到前面[10]。</p>
+<p>以太坊创办人维塔利克·布特林（Vitalik Buterin）把这些称为一种新的机制设计：刻意找出分歧，并让架桥的东西比巩固分歧的东西更占优势[9]。</p>
+<h3>对错误资讯的作用</h3>
+<p>Peng 与 Grimmelmann 在 2024 年的论文中主张：在反驳错误资讯的回应中，若把可能赞成该错误资讯的人与可能反对的人都喜欢的回应往上推，就能选出最能说服那些最容易相信错误资讯之人的反驳[2]。他们也认为，这把判断从公司手中交还给用户的投票，因此也与言论自由的传统相容[2]。</p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>会漏掉极化最严重的话题。</strong> 有一项研究把社群备注的 190 万则备注、1 亿 3,500 万笔评分，与 13 国的资料相对照[11]。根据这项研究，正因为算法能准确抓住各国主要的对立轴，在机制上，越是极化的内容就越容易更正不足[11]。在美、英、法、德的选举相关内容中特别明显[11]。</li>
+<li><strong>可以制造假的共识。</strong> 矩阵分解型有可能被少数一致的投票制造出「人造的共识」[12]。研究中，不到 10 票就能把最多 10.7% 的低品质备注推过标准[12]。</li>
+<li><strong>什么是分歧、什么是桥接，由谁决定？</strong> 桥接研究者的网站 bridging.systems 承认，要把什么目标放进机制，是价值判断，也是有争议的问题[13]。网站并提出由收集许多人意见的机制，或抽签选出的公民会议来决定的方法[13]。Ovadya 也提议「平台民主」：询问受影响的人们，推荐系统应该奖励什么[1]。</li>
+<li><strong>常见的误解：这不是「选中间派」。</strong> 社群备注看的不是用户自己申报的政治立场，而是从过去评分倾向推估出来的立场[3]。《多元宇宙》也不只重视找出共识，也重视产生新冲突的作用（见下一节）[14]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》在 5-4 章〈扩增审议〉中，针对用反应数量排序的社交媒体会巩固分化的担忧，把社群备注介绍为反其道而行、重新设计的最大规模尝试[14]。（英文版把 Polis 列为 Aviv Ovadya 与 Luke Thorburn 所说的「桥接系统」（bridging systems）的典型；繁体中文版的同一段只写了「集体回应系统」[14]。）</p>
+<p>同一章强调，围绕这类系统的讨论容易偏向建立共识，但还有另一个作用：「支持多样性和具成效的冲突的再生」[14]。书说，它们「有助于识别不同的意见群体，而不是由历史假定或身份来决定」，产生的反对意见「可以凝聚成新的冲突，而不会强化现有的分歧」[14]。</p>
+<p>书的 5-0 章也指出，为差异架桥，会有磨损差异本身（大家变得相似）的危险[15]。但书认为，桥接也会产生像「行为经济学」这样的新领域，所以同质化并非无法避免[15]。</p>
+<p>唐凤（Audrey Tang）在中文专栏中这样说明桥接排序法：「所谓『桥接』，是将原本对立的两群人连接起来，只要有某些看法是这两群人都同意的，就有机会跨越中间的鸿沟。」[16]</p>
+<p>相关文章：
+- <a href="community-notes.html">社群备注</a>——矩阵分解型的代表例
+- <a href="polis.html">Polis</a>——各群体相乘的代表例
+- <a href="augmented-deliberation.html">扩增审议</a>——书中谈桥接的章节
+- <a href="prosocial-media.html">对社会有益的媒体</a>——把桥接扩展到整个社交媒体设计的构想
+- <a href="collaboration-across-difference.html">跨越社会差异的协作</a>——Plurality 定义的核心</p>
+<h2>延伸阅读</h2>
+<ol>
+<li>唐凤〈让算法变得善良〉（商业周刊专栏，2024，中文）— <a href="https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF" target="_blank" rel="noopener">https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF</a></li>
+<li>《多元宇宙》5-4〈扩增审议〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
+<li>Aviv Ovadya, "Bridging-Based Ranking"（Belfer Center，2022，英文，论文）— <a href="https://www.belfercenter.org/publication/bridging-based-ranking" target="_blank" rel="noopener">https://www.belfercenter.org/publication/bridging-based-ranking</a></li>
+<li>bridging.systems "Definitions"（英文）— <a href="https://bridging.systems/definitions/" target="_blank" rel="noopener">https://bridging.systems/definitions/</a></li>
+<li>Vitalik Buterin, "What do I think about Community Notes?"（2023，英文，博客）— <a href="https://vitalik.eth.limo/general/2023/08/16/communitynotes.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</a></li>
+<li>Wojcik 等人, "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation"（2022，英文，论文）— <a href="https://arxiv.org/abs/2210.15723" target="_blank" rel="noopener">https://arxiv.org/abs/2210.15723</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>Aviv Ovadya, "Bridging-Based Ranking: How Platform Recommendation Systems Might Reduce Division and Strengthen Democracy"（Belfer Center，2022）— <a href="https://www.belfercenter.org/publication/bridging-based-ranking" target="_blank" rel="noopener">https://www.belfercenter.org/publication/bridging-based-ranking</a></li>
+<li>Peng &amp; Grimmelmann, "Rescuing Counterspeech: A Bridging-Based Approach to Combating Misinformation"（2024）— <a href="https://arxiv.org/abs/2410.12699" target="_blank" rel="noopener">https://arxiv.org/abs/2410.12699</a></li>
+<li>Community Notes Guide "Diversity of perspectives" — <a href="https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives" target="_blank" rel="noopener">https://communitynotes.x.com/guide/en/contributing/diversity-of-perspectives</a></li>
+<li>Wojcik 等人, "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation"（2022）— <a href="https://arxiv.org/abs/2210.15723" target="_blank" rel="noopener">https://arxiv.org/abs/2210.15723</a></li>
+<li>Small 等人, "Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces"（2021）— <a href="https://doi.org/10.6035/recerca.5516" target="_blank" rel="noopener">https://doi.org/10.6035/recerca.5516</a></li>
+<li>《多元宇宙》2-2〈数位民主的日常〉「vTaiwan 与 Join」— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a></li>
+<li>Community Notes Guide "Beyond notes: posts liked by people with different perspectives" — <a href="https://communitynotes.x.com/guide/en/beyond-notes/got-likes" target="_blank" rel="noopener">https://communitynotes.x.com/guide/en/beyond-notes/got-likes</a></li>
+<li>bridging.systems "Definitions" — <a href="https://bridging.systems/definitions/" target="_blank" rel="noopener">https://bridging.systems/definitions/</a></li>
+<li>Vitalik Buterin, "What do I think about Community Notes?"（2023-08-16）— <a href="https://vitalik.eth.limo/general/2023/08/16/communitynotes.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2023/08/16/communitynotes.html</a></li>
+<li>Small 等人（2021），同上，跨群体共识的计算 — <a href="https://doi.org/10.6035/recerca.5516" target="_blank" rel="noopener">https://doi.org/10.6035/recerca.5516</a></li>
+<li>Bouchaud &amp; Ramaciotti, "Community Notes undermoderate polarizing content by design creating risks in electoral processes"（2025）— <a href="https://arxiv.org/abs/2506.15168" target="_blank" rel="noopener">https://arxiv.org/abs/2506.15168</a></li>
+<li>Selvam 等人, "Gaming Consensus: Coordinated Manipulation in Crowdsourced Fact-Checking"（2026）— <a href="https://arxiv.org/abs/2607.01824" target="_blank" rel="noopener">https://arxiv.org/abs/2607.01824</a></li>
+<li>bridging.systems "Who decides?" — <a href="https://bridging.systems/who-decides/" target="_blank" rel="noopener">https://bridging.systems/who-decides/</a></li>
+<li>《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；「bridging systems」一语见英文版 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li>《多元宇宙》5-0〈协作技术与民主〉「再生多样性」— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a></li>
+<li>唐凤〈让算法变得善良〉（商业周刊专栏，2024-07-11）— <a href="https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF" target="_blank" rel="noopener">https://sayit.archive.tw/2024-07-11-%E5%95%86%E5%91%A8%E5%B0%88%E6%AC%84%E8%AE%93%E6%BC%94%E7%AE%97%E6%B3%95%E8%AE%8A%E5%BE%97%E5%96%84%E8%89%AF</a></li>
+</ol><div class='related'>相关: <a href='community-notes.html'>什么是社群备注（Community Notes）？</a> ・ <a href='polis.html'>什么是 Polis？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='prosocial-media.html'>什么是利社会媒体（prosocial media）？</a> ・ <a href='collaboration-across-difference.html'>什么是「跨越社会差异的协作」？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fbridging.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E6%A1%A5%E6%8E%A5%EF%BC%88bridging%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fbridging.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>

@@ -1,0 +1,115 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是生成式基础模型（GFM）？</title><meta name="description" content="像 ChatGPT、Claude 这样，从大量文字和图像的例子中学习，产生文字、图像、声音的大型程式。《多元宇宙》大多避免称它为「AI」，而把它当作帮助人们跨越差异协作的工具。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/generative-foundation-models.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/generative-foundation-models.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/generative-foundation-models.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/generative-foundation-models.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/generative-foundation-models.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是生成式基础模型（GFM）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/generative-foundation-models.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="像 ChatGPT、Claude 这样，从大量文字和图像的例子中学习，产生文字、图像、声音的大型程式。《多元宇宙》大多避免称它为「AI」，而把它当作帮助人们跨越差异协作的工具。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../generative-foundation-models.html">日本語</a> <a class="lang" hreflang="en" href="../en/generative-foundation-models.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/generative-foundation-models.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是生成式基础模型（GFM）？</h1><div class='lead'>像 ChatGPT、Claude 这样，从大量文字和图像的例子中学习，产生文字、图像、声音的大型程式。《多元宇宙》大多避免称它为「AI」，而把它当作帮助人们跨越差异协作的工具。</div><p>打进一个问题，就能流畅地写出回答的程式，现在很多人都在用。它通常被称为「AI」（人工智能），但《多元宇宙》这本书把它叫作「生成式基础模型」（Generative Foundation Models，简称 GFM）。换个名字，是有明确理由的。</p>
+<h2>一句话说明</h2>
+<p>生成式基础模型，是<strong>像 ChatGPT、Claude 这样，从大量文字、图像等例子中学习，产生文字、图像、声音的大型电脑程式</strong>[1]。「生成」是产生新东西，「基础」表示它可以当作各种用途的底层。</p>
+<p>书大多避免称它为「AI」。书不把它当作机器独自思考的存在，而是当作<strong>帮助人们跨越差异协作的工具</strong>[1]。</p>
+<h2>举例来说</h2>
+<p><strong>Anthropic 的「大家一起写的宪法」（2023～24 年）。</strong> 书的 5-4 章写道，像 Pol.is 这样的系统，已被用于一些领先的大型基础模型（如 Anthropic 的 Claude）的发展方向等主题的决策[2]。英文版说明，AI 公司 Anthropic 与非营利组织 Collective Intelligence Project 合作，用意见收集工具 <a href="polis.html">Polis</a> 收集引导模型行为的「宪法」（应遵守的原则）[2]。根据这项尝试的论文，依美国成年人的组成（年龄、性别、收入、地区）选出的 1,002 人写了 1,127 则陈述，投下 38,252 票[3]。→ <a href="alignment-assemblies.html">对齐大会</a></p>
+<p><strong>我城对谈与东京都知事选举（2024 年）。</strong> 书说，<a href="talk-to-the-city.html">我城对谈</a>（Talk to the City）项目说明了如何用语言模型，来取代描述群体观点的陈述列表，让人们可以通过与互动代理对话来了解他们的观点[4]。英文版还写道，安野贵博的阵营用它把收到的意见视觉化；YouTube 上的 AI 分身「AIあんの」在 16 天内回答了约 7,400 个问题[4]，换算下来一天约 460 个。→ <a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a></p>
+<p><strong>用别人的声音唱歌。</strong> 书介绍，音乐家 Holly Herndon、Mat Dryhurst 及其合作者利用 GFM，用不在场的历史人物或其他人的声音唱歌，也让其他人用他们的声音唱歌。书说：「在这个项目中，我们以简单的方式混合了许多参与者的语音样本，创建了用我们共同的声音朗读的音讯版本。」[5] → <a href="creative-collaboration.html">创意协作</a></p>
+<h2>深入了解</h2>
+<h3>为什么不叫「AI」</h3>
+<p>书的 5-5 章说：「『人工智能』一词更多地是指一种愿望，而不是指一套特定的工具。」[1]</p>
+<p>20 世纪 70、80 年代的「老式 AI」（GOFAI），试图把从专家那里听来的规则写成层层巢状的「决策树」，将行政处理自动化，后来遇到了很大的障碍。书说，今天的 GFM 则是「根据实例，以概率的方式学习分类」，这一点决定性地不同[1]。</p>
+<p>书也指出，GFM 有一种「有助于掩盖创建条件的自主神秘性」[6]。英文版在这里还写道，书因此大多避免使用「AI」这个词[6]。</p>
+<h3>「AI」是一种意识形态</h3>
+<p>这个态度的底子，是杰伦·拉尼尔（Jaron Lanier）与卫谷伦（E. Glen Weyl）2020 年的评论〈AI is an Ideology, Not a Technology〉（AI 是意识形态，不是技术）[7]。</p>
+<p>两人认为，「AI」不是指技术内容的词，而是依看起来是不是需要智慧的工作这种人的感觉，把技术分类的词。两人举分辨猫和狗的程式为例：与其说「机器学会了看」，也可以说成是许多人一起提供例子，第一次把猫和狗的区别严格定义了出来[7]。</p>
+<p>任何智慧都不是完全独立存在的，而是依赖别人建立的社会脉络。两人把这种看法称为来自多元主义立场的异议[7]。拉尼尔 2023 年在《New Yorker》的文章，题目就是〈There Is No A.I.〉（AI 并不存在）[8]。</p>
+<h3>运作的大概</h3>
+<p>书的说明是：GFM「通常有数十亿甚至数万亿个『节点』，它们相互接收输入」，都是为了预测下一个单词或图像。基于这样的过程，GFM 「能够以快速扩展和基本可复制的方式，真实地再现出人类灵活分类、反应与推理能力」[1]。</p>
+<p>书说：「GFM 的力量与其说源于『AI』，不如说源于其网络化和概率性结构」，而这种结构也可以存在于人际关系网络中[9]。</p>
+<h3>GFM 在书中扮演的角色</h3>
+<p>在书第 5 部的各章，GFM 以扩大协作的元件的身分登场。</p>
+<ul>
+<li><strong>5-1 章</strong>：以与想像力匹配的速度，生成我们思想的视觉呈现[10]。英文版还写到能即时回应情绪与行动的虚拟环境。→ <a href="post-symbolic-communication.html">后符号交流</a></li>
+<li><strong>5-3 章</strong>：「不仅翻译语言，还能翻译文化风格」；把我们的思想引向人类不太可能想到的方向；让模拟人类社交媒体用户的大型语言模型互动，测试动态消息算法的影响[5]。</li>
+<li><strong>5-4 章</strong>：用语言模型解决<a href="broad-listening.html">广泛倾听</a>的问题；以某个群体的文本训练模型，让它直接代表这个群体[4][11]。英文版还写到即时向每位讨论参与者提出有证据根据的建议。→ <a href="augmented-deliberation.html">扩增审议</a></li>
+<li><strong>5-5 章</strong>：作为行政流程的元件，接受多样而非结构化的输入，不必让用户填写专门的表格也能回应[1]。→ <a href="adaptive-administration.html">适应式行政</a></li>
+</ul>
+<h3>与权利的冲突</h3>
+<p>另一方面，在第 4 部，GFM 也以威胁的面貌出现。书说，GFM「可以轻松地模仿、修改内容」，让身分方面的问题更为加剧[12]。→ <a href="identity-and-personhood.html">身分与人格权</a></p>
+<p>书也写道，线上广泛共享的资讯构成了 GFM 的基础，但用来训练大型生成式基础模型的资料集「至今仍未完整披露」，原本的创建者根本没有意识到，更不用说同意了[13]。→ <a href="data-dignity.html">资料尊严</a>、<a href="property-and-contract.html">财产与合约</a></p>
+<h3>是谁做出来的</h3>
+<p>书的 2-0 章指出：「尽管电脑最基础的进步源于二战和冷战期间的民主国家政府，但政府现今在『基础模型』这些革命性的电脑科学突破中几乎完全没有发挥作用。」书说，OpenAI 的创始人最初向公共资金寻求支持，屡次遭拒之后才转向资本盈利导向的私人资助[14]。</p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>不透明、偏见与滥用。</strong> 书说，可能没有任何一种技术的隐患和危险比它被讨论得更多：「它们的不透明性、有助于掩盖创建条件的自主神秘性、可能继承其资料来源和创建者偏见的可能性以及滥用的可能性，所有这些都构成了重大危险。」用在行政上，「它们可以说进一步加剧了科层组织的不透明性」[6]。</li>
+<li><strong>审查与检验。</strong> 英文版 5-4 章写道，人类能否真正检验能力更强的 GFM，是审议的一个限制；GFM 也可能盲目遵从指令，抹消特定观点。书说，⿻ 的模型必须回应多样而合理的答案，并依特定群体的情况调整[15]（目前的繁体中文版 5-4 章没有这一段）。</li>
+<li><strong>创意变得千篇一律。</strong> 本应帮助协作的机制，可能把奇特的构想磨平成共识与可预测的东西。书也警告另一个危险：企业平台若挪用创作成果或将其变现，降低对创造力的激励，「有可能扼杀创造力和多样性这只鹅，而创造力和多样性，正是训练 GFMs 的金蛋」[16]。</li>
+<li><strong>不叫「AI」只是文字游戏？</strong> 拉尼尔与卫谷伦认为，名称会左右设计与责任的归属；「AI」的想法会让人忽略人的责任。两人还批评，「AI」是一种政治和社会的想法：少数技术专家设计的技术应该取代人、而不是帮助人；它与<a href="three-paths.html">专家统治</a>和中央计划的想法相呼应[7]。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>书不把 GFM 当作唯一的主角，而是当作横跨第 5 部各种协作形式的工具[1][4]。→ <a href="collaborative-technology.html">协作技术</a></p>
+<p>那么，由谁、怎么引导 GFM？书说，集体审议和决策方法，「都可以自然而然地应用于界定合法的权力分配，从而直接塑造 GFM 的治理、其创造的经济价值的分配以及集体引导其行为符合公众意愿的方式」[6]。这个问题延续到书出版之后唐凤（Audrey Tang）等人展开的讨论。→ <a href="civic-ai.html">仁工智慧</a>、<a href="six-pack-of-care.html">关怀六力</a>、<a href="kami.html">地神</a>、<a href="reverse-alignment.html">反向对齐</a></p>
+<h2>延伸阅读</h2>
+<ol>
+<li>《多元宇宙》5-5〈适应式行政〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li>《多元宇宙》5-4〈扩增审议〉（中文，书）— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a></li>
+<li>Jaron Lanier &amp; E. Glen Weyl, "AI is An Ideology, Not A Technology"（英文，评论，WIRED 2020）— <a href="https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/" target="_blank" rel="noopener">https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</a></li>
+<li>《Plurality》英文版 5-4 "Augmented Deliberation"（英文，书）— <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li>Collective Constitutional AI 的论文（英文，论文）— <a href="https://arxiv.org/abs/2406.07814" target="_blank" rel="noopener">https://arxiv.org/abs/2406.07814</a></li>
+<li>Jaron Lanier, "There Is No A.I."（英文，文章，New Yorker 2023）— <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai" target="_blank" rel="noopener">https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li>《多元宇宙》5-5〈适应式行政〉谈 GFM 的段落 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li>《多元宇宙》5-4〈扩增审议〉— <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；与 Collective Intelligence Project 合作的说明见英文版 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li>Huang 等, "Collective Constitutional AI: Aligning a Language Model with Public Input"（2024）— <a href="https://arxiv.org/abs/2406.07814" target="_blank" rel="noopener">https://arxiv.org/abs/2406.07814</a></li>
+<li>《多元宇宙》5-4 谈语言模型的段落 — <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；安野阵营的例子见英文版 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li>《多元宇宙》5-3〈创意协作〉的条列 — <a href="https://www.plurality.net/v/chapters/5-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/zh-tw/</a></li>
+<li>《多元宇宙》5-5「行政管理的局限」一节 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a> ；避免使用「AI」一词的说明见英文版 — <a href="https://www.plurality.net/v/chapters/5-5/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/eng/</a></li>
+<li>Jaron Lanier &amp; E. Glen Weyl, "AI is An Ideology, Not A Technology"（WIRED，2020）— <a href="https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/" target="_blank" rel="noopener">https://www.wired.com/story/opinion-ai-is-an-ideology-not-a-technology/</a></li>
+<li>Jaron Lanier, "There Is No A.I."（New Yorker，2023）— <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai" target="_blank" rel="noopener">https://www.newyorker.com/science/annals-of-artificial-intelligence/there-is-no-ai</a></li>
+<li>《多元宇宙》5-5 谈 GFM 结构的段落 — <a href="https://www.plurality.net/v/chapters/5-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-5/zh-tw/</a></li>
+<li>《多元宇宙》5-1〈后符号交流〉— <a href="https://www.plurality.net/v/chapters/5-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-1/zh-tw/</a> ；英文版 "Post-symbolic communication tomorrow" — <a href="https://www.plurality.net/v/chapters/5-1/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-1/eng/</a></li>
+<li>《多元宇宙》5-4 谈群体代表的段落 — <a href="https://www.plurality.net/v/chapters/5-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/zh-tw/</a> ；即时建议的说明见英文版 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li>《多元宇宙》4-1〈身分与人格权〉— <a href="https://www.plurality.net/v/chapters/4-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-1/zh-tw/</a></li>
+<li>《多元宇宙》4-4〈财产与合约〉— <a href="https://www.plurality.net/v/chapters/4-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-4/zh-tw/</a></li>
+<li>《多元宇宙》2-0〈资讯技术与民主：日益扩大的鸿沟〉— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a></li>
+<li>《Plurality》英文版 5-4 "Limits of augmented deliberation" 一节 — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a></li>
+<li>《多元宇宙》5-3「创意协作」的局限一节 — <a href="https://www.plurality.net/v/chapters/5-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-3/zh-tw/</a></li>
+</ol><div class='related'>相关: <a href='adaptive-administration.html'>什么是适应式行政（adaptive administration）？</a> ・ <a href='augmented-deliberation.html'>什么是扩增审议？</a> ・ <a href='creative-collaboration.html'>什么是创意协作（creative collaboration）？</a> ・ <a href='post-symbolic-communication.html'>什么是后符号交流（post-symbolic communication）？</a> ・ <a href='data-dignity.html'>什么是资料尊严（data dignity）？</a> ・ <a href='civic-ai.html'>什么是仁工智慧（Civic AI）？</a> ・ <a href='alignment-assemblies.html'>什么是对齐大会（Alignment Assemblies）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fgenerative-foundation-models.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E7%94%9F%E6%88%90%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%EF%BC%88GFM%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fgenerative-foundation-models.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。</footer></main></body></html>
