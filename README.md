@@ -1,6 +1,6 @@
 # Plurality の地図 / A Plurality Atlas / 多元宇宙地圖
 
-本『Plurality』（Audrey Tang, E. Glen Weyl ほか）と、その周りで語られている考え方・仕組み・実践・人・論争を、「〜ってなに？」に答える形で一つずつ説明する記事集です。日本語・English・繁體中文・简体中文（简体は繁體から自動変換）。
+書籍『Plurality』（Audrey Tang, E. Glen Weyl ほか）と、その周りで語られている考え方・仕組み・実践・人・論争を、「〜ってなに？」に答える形で一つずつ説明する記事集です。日本語・English・繁體中文・简体中文（简体は繁體から自動変換）。
 
 - サイト: https://nishio.github.io/plurality-atlas/
 - この repo はビルド済みの静的サイトです。記事は各資料を照合して作っています（元の資料と作業の記録は非公開の repo にあります）。
