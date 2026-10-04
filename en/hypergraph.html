@@ -1,0 +1,137 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>What is a hypergraph?</title><meta name="description" content="A mathematical model that extends the familiar network diagram so that not only a line between two people, but also a group of any size, can count as a single connection. The book Plurality pictures society this way."><link rel="canonical" href="https://nishio.github.io/plurality-atlas/en/hypergraph.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/hypergraph.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/hypergraph.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/hypergraph.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/hypergraph.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/hypergraph.html"><meta property="og:type" content="article"><meta property="og:site_name" content="A Plurality Atlas"><meta property="og:title" content="What is a hypergraph?"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/en/hypergraph.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="A mathematical model that extends the familiar network diagram so that not only a line between two people, but also a group of any size, can count as a single connection. The book Plurality pictures society this way."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&text=%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
+</style></head><body><header class="site" lang="en"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../hypergraph.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/hypergraph.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/hypergraph.html">简体中文</a></nav></header>
+<main lang="en"><h1>What is a hypergraph?</h1><div class='lead'>A mathematical model that extends the familiar network diagram so that not only a line between two people, but also a group of any size, can count as a single connection. The book Plurality pictures society this way.</div><p>Connections between people are often drawn as dots and lines. A diagram of friends on a social network, with a line between each pair, is a typical example. But a line can only join two people. How do you draw a family, a workplace or a hobby club, a "group of several people", as one unit? One answer is the hypergraph.</p>
+<h2>In short</h2>
+<p>A hypergraph <strong>extends the dot-and-line network diagram (mathematicians call it a "graph") so that a group enclosing any number of people can also be treated as a single connection</strong>. The book <em>⿻ Plurality</em> pictures society as a hypergraph made of people (dots) and overlapping groups (blobs around the dots) <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<h2>For example</h2>
+<p><strong>A worked example (made up for illustration).</strong> Say A, B and C belong to one study group. In a dot-and-line diagram, all you can do is draw three lines: A–B, B–C and A–C. That cannot tell "three separate pairs" apart from "one group of three". In a hypergraph, you can draw {A, B, C} as one blob. If A also belongs to a work group {A, D}, then A stands where two blobs overlap.</p>
+<p><strong>Figure 4-0-B in the book.</strong> Chapter 4-0 shows "a hypergraph that visualizes people, groups, relationships, and digital assets". The dots are people and the blobs around them are groups. The shade of a blob shows the strength of the relationship. The data and computing tools inside a blob are the base on which that group works together. Arrows coming in from outside stand for the tools people need to enter the digital world <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p><strong>Designing social media.</strong> The paper "Community by Design" by Glen Weyl, Audrey Tang and co-authors treats the social fabric as a hypergraph. Each blob is a community, held together by things its members know in common. On that basis, the paper proposes a social media system that rewards posts that people with different views inside a community can agree on, and posts that fairly represent the range of voices within it <a class="cite" href="#src-2" data-src="src-2">[2]</a>. civic.ai, the research project of Tang and Caroline Green, describes this paper as the "technical backbone" behind Packs 1 and 5 of their proposal, the <a href="six-pack-of-care.html">6-Pack of Care</a> <a class="cite" href="#src-3" data-src="src-3">[3]</a>. → <a href="prosocial-media.html">Prosocial media</a></p>
+<h2>In more detail</h2>
+<h3>How the book explains it</h3>
+<p>Chapter 4-0 says that a hypergraph, "which extends the more common idea of a network or graph by allowing groups rather than just bilateral relationships, is a collection of 'nodes' (viz. people, represented by the dots) and 'edges' (viz. groups, represented by the blobs)." The shade of each edge or group "represents the strength of the relationship involved (viz. mathematically its 'weight' and 'direction')" <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p>According to the book, technological systems are built out of formal mathematical relationships. So using the hypergraph, a standard mathematical model that corresponds directly to the ⿻ description of society, is a simple way to see what is required <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<h3>The figure and five rights</h3>
+<p>The book says the elements of this figure together make up "a menu of rights/OS properties" that each of the next five chapters describes: identity and personhood, association (people coming together), commercial trust, property and contract, and access <a class="cite" href="#src-1" data-src="src-1">[1]</a>. At the start of the same section, the book writes that "the protocols that connect us thus define our rights in the digital age, forming the OS on which societies run" <a class="cite" href="#src-1" data-src="src-1">[1]</a>. → <a href="rights-os.html">The rights operating system</a></p>
+<h3>Why lines between two people are not enough</h3>
+<p>In the same section, the book writes that "even the basic conception of networks that lies behind most approaches to addressing these challenges is too limited, ignoring the central role of intersecting communities" <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
+<p>At the end of chapter 3-2, the book describes the complexity of society this way: "while an electron typically orbits a single atom or molecule, a cell is part of one organism, and a planet orbits one star, in human society each person, and even each organization, is part of multiple intersecting larger entities, often with no single of them being fully inside any other" <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
+<h3>The root idea: Simmel's intersecting social circles</h3>
+<p>According to chapter 3-2, this view goes back to the sociologist Georg Simmel. When Reinhard Bendix translated Simmel's 1908 <em>Soziologie</em> into English in 1955, he described Simmel's idea as a "web of group-affiliations". He chose this over what he called the "almost meaningless" direct translation, "intersection of social circles" <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
+<p>The book writes that this mistranslation as a "web" eventually went "worldwide". While noting that "the precise lines of influence are hard to trace", it suggests that had Bendix chosen the other way, "we might talk of the internet in terms of 'intersecting global circles' rather than the 'world wide web'" <a class="cite" href="#src-6" data-src="src-6">[6]</a>. → <a href="intersectional-identity.html">Intersectional identity</a></p>
+<h3>Becoming mathematics</h3>
+<p>According to "Community by Design", Simmel's original vision returned to mainstream scholarship in the 1970s. First, the mathematician Claude Berge, in 1970, formalized the model of social circles as the theory of hypergraphs, extending social network theory so that many people (nodes) can be connected by many groups (edges). Separately, the sociologist Ron Breiger proposed in 1974 a "duality between persons and groups" <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
+<p>The paper suggests that early social networks made "friend" and "follow" lines between two people their basic unit of analysis partly because Simmel's ideas had been mistranslated in such two-person ("dyadic") terms <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
+<h3>Weyl and Arendt</h3>
+<p>In his keynote in Tokyo in January 2024, Weyl noted that the philosopher Hannah Arendt used the word "plurality" in <em>The Human Condition</em> for the idea that the world is made up of diverse, intersecting social groups, not of individuals and society as a whole. He said we should therefore think in terms of networks, or, to put it technically, hypergraphs, rather than isolated individuals <a class="cite" href="#src-9" data-src="src-9">[9]</a>.</p>
+<p>Chapter 3-0 of the book puts the "descriptive" side of ⿻ in the same way and links it to Arendt: "The social world is neither an unorganized collection of isolated individuals nor a monolithic whole. Instead, it is a fabric of diverse and intersecting affiliations that define both our personal identities and our collective organization" <a class="cite" href="#src-10" data-src="src-10">[10]</a>. → <a href="hannah-arendt.html">Hannah Arendt</a> · <a href="monist-atomism.html">Monist atomism</a></p>
+<h2>What is debated</h2>
+<ul>
+<li><strong>The model is not society itself.</strong> The book itself notes that "any such digital model is, of course, not literally the social world but an abstraction of it", and that real people need a range of digital tools (the arrows in the figure) to access it <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</li>
+<li><strong>Don't take "communities" found in data at face value.</strong> The authors of "Community by Design" warn about this themselves. Community as shared understanding is hard to observe and measure, so research and social media algorithms usually rely on easier-to-measure signals to "detect" communities. The paper says these models should not be taken at face value, and that one should stay critical of which of the thousands of possible interpretations has been chosen. It also notes that affiliation signals such as ethnicity do not apply in every place at every time <a class="cite" href="#src-11" data-src="src-11">[11]</a>.</li>
+</ul>
+<h2>Where it fits in Plurality</h2>
+<p>The word "hypergraph" appears in chapter 4-0 of the book. This chapter is the overview of Part 4, and the elements of the hypergraph figure correspond to its five chapters, 4-1 to 4-5: <a href="identity-and-personhood.html">identity and personhood</a>, <a href="plural-publics.html">association and ⿻ publics</a>, <a href="commerce-and-trust.html">commerce and trust</a>, <a href="property-and-contract.html">property and contract</a>, and access <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p>The word itself does not appear in chapter 3-2, "Connected Society". But Simmel's "intersection of social circles", and the view that each person belongs to several intersecting larger entities, lie underneath it <a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
+<p>Outside the book, "Community by Design" makes the social hypergraph its basic unit of analysis for social media. It also discusses how to detect communities from data and build an empirical model of the social hypergraph <a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>. → <a href="bridging.html">Bridging</a></p>
+<h2>Further reading</h2>
+<ol>
+<li><em>Plurality</em>, chapter 4-0 "Rights, Operating Systems and ⿻ Freedom", the "⿻ freedom" section and Figure 4-0-B (English, book) — <a href="https://www.plurality.net/v/chapters/4-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/eng/</a></li>
+<li><em>Plurality</em>, chapter 3-2 "Connected Society", the section on Simmel (English, book) — <a href="https://www.plurality.net/v/chapters/3-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/eng/</a></li>
+<li>Weyl, Thorburn, de Keulenaar, Mchangama, Siddarth and Tang, "Community by Design", section 2.1 "Hypergraphs and intersectional identity" (English, paper) — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li>Glen in Japan Keynote (2024-01-03; English talk with Japanese translation) — <a href="https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote</a></li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li id="src-1"><em>Plurality</em>, 4-0 "Rights, Operating Systems and ⿻ Freedom", the "⿻ freedom" section (Figure 4-0-B and its explanation) — <a href="https://www.plurality.net/v/chapters/4-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/eng/</a> ［CC0］</li>
+<li id="src-2">Weyl et al., "Community by Design", section 1 — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li id="src-3">civic.ai (Civic AI — 6-Pack of Care) — <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a> ［CC0］</li>
+<li id="src-4"><em>Plurality</em>, 4-0, the "⿻ freedom" section (end of the paragraph after the figure) — <a href="https://www.plurality.net/v/chapters/4-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/eng/</a> ［CC0］</li>
+<li id="src-5"><em>Plurality</em>, 3-2 "Connected Society", closing paragraph — <a href="https://www.plurality.net/v/chapters/3-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/eng/</a> ［CC0］</li>
+<li id="src-6"><em>Plurality</em>, 3-2, the section "Georg Simmel and the intersectional (in)dividual" — <a href="https://www.plurality.net/v/chapters/3-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/eng/</a> ［CC0］</li>
+<li id="src-7">Weyl et al., "Community by Design", 2.1 "Hypergraphs and intersectional identity" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li id="src-8">Weyl et al., "Community by Design", 2.3 "Community detection", the item "Graph data" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li id="src-9">Glen in Japan Keynote (Plurality Tokyo, 2024-01-03) — <a href="https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote</a></li>
+<li id="src-10"><em>Plurality</em>, 3-0 "What is ⿻?", the item "Descriptive" — <a href="https://www.plurality.net/v/chapters/3-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-0/eng/</a> ［CC0］</li>
+<li id="src-11">Weyl et al., "Community by Design", 2.3 "Community detection" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+</ol><div class='related'>Related: <a href='rights-os.html'>What is the rights operating system?</a> ・ <a href='intersectional-identity.html'>What is intersectional identity?</a> ・ <a href='identity-and-personhood.html'>What is Identity and Personhood (⿻ identity)?</a> ・ <a href='plural-publics.html'>What are ⿻ publics?</a> ・ <a href='prosocial-media.html'>What is prosocial media?</a> ・ <a href='monist-atomism.html'>What is monist atomism?</a></div><div class='feedback'><p>We welcome error reports and questions ("What is…?"). Submissions become public issues.</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fen%2Fhypergraph.html&title=%5B%E6%8C%87%E6%91%98%5D%20What%20is%20a%20hypergraph%3F' target='_blank' rel='noopener'>Report an error in this article</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fen%2Fhypergraph.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>Ask a question</a></p></div><footer>The text of this site is CC0 (public domain). Quoted material belongs to its sources; where the license is known, it is shown in [ ] in each article's Sources list.<br><a href="about.html">About this site (how it is made, who runs it)</a> ・ <a href="https://github.com/nishio/plurality-atlas" target="_blank" rel="noopener">GitHub (this site's repository, issues for corrections and questions)</a></footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>

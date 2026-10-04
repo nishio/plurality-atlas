@@ -1,0 +1,138 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是超图（hypergraph）？</title><meta name="description" content="一种数学模型。它扩展了常见的网络图，让不只是两人之间的一条线，任何人数的「群体」也能算作一个连结。《多元宇宙》就是用这种方式描绘社会。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-CN/hypergraph.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/hypergraph.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/hypergraph.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/hypergraph.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/hypergraph.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/hypergraph.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地图"><meta property="og:title" content="什么是超图（hypergraph）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-CN/hypergraph.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="一种数学模型。它扩展了常见的网络图，让不只是两人之间的一条线，任何人数的「群体」也能算作一个连结。《多元宇宙》就是用这种方式描绘社会。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+SC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&text=%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
+</style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../hypergraph.html">日本語</a> <a class="lang" hreflang="en" href="../en/hypergraph.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/hypergraph.html">繁體中文</a></nav></header>
+<main lang="zh-CN"><h1>什么是超图（hypergraph）？</h1><div class='lead'>一种数学模型。它扩展了常见的网络图，让不只是两人之间的一条线，任何人数的「群体」也能算作一个连结。《多元宇宙》就是用这种方式描绘社会。</div><p>人与人之间的连结，常被画成「点和线」的图。社群网站上把朋友两两连起来的关系图就是一例。但是，一条线只能连接两个人。家人、职场、兴趣社团这种「好几个人的群体」，要怎么直接画成一个整体呢？答案之一就是超图（hypergraph）。</p>
+<h2>一句话说明</h2>
+<p>超图是<strong>把点和线的网络图（数学上叫做「图」）扩展开来，让圈住任何人数的「群体」也能被当作一个连结来处理</strong>。《多元宇宙》把社会描绘成由人（点）和相互交织的群体（圈住点的区块）构成的超图<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<h2>举例来说</h2>
+<p><strong>示意例子（为说明而虚构）。</strong> 假设 A、B、C 三人参加同一个读书会。在点和线的图里，只能画出 A–B、B–C、A–C 三条线。这样就分不出是「三对两人组」，还是「一个三人的群体」。用超图的话，可以把 {A, B, C} 画成一个区块。如果 A 另外也属于职场的群体 {A, D}，那么 A 就站在两个区块重叠的地方。</p>
+<p><strong>书中的图 4-0-B。</strong> 《多元宇宙》4-0 章有一张超图，把人、群体、关系和数位资产画在一起。点是人，圈住点的区块是群体。区块的深浅代表关系的强度。区块里的资料和运算工具，是这个群体协作的基础。从图外进来的箭头，代表人进入数位世界所需的工具<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>社交媒体的设计。</strong> 卫谷伦（Glen Weyl）、唐凤（Audrey Tang）等人的论文〈Community by Design〉，把社会网络当作超图来处理。每个区块都是一个社群，围绕着成员共同知道的事情而凝聚。在此基础上，论文提出一种社交媒体的机制，奖励社群内意见不同的人都能认同的贴文，以及公平呈现社群内部多元声音的贴文<a class="cite" href="#src-2" data-src="src-2">[2]</a>。唐凤与 Caroline Green 的研究计划 civic.ai，把这篇论文介绍为其提案「<a href="six-pack-of-care.html">6-Pack of Care</a>」第 1 和第 5 支柱的「技术骨干」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="prosocial-media.html">利社会媒体</a></p>
+<h2>深入了解</h2>
+<h3>书中的说明</h3>
+<p>4-0 章这样说明：「超图是『节点』（即人，由点表示）和『边』（即群体，由区块表示）的集合，它扩展了更常见的网络或图的概念，允许群体关系而不仅仅是双边关系。每个边/群体的阴影，代表所涉及关系的强度（即数学上的『权重』和『方向』）」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>书中说，技术系统是在形式化的数学关系中实作的，所以使用与⿻社会描述直接对应的典型数学模型——超图，就能简单地看出需要什么<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<h3>图与五种权利</h3>
+<p>书中说，这些元素共同构成了「权利/作业系统属性的清单」，接下来的五章各自更全面地阐述其中一项：身分与人格、结社（人们聚集起来）、商业与信任、财产与合约、存取权<a class="cite" href="#src-1" data-src="src-1">[1]</a>。在同一节的开头，书中写道：「在这些网络中将我们相互连接的协定，定义了数位时代的权利，从而构成了社会运行所依赖的作业系统。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> → <a href="rights-os.html">权利 OS</a></p>
+<h3>为什么只有「两人之间的线」不够</h3>
+<p>在同一节里，书中指出：「大多数解决这些挑战的方法，背后的基本网络概念也过于有限，忽略了相互交织社群的核心作用。」<a class="cite" href="#src-4" data-src="src-4">[4]</a></p>
+<p>3-2 章的结尾这样描绘社会的复杂：「一个电子通常只环绕某个原子或分子，一个细胞是某个有机体的一部分，一颗行星环绕某颗恒星；而在人类社会中，每个人，甚至每个组织，都是多个相互交织的、更大实体的一部分，几乎没有哪个实体完全处于其他实体的内部。」<a class="cite" href="#src-5" data-src="src-5">[5]</a></p>
+<h3>思想的源头：齐美尔的「社交圈的交集」</h3>
+<p>根据 3-2 章，这种看法可以追溯到社会学家齐美尔（Georg Simmel）。「1955年，赖因哈德．班迪克（Reinhard Bendix）翻译齐美尔的经典著作《社会学》（Soziologie）一书时，他选择将齐美尔的想法描述为『社交关系网』（web of group-affiliations），而不是他所谓『几乎毫无意义』的直译『社交圈的交集』（intersection of social circles）。」<a class="cite" href="#src-6" data-src="src-6">[6]</a></p>
+<p>英文版的 3-2 章接着写道，这个「web」的误译最后传遍了全世界。书中一面说明影响的确切路径难以追溯，一面推测，如果 Bendix 做了相反的选择，我们今天也许会用「交织的全球圈」而不是「全球资讯网」（world wide web）来谈互联网<a class="cite" href="#src-7" data-src="src-7">[7]</a>。→ <a href="intersectional-identity.html">多元交织的身分</a></p>
+<h3>成为数学的语言</h3>
+<p>根据〈Community by Design〉，齐美尔原本的构想到 1970 年代才回到学术主流。首先，数学家 Claude Berge 在 1970 年把社交圈的模型形式化为「超图」理论，把社会网络理论扩展成许多人（节点）可以由许多群体（边）连接的形式。另外，社会学家 Ron Breiger 在 1974 年独立提出了「人与群体的对偶性」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>论文认为，早期的社群网站把「朋友」或「追踪」这种两人之间的线当作分析的基本单位，部分原因是齐美尔的思想被误译成这种「两人的」（dyadic）关系<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<h3>卫谷伦与鄂兰</h3>
+<p>卫谷伦在 2024 年 1 月于东京的主题演讲中提到，哲学家汉娜·鄂兰（Hannah Arendt）在《人的条件》中使用「Plurality」一词，是为了表达世界不是由个人和整体社会，而是由多样且交织的社会群体构成的。卫谷伦接着说，我们应该用网络——用技术性的说法就是超图——来思考，而不是用孤立的个人来思考<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<p>《多元宇宙》3-0 章也以同样的方式概括⿻的「描述性」层面，并把它与鄂兰连结：「社会世界既不是孤立个体的无组织集合，也不是铁板一块的整体。相反，它是一个由多元交叉的复杂关系构成的结构，这些关系定义了我们的个人身分和集体组织」<a class="cite" href="#src-11" data-src="src-11">[11]</a>。→ <a href="hannah-arendt.html">汉娜·鄂兰</a>・<a href="monist-atomism.html">一元原子论</a></p>
+<h2>争议与批评</h2>
+<ul>
+<li><strong>模型不是社会本身。</strong> 书中自己就说明：「当然，任何这样的数位模型，都不是字面上的社会世界，而是对它的抽象化。」真实的人要进入它，需要一系列数位工具（图中的箭头）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
+<li><strong>不要照单全收从资料里找到的「社群」。</strong> 〈Community by Design〉的作者自己也提醒这一点。作为共同理解的社群很难观察和测量，所以研究和社交媒体的算法通常是用比较容易量化的指标来「侦测」社群。论文说，不应照单全收这些模型，而应对采用了上千种可能解读中的哪一种保持批判。论文也指出，像族群这样的归属指标，并不是在任何地方、任何时候都适用<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+</ul>
+<h2>在《Plurality》中的位置</h2>
+<p>「超图」一词出现在《多元宇宙》4-0 章。这一章是第 4 部的总览，超图图中的元素对应到 4-1 到 4-5 的五章：<a href="identity-and-personhood.html">身分与人格</a>、<a href="plural-publics.html">结社与多元公众</a>、<a href="commerce-and-trust.html">商业与信任</a>、<a href="property-and-contract.html">财产与合约</a>和存取权<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>3-2 章〈相连的社会〉并没有出现这个词。但齐美尔的「社交圈的交集」，以及每个人都属于多个相互交织的更大实体的社会观，是它的基础<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>在书外，〈Community by Design〉把社会的超图当作分析社交媒体的基本单位，也讨论如何从资料中侦测社群、建立社会超图的实证模型<a class="cite" href="#src-8" data-src="src-8">[8]</a><a class="cite" href="#src-12" data-src="src-12">[12]</a>。→ <a href="bridging.html">桥接</a></p>
+<h2>延伸阅读</h2>
+<ol>
+<li>《多元宇宙》4-0〈权利、作业系统与数位自由〉的「⿻自由」一节（中文，书）— <a href="https://www.plurality.net/v/chapters/4-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/zh-tw/</a></li>
+<li>《多元宇宙》3-2〈相连的社会〉的齐美尔一节（中文，书）— <a href="https://www.plurality.net/v/chapters/3-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/zh-tw/</a></li>
+<li>Weyl、Thorburn、de Keulenaar、Mchangama、Siddarth、Tang, "Community by Design" 的 2.1 "Hypergraphs and intersectional identity"（英文，论文）— <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li>Glen in Japan Keynote（2024-01-03，英文演讲与日文翻译）— <a href="https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote</a></li>
+</ol>
+<h2>出处</h2>
+<ol>
+<li id="src-1">《多元宇宙》4-0〈权利、作业系统与数位自由〉「⿻自由」一节（超图的图与说明）— <a href="https://www.plurality.net/v/chapters/4-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/zh-tw/</a></li>
+<li id="src-2">Weyl 等, "Community by Design" 第 1 节 — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li id="src-3">civic.ai（Civic AI — 6-Pack of Care）— <a href="https://civic.ai/" target="_blank" rel="noopener">https://civic.ai/</a></li>
+<li id="src-4">《多元宇宙》4-0「⿻自由」一节（图后第二段的结尾）— <a href="https://www.plurality.net/v/chapters/4-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-0/zh-tw/</a></li>
+<li id="src-5">《多元宇宙》3-2〈相连的社会〉章末段落 — <a href="https://www.plurality.net/v/chapters/3-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/zh-tw/</a></li>
+<li id="src-6">《多元宇宙》3-2「齐美尔，多元交织的个体／分身」一节 — <a href="https://www.plurality.net/v/chapters/3-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/zh-tw/</a></li>
+<li id="src-7">《Plurality》英文版 3-2 "Georg Simmel and the intersectional (in)dividual" — <a href="https://www.plurality.net/v/chapters/3-2/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-2/eng/</a></li>
+<li id="src-8">Weyl 等, "Community by Design" 2.1 "Hypergraphs and intersectional identity" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li id="src-9">Weyl 等, "Community by Design" 2.3 "Community detection" 的 "Graph data" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+<li id="src-10">Glen in Japan Keynote（Plurality Tokyo，2024-01-03）— <a href="https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote" target="_blank" rel="noopener">https://scrapbox.io/plurality-japanese/Glen%20in%20Japan%20Keynote</a></li>
+<li id="src-11">《多元宇宙》3-0〈什么是⿻？〉「描述性」一项 — <a href="https://www.plurality.net/v/chapters/3-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-0/zh-tw/</a></li>
+<li id="src-12">Weyl 等, "Community by Design" 2.3 "Community detection" — <a href="https://arxiv.org/abs/2502.10834" target="_blank" rel="noopener">https://arxiv.org/abs/2502.10834</a></li>
+</ol><div class='related'>相关: <a href='rights-os.html'>什么是权利 OS（权利、作业系统与数位自由）？</a> ・ <a href='intersectional-identity.html'>什么是多元交织的身分（intersectional identity）？</a> ・ <a href='identity-and-personhood.html'>什么是「身分与人格权」（多元身分）？</a> ・ <a href='plural-publics.html'>什么是多元公众（plural publics）？</a> ・ <a href='prosocial-media.html'>什么是利社会媒体（prosocial media）？</a> ・ <a href='monist-atomism.html'>什么是一元原子论（monist atomism）？</a></div><div class='feedback'><p>欢迎回报文章错误或提出想知道的问题（「什么是…？」）。送出的内容会成为公开的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fhypergraph.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%B6%85%E5%9B%BE%EF%BC%88hypergraph%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回报本文错误</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-CN%2Fhypergraph.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提问</a></p></div><footer>本站文字以 CC0（公众领域）释出。引用部分的权利属于各原始出处，已知授权者标示于各篇出处栏的［ ］中。简体中文版由繁体中文版自动转换字形而成，用语多保留台湾的说法。<br><a href="about.html">关于本站（制作方式与营运者）</a> ・ <a href="https://github.com/nishio/plurality-atlas" target="_blank" rel="noopener">GitHub（本站的仓库、回报错误与提问的 issue）</a></footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script></body></html>
