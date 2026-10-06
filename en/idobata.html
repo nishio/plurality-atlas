@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>For example</h2>
 <p><strong>Team Mirai's "interactive policy platform" (2025 House of Councillors election).</strong> The political party <a href="team-mirai.html">Team Mirai</a> launched it on May 16, 2025. When a voter chats with the AI, the AI asks questions and helps the voter put their thoughts into words. At the end, the AI puts together a proposed change to the manifesto (the party's campaign promises) and sends it <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <p>Four days later, party leader Takahiro Anno posted that more than 1,300 proposal documents had come in, "more than ten times what we expected". In the end, 8,559 policy proposals were received <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
-<p><strong>A workshop inside Cybozu.</strong> The AI asked follow-up questions about what participants had written, digging deeper. The AI read 50 people's chats in a few minutes and produced a report of the themes that came up often and the points where opinions agreed or differed <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
+<p><strong>A workshop inside <a href="cybozu.html">Cybozu</a>.</strong> The AI asked follow-up questions about what participants had written, digging deeper. The AI read 50 people's chats in a few minutes and produced a report of the themes that came up often and the points where opinions agreed or differed <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
 <p><strong>A residents' meeting in Higashiosaka.</strong> After meetings in which residents discussed things with one another, Idobata was used as a place to keep collecting opinions. The AI organized 12 issues, including "From an anxious future to a hopeful one" <a class="cite" href="#src-4" data-src="src-4">[4]</a>. → <a href="municipal-broad-listening.html">Broad listening in local governments</a></p>
 <h2>How it works</h2>
 <h3>Two components</h3>
@@ -79,10 +80,15 @@ li:target{background:var(--tint);border-radius:4px}
 </ul>
 <p>For example, the AIs in Idobata Policy share "the current platform". When a human approves a revision that came out of a dialogue with one person, the AI talking with the next person reads the revised manifesto as it talks <a class="cite" href="#src-2" data-src="src-2">[2]</a>. Nishio links this to the argument of the philosopher John Dewey that changes in technology change the shape of "the public" <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="emergent-publics.html">Emergent publics</a></p>
 <h2>What is debated</h2>
+<h3>Reflections by those involved</h3>
+<p>These come from <a href="nishio-hirokazu.html">Hirokazu Nishio</a>, who worked on the technical side of the interactive policy platform.</p>
 <ul>
 <li><strong>Not feeling heard.</strong> With the interactive policy platform, things ended once a proposal was sent. People could not see how it was handled afterward, and some said they did not feel their opinions had been received. Nishio concludes that a system is needed that lets people follow where their opinion went <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</li>
 <li><strong>Proposals too detailed, and clashing.</strong> Dozens of revisions piled up on the same passage, and staff had to read them all and rewrite by brute force. Nishio writes that perhaps what the AI should have asked was not so much how to revise the wording as what people are struggling with. Nishio then cites Audrey Tang's procedure for discussion: first gather facts, then feelings, and only after that ask for ideas <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</li>
 <li><strong>GitHub turned into a message board as it was.</strong> One proposal once drew 236 comments <a class="cite" href="#src-8" data-src="src-8">[8]</a>. Barbed exchanges broke out, and some people used Anno's face photo as their icon without permission. On X, misleading information spread that took this for an "internal discussion" within Team Mirai. Nishio writes that GitHub should not have been shown directly, and should have been covered with a dedicated interface <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</li>
+</ul>
+<h3>Criticism and assessment from outside</h3>
+<ul>
 <li><strong>Quality of proposals, and responsibility.</strong> One citizen's note.com article reports criticisms that the original proposals were of low quality and that the review process should be fixed. It goes on to write that open-source citizen participation leaves responsibility unclear, and even that Team Mirai is effectively throwing away the proposals it gathered. Part of this claim, however, has not been verified <a class="cite" href="#src-9" data-src="src-9">[9]</a>. For reference, Team Mirai's policy repository has received 9,686 proposals in total, of which 194 have been merged. Updates to the manifesto on GitHub ended on July 26, 2025 <a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>.</li>
 <li><strong>Hard to tell what the tool is for.</strong> Another note.com writer commented that Idobata Vision is hard for first-time users to understand, and that it feels like a public comment procedure (a government's call for opinions on a draft) <a class="cite" href="#src-12" data-src="src-12">[12]</a>.</li>
 <li><strong>Who decides the range of what is heard?</strong> An article in the magazine Noema (June 2026) pointed out that the program of the AI chatbot Team Mirai used in the 2026 House of Representatives election had "NG words" (banned words) set for conversations to avoid. (The article does not name that chatbot as Idobata.) Its point is that, together with the constraints on the side of the underlying AI (Claude), the boundaries of political conversation may be set in several places. At the same time, the article credits the tool as democratic in that it did not force consensus and left judgment to the party and voters <a class="cite" href="#src-13" data-src="src-13">[13]</a>.</li>
@@ -123,9 +129,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

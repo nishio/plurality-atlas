@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -65,7 +66,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>以下根據阿特曼本人（或 OpenAI 等組織）的文章介紹。</p>
 <p><strong>適用於一切的摩爾定律（2021 年）。</strong> 阿特曼寫道，會思考、會學習的軟體將承擔越來越多人的工作，力量會從勞動轉移到資本。問題意識是：如果政策跟不上，很多人的生活會變差。作為對策，阿特曼提出一個方案：對一定市值以上的企業，每年以股票課徵其市值的 2.5%，對私有土地價值課徵 2.5% 的現金，存入名為「American Equity Fund」的基金，再分配給所有成年人<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p><strong>超級智慧的治理（2023 年）。</strong> 在與 OpenAI 共同創辦人們聯名的文章中，阿特曼等人寫道，對超過一定能力或運算資源的開發，終將需要像國際原子能總署（IAEA）那樣能夠查核、稽核的國際機構。同時也寫道，AI 系統的界限與預設值應該由世界上的人們以民主方式決定；雖然還不知道如何設計這種機制，但會進行實驗<a class="cite" href="#src-9" data-src="src-9">[9]</a>。→ <a href="superintelligence.html">超級智慧</a></p>
-<p><strong>給 AI 的民主意見（2023 年起）。</strong> OpenAI 的非營利法人在 2023 年 5 月宣布，對以民主方式決定 AI 應遵守之規則的實驗，提供 10 件、每件 10 萬美元的資助<a class="cite" href="#src-10" data-src="src-10">[10]</a>。2024 年 1 月的報告介紹了成果，並宣布成立用人們的意見來駕馭強大模型的「Collective Alignment」團隊<a class="cite" href="#src-11" data-src="src-11">[11]</a>。這項資助也產生了 Aviv Ovadya 等人的「集體對話」論文<a class="cite" href="#src-12" data-src="src-12">[12]</a>。臺灣類似的嘗試，介紹在〈<a href="alignment-assemblies.html">對齊大會</a>〉一文中。</p>
+<p><strong>給 AI 的民主意見（2023 年起）。</strong> OpenAI 的非營利法人在 2023 年 5 月宣布，對以民主方式決定 AI 應遵守之規則的實驗，提供 10 件、每件 10 萬美元的資助<a class="cite" href="#src-10" data-src="src-10">[10]</a>。2024 年 1 月的報告介紹了成果，並宣布成立用人們的意見來駕馭強大模型的「Collective Alignment」團隊<a class="cite" href="#src-11" data-src="src-11">[11]</a>。這項資助也產生了 <a href="aviv-ovadya.html">Aviv Ovadya</a> 等人的「集體對話」論文<a class="cite" href="#src-12" data-src="src-12">[12]</a>。臺灣類似的嘗試，介紹在〈<a href="alignment-assemblies.html">對齊大會</a>〉一文中。</p>
 <p><strong>溫和的奇點（2025 年）。</strong> 阿特曼寫道，人類已經越過了無法回頭的點，起飛已經開始。接著，阿特曼提出，最好的路或許是這樣：先解決對齊問題（讓 AI 朝著人們長期真正共同想要的方向行動），然後致力於讓超級智慧便宜而廣泛地可用，不要過度集中在特定的個人、企業或國家<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <p><strong>AI 必須被民主化（2026 年）。</strong> 在自家遭人投擲汽油彈（沒有人受傷）之後不久寫的部落格文章中，阿特曼列出自己相信的事，其中之一是：AI 必須被民主化，權力不應過度集中。阿特曼也寫道，由少數 AI 研究機構做出決定未來形態的最重大決策，是不對的<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
 <p><strong>World（原 Worldcoin）。</strong> World 的白皮書把自己說明為：透過人格證明與新的經濟基礎，最大限度地提高每個人力量的網路<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
@@ -110,9 +111,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

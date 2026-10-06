@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -91,7 +92,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>工具不會自己收集意見。</strong> 能收到多少意見，取決於宣傳與話題性。書中明白寫道，安野團隊和東京都能收集到大量意見，並不是工具的功勞。在廣島縣的例子裡，透過主題標籤收到的意見只有 2 則<a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。→〈<a href="municipal-broad-listening.html">地方政府的廣泛傾聽</a>〉</li>
 <li><strong>「由 AI 決定政策」的誤解。</strong> 書中說，這是在任何政治體制下都能用的工具，讀結果、做決定的是人（選出來的政治人物與議會）<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 <li><strong>東京都公眾意見徵集中出現的疑慮。</strong> 對 2050 東京戰略草案提交的意見中，有人認為收集到的是習慣發表意見的人的聲音，不應作為政策依據；也有人認為應審慎檢驗徵集方式，或質疑是否整理公開就結束了。東京都回應說，這是為了作為擬定戰略的參考而進行的<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
-<li><strong>高估「改變了政策」的故事。</strong> 《廣泛傾聽》第 5 章（中山心太執筆）檢驗了東京都「觀光成為獨立戰略」的說法，指出觀光政策的擴充在徵集意見之前、2024-01 的修訂中就已經在推動，並結論說「廣泛傾聽改變了政策」的故事至少有一部分是高估的<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</li>
+<li><strong>高估「改變了政策」的故事。</strong> 《廣泛傾聽》第 5 章（<a href="nakayama-shinta.html">中山心太</a>執筆）檢驗了東京都「觀光成為獨立戰略」的說法，指出觀光政策的擴充在徵集意見之前、2024-01 的修訂中就已經在推動，並結論說「廣泛傾聽改變了政策」的故事至少有一部分是高估的<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</li>
 <li><strong>「那張散布圖」不等於廣泛傾聽。</strong> 散布圖的印象太強烈，常被誤以為圖本身就是廣泛傾聽。書中提醒，也有像 Polis 這樣放不進散布圖的工具<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
@@ -134,9 +135,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

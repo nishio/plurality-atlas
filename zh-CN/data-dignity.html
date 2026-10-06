@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p><strong>翻译者的例子（2018 年）。</strong> 电脑科学家杰伦·拉尼尔（Jaron Lanier）与经济学者卫谷伦（E. Glen Weyl）在《哈佛商业评论》（Harvard Business Review）的文章中指出自动翻译的矛盾：自动翻译威胁着人类译者的工作，却又为了跟上新词和流行，每天都需要来自这些译者的大量新资料<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>替朋友帮外国电影上字幕的人，并不知道自己付出了多少价值。两人主张，如果老实告诉大家他们是被需要的，人们就会收取报酬，并带着自豪提供更好的资料<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>台湾的「资料联盟」。</strong> 根据《多元宇宙》，台湾的总统杯黑客松（用技术解决社会课题的竞赛），集合了「公务员、第三部门、学者、活动和技术专家组成的混合队伍」，「并在政府支持下组成资料联盟，透过集体协商来处理海洋污染、空气品质监测、野火预警系统，和一系列不平等议题」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
-<p><strong>关怀六力的资料联盟。</strong> 唐凤（Audrey Tang）与 Caroline Green 的<a href="six-pack-of-care.html">关怀六力</a>（6-Pack of Care），把社区协会、工会、合作社、宗教团体等既有的共同体组织，定位为「资料联盟」（data coalition）。组织成为成员所托付之知识的管理者，和 AI 谈判使用契约，决定哪些要分享、哪些不放上网络；报酬也不是按个人，而是以集体方式领取<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="kami.html">地神</a></p>
+<p><strong>关怀六力的资料联盟。</strong> 唐凤（Audrey Tang）与 <a href="caroline-green.html">Caroline Green</a> 的<a href="six-pack-of-care.html">关怀六力</a>（6-Pack of Care），把社区协会、工会、合作社、宗教团体等既有的共同体组织，定位为「资料联盟」（data coalition）。组织成为成员所托付之知识的管理者，和 AI 谈判使用契约，决定哪些要分享、哪些不放上网络；报酬也不是按个人，而是以集体方式领取<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="kami.html">地神</a></p>
 <h2>深入了解</h2>
 <h3>「免费」的背后</h3>
 <p>《哈佛商业评论》的文章批评现今网络大公司的模式：让人免费使用服务，费用则向想影响用户的第三方收取。结果社会不是建立在经过同意的对话上，而是建立在偷偷灌注的操纵上<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
@@ -121,9 +122,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

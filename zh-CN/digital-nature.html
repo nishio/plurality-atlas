@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -52,7 +53,7 @@ li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../digital-nature.html">日本語</a> <a class="lang" hreflang="en" href="../en/digital-nature.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/digital-nature.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是计算机自然（Digital Nature）？</h1><div class='lead'>媒体艺术家暨研究者落合阳一从 2015 年前后开始提倡的世界观。指电脑不再是萤幕里的工具，而与光、声音、物体、身体融为一体，成为像「自然」一样的环境的状态。以落合名义发表的文章，把它与 Plurality 的分歧整理为「主角是人还是环境」。</div><p>我们现在是透过智能手机或电脑的「萤幕」使用电脑。可是，如果电脑跳出萤幕，像空气、光、声音一样融入我们周遭，会变成什么样子？「计算机自然」（Digital Nature）就是思考如何理解、如何生活在那样世界里的词。在日本，它有时会和 Plurality 相比较。</p>
 <h2>一句话说明</h2>
-<p>计算机自然（日文「デジタルネイチャー」，英文 Digital Nature）是日本媒体艺术家暨研究者落合阳一（Yoichi Ochiai）提出的词。指电脑不再是萤幕里的「工具」，而像空气或森林一样，成为我们周遭「环境」本身的状态<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>计算机自然（日文「デジタルネイチャー」，英文 Digital Nature）是日本媒体艺术家暨研究者<a href="ochiai-yoichi.html">落合阳一</a>（Yoichi Ochiai）提出的词。指电脑不再是萤幕里的「工具」，而像空气或森林一样，成为我们周遭「环境」本身的状态<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>这也是一个问题的名字：在人与机器、自然与人工的界线变得模糊的世界里，要怎么生活<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>举例来说</h2>
 <p><strong>用声音让物体漂浮的研究（2010 年代）。</strong> 落合一直在做用声波让小物体浮在空中并移动的研究。以落合名义发表的论考回顾说，这是用工程实现了把封闭在萤幕里的资讯，释放到真实空间的想法，也就是计算走出萤幕，能以声音、光、空气与触感被感受到的阶段<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

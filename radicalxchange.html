@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -64,7 +65,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>それより前の 2018 年 9 月、ワイルはブテリンとの往復メールを公開していました。ブテリンが挙げた課題に対して、ワイルは、どれも近いうちに実験することの妨げにはならない、という趣旨で返しています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>名前の「X」</h3>
 <p>タンは 2020 年、日本の出版社の取材で、「RxC の『X』は交換様式の『X』」だと述べました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
-<p>これは、日本の哲学者・柄谷行人（からたに・こうじん）の考えにもとづいています。タンの説明では、交換は「知っている人か、知らない人か」と「見返りを求めるか、求めないか」の二つの軸で分けられます。家族（知っている人・見返りなし）、国家（知っている人・対価あり）、市場（知らない人・対価あり）に続く四つ目が、「知らない人と、見返りなしに分かち合う」交換で、柄谷はこれを「X」と呼んだ、というのです<a class="cite" href="#src-11" data-src="src-11">[11]</a>。タンは別の回で、ワイルと知り合って柄谷の考えを紹介し、それが合わさってこの財団になった、と語っています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。くわしくは <a href="modes-of-exchange.html">交換様式</a> の記事で扱います。</p>
+<p>これは、日本の哲学者・<a href="karatani-kojin.html">柄谷行人</a>（からたに・こうじん）の考えにもとづいています。タンの説明では、交換は「知っている人か、知らない人か」と「見返りを求めるか、求めないか」の二つの軸で分けられます。家族（知っている人・見返りなし）、国家（知っている人・対価あり）、市場（知らない人・対価あり）に続く四つ目が、「知らない人と、見返りなしに分かち合う」交換で、柄谷はこれを「X」と呼んだ、というのです<a class="cite" href="#src-11" data-src="src-11">[11]</a>。タンは別の回で、ワイルと知り合って柄谷の考えを紹介し、それが合わさってこの財団になった、と語っています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。くわしくは <a href="modes-of-exchange.html">交換様式</a> の記事で扱います。</p>
 <h3>何を目指すのか</h3>
 <p>ワイルは 2019 年の文章「What is RadicalxChange?」で、運動の出発点になる診断を書いています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。資本主義は、みんなで組むと部分の足し算以上のことができる場面を、うまく扱えない。それを補うはずの国単位の民主主義も、硬くなりやすい。そこでワイルは、資本主義と国家主義、個人主義と集団主義の対立を超える、といった原則を番号つきで並べました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <p>同じ年の末の文章は、RxC が広めてきた仕組みとして次のものを挙げています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
@@ -124,9 +125,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

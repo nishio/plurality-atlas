@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>提爾以 2009 年的一篇文章聞名：文中寫道，自己不再認為自由與民主能夠相容<a class="cite" href="#src-3" data-src="src-3">[3]</a>。《多元宇宙》把提爾當作「放任主義」（libertarianism，最重視個人自由、想縮小國家角色的立場）的核心知識領袖<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>與《Plurality》的關係</h2>
 <p><strong>作為放任主義的核心人物。</strong> 書的 2-0 章寫道，放任主義有《主權個人》（The Sovereign Individual）、<a href="balaji-srinivasan.html">巴拉吉·斯里尼瓦桑</a>（Balaji Srinivasan）的《網路國家》（The Network State）等在社群中被廣泛閱讀和引用的著作。接著，書寫道：「創投家彼得．提爾（Peter Thiel）和他資助進行或推廣的其他作者（如前所述）普遍被認為是放任主義的核心知識領袖。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> → <a href="three-paths.html">三條道路</a></p>
-<p><strong>作為與各國民族主義者、極右派相近的例子。</strong> 同一章寫道：「放任主義與民主國家的民族主義者和極右派有著既密切又些許複雜的關係。」書舉的例子是：提爾成為唐納·川普（Donald Trump）及其支持者的主要財政支持者；曾經僱用前奧地利總理塞巴斯蒂安·庫爾茲（Sebastian Kurz）；以及支持了布雷克·馬斯特（Blake Masters）與傑德·凡斯（J. D. Vance）的從政之路<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>書所舉出的政治關係。</strong> 同一章寫道：「放任主義與民主國家的民族主義者和極右派有著既密切又些許複雜的關係。」書為其中密切的一面舉的例子是：提爾成為唐納·川普（Donald Trump）及其支持者的主要財政支持者；曾經僱用前奧地利總理塞巴斯蒂安·庫爾茲（Sebastian Kurz）；以及支持了布雷克·馬斯特（Blake Masters）與傑德·凡斯（J. D. Vance）的從政之路<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>在 PayPal 的敘述中。</strong> 4-3 章在回顧線上支付的歷史時寫道：「PayPal 最初是由創始人馬克斯·列夫琴（Max Levchin）、盧克·諾塞克（Luke Nosek）和彼得·泰爾（Peter Thiel）構想出一種新的數位通貨，但很快就發展為與網際網路相容的支付處理者。」<a class="cite" href="#src-2" data-src="src-2">[2]</a> → <a href="commerce-and-trust.html">商業與信任</a></p>
 <p><strong>在結語章的提問中。</strong> 7-1 章問道：「我們是否應該像彼得·泰爾、馬克·安德森、巴拉吉·斯里納瓦桑等放任主義者希望的那樣，將個人『解放』成為原子化的代理人，不受約束也不承擔責任？」<a class="cite" href="#src-4" data-src="src-4">[4]</a> 書把這個問題，與把未來交給技術專家的路一起，放在自己不選擇的路上。→ <a href="monist-atomism.html">一元原子論</a>・<a href="marc-andreessen.html">馬克·安德森</a></p>
 <p><strong>衛谷倫的定位。</strong> <a href="glen-weyl.html">衛谷倫</a>（E. Glen Weyl）在 2022 年的隨筆中，把提爾與馬斯特合著的《Zero to One》列為 21 世紀政治思想之一「法人自由意志主義」（corporate libertarianism）的基本文獻，並把提爾列為代表人物的第一位<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
@@ -104,9 +105,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

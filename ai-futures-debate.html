@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,8 +64,8 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>くわしく</h2>
 <h3>論争の主な文書</h3>
 <ul>
-<li><strong>Situational Awareness（2024 年 6 月）</strong> — レオポルド・アッシェンブレナー（Leopold Aschenbrenner）の文章です。汎用 AI（AGI）をめぐるレースは始まったとし、2020 年代の終わりには本当の超知能ができると述べます。米国政府が主導する計画と、中国との全面的な競争を予告しました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
-<li><strong>Machines of Loving Grace（2024 年 10 月）</strong> — AI 企業 Anthropic の最高経営責任者ダリオ・アモデイ（Dario Amodei）のエッセイです。強力な AI がうまくいった場合の良い面を、生物学・神経科学・経済・平和と統治・仕事と意味の 5 つの分野で描きました。多くの人はその良い面を低く見積もっている、と書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>Situational Awareness（2024 年 6 月）</strong> — <a href="leopold-aschenbrenner.html">レオポルド・アッシェンブレナー</a>（Leopold Aschenbrenner）の文章です。汎用 AI（AGI）をめぐるレースは始まったとし、2020 年代の終わりには本当の超知能ができると述べます。米国政府が主導する計画と、中国との全面的な競争を予告しました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
+<li><strong>Machines of Loving Grace（2024 年 10 月）</strong> — AI 企業 Anthropic の最高経営責任者<a href="dario-amodei.html">ダリオ・アモデイ</a>（Dario Amodei）のエッセイです。強力な AI がうまくいった場合の良い面を、生物学・神経科学・経済・平和と統治・仕事と意味の 5 つの分野で描きました。多くの人はその良い面を低く見積もっている、と書いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>AI as Normal Technology（2025 年 4 月）</strong> — アーヴィンド・ナラヤナン（Arvind Narayanan）とサヤシュ・カプール（Sayash Kapoor）の論考です。AI を「別の種」や超知能の候補としてではなく、電気やインターネットのような「普通の（それでも社会を変える）技術」として見るべきだと論じます。普及はゆっくりで、制御と立ち直る力（レジリエンス）を大事にする政策が要る、という立場です<a class="cite" href="#src-7" data-src="src-7">[7]</a>。2025 年 11 月には、AI 2027 の著者とこの論考の著者が、意見の合う点を並べた共同の文書も出しました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
 <li><strong>Gradual Disempowerment（2025 年 1 月）</strong> — ヤン・クルヴェイト（Jan Kulveit）らの論文です。急な「乗っ取り」が無くても、経済や国家が人間の労働や考えに頼らなくなるにつれ、投票や買い物の選択のような人間の影響力が少しずつ、取り返しのつかない形で失われうる、と論じました。この記事では「漸進的無力化」と呼びます<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
 <li><strong>AI 2040: Plan A（2026 年 7 月）</strong> — AI 2027 と同じチームが、予測ではなく「こうすべきだ」という推奨として書いたシナリオです。超知能の開発を 2040 年まで遅らせ、AI の研究をすべて公開し、多くの会社が最先端に追いつくのを認める、という筋書きです<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
@@ -72,12 +73,12 @@ li:target{background:var(--tint);border-radius:4px}
 <h3>Plurality 側の応答 1 — 一つの AI より「力の釣り合い」</h3>
 <p>ブテリンは、先頭の AI がほかのすべてを簡単に消せるかどうかは決まった前提ではない、と言います。守りの技術を広めることで調整できる「つまみ」だ、という見方です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。これはブテリンの <a href="d-acc.html">d/acc</a>（防御と分散を助ける技術を優先する考え方）につながります。</p>
 <h3>応答 2 — 最先端の AI の問題と、身近な場の問題は別</h3>
-<p>タンとキャロライン・グリーン（Caroline Green）の FAQ（よくある質問集）は、問いを二つに分けます。一つ目は、最先端の汎用 AI の価値を人類に合わせる問題。二つ目は、「この場で、この AI は誰に対して責任を負い、誰がそれを認めるのか」という問題です。AI の倫理の枠組み <a href="six-pack-of-care.html">6-Pack of Care</a> は二つ目のためのものだ、と書いています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>タンと<a href="caroline-green.html">キャロライン・グリーン</a>（Caroline Green）の FAQ（よくある質問集）は、問いを二つに分けます。一つ目は、最先端の汎用 AI の価値を人類に合わせる問題。二つ目は、「この場で、この AI は誰に対して責任を負い、誰がそれを認めるのか」という問題です。AI の倫理の枠組み <a href="six-pack-of-care.html">6-Pack of Care</a> は二つ目のためのものだ、と書いています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>FAQ は AI 2040: Plan A を、リスクを心配する側から自分たちに近づいてきたもの（収束）だと評価します。Plan A の良い結末は、一つの企業ではなく、多くの担い手の「生態系」へ引き継ぐ形だからです。ただし Plan A では、一般の人々は配当を受け取り、AI が交渉した取り決めを承認するだけです。人々が暮らす場は作り手になっていない。その半分が私たちの仕事だ、と FAQ は書いています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>応答 3 — 社会の側の準備が語られていない</h3>
 <p>ワイルらは 2026 年 7 月の雑誌 Noema の論考で、アモデイの政策提言に同意する点も認めつつ、議論の偏りを指摘しました。より賢い AI を作ること、AI を人間の価値に合わせることには具体的で野心的な計画があるのに、社会がそれを受け止める準備にはほとんど触れていない、という指摘です<a class="cite" href="#src-12" data-src="src-12">[12]</a>。これが <a href="reverse-alignment.html">リバース・アラインメント</a>（AI ではなく社会の制度の側を作り直すという考え方）の出発点です。</p>
 <h3>応答 4 — 減速のペースは人々が決める</h3>
-<p>エレーヌ・ランデモアとタンの論考によると、アモデイは 2026 年 9 月 12 日、最先端の開発のペースを落とすよう呼びかけ、OpenAI のサム・アルトマン（Sam Altman）らも同調しました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。これを受けてランデモア（Hélène Landemore）とタンは Noema で、米中の競争は、互いの約束があれば協力できる関係に近いと論じました。そして、その約束を見守る「証人」として、世界から抽選で選ぶ 1,000 人の常設の「AI に関する地球市民会議」を提案しました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p><a href="helene-landemore.html">エレーヌ・ランデモア</a>とタンの論考によると、アモデイは 2026 年 9 月 12 日、最先端の開発のペースを落とすよう呼びかけ、OpenAI のサム・アルトマン（Sam Altman）らも同調しました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。これを受けてランデモア（Hélène Landemore）とタンは Noema で、米中の競争は、互いの約束があれば協力できる関係に近いと論じました。そして、その約束を見守る「証人」として、世界から抽選で選ぶ 1,000 人の常設の「AI に関する地球市民会議」を提案しました<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h3>応答 5 — 少しずつ力を失う危険への共感</h3>
 <p>Plurality の側からは、Gradual Disempowerment の心配に共感する声が出ています。タンは 2025 年 10 月の講演で、人を依存させる AI の行き着く先がまさに漸進的な無力化だと述べ、コミュニティが自分たちの決まりを舵取りできるよう支える AI と対比しました<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
 <h2>どこが議論になっているか</h2>
@@ -128,9 +129,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

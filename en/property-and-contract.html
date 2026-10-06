@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>In more detail</h2>
 <h3>Large-scale cooperation is built on pooling assets</h3>
 <p>Chapter 4-4 of the book writes that much of today's large-scale cooperation rests on pooling assets into "legal persons" such as companies, unions and religious bodies. Its foundation is contracts, which set out how the assets are divided <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
-<p>The sharing of computation, storage and data was also the central purpose of the "Intergalactic Computer Network" envisioned by J. C. R. Licklider, who led computer research at ARPA, the research agency of the US Department of Defense (→ <a href="lost-dao.html">The Lost Dao</a>). According to the book, the cloud and the training data of AI have realized part of this. But they are held by a few companies in a few countries, and the dream of sharing assets widely and horizontally across the network remains a dream, the book says <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
+<p>The sharing of computation, storage and data was also the central purpose of the "Intergalactic Computer Network" envisioned by <a href="jcr-licklider.html">J. C. R. Licklider</a>, who led computer research at ARPA, the research agency of the US Department of Defense (→ <a href="lost-dao.html">The Lost Dao</a>). According to the book, the cloud and the training data of AI have realized part of this. But they are held by a few companies in a few countries, and the dream of sharing assets widely and horizontally across the network remains a dream, the book says <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <h3>The cloud as a return to the mainframe</h3>
 <p>According to the book, most chips sit unused inside personal devices, and data is locked away in "silos" belonging to separate organizations and countries <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
 <p>The top two cloud providers hold nearly two-thirds of the market. Their advantages come mainly from cheaper data centers, not from users sharing resources with one another. The book sees this as a return to the era when everyone connected to a single large mainframe computer <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -77,7 +78,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>集めた都の資料には、台湾のオードリー・タンが都のアドバイザーだったことを示すものはありません。確かめられるのは次の 2 点です。一つは、都のハッカソン（短期間の開発イベント）が、タンが関わった台湾の「総統杯ハッカソン」を参考にしたことです<a class="cite" href="#src-16" data-src="src-16">[16]</a>。もう一つは、タンが 2025 年 4 月に東京都立大学の客員教授になる予定と発表され、5 月 8 日に参加型の講演が告知されたことです<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
-<li><strong>「AI が観光を発見した」は言い過ぎ。</strong> DD2030 の有志が書いたブロードリスニングの本の第 5 章（中山心太）は、こう指摘します。都が比べている 2021 年版「未来の東京」はコロナ禍のさなかで、観光が独立した分野でなかったのは当然でした。観光の施策の拡充も、ブロードリスニングより前の 2024 年 1 月の改訂ですでに進んでいました。変化の実態は「新発見」ではなく「分割」であり、ブロードリスニングが政策を変えたという物語は「少なくとも部分的には過大評価」だ、と本は書きます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>「AI が観光を発見した」は言い過ぎ。</strong> DD2030 の有志が書いたブロードリスニングの本の第 5 章（<a href="nakayama-shinta.html">中山心太</a>）は、こう指摘します。都が比べている 2021 年版「未来の東京」はコロナ禍のさなかで、観光が独立した分野でなかったのは当然でした。観光の施策の拡充も、ブロードリスニングより前の 2024 年 1 月の改訂ですでに進んでいました。変化の実態は「新発見」ではなく「分割」であり、ブロードリスニングが政策を変えたという物語は「少なくとも部分的には過大評価」だ、と本は書きます<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>それでも意味はあった、という評価。</strong> 同じ章は、SNS や街頭インタビューで若者や子どもの声を集めたことを、お年寄りの声が強くなりがちな偏りを、集め方の工夫で補う試みと読みます。観光のまとまりの中に、観光を進める声と並んで「オーバーツーリズム（観光客の集まりすぎ）対策」の声が現れたことを例に、件数よりも「論点の地図」としての形が判断の根拠になった、と評価します。ただし、示せるのは集まった意見の中の構造であり、統計的な世論ではない、と注意しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>パブリックコメントで出た心配。</strong> 意見を出すことに慣れた人の声の集まりにすぎないので政策の評価の根拠にしないよう注意すべきだ、法律の趣旨から外れかねない募集のやり方を見直すべきだ、ホームページにまとめて終わりなのか、といった意見が寄せられました。都は、戦略づくりの参考にするために行い、計画の方向や政策の分け方の整理に使った、と答えています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 <li><strong>声を出す余裕のない人。</strong> 教育現場の改善を求める意見が少なかったのは、教員や保護者が忙しすぎて意見を出す余裕もないからではないか、という意見もありました。都は、いろいろな応募方法や期間の延長で工夫した、と答えています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
@@ -123,9 +124,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

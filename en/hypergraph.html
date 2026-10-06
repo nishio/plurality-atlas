@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>For example</h2>
 <p><strong>A worked example (made up for illustration).</strong> Say A, B and C belong to one study group. In a dot-and-line diagram, all you can do is draw three lines: A–B, B–C and A–C. That cannot tell "three separate pairs" apart from "one group of three". In a hypergraph, you can draw {A, B, C} as one blob. If A also belongs to a work group {A, D}, then A stands where two blobs overlap.</p>
 <p><strong>Figure 4-0-B in the book.</strong> Chapter 4-0 shows "a hypergraph that visualizes people, groups, relationships, and digital assets". The dots are people and the blobs around them are groups. The shade of a blob shows the strength of the relationship. The data and computing tools inside a blob are the base on which that group works together. Arrows coming in from outside stand for the tools people need to enter the digital world <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
-<p><strong>Designing social media.</strong> The paper "Community by Design" by Glen Weyl, Audrey Tang and co-authors treats the social fabric as a hypergraph. Each blob is a community, held together by things its members know in common. On that basis, the paper proposes a social media system that rewards posts that people with different views inside a community can agree on, and posts that fairly represent the range of voices within it <a class="cite" href="#src-2" data-src="src-2">[2]</a>. civic.ai, the research project of Tang and Caroline Green, describes this paper as the "technical backbone" behind Packs 1 and 5 of their proposal, the <a href="six-pack-of-care.html">6-Pack of Care</a> <a class="cite" href="#src-3" data-src="src-3">[3]</a>. → <a href="prosocial-media.html">Prosocial media</a></p>
+<p><strong>Designing social media.</strong> The paper "Community by Design" by Glen Weyl, Audrey Tang and co-authors treats the social fabric as a hypergraph. Each blob is a community, held together by things its members know in common. On that basis, the paper proposes a social media system that rewards posts that people with different views inside a community can agree on, and posts that fairly represent the range of voices within it <a class="cite" href="#src-2" data-src="src-2">[2]</a>. civic.ai, the research project of Tang and <a href="caroline-green.html">Caroline Green</a>, describes this paper as the "technical backbone" behind Packs 1 and 5 of their proposal, the <a href="six-pack-of-care.html">6-Pack of Care</a> <a class="cite" href="#src-3" data-src="src-3">[3]</a>. → <a href="prosocial-media.html">Prosocial media</a></p>
 <h2>In more detail</h2>
 <h3>How the book explains it</h3>
 <p>Chapter 4-0 says that a hypergraph, "which extends the more common idea of a network or graph by allowing groups rather than just bilateral relationships, is a collection of 'nodes' (viz. people, represented by the dots) and 'edges' (viz. groups, represented by the blobs)." The shade of each edge or group "represents the strength of the relationship involved (viz. mathematically its 'weight' and 'direction')" <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
@@ -111,9 +112,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

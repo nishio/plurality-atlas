@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -52,7 +53,7 @@ li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/six-pack-of-care.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/six-pack-of-care.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/six-pack-of-care.html">简体中文</a></nav></header>
 <main lang="ja"><h1>6-Pack of Care（ケアの6パック）ってなに？</h1><div class='lead'>AI が人々の役に立っているかを、AI の中身だけでなく「現場の声は聞かれたか、誰が責任を持つか、失敗したら直せるか、やめられるか」で確かめるための 6 つの原則です。オードリー・タンとキャロライン・グリーンが 2025 年に示しました。</div><p>AI が役所や病院、介護の現場で使われるようになると、「この AI はちゃんと働いているのか」を誰がどう確かめるのかが問題になります。ふつうは、AI を作る会社がよいルールを書き、よく訓練すれば安心だと考えます。6-Pack of Care（シックスパック・オブ・ケア、ケアの6パック）は、それだけでは足りないと考え、<strong>AI を使う現場の人たち自身が点検し、直し、止められる手順</strong>を 6 つにまとめたものです。</p>
 <h2>ひとことで言うと</h2>
-<p>6-Pack of Care は、<strong>AI の統治（ガバナンス、どう運用し、誰が責任を持つかの決まり）のための 6 つの原則</strong>です。台湾の元デジタル担当大臣オードリー・タン（Audrey Tang、唐鳳）とキャロライン・グリーン（Caroline Green）が、2025 年にオックスフォード大学で出しました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>6-Pack of Care は、<strong>AI の統治（ガバナンス、どう運用し、誰が責任を持つかの決まり）のための 6 つの原則</strong>です。台湾の元デジタル担当大臣オードリー・タン（Audrey Tang、唐鳳）と<a href="caroline-green.html">キャロライン・グリーン</a>（Caroline Green）が、2025 年にオックスフォード大学で出しました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>問うのは、AI の性能だけではありません。「誰の声が聞かれたか」「誰が責任を負うか」「失敗をどう直すか」「いつ止めるか」です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>たとえば</h2>
 <p><strong>台湾の詐欺広告対策（2024 年）。</strong> 2024 年 3 月、Facebook に、半導体企業 NVIDIA のジェンスン・フアンになりすました AI 生成の投資詐欺広告が大量に出回りました。台湾政府は無作為に 20 万通の SMS を送り、応じた人の中から人口構成に合わせて 447 人を選びました。その人たちが 10 人ずつの卓に分かれて話し合ったのです。このように、AI や技術への対応について、無作為に選ばれた市民が話し合い、意見をまとめる集まりを「アラインメント・アセンブリ（<a href="alignment-assemblies.html">Alignment Assemblies</a>）」と呼びます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
@@ -164,9 +165,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

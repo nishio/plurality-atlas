@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>与《Plurality》的关系</h2>
 <p><strong>Plurality Tokyo 的发起人。</strong> 《广泛倾听》一书（原书名《政治・自治体・企業に広がるブロードリスニング》）介绍关治之是「Plurality Tokyo 的发起人之一」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。2024 年 7 月 23 日，关治之主持了邀请唐凤与<a href="glen-weyl.html">卫谷伦</a>（E. Glen Weyl）的「Plurality Tokyo Meetup with Audrey &amp; Glen」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="plurality-in-japan.html">Plurality 在日本是怎么传开的？</a></p>
 <p><strong>把我城对谈介绍给安野贵博。</strong> 根据同一本书，2024 年 5 月 23 日，经<a href="nishio-hirokazu.html">西尾泰和</a>介绍，关治之、<a href="anno-takahiro.html">安野贵博</a>与西尾见了面。会中，关治之介绍了用 AI 整理、呈现大量意见的工具「<a href="talk-to-the-city.html">我城对谈</a>」（Talk to the City，TTTC）。西尾在 5 月 30 日，用约 2 万件与 AI 相关的公众意见征集（行政机关公布草案、广泛征求意见的程序）试用了 TTTC。隔天 31 日，关治之在日本人工智能学会全国大会的场次「AIとデモクラシー」（AI 与民主）的主题演讲中，介绍了这个分析结果<a class="cite" href="#src-2" data-src="src-2">[2]</a>。这连结到了 2024 年都知事选举中的<a href="broad-listening.html">广泛倾听</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a></p>
-<p><strong>与唐凤、卫谷伦的三人对谈。</strong> 在 2024 年 10 月刊出的サイボウズ式（Cybozu 式）三人对谈「新概念『Plurality』を解く」中，关治之以日本公民科技第一人的身分登场（由西尾主持）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>与唐凤、卫谷伦的三人对谈。</strong> 在 2024 年 10 月刊出的<a href="cybozu.html">サイボウズ式</a>（Cybozu 式）三人对谈「新概念『Plurality』を解く」中，关治之以日本公民科技第一人的身分登场（由西尾主持）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p><strong>在台湾与唐凤的对话。</strong> 2024 年 3 月 22 日，关治之与日本代表团一起在台湾拜会唐凤。关治之说，台湾就像是 Plurality 与 Web3 新运动的震央。唐凤说明了即将完成的书，以及「数位」（digital）也可以读作「复数」的意思。关治之提到翻译成日文，以及包括 7 月 Plurality Tokyo 在内的活动，并邀请了唐凤（CC0 的英文逐字稿）<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="shuwei.html">「数位」与 ⿻ 符号</a></p>
 <p><strong>Funding the Commons Tokyo 2024 的回顾。</strong> 关治之在 note 上介绍了这场活动中卫谷伦与唐凤的座谈，以及安野与唐凤关于广泛倾听的讨论。关治之用卫谷伦的「supermodular」（超模）概念说明：数位公共财（任何人都能使用的软件或资料）越被使用，相关公共财的价值也越增加<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="supermodularity.html">超模</a>、<a href="digital-public-infrastructure.html">数位公共建设</a></p>
 <p><strong>デジタル民主主義2030 的董事会。</strong> 在<a href="dd2030.html">デジタル民主主義2030</a>（DD2030）官方网站的董事会成员栏中，关治之和<a href="suzuki-ken.html">铃木健</a>、中室牧子一起列名<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
@@ -104,9 +105,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

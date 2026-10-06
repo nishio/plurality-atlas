@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="zh-TW"><h1>什麼是靈魂綁定憑證（SBT）？</h1><div class='lead'>不能賣給別人、也不能轉讓的數位證明。它把學歷、所屬、出席、借貸承諾等，綁在本人稱為「靈魂（Soul）」的帳戶上。2022 年，維塔利克·布特林、衛谷倫、Puja Ohlhaver 把它提出為「DeSoc（去中心化社會）」，要把以金錢為中心的 Web3 重新建立在人際關係之上。</div><p>畢業證書和會員證，證明一個人真的學過什麼、屬於某個地方。如果可以用錢賣給別人，就失去意義了。可是網路上的數位證明，很多都能輕易買賣。靈魂綁定憑證（SBT）的想法，就是做出「不能賣、不能轉讓」的數位證明。</p>
 <h2>一句話說明</h2>
 <p>靈魂綁定憑證（Soulbound Token，SBT），是放在區塊鏈（任何人都能查驗的公開紀錄帳本）上、不能賣也不能轉讓的數位證明。就像畢業證書、會員證、活動參加證明一樣，它不是用來表示「用錢買得到的東西」，而是表示「這個人實際做過什麼、屬於哪裡」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>2022 年，<a href="vitalik-buterin.html">維塔利克·布特林</a>（Vitalik Buterin）、衛谷倫（E. Glen Weyl）、Puja Ohlhaver 提出構想：用 SBT 表現人與人之間的信任網絡，把以金錢往來為中心的加密貨幣世界（Web3）重新建立在社會關係之上。三人把它命名為「DeSoc」（Decentralized Society，去中心化社會）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>2022 年，<a href="vitalik-buterin.html">維塔利克·布特林</a>（Vitalik Buterin）、衛谷倫（E. Glen Weyl）、<a href="puja-ohlhaver.html">Puja Ohlhaver</a> 提出構想：用 SBT 表現人與人之間的信任網絡，把以金錢往來為中心的加密貨幣世界（Web3）重新建立在社會關係之上。三人把它命名為「DeSoc」（Decentralized Society，去中心化社會）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>舉例來說</h2>
 <p><strong>來自遊戲的「靈魂綁定」。</strong> 這個名稱來自線上遊戲《魔獸世界》（World of Warcraft）的「靈魂綁定」道具：一旦撿起，就不能轉讓或賣給其他玩家，想要最強的裝備，就只能自己和夥伴一起去打倒巨龍。布特林在 2022 年 1 月的部落格中問道：如果 NFT（網路上獨一無二的證明）也能這樣不可轉讓，是不是就不只能顯示持有者的財富，還能顯示「這個人是誰」？<a class="cite" href="#src-1" data-src="src-1">[1]</a></p>
 <p><strong>活動的參加證明。</strong> 布特林寫道，發給活動參加者的 NFT「POAP」，如果能從別人手上買到，就失去了「本人參加過」的意義。事實上，Adidas 免費發給粉絲的 POAP，在附上優先購買商品的權利後，馬上就被高價轉賣<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

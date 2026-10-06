@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>自治体の例は <a href="municipal-broad-listening.html">自治体のブロードリスニング</a> の記事にまとめます。</p>
 <h2>しくみ</h2>
 <h3>生まれた経緯</h3>
-<p>元になったのは、米国の NPO（非営利団体）AI Objectives Institute が 2023 年に作った Talk to the City（TTTC）です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>元になったのは、米国の NPO（非営利団体）<a href="ai-objectives-institute.html">AI Objectives Institute</a> が 2023 年に作った Talk to the City（TTTC）です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>安野貴博のチームは、2024 年の都知事選や、テレビ局の選挙報道、東京都の意見募集で TTTC を使いました。その中で、エンジニアでない人でもファイルを上げるだけで使えるしくみが要る、という課題がはっきりしました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>そこで TTTC の散布図版から枝分かれする形で開発が始まり、2025-03-16 に OSS として公開されました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>TTTC から何を変えたのか</h3>
@@ -94,7 +95,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>賛成と反対が同じグループに入る。</strong> 同じ話題の賛成意見と反対意見は、AI にとって「似た文章」に見えやすく、一つにまとまってしまうことがあります。ブロードリスニング本はこれをまだ解けていない課題とし、いくつかの工夫を紹介しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
 <li><strong>自治体に広まりにくい。</strong> DD2030 は自治体に声をかけましたが、動機づけの弱さ、首長と現場の温度差、人事異動、エンジニア不足などで、試しに使っても本格運用に移りにくかったといいます。多くの自治体では、分析より前に「意見が十分に集まらない」ことが課題でした<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>責任があいまいだという批判。</strong> ある市民の note 記事は、広聴AI や <a href="idobata.html">いどばた</a> のような OSS 型の市民参加は、品質や説明責任、保守の保証があいまいだと論じています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
-<li><strong>チームみらいの道具、とは限らない。</strong> ブロードリスニング本の主著者の中山心太は、2026 年 2 月に X で、チームみらいはもう TTTC も広聴AI も使っていないと書いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>チームみらいの道具、とは限らない。</strong> ブロードリスニング本の主著者の<a href="nakayama-shinta.html">中山心太</a>は、2026 年 2 月に X で、チームみらいはもう TTTC も広聴AI も使っていないと書いています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
 <p>書籍『Plurality』は広聴AI の名前を出しません。ただし 5-4「<a href="augmented-deliberation.html">拡張熟議</a>」で、元になった Talk to the City と、安野の都知事選での使い方を、ブロードリスニングの例に挙げています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。広聴AI は、その TTTC を日本で「誰でも使える部品」にしたもの、と言えます。</p>
@@ -130,9 +131,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

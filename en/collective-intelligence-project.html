@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -90,7 +91,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>Chapter 5-4 of <em>Plurality</em>, "<a href="augmented-deliberation.html">Augmented Deliberation</a>", calls CIP "the ⿻ NGO" <a class="cite" href="#src-11" data-src="src-11">[11]</a>. Besides the cooperation with Anthropic above, it writes that OpenAI "also worked closely with CIP to run a grant program on 'democratic inputs to AI'", and that on this basis OpenAI is now forming a "Collective Alignment Team" <a class="cite" href="#src-11" data-src="src-11">[11]</a>.</p>
 <p>Chapter 7-0, "Policy", lists "alignment assemblies", with a link to CIP's page, as one of the means for the public itself to take part in decisions about technology <a class="cite" href="#src-14" data-src="src-14">[14]</a>. Chapters 3-2, 4-3 and 5-0 cite the paper on CIP's website in explaining supermodularity <a class="cite" href="#src-15" data-src="src-15">[15]</a><a class="cite" href="#src-16" data-src="src-16">[16]</a>.</p>
 <p>CIP's blog also carried "We need network societies, not network states" by Siddarth, Weyl and Anne-Marie Slaughter <a class="cite" href="#src-17" data-src="src-17">[17]</a>. It is a criticism of the <a href="network-state.html">network state</a>.</p>
-<p>Tang describes herself as a Senior Research Fellow at CIP <a class="cite" href="#src-18" data-src="src-18">[18]</a>. The glossary of Tang and Caroline Green's <a href="six-pack-of-care.html">6-Pack of Care</a> lists the Alignment Assembly as a tool whose term and format "the Collective Intelligence Project developed", and presents CIP's Weval as "the working example" of shared, community-authored evaluations <a class="cite" href="#src-19" data-src="src-19">[19]</a><a class="cite" href="#src-20" data-src="src-20">[20]</a>. This thread is also covered in the article on <a href="civic-ai.html">civic AI</a>.</p>
+<p>Tang describes herself as a Senior Research Fellow at CIP <a class="cite" href="#src-18" data-src="src-18">[18]</a>. The glossary of Tang and <a href="caroline-green.html">Caroline Green</a>'s <a href="six-pack-of-care.html">6-Pack of Care</a> lists the Alignment Assembly as a tool whose term and format "the Collective Intelligence Project developed", and presents CIP's Weval as "the working example" of shared, community-authored evaluations <a class="cite" href="#src-19" data-src="src-19">[19]</a><a class="cite" href="#src-20" data-src="src-20">[20]</a>. This thread is also covered in the article on <a href="civic-ai.html">civic AI</a>.</p>
 <h2>Further reading</h2>
 <ol>
 <li>CIP white paper (English, document) — <a href="https://www.cip.org/whitepaper" target="_blank" rel="noopener">https://www.cip.org/whitepaper</a></li>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -90,7 +91,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>書籍『Plurality』の 5-4 章「<a href="augmented-deliberation.html">拡張熟議</a>」は、CIP を「⿻ の NGO」と呼んでいます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。上の Anthropic との協力のほか、OpenAI も CIP と緊密に連携して AI への民主的な意見を集める助成の仕組みを行い、それをもとに専門のチームを作りつつある、と書いています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>7-0 章「政策」は、公衆が自ら技術の決定に加われる手段の一つとして、alignment assemblies を CIP のページへのリンクつきで挙げています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。3-2 章・4-3 章・5-0 章は、スーパーモジュラリティの説明に CIP のサイトの論文を引いています<a class="cite" href="#src-15" data-src="src-15">[15]</a><a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
 <p>CIP のブログには、シッダールト、ワイル、アン＝マリー・スローター（Anne-Marie Slaughter）の「ネットワーク国家ではなくネットワーク社会を」も載りました<a class="cite" href="#src-17" data-src="src-17">[17]</a>。これは <a href="network-state.html">ネットワーク国家</a> への批判です。</p>
-<p>タンは CIP の上級研究員（Senior Research Fellow）を名乗っています<a class="cite" href="#src-18" data-src="src-18">[18]</a>。タンとキャロライン・グリーン（Caroline Green）の <a href="six-pack-of-care.html">6-Pack of Care</a> の用語集は、Alignment Assembly を CIP が言葉と形を作った道具として挙げ、CIP の Weval も、みんなで共有する評価の実例として紹介しています<a class="cite" href="#src-19" data-src="src-19">[19]</a><a class="cite" href="#src-20" data-src="src-20">[20]</a>。この流れは <a href="civic-ai.html">シビック AI</a> の記事でも扱います。</p>
+<p>タンは CIP の上級研究員（Senior Research Fellow）を名乗っています<a class="cite" href="#src-18" data-src="src-18">[18]</a>。タンと<a href="caroline-green.html">キャロライン・グリーン</a>（Caroline Green）の <a href="six-pack-of-care.html">6-Pack of Care</a> の用語集は、Alignment Assembly を CIP が言葉と形を作った道具として挙げ、CIP の Weval も、みんなで共有する評価の実例として紹介しています<a class="cite" href="#src-19" data-src="src-19">[19]</a><a class="cite" href="#src-20" data-src="src-20">[20]</a>。この流れは <a href="civic-ai.html">シビック AI</a> の記事でも扱います。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
 <li>Divya Siddarth「How AI and democracy can fix each other」（英語・講演、TED）— <a href="https://www.ted.com/talks/divya_siddarth_how_ai_and_democracy_can_fix_each_other" target="_blank" rel="noopener">https://www.ted.com/talks/divya_siddarth_how_ai_and_democracy_can_fix_each_other</a></li>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

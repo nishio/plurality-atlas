@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>一方で、この本そのものを論じたトルコ語の書評・報道・講演は、この記事のための調査（2026 年 10 月）では見つかっていません。トルコ語でタンとワイルが紹介されてきたのは、主に 2020 年のパンデミックの報道と、暗号資産のメディアです。そこでは二人は別々に登場します。</p>
 <h2>たとえば</h2>
 <p><strong>トルコ語訳『Çoğulluk』（2026 年 9 月 5〜6 日）。</strong> GitHub（文書を共同で作るサイト）の利用者 omgbbqhaxx が、本の公式の置き場を複製（fork）して、全章をトルコ語にしました。更新の記録の作者名は Yasin Aktimur です。書名は『Çoğulluk: İşbirliğine Dayalı Teknolojinin ve Demokrasinin Geleceği』（多元性：協力にもとづく技術と民主主義の未来）です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。翌日には読書用のサイトを作り、各章に「Bölümü dinle」（章を聴く）という読み上げの機能をつけました<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
-<p><strong>ハラリとタンの対談のトルコ語訳（2020 年 8 月 1 日）。</strong> ニュースサイト A3 Haber は、RadicalxChange の番組で歴史家ユヴァル・ノア・ハラリ（Yuval Noah Harari）とタンが話した対談（司会は Puja Ohlhaver）の一部を、トルコ語に訳して載せました（訳 Ayşen Tekşen）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英語の元の書き起こしも公開されています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>ハラリとタンの対談のトルコ語訳（2020 年 8 月 1 日）。</strong> ニュースサイト A3 Haber は、RadicalxChange の番組で歴史家ユヴァル・ノア・ハラリ（Yuval Noah Harari）とタンが話した対談（司会は <a href="puja-ohlhaver.html">Puja Ohlhaver</a>）の一部を、トルコ語に訳して載せました（訳 Ayşen Tekşen）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英語の元の書き起こしも公開されています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>くわしく</h2>
 <h3>翻訳はどう作られたか</h3>
 <p>最初の更新（2026 年 9 月 5 日）では、22 の章のファイルと、訳語集「SOZLUK.md」がまとめて加えられました。この更新には、共同作業者の表示がありません<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

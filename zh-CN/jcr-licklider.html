@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -94,7 +95,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>作者们与周边人士的话</h2>
 <ul>
 <li><strong>卫谷伦。</strong> 在 2022 年的书评〈Sovereign Nonsense〉中，<a href="glen-weyl.html">卫谷伦</a>（E. Glen Weyl）写道，《主权个人》（The Sovereign Individual）描绘的技术未来图像，大多已经出现在利克莱德的〈Computers and Government〉等研究论文中，并评价利克莱德或许是互联网的第一位创建者<a class="cite" href="#src-8" data-src="src-8">[8]</a>。在同一年的 podcast 中，卫谷伦说，过去六七十年影响最大的技术，来自以用户体验研究者网络为起点的利克莱德与恩格尔巴特的项目<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
-<li><strong>DeSoc 论文（2022 年）。</strong> Puja Ohlhaver、卫谷伦与维塔利克·布特林（Vitalik Buterin）写道，去中心化社会（DeSoc）支持利克莱德在「星际电脑网络」中的「人机共生」构想<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>DeSoc 论文（2022 年）。</strong> <a href="puja-ohlhaver.html">Puja Ohlhaver</a>、卫谷伦与维塔利克·布特林（Vitalik Buterin）写道，去中心化社会（DeSoc）支持利克莱德在「星际电脑网络」中的「人机共生」构想<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 <li><strong>反向对齐（2026 年）。</strong> 卫谷伦等人在 Noema 的论考，把利克莱德领导的 ARPANET，以及与它一起成长的开放标准制定，列为技术与制度无法分开的先例<a class="cite" href="#src-11" data-src="src-11">[11]</a>。→ <a href="reverse-alignment.html">反向对齐</a></li>
 <li><strong>关怀六力。</strong> 唐凤的<a href="six-pack-of-care.html">关怀六力</a>，把利克莱德的「人机共生」列为第六力「共生力」（Symbiosis）一词的由来之一。在第三力中，也把这篇论文放在把<a href="civic-ai.html">仁工智慧</a>看作人的「学徒」而非「替代」的想法系谱里<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 <li><strong>日文的介绍。</strong> ryo 的 note 介绍了书的论点：利克莱德等人构想的身分确认、支付、安全的资料共享等功能，费工又不赚钱却是社会不可或缺的，结果一直没被做出来，而利克莱德早已把它的后果预见为 8 种未来<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</li>
@@ -132,9 +133,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

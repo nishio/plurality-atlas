@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>深入了解</h2>
 <h3>大规模合作建立在资产的集中之上</h3>
 <p>书的 4-4 章写道，多元社会中的多数大规模合作，「都是通过将资产集中到『法人』实体里进行的，包括合伙关系、非营利组织、宗教和社会组织，当然还有公司」。支撑它的，是管理资产共用的合约<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>在美国国防部研究机构 ARPA 主导电脑研究的利克莱德（J. C. R. Licklider）所构思的「星际电脑网络」的核心目标之一，也是运算、储存、资料的共享（→ <a href="lost-dao.html">我们遗忘的道</a>）。书说，云端与生成式基础模型的训练资料实现了其中一部分，却被少数国家的一小部分营利实体所控制。「互联网可以实现广泛的横向资产共享 -- 这个梦想尚未实现。」<a class="cite" href="#src-2" data-src="src-2">[2]</a></p>
+<p>在美国国防部研究机构 ARPA 主导电脑研究的<a href="jcr-licklider.html">利克莱德</a>（J. C. R. Licklider）所构思的「星际电脑网络」的核心目标之一，也是运算、储存、资料的共享（→ <a href="lost-dao.html">我们遗忘的道</a>）。书说，云端与生成式基础模型的训练资料实现了其中一部分，却被少数国家的一小部分营利实体所控制。「互联网可以实现广泛的横向资产共享 -- 这个梦想尚未实现。」<a class="cite" href="#src-2" data-src="src-2">[2]</a></p>
 <h3>云端是「回到大型主机」</h3>
 <p>根据书的说法，个人装置使用的半导体数量，是云端基础建设和资料中心的好几倍，而这些设备大部分时间都很少使用。资料更是「被困在组织或司法管辖区的孤岛中」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p>前两大云端服务商占据了近三分之二的市场。云端运算的大部分收益，来自资料中心的物理成本节约，而不是来自有意义的跨租户资源共享。书说，云端运算「在很大程度上，它可说是回到了在利克支持的分时项目启动前，早已存在的集中化『大型主机』模式」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

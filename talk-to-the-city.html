@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="ja"><h1>Talk to the City（TTTC）ってなに？</h1><div class='lead'>大量の自由な意見を AI に読ませ、似た論点ごとにまとめて点の地図と要約にする、無料で公開された道具です。米国の AI Objectives Institute が作り、台湾の話し合いでも、日本のブロードリスニングの始まりでも使われました。</div><p>「ご意見をお寄せください」と呼びかけると、何千、何万という文章が届くことがあります。けれども、人がそのすべてを読み、どんな話題がどれだけ語られているかをつかむのは大変です。Talk to the City（トーク・トゥ・ザ・シティ）は、この「読みきれない意見」を AI の力で見渡せるようにする道具です。</p>
 <h2>ひとことで言うと</h2>
 <p>Talk to the City（略して TTTC）は、<strong>何百〜何万件もの自由な意見を AI に読ませ、「どんな論点が、どれくらい語られているか」を点の地図と要約にして見せるソフト</strong>です<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>作ったのは、米国の非営利団体 AI Objectives Institute（AOI）です。無料で、プログラムの中身も公開されています（オープンソース）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。こうした「大勢の声を聴く」技術を <a href="broad-listening.html">ブロードリスニング</a> と呼びます。</p>
+<p>作ったのは、米国の非営利団体 <a href="ai-objectives-institute.html">AI Objectives Institute</a>（AOI）です。無料で、プログラムの中身も公開されています（オープンソース）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。こうした「大勢の声を聴く」技術を <a href="broad-listening.html">ブロードリスニング</a> と呼びます。</p>
 <h2>たとえば</h2>
 <p><strong>台湾の「對齊大會（Alignment Assemblies）」（2023 年）。</strong> 台湾のデジタル発展部（moda）は、生成 AI について市民の意見を集めました。まず <a href="polis.html">Polis</a> でオンラインの意見を集め、その結果を TTTC で見える形にして、台北と台南での対面の話し合いの材料にしました<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。オードリー・タン（唐鳳）は、この報告では英語と中国語の意見が同じまとまりに並ぶ、と紹介しています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
 <p><strong>東京都知事選（2024 年）。</strong> 候補者の安野貴博の陣営は、X のハッシュタグ「#TOKYOAI」や匿名の意見箱に集まった声を TTTC で分析し、選挙期間中に 30 件以上のレポートを作りました。意見箱への投稿から抽出した 951 件の意見からは、子育て支援の所得制限をなくしてほしいという声が浮かび、マニフェスト（公約）の ver2.0 に反映されました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の 2024 年都知事選</a></p>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

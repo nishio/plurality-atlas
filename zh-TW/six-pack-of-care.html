@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -52,7 +53,7 @@ li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../six-pack-of-care.html">日本語</a> <a class="lang" hreflang="en" href="../en/six-pack-of-care.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/six-pack-of-care.html">简体中文</a></nav></header>
 <main lang="zh-TW"><h1>什麼是關懷六力（6-Pack of Care）？</h1><div class='lead'>檢驗 AI 是否真正為人服務的六項原則：不只看 AI 本身，也要問「現場的聲音有沒有被聽見、誰負責、出錯能不能修正、能不能停下來」。由唐鳳與 Caroline Green 在 2025 年提出。</div><p>當 AI 開始用在政府機關、醫院、長照現場，「這個 AI 真的有好好運作嗎？」該由誰、用什麼方式確認，就成了問題。一般的想法是：只要開發 AI 的公司寫好規則、好好訓練，就可以放心。關懷六力（6-Pack of Care）則認為光這樣不夠，把<strong>讓 AI 使用現場的人能自己檢查、修正、叫停的程序</strong>整理成六項。</p>
 <h2>一句話說明</h2>
-<p>關懷六力是<strong>用於 AI 治理（如何運作、由誰負責的規則）的六項原則</strong>。由臺灣前數位發展部部長唐鳳（Audrey Tang）與 Caroline Green 在 2025 年於牛津大學提出<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>關懷六力是<strong>用於 AI 治理（如何運作、由誰負責的規則）的六項原則</strong>。由臺灣前數位發展部部長唐鳳（Audrey Tang）與 <a href="caroline-green.html">Caroline Green</a> 在 2025 年於牛津大學提出<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>它問的不只是 AI 的效能，而是「誰的聲音被聽見」「誰承擔責任」「失敗怎麼修正」「什麼時候停下來」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>舉例來說</h2>
 <p><strong>臺灣的詐騙廣告對策（2024 年）。</strong> 2024 年 3 月，Facebook 上大量出現冒充半導體企業 NVIDIA 執行長黃仁勳、由 AI 生成的投資詐騙廣告。臺灣政府隨機發送 20 萬則簡訊，從回應者中依人口結構挑選 447 人，分成每桌 10 人進行討論。像這樣針對 AI 或技術的對策，由隨機抽選的公民討論、彙整意見的聚會，叫做對齊大會（<a href="alignment-assemblies.html">Alignment Assemblies</a>）<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
@@ -168,9 +169,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

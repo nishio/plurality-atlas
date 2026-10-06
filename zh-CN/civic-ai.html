@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -72,7 +73,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>宣言写道，仁工智慧不取代代议民主。它扩大倾听的范围、记录理由、让义务得到回应，但判断仍然留给人们和他们的制度<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p>根据演讲的报导文章，唐凤在 2026 年 5 月于牛津的演讲中，把「是否增强社群关怀自身的能力」当作值得打造的 AI 的试金石。报导也总结说，唐凤提供的是一种信任：接手这些系统的人，自己就能修好它们<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>名称的由来</h3>
-<p>「Civic AI」这个名称，出现在唐凤与 Caroline Green 2025 年在牛津大学 AI 伦理研究所的计划中发表的研究名称里。目标是结合 Joan Tronto 的关怀伦理与唐凤的 Plurality 构想，把「公民关怀」（civic care）纳入 AI 的设计与治理<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>「Civic AI」这个名称，出现在唐凤与 <a href="caroline-green.html">Caroline Green</a> 2025 年在牛津大学 AI 伦理研究所的计划中发表的研究名称里。目标是结合 Joan Tronto 的关怀伦理与唐凤的 Plurality 构想，把「公民关怀」（civic care）纳入 AI 的设计与治理<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
 <li><strong>「没有解决 AI 安全的核心」的批评。</strong> 这项批评，以及「让一个 AI 忠实的问题，和让 AI 们组成的社会不起冲突的问题是两回事」的回应，详见〈<a href="six-pack-of-care.html">关怀六力</a>〉。civic.ai 自己也提醒，把范围限定在在地，是设计上的选择，并不是社群真的支配着 AI 的证据<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
@@ -116,9 +117,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

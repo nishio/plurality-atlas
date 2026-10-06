@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>举例来说</h2>
 <p><strong>示意例子（为说明而虚构）。</strong> 假设 A、B、C 三人参加同一个读书会。在点和线的图里，只能画出 A–B、B–C、A–C 三条线。这样就分不出是「三对两人组」，还是「一个三人的群体」。用超图的话，可以把 {A, B, C} 画成一个区块。如果 A 另外也属于职场的群体 {A, D}，那么 A 就站在两个区块重叠的地方。</p>
 <p><strong>书中的图 4-0-B。</strong> 《多元宇宙》4-0 章有一张超图，把人、群体、关系和数位资产画在一起。点是人，圈住点的区块是群体。区块的深浅代表关系的强度。区块里的资料和运算工具，是这个群体协作的基础。从图外进来的箭头，代表人进入数位世界所需的工具<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
-<p><strong>社交媒体的设计。</strong> 卫谷伦（Glen Weyl）、唐凤（Audrey Tang）等人的论文〈Community by Design〉，把社会网络当作超图来处理。每个区块都是一个社群，围绕着成员共同知道的事情而凝聚。在此基础上，论文提出一种社交媒体的机制，奖励社群内意见不同的人都能认同的贴文，以及公平呈现社群内部多元声音的贴文<a class="cite" href="#src-2" data-src="src-2">[2]</a>。唐凤与 Caroline Green 的研究计划 civic.ai，把这篇论文介绍为其提案「<a href="six-pack-of-care.html">6-Pack of Care</a>」第 1 和第 5 支柱的「技术骨干」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="prosocial-media.html">利社会媒体</a></p>
+<p><strong>社交媒体的设计。</strong> 卫谷伦（Glen Weyl）、唐凤（Audrey Tang）等人的论文〈Community by Design〉，把社会网络当作超图来处理。每个区块都是一个社群，围绕着成员共同知道的事情而凝聚。在此基础上，论文提出一种社交媒体的机制，奖励社群内意见不同的人都能认同的贴文，以及公平呈现社群内部多元声音的贴文<a class="cite" href="#src-2" data-src="src-2">[2]</a>。唐凤与 <a href="caroline-green.html">Caroline Green</a> 的研究计划 civic.ai，把这篇论文介绍为其提案「<a href="six-pack-of-care.html">6-Pack of Care</a>」第 1 和第 5 支柱的「技术骨干」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="prosocial-media.html">利社会媒体</a></p>
 <h2>深入了解</h2>
 <h3>书中的说明</h3>
 <p>4-0 章这样说明：「超图是『节点』（即人，由点表示）和『边』（即群体，由区块表示）的集合，它扩展了更常见的网络或图的概念，允许群体关系而不仅仅是双边关系。每个边/群体的阴影，代表所涉及关系的强度（即数学上的『权重』和『方向』）」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -112,9 +113,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

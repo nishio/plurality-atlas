@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>運作方式</h2>
 <h3>兩種「效率」的拉鋸</h3>
 <p>根據布特林 2018 年的解說，如果每年把所有財產收回，再賣給出價最高的人，每樣東西都會落到最會用它的人手上。可是如果半年後就會被收回，就沒有人要蓋房子了。「讓使用者拿到」的效率，和「願意投資」的效率互相衝突<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>19 世紀的思想家亨利·喬治（Henry George）想用只對土地價值課稅、不對建物等改良課稅的方法避開這個問題。但布特林寫道，艾瑞克·波斯納（Eric Posner）與衛谷倫認為這在實務上很難，所以提出了自行申報的財產稅<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>19 世紀的思想家<a href="henry-george.html">亨利·喬治</a>（Henry George）想用只對土地價值課稅、不對建物等改良課稅的方法避開這個問題。但布特林寫道，艾瑞克·波斯納（Eric Posner）與衛谷倫認為這在實務上很難，所以提出了自行申報的財產稅<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>為什麼會誠實申報</h3>
 <p>布特林的說明是這樣的：如果稅率等於一年內這項財產被賣掉的機率，那麼申報額稍微提高時多繳的稅，就和稍微高價賣出的期望值剛好相抵。因此，沒有理由申報偏離真正價值的金額<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>布特林也介紹了另一個性質：把稅率調得比這個低，投資意願會提高，而「讓使用者拿到」的效率損失比這個小<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
@@ -115,9 +116,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

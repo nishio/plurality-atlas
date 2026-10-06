@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>Plurality とのかかわり</h2>
 <p><strong>推薦文と編集。</strong> 本の冒頭の推薦文に「イーサリアム創設者」として名を連ね、「技術が進み、政治が難しく、変化の速い 21 世紀に、自由で開かれた未来はどんな姿か。グレン、オードリーと共著者たちは説得力のある道筋を示している」と書いています（英文からの訳）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本の貢献者の一覧では、「編集（Editing）」の区分の最初に名前があります<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p><strong>本の中での扱い。</strong> 第 3-3 章「失われた道」は、web3（ブロックチェーンを使う次のインターネット）の世界の多くがリバタリアニズム（自由至上主義）と行き過ぎた金融化に引っ張られる中で、ブテリンが率いるイーサリアムの周りはインターネット本来の志とのつながりを保ち、Plurality の着想源を生んだ、と書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。本の各章は、ブテリンのブログ記事を脚注でよく引いています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
-<p><strong>ワイルとの共著。</strong> 2018 年にゾーイ・ヒッツィグ、ワイルとクアドラティック・ファンディングの論文を<a class="cite" href="#src-2" data-src="src-2">[2]</a>、2022 年にプジャ・オールハーバー、ワイルと「分散型社会（DeSoc）」の論文を書きました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>ワイルとの共著。</strong> 2018 年に<a href="zoe-hitzig.html">ゾーイ・ヒッツィグ</a>、ワイルとクアドラティック・ファンディングの論文を<a class="cite" href="#src-2" data-src="src-2">[2]</a>、2022 年に<a href="puja-ohlhaver.html">プジャ・オールハーバー</a>、ワイルと「分散型社会（DeSoc）」の論文を書きました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p><strong>2 人を引き合わせた人。</strong> 日本語版の解説で鈴木健は、ワイルとタンが出会ったのはイーサリアムのコミュニティで、ブテリンを通じてタンが紹介されたからだ、と書いています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p><strong>書評。</strong> 2024 年 8 月、ブテリンはブログで本を長く論じました。本の中身を 4 つの柱にまとめ、ワイルの前著『ラディカル・マーケット』が経済学を作り直そうとしたのに対し、『Plurality』はリベラリズム（自由主義）を作り直そうとしている、と評しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>主な考え</h2>
@@ -97,9 +98,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

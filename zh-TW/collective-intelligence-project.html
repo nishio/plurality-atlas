@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -90,7 +91,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>《Plurality》英文版 5-4 章〈<a href="augmented-deliberation.html">擴增審議</a>〉把 CIP 稱為「⿻ 的 NGO」<a class="cite" href="#src-11" data-src="src-11">[11]</a>。除了上面與 Anthropic 的合作，書中也寫道，OpenAI 與 CIP 密切合作，推動收集對 AI 之民主意見的補助機制，並以此為基礎正在成立專門的團隊<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>英文版 7-0 章〈政策〉把對齊大會列為公眾親自參與技術決策的手段之一，並附上 CIP 頁面的連結<a class="cite" href="#src-14" data-src="src-14">[14]</a>。英文版的 3-2、4-3、5-0 章，在說明超模時引用了 CIP 網站上的論文<a class="cite" href="#src-15" data-src="src-15">[15]</a><a class="cite" href="#src-16" data-src="src-16">[16]</a>。目前的繁體中文版 5-4、7-0 章沒有提到 CIP<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
 <p>CIP 的部落格也刊出了 Siddarth、衛谷倫與安·瑪麗·斯勞特（Anne-Marie Slaughter）的〈要網路社會，不要網路國家〉（We need network societies, not network states）<a class="cite" href="#src-18" data-src="src-18">[18]</a>。這是對<a href="network-state.html">網路國家</a>的批評。</p>
-<p>唐鳳自稱 CIP 的資深研究員（Senior Research Fellow）<a class="cite" href="#src-19" data-src="src-19">[19]</a>。唐鳳與 Caroline Green 的<a href="six-pack-of-care.html">關懷六力</a>（6-Pack of Care）用語集，把對齊大會列為 CIP 為其命名、塑造形式的工具，也介紹 CIP 的 Weval 是大家共享之評估的實例<a class="cite" href="#src-20" data-src="src-20">[20]</a><a class="cite" href="#src-21" data-src="src-21">[21]</a>。這條脈絡也在〈<a href="civic-ai.html">仁工智慧</a>〉中介紹。</p>
+<p>唐鳳自稱 CIP 的資深研究員（Senior Research Fellow）<a class="cite" href="#src-19" data-src="src-19">[19]</a>。唐鳳與 <a href="caroline-green.html">Caroline Green</a> 的<a href="six-pack-of-care.html">關懷六力</a>（6-Pack of Care）用語集，把對齊大會列為 CIP 為其命名、塑造形式的工具，也介紹 CIP 的 Weval 是大家共享之評估的實例<a class="cite" href="#src-20" data-src="src-20">[20]</a><a class="cite" href="#src-21" data-src="src-21">[21]</a>。這條脈絡也在〈<a href="civic-ai.html">仁工智慧</a>〉中介紹。</p>
 <h2>延伸閱讀</h2>
 <ol>
 <li>唐鳳〈商周四月專欄訪談唐鳳部長〉（2024-04-09，中文，逐字稿，談對齊大會與群眾制定的憲法）— <a href="https://sayit.archive.tw/2024-04-09-%E5%95%86%E5%91%A8%E5%9B%9B%E6%9C%88%E5%B0%88%E6%AC%84%E8%A8%AA%E8%AB%87%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF" target="_blank" rel="noopener">https://sayit.archive.tw/2024-04-09-%E5%95%86%E5%91%A8%E5%9B%9B%E6%9C%88%E5%B0%88%E6%AC%84%E8%A8%AA%E8%AB%87%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF</a></li>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -81,7 +82,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>布特林的解讀。</strong> 以太坊的發明者<a href="vitalik-buterin.html">維塔利克·布特林</a>（Vitalik Buterin）在書評中說，齊美爾的個人論是唐鳳與衛谷倫一再回到的模型，被描寫成取代個人主義和集體主義、長久被遺忘的第三條路。布特林也指出，⿻ 與自由意志主義不同的一點是：多元性不只存在於社會，也存在於每個人的內在，一個人可以同時屬於好幾個群體<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
-<p>這個想法的根據地，是 3-2 章〈相連的社會〉裡談齊美爾的一節。書在這一章依序介紹亨利·喬治（價值的連結）、齊美爾（身分）、約翰·杜威（公眾）、諾伯特·維納（模控學），作為超越<a href="monist-atomism.html">一元原子論</a>的思想家<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>這個想法的根據地，是 3-2 章〈相連的社會〉裡談齊美爾的一節。書在這一章依序介紹<a href="henry-george.html">亨利·喬治</a>（價值的連結）、齊美爾（身分）、約翰·杜威（公眾）、諾伯特·維納（模控學），作為超越<a href="monist-atomism.html">一元原子論</a>的思想家<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>下一節的<a href="emergent-publics.html">新興公眾</a>，被說成是齊美爾「個體/分身」哲學的「鏡像」。既然個人是流動的，構成個人的社交圈也一定是流動的<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p>它也和後面的章節相連。4-1 章尋找以「交織式身分識別方法」調和身分識別與保護的道路<a class="cite" href="#src-7" data-src="src-7">[7]</a>（→ <a href="identity-and-personhood.html">身分與人格權</a>、<a href="proof-of-personhood.html">人格證明</a>）。4-2 章談到齊美爾認為對群體凝聚力不可或缺的「保密」<a class="cite" href="#src-8" data-src="src-8">[8]</a>（→ <a href="plural-publics.html">多元公眾</a>）。5-4 章寫道，也許可以超越地理或簡單的人口統計，「多加利用身分多元交織的豐富特性，作為考慮包容性和代表性的基礎」<a class="cite" href="#src-9" data-src="src-9">[9]</a>（→ <a href="augmented-deliberation.html">擴增審議</a>）。</p>
 <p>日文版 3-3 章的註腳指出鈴木健的「分人」與齊美爾想法的共同點，同時加以區別：鈴木是從生物學視角更強的哲學家 Deleuze 的想法得到啟發的<a class="cite" href="#src-10" data-src="src-10">[10]</a>（目前的繁體中文版沒有這個註腳）。→ <a href="nameraka-society.html">平滑社會</a></p>
@@ -113,9 +114,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

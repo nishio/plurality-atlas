@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -72,7 +73,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>最初の試作の中心は二つでした。寄稿の優先順位を <a href="quadratic-voting.html">クアドラティック投票</a>（多くの票を一つに注ぐほど割高になる投票法）で決めること。そして、投票に使うクレジットのような、コミュニティの中だけで通じる「通貨」です<a class="cite" href="#src-10" data-src="src-10">[10]</a>。立ち上げた一人のリーダーが抱えきれなくなったコミュニティが、自分たちで続けていけるようにする、とも書いています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>ブロックチェーンとの違い</h3>
 <p>白書によれば、Gov4Git の記録は一つのコミュニティ専用です。要求がぶつかったときは、そのコミュニティの統治ルールが裁きます。だから、公開ブロックチェーンのように電気代のかかる計算競争で勝者を決める必要がありません。小型のコンピューター（Raspberry Pi）や GitHub の無料の自動実行環境でも動く、と説明しています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
-<p>白書は、公開ブロックチェーンは場所が知られているため、権威主義的な国家に狙って遮断されうる、という点も理由に挙げています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。開発者のペタル・マイムンコフ（Petar Maymounkov）は 2023 年のポッドキャストで、公開ブロックチェーンは世界規模で多くのアプリを高速に扱うために作られているが、一つのコミュニティの中で人が話し合って決める統治にはその機能の多くが要らないので、別の設計を選んだ、という趣旨を語りました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>白書は、公開ブロックチェーンは場所が知られているため、権威主義的な国家に狙って遮断されうる、という点も理由に挙げています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。開発者の<a href="petar-maymounkov.html">ペタル・マイムンコフ</a>（Petar Maymounkov）は 2023 年のポッドキャストで、公開ブロックチェーンは世界規模で多くのアプリを高速に扱うために作られているが、一つのコミュニティの中で人が話し合って決める統治にはその機能の多くが要らないので、別の設計を選んだ、という趣旨を語りました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>使い方と広がり</h3>
 <p>説明書（README）によれば、いつも必要なインフラは git の置き場所だけで、技術者でない人もデスクトップのアプリから使えます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。仕組みは PMP 専用ではなく、ほぼどんな決め方も載せられる土台で、その上で本が使ったのが PMP だ、と本のプロジェクトの説明は書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>開発チーム自身も、開発計画の管理に Gov4Git を使っています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。芸術・文化のプラットフォーム Cube Commons や、地球科学のソフトウェア EarthSciML も採用しています<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
@@ -122,9 +123,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

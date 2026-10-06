@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -55,7 +56,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>作为今日互联网原型的 1960～70 年代美国研究者，目标是<strong>用电脑让人与人连结、一起思考、一起治理</strong>。然而，在国家的研究投资萎缩、民间大企业填补空缺的过程中，这份志向的一部分没被做出来就被遗忘了：身分识别、支付、资料共享这类基础<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>书把这称为「我们遗忘的道」，并呼吁把它找回来<a class="cite" href="#src-1" data-src="src-1">[1]</a>。英文的 "Dao" 就是中文的「道」。</p>
 <h2>举例来说</h2>
-<p><strong>「星际电脑网络」（1963 年）。</strong> 在美国国防部的研究机构 ARPA 领导资讯处理办公室的约瑟夫·利克莱德（J. C. R. Licklider），以半开玩笑的口吻，把连接各研究据点的网络称为「星际电脑网络」，期望它能提供「以电脑为媒介的合作和共同治理的模式」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。利克莱德支持的史丹佛、MIT 等大学成为电脑科学的中心。受资助的道格拉斯·恩格尔巴特（Douglas Engelbart）的研究中心，发明了滑鼠等个人计算的基础元素，也和超文本（把文件彼此连结起来的机制）的发展相连<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
+<p><strong>「星际电脑网络」（1963 年）。</strong> 在美国国防部的研究机构 ARPA 领导资讯处理办公室的<a href="jcr-licklider.html">约瑟夫·利克莱德</a>（J. C. R. Licklider），以半开玩笑的口吻，把连接各研究据点的网络称为「星际电脑网络」，期望它能提供「以电脑为媒介的合作和共同治理的模式」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。利克莱德支持的史丹佛、MIT 等大学成为电脑科学的中心。受资助的道格拉斯·恩格尔巴特（Douglas Engelbart）的研究中心，发明了滑鼠等个人计算的基础元素，也和超文本（把文件彼此连结起来的机制）的发展相连<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p><strong>RFC（意见征询）。</strong> 书把史蒂芬·克罗克（Steve Crocker）开发的「意见征询」（Request for Comments, RFC）过程，称为「可以说是第一个类似于『共笔』（wiki）的非正式协作过程」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。分散在政府、企业、大学的协作者用它合作，最终促成了今天网络的通讯协定 TCP/IP。1974 年，TCP 首次作为 RFC 675 分发；1983 年，TCP/IP 成为 ARPANET 的官方协定<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p>根据书的说法，「互联网」之名，来自许多不同的在地网络相互协作的「由网络组成的网络」。这和政府自上而下的集中式网络（如法国的 Minitel）相反<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p><strong>用户的急速增加。</strong> 书写道，从 1991 年全球资讯网推出，到千禧年末，互联网的使用从大约 400 万人增长到 4 亿多人<a class="cite" href="#src-5" data-src="src-5">[5]</a>。4 亿是 400 万的 100 倍，所以是不到 10 年就增加了 100 倍以上。</p>
@@ -132,9 +133,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

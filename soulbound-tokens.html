@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="ja"><h1>ソウルバウンド・トークン（SBT）ってなに？</h1><div class='lead'>他人に売ったり渡したりできないデジタルの証明書です。学歴・所属・出席・貸し借りの約束などを、本人の「魂（Soul）」と呼ぶ口座に結びつけます。2022 年にブテリン・ワイル・オールハーバーが、お金中心の Web3 を人間関係の上に組み直す「DeSoc（分散型社会）」として提案しました。</div><p>卒業証書や会員証は、その人が実際に学んだことや、どこかに属していることの証しです。お金で他人に売れてしまったら、意味がなくなります。ところがネット上のデジタルの証明書の多くは、簡単に売り買いできてしまいます。ソウルバウンド・トークン（SBT）は、「売れない・譲れない」デジタルの証明書を作ろう、という考え方です。</p>
 <h2>ひとことで言うと</h2>
 <p>ソウルバウンド・トークン（Soulbound Token、SBT）は、ブロックチェーン（誰でも確かめられる公開の記録台帳）に載せる、売れない・譲れないデジタルの証明書です。卒業証書や会員証、イベントの参加証のように、「お金で買えるもの」ではなく「その人が実際にしたこと・属していること」を示すために使います<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>2022 年、ヴィタリック・ブテリン（Vitalik Buterin）、グレン・ワイル（E. Glen Weyl）、プジャ・オールハーバー（Puja Ohlhaver）は、SBT で人と人との信頼の網を表す構想を出しました。お金のやり取りが中心になっていた暗号資産の世界（Web3）を、社会の関係の上に組み直そうというのです。三人はこれを「DeSoc（分散型社会）」と名づけました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>2022 年、ヴィタリック・ブテリン（Vitalik Buterin）、グレン・ワイル（E. Glen Weyl）、<a href="puja-ohlhaver.html">プジャ・オールハーバー</a>（Puja Ohlhaver）は、SBT で人と人との信頼の網を表す構想を出しました。お金のやり取りが中心になっていた暗号資産の世界（Web3）を、社会の関係の上に組み直そうというのです。三人はこれを「DeSoc（分散型社会）」と名づけました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
 <p><strong>ゲームの「ソウルバウンド」から。</strong> 名前は、オンラインゲーム World of Warcraft の「ソウルバウンド」のアイテムから来ています。一度拾うと他のプレイヤーに譲ることも売ることもできないので、最強の装備が欲しければ、自分で仲間と竜を倒すしかありません。ブテリンは 2022 年 1 月のブログで、NFT（ネット上の一点物の証明）もこのように譲れないものにできたら、持ち主の富だけでなく「その人が何者か」を示せるのではないか、と問いました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>イベントの参加証。</strong> イベントに出た人に配る NFT「POAP」は、他人から買えてしまうと「本人が参加した」という意味を失う、とブテリンは書きます。実際、Adidas がファンに無料で配った POAP は、優先的に商品を買える権利がつくと、すぐに高値で転売されました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

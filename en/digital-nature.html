@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -52,7 +53,7 @@ li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="en"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../digital-nature.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/digital-nature.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/digital-nature.html">简体中文</a></nav></header>
 <main lang="en"><h1>What is Digital Nature?</h1><div class='lead'>A worldview put forward since around 2015 by the media artist and researcher Yoichi Ochiai. It refers to a state in which computers stop being tools inside screens and merge with light, sound, objects and bodies to become an environment like &quot;nature&quot;. A text under Ochiai&#x27;s name says it parts ways with Plurality over whether humans or the environment take the lead.</div><p>Today we use computers through the "screens" of smartphones and laptops. But what if computers leapt out of the screen and melted into our surroundings, like air, light or sound? "Digital Nature" is a term for thinking about how to understand such a world and how to live in it. In Japan, it is sometimes discussed in comparison with Plurality.</p>
 <h2>In short</h2>
-<p>Digital Nature (計算機自然, literally "computational nature") is a term of Yoichi Ochiai, a Japanese media artist and researcher. It refers to a state in which computers stop being "tools" inside screens and become the "environment" around us itself, like air or a forest <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p>Digital Nature (計算機自然, literally "computational nature") is a term of <a href="ochiai-yoichi.html">Yoichi Ochiai</a>, a Japanese media artist and researcher. It refers to a state in which computers stop being "tools" inside screens and become the "environment" around us itself, like air or a forest <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>It is also the name of a question: how to live in a world where the boundaries between people and machines, and between the natural and the artificial, have become blurred <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <h2>For example</h2>
 <p><strong>Research on levitating objects with sound (2010s).</strong> Ochiai has done research on using sound waves to float small objects in the air and move them. An essay under Ochiai's name looks back on this as an engineering realization of the idea of releasing information that had been confined to screens into real space: the stage at which computation leaves the screen and can be felt as sound, light, air and touch <a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

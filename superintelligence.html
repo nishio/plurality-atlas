@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>書籍『Plurality』の著者オードリー・タン（Audrey Tang）とグレン・ワイル（E. Glen Weyl）は、この言葉を読み替えます。超知能はデータセンターで作るものではなく、<strong>すでにここにいる、協働する私たち自身だ</strong>、というのです<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>たとえば</h2>
 <p><strong>AI 企業の宣言（2023〜2025 年）。</strong> OpenAI の経営陣は 2023 年 5 月、汎用 AI（AGI）よりさらに有能な将来の AI として超知能の統治を論じました。10 年以内に AI がほとんどの分野で専門家を超えうるとして、国際原子力機関（IAEA）のような国際機関を提案しています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
-<p>OpenAI の経営陣の一人だったイリヤ・サツケバー（Ilya Sutskever）らは 2024 年 6 月、超知能は手の届くところにあるとして新しい会社 Safe Superintelligence Inc. を作りました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。Meta のマーク・ザッカーバーグ（Mark Zuckerberg）は 2025 年 7 月、一人ひとりに個人向けの超知能を届けると書きました<a class="cite" href="#src-7" data-src="src-7">[7]</a>。Microsoft AI のムスタファ・スレイマン（Mustafa Suleyman）は 2025 年 11 月、何でも自分で決める存在ではなく、分野を限った「人間中心の超知能」を目指すと発表しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>OpenAI の経営陣の一人だったイリヤ・サツケバー（Ilya Sutskever）らは 2024 年 6 月、超知能は手の届くところにあるとして新しい会社 Safe Superintelligence Inc. を作りました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。Meta のマーク・ザッカーバーグ（Mark Zuckerberg）は 2025 年 7 月、一人ひとりに個人向けの超知能を届けると書きました<a class="cite" href="#src-7" data-src="src-7">[7]</a>。Microsoft AI の<a href="mustafa-suleyman.html">ムスタファ・スレイマン</a>（Mustafa Suleyman）は 2025 年 11 月、何でも自分で決める存在ではなく、分野を限った「人間中心の超知能」を目指すと発表しています<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p><strong>禁止を求める声明（2025 年 10 月）。</strong> Future of Life Institute が呼びかけた声明は、多くの AI 企業が今後 10 年で人類をあらゆる知的作業で上回る超知能を作ると言っている、と指摘しました。そして、安全で制御できるという広い科学的な合意と、人々の強い賛同が得られるまで、開発を禁止するよう求めました。2026 年 9 月 24 日時点の署名は 75,329 件です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p><strong>「私たち人民こそ本当の超知能」（2026 年 5 月）。</strong> タンは MIT SOLVE 2026 の基調講演を、こう始めました。「今日は超知能の話をしたい。超知能は、私にとってどこかのデータセンターで作るものではない。この部屋にある。私たち全員の中にある。それは私たちだ」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。問うべきは、いま作っている技術がその超知能を大きくするのか、押しのけるのかだ、とタンは述べています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>くわしく</h2>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

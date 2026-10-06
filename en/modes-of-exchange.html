@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -50,7 +51,7 @@ a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;p
 .cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
 li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="en"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">A Plurality Atlas</a><nav class="langs"><a class="lang" hreflang="ja" href="../modes-of-exchange.html">日本語</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/modes-of-exchange.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/modes-of-exchange.html">简体中文</a></nav></header>
-<main lang="en"><h1>What are modes of exchange (Kojin Karatani)?</h1><div class='lead'>A theory by the Japanese philosopher Kojin Karatani that divides societies into four types by what people exchange with one another and how: gift and return, domination and protection, money and commodities, and a fourth form not yet realized. Audrey Tang calls this fourth form &quot;mode of exchange X&quot; and openly acknowledges its strong influence.</div><p>We give things to family without expecting anything back. We pay taxes to the government and receive public services in return. At a shop we buy things with money. Every day we take part in different kinds of "exchange". Kojin Karatani's theory of modes of exchange tries to read how societies work from these kinds of exchange. It is also part of the foundation of Audrey Tang's work.</p>
+<main lang="en"><h1>What are modes of exchange (Kojin Karatani)?</h1><div class='lead'>A theory by the Japanese philosopher Kojin Karatani that divides societies into four types by what people exchange with one another and how: gift and return, domination and protection, money and commodities, and a fourth form not yet realized. Audrey Tang calls this fourth form &quot;mode of exchange X&quot; and openly acknowledges its strong influence.</div><p>We give things to family without expecting anything back. We pay taxes to the government and receive public services in return. At a shop we buy things with money. Every day we take part in different kinds of "exchange". <a href="karatani-kojin.html">Kojin Karatani</a>'s theory of modes of exchange tries to read how societies work from these kinds of exchange. It is also part of the foundation of Audrey Tang's work.</p>
 <h2>In short</h2>
 <p>Modes of exchange is a theory put forward by the Japanese philosopher Kojin Karatani. It looks at how societies work in terms of "what people exchange with one another, and how" <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>There are three forms of exchange. A is giving gifts and returning them, B is being protected in return for obeying, and C is buying things with money. And, the theory says, there is a fourth, D, that is none of these <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
@@ -156,9 +157,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

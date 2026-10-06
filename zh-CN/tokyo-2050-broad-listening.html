@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -78,7 +79,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>在本站搜集的东京都资料中，没有任何资料显示台湾的唐凤曾担任东京都的顾问。能确认的有以下两点。第一，东京都的黑客松（短期的开发活动）参考了唐凤参与过的台湾「总统杯黑客松」<a class="cite" href="#src-16" data-src="src-16">[16]</a>。第二，东京都宣布唐凤预定在 2025 年 4 月成为东京都立大学的客座教授，并预告了 5 月 8 日的参与式演讲<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
 <h2>争议与批评</h2>
 <ul>
-<li><strong>「AI 发现了观光」是言过其实。</strong> DD2030 志愿者写的《广泛倾听》（原书名《政治・自治体・企業に広がるブロードリスニング》）第 5 章（中山心太）指出：东京都拿来比较的 2021 年版「未来的东京」，是在新冠疫情期间制定的，观光不是独立的领域是理所当然的；观光施策的扩充，也在广泛倾听之前的 2024 年 1 月修订中就已经在推动。这本书写道，变化的实态不是「新发现」而是「分割」，「广泛倾听改变了政策」这个故事「至少有一部分是过度评价」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>「AI 发现了观光」是言过其实。</strong> DD2030 志愿者写的《广泛倾听》（原书名《政治・自治体・企業に広がるブロードリスニング》）第 5 章（<a href="nakayama-shinta.html">中山心太</a>）指出：东京都拿来比较的 2021 年版「未来的东京」，是在新冠疫情期间制定的，观光不是独立的领域是理所当然的；观光施策的扩充，也在广泛倾听之前的 2024 年 1 月修订中就已经在推动。这本书写道，变化的实态不是「新发现」而是「分割」，「广泛倾听改变了政策」这个故事「至少有一部分是过度评价」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>尽管如此仍有意义的评价。</strong> 同一章把透过社交媒体与街头访问收集年轻人与儿童的声音，解读为用收集方式的巧思，去弥补高龄者声音往往较强的偏差的尝试。这一章以观光群组中，除了推动观光的声音之外，也出现了「过度观光（观光客过度集中）对策」的声音为例，评价说比起件数，作为「论点地图」的形态成了判断的依据。不过这一章也提醒，能呈现的只是所收集意见内部的结构，而不是统计上的舆论<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>公众意见征集中提出的担忧。</strong> 有人提出：这只是习惯发表意见的人的声音集合，应注意不要当作政策评估的依据；应该重新检讨可能偏离法律宗旨的征集方式；是不是整理在网页上就结束了。东京都回答，这是为了作为战略制定的参考而进行的，用于整理计划的方向与政策分类<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 <li><strong>没有余力发声的人。</strong> 也有意见认为，要求改善教育现场的意见之所以少，是不是因为教师和家长太忙，连提出意见的余力都没有。东京都回答，已透过多种应征方式与延长期间下了功夫<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

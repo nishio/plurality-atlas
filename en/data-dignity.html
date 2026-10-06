@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p><strong>The translator's case (2018).</strong> In an essay in <em>Harvard Business Review</em>, the computer scientist Jaron Lanier and the economist E. Glen Weyl pointed out a contradiction in machine translation. Machine translation threatens the work of human translators. Yet to keep up with new words and trends, it needs large amounts of fresh data every day from those very translators <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>Someone who subtitles foreign films for their friends has no idea how much value they are giving away. If people were honestly told that they are needed, the two argue, they would be paid and would take pride in providing better data <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p><strong>Taiwan's "data coalitions".</strong> According to the book <em>⿻ Plurality</em>, Taiwan's Presidential Hackathon (a contest for solving social problems with technology) "convened mixed teams of civil servants, academics, activists and technologists to propose tools, social practices and collective data custody arrangements that allowed them to 'collectively bargain' with their data", supported by the government's program of "data coalitions". Examples given include air quality monitoring and early warning of wildfires <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
-<p><strong>Data coalitions in the 6-Pack of Care.</strong> The <a href="six-pack-of-care.html">6-Pack of Care</a> by Audrey Tang and Caroline Green treats existing community institutions as data coalitions. In its glossary's words, "an existing community institution — a neighbourhood association, tribal council, union, craft cooperative, or religious congregation — acts as steward of knowledge its members authorise it to manage. It bargains the Engagement Contract, decides what may be shared and what stays offline, and would receive settlement collectively rather than per person" <a class="cite" href="#src-4" data-src="src-4">[4]</a>. → <a href="kami.html">Kami</a></p>
+<p><strong>Data coalitions in the 6-Pack of Care.</strong> The <a href="six-pack-of-care.html">6-Pack of Care</a> by Audrey Tang and <a href="caroline-green.html">Caroline Green</a> treats existing community institutions as data coalitions. In its glossary's words, "an existing community institution — a neighbourhood association, tribal council, union, craft cooperative, or religious congregation — acts as steward of knowledge its members authorise it to manage. It bargains the Engagement Contract, decides what may be shared and what stays offline, and would receive settlement collectively rather than per person" <a class="cite" href="#src-4" data-src="src-4">[4]</a>. → <a href="kami.html">Kami</a></p>
 <h2>In more detail</h2>
 <h3>The other side of "free"</h3>
 <p>The HBR essay criticizes how today's big internet companies work. They let people use services for free and collect the cost from third parties who want to influence those users. As a result, the essay says, society is being built not on consensual dialogue but on manipulation poured in behind the scenes <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
@@ -120,9 +121,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

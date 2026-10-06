@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -72,7 +73,7 @@ li:target{background:var(--tint);border-radius:4px}
 </ol>
 <p>The book sums up the first like this: "perhaps the greatest paradox of global capitalism is that it is at once the largest scale example of collaboration and yet has trouble precisely supporting the forms of technological collaboration that it heralds" <a class="cite" href="#src-7" data-src="src-7">[7]</a>. It also says that today's remedies, such as antitrust, labor unions, subsidies and redistribution, have their own limits: they tend to be rigid, struggle to cross national borders, are run by administrators with too little information, or get captured by interested parties <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
 <h3>Tools for Social Markets</h3>
-<p>The book lists tools such as the following, in a line of thinking descended from the 19th-century economist Henry George <a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>:</p>
+<p>The book lists tools such as the following, in a line of thinking descended from the 19th-century economist <a href="henry-george.html">Henry George</a> <a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-9" data-src="src-9">[9]</a>:</p>
 <ul>
 <li><strong>Partial common ownership.</strong> The self-assessed property value system described above.</li>
 <li><strong>Quadratic Funding.</strong> A fund matches individual donations. In the book's words, the matching funds "should be proportioned to the square of the sum of square roots of individual contributions, giving greater weight to a large number of small contributors than to a few large ones".</li>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -79,7 +80,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>Buterin explains that QF's matching makes up for the benefit that one person's donation brings to others. If you calculate this for every pair of donors and add it all up, he says, you get exactly the QF formula <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>Buterin also writes that QF can be seen as a special case of <a href="quadratic-voting.html">Quadratic Voting</a>, in which the donors vote in favor and the matching fund votes against <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <h3>Where it came from</h3>
-<p>The original paper is "A Flexible Design for Funding Public Goods", published in 2018 by Buterin, Zoë Hitzig and E. Glen Weyl. According to its abstract, it extends the idea of QV to funding; under certain conditions it can produce the optimal amount of public goods, and it could be used for campaign finance, open-source software, news media and city public projects <a class="cite" href="#src-9" data-src="src-9">[9]</a>.</p>
+<p>The original paper is "A Flexible Design for Funding Public Goods", published in 2018 by Buterin, <a href="zoe-hitzig.html">Zoë Hitzig</a> and E. Glen Weyl. According to its abstract, it extends the idea of QV to funding; under certain conditions it can produce the optimal amount of public goods, and it could be used for campaign finance, open-source software, news media and city public projects <a class="cite" href="#src-9" data-src="src-9">[9]</a>.</p>
 <h3>The book's framing, and connection-aware QF</h3>
 <p>In chapter 5-7, the book says QF was derived "under similar assumptions of atomized behavior" — that is, assuming people act in isolation — and that "recently designs have stretched beyond traditional individualistic designs to account for ⿻ group interests and affiliations" <a class="cite" href="#src-10" data-src="src-10">[10]</a>.</p>
 <p>A 2023 essay by Weyl and colleagues argued that the proof of QF's optimality relies on the assumption that people are isolated and act only for their own benefit, so it is not optimal among ordinary humans who coordinate even a little. It says that projects supported by diverse groups should receive more than those supported by groups of similar people — which is exactly the goal of Plurality <a class="cite" href="#src-11" data-src="src-11">[11]</a>. According to a 2025 report, a version incorporating this idea, Connection-Oriented QF (CO-QF), was used in 89% of Gitcoin's grant programs and distributed more than $4 million <a class="cite" href="#src-12" data-src="src-12">[12]</a>.</p>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>くわしく</h2>
 <h3>誰が作ったのか</h3>
 <p>AOI の共同創設者ブリトニー・ギャラガー（Brittney Gallagher）は、2024 年 5 月のタンとの会合で、タンの仕事がもともとピーター・エッカーズリー（Peter Eckersley）と自分に着想を与えた、と述べています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
-<p>中山心太の広聴AI の技術解説スライドは、AOI を、人間の主体性を守り強めるように AI を導くことを目的に作られた NPO だと紹介しています。創設者のエッカーズリーは、ネットの通信を安全にする仕組み Let's Encrypt の創設者の一人で、病気で亡くなった、と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><a href="nakayama-shinta.html">中山心太</a>の広聴AI の技術解説スライドは、AOI を、人間の主体性を守り強めるように AI を導くことを目的に作られた NPO だと紹介しています。創設者のエッカーズリーは、ネットの通信を安全にする仕組み Let's Encrypt の創設者の一人で、病気で亡くなった、と書いています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>西尾泰和の勉強会のメモは、AOI をエッカーズリーが 2021 年に作った非営利組織だとしています。エッカーズリーは 2022 年に亡くなり、デゲル・トゥラン（Deger Turan）とギャラガーが中心となって活動を引き継いでいる、と書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>TTTC はどう生まれたか</h3>
 <p>アンダース・サンドバーグ（Anders Sandberg）は、TTTC はもともと、AI を使って大勢の人々の好みを引き出すことについて自分たちが話し合う中で、エッカーズリーが考え出したものだ、という趣旨の投稿をしています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
@@ -124,9 +125,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

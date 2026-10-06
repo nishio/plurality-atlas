@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -55,7 +56,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>The American researchers of the 1960s and 70s whose work became today's internet aimed for <strong>people to connect with one another, think together and govern together through computers</strong>. But as government research funding dwindled and large private companies filled the gap, part of that ambition was never built and was forgotten: foundations such as identity, payments and data sharing <a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <p>The book calls this "the lost dao" and calls for recovering it <a class="cite" href="#src-1" data-src="src-1">[1]</a>. "Dao" is the Chinese word 道, meaning "way" or "path".</p>
 <h2>For example</h2>
-<p><strong>The "Intergalactic Computer Network" (1963).</strong> J. C. R. Licklider, who led the information processing office at ARPA, a research agency of the US Department of Defense, "dubbed the network of collaboration between these hubs, with his usual tongue-in-cheek, the 'Intergalactic Computer Network'". He wanted it to be a model of collaboration and shared governance through computers. The five universities he supported, including Stanford and MIT, became centers of computer science. From the laboratory of Douglas Engelbart, which he also funded, came the mouse and "hypertext", which links texts to one another <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
+<p><strong>The "Intergalactic Computer Network" (1963).</strong> <a href="jcr-licklider.html">J. C. R. Licklider</a>, who led the information processing office at ARPA, a research agency of the US Department of Defense, "dubbed the network of collaboration between these hubs, with his usual tongue-in-cheek, the 'Intergalactic Computer Network'". He wanted it to be a model of collaboration and shared governance through computers. The five universities he supported, including Stanford and MIT, became centers of computer science. From the laboratory of Douglas Engelbart, which he also funded, came the mouse and "hypertext", which links texts to one another <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
 <p><strong>RFCs (Requests for Comments).</strong> The book calls the "Request for Comments" (RFC) process started by Steve Crocker "arguably one of the first 'wiki'-like processes of informal and mostly additive collaboration across many geographically and sectorally (governmental, corporate, university) dispersed collaborators". It led to TCP/IP, the communication rules of today's internet. TCP was first circulated as an RFC in 1974, and TCP/IP became the official standard in 1983 <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
 <p>According to the book, the name "internet" comes from "the vision of a 'network of networks'": many diverse local networks that could interoperate. This was "in contrast to centralized networks (such as France's concurrent Minitel) that were standardized from the top down by a government" <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
 <p><strong>A surge in users.</strong> According to the book, "From the launch of Berners-Lee's World Wide Web (WWW) in 1991, internet usage grew from roughly 4 million people (mostly in North America) to over 400 million (mostly around the world) by the end of the millennium" <a class="cite" href="#src-5" data-src="src-5">[5]</a>. Since 400 million is 100 times 4 million, that is more than a hundredfold increase in under ten years.</p>
@@ -130,9 +131,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

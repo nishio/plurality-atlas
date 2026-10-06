@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="en"><h1>What is Talk to the City (TTTC)?</h1><div class='lead'>A free, openly published tool that has AI read large numbers of free-form comments, group them by similar points, and turn them into a map of dots with summaries. Built by the US-based AI Objectives Institute, it has been used in discussions in Taiwan and at the start of broad listening in Japan.</div><p>Ask the public for its views and you may get thousands, even tens of thousands, of written replies. But reading all of them, and grasping which topics come up and how often, is hard work for people. Talk to the City is a tool that uses AI to give an overview of these "too many to read" opinions.</p>
 <h2>In short</h2>
 <p>Talk to the City (TTTC for short) is <strong>software that has AI read hundreds to tens of thousands of free-form comments and shows, as a map of dots with summaries, which points are being raised and how often</strong> <a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
-<p>It was built by the AI Objectives Institute (AOI), a US nonprofit. It is free, and its program code is public (open source) <a class="cite" href="#src-1" data-src="src-1">[1]</a>. Technology of this kind, for listening to many voices, is called <a href="broad-listening.html">broad listening</a>.</p>
+<p>It was built by the <a href="ai-objectives-institute.html">AI Objectives Institute</a> (AOI), a US nonprofit. It is free, and its program code is public (open source) <a class="cite" href="#src-1" data-src="src-1">[1]</a>. Technology of this kind, for listening to many voices, is called <a href="broad-listening.html">broad listening</a>.</p>
 <h2>For example</h2>
 <p><strong>Taiwan's Alignment Assemblies (2023).</strong> Taiwan's Ministry of Digital Affairs (moda) gathered citizens' views on generative AI. It first collected opinions online with <a href="polis.html">Polis</a>, then made the results visible with TTTC and used them as material for face-to-face discussions in Taipei and Tainan <a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>. Audrey Tang noted that in this report, English and Chinese comments appear side by side in the same groups <a class="cite" href="#src-5" data-src="src-5">[5]</a>. → <a href="alignment-assemblies.html">Alignment Assemblies</a></p>
 <p><strong>The Tokyo governor's election (2024).</strong> The campaign of the candidate Takahiro Anno analyzed with TTTC the voices gathered through the hashtag "#TOKYOAI" on X and an anonymous suggestion box, producing more than 30 reports during the campaign. From the 951 opinions extracted from posts to the suggestion box came calls to remove the income cap on child-rearing support, which were reflected in version 2.0 of the manifesto (the list of campaign promises) <a class="cite" href="#src-6" data-src="src-6">[6]</a>. → <a href="anno-2024-tokyo-campaign.html">Takahiro Anno's 2024 Tokyo campaign</a></p>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

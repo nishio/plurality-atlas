@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -84,7 +85,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>人が安定して保てる関係は約 150 人と言われます（ダンバー数）。だから支えが要る、と本は言います<a class="cite" href="#src-10" data-src="src-10">[10]</a>。本は二つの形を挙げます。一つは、中くらいの規模の確認役の組織をたくさん置く形です。もう一つは、「友だちの友だち」をたどって信頼をつなぐ形です。本は数の例で見積もります。100 億人がそれぞれ 100 の確認役の組織と関係を持ち、確認がうまくいくには、出会った 2 人が 5 つ以上の所属を共有している必要があるとします。所属が無作為に分かれていると仮定すると、300 の確認役が共存しても、無作為な 2 人の確認が失敗する確率は数百万分の 1 にとどまります。実際には出会いも所属も無作為ではなく、5 つの共有がいつも要るわけでもないので、もっと多くの確認役が成り立ちうる、と本は言います。それでも人口よりはるかに少なく、たとえば 10 万ほど（perhaps around 100,000）だろう、としています。そして両方を組み合わせれば、使えて、しかも私的な ID の世界がつくれる、と論じます<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>ID は「集まり」の問題でもある</h3>
 <p>私たちについての情報のほとんどは、ほかの人も知っていて、ほかの人の情報でもあります。だから守るべきなのは、情報を隠すことより、<strong>情報がもともとの文脈にとどまること</strong>だ、と本は言います。プライバシー研究者ヘレン・ニッセンバウム（Helen Nissenbaum）が「文脈の完全性」と呼ぶものです<a class="cite" href="#src-11" data-src="src-11">[11]</a>。それは集団の決まりを守ること、つまり集まる自由の問題になる、と本は結びます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。これは次の章の <a href="plural-publics.html">⿻ 公衆</a> につながります。</p>
-<p>この考え方は、本より前から、グレン・ワイルらのブログの連載（2019 年）や、ワイル、プジャ・オールハーバー、ヴィタリック・ブテリンの論文（2022 年）でも展開されていました<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>この考え方は、本より前から、グレン・ワイルらのブログの連載（2019 年）や、ワイル、<a href="puja-ohlhaver.html">プジャ・オールハーバー</a>、ヴィタリック・ブテリンの論文（2022 年）でも展開されていました<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
 <li><strong>ブテリンの評価。</strong> イーサリアムの創始者ヴィタリック・ブテリン（Vitalik Buterin）は 2024 年の書評で、本の ID 論の中心を、一つの要素だけに頼る方法はどれも弱すぎるので、いくつもの要素を組み合わせるべきだ、という点にあるとまとめました。取り戻しの仕組みについては、各人が信頼する相手を選び、間違えても影響はその人だけにとどまるので分かりやすい、と認めています。一方、全員に同じお金を配る制度や投票は、共同体の全員についての合意が要るので難しい、と指摘します<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

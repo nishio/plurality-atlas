@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p><strong>翻譯者的例子（2018 年）。</strong> 電腦科學家杰倫·拉尼爾（Jaron Lanier）與經濟學者衛谷倫（E. Glen Weyl）在《哈佛商業評論》（Harvard Business Review）的文章中指出自動翻譯的矛盾：自動翻譯威脅著人類譯者的工作，卻又為了跟上新詞和流行，每天都需要來自這些譯者的大量新資料<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>替朋友幫外國電影上字幕的人，並不知道自己付出了多少價值。兩人主張，如果老實告訴大家他們是被需要的，人們就會收取報酬，並帶著自豪提供更好的資料<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>臺灣的「資料聯盟」。</strong> 根據《多元宇宙》，臺灣的總統盃黑客松（用技術解決社會課題的競賽），集合了「公務員、第三部門、學者、活動和技術專家組成的混合隊伍」，「並在政府支持下組成資料聯盟，透過集體協商來處理海洋污染、空氣品質監測、野火預警系統，和一系列不平等議題」<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
-<p><strong>關懷六力的資料聯盟。</strong> 唐鳳（Audrey Tang）與 Caroline Green 的<a href="six-pack-of-care.html">關懷六力</a>（6-Pack of Care），把社區協會、工會、合作社、宗教團體等既有的共同體組織，定位為「資料聯盟」（data coalition）。組織成為成員所託付之知識的管理者，和 AI 談判使用契約，決定哪些要分享、哪些不放上網路；報酬也不是按個人，而是以集體方式領取<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="kami.html">地神</a></p>
+<p><strong>關懷六力的資料聯盟。</strong> 唐鳳（Audrey Tang）與 <a href="caroline-green.html">Caroline Green</a> 的<a href="six-pack-of-care.html">關懷六力</a>（6-Pack of Care），把社區協會、工會、合作社、宗教團體等既有的共同體組織，定位為「資料聯盟」（data coalition）。組織成為成員所託付之知識的管理者，和 AI 談判使用契約，決定哪些要分享、哪些不放上網路；報酬也不是按個人，而是以集體方式領取<a class="cite" href="#src-4" data-src="src-4">[4]</a>。→ <a href="kami.html">地神</a></p>
 <h2>深入了解</h2>
 <h3>「免費」的背後</h3>
 <p>《哈佛商業評論》的文章批評現今網路大公司的模式：讓人免費使用服務，費用則向想影響使用者的第三方收取。結果社會不是建立在經過同意的對話上，而是建立在偷偷灌注的操縱上<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
@@ -121,9 +122,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

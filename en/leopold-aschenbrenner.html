@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -54,6 +55,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>In short</h2>
 <p>Leopold Aschenbrenner is a researcher who was one of the first members of OpenAI's "Superalignment" team, which researched the safety of superintelligence, when it began <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>In June 2024, Aschenbrenner published a series of essays, <em>Situational Awareness: The Decade Ahead</em>. They argue that AGI (artificial general intelligence, AI that can do a broad range of work as humans do) could appear around 2027, and that because superintelligence would give a decisive economic and military advantage, the free world must win the race <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="superintelligence.html">Superintelligence</a></p>
+<p>On the Dwarkesh Podcast in the same month, June 2024, Aschenbrenner said he was launching an investment firm that would bet on AGI and superintelligence, with anchor investments from Patrick Collison, John Collison, Daniel Gross and Nat Friedman <a class="cite" href="#src-1" data-src="src-1">[1]</a>. What the firm has done since then is not covered in this site's materials.</p>
 <h2>Connection to Plurality</h2>
 <p><strong>No direct mention by the book, Weyl or Tang.</strong> In the book <em>Plurality</em> (in its various language editions) and in the records of Glen Weyl's and Audrey Tang's talks and conversations, no passage has been found that discusses Aschenbrenner or <em>Situational Awareness</em> by name. The one exception is the conversation described below, in which the host mentioned the essays by name.</p>
 <p><strong>Buterin's mention.</strong> In "d/acc: one year later" (January 2025), <a href="vitalik-buterin.html">Vitalik Buterin</a> wrote that regulation of AI hardware is being considered, as with export controls, in a spirit of trusting one's own side but not the other side. As an example, he cites Aschenbrenner's argument that the US should first race to gain a decisive advantage, and then effectively make China accept an agreement limiting the number of computers it can run. Buterin sees this approach as dangerous, liable to combine the drawbacks of both racing and centralization. If limits are needed, in Buterin's view, the effort should go into limiting everyone equally and building mechanisms for cooperation, rather than one side dominating the others <a class="cite" href="#src-3" data-src="src-3">[3]</a>. → <a href="d-acc.html">d/acc</a></p>
@@ -104,9 +106,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

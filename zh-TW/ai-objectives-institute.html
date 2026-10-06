@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>深入了解</h2>
 <h3>由誰創立</h3>
 <p>AOI 的共同創辦人 Brittney Gallagher 在 2024 年 5 月與唐鳳的會談中說，唐鳳的工作最初啟發了 Peter Eckersley 和自己<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
-<p>中山心太解說広聴AI 技術的投影片，把 AOI 介紹為以引導 AI 保護並增強人的主體性為目的而成立的 NPO，並寫道創辦人 Eckersley 是讓網路通訊安全的機制 Let's Encrypt 的創辦人之一，已因病過世<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p><a href="nakayama-shinta.html">中山心太</a>解說広聴AI 技術的投影片，把 AOI 介紹為以引導 AI 保護並增強人的主體性為目的而成立的 NPO，並寫道創辦人 Eckersley 是讓網路通訊安全的機制 Let's Encrypt 的創辦人之一，已因病過世<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>西尾泰和讀書會的筆記寫道，AOI 是 Eckersley 在 2021 年創立的非營利組織；Eckersley 在 2022 年過世，由 Deger Turan 與 Gallagher 為中心接續活動<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>TTTC 是怎麼誕生的</h3>
 <p>Anders Sandberg 發文表示，大意是：TTTC 原本是 Eckersley 在大家討論如何用 AI 引出大量人群的偏好時想出來的<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

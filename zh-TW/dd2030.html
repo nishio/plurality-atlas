@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>DD2030 標榜不偏向特定政黨的「政治中立」，以相同條件把工具提供給地方政府，以及執政黨、在野黨的政黨<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>舉例來說</h2>
 <p><strong>広聴AI。</strong> 用 AI 整理地方政府問卷自由填答的工具。香川縣宇多津町、岩手縣、澀谷區、廣島縣等地試用過<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。詳見〈<a href="kouchou-ai.html">広聴AI</a>〉。</p>
-<p><strong>いどばた（Idobata）。</strong> 讓每個人各自和 AI 聊天來收集意見，再整理成論點與政策改善案的工具，用來協助審議（深入討論）。它被用在<a href="team-mirai.html">未來團隊</a>（チームみらい，Team Mirai）的政見制定，以及 Cybozu（サイボウズ）公司內部<a class="cite" href="#src-5" data-src="src-5">[5]</a>。詳見〈<a href="idobata.html">いどばた</a>〉。</p>
+<p><strong>いどばた（Idobata）。</strong> 讓每個人各自和 AI 聊天來收集意見，再整理成論點與政策改善案的工具，用來協助審議（深入討論）。它被用在<a href="team-mirai.html">未來團隊</a>（チームみらい，Team Mirai）的政見制定，以及 <a href="cybozu.html">Cybozu</a>（サイボウズ）公司內部<a class="cite" href="#src-5" data-src="src-5">[5]</a>。詳見〈<a href="idobata.html">いどばた</a>〉。</p>
 <p><strong>政黨的參與。</strong> 根據新聞網站 Japan In-depth，發起後不久，國民民主黨的榛葉賀津也幹事長說看了記者會深受感動，並讓同黨的參議員伊藤孝惠加入<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p><strong>寫書。</strong> 《政治・自治体・企業に広がるブロードリスニング》（インプレス，預定 2026 年 9 月出版）是志願者在 DD2030 活動中寫成的書，也有日文與英文的網路版<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>深入了解</h2>
@@ -127,9 +128,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

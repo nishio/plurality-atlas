@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="en"><h1>What are Soulbound Tokens (SBTs)?</h1><div class='lead'>Digital certificates that cannot be sold or handed to others. They tie things like education, memberships, attendance and promises to repay to an account called a &quot;Soul&quot;. In 2022, Buterin, Weyl and Ohlhaver proposed them as part of a &quot;Decentralized Society&quot; (DeSoc) that would rebuild money-centered Web3 on human relationships.</div><p>A diploma or a membership card is proof that a person actually studied something or belongs somewhere. If it could be sold to someone else for money, it would lose its meaning. Yet many digital certificates online can easily be bought and sold. Soulbound Tokens (SBTs) are the idea of making digital certificates that cannot be sold or transferred.</p>
 <h2>In short</h2>
 <p>A Soulbound Token (SBT) is a digital certificate, recorded on a blockchain (a public ledger that anyone can check), that cannot be sold or transferred. Like a diploma, a membership card or proof of attending an event, it is meant to show not something you can buy with money but what a person has actually done, or where they belong <a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
-<p>In 2022, Vitalik Buterin, E. Glen Weyl and Puja Ohlhaver put forward a vision of using SBTs to represent the web of trust between people. The idea was to rebuild the world of crypto-assets (Web3), which had come to center on financial transactions, on top of social relationships. The three named this "DeSoc" (Decentralized Society) <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
+<p>In 2022, Vitalik Buterin, E. Glen Weyl and <a href="puja-ohlhaver.html">Puja Ohlhaver</a> put forward a vision of using SBTs to represent the web of trust between people. The idea was to rebuild the world of crypto-assets (Web3), which had come to center on financial transactions, on top of social relationships. The three named this "DeSoc" (Decentralized Society) <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <h2>For example</h2>
 <p><strong>From "soulbound" items in a game.</strong> The name comes from "soulbound" items in the online game World of Warcraft. Once picked up, they cannot be given or sold to another player, so if you want the best gear, you have to defeat the dragon yourself, together with friends. In a January 2022 blog post, Buterin asked whether, if NFTs (certificates of one-of-a-kind items online) could likewise be made non-transferable, they could show not just an owner's wealth but who that person is <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p><strong>Proof of attending an event.</strong> Buterin writes that POAPs, NFTs given to people who attend an event, lose their meaning as proof that the holder attended if they can be bought from others. In fact, POAPs that Adidas gave fans for free were quickly resold at high prices once they came with a right to buy products first <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
@@ -119,9 +120,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

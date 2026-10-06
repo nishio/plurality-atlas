@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -72,7 +73,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>最初试作的核心有两个：用<a href="quadratic-voting.html">平方投票</a>（越把很多票集中在一处就越贵的投票法）决定稿件的优先顺序；以及像投票用积分这样只在社群内通用的「货币」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。文章也写道，要让那些创始的单一领导者已经负荷不了的社群，能够自己延续下去<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>和区块链的不同</h3>
 <p>依白皮书，Gov4Git 的纪录是单一社群专用的。要求互相冲突时，由该社群的治理规则裁决。所以不需要像公开区块链那样，用耗电的计算竞赛决定胜者；在小型电脑（Raspberry Pi）或 GitHub 的免费自动执行环境上也能运作<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
-<p>白皮书也举出另一个理由：公开区块链的位置为人所知，可能被威权国家锁定封锁<a class="cite" href="#src-9" data-src="src-9">[9]</a>。开发者 Petar Maymounkov 在 2023 年的 Podcast 中表示，大意是：公开区块链是为了在全球高速处理许多应用而设计的，而单一社群内由人来讨论决定的治理，用不到其中大部分功能，所以选择了不同的设计<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>白皮书也举出另一个理由：公开区块链的位置为人所知，可能被威权国家锁定封锁<a class="cite" href="#src-9" data-src="src-9">[9]</a>。开发者 <a href="petar-maymounkov.html">Petar Maymounkov</a> 在 2023 年的 Podcast 中表示，大意是：公开区块链是为了在全球高速处理许多应用而设计的，而单一社群内由人来讨论决定的治理，用不到其中大部分功能，所以选择了不同的设计<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h3>用法与扩散</h3>
 <p>依说明书（README），平常必要的基础设施只有 git 的存放处，不是技术人员的人也能从桌面应用程式使用<a class="cite" href="#src-1" data-src="src-1">[1]</a>。本书项目的说明写道，这套机制不是 PMP 专用，而是几乎可以承载任何决定方式的底座；本书在上面用的是 PMP<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>开发团队自己也用 Gov4Git 管理开发计划<a class="cite" href="#src-12" data-src="src-12">[12]</a>。艺术文化平台 Cube Commons、地球科学软件 EarthSciML 也采用了它<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
@@ -122,9 +123,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

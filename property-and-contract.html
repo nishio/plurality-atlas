@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>くわしく</h2>
 <h3>大きな協力は、資産の持ち寄りでできている</h3>
 <p>本の 4-4 章は、今日の大きな協力の多くが、会社・組合・宗教団体などの「法人」に資産を持ち寄ることで成り立っている、と書きます。その土台が、資産の分け方を決める契約です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>米国防総省の研究機関 ARPA でコンピュータ研究を率いた J. C. R. リックライダーが描いた「銀河間計算機ネットワーク」の中心の目的も、計算・記録装置・データの共有でした（→ <a href="lost-dao.html">失われた道</a>）。本によれば、クラウドや AI の学習データはその一部を実現しました。けれども、少数の国の少数の企業に握られていて、「ネットで広く水平に資産を分け合う」という夢は夢のままだ、と本は言います<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>米国防総省の研究機関 ARPA でコンピュータ研究を率いた <a href="jcr-licklider.html">J. C. R. リックライダー</a>が描いた「銀河間計算機ネットワーク」の中心の目的も、計算・記録装置・データの共有でした（→ <a href="lost-dao.html">失われた道</a>）。本によれば、クラウドや AI の学習データはその一部を実現しました。けれども、少数の国の少数の企業に握られていて、「ネットで広く水平に資産を分け合う」という夢は夢のままだ、と本は言います<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>クラウドは「大型計算機への逆戻り」</h3>
 <p>本によれば、半導体の多くは個人の機器の中にあって、ほとんど使われていません。データは組織や国ごとに閉じた「サイロ（穀物の貯蔵庫）」にこもっています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p>クラウドは上位 2 社で市場のほぼ 3 分の 2 を占めています。その利点は主にデータセンターの費用を安くすることから来ていて、利用者どうしが資源を分け合うことから来ているのではありません。本はこれを、一台の大型計算機にみんながつながっていた時代への逆戻りだと見ます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

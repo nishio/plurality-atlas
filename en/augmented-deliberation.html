@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h3>Depth and breadth are hard to combine</h3>
 <p>Face-to-face conversation is rich, but reaches only a few people. Writing travels far, but the exchange is thin. The book calls this "the trade-off between diversity and bandwidth" (a trade-off: gaining one means giving up the other) <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>The Japanese book <em>Broad Listening</em> explains this with a city of one million people. Have in-depth one-hour conversations with 10 residents and you understand each of them deeply, but that does not tell you what the whole city thinks. Ask all one million "Do we need a park? Yes/No" and you get the overall picture, but not the reasons <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
-<p>The political scientist Hélène Landemore also treats the difficulty of combining high-quality discussion with mass participation as an unsolved problem in democratic theory. Landemore says the quality of discussion drops once it goes beyond hundreds or thousands of people, and asks how far AI can close that gap <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
+<p>The political scientist <a href="helene-landemore.html">Hélène Landemore</a> also treats the difficulty of combining high-quality discussion with mass participation as an unsolved problem in democratic theory. Landemore says the quality of discussion drops once it goes beyond hundreds or thousands of people, and asks how far AI can close that gap <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
 <h3>Discussion tools we have today</h3>
 <p>The book describes approaches such as recording and summarizing small-group conversations and sharing them widely. It says that facilitation — the skill of making a gathering's conversation meaningful — "is a science unto itself" <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
 <p>Social media, meanwhile, widened who can take part, but also brought problems: "the lack of context", the spread of misinformation and disinformation, "the dominance of well-resourced entities", and "echo chambers" in which people see only views like their own <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
@@ -74,7 +75,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>Systems that organize existing debates and articles.</strong></li>
 </ol>
 <h3>Listening to many with AI</h3>
-<p>Talk to the City, built by the AI Objectives Institute, shows "how GFMs can be used to replace a list of statements characterizing a group's views with an interactive agent one can talk to" <a class="cite" href="#src-9" data-src="src-9">[9]</a>. (GFMs, generative foundation models, are the technology behind today's AI chatbots.) The book writes that participants will be able to go beyond short statements and up-and-down votes and express themselves fully, while AI condenses the conversation and helps "look for areas of rough consensus not simply based on common votes but on a natural language understanding" <a class="cite" href="#src-9" data-src="src-9">[9]</a>.</p>
+<p>Talk to the City, built by the <a href="ai-objectives-institute.html">AI Objectives Institute</a>, shows "how GFMs can be used to replace a list of statements characterizing a group's views with an interactive agent one can talk to" <a class="cite" href="#src-9" data-src="src-9">[9]</a>. (GFMs, generative foundation models, are the technology behind today's AI chatbots.) The book writes that participants will be able to go beyond short statements and up-and-down votes and express themselves fully, while AI condenses the conversation and helps "look for areas of rough consensus not simply based on common votes but on a natural language understanding" <a class="cite" href="#src-9" data-src="src-9">[9]</a>.</p>
 <p>According to the book, in a large-scale experiment, AI gave each participant in a discussion "real-time, evidence-based suggestions aimed at refining the quality of political discourse", and "the results indicated a noticeable improvement in the overall quality of conversations" <a class="cite" href="#src-5" data-src="src-5">[5]</a>. A 2024 paper by Landemore and others also sets out the hopes that AI could step in on rude remarks and suggest rephrasing, summarize opinions and find common ground <a class="cite" href="#src-10" data-src="src-10">[10]</a>.</p>
 <h3>Not only consensus but new conflicts</h3>
 <p>The book also writes that bridging systems are not only for building consensus. They can find opinion groups that are "not a deterministic function of historical assumptions or identities", and create "a new conflict that does not reinforce existing divisions" <a class="cite" href="#src-11" data-src="src-11">[11]</a>. It also suggests new forms of "representation", such as choosing "the maximally diverse committees for a deliberation", and giving a voice to natural features like rivers and forests, or to future generations <a class="cite" href="#src-11" data-src="src-11">[11]</a>.</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

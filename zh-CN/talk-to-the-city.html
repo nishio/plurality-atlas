@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="zh-CN"><h1>什么是我城对谈（Talk to the City）？</h1><div class='lead'>让 AI 读取大量自由书写的意见，依相近的论点归类，做成点状地图与摘要的免费开源工具。由美国的 AI Objectives Institute 打造，用在台湾的讨论，也用在日本广泛倾听的起步阶段。</div><p>一旦呼吁「欢迎提供意见」，有时会收到成千上万则文字。但要由人读完全部，掌握哪些话题被谈了多少，非常困难。我城对谈（Talk to the City）就是用 AI 的力量，让这些「读不完的意见」能够一眼看尽的工具。</p>
 <h2>一句话说明</h2>
 <p>我城对谈（Talk to the City，简称 TTTC）是一套软件：<strong>让 AI 读取数百到数万则自由书写的意见，把「有哪些论点、各被谈了多少」做成点状地图与摘要呈现出来</strong><a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>打造它的是美国的非营利组织 AI Objectives Institute（AOI）。它免费，程式码也公开（开源）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。这类「听取许多人声音」的技术，称为<a href="broad-listening.html">广泛倾听</a>。</p>
+<p>打造它的是美国的非营利组织 <a href="ai-objectives-institute.html">AI Objectives Institute</a>（AOI）。它免费，程式码也公开（开源）<a class="cite" href="#src-1" data-src="src-1">[1]</a>。这类「听取许多人声音」的技术，称为<a href="broad-listening.html">广泛倾听</a>。</p>
 <h2>举例来说</h2>
 <p><strong>台湾的「对齐大会」（Alignment Assemblies，2023 年）。</strong> 台湾的数位发展部（moda）针对生成式 AI 收集公民意见。先用 <a href="polis.html">Polis</a> 收集线上意见，再用 TTTC 把结果视觉化，作为在台北与台南举行的实体讨论的材料<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。唐凤介绍说，在这份报告里，英文和中文的意见会排在同一个群聚中<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→〈<a href="alignment-assemblies.html">对齐大会</a>〉</p>
 <p><strong>东京都知事选举（2024 年）。</strong> 参选人安野贵博的团队，用 TTTC 分析 X 上的主题标签「#TOKYOAI」与匿名意见箱收集到的声音，在选举期间做出了 30 份以上的报告<a class="cite" href="#src-6" data-src="src-6">[6]</a>。从意见箱投稿中抽出的 951 则意见里，浮现出希望取消育儿支援所得限制的声音，并反映在政见的 2.0 版中<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→〈<a href="anno-2024-tokyo-campaign.html">安野贵博的 2024 年都知事选举</a>〉</p>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

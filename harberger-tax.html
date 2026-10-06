@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>しくみ</h2>
 <h3>二つの「効率」の綱引き</h3>
 <p>ブテリンの 2018 年の解説によると、毎年すべての財産を取り上げて、いちばん高く買う人に売り直せば、どの物も一番うまく使える人の手に渡ります。でも、半年後に取り上げられるなら、誰も家を建てません。使う人に渡る効率と、投資する意欲の効率が、ぶつかるのです<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>19 世紀の思想家ヘンリー・ジョージは、土地の値段だけに税をかけ、建物などの改良には税をかけない方法でこれを避けようとしました。でも、ポズナーとワイルは、それは実務では難しいと見て、自己申告の財産税を提案した、とブテリンは書きます<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>19 世紀の思想家<a href="henry-george.html">ヘンリー・ジョージ</a>は、土地の値段だけに税をかけ、建物などの改良には税をかけない方法でこれを避けようとしました。でも、ポズナーとワイルは、それは実務では難しいと見て、自己申告の財産税を提案した、とブテリンは書きます<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>なぜ正直に申告するのか</h3>
 <p>ブテリンの説明はこうです。税率が「1 年のうちにその財産が売れる確率」と同じなら、申告額を少し上げたときに増える税と、少し高く買ってもらえる見込みが、ちょうど釣り合います。だから、本当の値打ちからずらして申告する理由がなくなります<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>また、税率をそれより下げると、投資する意欲は高まり、使う人に渡る効率の損はそれより小さい、という性質もブテリンは紹介しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
@@ -114,9 +115,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

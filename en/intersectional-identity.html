@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -81,7 +82,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>Buterin's reading.</strong> In a review, Vitalik Buterin, the creator of Ethereum, describes Simmel's theory of the individual as a model that Tang and Weyl return to again and again, one presented as a long-forgotten third way beyond both individualism and collectivism. He also names, as a way ⿻ differs from libertarianism, that plurality exists not only across society but inside each person, since one person can belong to several groups at once <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</li>
 </ul>
 <h2>Where it fits in Plurality</h2>
-<p>Its home is the section on Simmel, "Georg Simmel and the intersectional (in)dividual", in chapter 3-2, "Connected Society". There the book introduces, one after another, thinkers who went beyond <a href="monist-atomism.html">monist atomism</a>: Henry George (connections of value), Simmel (identity), John Dewey (publics) and Norbert Wiener (cybernetics) <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p>Its home is the section on Simmel, "Georg Simmel and the intersectional (in)dividual", in chapter 3-2, "Connected Society". There the book introduces, one after another, thinkers who went beyond <a href="monist-atomism.html">monist atomism</a>: <a href="henry-george.html">Henry George</a> (connections of value), Simmel (identity), John Dewey (publics) and Norbert Wiener (cybernetics) <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>The next section, on <a href="emergent-publics.html">emergent publics</a>, is presented as the "mirror image" of Simmel's philosophy. If individual identity is fluid, the social circles that make it up must be fluid too <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
 <p>It also connects to later chapters. Chapter 4-1 looks for ways to both verify and protect identity using identities rooted in many affiliations <a class="cite" href="#src-7" data-src="src-7">[7]</a> (→ <a href="identity-and-personhood.html">Identity and Personhood</a>, <a href="proof-of-personhood.html">proof of personhood</a>). Chapter 4-2 takes up the "secrecy" that Simmel considered essential to the cohesion of groups <a class="cite" href="#src-8" data-src="src-8">[8]</a> (→ <a href="plural-publics.html">⿻ publics</a>). Chapter 5-4 writes that, instead of geography or simple demographics, "it may be possible to increasingly use the full intersectional richness of identity as a basis for considering inclusion and representation" when choosing participants for deliberation <a class="cite" href="#src-9" data-src="src-9">[9]</a> (→ <a href="augmented-deliberation.html">Augmented Deliberation</a>).</p>
 <p>A note to chapter 3-3 in the Japanese edition points out what Ken Suzuki's "dividual" (分人) has in common with Simmel's idea, while distinguishing them: Suzuki drew his inspiration from the philosopher Deleuze, whose perspective is more biological <a class="cite" href="#src-10" data-src="src-10">[10]</a>. → <a href="nameraka-society.html">Nameraka Society</a></p>
@@ -113,9 +114,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

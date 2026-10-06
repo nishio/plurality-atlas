@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>Connection to Plurality</h2>
 <p><strong>Presented in the book.</strong> Chapter 5-4 of the book, "<a href="augmented-deliberation.html">Augmented Deliberation</a>", presents <a href="polis.html">Polis</a>, a tool that maps opinions, as "a prominent example of what leading ⿻ technologists Aviv Ovadya and Luke Thorburn call 'collective response systems' and 'bridging systems'", and cites their papers in a footnote <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
 <p><strong>The glossary of the 6-Pack of Care.</strong> The glossary of the 6-Pack of Care by <a href="audrey-tang.html">Audrey Tang</a> and others describes bridging-based ranking as "an algorithmic approach, named by Aviv Ovadya in 2022, that rewards content earning cross-group endorsement rather than raw engagement", and lists Ovadya's paper in its references <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="six-pack-of-care.html">6-Pack of Care</a></p>
-<p><strong>Co-authorship.</strong> With Tang, <a href="divya-siddarth.html">Divya Siddarth</a>, Hélène Landemore and others, Ovadya co-wrote the 2024 review "AI and the Future of Digital Public Squares" <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
+<p><strong>Co-authorship.</strong> With Tang, <a href="divya-siddarth.html">Divya Siddarth</a>, <a href="helene-landemore.html">Hélène Landemore</a> and others, Ovadya co-wrote the 2024 review "AI and the Future of Digital Public Squares" <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
 <p><strong>Some background.</strong> In 2022, Ovadya published the paper "Bridging-Based Ranking" through the Belfer Center at Harvard Kennedy School <a class="cite" href="#src-1" data-src="src-1">[1]</a>. In a piece for WIRED, Ovadya wrote of being invited by OpenAI as an outside tester (red team) before the release of GPT-4 <a class="cite" href="#src-8" data-src="src-8">[8]</a>. In August 2024, Ovadya announced the launch of the AI &amp; Democracy Foundation <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
 <h2>Main ideas</h2>
 <p><strong>Bridging.</strong> Ovadya and Thorburn defined "bridging systems" as systems that increase understanding and trust across divides and create room for productive conflict, deliberation and cooperation. They then treat three things together, social media recommendations, collective response systems and facilitated human deliberation, as systems that each decide where people's attention goes <a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>. → <a href="bridging.html">Bridging</a></p>
@@ -96,9 +97,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>舉例來說</h2>
 <p><strong>這本書本身。</strong> 書的 5-0 章開頭說，這本書的創作目的是「在行動中演示與描繪⿻：實際行動，而不只是描述」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。文稿用開源工程師管理軟體版本的 Git 協定儲存和更新，並以 CC0（放棄著作權、任何人都能自由使用）的方式共享<a class="cite" href="#src-4" data-src="src-4">[4]</a>。繁體中文版寫道：「貢獻者通過社群貨幣和群體身份代幣獲得認可」，這些又可以用來投票、決定書中未決問題的優先次序<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文版則說明，工作的優先次序與報酬是用類似群眾募資的方式決定的<a class="cite" href="#src-5" data-src="src-5">[5]</a>。書也說，有爭議的問題，用書中介紹的各種工具來解決<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p><strong>維基百科與開源軟體。</strong> 書舉出任何人都能編輯的維基百科，以及以 Linux、GitHub 為代表的開源軟體（公開設計、任何人都能改良的軟體）<a class="cite" href="#src-6" data-src="src-6">[6]</a>。書把它們描寫成技術主流之外「零星且清晰可辨的光點」：透過大規模、開放、協作、自治而成功的例子<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
-<p><strong>恩格爾巴特的「所有展示之母」。</strong> 在美國研究資助機構 ARPA 的支持下，道格拉斯·恩格爾巴特（Douglas Engelbart）發明了滑鼠等個人計算的基礎元素，並把這些工作演示為「oNLine 系統」（NLS），被稱為「所有展示之母」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。這是在 ARPA 的約瑟夫·利克萊德（J. C. R. Licklider）最初資助的「短短六年後」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。書把這描寫成不是用機器取代人的智慧、而是擴展人的智慧的代表性潮流<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>恩格爾巴特的「所有展示之母」。</strong> 在美國研究資助機構 ARPA 的支持下，道格拉斯·恩格爾巴特（Douglas Engelbart）發明了滑鼠等個人計算的基礎元素，並把這些工作演示為「oNLine 系統」（NLS），被稱為「所有展示之母」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。這是在 ARPA 的<a href="jcr-licklider.html">約瑟夫·利克萊德</a>（J. C. R. Licklider）最初資助的「短短六年後」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。書把這描寫成不是用機器取代人的智慧、而是擴展人的智慧的代表性潮流<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h2>運作方式</h2>
 <h3>書所說的「協作」</h3>
 <p>書的 5-0 章把協作說成「許多實體（人或團體）為實現共同目標而攜手合作」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。但書接著說，即使這樣說也忽略了書真正關注的重點：「共同努力所產生的力量，要大於各部分合作所產生的結果的總和」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。書用數學的說法，稱之為「超模」（supermodularity）。</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

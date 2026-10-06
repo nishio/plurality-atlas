@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,13 +64,14 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>In more detail</h2>
 <h3>Why it happened</h3>
 <p>According to the Chinese-language Wikipedia, the agreement would have opened 80 sectors on the Chinese side and 64 on the Taiwanese side to each other. People worried about the blow to Taiwan's small and medium businesses and about growing Chinese political influence. The students criticized the negotiations as a "black box", invisible from outside <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
+<p><strong>The side that pushed the agreement.</strong> Also according to the Chinese-language Wikipedia (a secondary source), the agreement was signed in Shanghai on June 21, 2013, as a follow-up to the 2010 cross-strait economic cooperation framework agreement (海峽兩岸經濟合作架構協議). The government of Ma Ying-jeou (馬英九), elected in 2008, pushed it as part of a policy of deepening economic ties with China. At a press conference on March 23, during the occupation, Ma argued that the agreement needed to be passed and said it would not be withdrawn; on March 29, Ma said the agreement could be debated and voted on clause by clause, but again refused to withdraw it <a class="cite" href="#src-3" data-src="src-3">[3]</a>. The specific reasons Ma gave at these press conferences are not in this site's materials.</p>
 <p>The book <em>Plurality</em> writes that on March 18, 2014, "a group of students frustrated by the substance and process of a new trade deal with Beijing and inspired by the global 'Occupy' movement climbed over the fence surrounding the legislature building" <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <h3>Where the name comes from</h3>
 <p>According to the Chinese-language Wikipedia, on the night of March 18 a florist in Yonghe sent sunflowers into the chamber. Images of sunflowers placed on the podium spread, more sunflowers arrived, and the media began calling it the "Sunflower Student Movement" <a class="cite" href="#src-3" data-src="src-3">[3]</a>. Some participants disliked the name and call it by other names, such as the "318 occupation of the Legislative Yuan" <a class="cite" href="#src-3" data-src="src-3">[3]</a>. The editions of the book also write "318" alongside "Sunflower", as in the English edition's "the 'Sunflower' (318) occupation" <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <h3>What the technology did</h3>
 <p>In a 2022 interview, Tang said that the aim of her involvement was "To make sure that humor and facts spread faster than rumor" <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
 <p>According to Tang, some 20 NGOs (private nonprofit groups) held discussions topic by topic, such as labor conditions and cybersecurity, each with a facilitator. g0v recorded the "rough consensus", so that "people can start a day not from a blank state, but from the kind of rough consensus that came from feelings as agreed upon the previous day." Because of the livestreaming, "violence doesn't pay", and rumors such as that one corner was under assault by the police could be checked by watching the livestream on a phone, Tang said <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
-<p>In a column in the book <em>Broad Listening</em>, Shinta Nakayama, noting that this is Nakayama's own framing, argues that the movement was a rare case: a movement of people who gathered spontaneously through social media gained leaders and the power to negotiate with the government. The column sums up that g0v's thorough transparency prevented removal by force <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
+<p>In a column in the book <em>Broad Listening</em>, <a href="nakayama-shinta.html">Shinta Nakayama</a>, noting that this is Nakayama's own framing, argues that the movement was a rare case: a movement of people who gathered spontaneously through social media gained leaders and the power to negotiate with the government. The column sums up that g0v's thorough transparency prevented removal by force <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
 <h3>The politics that followed</h3>
 <p>The book <em>Plurality</em> writes that the local (2014) and general (2016) elections "saw a dramatic swing in outcomes of roughly 10 percentage points towards the Green camp", and that the movement's leaders founded a new political party, the New Power Party. These events added to g0v's momentum and led to Tang, one of the authors, being appointed a minister (Minister without Portfolio), the book says <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <p>Tang says that the national forum held right after the movement called for a national petition platform and for "at least 60 days of regulatory conversation announcement period". She stresses that it was not the following Tsai Ing-wen administration that implemented these, but the cabinets of the then Ma Ying-jeou administration <a class="cite" href="#src-7" data-src="src-7">[7]</a>. The later spaces for discussion between government and citizens are introduced in the article on <a href="vtaiwan.html">vTaiwan</a>.</p>
@@ -111,9 +113,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

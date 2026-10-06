@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>与《Plurality》的关系</h2>
 <p><strong>推荐语与编辑。</strong> 在书开头的名家推荐中，布特林以「以太坊创办人」具名写道：「在科技先进、政治充满挑战、瞬息万变的 21 世纪，自由开放的未来会是什么样子？卫谷伦、唐凤和共笔作者群，提供了令人信服的前进之路。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> 在本书的贡献者名单中，布特林的名字排在「编辑」（Editing）类别的第一位<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p><strong>书中的描写。</strong> 3-3 章〈我们遗忘的道〉写道：「尽管在这个领域的许多项目受到『放任主义』和超级金融化的影响」，但与互联网最初愿景仍然持久连接，「特别是在维塔利克·布特林（Vitalik Buterin，最大的智慧合约平台以太坊的创始人）的领导下，启发了许多项目，如 GitCoin 和去中心化身分，这些都是现今⿻的核心灵感来源」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。书的各章也常在注脚中引用布特林的博客文章<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
-<p><strong>与卫谷伦的共同著作。</strong> 2018 年与 柔伊·希兹格（Zoë Hitzig）、卫谷伦合写平方募资的论文<a class="cite" href="#src-2" data-src="src-2">[2]</a>；2022 年与 Puja Ohlhaver、卫谷伦合写「去中心化社会」（DeSoc）的论文<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>与卫谷伦的共同著作。</strong> 2018 年与 <a href="zoe-hitzig.html">柔伊·希兹格</a>（Zoë Hitzig）、卫谷伦合写平方募资的论文<a class="cite" href="#src-2" data-src="src-2">[2]</a>；2022 年与 <a href="puja-ohlhaver.html">Puja Ohlhaver</a>、卫谷伦合写「去中心化社会」（DeSoc）的论文<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p><strong>介绍两人认识的人。</strong> 铃木健在日文版的解说中写道，卫谷伦和唐凤是在以太坊社群中认识的，唐凤是透过布特林被介绍给卫谷伦的<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p><strong>书评。</strong> 2024 年 8 月，布特林在博客上长篇讨论这本书，把书的内容整理成四根支柱，并评论说：卫谷伦的前作《激进市场》试图重新打造经济学，《多元宇宙》则试图重新打造自由主义<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <h2>主要想法</h2>
@@ -99,9 +100,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

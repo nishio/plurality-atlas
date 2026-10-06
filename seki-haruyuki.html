@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>Plurality とのかかわり</h2>
 <p><strong>Plurality Tokyo の発起人。</strong> 『ブロードリスニング』本は、関を「Plurality Tokyo の発起人の一人」と紹介しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。2024 年 7 月 23 日には、タンと <a href="glen-weyl.html">グレン・ワイル</a> を招いた「Plurality Tokyo Meetup with Audrey &amp; Glen」のホストを務めました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="plurality-in-japan.html">日本での Plurality の広がり</a></p>
 <p><strong>安野貴博に Talk to the City を紹介。</strong> 同じ本によれば、2024 年 5 月 23 日、<a href="nishio-hirokazu.html">西尾泰和</a> の紹介で、関・<a href="anno-takahiro.html">安野貴博</a>・西尾が会いました。その場で関が、大勢の意見を AI で整理して見せるツール「<a href="talk-to-the-city.html">Talk to the City</a>」（TTTC）を紹介しました。西尾は 5 月 30 日に、AI に関するパブリックコメント約 2 万件で TTTC を試しました。翌 31 日、関は人工知能学会の全国大会のセッション「AIとデモクラシー」の基調講演で、この分析結果を紹介しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。これが、2024 年の都知事選での <a href="broad-listening.html">ブロードリスニング</a> につながりました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="anno-2024-tokyo-campaign.html">安野貴博の 2024 年都知事選</a></p>
-<p><strong>タンとワイルとの鼎談。</strong> 2024 年 10 月に公開されたサイボウズ式の鼎談「新概念『Plurality』を解く」に、日本のシビックテックの第一人者として登場しました（進行は西尾）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p><strong>タンとワイルとの鼎談。</strong> 2024 年 10 月に公開された<a href="cybozu.html">サイボウズ式</a>の鼎談「新概念『Plurality』を解く」に、日本のシビックテックの第一人者として登場しました（進行は西尾）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p><strong>台湾でのタンとの対話。</strong> 2024 年 3 月 22 日、関は日本の代表団とともに台湾でタンに会いました。関は、台湾は Plurality と Web3 の新しい運動の震源地のようだ、と述べています。タンは完成間近の本と、「數位（デジタル）」が「複数」とも読めることを説明しました。関は日本語への翻訳や、7 月の Plurality Tokyo を含む催しに触れ、タンを招いています（CC0 の逐語録）<a class="cite" href="#src-5" data-src="src-5">[5]</a>。→ <a href="shuwei.html">數位と ⿻</a></p>
 <p><strong>Funding the Commons Tokyo 2024 の振り返り。</strong> 関は note で、このイベントでのワイルとタンのパネルや、安野とタンのブロードリスニングの議論を紹介しました。ワイルの「supermodular（スーパーモジュラー）」という考えを使って、デジタル公共財（誰もが使えるソフトやデータ）は使われるほど、関連する公共財の価値も増える、と説明しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="supermodularity.html">スーパーモジュラリティ</a>、<a href="digital-public-infrastructure.html">デジタル公共インフラ</a></p>
 <p><strong>デジタル民主主義2030 のボード。</strong> <a href="dd2030.html">デジタル民主主義2030</a>（DD2030）の公式サイトのボードメンバー欄に、<a href="suzuki-ken.html">鈴木健</a>、中室牧子とともに名前が載っています<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
@@ -104,9 +105,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

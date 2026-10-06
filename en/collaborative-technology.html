@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>For example</h2>
 <p><strong>The book itself.</strong> The book's text was managed with Git, a tool software developers use to keep track of changes, and released under CC0 (a waiver of copyright that lets anyone use it freely) <a class="cite" href="#src-4" data-src="src-4">[4]</a>. The priorities of the work and the rewards for it were decided with an approach similar to crowdfunding. Contributions were recorded with a community currency and group identity tokens. Points of disagreement were settled with discussion tools. The book says it was made with the tools described in its Part 5, so as "to show as well as tell" <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
 <p><strong>Wikipedia and open source.</strong> The book points to Wikipedia, which anyone can edit, and to open-source software (software whose blueprint is published so anyone can improve it), represented by Linux and GitHub <a class="cite" href="#src-5" data-src="src-5">[5]</a>. In the book's view, both are "nodes of light": large-scale successes of self-governance through open collaboration <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
-<p><strong>Engelbart's "mother of all demos".</strong> With support from ARPA, the US research funding agency, Douglas Engelbart showed a system called NLS that included the mouse and hypertext (a way of linking documents to one another) <a class="cite" href="#src-6" data-src="src-6">[6]</a>. It came "six short years" after J. C. R. Licklider of ARPA first funded the work <a class="cite" href="#src-6" data-src="src-6">[6]</a>. The book presents this as a leading example of a tradition that uses machines to extend human intelligence rather than replace it <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
+<p><strong>Engelbart's "mother of all demos".</strong> With support from ARPA, the US research funding agency, Douglas Engelbart showed a system called NLS that included the mouse and hypertext (a way of linking documents to one another) <a class="cite" href="#src-6" data-src="src-6">[6]</a>. It came "six short years" after <a href="jcr-licklider.html">J. C. R. Licklider</a> of ARPA first funded the work <a class="cite" href="#src-6" data-src="src-6">[6]</a>. The book presents this as a leading example of a tradition that uses machines to extend human intelligence rather than replace it <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
 <h2>How it works</h2>
 <h3>What the book means by "collaboration"</h3>
 <p>Chapter 5-0 describes collaboration as "the working of several entities (people or groups) together towards a common goal" <a class="cite" href="#src-7" data-src="src-7">[7]</a>. But what the book really focuses on is "the power that working together has to create something greater than the sum of what the parts could have created separately" <a class="cite" href="#src-7" data-src="src-7">[7]</a>. The book calls this by a mathematical name, "supermodularity".</p>
@@ -124,9 +125,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

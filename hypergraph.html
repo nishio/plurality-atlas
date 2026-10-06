@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>たとえば</h2>
 <p><strong>作例（説明のための架空の例）。</strong> A さん・B さん・C さんの三人が、一つの研究会に入っているとします。点と線の図では、A–B、B–C、A–C の三本の線を引くしかありません。これでは「二人づれが三組いる」のか「三人で一つの集まりがある」のか、区別がつきません。ハイパーグラフなら、{A, B, C} をまとめて一つの塊として描けます。A さんが別に職場の集まり {A, D} にも入っていれば、A さんは二つの塊が重なる場所に立っていることになります。</p>
 <p><strong>本の図 4-0-B。</strong> 本の 4-0 章には、人・集まり・関係・デジタルの資産を一枚に描いたハイパーグラフの図があります。点が人、点を囲む塊が集まりです。塊の色の濃さは関係の強さを表します。塊の中にあるデータや計算の道具は、その集まりが一緒に働くための土台です。図の外から入る矢印は、人がデジタルの世界に入るための道具を表します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
-<p><strong>SNS の設計。</strong> グレン・ワイル（Glen Weyl）とオードリー・タン（Audrey Tang）らの論文「Community by Design」は、社会の網の目をハイパーグラフとして扱います。そこでは塊の一つひとつがコミュニティで、メンバーが共通に知っていることのまわりにまとまるもの、と考えます。そのうえで、コミュニティの中の違う意見の人どうしが一致できる投稿や、内部の多様な声を公平に伝える投稿を評価する SNS のしくみを提案しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。タンとキャロライン・グリーン（Caroline Green）の研究プロジェクト civic.ai は、この論文を、AI についての提案「<a href="six-pack-of-care.html">6-Pack of Care</a>」の第 1 と第 5 の柱の「技術的な背骨」と紹介しています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="prosocial-media.html">向社会的メディア</a></p>
+<p><strong>SNS の設計。</strong> グレン・ワイル（Glen Weyl）とオードリー・タン（Audrey Tang）らの論文「Community by Design」は、社会の網の目をハイパーグラフとして扱います。そこでは塊の一つひとつがコミュニティで、メンバーが共通に知っていることのまわりにまとまるもの、と考えます。そのうえで、コミュニティの中の違う意見の人どうしが一致できる投稿や、内部の多様な声を公平に伝える投稿を評価する SNS のしくみを提案しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。タンと<a href="caroline-green.html">キャロライン・グリーン</a>（Caroline Green）の研究プロジェクト civic.ai は、この論文を、AI についての提案「<a href="six-pack-of-care.html">6-Pack of Care</a>」の第 1 と第 5 の柱の「技術的な背骨」と紹介しています<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="prosocial-media.html">向社会的メディア</a></p>
 <h2>くわしく</h2>
 <h3>本の説明</h3>
 <p>本の 4-0 章は、ハイパーグラフを次のように説明します。ネットワークやグラフという考えを、二者のあいだの関係だけでなく集まりも扱えるように広げたもので、「ノード」（人。図の点）と「エッジ」（集まり。図の塊）の集合だ、というのです。塊の濃淡は関係の強さで、数学で言えばその「重み」と「向き」にあたります<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -111,9 +112,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

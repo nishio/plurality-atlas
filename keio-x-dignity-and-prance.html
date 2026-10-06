@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -98,7 +99,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>PRANCE は、Plurality と鈴木健の「<a href="nameraka-society.html">なめらかな社会</a>」を、名前と目的に並べて入れた、日本の大学の研究組織です（→ <a href="suzuki-ken.html">鈴木健</a>）。サブプロジェクトは本に出てくる道具と重なります。熟議と <a href="polis.html">Polis</a>、<a href="broad-listening.html">ブロードリスニング</a> です。実践は <a href="dd2030.html">DD2030</a> と組んでいます。</p>
 <p>日本での受け止められ方の流れは、<a href="plurality-in-japan.html">日本での Plurality</a> と<a href="japan-timeline.html">日本の年表</a>へ。</p>
 <h2>このページの資料について</h2>
-<p>このページのテーマは、サイトの運営者の<a href="nishio-hirokazu.html">西尾泰和</a>が選びました。西尾は資料の中では、2025 年 5 月 10 日のセッション「Polis ― 合意形成の新しいかたち」のパネリスト<a class="cite" href="#src-2" data-src="src-2">[2]</a>と、サミットの分科会「ブロードリスニングの技術」の登壇者（中山心太と）<a class="cite" href="#src-7" data-src="src-7">[7]</a>としてだけ出てきます。サミットの公式サイトの登壇者紹介にも載っていますが、同じ分科会の登壇者としてです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>このページのテーマは、サイトの運営者の<a href="nishio-hirokazu.html">西尾泰和</a>が選びました。西尾は資料の中では、2025 年 5 月 10 日のセッション「Polis ― 合意形成の新しいかたち」のパネリスト<a class="cite" href="#src-2" data-src="src-2">[2]</a>と、サミットの分科会「ブロードリスニングの技術」の登壇者（<a href="nakayama-shinta.html">中山心太</a>と）<a class="cite" href="#src-7" data-src="src-7">[7]</a>としてだけ出てきます。サミットの公式サイトの登壇者紹介にも載っていますが、同じ分科会の登壇者としてです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p>資料のほとんどは、慶應の自前のページと、催しの公式ページ・プレスリリース・鈴木健の本人サイトです。独立した報道はほとんど集まっていません。PRANCE の設置や鈴木健の着任についての慶應の公式発表も見つかっておらず、根拠はプロジェクトのページだけです。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -139,9 +140,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

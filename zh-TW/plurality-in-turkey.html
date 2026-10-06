@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>另一方面，在為本文所做的調查（2026 年 10 月）中，沒有找到討論這本書本身的土耳其文書評、報導或演講。在土耳其文中介紹唐鳳與衛谷倫的，主要是 2020 年疫情期間的報導，以及加密資產媒體。在那些地方，兩人是分開出現的。</p>
 <h2>舉例來說</h2>
 <p><strong>土耳其文譯本《Çoğulluk》（2026 年 9 月 5～6 日）。</strong> GitHub（共同製作文件的網站）的使用者 omgbbqhaxx 複製（fork）了書的官方儲存庫，把全書譯成土耳其文。更新紀錄上的作者名是 Yasin Aktimur。書名是《Çoğulluk: İşbirliğine Dayalı Teknolojinin ve Demokrasinin Geleceği》（多元性：以協作為基礎的技術與民主的未來）<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。隔天又做了閱讀用的網站，並在每一章加上名為「Bölümü dinle」（收聽本章）的朗讀功能<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
-<p><strong>哈拉瑞與唐鳳對談的土耳其文翻譯（2020 年 8 月 1 日）。</strong> 新聞網站 A3 Haber 把歷史學家哈拉瑞（Yuval Noah Harari）與唐鳳在 RadicalxChange 節目中的對談（主持人是 Puja Ohlhaver）的一部分，譯成土耳其文刊出（譯者 Ayşen Tekşen）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文的原始逐字稿也已公開<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>哈拉瑞與唐鳳對談的土耳其文翻譯（2020 年 8 月 1 日）。</strong> 新聞網站 A3 Haber 把歷史學家哈拉瑞（Yuval Noah Harari）與唐鳳在 RadicalxChange 節目中的對談（主持人是 <a href="puja-ohlhaver.html">Puja Ohlhaver</a>）的一部分，譯成土耳其文刊出（譯者 Ayşen Tekşen）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文的原始逐字稿也已公開<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>深入了解</h2>
 <h3>譯本是怎麼做出來的</h3>
 <p>第一次更新（2026 年 9 月 5 日）一次加入了 22 個章節檔案，以及譯語表「SOZLUK.md」。這次更新沒有共同作者的標示<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

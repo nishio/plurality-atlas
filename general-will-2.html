@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -66,7 +67,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h3>東自身の取り下げ</h3>
 <p>2020 年、東は当時を振り返っています。本を書いたころは、ネットで世の中が変わると期待されていた。けれども東日本大震災のあとネットは今の状態になり、今ではほとんど何も期待できない、という趣旨です<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>AI 任せの政治への批判</h3>
-<p>2022 年の論文で東は、情報技術で人間を通さずに民意を政治に反映させる構想を「シンギュラリティ民主主義」と名づけました。例として、ハラリや落合陽一の構想を挙げています。そのうえで、一般意志を、そこへたどり着かない形で読み直すと予告しました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。これは 2023 年の本『訂正可能性の哲学』にまとめられ、東はそれを『一般意志2.0』の主題を引き継ぐものだと書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>2022 年の論文で東は、情報技術で人間を通さずに民意を政治に反映させる構想を「シンギュラリティ民主主義」と名づけました。例として、ハラリや<a href="ochiai-yoichi.html">落合陽一</a>の構想を挙げています。そのうえで、一般意志を、そこへたどり着かない形で読み直すと予告しました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。これは 2023 年の本『訂正可能性の哲学』にまとめられ、東はそれを『一般意志2.0』の主題を引き継ぐものだと書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <p>2024 年の雑誌への寄稿では、AI を使えば政治を半ば自動にできるという考えを「人工知能民主主義」と呼びました。AI を使うこと自体には賛成だが、過度に期待するのは誤りだ、という立場です<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h3>なぜ人間が要るのか</h3>
 <p>成田悠輔との対論（2022 年）で東は、人は相手の人格を信頼しなければ考えを変えない、だから政治はアルゴリズム（計算の手順）に置き換えられない、と主張しました<a class="cite" href="#src-10" data-src="src-10">[10]</a>。別のインタビューでは、人々の欲望を AI でくみ取って満たせば安定した社会ができるという考えそのものが作り話だ、という趣旨を述べています<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
@@ -123,9 +124,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

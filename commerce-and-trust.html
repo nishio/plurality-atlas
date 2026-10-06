@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -85,7 +86,7 @@ li:target{background:var(--tint);border-radius:4px}
 </ul>
 <h2>Plurality の中での位置</h2>
 <p>第 4 部（4-0 章「権利、オペレーティングシステム、⿻的自由」で始まる部。→ <a href="rights-os.html">権利 OS</a>）の 3 番目の章です<a class="cite" href="#src-2" data-src="src-2">[2]</a>。ここでの考えは 5-7 章の <a href="social-markets.html">社会市場</a> に送られ、共同体通貨やポイントのような「社会的な評価の経済」もそこで扱われます<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
-<p>本は注で、共同体通貨の系譜にも触れます。1983 年にマイケル・リントン（Michael Linton）が始めた地域の交換のしくみ（LETS）と、リントンが柄谷行人の自宅を訪れたことが、柄谷の運動 NAM のきっかけになったことです<a class="cite" href="#src-14" data-src="src-14">[14]</a>。また、こうした通貨の実験の広がりが、当時雑誌の書き手だったブテリンにイーサリアムを構想させた、とも書きます<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>本は注で、共同体通貨の系譜にも触れます。1983 年にマイケル・リントン（Michael Linton）が始めた地域の交換のしくみ（LETS）と、リントンが<a href="karatani-kojin.html">柄谷行人</a>の自宅を訪れたことが、柄谷の運動 NAM のきっかけになったことです<a class="cite" href="#src-14" data-src="src-14">[14]</a>。また、こうした通貨の実験の広がりが、当時雑誌の書き手だったブテリンにイーサリアムを構想させた、とも書きます<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p>周りの議論として、マット・プルウィット（Matt Prewitt）とグレン・ワイルの「Plural Money」（2022 年）があります。教育や道路のような社会で用意するものを現金で配ると非効率だが、平等に配るだけでは必要の違いを拾えず、政府が決めると誤りと権力の集中を招く。このジレンマから、使い道を限ったお金を考えています<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
 <h2>もっと知りたい人へ</h2>
 <ol>
@@ -119,9 +120,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

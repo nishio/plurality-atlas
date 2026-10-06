@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -98,7 +99,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>PRANCE 是一個把 Plurality 與鈴木健的「<a href="nameraka-society.html">平滑社會</a>」並列放進名稱與目的中的日本大學研究組織（→〈<a href="suzuki-ken.html">鈴木健</a>〉）。它的子計畫和書中出現的工具重疊：審議與 <a href="polis.html">Polis</a>，以及<a href="broad-listening.html">廣泛傾聽</a>。實踐方面則與 <a href="dd2030.html">DD2030</a> 合作。</p>
 <p>Plurality 在日本被接受的經過，請見〈<a href="plurality-in-japan.html">Plurality 在日本是怎麼傳開的？</a>〉與〈<a href="japan-timeline.html">日本的 Plurality 與數位民主年表</a>〉。</p>
 <h2>關於本頁的資料</h2>
-<p>本頁的主題，是由本站的營運者<a href="nishio-hirokazu.html">西尾泰和</a>選定的。在資料中，西尾只以兩種身分出現：2025 年 5 月 10 日場次「Polis ― 合意形成の新しいかたち」（Polis：形成共識的新形式）的與談人<a class="cite" href="#src-2" data-src="src-2">[2]</a>，以及高峰會分場「ブロードリスニングの技術」（廣泛傾聽的技術）的講者（與中山心太一起）<a class="cite" href="#src-7" data-src="src-7">[7]</a>。高峰會官方網站的講者介紹中也有西尾，但同樣是以這個分場講者的身分<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>本頁的主題，是由本站的營運者<a href="nishio-hirokazu.html">西尾泰和</a>選定的。在資料中，西尾只以兩種身分出現：2025 年 5 月 10 日場次「Polis ― 合意形成の新しいかたち」（Polis：形成共識的新形式）的與談人<a class="cite" href="#src-2" data-src="src-2">[2]</a>，以及高峰會分場「ブロードリスニングの技術」（廣泛傾聽的技術）的講者（與<a href="nakayama-shinta.html">中山心太</a>一起）<a class="cite" href="#src-7" data-src="src-7">[7]</a>。高峰會官方網站的講者介紹中也有西尾，但同樣是以這個分場講者的身分<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p>資料大多是慶應自己的頁面，以及活動的官方頁面、新聞稿、鈴木健本人的網站。獨立的報導幾乎沒有蒐集到。關於 PRANCE 的設置與鈴木健的就任，也沒有找到慶應的正式公告，根據只有計畫的頁面。</p>
 <h2>延伸閱讀</h2>
 <ol>
@@ -139,9 +140,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

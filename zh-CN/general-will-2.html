@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -66,7 +67,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h3>东浩纪自己的收回</h3>
 <p>2020 年，东浩纪回顾当时说，写这本书的时候，大家期待网络会改变世界；可是东日本大地震之后，网络变成了现在的样子，现在几乎什么都不能期待了<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>对把政治交给 AI 的批评</h3>
-<p>在 2022 年的论文中，东浩纪把用资讯技术、不经过人而把民意反映到政治上的构想，命名为「奇点民主主义」（シンギュラリティ民主主義），并举哈拉瑞（Yuval Noah Harari）和落合阳一的构想为例。东浩纪接着预告，要以不会走到那一步的形式，重新解读一般意志<a class="cite" href="#src-8" data-src="src-8">[8]</a>。这整理成 2023 年的书《訂正可能性の哲学》，东浩纪写道，这本书承接了《一般意志2.0》的主题<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>在 2022 年的论文中，东浩纪把用资讯技术、不经过人而把民意反映到政治上的构想，命名为「奇点民主主义」（シンギュラリティ民主主義），并举哈拉瑞（Yuval Noah Harari）和<a href="ochiai-yoichi.html">落合阳一</a>的构想为例。东浩纪接着预告，要以不会走到那一步的形式，重新解读一般意志<a class="cite" href="#src-8" data-src="src-8">[8]</a>。这整理成 2023 年的书《訂正可能性の哲学》，东浩纪写道，这本书承接了《一般意志2.0》的主题<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <p>在 2024 年给杂志的文章中，东浩纪把用 AI 就能让政治半自动化的想法称为「人工智能民主主义」。立场是：赞成使用 AI 本身，但过度期待是错误的<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h3>为什么需要人</h3>
 <p>在与成田悠辅的对谈（2022 年）中，东浩纪主张，人如果不信任对方的人格，就不会改变想法，所以政治无法被算法（计算的步骤）取代<a class="cite" href="#src-10" data-src="src-10">[10]</a>。在另一场访谈中，东浩纪表示的大意是：用 AI 汲取人们的欲望、加以满足，就能打造稳定社会的这种想法本身，就是虚构的<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

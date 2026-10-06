@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>橋接的機制不要求使用者做特別的操作<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。使用者照常評分「有沒有幫助」，或按「贊成・反對」。</p>
 <p>不同的是<strong>統計的方式</strong>。浮上畫面的，不再是「在自己陣營受歡迎的東西」，而是「連另一邊的人也認可的東西」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h3>為什麼需要它</h3>
-<p>研究者 Aviv Ovadya 在 2022 年的論文中主張<a class="cite" href="#src-1" data-src="src-1">[1]</a>：Facebook、YouTube、TikTok 等的推薦系統，透過決定要給人看什麼，成了決定整個社會「做什麼會得到回報」的機制。用反應數量排序的做法和人類心理結合起來，越是煽動分裂的行為，越能得到關注這個報酬<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>研究者 <a href="aviv-ovadya.html">Aviv Ovadya</a> 在 2022 年的論文中主張<a class="cite" href="#src-1" data-src="src-1">[1]</a>：Facebook、YouTube、TikTok 等的推薦系統，透過決定要給人看什麼，成了決定整個社會「做什麼會得到回報」的機制。用反應數量排序的做法和人類心理結合起來，越是煽動分裂的行為，越能得到關注這個報酬<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>根據 Ovadya，這會左右政治人物、記者、藝人等誰能成功<a class="cite" href="#src-1" data-src="src-1">[1]</a>，進而影響社會做出好決定的能力、合作的能力，以及暴力衝突發生的可能<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>橋接式排序（bridging-based ranking）被提出來，作為對抗這股把人拉開的力量、把人拉近的力量<a class="cite" href="#src-1" data-src="src-1">[1]</a>。Ovadya 認為，按時間順序顯示等其他改革方案，只要不加入橋接，就會繼續獎勵那些以分裂為目標的人，所以預設應該採用橋接式排序<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>這個詞的定義</h3>
@@ -127,9 +128,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

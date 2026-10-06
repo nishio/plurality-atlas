@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -55,7 +56,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>The PMP is a set of operating rules for when many people make one work (a book or software) together, so that <strong>what should be done next, and whether to accept a contribution, are decided by all the participants rather than by one boss or leader</strong> <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p>Contributors receive points that are not money (<strong>credits</strong>). They use those credits to take part in prioritizing work and in votes on whether to accept contributions <a class="cite" href="#src-1" data-src="src-1">[1]</a>. The book <em>⿻ Plurality</em> itself was made under these rules <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <h2>For example</h2>
-<p><strong>Making <em>Plurality</em> (2024).</strong> Chapter 5-7 of the book links, as "The Plural Management Protocol we used to create this book", to an explanation posted on GitHub, the platform for sharing code. According to the book, this system tracked the types and extent of contributions from diverse participants, and decided the priority of work and which work to incorporate <a class="cite" href="#src-3" data-src="src-3">[3]</a>. The explanation was written on February 26, 2024, by Petar Maymounkov, who built Gov4Git, the tool for this system. It sets the goal of making the book according to the principles the book describes <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p><strong>Making <em>Plurality</em> (2024).</strong> Chapter 5-7 of the book links, as "The Plural Management Protocol we used to create this book", to an explanation posted on GitHub, the platform for sharing code. According to the book, this system tracked the types and extent of contributions from diverse participants, and decided the priority of work and which work to incorporate <a class="cite" href="#src-3" data-src="src-3">[3]</a>. The explanation was written on February 26, 2024, by <a href="petar-maymounkov.html">Petar Maymounkov</a>, who built Gov4Git, the tool for this system. It sets the goal of making the book according to the principles the book describes <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p><strong>On to community management (May 2024).</strong> Around May 2024, the co-author and economist E. Glen Weyl told participants that the project had entered the phase of full community management through Gov4Git, and asked them to review and vote on contributions. When Hirokazu Nishio asked how to add an endorsement that had arrived late, Weyl answered, in substance, that if no credits were needed, the contribution could simply be submitted; if credits were wanted, the first step was to open an issue, and after Weyl backed it, submit a contribution resolving that issue (in Japanese) <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
 <p><strong>Spreading beyond the book.</strong> Several other uses have been found on GitHub, such as an earth-science software project whose contribution guide says its governance is based on the Plural Management model <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
 <h2>How it works</h2>
@@ -135,9 +136,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

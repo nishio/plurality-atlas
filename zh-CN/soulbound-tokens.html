@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -53,7 +54,7 @@ li:target{background:var(--tint);border-radius:4px}
 <main lang="zh-CN"><h1>什么是灵魂绑定凭证（SBT）？</h1><div class='lead'>不能卖给别人、也不能转让的数位证明。它把学历、所属、出席、借贷承诺等，绑在本人称为「灵魂（Soul）」的帐户上。2022 年，维塔利克·布特林、卫谷伦、Puja Ohlhaver 把它提出为「DeSoc（去中心化社会）」，要把以金钱为中心的 Web3 重新建立在人际关系之上。</div><p>毕业证书和会员证，证明一个人真的学过什么、属于某个地方。如果可以用钱卖给别人，就失去意义了。可是网络上的数位证明，很多都能轻易买卖。灵魂绑定凭证（SBT）的想法，就是做出「不能卖、不能转让」的数位证明。</p>
 <h2>一句话说明</h2>
 <p>灵魂绑定凭证（Soulbound Token，SBT），是放在区块链（任何人都能查验的公开纪录帐本）上、不能卖也不能转让的数位证明。就像毕业证书、会员证、活动参加证明一样，它不是用来表示「用钱买得到的东西」，而是表示「这个人实际做过什么、属于哪里」<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
-<p>2022 年，<a href="vitalik-buterin.html">维塔利克·布特林</a>（Vitalik Buterin）、卫谷伦（E. Glen Weyl）、Puja Ohlhaver 提出构想：用 SBT 表现人与人之间的信任网络，把以金钱往来为中心的加密货币世界（Web3）重新建立在社会关系之上。三人把它命名为「DeSoc」（Decentralized Society，去中心化社会）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>2022 年，<a href="vitalik-buterin.html">维塔利克·布特林</a>（Vitalik Buterin）、卫谷伦（E. Glen Weyl）、<a href="puja-ohlhaver.html">Puja Ohlhaver</a> 提出构想：用 SBT 表现人与人之间的信任网络，把以金钱往来为中心的加密货币世界（Web3）重新建立在社会关系之上。三人把它命名为「DeSoc」（Decentralized Society，去中心化社会）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>举例来说</h2>
 <p><strong>来自游戏的「灵魂绑定」。</strong> 这个名称来自线上游戏《魔兽世界》（World of Warcraft）的「灵魂绑定」道具：一旦捡起，就不能转让或卖给其他玩家，想要最强的装备，就只能自己和伙伴一起去打倒巨龙。布特林在 2022 年 1 月的博客中问道：如果 NFT（网络上独一无二的证明）也能这样不可转让，是不是就不只能显示持有者的财富，还能显示「这个人是谁」？<a class="cite" href="#src-1" data-src="src-1">[1]</a></p>
 <p><strong>活动的参加证明。</strong> 布特林写道，发给活动参加者的 NFT「POAP」，如果能从别人手上买到，就失去了「本人参加过」的意义。事实上，Adidas 免费发给粉丝的 POAP，在附上优先购买商品的权利后，马上就被高价转卖<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

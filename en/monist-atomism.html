@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -81,7 +82,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>Where it fits in Plurality</h2>
 <p>The term appears in chapter 3-0 as the counterpart to the definition of ⿻ <a class="cite" href="#src-1" data-src="src-1">[1]</a>. → <a href="plurality.html">⿻ Plurality</a>, <a href="collaboration-across-difference.html">collaboration across social difference</a></p>
 <p>In chapter 3-1 it is extended to a view of science, and presented as the common root of technocracy and libertarianism <a class="cite" href="#src-6" data-src="src-6">[6]</a>. → <a href="three-paths.html">Three paths</a></p>
-<p>In chapter 3-2 it is applied to the three institutions of property, identity and voting. The book then introduces Henry George, Simmel, John Dewey and Norbert Wiener as thinkers who went beyond it <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="intersectional-identity.html">Intersectional identity</a>, <a href="emergent-publics.html">emergent publics</a>, <a href="supermodularity.html">supermodularity</a>, <a href="lost-dao.html">The Lost Dao</a></p>
+<p>In chapter 3-2 it is applied to the three institutions of property, identity and voting. The book then introduces <a href="henry-george.html">Henry George</a>, Simmel, John Dewey and Norbert Wiener as thinkers who went beyond it <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="intersectional-identity.html">Intersectional identity</a>, <a href="emergent-publics.html">emergent publics</a>, <a href="supermodularity.html">supermodularity</a>, <a href="lost-dao.html">The Lost Dao</a></p>
 <p>Later in the book there are chapters that roughly match these three institutions: <a href="identity-and-personhood.html">Identity and Personhood</a>, <a href="property-and-contract.html">Property and Contract</a> and <a href="plural-voting.html">⿻ Voting</a>. This pairing, however, is not stated by the book; it is this article's own arrangement.</p>
 <p>In the concluding chapter 7-1, the book asks whether we should "liberate individuals to be atomistic agents, free of constraints or responsibilities", or "allow technologists to solve our problems, plan our future", and answers: "We say, loudly and clearly, neither!" <a class="cite" href="#src-16" data-src="src-16">[16]</a>.</p>
 <h2>Further reading</h2>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

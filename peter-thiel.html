@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>2009 年の文章で、自由と民主主義が両立するとはもう思っていない、と書いたことで知られます<a class="cite" href="#src-3" data-src="src-3">[3]</a>。書籍『Plurality』は、ティールを「リバタリアニズム」（自由至上主義。個人の自由を最も重んじ、国の役割を小さくしようとする立場）の中心的な知的指導者として扱っています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>Plurality とのかかわり</h2>
 <p><strong>リバタリアニズムの中心人物として。</strong> 本の 2-0 章は、リバタリアニズムには『The Sovereign Individual』や、<a href="balaji-srinivasan.html">バラジ・スリニバサン</a> の『The Network State』などの定番の本がある、と書きます。そのうえで、ティールが、資金を出したり仕事を後押ししたりしてきた人々（これらの著者など）とともに、中心的な知的指導者と広く見なされている、と述べています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。→ <a href="three-paths.html">三つの道</a></p>
-<p><strong>各国のナショナリストや極右との近さの例として。</strong> 同じ章は、リバタリアニズムと民主主義国のナショナリストや極右との関係は近いが、いくらか複雑でもある、と書きます。その例として本が挙げるのは、ティールがドナルド・トランプとその支持者の主な資金提供者になったこと、元オーストリア首相セバスティアン・クルツを雇っていること、ブレイク・マスターズや J・D・ヴァンスの政治家としての道を支えたことです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>本が挙げる政治とのかかわり。</strong> 同じ章は、リバタリアニズムと民主主義国のナショナリストや極右との関係は近いが、いくらか複雑でもある、と書きます。そのうち近い側の例として本が挙げるのは、ティールがドナルド・トランプとその支持者の主な資金提供者になったこと、元オーストリア首相セバスティアン・クルツを雇っていること、ブレイク・マスターズや J・D・ヴァンスの政治家としての道を支えたことです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>PayPal の話の中で。</strong> 4-3 章は、オンライン決済の歴史を振り返る中で、PayPal はもともとマックス・レヴチン、ルーク・ノセック、ティールが新しいデジタル通貨として構想し、すぐにネット向けの支払いの仕組みに移った、と紹介しています<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="commerce-and-trust.html">商取引と信頼</a></p>
 <p><strong>結論の章の問いの中で。</strong> 7-1 章は「ピーター・ティール、マーク・アンドリーセン、バラジ・スリニバサンのようなリバタリアンが望むように、個人を解放し、制約や責任から逃れたアトム的主体にすべきだろうか」と問います（日本語版の訳）<a class="cite" href="#src-4" data-src="src-4">[4]</a>。本はこの問いを、技術者に未来を任せる道とともに、自分たちが選ばない道として置いています。→ <a href="monist-atomism.html">一元論的アトム主義</a>・<a href="marc-andreessen.html">マーク・アンドリーセン</a></p>
 <p><strong>ワイルによる位置づけ。</strong> <a href="glen-weyl.html">グレン・ワイル</a> は 2022 年のエッセイで、21 世紀の政治思想の一つ「企業リバタリアニズム」の基本文献に、ティールとマスターズの『Zero to One』を挙げ、代表人物の筆頭にティールを置きました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
@@ -104,9 +105,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

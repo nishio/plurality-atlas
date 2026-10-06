@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>地方政府的例子整理在<a href="municipal-broad-listening.html">地方政府的廣泛傾聽</a>一文。</p>
 <h2>運作方式</h2>
 <h3>誕生的經過</h3>
-<p>它的原型，是美國非營利組織 AI Objectives Institute 在 2023 年打造的 Talk to the City（TTTC）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>它的原型，是美國非營利組織 <a href="ai-objectives-institute.html">AI Objectives Institute</a> 在 2023 年打造的 Talk to the City（TTTC）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>安野貴博的團隊在 2024 年的東京都知事選舉、電視台的選舉報導，以及東京都的意見徵集中使用了 TTTC。過程中清楚浮現一個課題：需要一套連非工程師都能「上傳檔案就能用」的機制<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>於是，他們從 TTTC 的散布圖版本分支出來開始開發，並在 2025-03-16 以 OSS 公開<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h3>和 TTTC 有什麼不同</h3>
@@ -94,7 +95,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>贊成和反對被放進同一群組。</strong> 對同一個話題的贊成與反對意見，在 AI 看來容易是「相似的文章」，有時會被歸成一群。《廣泛傾聽》把這列為尚未解決的課題，並介紹了幾種對策<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
 <li><strong>不容易在地方政府推廣。</strong> DD2030 曾向地方政府推介，但因為動機薄弱、首長與第一線的溫差、人事調動、工程師不足等原因，試用後很難轉為正式運用。據說許多地方政府在分析之前，更大的課題是「收集不到足夠的意見」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>責任不明確的批評。</strong> 一位市民在 note 上的文章主張，像広聴AI 或<a href="idobata.html">いどばた</a>（Idobata）這種 OSS 式的公民參與，在品質、問責與維護的保證上並不明確<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
-<li><strong>不一定是未來團隊的工具。</strong> 《廣泛傾聽》的主要作者中山心太在 2026 年 2 月於 X 上寫道，未來團隊已經不再使用 TTTC 或広聴AI 了<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
+<li><strong>不一定是未來團隊的工具。</strong> 《廣泛傾聽》的主要作者<a href="nakayama-shinta.html">中山心太</a>在 2026 年 2 月於 X 上寫道，未來團隊已經不再使用 TTTC 或広聴AI 了<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
 <p>《多元宇宙》沒有提到広聴AI 的名字。不過英文版 5-4〈擴增審議〉（Augmented Deliberation）把它的原型 Talk to the City，以及安野在都知事選中的用法，列為廣泛傾聽的例子<a class="cite" href="#src-13" data-src="src-13">[13]</a>（目前的繁體中文版 5-4 章沒有這段）。可以說，広聴AI 就是把 TTTC 在日本做成了「任何人都能用的元件」。參見<a href="augmented-deliberation.html">擴增審議</a>。</p>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

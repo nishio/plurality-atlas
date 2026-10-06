@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -79,7 +80,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>支持者が教条的にならないか。</strong> 一田和樹は、本『PLURALITY』を評価しながらも、日本の QC 活動（職場の品質改善活動）を手放しで成功例とする点を疑問視します。そして、その心配は日本でこの本に共感した人々にも当てはまるとして、党の政策リポジトリの変更提案を例に挙げています<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</li>
 <li><strong>何を聞くかの線引きを誰がするのか。</strong> Noema（2026 年 6 月）は、党のチャットボットのコードに「NG ワード」があり、元になる AI（Claude）の制約とも重なって、政治的な会話の範囲が見えにくい所で決まりうると指摘します。一方で、党の道具は合意を作ろうとはせず、判断を党と有権者に残した点で民主的だった、とも評価しています<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 <li><strong>支持層の偏り。</strong> 哲学者の東浩紀は朝日新聞のインタビュー（2026 年 5 月）で、衆院選の躍進は、野党が自ら崩れたことの受け皿になったことと、若い世代の期待によるもので、主な支持者は富裕層やテック系のビジネスマンだと述べました。希望と同時に「エリート」の限界がある、という見方です<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</li>
-<li><strong>「チームみらい＝広聴AI」ではありません。</strong> 広聴AI や <a href="idobata.html">いどばた</a> は DD2030 のオープンソースで、党のものではありません<a class="cite" href="#src-3" data-src="src-3">[3]</a>。ブロードリスニングの本の主な著者である中山心太は 2026 年 2 月、党はもう Talk to the City も広聴AI も使っていない、と書いています<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</li>
+<li><strong>「チームみらい＝広聴AI」ではありません。</strong> 広聴AI や <a href="idobata.html">いどばた</a> は DD2030 のオープンソースで、党のものではありません<a class="cite" href="#src-3" data-src="src-3">[3]</a>。ブロードリスニングの本の主な著者である<a href="nakayama-shinta.html">中山心太</a>は 2026 年 2 月、党はもう Talk to the City も広聴AI も使っていない、と書いています<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</li>
 </ul>
 <h2>Plurality の中での位置</h2>
 <p>書籍『Plurality』の 5-4 章「拡張熟議」は、結党前の 2024 年都知事選の安野陣営を、<a href="broad-listening.html">ブロードリスニング</a>を選挙に持ち込んだ例として挙げています<a class="cite" href="#src-20" data-src="src-20">[20]</a>。党名そのものは本には出てきません。</p>
@@ -123,9 +124,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

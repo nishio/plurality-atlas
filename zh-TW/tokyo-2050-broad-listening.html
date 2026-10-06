@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -78,7 +79,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>在本站蒐集的東京都資料中，沒有任何資料顯示臺灣的唐鳳曾擔任東京都的顧問。能確認的有以下兩點。第一，東京都的黑客松（短期的開發活動）參考了唐鳳參與過的臺灣「總統盃黑客松」<a class="cite" href="#src-16" data-src="src-16">[16]</a>。第二，東京都宣布唐鳳預定在 2025 年 4 月成為東京都立大學的客座教授，並預告了 5 月 8 日的參與式演講<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
 <h2>爭議與批評</h2>
 <ul>
-<li><strong>「AI 發現了觀光」是言過其實。</strong> DD2030 志願者寫的《廣泛傾聽》（原書名《政治・自治体・企業に広がるブロードリスニング》）第 5 章（中山心太）指出：東京都拿來比較的 2021 年版「未來的東京」，是在新冠疫情期間制定的，觀光不是獨立的領域是理所當然的；觀光施策的擴充，也在廣泛傾聽之前的 2024 年 1 月修訂中就已經在推動。這本書寫道，變化的實態不是「新發現」而是「分割」，「廣泛傾聽改變了政策」這個故事「至少有一部分是過度評價」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
+<li><strong>「AI 發現了觀光」是言過其實。</strong> DD2030 志願者寫的《廣泛傾聽》（原書名《政治・自治体・企業に広がるブロードリスニング》）第 5 章（<a href="nakayama-shinta.html">中山心太</a>）指出：東京都拿來比較的 2021 年版「未來的東京」，是在新冠疫情期間制定的，觀光不是獨立的領域是理所當然的；觀光施策的擴充，也在廣泛傾聽之前的 2024 年 1 月修訂中就已經在推動。這本書寫道，變化的實態不是「新發現」而是「分割」，「廣泛傾聽改變了政策」這個故事「至少有一部分是過度評價」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>儘管如此仍有意義的評價。</strong> 同一章把透過社群媒體與街頭訪問收集年輕人與兒童的聲音，解讀為用收集方式的巧思，去彌補高齡者聲音往往較強的偏差的嘗試。這一章以觀光群組中，除了推動觀光的聲音之外，也出現了「過度觀光（觀光客過度集中）對策」的聲音為例，評價說比起件數，作為「論點地圖」的形態成了判斷的依據。不過這一章也提醒，能呈現的只是所收集意見內部的結構，而不是統計上的輿論<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>公眾意見徵集中提出的擔憂。</strong> 有人提出：這只是習慣發表意見的人的聲音集合，應注意不要當作政策評估的依據；應該重新檢討可能偏離法律宗旨的徵集方式；是不是整理在網頁上就結束了。東京都回答，這是為了作為戰略制定的參考而進行的，用於整理計畫的方向與政策分類<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 <li><strong>沒有餘力發聲的人。</strong> 也有意見認為，要求改善教育現場的意見之所以少，是不是因為教師和家長太忙，連提出意見的餘力都沒有。東京都回答，已透過多種應徵方式與延長期間下了功夫<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

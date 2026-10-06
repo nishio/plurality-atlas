@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -79,7 +80,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>QF の上乗せは、「ある人の寄付がほかの人にもたらす得」の分を補うものだ、とブテリンは説明します。寄付した人の 2 人組ごとにこの分を計算して足し合わせると、ちょうど QF の式になるそうです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>また QF は、「寄付する人が賛成票を投じ、基金が反対票を投じる」<a href="quadratic-voting.html">クアドラティック投票</a> の特別な場合と見ることもできる、とブテリンは書いています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>どこから来たのか</h3>
-<p>もとになった論文は、ブテリン、ゾーイ・ヒッツィグ（Zoë Hitzig）、グレン・ワイル（E. Glen Weyl）の 3 人が 2018 年に発表した「A Flexible Design for Funding Public Goods（公共財のための柔軟な資金の仕組み）」です。論文の要旨は、QV の考えを資金の仕組みに広げたもので、決まった条件のもとで公共のものを最適な量だけ生み出せ、選挙資金やオープンソース、報道、街の公共事業に使える、としています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>もとになった論文は、ブテリン、<a href="zoe-hitzig.html">ゾーイ・ヒッツィグ</a>（Zoë Hitzig）、グレン・ワイル（E. Glen Weyl）の 3 人が 2018 年に発表した「A Flexible Design for Funding Public Goods（公共財のための柔軟な資金の仕組み）」です。論文の要旨は、QV の考えを資金の仕組みに広げたもので、決まった条件のもとで公共のものを最適な量だけ生み出せ、選挙資金やオープンソース、報道、街の公共事業に使える、としています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>本の位置づけと、つながりを見る QF</h3>
 <p>本は 5-7 章で、QF は「人がばらばらに行動する」という仮定から導かれたもので、近年は人の集団や所属を考えに入れる設計へ広がった、と書きます<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <p>ワイルらの 2023 年の文章は、QF が最適だという証明は、人が孤立して自分の得だけで動くという仮定に頼っていて、少しでも示し合わせる普通の人間が相手だと最適ではない、と論じました。そして、似た者どうしの集団より、多様な集団に支えられた事業に多く配るべきで、それは Plurality の目標そのものだ、と書きます<a class="cite" href="#src-11" data-src="src-11">[11]</a>。2025 年の報告によれば、この考えを取り入れた「つながりを見る QF（CO-QF）」は Gitcoin の助成の 89% で使われ、400 万ドルを超えるお金を配りました<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

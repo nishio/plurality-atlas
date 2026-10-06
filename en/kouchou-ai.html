@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>Examples from local governments are gathered in the article on <a href="municipal-broad-listening.html">broad listening in local governments</a>.</p>
 <h2>How it works</h2>
 <h3>How it came about</h3>
-<p>It is based on Talk to the City (TTTC), made in 2023 by the AI Objectives Institute, a US nonprofit <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
+<p>It is based on Talk to the City (TTTC), made in 2023 by the <a href="ai-objectives-institute.html">AI Objectives Institute</a>, a US nonprofit <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <p>Takahiro Anno's team used TTTC in the 2024 Tokyo governor's election, in a TV network's election coverage and in the Tokyo government's call for public input. Along the way, one problem became clear: a system was needed that people who are not engineers could use just by uploading a file <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <p>So development began as a branch (fork) of TTTC's scatter-plot version, and it was released as OSS on 2025-03-16 <a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <h3>What changed from TTTC</h3>
@@ -94,7 +95,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>Support and opposition end up in the same group.</strong> Supporting and opposing opinions on the same topic tend to look like "similar text" to the AI, and can be lumped together. The book <em>Broad Listening</em> treats this as an unsolved problem and describes several workarounds <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</li>
 <li><strong>It is slow to spread among local governments.</strong> DD2030 reached out to local governments, but weak incentives, gaps in enthusiasm between mayors and frontline staff, staff transfers and a lack of engineers made it hard to move from trials to full use. In many local governments, the problem came before analysis: not enough opinions were coming in <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</li>
 <li><strong>Criticism that responsibility is unclear.</strong> A note article by a member of the public argues that OSS-based citizen participation, such as Kouchou AI and <a href="idobata.html">Idobata</a>, leaves quality, accountability and guarantees of maintenance unclear <a class="cite" href="#src-11" data-src="src-11">[11]</a>.</li>
-<li><strong>Not necessarily Team Mirai's tool.</strong> In February 2026, Shinta Nakayama, the lead author of the book <em>Broad Listening</em>, wrote on X that Team Mirai no longer uses either TTTC or Kouchou AI <a class="cite" href="#src-12" data-src="src-12">[12]</a>.</li>
+<li><strong>Not necessarily Team Mirai's tool.</strong> In February 2026, <a href="nakayama-shinta.html">Shinta Nakayama</a>, the lead author of the book <em>Broad Listening</em>, wrote on X that Team Mirai no longer uses either TTTC or Kouchou AI <a class="cite" href="#src-12" data-src="src-12">[12]</a>.</li>
 </ul>
 <h2>Where it fits in Plurality</h2>
 <p>The book <em>Plurality</em> does not mention Kouchou AI by name. But in chapter 5-4, "<a href="augmented-deliberation.html">Augmented Deliberation</a>", it gives Talk to the City, on which Kouchou AI is based, and its use in Anno's governor campaign, as examples of broad listening <a class="cite" href="#src-13" data-src="src-13">[13]</a>. Kouchou AI can be seen as that TTTC turned into a "component anyone can use" in Japan.</p>
@@ -130,9 +131,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

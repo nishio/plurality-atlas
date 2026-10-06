@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -72,7 +73,7 @@ li:target{background:var(--tint);border-radius:4px}
 </ol>
 <p>書把第一點總結為：「全球資本主義最大的悖論或許正在於，它既是最大規模的合作範例，卻又難以支持它所倡導的技術協作形式。」<a class="cite" href="#src-8" data-src="src-8">[8]</a> 書也說，反壟斷、工會、補貼、再分配等現有對策，也有容易僵化、難以跨越國界、管理者資訊不足、被利益集團俘獲等局限<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>未來社會市場的工具</h3>
-<p>書列出承繼 19 世紀經濟學者亨利·喬治（Henry George）思想的幾種工具<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>：</p>
+<p>書列出承繼 19 世紀經濟學者<a href="henry-george.html">亨利·喬治</a>（Henry George）思想的幾種工具<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>：</p>
 <ul>
 <li><strong>部分共同所有權</strong>——上面提到的財產自行評估機制。</li>
 <li><strong>平方和多元募資法</strong>——由基金配對個人的捐款。配對資金「應該按照個人貢獻的平方根之和的平方來分配」，給予大量小額捐款者比少數大額捐款者更高的權重。</li>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

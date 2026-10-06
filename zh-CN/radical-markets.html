@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -75,7 +76,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>布特林这样整理这本书的想法：市场和价格是决定资源用途的优秀机制。但市场建立在社会打造的财产权之上。财产权的打造方式有很多种，可能有比现在更好的。自由，就是可以选择各种设计的广大空间<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>也就是说，它不是「市场还是国家」的二选一，而是重新设计市场机制本身的立场。布特林也写道，这本书有很多把官员临场判断换成以金钱得失驱动的机制的想法，所以特别适合没有可靠法院的区块链<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>从哪里来</h3>
-<p>《多元宇宙》的 5-7 章写道，既要结合甚至增强市场的活力、又要解决市场的局限，这个动机来自 19 世纪思想家亨利·乔治（Henry George）及其追随者，包括经济学家威廉·维克里（William Vickrey）<a class="cite" href="#src-7" data-src="src-7">[7]</a>。英文版并写道，作者之一的「前一本书」（《激进市场》）是献给维克里的<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>《多元宇宙》的 5-7 章写道，既要结合甚至增强市场的活力、又要解决市场的局限，这个动机来自 19 世纪思想家<a href="henry-george.html">亨利·乔治</a>（Henry George）及其追随者，包括经济学家威廉·维克里（William Vickrey）<a class="cite" href="#src-7" data-src="src-7">[7]</a>。英文版并写道，作者之一的「前一本书」（《激进市场》）是献给维克里的<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>走向运动</h3>
 <p>根据《TIME》的报导，这本书在 2018 年出版时引起很大的话题。卫谷伦把这股热度，用在创办推动书中想法的非营利组织 <a href="radicalxchange.html">RadicalxChange 基金会</a>上<a class="cite" href="#src-10" data-src="src-10">[10]</a>。另外，reverse alignment 联盟网站上的卫谷伦介绍，写着这本书是英国《经济学人》2018 年的年度好书<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>另一方面，卫谷伦在 2019 年写道，这本书篇幅很长，是一组彼此几乎独立的政策提案，并不是一套完整的社会哲学；自己的想法在这本书之后大幅扩展了<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
@@ -133,9 +134,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,9 +63,9 @@ li:target{background:var(--tint);border-radius:4px}
 <p><strong>Links with Japan.</strong> He gave a keynote talk in Tokyo in January 2024 <a class="cite" href="#src-9" data-src="src-9">[9]</a>. In October 2024 he held a three-way conversation with Tang and Haruyuki Seki <a class="cite" href="#src-18" data-src="src-18">[18]</a>. Around the publication of the Japanese edition in May 2025, he contributed articles and held a conversation with Sunji Lee <a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>.</p>
 <h2>Main ideas</h2>
 <p><strong>Quadratic Voting.</strong> A voting method in which the cost of buying votes is the square of the number of votes. The book describes it as the "'quadratic voting' procedure one of us invented" <a class="cite" href="#src-2" data-src="src-2">[2]</a>. See the articles on <a href="quadratic-voting.html">Quadratic Voting</a> and <a href="plural-voting.html">⿻ Voting</a>.</p>
-<p><strong>Quadratic Funding.</strong> Its starting point is a 2018 paper Weyl co-wrote with Buterin and Zoë Hitzig <a class="cite" href="#src-3" data-src="src-3">[3]</a>. Weyl and others later developed it in a direction that takes connections between participants into account, making it more resistant to collusion. → <a href="quadratic-funding.html">Quadratic Funding</a>, <a href="social-markets.html">Social Markets</a></p>
+<p><strong>Quadratic Funding.</strong> Its starting point is a 2018 paper Weyl co-wrote with Buterin and <a href="zoe-hitzig.html">Zoë Hitzig</a> <a class="cite" href="#src-3" data-src="src-3">[3]</a>. Weyl and others later developed it in a direction that takes connections between participants into account, making it more resistant to collusion. → <a href="quadratic-funding.html">Quadratic Funding</a>, <a href="social-markets.html">Social Markets</a></p>
 <p><strong>Data dignity.</strong> In a 2018 article co-written with <a href="jaron-lanier.html">Jaron Lanier</a>, he proposed intermediary organizations that bargain collectively on behalf of the people who provide data <a class="cite" href="#src-12" data-src="src-12">[12]</a>. → <a href="data-dignity.html">Data dignity</a></p>
-<p><strong>Decentralized Society and soulbound tokens.</strong> In 2022, with Puja Ohlhaver and Buterin, he put forward a vision of representing relationships between people with tokens that cannot be transferred <a class="cite" href="#src-13" data-src="src-13">[13]</a>. → <a href="soulbound-tokens.html">Soulbound tokens</a>, <a href="identity-and-personhood.html">Identity and Personhood</a></p>
+<p><strong>Decentralized Society and soulbound tokens.</strong> In 2022, with <a href="puja-ohlhaver.html">Puja Ohlhaver</a> and Buterin, he put forward a vision of representing relationships between people with tokens that cannot be transferred <a class="cite" href="#src-13" data-src="src-13">[13]</a>. → <a href="soulbound-tokens.html">Soulbound tokens</a>, <a href="identity-and-personhood.html">Identity and Personhood</a></p>
 <p><strong>Criticism of technocracy, and of his own earlier book.</strong> In a 2019 series of essays Weyl criticized technocracy among other things, and in 2020 he looked back on his own <em>Radical Markets</em> as, in substance, leaning too heavily on economics <a class="cite" href="#src-14" data-src="src-14">[14]</a>. These criticisms connect with the book's discussion of the <a href="three-paths.html">three paths</a> and <a href="monist-atomism.html">monist atomism</a>.</p>
 <p><strong>Reverse alignment.</strong> In July 2026, with James Evans and others, he published a piece calling for rebuilding institutions, norms and frameworks of governance so that society can use AI safely and share its benefits widely <a class="cite" href="#src-15" data-src="src-15">[15]</a>. → <a href="reverse-alignment.html">Reverse alignment</a></p>
 <h2>What is debated</h2>
@@ -109,9 +110,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -50,7 +51,7 @@ a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;p
 .cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
 li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../modes-of-exchange.html">日本語</a> <a class="lang" hreflang="en" href="../en/modes-of-exchange.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/modes-of-exchange.html">简体中文</a></nav></header>
-<main lang="zh-TW"><h1>什麼是交換模式（柄谷行人）？</h1><div class='lead'>日本哲學家柄谷行人依「人與人之間交換什麼、怎麼交換」，把社會分成四種的理論：贈與和回禮、支配和保護、貨幣和商品，以及尚未實現的第四種形式。唐鳳把這第四種形式稱為「交換模式 X」，並公開表示深受其影響。</div><p>我們對家人給東西不求回報，向政府繳稅換取公共服務，在商店用錢買東西。我們每天都在進行各種「交換」。柄谷行人的交換模式理論，就是想從交換的種類來解讀社會的結構。它也是唐鳳工作的基礎之一。</p>
+<main lang="zh-TW"><h1>什麼是交換模式（柄谷行人）？</h1><div class='lead'>日本哲學家柄谷行人依「人與人之間交換什麼、怎麼交換」，把社會分成四種的理論：贈與和回禮、支配和保護、貨幣和商品，以及尚未實現的第四種形式。唐鳳把這第四種形式稱為「交換模式 X」，並公開表示深受其影響。</div><p>我們對家人給東西不求回報，向政府繳稅換取公共服務，在商店用錢買東西。我們每天都在進行各種「交換」。<a href="karatani-kojin.html">柄谷行人</a>的交換模式理論，就是想從交換的種類來解讀社會的結構。它也是唐鳳工作的基礎之一。</p>
 <h2>一句話說明</h2>
 <p>交換模式（日文「交換様式」）是日本哲學家柄谷行人（Kojin Karatani）提出的理論，從「人與人之間交換什麼、怎麼交換」來看社會的結構<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>交換有三種形式：A 是贈禮與回禮，B 是以服從換取保護，C 是用錢買東西。此外還有不屬於其中任何一種的第四種 D<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -158,9 +159,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

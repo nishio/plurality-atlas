@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -81,7 +82,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>在《Plurality》中的位置</h2>
 <p>这个词在 3-0 章作为与 ⿻ 定义相对的词登场<a class="cite" href="#src-1" data-src="src-1">[1]</a>。→ <a href="plurality.html">⿻ Plurality（多元宇宙）</a>・<a href="collaboration-across-difference.html">跨越社会差异的协作</a></p>
 <p>在 3-1 章，它被扩大为一种科学观，当作专家统治与放任主义的共同根源<a class="cite" href="#src-6" data-src="src-6">[6]</a>。→ <a href="three-paths.html">三条道路</a></p>
-<p>在 3-2 章，它被套用到财产、身分、投票三项制度上。接着介绍超越它的思想家：亨利·乔治、齐美尔、约翰·杜威、诺伯特·维纳<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="intersectional-identity.html">多元交织的身分</a>・<a href="emergent-publics.html">新兴公众</a>・<a href="supermodularity.html">超模</a>・<a href="lost-dao.html">我们遗忘的道</a></p>
+<p>在 3-2 章，它被套用到财产、身分、投票三项制度上。接着介绍超越它的思想家：<a href="henry-george.html">亨利·乔治</a>、齐美尔、约翰·杜威、诺伯特·维纳<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="intersectional-identity.html">多元交织的身分</a>・<a href="emergent-publics.html">新兴公众</a>・<a href="supermodularity.html">超模</a>・<a href="lost-dao.html">我们遗忘的道</a></p>
 <p>书的后半，有几章像是对应这三项制度：<a href="identity-and-personhood.html">身分与人格权</a>、<a href="property-and-contract.html">财产与合约</a>、<a href="plural-voting.html">⿻投票</a>。不过这个对应不是书明说的，而是本文的整理。</p>
 <p>结语 7-1 章问：是否应该将个人「解放」成为不受约束、也不承担责任的原子化代理人？还是把问题交给技术专家，让他们规划我们的未来？书的回答是：「都不是！」<a class="cite" href="#src-16" data-src="src-16">[16]</a></p>
 <h2>延伸阅读</h2>
@@ -92,7 +93,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li>Glen Weyl, "Why I Am A Pluralist"（2022，英文，文章）— <a href="https://www.radicalxchange.org/updates/blog/why-i-am-a-pluralist/" target="_blank" rel="noopener">https://www.radicalxchange.org/updates/blog/why-i-am-a-pluralist/</a></li>
 <li>Vitalik Buterin, "Plurality philosophy in an incredibly oversized nutshell"（英文，书评）— <a href="https://vitalik.eth.limo/general/2024/08/21/plurality.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2024/08/21/plurality.html</a></li>
 <li>Jeffrey Fossett, "Notes on the Plurality Book"（英文，读书笔记）— <a href="https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html" target="_blank" rel="noopener">https://jeffreyfossett.com/2023/12/27/notes-on-plurality-book.html</a></li>
-<li>『Plurality』3-0「27プルラリティ（多元性）とは？」（日文，书）— <a href="https://www.plurality.net/v/chapters/3-0/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-0/jpn/</a></li>
+<li>『Plurality』3-0「28プルラリティ（多元性）とは？」（日文，书）— <a href="https://www.plurality.net/v/chapters/3-0/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-0/jpn/</a></li>
 </ol>
 <h2>出处</h2>
 <ol>
@@ -119,9 +120,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

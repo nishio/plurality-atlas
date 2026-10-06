@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -80,7 +81,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>デジタルの公共基盤の面では、フィンランドは行政のデータ交換の基盤に、エストニアと同じ X-Road を使っています。両国は 2018 年に、この基盤を互いにつなぎました<a class="cite" href="#src-17" data-src="src-17">[17]</a>。→ <a href="digital-public-infrastructure.html">デジタル公共インフラ</a>・<a href="plurality-in-estonia.html">エストニアでの Plurality の広がり</a></p>
 <h3>タンとの往来の前史</h3>
 <p>2019 年、研究者のタニヤ・アイタムルト（Tanja Aitamurto）はタンに、フィンランドで民主主義の革新を開発する大きなプロジェクトに加わっていると話しました。フィンランドでは、政策づくりにネットで市民の意見を募る試みを数多く行ってきた、とも説明しています<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</p>
-<p>2021 年のウェビナーでは、自らを熟議民主主義者（deliberative democrat）と呼ぶエレーヌ・ランデモア（Hélène Landemore）が、自分が関わったフィンランドの実験（スノーモービルの規制）と、台湾の <a href="vtaiwan.html">vTaiwan</a> を比べて、タンに問いかけました<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</p>
+<p>2021 年のウェビナーでは、自らを熟議民主主義者（deliberative democrat）と呼ぶ<a href="helene-landemore.html">エレーヌ・ランデモア</a>（Hélène Landemore）が、自分が関わったフィンランドの実験（スノーモービルの規制）と、台湾の <a href="vtaiwan.html">vTaiwan</a> を比べて、タンに問いかけました<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</p>
 <p>2020 年の対話で、台湾とフィンランドの偽情報への強さを比べる問いが出たとき、タンは、台湾の小中高 12 年の学習指導要領を作るときに、フィンランドが主な着想の源だったと答えました。この指導要領は、メディアと技術の力を 9 つの核心の力の一つに置いています<a class="cite" href="#src-20" data-src="src-20">[20]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
@@ -137,9 +138,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

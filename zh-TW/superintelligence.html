@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>《多元宇宙》的作者唐鳳（Audrey Tang）與衛谷倫（E. Glen Weyl），重新解讀了這個詞：超級智慧不是在資料中心裡打造的東西，而是<strong>已經在這裡、彼此協作的我們自己</strong><a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <h2>舉例來說</h2>
 <p><strong>AI 公司的宣言（2023～2025 年）。</strong> OpenAI 的經營團隊在 2023 年 5 月，把超級智慧當作比通用人工智慧（AGI）更強的未來 AI，討論它的治理。他們認為十年內 AI 可能在大多數領域超過專家，並提議成立類似國際原子能總署（IAEA）的國際機構<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
-<p>曾是 OpenAI 經營團隊成員的 Ilya Sutskever 等人，在 2024 年 6 月以超級智慧已近在咫尺為由，創立了新公司 Safe Superintelligence Inc.<a class="cite" href="#src-6" data-src="src-6">[6]</a>。Meta 的 Mark Zuckerberg 在 2025 年 7 月寫道，要把個人化的超級智慧送到每個人手上<a class="cite" href="#src-7" data-src="src-7">[7]</a>。Microsoft AI 的 Mustafa Suleyman 在 2025 年 11 月宣布，目標不是什麼都自己決定的存在，而是限定領域的「以人為本的超級智慧」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
+<p>曾是 OpenAI 經營團隊成員的 Ilya Sutskever 等人，在 2024 年 6 月以超級智慧已近在咫尺為由，創立了新公司 Safe Superintelligence Inc.<a class="cite" href="#src-6" data-src="src-6">[6]</a>。Meta 的 Mark Zuckerberg 在 2025 年 7 月寫道，要把個人化的超級智慧送到每個人手上<a class="cite" href="#src-7" data-src="src-7">[7]</a>。Microsoft AI 的 <a href="mustafa-suleyman.html">Mustafa Suleyman</a> 在 2025 年 11 月宣布，目標不是什麼都自己決定的存在，而是限定領域的「以人為本的超級智慧」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p><strong>要求禁止的聲明（2025 年 10 月）。</strong> 由生命未來研究所（Future of Life Institute）發起的聲明指出，許多 AI 公司說要在未來十年打造在所有智力工作上超越人類的超級智慧。聲明要求，在取得安全且可控的廣泛科學共識與民眾的強烈支持之前，禁止開發。截至 2026 年 9 月 24 日，簽署數為 75,329 筆<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p><strong>「我們全民，才是超級智慧」（2026 年 5 月）。</strong> 唐鳳在 MIT SOLVE 2026 的主題演講中，一開頭就說：對自己而言，超級智慧不是在某個資料中心裡打造的東西，它就在這個房間裡，在我們所有人之中，它就是我們<a class="cite" href="#src-3" data-src="src-3">[3]</a>。唐鳳說，該問的是：我們現在打造的技術，是讓這個超級智慧變大，還是把它擠開<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h2>深入了解</h2>
@@ -127,9 +128,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -85,7 +86,7 @@ li:target{background:var(--tint);border-radius:4px}
 </ul>
 <h2>在《Plurality》中的位置</h2>
 <p>这是第 4 部（以 4-0 章〈权利、作业系统与数位自由〉开头的一部。→ <a href="rights-os.html">权利、作业系统与数位自由</a>）的第三章<a class="cite" href="#src-2" data-src="src-2">[2]</a>。这里的想法延续到 5-7 章的<a href="social-markets.html">社会市场</a>；社群货币、以徽章或追随者等社会尊敬的标记取代货币的「尊敬经济」，也在那里讨论<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
-<p>英文版的注脚也提到社群货币的谱系：1983 年 Michael Linton 发起的地方交换交易系统（LETS），以及 Linton 拜访柄谷行人的家，成为柄谷的运动 NAM 的契机<a class="cite" href="#src-14" data-src="src-14">[14]</a>（目前的繁体中文版没有这个注脚）。书也写道，正是各式各样货币实验的激增，「激发了当时《比特币杂志》的作者维塔利克·布特林（Vitalik Buterin）将以太坊构想为这类实验的平台」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>英文版的注脚也提到社群货币的谱系：1983 年 Michael Linton 发起的地方交换交易系统（LETS），以及 Linton 拜访<a href="karatani-kojin.html">柄谷行人</a>的家，成为柄谷的运动 NAM 的契机<a class="cite" href="#src-14" data-src="src-14">[14]</a>（目前的繁体中文版没有这个注脚）。书也写道，正是各式各样货币实验的激增，「激发了当时《比特币杂志》的作者维塔利克·布特林（Vitalik Buterin）将以太坊构想为这类实验的平台」<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p>周边的讨论有 Matt Prewitt 与卫谷伦（E. Glen Weyl）的〈Plural Money〉（2022 年）。文章从这样的两难出发：教育、道路这类由社会提供的东西，用现金发放没有效率；平均分配又捡不起需求的差异；由政府决定则会带来错误与权力集中。因此文章思考限定用途的货币<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
 <h2>延伸阅读</h2>
 <ol>
@@ -120,9 +121,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

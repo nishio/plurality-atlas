@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -63,7 +64,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>ブリッジングのしくみは、利用者に特別な操作を求めません<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。利用者はいつもどおり「役に立つ・立たない」を評価したり、「賛成・反対」を押したりします。</p>
 <p>違うのは<strong>集計のしかた</strong>です。画面に上がってくるのが、「自分の陣営で人気のもの」ではなく、「反対側の人も認めたもの」になります<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <h3>なぜ必要か</h3>
-<p>研究者アヴィヴ・オヴァジャ（Aviv Ovadya）は 2022 年の論文で、こう論じました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。Facebook・YouTube・TikTok などのおすすめ表示は、何を見せるかを通して、社会全体に「何をすれば報われるか」を決めるしくみになっている。反応の数で並べるやり方と人間の心理が組み合わさると、分断をあおる振る舞いほど注目という報酬を得る<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>研究者<a href="aviv-ovadya.html">アヴィヴ・オヴァジャ</a>（Aviv Ovadya）は 2022 年の論文で、こう論じました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。Facebook・YouTube・TikTok などのおすすめ表示は、何を見せるかを通して、社会全体に「何をすれば報われるか」を決めるしくみになっている。反応の数で並べるやり方と人間の心理が組み合わさると、分断をあおる振る舞いほど注目という報酬を得る<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>オヴァジャによれば、これは政治家や記者、芸能人など、誰が成功するかを左右します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。ひいては、社会がよい決定をする力や、協力する力、暴力的な対立の起きやすさにまで影響する、というのです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>ブリッジング型の順位づけは、人々を引き離すこの力に対抗して、引き寄せる力として提案されました<a class="cite" href="#src-1" data-src="src-1">[1]</a>。オヴァジャは、時系列順の表示など、ほかの改革案でも、ブリッジングを入れない限り分断をねらう者に報い続けると論じ、初期設定はブリッジング型にすべきだとしています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>言葉の定義</h3>
@@ -128,9 +129,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

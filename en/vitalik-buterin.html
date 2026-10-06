@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>Connection to Plurality</h2>
 <p><strong>Endorsement and editing.</strong> He is listed among the endorsements at the start of the book as "Founder of Ethereum", writing: "In a technologically advanced, politically challenging, and rapidly evolving 21st century, what does a free and open future look like? Glen, Audrey and their coauthors offer a compelling view of a way forward" <a class="cite" href="#src-1" data-src="src-1">[1]</a>. In the book's list of contributors, his name comes first in the "Editing" category <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
 <p><strong>How the book treats him.</strong> Chapter 3-3, "The Lost Dao", writes: "While many projects in the space have been influenced by Libertarianism and hyper-financialization, the enduring connection to original aspirations of the internet, especially under the leadership of Vitalik Buterin (who founded Ethereum, the largest smart contract platform), has inspired a number of projects" that are central inspirations for ⿻ <a class="cite" href="#src-4" data-src="src-4">[4]</a>. (The "space" here is web3, the next-generation internet built on blockchains.) The book's chapters often cite his blog posts in their footnotes <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
-<p><strong>Co-author with Weyl.</strong> In 2018 he wrote the paper on Quadratic Funding with Zoë Hitzig and Weyl <a class="cite" href="#src-2" data-src="src-2">[2]</a>, and in 2022 the paper on "Decentralized Society" (DeSoc) with Puja Ohlhaver and Weyl <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
+<p><strong>Co-author with Weyl.</strong> In 2018 he wrote the paper on Quadratic Funding with <a href="zoe-hitzig.html">Zoë Hitzig</a> and Weyl <a class="cite" href="#src-2" data-src="src-2">[2]</a>, and in 2022 the paper on "Decentralized Society" (DeSoc) with <a href="puja-ohlhaver.html">Puja Ohlhaver</a> and Weyl <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
 <p><strong>The person who introduced the two.</strong> In his commentary on the Japanese edition, Ken Suzuki writes that Weyl and Tang met through the Ethereum community, when Tang was introduced via Buterin <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
 <p><strong>His review.</strong> In August 2024, Buterin discussed the book at length on his blog. He summed up its content as four pillars, and observed that while Weyl's earlier book <em>Radical Markets</em> tried to remake economics, <em>Plurality</em> is trying to remake liberalism <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
 <h2>Main ideas</h2>
@@ -97,9 +98,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

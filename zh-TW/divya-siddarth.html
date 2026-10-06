@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -55,7 +56,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>Divya Siddarth 是一位研究者與實踐者，打造讓 AI 的做法與用法由一般人的討論來決定的機制。Siddarth 是非營利組織<a href="collective-intelligence-project.html">集體智慧計畫</a>（Collective Intelligence Project，CIP）的共同創辦人，並擔任執行長<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>在 TED 演講中，Siddarth 說自己和共同創辦人 Saffron Huang 一起辭去了 Google DeepMind 與微軟的職位，創辦 CIP，作為打造以新方式民主治理強大技術的組織<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>與《Plurality》的關係</h2>
-<p><strong>書所引用的論文。</strong> 《Plurality》在好幾章的註腳中，舉出 Siddarth 的共著論文：與 Matthew Prewitt、衛谷倫（E. Glen Weyl）合著的「超模」論文（4-3 章、5-0 章），以及與 Shrey Jain、衛谷倫合著的〈Plural Publics〉（4-2 章）<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。這些都是英文版的註腳，目前的繁體中文版沒有這些註腳。</p>
+<p><strong>書所引用的論文。</strong> 《Plurality》在好幾章的註腳中，舉出 Siddarth 的合著論文：與 Matthew Prewitt、衛谷倫（E. Glen Weyl）合著的「超模」論文（4-3 章、5-0 章），以及與 Shrey Jain、衛谷倫合著的〈Plural Publics〉（4-2 章）<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a><a class="cite" href="#src-5" data-src="src-5">[5]</a>。這些都是英文版的註腳，目前的繁體中文版沒有這些註腳。</p>
 <p><strong>與衛谷倫、唐鳳的合著。</strong> Siddarth 與衛谷倫、唐鳳（Audrey Tang）等人合寫了〈Prosocial Media〉（2025 年；2026 年修訂為〈Community by Design〉）<a class="cite" href="#src-6" data-src="src-6">[6]</a>。2024 年，Siddarth 與衛谷倫、安·瑪麗·斯勞特（Anne-Marie Slaughter）聯名批評巴拉吉·斯里尼瓦桑（Balaji Srinivasan）的 The Network State，提議我們需要的是網路社會，而不是網路國家<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>與唐鳳的協作。</strong> 唐鳳揭露自己是 CIP 的資深研究員<a class="cite" href="#src-7" data-src="src-7">[7]</a>。2025 年 8 月，兩人在 Podcast 上對談<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p><strong>與臺灣的連結。</strong> 書的 2-2 章寫道，<a href="alignment-assemblies.html">對齊大會</a>由「臺灣率先召開，廣納公民共同參與 AI 基礎模型的監管和指導，這個模式已逐漸推廣到全球」<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
@@ -98,9 +99,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

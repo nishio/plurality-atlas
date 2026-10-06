@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -84,7 +85,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>People are said to be able to maintain stable relationships with about 150 others (Dunbar's number). So, the book says, support is needed <a class="cite" href="#src-10" data-src="src-10">[10]</a>. It names two forms. One places many mid-sized organizations that do the verifying. The other passes trust along chains of "friends of friends". The book works through a numerical example. Suppose 10 billion people each keep relationships with 100 potentially verifying institutions, and that for verification to work, any two people who meet must share at least 5 memberships. If memberships are randomly distributed, 300 verifiers could coexist while keeping the chance that verification fails for a random pair at one in several million. In reality, the book notes, people who meet are rarely random, nor are their affiliations, and 5 shared memberships are not always necessary, so many more verifiers could thrive. Yet the number would still be far smaller than the population, "perhaps around 100,000". It argues that combining the two forms could create an identity landscape that is both usable and private <a class="cite" href="#src-10" data-src="src-10">[10]</a>.</p>
 <h3>Identity is also a question of "association"</h3>
 <p>"Almost everything relevant about us is known by others and is typically just as much about them as us." So, the book says, what needs protecting is not so much hiding information as <strong>information remaining in the social setting for which it was intended</strong> — what the privacy scholar Helen Nissenbaum calls "contextual integrity" <a class="cite" href="#src-11" data-src="src-11">[11]</a>. That means protecting the norms of groups, and so, the book concludes, "the central problems are about another fundamental right: the freedom of association" <a class="cite" href="#src-11" data-src="src-11">[11]</a>. This leads into the next chapter, on <a href="plural-publics.html">⿻ publics</a>.</p>
-<p>These ideas were developed before the book, in a series of blog posts by Glen Weyl and others (2019), and in a paper by Weyl, Puja Ohlhaver and Vitalik Buterin (2022) <a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>.</p>
+<p>These ideas were developed before the book, in a series of blog posts by Glen Weyl and others (2019), and in a paper by Weyl, <a href="puja-ohlhaver.html">Puja Ohlhaver</a> and Vitalik Buterin (2022) <a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>.</p>
 <h2>What is debated</h2>
 <ul>
 <li><strong>Buterin's assessment.</strong> In his 2024 review, Vitalik Buterin, the founder of Ethereum, summed up the core of the book's view of identity as this: every method that relies on a single element is too weak, so many elements should be combined. On recovery mechanisms, he accepts that they are easy to understand, because each person chooses whom to trust, and a mistake affects only that person. But he points out that giving everyone the same amount of money, or voting, is harder, because it requires agreement about every member of the community <a class="cite" href="#src-14" data-src="src-14">[14]</a>.</li>
@@ -129,9 +130,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

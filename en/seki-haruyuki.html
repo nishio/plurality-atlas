@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>Connection to Plurality</h2>
 <p><strong>An organizer of Plurality Tokyo.</strong> The book <em>Broad Listening</em> introduces Seki as one of the organizers of Plurality Tokyo <a class="cite" href="#src-2" data-src="src-2">[2]</a>. On July 23, 2024, Seki hosted "Plurality Tokyo Meetup with Audrey &amp; Glen", which invited Tang and <a href="glen-weyl.html">Glen Weyl</a> <a class="cite" href="#src-3" data-src="src-3">[3]</a>. → <a href="plurality-in-japan.html">Plurality in Japan</a></p>
 <p><strong>Introducing Talk to the City to Takahiro Anno.</strong> According to the same book, on May 23, 2024, Seki, <a href="anno-takahiro.html">Takahiro Anno</a> and <a href="nishio-hirokazu.html">Hirokazu Nishio</a> met, through Nishio's introduction. At that meeting Seki introduced "<a href="talk-to-the-city.html">Talk to the City</a>" (TTTC), a tool that uses AI to organize and display the opinions of many people. On May 30 Nishio tried TTTC on roughly 20,000 public comments about AI. The next day, May 31, Seki presented the results in a keynote lecture in the session "AI and Democracy" at the annual conference of the Japanese Society for Artificial Intelligence <a class="cite" href="#src-2" data-src="src-2">[2]</a>. This led to the <a href="broad-listening.html">broad listening</a> of the 2024 governor's election <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="anno-2024-tokyo-campaign.html">Takahiro Anno's 2024 Tokyo campaign</a></p>
-<p><strong>A three-way conversation with Tang and Weyl.</strong> Seki appeared as Japan's leading figure in civic tech in the Cybozu Shiki conversation "新概念『Plurality』を解く" (Unpacking the new concept of Plurality), published in October 2024 (moderated by Nishio) <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
+<p><strong>A three-way conversation with Tang and Weyl.</strong> Seki appeared as Japan's leading figure in civic tech in the <a href="cybozu.html">Cybozu Shiki</a> conversation "新概念『Plurality』を解く" (Unpacking the new concept of Plurality), published in October 2024 (moderated by Nishio) <a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
 <p><strong>A dialogue with Tang in Taiwan.</strong> On March 22, 2024, Seki met Tang in Taiwan with a delegation from Japan. Seki said: "I feel that Taiwan is kind of the epicenter of the new movement of plurality and also Web3." Tang explained the nearly finished book and how "數位" (digital) can also be read as "plural". Seki mentioned translation into Japanese and events including Plurality Tokyo in July, and invited Tang (CC0 verbatim transcript) <a class="cite" href="#src-5" data-src="src-5">[5]</a>. → <a href="shuwei.html">Shuwei and ⿻</a></p>
 <p><strong>Looking back on Funding the Commons Tokyo 2024.</strong> On note, Seki described the panel with Weyl and Tang at this event, and the discussion of broad listening between Anno and Tang. Using Weyl's idea of being "supermodular", Seki explained that the more digital public goods (software and data anyone can use) are used, the more the value of related public goods grows too <a class="cite" href="#src-6" data-src="src-6">[6]</a>. → <a href="supermodularity.html">Supermodularity</a>, <a href="digital-public-infrastructure.html">digital public infrastructure</a></p>
 <p><strong>On the board of Digital Democracy 2030.</strong> Seki's name is listed among the board members on the official website of <a href="dd2030.html">Digital Democracy 2030</a> (DD2030), together with <a href="suzuki-ken.html">Ken Suzuki</a> and Makiko Nakamuro <a class="cite" href="#src-7" data-src="src-7">[7]</a>.</p>
@@ -104,9 +105,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

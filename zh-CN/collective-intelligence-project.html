@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -90,7 +91,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>《Plurality》英文版 5-4 章〈<a href="augmented-deliberation.html">扩增审议</a>〉把 CIP 称为「⿻ 的 NGO」<a class="cite" href="#src-11" data-src="src-11">[11]</a>。除了上面与 Anthropic 的合作，书中也写道，OpenAI 与 CIP 密切合作，推动收集对 AI 之民主意见的补助机制，并以此为基础正在成立专门的团队<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <p>英文版 7-0 章〈政策〉把对齐大会列为公众亲自参与技术决策的手段之一，并附上 CIP 页面的连结<a class="cite" href="#src-14" data-src="src-14">[14]</a>。英文版的 3-2、4-3、5-0 章，在说明超模时引用了 CIP 网站上的论文<a class="cite" href="#src-15" data-src="src-15">[15]</a><a class="cite" href="#src-16" data-src="src-16">[16]</a>。目前的繁体中文版 5-4、7-0 章没有提到 CIP<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
 <p>CIP 的博客也刊出了 Siddarth、卫谷伦与安·玛丽·斯劳特（Anne-Marie Slaughter）的〈要网络社会，不要网络国家〉（We need network societies, not network states）<a class="cite" href="#src-18" data-src="src-18">[18]</a>。这是对<a href="network-state.html">网络国家</a>的批评。</p>
-<p>唐凤自称 CIP 的资深研究员（Senior Research Fellow）<a class="cite" href="#src-19" data-src="src-19">[19]</a>。唐凤与 Caroline Green 的<a href="six-pack-of-care.html">关怀六力</a>（6-Pack of Care）用语集，把对齐大会列为 CIP 为其命名、塑造形式的工具，也介绍 CIP 的 Weval 是大家共享之评估的实例<a class="cite" href="#src-20" data-src="src-20">[20]</a><a class="cite" href="#src-21" data-src="src-21">[21]</a>。这条脉络也在〈<a href="civic-ai.html">仁工智慧</a>〉中介绍。</p>
+<p>唐凤自称 CIP 的资深研究员（Senior Research Fellow）<a class="cite" href="#src-19" data-src="src-19">[19]</a>。唐凤与 <a href="caroline-green.html">Caroline Green</a> 的<a href="six-pack-of-care.html">关怀六力</a>（6-Pack of Care）用语集，把对齐大会列为 CIP 为其命名、塑造形式的工具，也介绍 CIP 的 Weval 是大家共享之评估的实例<a class="cite" href="#src-20" data-src="src-20">[20]</a><a class="cite" href="#src-21" data-src="src-21">[21]</a>。这条脉络也在〈<a href="civic-ai.html">仁工智慧</a>〉中介绍。</p>
 <h2>延伸阅读</h2>
 <ol>
 <li>唐凤〈商周四月专栏访谈唐凤部长〉（2024-04-09，中文，逐字稿，谈对齐大会与群众制定的宪法）— <a href="https://sayit.archive.tw/2024-04-09-%E5%95%86%E5%91%A8%E5%9B%9B%E6%9C%88%E5%B0%88%E6%AC%84%E8%A8%AA%E8%AB%87%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF" target="_blank" rel="noopener">https://sayit.archive.tw/2024-04-09-%E5%95%86%E5%91%A8%E5%9B%9B%E6%9C%88%E5%B0%88%E6%AC%84%E8%A8%AA%E8%AB%87%E5%94%90%E9%B3%B3%E9%83%A8%E9%95%B7%E9%80%90%E5%AD%97%E7%A8%BF</a></li>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

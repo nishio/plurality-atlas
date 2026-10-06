@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>たとえば</h2>
 <p><strong>この本そのもの。</strong> 本の文章は、ソフトウェア開発で使う Git（変更の履歴を管理する道具）で管理され、CC0（著作権を放棄して誰でも自由に使える形）で公開されました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。作業の優先順位と報酬は、クラウドファンディングに似たやり方で決めました。貢献は、仲間うちの通貨とグループの ID の印で記録しました。意見が割れた点は、話し合いの道具で解きました。本は、第 5 部で紹介する道具で自分自身を作り、「語るだけでなく見せる」ことを目指した、と書いています<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p><strong>Wikipedia とオープンソース。</strong> 本は、誰でも編集できる Wikipedia と、Linux や GitHub に代表されるオープンソース・ソフトウェア（設計図を公開して誰でも改良できるソフト）を挙げます<a class="cite" href="#src-5" data-src="src-5">[5]</a>。どちらも、開かれた協働による自己統治が大きな規模で成功した「光の点」だ、というのが本の見方です<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
-<p><strong>エンゲルバートの「すべてのデモの母」。</strong> 米国の研究資金機関 ARPA の支援を受けたダグラス・エンゲルバート（Douglas Engelbart）は、マウスやハイパーテキスト（文書どうしをリンクでつなぐしくみ）を含むシステム NLS を公開しました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。ARPA のリックライダー（J. C. R. Licklider）が最初に資金を出してから、わずか 6 年後のことです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本はこれを、人の知性を機械で置き換えるのではなく、広げる流れの代表として描いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>エンゲルバートの「すべてのデモの母」。</strong> 米国の研究資金機関 ARPA の支援を受けたダグラス・エンゲルバート（Douglas Engelbart）は、マウスやハイパーテキスト（文書どうしをリンクでつなぐしくみ）を含むシステム NLS を公開しました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。ARPA の<a href="jcr-licklider.html">リックライダー</a>（J. C. R. Licklider）が最初に資金を出してから、わずか 6 年後のことです<a class="cite" href="#src-6" data-src="src-6">[6]</a>。本はこれを、人の知性を機械で置き換えるのではなく、広げる流れの代表として描いています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h2>しくみ</h2>
 <h3>本の言う「協働」</h3>
 <p>本の 5-0 章は、協働を「複数の人や集団が、共通の目標に向けて共に働くこと」と定めます<a class="cite" href="#src-7" data-src="src-7">[7]</a>。そのうえで本が本当に注目するのは、一緒に働くことで、部分を足したより大きなものが生まれる力です<a class="cite" href="#src-7" data-src="src-7">[7]</a>。本はこれを数学の言葉で「スーパーモジュラリティ」と呼びます。</p>
@@ -124,9 +125,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

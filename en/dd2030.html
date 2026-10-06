@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>It commits itself to "political neutrality", favoring no particular party, and provides its tools on the same terms to local governments and to both governing and opposition parties <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <h2>For example</h2>
 <p><strong>Kouchou AI.</strong> A tool that uses AI to organize free-form answers in local government surveys. The town of Utazu in Kagawa Prefecture, Iwate Prefecture, Shibuya Ward, Hiroshima Prefecture and others have tried it <a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>. It is covered in the article on <a href="kouchou-ai.html">Kouchou AI</a>.</p>
-<p><strong>Idobata.</strong> A tool that gathers opinions as each person chats one-on-one with an AI, and pulls them together into issues and proposals for improving policy. It supports deliberation (discussing things carefully). It has been used in drawing up <a href="team-mirai.html">Team Mirai</a>'s manifesto and inside the company Cybozu <a class="cite" href="#src-5" data-src="src-5">[5]</a>. See the article on <a href="idobata.html">Idobata</a>.</p>
+<p><strong>Idobata.</strong> A tool that gathers opinions as each person chats one-on-one with an AI, and pulls them together into issues and proposals for improving policy. It supports deliberation (discussing things carefully). It has been used in drawing up <a href="team-mirai.html">Team Mirai</a>'s manifesto and inside the company <a href="cybozu.html">Cybozu</a> <a class="cite" href="#src-5" data-src="src-5">[5]</a>. See the article on <a href="idobata.html">Idobata</a>.</p>
 <p><strong>Parties taking part.</strong> According to the news site Japan In-depth, right after the launch, Kazuya Shinba, secretary-general of the Democratic Party for the People, spoke of having been deeply moved watching the press conference, and had Takae Ito, the party's member of the House of Councillors, take part <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
 <p><strong>Making a book.</strong> <em>Broad Listening</em> (Japanese title 政治・自治体・企業に広がるブロードリスニング, Impress, due September 2026) was written by volunteers as part of DD2030's activities. There are also web versions in Japanese and English <a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <h2>In more detail</h2>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

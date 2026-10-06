@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -72,7 +73,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>宣言文は、Civic AI は代議制民主主義を置き換えない、と書きます。聞く範囲を広げ、理由を記録し、義務に答えさせるけれど、判断は人々とその制度に残る、というのです<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p>講演の報告記事によると、タンは 2026 年 5 月のオックスフォードでの講演で、つくる価値のある AI かどうかの試金石として、共同体が自分たちをケアする力を強めるかどうかを挙げました。記事は、タンが示したのは、システムを受け継ぐ人たち自身がそれを直せるようになる、という信頼だったともまとめています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>名前の由来</h3>
-<p>「Civic AI」という呼び名は、タンとキャロライン・グリーン（Caroline Green）が 2025 年にオックスフォード大学 AI 倫理研究所のプログラムで発表した研究の名前として現れます。そこでは、ジョアン・トロント（Joan Tronto）のケアの倫理と、タンの Plurality の構想を合わせ、「市民的ケア」を AI の設計と統治に組み込むことが目標とされました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
+<p>「Civic AI」という呼び名は、タンと<a href="caroline-green.html">キャロライン・グリーン</a>（Caroline Green）が 2025 年にオックスフォード大学 AI 倫理研究所のプログラムで発表した研究の名前として現れます。そこでは、ジョアン・トロント（Joan Tronto）のケアの倫理と、タンの Plurality の構想を合わせ、「市民的ケア」を AI の設計と統治に組み込むことが目標とされました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>どこが議論になっているか</h2>
 <ul>
 <li><strong>「AI 安全の核心を解いていない」という批判。</strong> この批判と、それへの「一つの AI を忠実にする問題と、AI たちの社会が争わないようにする問題は別だ」という応答は、<a href="six-pack-of-care.html">6-Pack of Care</a> の記事でくわしく紹介しています。civic.ai 自身も、範囲を地域に限っているのは設計上の選択であって、共同体が本当に AI を支配している証拠ではない、と自分を戒めています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</li>
@@ -116,9 +117,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

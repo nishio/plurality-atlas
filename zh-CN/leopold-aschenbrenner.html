@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -54,6 +55,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>一句话说明</h2>
 <p>Leopold Aschenbrenner 是研究者。OpenAI 研究超级智慧安全性的「Superalignment」团队成立时，Aschenbrenner 是最早的成员之一<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>2024 年 6 月，Aschenbrenner 公开了系列随笔《Situational Awareness: The Decade Ahead》（态势感知：未来十年）。文中论述：2027 年前后可能出现 AGI（通用人工智能，能像人一样做广泛工作的 AI）；而超级智慧会带来经济与军事上的决定性优势，所以自由世界必须赢得这场竞争<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="superintelligence.html">超级智慧</a></p>
+<p>同样在 2024 年 6 月的 Dwarkesh Podcast 中，Aschenbrenner 说，将以 Patrick Collison、John Collison、Daniel Gross、Nat Friedman 为主要出资者，成立押注 AGI 与超级智慧的投资公司<a class="cite" href="#src-1" data-src="src-1">[1]</a>。之后的活动，不在本站的资料范围内。</p>
 <h2>与《Plurality》的关系</h2>
 <p><strong>书与卫谷伦、唐凤没有直接提及。</strong> 在《Plurality》（各语言版）以及卫谷伦、唐凤的演讲与对谈纪录中，没有找到指名讨论 Aschenbrenner 或《态势感知》的地方。唯一的例外，是下面介绍的对谈中，主持人提到这篇随笔名字的场面。</p>
 <p><strong>布特林的提及。</strong> <a href="vitalik-buterin.html">维塔利克·布特林</a>（Vitalik Buterin）在 2025 年 1 月的〈d/acc: one year later〉中写道，AI 硬体的监管，正以类似出口管制那种信任自己这一方、不信任对方的思路被检讨。作为例子，布特林举了 Aschenbrenner 的主张：美国应该先竞争取得决定性的优势，再让中国事实上接受限制可运作电脑数量的协定。布特林认为这种做法很危险，可能同时具有竞争与中央集权两者的缺点。布特林的想法是：如果需要限制，就不应该由一方支配其他各方，而应该平等地限制所有人，并努力建立合作的机制<a class="cite" href="#src-3" data-src="src-3">[3]</a>。→ <a href="d-acc.html">d/acc</a></p>
@@ -76,7 +78,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>争议与批评</h2>
 <ul>
 <li><strong>布特林的看法。</strong> 如上所见，布特林认为先取得决定性优势、再让对方接受限制的路径很危险，立场是应该优先平等的限制与合作的努力<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</li>
-<li><strong>Tegmark 等人的回应。</strong> 《态势感知》在 LessWrong 等处得到好几篇回应。Tegmark 在 2024 年 10 月的文章中，讨论民主国家联手、在 AI 上取得对中国之优势的战略（「协约」〈entente〉战略），并列出 Anthropic 执行长 Dario Amodei 与 Aschenbrenner 等人为推动者。Tegmark 论述，无论伦理或地缘政治上的偏好为何，这个战略都有根本的缺陷，也违反美国的安全利益；主张是：如果美中进行 AGI 竞赛，赢的只会是机器<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
+<li><strong>Tegmark 等人的回应。</strong> 《态势感知》在 LessWrong 等处得到好几篇回应。Tegmark 在 2024 年 10 月的文章中，讨论民主国家联手、在 AI 上取得对中国之优势的战略（「协约」〈entente〉战略），并列出 Anthropic 执行长 <a href="dario-amodei.html">Dario Amodei</a> 与 Aschenbrenner 等人为推动者。Tegmark 论述，无论伦理或地缘政治上的偏好为何，这个战略都有根本的缺陷，也违反美国的安全利益；主张是：如果美中进行 AGI 竞赛，赢的只会是机器<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</li>
 </ul>
 <h2>延伸阅读</h2>
 <ol>
@@ -105,9 +107,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

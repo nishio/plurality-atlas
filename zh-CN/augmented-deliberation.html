@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,7 +63,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h3>深度与广度难以兼顾</h3>
 <p>面对面的对话很丰富，但能触及的范围很窄；写下的文字能传得很远，但互动很贫乏。书写道：「长期以来，面对面讨论的丰富与书写文字的广泛，二者之间存在着严苛的权衡关系。」<a class="cite" href="#src-1" data-src="src-1">[1]</a></p>
 <p>一本谈广泛倾听的日文书，用一座 100 万人的城市来说明<a class="cite" href="#src-6" data-src="src-6">[6]</a>：和 10 个人各花 1 小时深谈，可以听到深入的内容，但不能说是全市的声音。问所有人「需要公园吗？是／否」，可以知道全体的声音，却不知道理由。</p>
-<p>政治学者 Hélène Landemore 也认为，高品质的讨论与大规模参与无法兼顾，是民主理论尚未解决的问题<a class="cite" href="#src-7" data-src="src-7">[7]</a>。Landemore 说，讨论的品质在超过数百到数千人时就会下降，并追问 AI 能在多大程度上填补这个落差<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p>政治学者 <a href="helene-landemore.html">Hélène Landemore</a> 也认为，高品质的讨论与大规模参与无法兼顾，是民主理论尚未解决的问题<a class="cite" href="#src-7" data-src="src-7">[7]</a>。Landemore 说，讨论的品质在超过数百到数千人时就会下降，并追问 AI 能在多大程度上填补这个落差<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <h3>现有的讨论工具</h3>
 <p>书介绍了记录小组对话、整理后广泛传播等做法，并写道，让聚在一起的人进行有意义的互动，「这本身就是一门科学」<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
 <p>另一方面，社交媒体扩大了能参与的人，却也因为「缺乏脉络和有意识的引导讨论」，带来了「不实讯息」、「假讯息」和「资源充足的行为者的泛滥攻势」等问题<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</p>
@@ -124,9 +125,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

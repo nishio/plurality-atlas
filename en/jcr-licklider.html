@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -94,7 +95,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>What the authors and those around them have said</h2>
 <ul>
 <li><strong>Glen Weyl.</strong> In his 2022 review "Sovereign Nonsense", Weyl wrote that most of the technological vision described in <em>The Sovereign Individual</em> had already appeared in research papers such as Licklider's "Computers and Government", and described Licklider as perhaps the first founder of the internet <a class="cite" href="#src-8" data-src="src-8">[8]</a>. On a podcast the same year, he said that the most influential technologies of the last 60 to 70 years came out of the projects of Licklider and Engelbart, which began as a network of user-experience researchers <a class="cite" href="#src-9" data-src="src-9">[9]</a>.</li>
-<li><strong>The DeSoc paper (2022).</strong> Puja Ohlhaver, Weyl and Vitalik Buterin wrote that a decentralized society (DeSoc) would advance Licklider's vision of "man-computer symbiosis" in an "Intergalactic Computer Network" <a class="cite" href="#src-10" data-src="src-10">[10]</a>.</li>
+<li><strong>The DeSoc paper (2022).</strong> <a href="puja-ohlhaver.html">Puja Ohlhaver</a>, Weyl and Vitalik Buterin wrote that a decentralized society (DeSoc) would advance Licklider's vision of "man-computer symbiosis" in an "Intergalactic Computer Network" <a class="cite" href="#src-10" data-src="src-10">[10]</a>.</li>
 <li><strong>Reverse alignment (2026).</strong> An essay in Noema by Weyl and others cited the ARPANET that Licklider led, and the open standard-setting that grew up alongside it, as a precedent in which technology and institutions cannot be separated <a class="cite" href="#src-11" data-src="src-11">[11]</a>. → <a href="reverse-alignment.html">Reverse alignment</a></li>
 <li><strong>6-Pack of Care.</strong> Tang's <a href="six-pack-of-care.html">6-Pack of Care</a> names Licklider's "Man-Computer Symbiosis" as one source of the word for its sixth pack, "Symbiosis". In the third pack, too, it places this paper in the lineage of the idea that <a href="civic-ai.html">Civic AI</a> should be an "apprentice" to people rather than their "replacement" <a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>.</li>
 <li><strong>A Japanese introduction.</strong> A note post by ryo introduces the book's argument: the functions Licklider and others envisioned, such as identity checks, payments and secure data sharing, which take effort and make no money but which society cannot do without, were left unbuilt, and Licklider foresaw the consequences as eight futures <a class="cite" href="#src-14" data-src="src-14">[14]</a>.</li>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

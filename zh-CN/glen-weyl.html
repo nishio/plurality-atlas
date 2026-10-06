@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -62,9 +63,9 @@ li:target{background:var(--tint);border-radius:4px}
 <p><strong>与日本的关系。</strong> 2024 年 1 月在东京发表了主题演讲<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2024 年 10 月与唐凤、关治之进行了三人对谈<a class="cite" href="#src-18" data-src="src-18">[18]</a>。2025 年 5 月日文版出版前后，陆续有投稿，以及与李舜志的对谈<a class="cite" href="#src-10" data-src="src-10">[10]</a><a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
 <h2>主要想法</h2>
 <p><strong>平方投票。</strong> 让买票的成本等于票数平方的投票。书写道，平方投票是「作者之一发明的」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。详见〈<a href="quadratic-voting.html">平方投票</a>〉与〈<a href="plural-voting.html">⿻投票</a>〉。</p>
-<p><strong>平方募资。</strong> 起点是与布特林、柔伊·希兹格（Zoë Hitzig） 2018 年的共同论文<a class="cite" href="#src-3" data-src="src-3">[3]</a>。后来卫谷伦等人把参与者之间的连结也纳入计算，朝更能抵抗串通作弊的方向发展。→〈<a href="quadratic-funding.html">平方募资</a>〉、〈<a href="social-markets.html">社会市场</a>〉</p>
+<p><strong>平方募资。</strong> 起点是与布特林、<a href="zoe-hitzig.html">柔伊·希兹格</a>（Zoë Hitzig） 2018 年的共同论文<a class="cite" href="#src-3" data-src="src-3">[3]</a>。后来卫谷伦等人把参与者之间的连结也纳入计算，朝更能抵抗串通作弊的方向发展。→〈<a href="quadratic-funding.html">平方募资</a>〉、〈<a href="social-markets.html">社会市场</a>〉</p>
 <p><strong>资料尊严。</strong> 在与<a href="jaron-lanier.html">杰伦·拉尼尔</a>（Jaron Lanier）2018 年合写的文章中，提议由中介组织代替提供资料的人们集体谈判<a class="cite" href="#src-12" data-src="src-12">[12]</a>。→〈<a href="data-dignity.html">资料尊严</a>〉</p>
-<p><strong>去中心化社会与灵魂绑定凭证。</strong> 2022 年与 Puja Ohlhaver、布特林提出用不可转让的代币表示人与人之间关系的构想<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→〈<a href="soulbound-tokens.html">灵魂绑定凭证</a>〉、〈<a href="identity-and-personhood.html">身分与人格权</a>〉</p>
+<p><strong>去中心化社会与灵魂绑定凭证。</strong> 2022 年与 <a href="puja-ohlhaver.html">Puja Ohlhaver</a>、布特林提出用不可转让的代币表示人与人之间关系的构想<a class="cite" href="#src-13" data-src="src-13">[13]</a>。→〈<a href="soulbound-tokens.html">灵魂绑定凭证</a>〉、〈<a href="identity-and-personhood.html">身分与人格权</a>〉</p>
 <p><strong>专家统治，以及对自己旧作的批评。</strong> 卫谷伦在 2019 年的系列文章中批评专家统治等，2020 年则大意是回顾说，自己的《激进市场》太偏向经济学了<a class="cite" href="#src-14" data-src="src-14">[14]</a>。这些批评与书中<a href="three-paths.html">三条道路</a>、<a href="monist-atomism.html">一元原子论</a>的讨论相连。</p>
 <p><strong>反向对齐。</strong> 2026 年 7 月，卫谷伦与 James Evans 等人发表文章，呼吁重新打造制度、规范与治理架构，让社会能安全使用 AI，并广泛分享它的好处<a class="cite" href="#src-15" data-src="src-15">[15]</a>。→〈<a href="reverse-alignment.html">反向对齐</a>〉</p>
 <h2>争议与批评</h2>
@@ -110,9 +111,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

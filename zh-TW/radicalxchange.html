@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -64,7 +65,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>在那之前的 2018 年 9 月，衛谷倫公開了與布特林的往來信件。對布特林提出的課題，衛谷倫的回覆大意是：這些都不妨礙近期內進行實驗<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <h3>名字裡的「X」</h3>
 <p>唐鳳在 2020 年接受日本出版社採訪時說：「RxC的『X』是交換模式的『X』」<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</p>
-<p>這根據的是日本哲學家柄谷行人的想法。唐鳳這樣說明：「柄谷行人的基本想法是我們彼此互相交換的時候，你可以看兩個面向，一個是你跟認識的人或者是不認識的人，另外一個面向是你在這個交換的時候，你是有對價關係，就是對方給你、我才給你，就是等價交換，或者是你是無償的自由分享交換」<a class="cite" href="#src-11" data-src="src-11">[11]</a>。家庭（認識的人、無償）、國家（認識的人、等價）、市場（不認識的人、等價）之外的第四種，就是跟不特定的人無償分享的交換；唐鳳說：「這樣的交換模式叫做『X』交換模式。」<a class="cite" href="#src-11" data-src="src-11">[11]</a></p>
+<p>這根據的是日本哲學家<a href="karatani-kojin.html">柄谷行人</a>的想法。唐鳳這樣說明：「柄谷行人的基本想法是我們彼此互相交換的時候，你可以看兩個面向，一個是你跟認識的人或者是不認識的人，另外一個面向是你在這個交換的時候，你是有對價關係，就是對方給你、我才給你，就是等價交換，或者是你是無償的自由分享交換」<a class="cite" href="#src-11" data-src="src-11">[11]</a>。家庭（認識的人、無償）、國家（認識的人、等價）、市場（不認識的人、等價）之外的第四種，就是跟不特定的人無償分享的交換；唐鳳說：「這樣的交換模式叫做『X』交換模式。」<a class="cite" href="#src-11" data-src="src-11">[11]</a></p>
 <p>在另一次採訪中，唐鳳說：「這個基金會成立的人叫做『Glen Weyl』，之前有寫一本書講這個想法，後來我認識他，也跟他介紹像柄谷行人先生的這種講法，加在一起就變成這樣的基金會。」<a class="cite" href="#src-12" data-src="src-12">[12]</a> 詳見<a href="modes-of-exchange.html">交換模式</a>。</p>
 <h3>想做什麼</h3>
 <p>衛谷倫在 2019 年的文章〈What is RadicalxChange?〉中，寫下這場運動出發點的診斷<a class="cite" href="#src-13" data-src="src-13">[13]</a>：資本主義無法妥善處理大家合作起來、能做到超過部分總和的情況；本來應該補足它的國家層級民主，也容易僵化。於是衛谷倫列出一系列編號的原則，例如超越資本主義與國家主義、個人主義與集體主義的對立<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
@@ -127,9 +128,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

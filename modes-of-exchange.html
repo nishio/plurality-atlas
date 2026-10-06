@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -50,7 +51,7 @@ a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;p
 .cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
 li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/modes-of-exchange.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/modes-of-exchange.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/modes-of-exchange.html">简体中文</a></nav></header>
-<main lang="ja"><h1>交換様式（柄谷行人）ってなに？</h1><div class='lead'>日本の哲学者・柄谷行人が、社会を「人と人が何をどう交換しているか」で四つに分けた理論です。贈与とお返し、支配と保護、お金と商品、そしてまだ実現していない第四の形です。オードリー・タンはこの第四の形を「交換様式 X」と呼び、強い影響を公言しています。</div><p>家族には見返りを求めずにものをあげます。役所には税を払って、代わりに公共サービスを受けます。お店ではお金で物を買います。私たちは毎日、いろいろな種類の「交換」をしています。柄谷行人の交換様式の理論は、この交換の種類から社会のしくみを読み解こうとするものです。オードリー・タンの仕事の土台にもなっています。</p>
+<main lang="ja"><h1>交換様式（柄谷行人）ってなに？</h1><div class='lead'>日本の哲学者・柄谷行人が、社会を「人と人が何をどう交換しているか」で四つに分けた理論です。贈与とお返し、支配と保護、お金と商品、そしてまだ実現していない第四の形です。オードリー・タンはこの第四の形を「交換様式 X」と呼び、強い影響を公言しています。</div><p>家族には見返りを求めずにものをあげます。役所には税を払って、代わりに公共サービスを受けます。お店ではお金で物を買います。私たちは毎日、いろいろな種類の「交換」をしています。<a href="karatani-kojin.html">柄谷行人</a>の交換様式の理論は、この交換の種類から社会のしくみを読み解こうとするものです。オードリー・タンの仕事の土台にもなっています。</p>
 <h2>ひとことで言うと</h2>
 <p>交換様式は、日本の哲学者・柄谷行人（からたに・こうじん、Kojin Karatani）が唱えた理論です。社会のしくみを、「人と人が何をどう交換しているか」で見ます<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>交換には三つの形があります。A は贈り物とお返し、B は従う代わりに守ってもらうこと、C はお金で物を買うことです。そして、そのどれでもない第四の D がある、とします<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -156,9 +157,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

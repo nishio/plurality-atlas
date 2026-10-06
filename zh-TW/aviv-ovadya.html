@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>與《Plurality》的關係</h2>
 <p><strong>書中的介紹。</strong> 書的 5-4 章〈<a href="augmented-deliberation.html">擴增審議</a>〉介紹把意見畫成地圖的工具 <a href="polis.html">Polis</a>。繁體中文版寫道：「著名多元技術專家 Aviv Ovadya 和 Luke Thorbur，將 Pol.is 稱之為『集體回應系統』」<a class="cite" href="#src-6" data-src="src-6">[6]</a>（「Thorbur」是書中的拼法，指 Luke Thorburn）。英文版把 Polis 介紹為兩人所說的「集體回應系統」與「橋接系統」（bridging systems）的代表例子，並在註腳中列出兩人的論文；日文版稱兩人為「一流的技術者」<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
 <p><strong>關懷六力的詞彙表。</strong> <a href="audrey-tang.html">唐鳳</a>（Audrey Tang）等人的關懷六力（6-Pack of Care）詞彙表，把橋接式排序說明為「由 Aviv Ovadya 在 2022 年命名」的做法，並把 Ovadya 的論文列為參考文獻<a class="cite" href="#src-2" data-src="src-2">[2]</a>。→ <a href="six-pack-of-care.html">關懷六力</a></p>
-<p><strong>共同著作。</strong> Ovadya 與唐鳳、<a href="divya-siddarth.html">Divya Siddarth</a>、Hélène Landemore 等人，共同撰寫了 2024 年的綜述論文 "AI and the Future of Digital Public Squares"<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<p><strong>共同著作。</strong> Ovadya 與唐鳳、<a href="divya-siddarth.html">Divya Siddarth</a>、<a href="helene-landemore.html">Hélène Landemore</a> 等人，共同撰寫了 2024 年的綜述論文 "AI and the Future of Digital Public Squares"<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p><strong>部分經歷。</strong> 2022 年，Ovadya 從哈佛大學甘迺迪學院的貝爾弗中心（Belfer Center）發表論文 "Bridging-Based Ranking"<a class="cite" href="#src-1" data-src="src-1">[1]</a>。Ovadya 在給 WIRED 的投稿中寫道，自己在 GPT-4 公開之前，被 OpenAI 邀請擔任外部的檢驗者（紅隊）<a class="cite" href="#src-8" data-src="src-8">[8]</a>。2024 年 8 月，Ovadya 宣布成立 AI &amp; Democracy Foundation<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>主要想法</h2>
 <p><strong>橋接。</strong> Ovadya 與 Thorburn 把「橋接系統」定義為：跨越分裂、增進理解與信任，為有益的對立、討論與合作創造空間的機制。進一步，兩人把社群媒體的推薦、集體回應系統，以及由人主持的討論三者，都看作決定「人們的注意力要往哪裡去」的機制，放在一起理解<a class="cite" href="#src-9" data-src="src-9">[9]</a><a class="cite" href="#src-10" data-src="src-10">[10]</a>。→ <a href="bridging.html">橋接</a></p>
@@ -97,9 +98,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -64,7 +65,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>Earlier, in September 2018, Weyl had published an exchange of emails with Buterin. In response to the problems Buterin raised, Weyl replied, in essence, that none of them stood in the way of experimenting in the near future <a class="cite" href="#src-10" data-src="src-10">[10]</a>.</p>
 <h3>The "X" in the name</h3>
 <p>In a 2020 interview with a Japanese publisher, Tang said that the X in RxC is the X of the "mode of exchange" (in her words in Chinese: RxC的「X」是交換模式的「X」) <a class="cite" href="#src-11" data-src="src-11">[11]</a>.</p>
-<p>This draws on the thought of the Japanese philosopher Kojin Karatani (柄谷行人). As Tang explains it, exchange can be sorted along two axes: whether it is with people you know or with strangers, and whether it expects something in return or not. After the family (people you know, nothing expected in return), the state (people you know, with payment) and the market (strangers, with payment) comes a fourth kind: sharing with strangers without expecting anything in return. Karatani called this "X", she says <a class="cite" href="#src-11" data-src="src-11">[11]</a>. In another session, Tang said that when she got to know Weyl she introduced him to Karatani's ideas, and the two came together to become this foundation <a class="cite" href="#src-12" data-src="src-12">[12]</a>. This is covered in more detail in the article on <a href="modes-of-exchange.html">modes of exchange</a>.</p>
+<p>This draws on the thought of the Japanese philosopher <a href="karatani-kojin.html">Kojin Karatani</a> (柄谷行人). As Tang explains it, exchange can be sorted along two axes: whether it is with people you know or with strangers, and whether it expects something in return or not. After the family (people you know, nothing expected in return), the state (people you know, with payment) and the market (strangers, with payment) comes a fourth kind: sharing with strangers without expecting anything in return. Karatani called this "X", she says <a class="cite" href="#src-11" data-src="src-11">[11]</a>. In another session, Tang said that when she got to know Weyl she introduced him to Karatani's ideas, and the two came together to become this foundation <a class="cite" href="#src-12" data-src="src-12">[12]</a>. This is covered in more detail in the article on <a href="modes-of-exchange.html">modes of exchange</a>.</p>
 <h3>What it aims for</h3>
 <p>In a 2019 piece, "What is RadicalxChange?", Weyl set out the diagnosis that serves as the movement's starting point <a class="cite" href="#src-13" data-src="src-13">[13]</a>. Capitalism, he writes, handles poorly the situations in which people working together can do more than the sum of their parts. National democracy, which is supposed to make up for this, also tends to become rigid. Weyl then listed numbered principles, such as moving beyond the oppositions between capitalism and statism, and between individualism and collectivism <a class="cite" href="#src-13" data-src="src-13">[13]</a>.</p>
 <p>A piece from the end of the same year lists the following as mechanisms RxC has promoted <a class="cite" href="#src-2" data-src="src-2">[2]</a>:</p>
@@ -124,9 +125,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

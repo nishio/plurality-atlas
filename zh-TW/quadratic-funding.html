@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -79,7 +80,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>布特林說明，QF 的配對，正是在補上「某人的捐款為別人帶來的好處」這一塊。把每一對捐款人之間的這部分算出來加總，剛好就是 QF 的公式<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>布特林也寫道，QF 可以看成<a href="quadratic-voting.html">平方投票</a>的一種特殊情形：捐款人投下贊成票，基金投下反對票<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>從哪裡來</h3>
-<p>原始論文是布特林、柔伊·希茲格（Zoë Hitzig）、衛谷倫（E. Glen Weyl）三人在 2018 年發表的 "A Flexible Design for Funding Public Goods"（公共財的彈性資助設計）。論文摘要說，這是把平方投票的想法延伸到資金機制，在一定條件下能產生最適量的公共財，可用於競選經費、開源軟體、新聞報導、城市公共建設等<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<p>原始論文是布特林、<a href="zoe-hitzig.html">柔伊·希茲格</a>（Zoë Hitzig）、衛谷倫（E. Glen Weyl）三人在 2018 年發表的 "A Flexible Design for Funding Public Goods"（公共財的彈性資助設計）。論文摘要說，這是把平方投票的想法延伸到資金機制，在一定條件下能產生最適量的公共財，可用於競選經費、開源軟體、新聞報導、城市公共建設等<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <h3>書中的定位，以及看見連結的 QF</h3>
 <p>書在 5-7 章寫道，配對資金「應該按照個人貢獻的平方根之和的平方來分配」，這是「在類似原子化行為的假設下」導出的；而「最近的設計，已經超越了傳統的個人主義設計，考慮到多元化的群體利益和從屬關係」<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <p>衛谷倫等人 2023 年的文章論證，QF 最適的證明，是建立在人彼此孤立、只為自己的利益行動的假設上；面對多少會互相串通的一般人，它就不是最適的。文章並寫道，應該多配給由多元群體支持的專案，而不是由同質群體支持的專案，這正是 Plurality 的目標<a class="cite" href="#src-11" data-src="src-11">[11]</a>。根據 2025 年的報告，納入這個想法的「連結導向 QF」（Connection-Oriented QF，CO-QF）已用在 Gitcoin 89% 的資助計畫中，分配了超過 400 萬美元<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
@@ -130,9 +131,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

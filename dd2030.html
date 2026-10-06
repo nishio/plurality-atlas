@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>特定の政党に肩入れしない「政治的中立」を掲げ、自治体にも、与党・野党の政党にも、同じ条件で道具を提供します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>たとえば</h2>
 <p><strong>広聴AI。</strong> 自治体のアンケートの自由記述を AI で整理する道具です。香川県宇多津町、岩手県、渋谷区、広島県などが試しました<a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>。くわしくは <a href="kouchou-ai.html">広聴AI</a> の記事で扱います。</p>
-<p><strong>いどばた。</strong> 一人ずつ AI とチャットして意見を集め、論点や政策の改善案にまとめる道具です。熟議（じっくり話し合うこと）を助けます。<a href="team-mirai.html">チームみらい</a> のマニフェストづくりや、サイボウズの社内で使われました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。くわしくは <a href="idobata.html">いどばた</a> の記事へ。</p>
+<p><strong>いどばた。</strong> 一人ずつ AI とチャットして意見を集め、論点や政策の改善案にまとめる道具です。熟議（じっくり話し合うこと）を助けます。<a href="team-mirai.html">チームみらい</a> のマニフェストづくりや、<a href="cybozu.html">サイボウズ</a>の社内で使われました<a class="cite" href="#src-5" data-src="src-5">[5]</a>。くわしくは <a href="idobata.html">いどばた</a> の記事へ。</p>
 <p><strong>政党の参加。</strong> ニュースサイト Japan In-depth によると、立ち上げの直後、国民民主党の榛葉賀津也幹事長が会見を見て強く心を動かされたと語り、同党の伊藤孝恵参議院議員を参加させました<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p><strong>本づくり。</strong> 『政治・自治体・企業に広がるブロードリスニング』（インプレス、2026 年 9 月予定）は、DD2030 の活動の一環として有志が書いた本です。日本語と英語の web 版もあります<a class="cite" href="#src-7" data-src="src-7">[7]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>くわしく</h2>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -79,7 +80,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>支持者会不会变得教条化？</strong> 一田和树一方面肯定《PLURALITY》一书，一方面质疑书把日本的 QC 活动（职场的品质改善活动）毫无保留地当作成功案例。一田认为这个担心也适用于在日本与这本书共鸣的人们，并举党政策仓库的修改提案为例<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</li>
 <li><strong>由谁划定要问什么的界线？</strong> 《Noema》（2026 年 6 月）指出，党的聊天机器人程式码中有「NG 词」（禁用词），加上底层 AI（Claude）的限制，政治对话的范围可能在看不见的地方被决定。另一方面，文章也评价说，党的工具不试图制造共识，而把判断留给党与选民，这一点是民主的<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
 <li><strong>支持层的偏向。</strong> 哲学家东浩纪在《朝日新闻》的访谈（2026 年 5 月）中说，众议院选举的跃进，是因为成了在野党自行崩解后的承接者，以及年轻世代的期待；主要的支持者是富裕阶层与科技业的商务人士。这是认为其中同时有希望与「菁英」之局限的看法<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</li>
-<li><strong>「未来团队＝広聴AI」并不正确。</strong> 広聴AI 和<a href="idobata.html">いどばた</a>（Idobata）是 DD2030 的开源软件，不属于这个党<a class="cite" href="#src-3" data-src="src-3">[3]</a>。广泛倾听之书的主要作者中山心太在 2026 年 2 月写道，这个党已经不再使用我城对谈，也不再使用広聴AI<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</li>
+<li><strong>「未来团队＝広聴AI」并不正确。</strong> 広聴AI 和<a href="idobata.html">いどばた</a>（Idobata）是 DD2030 的开源软件，不属于这个党<a class="cite" href="#src-3" data-src="src-3">[3]</a>。广泛倾听之书的主要作者<a href="nakayama-shinta.html">中山心太</a>在 2026 年 2 月写道，这个党已经不再使用我城对谈，也不再使用広聴AI<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</li>
 </ul>
 <h2>在《Plurality》中的位置</h2>
 <p>《Plurality》英文版的 5-4 章〈扩增审议〉，把建党前 2024 年都知事选举的安野阵营，列为把<a href="broad-listening.html">广泛倾听</a>带进选举的例子<a class="cite" href="#src-20" data-src="src-20">[20]</a>（目前的繁体中文版 5-4 章没有这一段<a class="cite" href="#src-21" data-src="src-21">[21]</a>）。党名本身没有出现在书中。</p>
@@ -125,9 +126,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

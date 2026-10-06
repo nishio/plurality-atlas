@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -79,7 +80,7 @@ li:target{background:var(--tint);border-radius:4px}
 <li><strong>Will supporters become dogmatic?</strong> Kazuki Ichida, while valuing the book <em>PLURALITY</em>, questions its treatment of Japan's QC activities (workplace quality-improvement activities) as an unqualified success. Ichida then says the same concern applies to people in Japan who sympathize with the book, giving change proposals to the party's policy repository as an example <a class="cite" href="#src-17" data-src="src-17">[17]</a>.</li>
 <li><strong>Who draws the line on what gets asked?</strong> Noema (June 2026) points out that the code of the party's chatbot contains "NG words" (banned words), and that together with the constraints of the underlying AI (Claude), the range of political conversation may be decided in places that are hard to see. At the same time, it credits the party's tools as democratic in that they did not try to manufacture consensus and left judgment to the party and voters <a class="cite" href="#src-12" data-src="src-12">[12]</a>.</li>
 <li><strong>The makeup of its support.</strong> In an interview with the Asahi Shimbun (May 2026), the philosopher Hiroki Azuma said that the party's advance in the House of Representatives election came from its becoming a home for voters after the opposition parties fell apart on their own, and from the hopes of younger generations, and that its main supporters are wealthy people and tech businesspeople. In this view, the party carries hope and, at the same time, the limits of an elite <a class="cite" href="#src-18" data-src="src-18">[18]</a>.</li>
-<li><strong>Team Mirai is not the same as Kouchou AI.</strong> Kouchou AI and <a href="idobata.html">Idobata</a> are open-source projects of DD2030, not the party's property <a class="cite" href="#src-3" data-src="src-3">[3]</a>. In February 2026, Shinta Nakayama, the lead author of the book on broad listening, wrote that the party no longer uses either Talk to the City or Kouchou AI <a class="cite" href="#src-19" data-src="src-19">[19]</a>.</li>
+<li><strong>Team Mirai is not the same as Kouchou AI.</strong> Kouchou AI and <a href="idobata.html">Idobata</a> are open-source projects of DD2030, not the party's property <a class="cite" href="#src-3" data-src="src-3">[3]</a>. In February 2026, <a href="nakayama-shinta.html">Shinta Nakayama</a>, the lead author of the book on broad listening, wrote that the party no longer uses either Talk to the City or Kouchou AI <a class="cite" href="#src-19" data-src="src-19">[19]</a>.</li>
 </ul>
 <h2>Where it fits in Plurality</h2>
 <p>Chapter 5-4 of <em>Plurality</em>, "Augmented Deliberation", cites Anno's campaign in the 2024 governor's election, before the party was founded, as an example of bringing <a href="broad-listening.html">broad listening</a> into elections <a class="cite" href="#src-20" data-src="src-20">[20]</a>. The party's name itself does not appear in the book.</p>
@@ -123,9 +124,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

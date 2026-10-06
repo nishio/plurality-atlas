@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -80,7 +81,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>在數位公共基礎方面，芬蘭的行政資料交換平臺，使用和愛沙尼亞相同的 X-Road。兩國在 2018 年把彼此的平臺連接起來<a class="cite" href="#src-17" data-src="src-17">[17]</a>。→ <a href="digital-public-infrastructure.html">數位公共建設</a>・<a href="plurality-in-estonia.html">Plurality 在愛沙尼亞是怎麼傳開的？</a></p>
 <h3>與唐鳳往來的前史</h3>
 <p>2019 年，研究者 Tanja Aitamurto 告訴唐鳳，自己參與了芬蘭一個開發民主創新的大型專案。Aitamurto 也說明，芬蘭在制定政策時，做過許多在網路上徵求市民意見的嘗試<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</p>
-<p>在 2021 年的線上研討會上，自稱審議民主論者（「deliberative democrat」）的 Hélène Landemore，拿自己參與過的芬蘭實驗（雪上摩托車的規範）和臺灣的 <a href="vtaiwan.html">vTaiwan</a> 比較，向唐鳳提問<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</p>
+<p>在 2021 年的線上研討會上，自稱審議民主論者（「deliberative democrat」）的 <a href="helene-landemore.html">Hélène Landemore</a>，拿自己參與過的芬蘭實驗（雪上摩托車的規範）和臺灣的 <a href="vtaiwan.html">vTaiwan</a> 比較，向唐鳳提問<a class="cite" href="#src-19" data-src="src-19">[19]</a>。</p>
 <p>在 2020 年的對話中，被問到臺灣與芬蘭對假訊息的抵抗力如何比較時，唐鳳回答，臺灣在制定中小學 12 年的課程綱要時，芬蘭是主要的靈感來源。這份課綱把媒體與科技的素養，列為 9 項核心素養之一<a class="cite" href="#src-20" data-src="src-20">[20]</a>。</p>
 <h2>爭議與批評</h2>
 <ul>
@@ -137,9 +138,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

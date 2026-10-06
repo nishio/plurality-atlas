@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -57,7 +58,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>Audrey Tang and E. Glen Weyl, the authors of the book <em>Plurality</em>, reframe the word. Superintelligence, they say, is not something built in a data center: it is <strong>already here, in ourselves working together</strong> <a class="cite" href="#src-3" data-src="src-3">[3]</a><a class="cite" href="#src-4" data-src="src-4">[4]</a>.</p>
 <h2>For example</h2>
 <p><strong>Declarations by AI companies (2023–2025).</strong> In May 2023, OpenAI's leadership discussed governing superintelligence as future AI even more capable than artificial general intelligence (AGI). Saying that within ten years AI could exceed expert skill in most fields, they proposed an international body like the International Atomic Energy Agency (IAEA) <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
-<p>In June 2024, Ilya Sutskever, formerly one of OpenAI's leaders, and others founded a new company, Safe Superintelligence Inc., saying that superintelligence was within reach <a class="cite" href="#src-6" data-src="src-6">[6]</a>. In July 2025, Meta's Mark Zuckerberg wrote of bringing personal superintelligence to everyone <a class="cite" href="#src-7" data-src="src-7">[7]</a>. In November 2025, Mustafa Suleyman of Microsoft AI announced an aim of "humanist superintelligence", limited to particular domains rather than an entity that decides everything for itself <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
+<p>In June 2024, Ilya Sutskever, formerly one of OpenAI's leaders, and others founded a new company, Safe Superintelligence Inc., saying that superintelligence was within reach <a class="cite" href="#src-6" data-src="src-6">[6]</a>. In July 2025, Meta's Mark Zuckerberg wrote of bringing personal superintelligence to everyone <a class="cite" href="#src-7" data-src="src-7">[7]</a>. In November 2025, <a href="mustafa-suleyman.html">Mustafa Suleyman</a> of Microsoft AI announced an aim of "humanist superintelligence", limited to particular domains rather than an entity that decides everything for itself <a class="cite" href="#src-8" data-src="src-8">[8]</a>.</p>
 <p><strong>A statement calling for a ban (October 2025).</strong> A statement organized by the Future of Life Institute noted that many AI companies say they will build, within the next decade, superintelligence that outperforms humans at essentially all cognitive tasks. It called for a ban on developing it until there is broad scientific consensus that it can be done safely and controllably, and strong public buy-in. As of September 24, 2026, it had 75,329 signatures <a class="cite" href="#src-2" data-src="src-2">[2]</a>.</p>
 <p><strong>"We the People are Truly the Superintelligence" (May 2026).</strong> Tang opened her keynote at MIT SOLVE 2026 like this: "Today I want to talk about superintelligence. Superintelligence, to me, is not something we build in a data centre somewhere. It is in this room. It is in all of us. It is us" <a class="cite" href="#src-3" data-src="src-3">[3]</a>. "The question today", she went on, "is whether the technologies we are building amplify that superintelligence, or whether they crowd it out" <a class="cite" href="#src-3" data-src="src-3">[3]</a>.</p>
 <h2>In more detail</h2>
@@ -126,9 +127,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

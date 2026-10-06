@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -75,7 +76,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>ブテリンは、本の考え方をこうまとめます。市場と値段は、資源の使い道を決めるすぐれたしくみだ。でも市場は、社会がつくった財産権の上に立っている。財産権のつくり方は何通りもあり、今よりよいものがありうる。自由とは、いろいろな設計を選べる広い空間のことだ<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>つまり、「市場か、国か」の二択ではなく、市場のしくみそのものを設計し直す、という立場です。ブテリンは、この本には、役人のその場の判断を、お金の損得で動くしくみに置き換える発想が多いので、頼れる裁判所を持たないブロックチェーンでこそ向いている、とも書いています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h3>どこから来たのか</h3>
-<p>書籍『Plurality』の 5-7 章は、市場の活力を生かしつつその限界を補う、という動機は、19 世紀の思想家ヘンリー・ジョージと、その流れをくむ経済学者ウィリアム・ヴィックリー（William Vickrey）から来ている、と書きます。そして、著者の一人の「前の本」（『Radical Markets』）はヴィックリーに捧げられた、と記しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>書籍『Plurality』の 5-7 章は、市場の活力を生かしつつその限界を補う、という動機は、19 世紀の思想家<a href="henry-george.html">ヘンリー・ジョージ</a>と、その流れをくむ経済学者ウィリアム・ヴィックリー（William Vickrey）から来ている、と書きます。そして、著者の一人の「前の本」（『Radical Markets』）はヴィックリーに捧げられた、と記しています<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <h3>運動へ</h3>
 <p>TIME の記事によれば、この本は 2018 年の出版のとき大きな話題になりました。ワイルはその熱を、本の考えを進める非営利団体 <a href="radicalxchange.html">RadicalxChange 財団</a> の立ち上げに向けました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。また、reverse alignment 連合のサイトのワイルの紹介は、この本を英誌 The Economist の 2018 年の年間ベストブックと書いています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
 <p>一方でワイルは 2019 年に、この本は長く、互いにほぼ独立した政策の提案の集まりで、まとまった社会の哲学ではなかった、自分の考えは本の後に大きく広がった、と書いています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
@@ -131,9 +132,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

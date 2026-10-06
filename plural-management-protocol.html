@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -55,7 +56,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>PMP は、大勢でひとつの作品（本やソフトウェア）を作るときに、<strong>「次に何をやるべきか」と「出てきた寄稿を採用するか」を、上司やリーダー一人ではなく参加者みんなで決める</strong>ための運営ルールです<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>貢献した人は、お金ではない点数（<strong>クレジット</strong>）をもらいます。そのクレジットを使って、作業の優先順位づけと、採用するかどうかの投票に参加します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。書籍『⿻ Plurality』そのものが、このルールで作られました<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
-<p><strong>『Plurality』の本づくり（2024 年）。</strong> 本の 5-7 章は、「この本を作るのに使った Plural Management Protocol」として、プログラム共有サイト GitHub 上の説明文にリンクしています。本によれば、このしくみで、多様な参加者の貢献の種類と量を記録し、作業の優先順位と、どの作業を取り込むかを決めました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。その説明文は、このしくみのための道具「Gov4Git」を作ったペタル・マイムンコフ（Petar Maymounkov）が 2024 年 2 月 26 日に書いたものです。本の目標を「本が語る原理に従って本を作ること」としています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p><strong>『Plurality』の本づくり（2024 年）。</strong> 本の 5-7 章は、「この本を作るのに使った Plural Management Protocol」として、プログラム共有サイト GitHub 上の説明文にリンクしています。本によれば、このしくみで、多様な参加者の貢献の種類と量を記録し、作業の優先順位と、どの作業を取り込むかを決めました<a class="cite" href="#src-3" data-src="src-3">[3]</a>。その説明文は、このしくみのための道具「Gov4Git」を作った<a href="petar-maymounkov.html">ペタル・マイムンコフ</a>（Petar Maymounkov）が 2024 年 2 月 26 日に書いたものです。本の目標を「本が語る原理に従って本を作ること」としています<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p><strong>みんなで管理する段階へ（2024 年 5 月）。</strong> 共著者の経済学者グレン・ワイル（E. Glen Weyl）は 2024 年 5 月ごろ、Gov4Git による完全なコミュニティ管理の段階に入ったので、寄稿を見て投票してほしい、と参加者に呼びかけました。遅れて届いた推薦文をどう加えればよいかと西尾泰和が尋ねると、ワイルは、クレジットが要らなければそのまま寄稿を出せばよい、クレジットがほしければまず課題を立て、ワイルがそれを支持した後に、その課題を解く寄稿を出せばよい、という趣旨の答えをしました<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
 <p><strong>本の外への広がり。</strong> 地球科学のソフトウェアのプロジェクトが、貢献のガイドで「運営は Plural Management のモデルに基づく」と書いているなど、ほかにもいくつかの使用例が GitHub 上で見つかっています<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
 <h2>しくみ</h2>
@@ -135,9 +136,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -52,7 +53,7 @@ li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="zh-CN"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地图</a><nav class="langs"><a class="lang" hreflang="ja" href="../six-pack-of-care.html">日本語</a> <a class="lang" hreflang="en" href="../en/six-pack-of-care.html">English</a> <a class="lang" hreflang="zh-TW" href="../zh-TW/six-pack-of-care.html">繁體中文</a></nav></header>
 <main lang="zh-CN"><h1>什么是关怀六力（6-Pack of Care）？</h1><div class='lead'>检验 AI 是否真正为人服务的六项原则：不只看 AI 本身，也要问「现场的声音有没有被听见、谁负责、出错能不能修正、能不能停下来」。由唐凤与 Caroline Green 在 2025 年提出。</div><p>当 AI 开始用在政府机关、医院、长照现场，「这个 AI 真的有好好运作吗？」该由谁、用什么方式确认，就成了问题。一般的想法是：只要开发 AI 的公司写好规则、好好训练，就可以放心。关怀六力（6-Pack of Care）则认为光这样不够，把<strong>让 AI 使用现场的人能自己检查、修正、叫停的程序</strong>整理成六项。</p>
 <h2>一句话说明</h2>
-<p>关怀六力是<strong>用于 AI 治理（如何运作、由谁负责的规则）的六项原则</strong>。由台湾前数位发展部部长唐凤（Audrey Tang）与 Caroline Green 在 2025 年于牛津大学提出<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>关怀六力是<strong>用于 AI 治理（如何运作、由谁负责的规则）的六项原则</strong>。由台湾前数位发展部部长唐凤（Audrey Tang）与 <a href="caroline-green.html">Caroline Green</a> 在 2025 年于牛津大学提出<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>它问的不只是 AI 的效能，而是「谁的声音被听见」「谁承担责任」「失败怎么修正」「什么时候停下来」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <h2>举例来说</h2>
 <p><strong>台湾的诈骗广告对策（2024 年）。</strong> 2024 年 3 月，Facebook 上大量出现冒充半导体企业 NVIDIA 执行长黄仁勋、由 AI 生成的投资诈骗广告。台湾政府随机发送 20 万则简讯，从回应者中依人口结构挑选 447 人，分成每桌 10 人进行讨论。像这样针对 AI 或技术的对策，由随机抽选的公民讨论、汇整意见的聚会，叫做对齐大会（<a href="alignment-assemblies.html">Alignment Assemblies</a>）<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
@@ -168,9 +169,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

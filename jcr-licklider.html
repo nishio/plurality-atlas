@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -94,7 +95,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>著者たちと周りの人々の言葉</h2>
 <ul>
 <li><strong>グレン・ワイル。</strong> 2022 年の書評「Sovereign Nonsense」で、ワイルは、『The Sovereign Individual』が描く技術の未来像のほとんどは、リックライダーの「コンピュータと政府」などの研究論文にすでに現れていた、と書き、リックライダーをおそらくインターネットの最初の創設者だと評しました<a class="cite" href="#src-8" data-src="src-8">[8]</a>。同じ年のポッドキャストでは、ここ 60〜70 年で最も影響の大きな技術は、ユーザー体験の研究者の網として始まったリックライダーとエンゲルバートのプロジェクトから生まれた、と語っています<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</li>
-<li><strong>DeSoc 論文（2022 年）。</strong> プジャ・オールハーバー、ワイル、ヴィタリック・ブテリンは、分散型社会（DeSoc）がリックライダーの「銀河間コンピュータ・ネットワーク」での「人間とコンピュータの共生」という構想を後押しする、と書いています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
+<li><strong>DeSoc 論文（2022 年）。</strong> <a href="puja-ohlhaver.html">プジャ・オールハーバー</a>、ワイル、ヴィタリック・ブテリンは、分散型社会（DeSoc）がリックライダーの「銀河間コンピュータ・ネットワーク」での「人間とコンピュータの共生」という構想を後押しする、と書いています<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</li>
 <li><strong>reverse alignment（2026 年）。</strong> ワイルらの Noema の論考は、リックライダーが率いた ARPANET と、それと並んで育ったオープンな標準づくりを、技術と制度が切り離せない先例として挙げました<a class="cite" href="#src-11" data-src="src-11">[11]</a>。→ <a href="reverse-alignment.html">reverse alignment</a></li>
 <li><strong>6-Pack of Care。</strong> タンの <a href="six-pack-of-care.html">6-Pack of Care</a> は、第 6 のパック「共生」の言葉の由来の一つに、リックライダーの「人間とコンピュータの共生」を挙げます。第 3 のパックでも、<a href="civic-ai.html">Civic AI</a> を人の「置き換え」ではなく「見習い」とする考えの系譜に、この論文を置いています<a class="cite" href="#src-12" data-src="src-12">[12]</a><a class="cite" href="#src-13" data-src="src-13">[13]</a>。</li>
 <li><strong>日本語の紹介。</strong> ryo の note は、リックライダーたちが構想した ID の確認や決済、安全なデータ共有といった、手間がかかって儲からないが社会に欠かせない機能が作られないまま放置され、その結末をリックライダーが 8 つの未来として予見していた、と本の議論を紹介しています<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</li>
@@ -130,9 +131,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -52,7 +53,7 @@ li:target{background:var(--tint);border-radius:4px}
 </style></head><body><header class="site" lang="ja"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">Plurality の地図</a><nav class="langs"><a class="lang" hreflang="en" href="en/digital-nature.html">English</a> <a class="lang" hreflang="zh-TW" href="zh-TW/digital-nature.html">繁體中文</a> <a class="lang" hreflang="zh-CN" href="zh-CN/digital-nature.html">简体中文</a></nav></header>
 <main lang="ja"><h1>デジタルネイチャー（計算機自然）ってなに？</h1><div class='lead'>メディアアーティストで研究者の落合陽一が 2015 年ごろから唱える世界観です。コンピューターが画面の中の道具であることをやめ、光・音・物・身体と溶けあって「自然」のような環境になった状態を指します。Plurality とは「主役は人間か環境か」で分かれる、と本人名義の文章が整理しています。</div><p>私たちは今、スマートフォンやパソコンの「画面」を通してコンピューターを使っています。けれども、もしコンピューターが画面を飛び出し、空気や光や音のように身の回りに溶け込んだらどうなるでしょうか。「デジタルネイチャー」は、そうなった世界をどう捉え、どう生きるかを考える言葉です。日本では、Plurality と比べて語られることもあります。</p>
 <h2>ひとことで言うと</h2>
-<p>デジタルネイチャー（計算機自然）は、日本のメディアアーティストで研究者の落合陽一（おちあい・よういち、Yoichi Ochiai）の言葉です。コンピューターが画面の中の「道具」であることをやめ、空気や森のように、身の回りの「環境」そのものになった状態を指します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>デジタルネイチャー（計算機自然）は、日本のメディアアーティストで研究者の<a href="ochiai-yoichi.html">落合陽一</a>（おちあい・よういち、Yoichi Ochiai）の言葉です。コンピューターが画面の中の「道具」であることをやめ、空気や森のように、身の回りの「環境」そのものになった状態を指します<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
 <p>人と機械、自然と人工の境目がはっきりしなくなった世界をどう生きるか、という問いの名前でもあります<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <h2>たとえば</h2>
 <p><strong>音で物を浮かせる研究（2010 年代）。</strong> 落合は、音の波で小さな物を空中に浮かせて動かす研究をしてきました。落合名義の論考は、これを画面に閉じ込められていた情報を、現実の空間へ解き放つ考えを工学で実現したものだった、と振り返っています。計算が画面を出て、音や光、空気や手ざわりとして感じられるようになる段階です<a class="cite" href="#src-2" data-src="src-2">[2]</a><a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
@@ -118,9 +119,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

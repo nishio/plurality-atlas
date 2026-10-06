@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -98,7 +99,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>PRANCE is a Japanese university research organization that puts Plurality and Ken Suzuki's "<a href="nameraka-society.html">Nameraka Society</a>" side by side in its name and its goals (→ <a href="suzuki-ken.html">Ken Suzuki</a>). Its subprojects overlap with tools that appear in the book: deliberation and <a href="polis.html">Polis</a>, and <a href="broad-listening.html">broad listening</a>. For practice, it works with <a href="dd2030.html">DD2030</a>.</p>
 <p>For the story of how Plurality has been received in Japan, see <a href="plurality-in-japan.html">The Plurality movement in Japan</a> and the <a href="japan-timeline.html">Japan timeline</a>.</p>
 <h2>About the sources for this page</h2>
-<p>The topic of this page was chosen by the site's operator, <a href="nishio-hirokazu.html">Hirokazu Nishio</a>. In the materials, Nishio appears only as a panelist in the session "Polis: a new form of consensus building" on May 10, 2025 <a class="cite" href="#src-2" data-src="src-2">[2]</a>, and as a speaker in the summit breakout session "The technology of broad listening" (with Shinta Nakayama) <a class="cite" href="#src-7" data-src="src-7">[7]</a>. He is also listed in the speaker introductions on the summit's official website, but as a speaker in the same breakout session <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
+<p>The topic of this page was chosen by the site's operator, <a href="nishio-hirokazu.html">Hirokazu Nishio</a>. In the materials, Nishio appears only as a panelist in the session "Polis: a new form of consensus building" on May 10, 2025 <a class="cite" href="#src-2" data-src="src-2">[2]</a>, and as a speaker in the summit breakout session "The technology of broad listening" (with <a href="nakayama-shinta.html">Shinta Nakayama</a>) <a class="cite" href="#src-7" data-src="src-7">[7]</a>. He is also listed in the speaker introductions on the summit's official website, but as a speaker in the same breakout session <a class="cite" href="#src-6" data-src="src-6">[6]</a>.</p>
 <p>Most of the materials are Keio's own pages, plus the official pages and press releases of the events and Ken Suzuki's own website. Almost no independent news coverage has been collected. No official announcement by Keio about the founding of PRANCE or Ken Suzuki's appointment has been found either; the only basis is the project page.</p>
 <h2>Further reading</h2>
 <ol>
@@ -139,9 +140,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;

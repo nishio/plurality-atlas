@@ -21,6 +21,7 @@ h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid
 h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
 .lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
 main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
 .related{margin-top:3rem;color:var(--muted);font-size:.95rem}
 .feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
@@ -56,7 +57,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>He is known for writing, in a 2009 essay, that he no longer believes freedom and democracy are compatible <a class="cite" href="#src-3" data-src="src-3">[3]</a>. The book <em>Plurality</em> treats Thiel as the central intellectual leader of "libertarianism" (a position that values individual liberty above all and seeks to shrink the role of the state) <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <h2>Connection to Plurality</h2>
 <p><strong>As the central figure of libertarianism.</strong> Chapter 2-0 of the book writes that libertarianism has a canon of widely read books, such as <em>The Sovereign Individual</em> and <a href="balaji-srinivasan.html">Balaji Srinivasan</a>'s <em>The Network State</em>. It then says: "Venture capitalist Peter Thiel is widely seen as the central intellectual leader, along with others (such as the authors mentioned) whom he has funded or promoted the work of." <a class="cite" href="#src-1" data-src="src-1">[1]</a> → <a href="three-paths.html">Three paths</a></p>
-<p><strong>As an example of closeness to nationalists and the far right.</strong> The same chapter writes that libertarianism "has a close, but also somewhat complicated, relationship with the nationalist and far-right in democratic countries". The examples the book gives are Thiel's emergence as a primary financial supporter of Donald Trump and his supporters, his employing former Austrian Chancellor Sebastian Kurz, and his sponsorship of the political careers of Blake Masters and J. D. Vance <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
+<p><strong>Political ties the book points to.</strong> The same chapter writes that libertarianism "has a close, but also somewhat complicated, relationship with the nationalist and far-right in democratic countries". As examples of the close side, the book gives Thiel's emergence as a primary financial supporter of Donald Trump and his supporters, his employing former Austrian Chancellor Sebastian Kurz, and his sponsorship of the political careers of Blake Masters and J. D. Vance <a class="cite" href="#src-1" data-src="src-1">[1]</a>.</p>
 <p><strong>In the story of PayPal.</strong> Looking back on the history of online payments, chapter 4-3 notes that PayPal "was originally conceived by founders Max Levchin, Luke Nosek and Peter Thiel as a new digital currency, but quickly moved to become an internet-compatible payments processor" <a class="cite" href="#src-2" data-src="src-2">[2]</a>. → <a href="commerce-and-trust.html">Commerce and trust</a></p>
 <p><strong>In a question in the conclusion.</strong> Chapter 7-1 asks: "Should we, as Libertarians like Peter Thiel, Marc Andreesen, and Balaji Srinivasan would have us do, liberate individuals to be atomistic agents, free of constraints or responsibilities?" <a class="cite" href="#src-4" data-src="src-4">[4]</a> The book poses this question, together with the path of leaving the future to technologists, as a path it does not choose. → <a href="monist-atomism.html">Monist atomism</a>, <a href="marc-andreessen.html">Marc Andreessen</a></p>
 <p><strong>Weyl's placement.</strong> In a 2022 essay, <a href="glen-weyl.html">Glen Weyl</a> listed Thiel and Masters's <em>Zero to One</em> among the foundational texts of "corporate libertarianism", one of the political ideologies of the twenty-first century, and put Thiel first among its representative figures <a class="cite" href="#src-5" data-src="src-5">[5]</a>.</p>
@@ -104,9 +105,10 @@ li:target{background:var(--tint);border-radius:4px}
   function open(a){
     var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
     close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
-    pop.innerHTML='<button type="button" aria-label="close">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
     pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
     pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
     document.body.appendChild(pop);
     if(hover){
       var r=a.getBoundingClientRect(), w=pop.offsetWidth;
