@@ -59,7 +59,7 @@ li:target{background:var(--tint);border-radius:4px}
 <h2>舉例來說</h2>
 <p><strong>香川縣宇多津町（2025-04-30 公布）。</strong> 町在制定綜合計畫時做了町民問卷，用広聴AI 整理了 396 則自由填答。町方報告說，過去要花很長時間的彙整，AI 大約 10 分鐘就完成了<a class="cite" href="#src-3" data-src="src-3">[3]</a>。</p>
 <p><strong>東京都澀谷區（2025-07-02 公布）。</strong> 分析了區民意識調查的 6,037 則自由填答，產出整體摘要、依話題的分類與圖表，以及依世代、依地區的傾向<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
-<p><strong>廣島縣（2025 年 8～9 月）。</strong> 分析了向縣民徵集的 2,953 則意見。職員表示，約 3,000 則自由填答不到 30 分鐘就分類完成；據說若由人工處理，可能要花約 500 小時<a class="cite" href="#src-5" data-src="src-5">[5]</a>。</p>
+<p><strong>廣島縣（2025 年 8～9 月）。</strong> 分析了向縣民徵集的 2,953 則意見。職員表示，約 3,000 則自由填答不到 30 分鐘就分類完成<a class="cite" href="#src-5" data-src="src-5">[5]</a><a class="cite" href="#src-15" data-src="src-15">[15]</a>；據說若由人工處理，可能要花約 500 小時<a class="cite" href="#src-5" data-src="src-5">[5]</a>。縣的徵集頁面寫明，這次廣泛傾聽是在 DD2030 的協助下進行的<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
 <p><strong>未來團隊（2025 年參議院選舉）。</strong> 日本政黨<a href="team-mirai.html">未來團隊</a>（チームみらい，Team Mirai）用広聴AI 的圖來瀏覽市民寄來的政策修改提案。他們加上了從圖上的點一鍵跳到原始提案的功能，這個功能後來被納入 DD2030 的主版本<a class="cite" href="#src-6" data-src="src-6">[6]</a><a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
 <p>地方政府的例子整理在<a href="municipal-broad-listening.html">地方政府的廣泛傾聽</a>一文。</p>
 <h2>運作方式</h2>
@@ -67,6 +67,7 @@ li:target{background:var(--tint);border-radius:4px}
 <p>它的原型，是美國非營利組織 <a href="ai-objectives-institute.html">AI Objectives Institute</a> 在 2023 年打造的 Talk to the City（TTTC）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>安野貴博的團隊在 2024 年的東京都知事選舉、電視台的選舉報導，以及東京都的意見徵集中使用了 TTTC。過程中清楚浮現一個課題：需要一套連非工程師都能「上傳檔案就能用」的機制<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
 <p>於是，他們從 TTTC 的散布圖版本分支出來開始開發，並在 2025-03-16 以 OSS 公開<a class="cite" href="#src-1" data-src="src-1">[1]</a><a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>外部的紀錄也這麼說。《東京新聞》報導，DD2030 成立時（2025-01）的計畫，是讓 TTTC 在沒有工程師的情況下也能使用，並改善分析演算法<a class="cite" href="#src-17" data-src="src-17">[17]</a>。廣島縣的報告書也把広聴AI 說明為 DD2030 以在日本使用為前提、改良並開發 TTTC 而成的工具<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
 <h3>和 TTTC 有什麼不同</h3>
 <p>根據《廣泛傾聽》（ブロードリスニング，DD2030 社群著），主要的差別如下<a class="cite" href="#src-6" data-src="src-6">[6]</a>：</p>
 <ul>
@@ -89,10 +90,13 @@ li:target{background:var(--tint);border-radius:4px}
 <p>2025-04-29 推出 v2.0.0<a class="cite" href="#src-9" data-src="src-9">[9]</a>。2025-12-28 的 v4.0.0 增加了可用的 AI 種類，並讓限定公開的報告不會被搜尋引擎收錄<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
 <p>根據《廣泛傾聽》，從開始開發約一年間，合併了 807 件變更。全部 2,756 筆紀錄中，有 210 筆（約 7.6%）是由寫程式的 AI（Devin）完成的<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
 <p>開發體制也有過起伏。2025 年 5 月安野離開 DD2030、創立未來團隊之後，許多開發者跟著轉移過去。變更的審查沒有回音，有時要隔 2.5 個月才被合併。該書記錄，是少數人持續舉行定期會議，才讓開發沒有中斷<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<h3>其他團體的再利用</h3>
+<p>因為是開源，DD2030 以外的團體也會加以修改使用。一般社團法人 Maniken 在 2026-08 公開了以広聴AI 為基礎、加上新功能的「聴くAI」（傾聽 AI），例如從計畫書 PDF 等整理論點給居民看，以及請發出攻擊性貼文的人重新考慮（Maniken 自己的公告）<a class="cite" href="#src-18" data-src="src-18">[18]</a>。福岡縣田川市在 2026-10-01，在早稻田大學デモクラシー創造研究所與 Maniken 的協助下，開始運用在網路上收集市民要求的「廣泛傾聽」（《讀賣新聞》；報導沒有提到工具的名稱）<a class="cite" href="#src-19" data-src="src-19">[19]</a>。根據 Maniken，使用的就是聴くAI<a class="cite" href="#src-20" data-src="src-20">[20]</a>。</p>
 <h2>爭議與批評</h2>
 <ul>
 <li><strong>開發者自己的提醒。</strong> DD2030 的官方頁面要求不要過度依賴分析結果。大意是：網路上的意見容易有偏差，並不預設把結果直接變成政策；要由使用者充分確認之後再做決定<a class="cite" href="#src-2" data-src="src-2">[2]</a>。關於偏差與誤讀的一般提醒，請看<a href="broad-listening.html">廣泛傾聽</a>一文。</li>
 <li><strong>贊成和反對被放進同一群組。</strong> 對同一個話題的贊成與反對意見，在 AI 看來容易是「相似的文章」，有時會被歸成一群。《廣泛傾聽》把這列為尚未解決的課題，並介紹了幾種對策<a class="cite" href="#src-8" data-src="src-8">[8]</a>。</li>
+<li><strong>使用過的地方政府的評價（廣島縣）。</strong> 縣的廣島 AI 實驗室報告書說，它能在短時間內把大量自由填答變成可以綜觀的形式，也能用提示詞靈活調整處理；但也寫道広聴AI「並非萬能」。報告指出，AI 的處理可能改變居民意見的原貌，性質不同的話題也可能被放進同一群組；並建議參照原文、不要照單全收，以及公開提示詞與所用的 AI，讓第三方能夠驗證。這次驗證得到了 DD2030 的支援<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</li>
 <li><strong>不容易在地方政府推廣。</strong> DD2030 曾向地方政府推介，但因為動機薄弱、首長與第一線的溫差、人事調動、工程師不足等原因，試用後很難轉為正式運用。據說許多地方政府在分析之前，更大的課題是「收集不到足夠的意見」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</li>
 <li><strong>責任不明確的批評。</strong> 一位市民在 note 上的文章主張，像広聴AI 或<a href="idobata.html">いどばた</a>（Idobata）這種 OSS 式的公民參與，在品質、問責與維護的保證上並不明確<a class="cite" href="#src-11" data-src="src-11">[11]</a>。</li>
 <li><strong>不一定是未來團隊的工具。</strong> 《廣泛傾聽》的主要作者<a href="nakayama-shinta.html">中山心太</a>在 2026 年 2 月於 X 上寫道，未來團隊已經不再使用 TTTC 或広聴AI 了<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</li>
@@ -125,6 +129,12 @@ li:target{background:var(--tint);border-radius:4px}
 <li id="src-12">中山心太的 X 貼文（2026-02-07）— <a href="https://x.com/tokoroten/status/2020004238718570604" target="_blank" rel="noopener">https://x.com/tokoroten/status/2020004238718570604</a></li>
 <li id="src-13">《Plurality》英文版 5-4 "Augmented Deliberation" — <a href="https://www.plurality.net/v/chapters/5-4/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-4/eng/</a> ［CC0］</li>
 <li id="src-14">《ブロードリスニング》第 1 章〈ブロードリスニングとは何か？〉（日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book/blob/f69c60c838a91b91668abf109d7093b240610139/01_%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%EF%BC%9F.md" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book/blob/f69c60c838a91b91668abf109d7093b240610139/01_%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%EF%BC%9F.md</a> ［CC BY-NC 4.0］</li>
+<li id="src-15">江盛翔太（廣島 AI 實驗室）〈AI を活用したブロードリスニング（広聴 AI）に関する取組〉（2025 年度 AI ラボ年次報告書，2026-03，日文）— <a href="https://www.pref.hiroshima.lg.jp/uploaded/attachment/658524.pdf" target="_blank" rel="noopener">https://www.pref.hiroshima.lg.jp/uploaded/attachment/658524.pdf</a></li>
+<li id="src-16">廣島縣〈デジタル化で描く未来の広島は？〉（意見徵集頁面，日文）— <a href="https://www.pref.hiroshima.lg.jp/site/hiroshima-dx-torikumi/hiroshimanomirai.html" target="_blank" rel="noopener">https://www.pref.hiroshima.lg.jp/site/hiroshima-dx-torikumi/hiroshimanomirai.html</a></li>
+<li id="src-17">《東京新聞》（2025-01-30）安野貴博發起「數位民主 2030」（日文）— <a href="https://www.tokyo-np.co.jp/article/382701" target="_blank" rel="noopener">https://www.tokyo-np.co.jp/article/382701</a></li>
+<li id="src-18">Maniken〈自治体や議会で「聴くAI」（ブロードリスニング）を使って住民の声の集め方を変えませんか？〉（2026-08-01，日文）— <a href="https://maniken.jp/blog/3658/" target="_blank" rel="noopener">https://maniken.jp/blog/3658/</a></li>
+<li id="src-19">《讀賣新聞》（2026-10-01）田川市開始運用「廣泛傾聽」（日文）— <a href="https://www.yomiuri.co.jp/local/kyushu/news/20261001-GYS1T00051/" target="_blank" rel="noopener">https://www.yomiuri.co.jp/local/kyushu/news/20261001-GYS1T00051/</a></li>
+<li id="src-20">Maniken〈田川市で「聴くAI」（ブロードリスニング）の実証研究がスタートしました〉（2026-10-01，日文）— <a href="https://maniken.jp/blog/3876/" target="_blank" rel="noopener">https://maniken.jp/blog/3876/</a></li>
 </ol><div class='related'>相關: <a href='broad-listening.html'>什麼是廣泛傾聽（Broad Listening）？</a> ・ <a href='talk-to-the-city.html'>什麼是我城對談（Talk to the City）？</a> ・ <a href='dd2030.html'>什麼是デジタル民主主義2030（DD2030）？</a> ・ <a href='municipal-broad-listening.html'>什麼是地方政府的廣泛傾聽？</a> ・ <a href='team-mirai.html'>什麼是未來團隊（チームみらい，Team Mirai）？</a> ・ <a href='idobata.html'>什麼是いどばた（Idobata）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fkouchou-ai.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E5%BA%83%E8%81%B4AI%EF%BC%88kouchou-ai%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fkouchou-ai.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。<br><a href="about.html">關於本站（製作方式與營運者）</a> ・ <a href="https://github.com/nishio/plurality-atlas" target="_blank" rel="noopener">GitHub（本站的儲存庫、回報錯誤與提問的 issue）</a></footer></main><script>
 (function(){
   var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
