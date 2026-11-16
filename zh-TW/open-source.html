@@ -1,0 +1,163 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>什麼是開源（open source）？</title><meta name="description" content="把軟體的設計圖（原始碼）公開，讓任何人都能使用、研究、修改、再散布的開發方式。《多元宇宙》把它視為⿻的大型實踐，也把投入者幾乎拿不到資金列為政策上的課題。"><link rel="canonical" href="https://nishio.github.io/plurality-atlas/zh-TW/open-source.html"><link rel="alternate" hreflang="zh-TW" href="https://nishio.github.io/plurality-atlas/zh-TW/open-source.html"><link rel="alternate" hreflang="ja" href="https://nishio.github.io/plurality-atlas/open-source.html"><link rel="alternate" hreflang="en" href="https://nishio.github.io/plurality-atlas/en/open-source.html"><link rel="alternate" hreflang="zh-CN" href="https://nishio.github.io/plurality-atlas/zh-CN/open-source.html"><link rel="alternate" hreflang="x-default" href="https://nishio.github.io/plurality-atlas/open-source.html"><meta property="og:type" content="article"><meta property="og:site_name" content="多元宇宙地圖"><meta property="og:title" content="什麼是開源（open source）？"><meta property="og:url" content="https://nishio.github.io/plurality-atlas/zh-TW/open-source.html"><meta name="twitter:card" content="summary"><meta property="og:description" content="把軟體的設計圖（原始碼）公開，讓任何人都能使用、研究、修改、再散布的開發方式。《多元宇宙》把它視為⿻的大型實踐，也把投入者幾乎拿不到資金列為政策上的課題。"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&text=%E2%BF%BB%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E6%97%A5%E6%9C%AC%E8%AA%9E&family=Noto+Sans+TC:wght@400;700;900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&text=%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87&display=swap">
+<style>
+:root{--bg:#f5f7f4;--card:#ffffff;--fg:#1b2421;--muted:#5b6763;--line:#d9e0dc;--accent:#2c4e7a;--tint:#e5ebf2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#18201d;--fg:#e3e9e6;--muted:#9aa7a2;--line:#2a3430;--accent:#93b6e2;--tint:#1d2a36;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.9 "BIZ UDPGothic","Noto Sans JP","Hiragino Sans",system-ui,sans-serif;padding-inline:16px}
+main{max-width:42rem;margin:0 auto;padding-block:2rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.site{max-width:42rem;margin:0 auto;padding-block:.9rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.6rem}
+header.site a{text-decoration:none;color:var(--fg);font:700 1rem/1.4 "Zen Kaku Gothic New","BIZ UDPGothic",sans-serif;letter-spacing:.02em}
+.mark{font-size:1.3rem;color:var(--accent);font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
+nav.langs{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}header.site nav.langs a.lang{font:400 .85rem/1.4 "BIZ UDPGothic","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;color:var(--muted);text-decoration:underline}
+main[lang="zh-TW"],main[lang="zh-TW"] h1,main[lang="zh-TW"] h2,main[lang="zh-TW"] h3,[lang="zh-TW"],.pick[lang="zh-TW"] b,[lang="zh-TW"] .card b,header.site[lang="zh-TW"] a,header.site nav.langs a.lang[hreflang="zh-TW"]{font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+main[lang="zh-CN"],main[lang="zh-CN"] h1,main[lang="zh-CN"] h2,main[lang="zh-CN"] h3,[lang="zh-CN"],.pick[lang="zh-CN"] b,[lang="zh-CN"] .card b,header.site[lang="zh-CN"] a,header.site nav.langs a.lang[hreflang="zh-CN"]{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif}
+main[lang="en"]{line-height:1.7}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","BIZ UDPGothic","Noto Sans JP",sans-serif;text-wrap:balance}
+h1{font-size:1.85rem;line-height:1.4;margin:.6rem 0 1rem;font-weight:900}
+h2{font-size:1.2rem;margin:2.6rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:1.04rem;margin:1.6rem 0 .3rem}
+.lead{font-size:1.08rem;background:var(--tint);border-radius:6px;padding:1rem 1.2rem;margin:1rem 0 1.8rem}
+main li,main p{overflow-wrap:anywhere}  /* 出典の長い URL をスマホで折り返す */
+nav.toc{font-size:.92rem;line-height:2;margin:1rem 0 0}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ul.bib{padding-left:1.2rem}ul.bib li{margin-block:.6rem;overflow-wrap:anywhere}.citedby{color:var(--muted);font-size:.85rem}
+.related{margin-top:3rem;color:var(--muted);font-size:.95rem}
+.feedback{margin-top:2rem;padding:.8rem 1rem;border:1px dashed var(--line);border-radius:6px;font-size:.92rem;color:var(--muted)}.feedback p{margin:.3rem 0}
+.cards{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;text-decoration:none;color:var(--fg)}
+.card:hover{border-color:var(--accent)}.card b{color:var(--accent);font-family:"Zen Kaku Gothic New",sans-serif}.card span{display:block;color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:.25rem}
+.intro{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:.35rem .6rem;vertical-align:top}
+blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:3px solid var(--line);color:var(--muted)}
+ol li,ul li{margin-block:.25rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1rem}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;border-radius:6px;padding:.8rem 1rem;margin:1.4rem 0 .8rem}
+.sublinks{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+.start .cards{grid-template-columns:1fr}.start .card{padding:1rem 1.1rem}
+.qr{text-align:center}.qr h1{margin-bottom:.4rem}
+.qr .code{display:block;width:min(100%,24rem,62vh);margin:1rem auto;background:#fff;border-radius:8px}.qr .code svg{display:block;width:100%;height:auto}
+.qr .url{font-family:ui-monospace,monospace;font-size:.85rem;color:var(--muted);word-break:break-all}
+.qr h1 span{display:block}.qr h1 span+span{font-size:1.1rem;font-weight:700;color:var(--muted)}.qr .scan p{margin:.2rem 0}.qr .scan p+p{color:var(--muted);font-size:.92rem}
+.hello{text-align:center;padding-top:3rem}.hello .mark{font-size:2.6rem}.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1rem;margin:.9rem 0;text-decoration:none;color:var(--fg)}
+.pick b{display:block;font-size:1.3rem;color:var(--accent);font-family:"Zen Kaku Gothic New","Noto Sans TC",sans-serif}.pick span{color:var(--muted);font-size:.95rem}.pick.sug{border:2px solid var(--accent)}
+.acts{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}.acts button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:6px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+@media (max-width:30rem){body{font-size:16px}h1{font-size:1.55rem}}
+
+a.cite{text-decoration:none;font-size:.78em;vertical-align:super;line-height:0;padding:0 .08em}a.cite:hover{text-decoration:underline}
+.cite-pop{position:absolute;z-index:20;max-width:min(30rem,calc(100vw - 2rem));background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:.6rem .8rem;font-size:.88rem;line-height:1.6;overflow-wrap:anywhere}
+.cite-pop .n{color:var(--muted);margin-right:.3em}.cite-pop button{float:right;border:0;background:none;color:var(--muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 .2rem .6rem}
+.cite-pop.sheet{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));max-width:none}
+li:target{background:var(--tint);border-radius:4px}
+</style></head><body><header class="site" lang="zh-TW"><span class="mark" aria-hidden="true">⿻</span><a href="index.html">多元宇宙地圖</a><nav class="langs"><a class="lang" hreflang="ja" href="../open-source.html">日本語</a> <a class="lang" hreflang="en" href="../en/open-source.html">English</a> <a class="lang" hreflang="zh-CN" href="../zh-CN/open-source.html">简体中文</a></nav></header>
+<main lang="zh-TW"><h1>什麼是開源（open source）？</h1><div class='lead'>把軟體的設計圖（原始碼）公開，讓任何人都能使用、研究、修改、再散布的開發方式。《多元宇宙》把它視為⿻的大型實踐，也把投入者幾乎拿不到資金列為政策上的課題。</div><p>軟體有一份人能讀、也能改寫的「設計圖」，叫做原始碼。把它公開，讓全世界任何人都能使用、修改、再散布，這樣的開發方式就是開源。《多元宇宙》在這裡看到了不同的人彼此協作的社會的範本。</p>
+<h2>一句話說明</h2>
+<p>開源（open source）是把軟體的原始碼公開，讓任何人都能使用、研究、修改、再散布的開發方式。有共同興趣的人在彼此的工作上繼續堆疊；意見談不攏時，就「分叉」（fork）出另一個版本<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>《多元宇宙》把它看成⿻（Plurality：不同的人跨越差異而協作）的大規模實踐<a class="cite" href="#src-1" data-src="src-1">[1]</a>。同時，書也把投入者幾乎拿不到資金這件事，列為政策上的課題<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<h2>舉例來說</h2>
+<p><strong>這本書本身。</strong> 《多元宇宙》繁體中文版的〈關於作者群〉寫道：「這本書是開源的，其內容可以自由複製，無論是否註明出處。」<a class="cite" href="#src-3" data-src="src-3">[3]</a> 根據書的 5-0 章，文稿使用開源工程師用來管理軟體版本的 Git 儲存與更新，並以 CC0（放棄著作權、讓任何人都能自由使用的宣告）公開<a class="cite" href="#src-4" data-src="src-4">[4]</a>。英文版還寫道，貢獻的紀錄透過名為 GitRules 的機制，留在分散式帳本上<a class="cite" href="#src-4" data-src="src-4">[4]</a>。</p>
+<p>同一章呼籲讀者：如果受到內容啟發，尤其是有所批判之處，歡迎提交修改，或聯繫貢獻者、成為社群的一分子。書寫道：「我們希望盡可能的讓對這項工作的批評，可從開源運動的口號『那就修正它吧！』受到啟發。」<a class="cite" href="#src-4" data-src="src-4">[4]</a>（英文版的口號原文是 "so fix it!"。）</p>
+<p><strong>vTaiwan 與 Join。</strong> 臺灣有公民主導的審議平台 vTaiwan，以及政府經營的提案與意見徵集平台 Join<a class="cite" href="#src-5" data-src="src-5">[5]</a>。2018 年，曾于珊在對談中問唐鳳（Audrey Tang），為什麼 vTaiwan 是開源軟體，Join 卻不是。唐鳳回答，Join 是「2014年底開始的專案、2015年招標，所以當時臺灣的資訊軟體採購範本裡面，還沒有Open Source的段落」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p><strong>Gitcoin Grants（資金）。</strong> 書的 5-7 章寫道，由於軟體是免費提供的，開源軟體「長期以來一直在努力尋求可靠的資金來源」<a class="cite" href="#src-7" data-src="src-7">[7]</a>。書接著介紹 GitCoin Grants 等平台：它們使用的公式「不僅考慮所獲資金的總額，也考慮其來源在個人貢獻者和相關社會群體中的多樣性」，並已成為開源軟體的重要資金來源<a class="cite" href="#src-7" data-src="src-7">[7]</a>。繁體中文版寫這些平台「籌集了數億美元的資金」，英文版則寫總共超過一億美元<a class="cite" href="#src-7" data-src="src-7">[7]</a>。</p>
+<h2>深入了解</h2>
+<h3>從哪裡來</h3>
+<p>根據書的 3-3 章，開源的出現，是對 1970 年代軟體產業走向營業秘密化、商業化的反擊<a class="cite" href="#src-1" data-src="src-1">[1]</a>。書寫道，網際網路的前身 ARPANET 早期那種自由、開放的開發方式，在公共資金撤出後，靠著全球的志願者得以維持<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>理查·史托曼（Richard Stallman）自 1980 年代起領導自由軟體運動，推廣使用者運行、研究、共享和修改原始碼的權利<a class="cite" href="#src-1" data-src="src-1">[1]</a>。1998 年，開源倡議組織（Open Source Initiative）把其中務實的面向命名為「開源」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<h3>三種叫法</h3>
+<p>唐鳳會區分指稱同一件事的幾種說法。在 2018 年的對談中，唐鳳說：「如果使用Free Software這個詞，通常的意思是這是一種人權，使用、改作軟體的權利不應該被剝奪」；說 Open Source 時，指的則是開發過程中越多人參與、越透明，品質就會越好，「所以一個是倫理或道德論述，一個是經濟論述」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。不過唐鳳也說，「這兩種授權的實質涵義幾乎完全一樣」<a class="cite" href="#src-6" data-src="src-6">[6]</a>。</p>
+<p>在 2024 年的 Podcast《Tech Mirror》中，唐鳳說明，在臺灣稱之為公共程式（public code），意思是把程式碼當作機場、車站那樣的公共基礎建設<a class="cite" href="#src-8" data-src="src-8">[8]</a>。在 2023 年的演講中，唐鳳提到主張用稅金開發的系統都應該公開的運動「Public Money? Public Code!」，並說臺灣已說服內閣，把程式碼和橋梁、高速公路一樣，列為公共建設預算的對象<a class="cite" href="#src-9" data-src="src-9">[9]</a>。</p>
+<h3>作為⿻的範本</h3>
+<p>3-3 章把開源連曾經敵對的公司也支持、因而擴展開來這件事，稱為「大規模的多元化實踐」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。書舉的例子是微軟：繁體中文版寫它「現為 GitHub 的所有者」，英文版另外寫到，微軟也是本書作者之一的雇主<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>書關注的是協作的形式：「這些社群是圍繞著共同的興趣而形成，在彼此的工作基礎上自由構建，通過無償維護者審核貢獻，並在出現不可調和的分歧時，將專案『分叉』為平行版本。」<a class="cite" href="#src-1" data-src="src-1">[1]</a> 英文版的 4-3 章把開源專案當作例子：多人協作往往產生比各自單獨行動更大的價值，做出來的東西也由許多人共同使用；書認為，在這樣的場合，以金錢為基礎的管理難以運作<a class="cite" href="#src-10" data-src="src-10">[10]</a>。</p>
+<h3>錢流不進來</h3>
+<p>3-3 章引用娜蒂亞·埃格巴爾（Nadia Eghbal）的《Working in Public》，列出開源面臨的挑戰：公共資金撤離造成長期的資金短缺、維護者往往得不到回報、社群越成長負擔越重。儘管如此，書寫道：「這些挑戰都是可以應對的」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>2-0 章寫道，開源軟體和維基百科這些具有公地性的公共產品，已成為數位時代至關重要的公共資源，「卻未見各國政府支持它們，它們得到的支持甚至無法與其他慈善組織相提並論。（例如，開源軟體供應商通常不能成為享有免稅的慈善機構。）」<a class="cite" href="#src-11" data-src="src-11">[11]</a></p>
+<p>7-0 章寫道，當今最被各國政府忽視的不是學術部門，而是開源和其他非營利、以使命為導向的技術開發者<a class="cite" href="#src-2" data-src="src-2">[2]</a>。繁體中文版寫，學研在全球範圍內獲得了數千億美元的資助，「但開源社群在其整個歷史中獲得的資助，可能還不到十億美元」；日文版也寫不到十億美元<a class="cite" href="#src-12" data-src="src-12">[12]</a>。英文版則寫學術研究每年在全球獲得數千億美元，並依已知的資金來源計算，開源社群獲得的可能不到二十億美元（各版的數字不同）<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<h3>與其說「公共財」，不如說「開源」</h3>
+<p>以太坊創辦人維塔利克·布特林（Vitalik Buterin）在 2025 年的文章中主張，談資金時，用「開源」這個詞比用「公共財」更好<a class="cite" href="#src-13" data-src="src-13">[13]</a>。理由是：「公共財」也被用來指政府做的東西，連擁有自己代幣（一種加密資產）的商業專案都自稱在做公共財，意思已經被稀釋；相較之下，「開源」有一個延續數十年的明確定義<a class="cite" href="#src-13" data-src="src-13">[13]</a>。</p>
+<p>同一年，布特林也寫了一篇文章說，以前因為希望自己的作品盡可能被廣泛使用等理由，偏好條件寬鬆的授權，現在則傾向 copyleft（要求修改後的版本也以相同條件公開的方式）<a class="cite" href="#src-14" data-src="src-14">[14]</a>。</p>
+<h3>數位公共財</h3>
+<p>日文書《廣泛傾聽》（原書名《政治・自治体・企業に広がるブロードリスニング》，談廣泛聽取市民聲音的做法）中，有一篇由 tokoroten 執筆的專欄。專欄介紹，聯合國在 2020 年把開源的軟體、資料、AI 模型、標準與內容定義為「數位公共財」，條件是遵守隱私等法規、不造成傷害，並有助於聯合國的永續發展目標（SDGs）<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
+<p>同一篇專欄也提到，日本情報處理推進機構（IPA）2025 年的報告指出，日本行政機關公開的開源軟體遠少於英、美、法。專欄並認為真正的成本在於能運用它的人才，寫道數位公共財雖然免費，卻不是零成本<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
+<h2>爭議與批評</h2>
+<p><strong>AI 也該開放嗎？</strong> 書的 7-0 章寫道，開發生成式基礎模型的組織，如 OpenAI 和 Anthropic，「對簡單地免費提供這些模型有合理的擔憂」<a class="cite" href="#src-2" data-src="src-2">[2]</a>。</p>
+<p>唐鳳在 2024 年的 Podcast《Your Undivided Attention》中說，技術越接近醫療口罩那樣的防禦工具，就越應該公開；越接近被稱為 P3 的實驗室可能製造、致死率極高的東西，就越應該在公開前要求規範、演練與稽核。唐鳳也說，也許有些東西根本不應該公開<a class="cite" href="#src-16" data-src="src-16">[16]</a>。另外，在同一集中表示民主應該能把強大的 AI 模型重新調整成強化民主的樣子、而開源與開放權重對此很有幫助的，並不是唐鳳，而是主持人 Aza Raskin；Raskin 先說這是自己認為唐鳳所秉持的原則，才這樣表述<a class="cite" href="#src-16" data-src="src-16">[16]</a>。</p>
+<p>哲學家尼克·伯斯特隆姆（Nick Bostrom）在 2017 年的論文中認為，AI 開發的開放，短期內可望對社會利多於弊。另一方面，論文主張，原始碼和科學（可能也包括能力）的開放，可能讓高等 AI 出現時的競爭更加膠著，使一邊採取安全措施、一邊贏得競爭變得更難。論文也寫道，安全措施或目標的開放，無論是為了當代的人，還是為了包括未來世代在內的福祉，都可以被看作好事<a class="cite" href="#src-17" data-src="src-17">[17]</a>。</p>
+<p><strong>認為開源不安全、只是省錢的看法。</strong> 在 2024 年的《Tech Mirror》中，主持人說，臺灣每天承受來自中國的網路攻擊，這樣的經驗推翻了開源不可能安全的迷思。唐鳳回答，公共程式不是為了省錢；一開始反而要培養懂得運用它的實務者社群，所以花費更多<a class="cite" href="#src-8" data-src="src-8">[8]</a>。上面那篇專欄說數位公共財免費卻不是零成本，也是同一方向的提醒<a class="cite" href="#src-15" data-src="src-15">[15]</a>。</p>
+<p><strong>不是夢想，而是實用。</strong> 在 2019 年的訪談中，被問到矽谷那個開源而自由的網際網路的夢想是否還活著時，唐鳳回答，開源不是夢想，而是非常實用的東西，並舉例說微軟改變方針、擁有了 GitHub，Google 沒有 Linux 就不會存在<a class="cite" href="#src-18" data-src="src-18">[18]</a>。</p>
+<p><strong>資金的數字是推估。</strong> 7-0 章的英文版說，不到二十億美元這個數字，是根據 GitHub Sponsors、Gitcoin、Open Collective 等已知資金來源匯集成的圖，並用了 likely（可能）一詞<a class="cite" href="#src-2" data-src="src-2">[2]</a>。繁體中文版「可能還不到十億美元」也帶著「可能」<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
+<h2>在《Plurality》中的位置</h2>
+<p>《多元宇宙》3-3 章〈我們遺忘的道〉把開源當作範本，說明打造網際網路的人們那種開放協作的精神至今仍在延續。英文版因此說本書會經常以開源專案為例；繁體中文版則寫「開源軟體將成為本書的核心實例」<a class="cite" href="#src-1" data-src="src-1">[1]</a>。</p>
+<p>5-7 章〈社會市場〉以開源的資金問題與 GitCoin Grants 開頭<a class="cite" href="#src-7" data-src="src-7">[7]</a>。7-0 章〈政策〉描繪，如果⿻取得成功，十年內公共資金將成為支持數位基礎建設的主要資金來源<a class="cite" href="#src-2" data-src="src-2">[2]</a>。同一章也寫道，在公益、由公民社會推動的技術開發能做到什麼這一點上，「開源社群只是冰山一角」，因為像 Mozilla 和維基媒體基金會這樣的組織，在純粹的開源程式開發之外，也有大量的開發活動<a class="cite" href="#src-12" data-src="src-12">[12]</a>。</p>
+<p>其他章節也有例子。6-4 章把臺灣的開源環境感測網絡社群 LASS，6-5 章把收錄國語、台語、客語條目的「萌典」，都舉為開源協作的例子<a class="cite" href="#src-19" data-src="src-19">[19]</a><a class="cite" href="#src-20" data-src="src-20">[20]</a>。</p>
+<p>相關文章：
+- <a href="lost-dao.html">我們遺忘的道</a>——包括開源在內，網際網路開放協作的歷史
+- <a href="social-markets.html">社會市場</a>——包括 Gitcoin Grants 在內，分配金錢的新方法
+- <a href="quadratic-funding.html">平方募資</a>——Gitcoin Grants 使用的分配公式
+- <a href="digital-public-infrastructure.html">數位公共建設</a>——為了公共利益而建的數位基礎
+- <a href="civic-tech.html">公民科技</a>——公民用技術處理社會課題的行動
+- <a href="gov4git.html">Gov4Git</a>——記錄本書貢獻的機制</p>
+<h2>延伸閱讀</h2>
+<ol>
+<li>唐鳳與曾于珊的對談（2018，中文，逐字稿。自由軟體與開源、Join 的採購）— <a href="https://github.com/audreyt/transcript/blob/main/2018-01-05-曾于珊來訪.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2018-01-05-曾于珊來訪.md</a></li>
+<li>《多元宇宙》3-3〈我們遺忘的道〉談開源的段落（中文，書）— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a></li>
+<li>《多元宇宙》5-7〈社會市場〉的開頭（中文，書）— <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a></li>
+<li>《多元宇宙》7-0〈政策〉「新的⿻秩序」一節（中文，書）— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a></li>
+<li>Vitalik Buterin, "We should talk less about public goods funding and more about open source funding"（2025，英文，部落格）— <a href="https://vitalik.eth.limo/general/2025/03/29/pubos.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/03/29/pubos.html</a></li>
+<li>Nick Bostrom, "Strategic Implications of Openness in AI Development"（2017，英文，論文）— <a href="https://nickbostrom.com/papers/openness.pdf" target="_blank" rel="noopener">https://nickbostrom.com/papers/openness.pdf</a></li>
+</ol>
+<h2>出處</h2>
+<ol>
+<li id="src-1">《多元宇宙》3-3〈我們遺忘的道〉— <a href="https://www.plurality.net/v/chapters/3-3/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/zh-tw/</a> ；微軟是作者之一的雇主、本書常以開源專案為例的說法，見英文版 — <a href="https://www.plurality.net/v/chapters/3-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/3-3/eng/</a> ［CC0］</li>
+<li id="src-2">《多元宇宙》7-0〈政策〉— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a> ；「不到二十億美元」與圖 7-0-B 見英文版 "Policy" — <a href="https://www.plurality.net/v/chapters/7-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/eng/</a> ［CC0］</li>
+<li id="src-3">《多元宇宙》0-1〈關於作者群〉— <a href="https://www.plurality.net/v/chapters/0-1/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/0-1/zh-tw/</a> ［CC0］</li>
+<li id="src-4">《多元宇宙》5-0〈協作技術與民主〉— <a href="https://www.plurality.net/v/chapters/5-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/zh-tw/</a> ；GitRules 一句見英文版 "Collaborative Technology and Democracy" — <a href="https://www.plurality.net/v/chapters/5-0/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-0/eng/</a> ［CC0］</li>
+<li id="src-5">《多元宇宙》2-2〈數位民主的日常〉「vTaiwan 與 Join」— <a href="https://www.plurality.net/v/chapters/2-2/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-2/zh-tw/</a> ［CC0］</li>
+<li id="src-6">唐鳳與曾于珊的對談（2018-01-05，逐字稿）— <a href="https://github.com/audreyt/transcript/blob/main/2018-01-05-曾于珊來訪.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2018-01-05-曾于珊來訪.md</a> ［CC0］</li>
+<li id="src-7">《多元宇宙》5-7〈社會市場〉開頭 — <a href="https://www.plurality.net/v/chapters/5-7/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/zh-tw/</a> ；英文版 "Social Markets" — <a href="https://www.plurality.net/v/chapters/5-7/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/5-7/eng/</a> ［CC0］</li>
+<li id="src-8">Tech Mirror Ep. 40 "Plurality: A Vision of the Future of Democracy and Society"（2024，Podcast）— <a href="https://techpolicy.au/podcast/plurality-a-vision-of-the-future-of-democracy-and-society/" target="_blank" rel="noopener">https://techpolicy.au/podcast/plurality-a-vision-of-the-future-of-democracy-and-society/</a></li>
+<li id="src-9">Audrey Tang, "Speech at LSE IDEAS"（2023-12-01）— <a href="https://archive.tw/2023-12-01-speech-at-lse-ideas" target="_blank" rel="noopener">https://archive.tw/2023-12-01-speech-at-lse-ideas</a> ［CC0］</li>
+<li id="src-10">《Plurality》英文版 4-3 "Commerce and Trust" — <a href="https://www.plurality.net/v/chapters/4-3/eng/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/4-3/eng/</a> ［CC0］</li>
+<li id="src-11">《多元宇宙》2-0〈資訊技術與民主：日益擴大的鴻溝〉「民主國家對技術的敵意」— <a href="https://www.plurality.net/v/chapters/2-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/2-0/zh-tw/</a> ［CC0］</li>
+<li id="src-12">《多元宇宙》7-0〈政策〉「新的⿻秩序」— <a href="https://www.plurality.net/v/chapters/7-0/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/zh-tw/</a> ；日文版〈政策〉— <a href="https://www.plurality.net/v/chapters/7-0/jpn/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/7-0/jpn/</a> ［CC0］</li>
+<li id="src-13">Vitalik Buterin, "We should talk less about public goods funding and more about open source funding"（2025-03-29）— <a href="https://vitalik.eth.limo/general/2025/03/29/pubos.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/03/29/pubos.html</a> ［WTFPL］</li>
+<li id="src-14">Vitalik Buterin, "Why I used to prefer permissive licenses and now favor copyleft"（2025-07-07）— <a href="https://vitalik.eth.limo/general/2025/07/07/copyleft.html" target="_blank" rel="noopener">https://vitalik.eth.limo/general/2025/07/07/copyleft.html</a> ［WTFPL］</li>
+<li id="src-15">專欄〈公共財とデジタル公共財〉（《政治・自治体・企業に広がるブロードリスニング》，tokoroten 執筆，日文）— <a href="https://github.com/digitaldemocracy2030/broad-listening-book" target="_blank" rel="noopener">https://github.com/digitaldemocracy2030/broad-listening-book</a> ［CC BY-NC 4.0］</li>
+<li id="src-16">Audrey Tang，Your Undivided Attention 訪談（2024-01-24，逐字稿）— <a href="https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2024-01-24-Interview-with-Your-Undivided-Attention-podcast.md</a> ［CC0］</li>
+<li id="src-17">Nick Bostrom, "Strategic Implications of Openness in AI Development"（2017）— <a href="https://nickbostrom.com/papers/openness.pdf" target="_blank" rel="noopener">https://nickbostrom.com/papers/openness.pdf</a> ［CC BY］</li>
+<li id="src-18">Audrey Tang，Adrien Simorre 訪談（2019-12-27，逐字稿）— <a href="https://github.com/audreyt/transcript/blob/main/2019-12-27-Interview-with-Adrien-Simorre.md" target="_blank" rel="noopener">https://github.com/audreyt/transcript/blob/main/2019-12-27-Interview-with-Adrien-Simorre.md</a> ［CC0］</li>
+<li id="src-19">《多元宇宙》6-4〈環境〉— <a href="https://www.plurality.net/v/chapters/6-4/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-4/zh-tw/</a> ［CC0］</li>
+<li id="src-20">《多元宇宙》6-5〈學習〉— <a href="https://www.plurality.net/v/chapters/6-5/zh-tw/" target="_blank" rel="noopener">https://www.plurality.net/v/chapters/6-5/zh-tw/</a> ［CC0］</li>
+</ol><div class='related'>相關: <a href='lost-dao.html'>什麼是「我們遺忘的道」（The Lost Dao）？</a> ・ <a href='social-markets.html'>什麼是社會市場？</a> ・ <a href='quadratic-funding.html'>什麼是平方募資？</a> ・ <a href='digital-public-infrastructure.html'>什麼是數位公共建設（DPI）？</a> ・ <a href='civic-tech.html'>什麼是公民科技（Civic Tech）？</a> ・ <a href='gov4git.html'>什麼是 Gov4Git（GitRules）？</a></div><div class='feedback'><p>歡迎回報文章錯誤或提出想知道的問題（「什麼是…？」）。送出的內容會成為公開的 issue。</p><p><a href='https://github.com/nishio/plurality-atlas/issues/new?template=correction.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fopen-source.html&title=%5B%E6%8C%87%E6%91%98%5D%20%E4%BB%80%E9%BA%BC%E6%98%AF%E9%96%8B%E6%BA%90%EF%BC%88open%20source%EF%BC%89%EF%BC%9F' target='_blank' rel='noopener'>回報本文錯誤</a> ・ <a href='https://github.com/nishio/plurality-atlas/issues/new?template=question.yml&page=https%3A%2F%2Fnishio.github.io%2Fplurality-atlas%2Fzh-TW%2Fopen-source.html&title=%5B%E8%B3%AA%E5%95%8F%5D%20' target='_blank' rel='noopener'>提問</a></p></div><footer>本站文字以 CC0（公眾領域）釋出。引用部分的權利屬於各原始出處，已知授權者標示於各篇出處欄的［ ］中。<br><a href="about.html">關於本站（製作方式與營運者）</a> ・ <a href="https://github.com/nishio/plurality-atlas" target="_blank" rel="noopener">GitHub（本站的儲存庫、回報錯誤與提問的 issue）</a></footer></main><script>
+(function(){
+  var pop=null, timer=null, hover=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function close(){ if(pop){ pop.remove(); pop=null; } }
+  function open(a){
+    var li=document.getElementById(a.getAttribute('data-src')); if(!li) return;
+    close(); pop=document.createElement('div'); pop.className='cite-pop'+(hover?'':' sheet'); pop.setAttribute('role','dialog');
+    pop.innerHTML='<button type="button" aria-label="'+({'ja':'閉じる','en':'Close','zh-TW':'關閉','zh-CN':'关闭'}[document.documentElement.lang]||'Close')+'">×</button><span class="n">['+a.getAttribute('data-src').slice(4)+']</span>'+li.innerHTML;
+    pop.querySelectorAll('a[href^="http"]').forEach(function(x){ x.target='_blank'; x.rel='noopener'; });
+    pop.querySelector('button').onclick=close;
+    if(!hover) pop.querySelector('button').focus();
+    document.body.appendChild(pop);
+    if(hover){
+      var r=a.getBoundingClientRect(), w=pop.offsetWidth;
+      var left=Math.max(8, Math.min(window.scrollX + r.left - 16, window.scrollX + document.documentElement.clientWidth - w - 8));
+      pop.style.left=left+'px'; pop.style.top=(window.scrollY + r.bottom + 6)+'px';
+      pop.onmouseenter=function(){ clearTimeout(timer); }; pop.onmouseleave=function(){ timer=setTimeout(close, 250); };
+    }
+  }
+  document.querySelectorAll('a.cite').forEach(function(a){
+    if(hover){
+      a.addEventListener('mouseenter', function(){ clearTimeout(timer); timer=setTimeout(function(){ open(a); }, 120); });
+      a.addEventListener('mouseleave', function(){ clearTimeout(timer); timer=setTimeout(close, 250); });
+      a.addEventListener('focus', function(){ open(a); });
+    } else {
+      a.addEventListener('click', function(e){ e.preventDefault(); if(pop && pop._from===a){ close(); return; } open(a); if(pop) pop._from=a; });
+    }
+  });
+  document.addEventListener('click', function(e){ if(pop && !pop.contains(e.target) && !e.target.closest('a.cite')) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script><script data-goatcounter="https://plurality-atlas.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
